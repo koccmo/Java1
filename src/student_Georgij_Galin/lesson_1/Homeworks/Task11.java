@@ -1,4 +1,4 @@
-package student_Georgij_Galin;
+package student_Georgij_Galin.lesson_1.Homeworks;
 
 public class Task11 {
 
@@ -7,5 +7,8 @@ public class Task11 {
         System.out.println(74 + 36);
         System.out.println(50 / 3);
     }
+
+
+
 
 }
