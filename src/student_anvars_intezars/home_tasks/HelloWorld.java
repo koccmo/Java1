@@ -1,4 +1,4 @@
-package student_anvars_intezars;
+package student_anvars_intezars.home_tasks;
 
 class HelloWorld {
 
