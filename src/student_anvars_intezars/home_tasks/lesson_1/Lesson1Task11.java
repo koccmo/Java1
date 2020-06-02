@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks;
+package student_anvars_intezars.home_tasks.lesson_1;
 
 public class Lesson1Task11 {
 
