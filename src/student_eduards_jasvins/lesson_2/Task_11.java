@@ -1,4 +1,4 @@
-package student_eduards_jasvins;
+package student_eduards_jasvins.lesson_2;
 
 public class Task_11 {
 
