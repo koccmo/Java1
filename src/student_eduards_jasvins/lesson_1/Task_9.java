@@ -1,7 +1,6 @@
-package student_eduards_jasvins.lesson_1;
+package student_eduards_jasvins.Lesson_1;
 
-class Task_9 {
+public class Task_9 {
 
-    public static void main(String[] args) { System.out.println("Hello!"); }
-
+    public static void main(String[] args) {System.out.println("Hello");}
 }
