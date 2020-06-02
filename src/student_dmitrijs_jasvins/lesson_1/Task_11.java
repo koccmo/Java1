@@ -1,4 +1,4 @@
-package student_dmitrijs_jasvins;
+package student_dmitrijs_jasvins.lesson_1;
 
 public class Task_11 {
     public static void main(String[] args) {
