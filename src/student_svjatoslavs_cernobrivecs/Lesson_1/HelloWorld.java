@@ -1,4 +1,4 @@
-package student_svjatoslavs_cernobrivecs;
+package student_svjatoslavs_cernobrivecs.Lesson_1;
 
 class HelloWorld {
 
