@@ -7,13 +7,16 @@ import java.util.Scanner;
 
 public class Task_2 {
     public static void main(String[] args) {
+
+        System.out.println("Программа запрашивает два чила с точкой и выполняет: сложение, вычитание, умножение и деление :)");
+
         // 1. get first number from user
         Scanner myInput = new Scanner( System.in );
-        System.out.println("Enter first number: ");
+        System.out.println("Введите первое число: ");
         double firstNumber = myInput.nextDouble();
 
         // 2. get second number from user
-        System.out.println("Enter second number: ");
+        System.out.println("Введите второе число: ");
         double secondNumber = myInput.nextDouble();
 
         // 3. first number + second number
@@ -23,10 +26,10 @@ public class Task_2 {
         double delenie = firstNumber / secondNumber;
 
         // 4. print result to console
-        System.out.println("Summa = " + summa);
-        System.out.println("Raznica = " + raznica);
-        System.out.println("Umnozhenie = " + umnozenie);
-        System.out.println("Delenie = " + delenie);
+        System.out.println("Сумма = " + summa);
+        System.out.println("Разница = " + raznica);
+        System.out.println("Произведение = " + umnozenie);
+        System.out.println("Частное = " + delenie);
 
     }
 }

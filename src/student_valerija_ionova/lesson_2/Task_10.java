@@ -13,10 +13,13 @@ import java.util.Scanner;
 
 public class Task_10 {
     public static void main(String[] args) {
+
+        System.out.println("Программа запрашивает радиус круга и выводит на экран площадь и периметр круга!");
+
         double pi = 3.14159265358979323846264338327950288419716939937510;
         // 1. get radius from user
         Scanner myInput = new Scanner( System.in );
-        System.out.println("Enter radius: ");
+        System.out.println("Введите радиус: ");
         double radius = myInput.nextDouble();
 
         // 2. Perimeter&Area
@@ -25,8 +28,8 @@ public class Task_10 {
 
 
         // 4. print result to console
-        System.out.println("Perimeter = " + perimeter);
-        System.out.println("Area = " + area);
+        System.out.println("Периметр = " + perimeter);
+        System.out.println("Площадь = " + area);
 
 
     }

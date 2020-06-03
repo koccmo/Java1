@@ -5,19 +5,22 @@ import java.util.Scanner;
 
 public class Task_11 {
     public static void main (String[] args){
+
+        System.out.println("Программа запрашивает 3 числа и считает среднее арифметическое");
+
         // 1.Input
         Scanner myInput= new Scanner (System.in);
-        System.out.println("Please input first number: ");
+        System.out.println("Введите первое число: ");
         double first = myInput.nextDouble();
-        System.out.println("Please input second number: ");
+        System.out.println("Введите второе число: ");
         double second = myInput.nextDouble();
-        System.out.println("Please input third number");
+        System.out.println("Введите третье число: ");
         double third = myInput.nextDouble();
 
         //2.Calculation
         double result = (first+second+third)/3;
 
-        System.out.println("The average of the numbers is: "+result);
+        System.out.println("Среднее арифметическое: "+result);
 
     }
 }

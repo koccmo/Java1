@@ -1,5 +1,7 @@
 package student_valerija_ionova.lesson_1;
 
+//Write a Java program to print the sum of two numbers.
+
 public class Task11_summa {
 
     public static void main(String[] args) {

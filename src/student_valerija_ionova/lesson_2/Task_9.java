@@ -17,9 +17,12 @@ import java.util.Scanner;
 
 public class Task_9 {
     public static void main(String[] args) {
+
+        System.out.println("Программа запрашивает число и выводит на экран его таблицу умножения!");
+
         // 1. get first number from user
         Scanner myInput = new Scanner(System.in);
-        System.out.println("Enter number: ");
+        System.out.println("Введите число: ");
         int firstNumber = myInput.nextInt();
 
         // 2. print result to console
