@@ -17,12 +17,11 @@ public class Task_11 {
         int multiplication = FirstNumber * SecondNumber;
         int division = FirstNumber / SecondNumber;
 
-        System.out.println(FirstNumber + " + " + SecondNumber + " = ");
-        System.out.println(FirstNumber + " - " + SecondNumber + " = ");
-        System.out.println(FirstNumber + " * " + SecondNumber + " = ");
-        System.out.println(FirstNumber + " / " + SecondNumber + " = ");
+        System.out.println(FirstNumber + " + " + SecondNumber + " = " + summa);
+        System.out.println(FirstNumber + " - " + SecondNumber + " = " + subtraction);
+        System.out.println(FirstNumber + " * " + SecondNumber + " = " + multiplication);
+        System.out.println(FirstNumber + " / " + SecondNumber + " = " + division);
 
     }
-
 
 }
