@@ -1,8 +1,8 @@
-package student_dmitrijs_jasvins.lesson_2;
+package student_dmitrijs_jasvins.lesson_2.day_1;
 
 import java.util.Scanner;
 
-public class Task_11 {
+public class Task_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -12,12 +12,12 @@ public class Task_11 {
         System.out.println("Enter Second number");
         int SecondNumber = scanner.nextInt();
 
-        int summa = FirstNumber + SecondNumber;
+        int addition = FirstNumber + SecondNumber;
         int subtraction = FirstNumber - SecondNumber;
         int multiplication = FirstNumber * SecondNumber;
-        int division = FirstNumber / SecondNumber;
+        double division = FirstNumber / (double) SecondNumber;
 
-        System.out.println(FirstNumber + " + " + SecondNumber + " = " + summa);
+        System.out.println(FirstNumber + " + " + SecondNumber + " = " + addition);
         System.out.println(FirstNumber + " - " + SecondNumber + " = " + subtraction);
         System.out.println(FirstNumber + " * " + SecondNumber + " = " + multiplication);
         System.out.println(FirstNumber + " / " + SecondNumber + " = " + division);
