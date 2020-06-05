@@ -1,4 +1,4 @@
-package student_georgij_galin.lesson_1.Homeworks;
+package student_georgij_galin.Homeworks.lesson1;
 
 public class Task9 {
 
