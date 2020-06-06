@@ -1,0 +1,10 @@
+Задача 3 (level 1):
+Дан код, нужно исправить ошибку компиляции.
+
+public class BankAccount {
+
+	public static void main(String[] args) {
+
+    }
+
+}
