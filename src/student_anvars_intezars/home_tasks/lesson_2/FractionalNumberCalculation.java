@@ -2,7 +2,7 @@ package student_anvars_intezars.home_tasks.lesson_2;
 
 import java.util.Scanner;
 
-public class FractionNumberCalculation {
+public class FractionalNumberCalculation {
 
     private static Scanner in = new Scanner (System.in);
 
