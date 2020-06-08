@@ -7,20 +7,20 @@ public class Task_1 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter First number");
-        int FirstNumber = scanner.nextInt();
+        int firstNumber = scanner.nextInt();
 
         System.out.println("Enter Second number");
-        int SecondNumber = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
 
-        int addition = FirstNumber + SecondNumber;
-        int subtraction = FirstNumber - SecondNumber;
-        int multiplication = FirstNumber * SecondNumber;
-        double division = FirstNumber / (double) SecondNumber;
+        int addition = firstNumber + secondNumber;
+        int subtraction = firstNumber - secondNumber;
+        int multiplication = firstNumber * secondNumber;
+        double division = firstNumber / (double) secondNumber;
 
-        System.out.println(FirstNumber + " + " + SecondNumber + " = " + addition);
-        System.out.println(FirstNumber + " - " + SecondNumber + " = " + subtraction);
-        System.out.println(FirstNumber + " * " + SecondNumber + " = " + multiplication);
-        System.out.println(FirstNumber + " / " + SecondNumber + " = " + division);
+        System.out.println(firstNumber + " + " + secondNumber + " = " + addition);
+        System.out.println(firstNumber + " - " + secondNumber + " = " + subtraction);
+        System.out.println(firstNumber + " * " + secondNumber + " = " + multiplication);
+        System.out.println(firstNumber + " / " + secondNumber + " = " + division);
 
     }
 
