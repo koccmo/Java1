@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_2;
+package student_valerija_ionova.lesson_2.homeworks;
 
 import java.util.Scanner;
 

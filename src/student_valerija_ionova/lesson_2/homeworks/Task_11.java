@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_2;
+package student_valerija_ionova.lesson_2.homeworks;
 
 //Write a Java program that takes three numbers as input to calculate and print the average of the numbers.
 import java.util.Scanner;

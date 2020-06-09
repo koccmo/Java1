@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_2;
+package student_valerija_ionova.lesson_2.homeworks;
 
 //Написать консольную программу, которая запрашивает у пользователя два целых числа и
 //выводит на консоль результаты: сложения, вычитания, умножения и деления.
@@ -23,7 +23,7 @@ public class Task_1 {
         int summa = firstNumber + secondNumber;
         int raznica = firstNumber - secondNumber;
         int umnozenie = firstNumber * secondNumber;
-        int delenie = firstNumber / secondNumber;
+        double delenie = firstNumber / (double)secondNumber;
 
         // 4. print result to console
         System.out.println("Сумма = " + summa);

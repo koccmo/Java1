@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_2;
+package student_valerija_ionova.lesson_2.homeworks;
 
 //Задача 6 (level 3) :
 //Написать консольную программу, которая запрашивает
@@ -15,9 +15,9 @@ public class Task_8 {
         // 1. get name from user
         Scanner myInput = new Scanner( System.in );
         System.out.println("Введите Ваше имя: ");
-        String name = myInput.next();
+        String Name = myInput.next();
 
         // 2. print result to console
-        System.out.println("Hello " + name);
+        System.out.println("Hello " + Name);
     }
 }
