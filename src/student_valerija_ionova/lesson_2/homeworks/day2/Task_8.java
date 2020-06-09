@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_2.homeworks;
+package student_valerija_ionova.lesson_2.homeworks.day2;
 
 //Задача 6 (level 3) :
 //Написать консольную программу, которая запрашивает

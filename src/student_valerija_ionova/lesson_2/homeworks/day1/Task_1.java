@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_2.homeworks;
+package student_valerija_ionova.lesson_2.homeworks.day1;
 
 //Написать консольную программу, которая запрашивает у пользователя два целых числа и
 //выводит на консоль результаты: сложения, вычитания, умножения и деления.
