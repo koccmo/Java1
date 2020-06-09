@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_2.homeworks;
+package student_igors_bartkevics.lesson_2.homeworks.day_3;
 
 import java.util.Scanner;
 import java.lang.Math.*;
@@ -9,7 +9,7 @@ public class Task_10 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter a radius of circle:");
-        float radius = scanner.nextFloat();
+        double radius = scanner.nextDouble();
         double perimeterOfCircle = 2 * Math.PI * radius;
         double areaOfCircle = Math.PI * Math.pow(radius, 2);
 

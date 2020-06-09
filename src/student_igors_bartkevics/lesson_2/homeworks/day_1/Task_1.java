@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_2.homeworks;
+package student_igors_bartkevics.lesson_2.homeworks.day_1;
 import java.util.Scanner;
 
 public class Task_1 {
@@ -15,12 +15,12 @@ public class Task_1 {
         int sum = FirstNumber + SecondNumber;
         int sub = FirstNumber - SecondNumber;
         int multiple = FirstNumber * SecondNumber;
-        int dev = FirstNumber / SecondNumber;
+        int division = FirstNumber / SecondNumber;
 
         System.out.println(FirstNumber + " + " + SecondNumber + " = " + sum);
         System.out.println(FirstNumber + " - " + SecondNumber + " = " + sub);
         System.out.println(FirstNumber + " * " + SecondNumber + " = " + multiple);
-        System.out.println(FirstNumber + " / " + SecondNumber + " = " + dev);
+        System.out.println(FirstNumber + " / " + SecondNumber + " = " + division);
 
     }
 }

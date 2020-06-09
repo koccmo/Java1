@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_2.homeworks;
+package student_igors_bartkevics.lesson_2.homeworks.day_2;
 
 import java.util.Scanner;
 
