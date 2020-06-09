@@ -1,5 +1,9 @@
 package student_volodya_danilin.lesson_2;
 
+//Написать консольную программу, которая запрашивает
+//имя пользователя и выводит на консоль текст:
+//Hello имя пользователя!
+
 import java.util.Scanner;
 
 public class Lesson2_Task8 {

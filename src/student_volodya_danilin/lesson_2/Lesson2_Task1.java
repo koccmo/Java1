@@ -1,5 +1,8 @@
 package student_volodya_danilin.lesson_2;
 
+//Написать консольную программу, которая запрашивает у пользователя два целых числа и
+//выводит на консоль результаты: сложения, вычитания, умножения и деления.
+
 import java.util.Scanner;
 
 public class Lesson2_Task1 {
