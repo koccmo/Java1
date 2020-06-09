@@ -1,0 +1,8 @@
+Задача 2 (level 1):
+Дан код, нужно исправить ошибку компиляции.
+
+class Phone {
+    public static void main(String[] args) {
+    }
+
+}
