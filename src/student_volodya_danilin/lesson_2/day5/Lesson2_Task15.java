@@ -1,4 +1,4 @@
-package student_volodya_danilin.lesson_2;
+package student_volodya_danilin.lesson_2.day5;
 
 //Найти в интернете как выводить на консоль строки без перевода курсора на новую строку.
 //Написать программу, которая демонстрирует это.

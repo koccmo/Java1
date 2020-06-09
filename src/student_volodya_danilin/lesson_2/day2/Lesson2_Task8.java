@@ -1,4 +1,4 @@
-package student_volodya_danilin.lesson_2;
+package student_volodya_danilin.lesson_2.day2;
 
 //Написать консольную программу, которая запрашивает
 //имя пользователя и выводит на консоль текст:

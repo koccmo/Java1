@@ -1,4 +1,4 @@
-package student_volodya_danilin.lesson_2;
+package student_volodya_danilin.lesson_2.day3;
 
 // Write a Java program to print the area and perimeter of a circle.
 
