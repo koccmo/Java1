@@ -1,4 +1,4 @@
-package student_volodya_danilin.lesson_2;
+package student_volodya_danilin.lesson_2.day3;
 
 // Write a Java program that takes three numbers as input to calculate and print the average of the numbers.
 

@@ -1,4 +1,4 @@
-package student_volodya_danilin.lesson_2;
+package student_volodya_danilin.lesson_2.day3;
 
 //Write a Java program that takes a number as input and prints its
 //multiplication table up to 10.
