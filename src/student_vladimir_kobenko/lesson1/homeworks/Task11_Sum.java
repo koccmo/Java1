@@ -1,4 +1,4 @@
-package student_vladimir_kobenko.homeworks.Lesson1;
+package student_vladimir_kobenko.lesson1.homeworks;
 
 public class Task11_Sum {
     public static void main (String [] args){

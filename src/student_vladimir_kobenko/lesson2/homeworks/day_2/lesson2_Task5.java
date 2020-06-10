@@ -1,4 +1,4 @@
-package student_vladimir_kobenko.homeworks.lesson2.homeworks.day_2;
+package student_vladimir_kobenko.lesson2.homeworks.day_2;
 
 public class lesson2_Task5 {
     static class BankAccount {
