@@ -1,4 +1,4 @@
-package student_pavel_sharkel.lesson_1;
+package student_pavel_sharkel.lesson_1.homeworks;
 
 public class Hello_name {
 
