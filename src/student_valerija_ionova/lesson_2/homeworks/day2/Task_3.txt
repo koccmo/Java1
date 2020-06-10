@@ -1,9 +1,9 @@
-Задача 3 (level 1):
+Задача 1 (level 1):
 Дан код, нужно исправить ошибку компиляции.
 
-class BankAccount {
 
-	public static void main(String[] args) {
+class Book {
+    public static void main(String[] args) {
     }
 
 }
