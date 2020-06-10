@@ -1,4 +1,4 @@
-package student_georgij_galin.Lesson2;
+package student_georgij_galin.Homeworks.Lesson2;
 
 import java.util.Scanner;
 
