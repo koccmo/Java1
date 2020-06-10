@@ -1,0 +1,7 @@
+package student_georgij_galin.Lesson2;
+
+Дан код, нужно исправить ошибку компиляции.
+
+class Phone {
+
+}
