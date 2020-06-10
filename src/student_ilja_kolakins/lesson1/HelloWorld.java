@@ -1,4 +1,4 @@
-package student_ilja.kolakins.lesson1;
+package student_ilja_kolakins.lesson1;
 
 
     public class HelloWorld {
