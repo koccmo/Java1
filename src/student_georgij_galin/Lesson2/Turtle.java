@@ -1,6 +1,6 @@
 package student_georgij_galin.Lesson2;
 
-public class Task6 {
+public class Turtle {
 
     public static void main(String[] args){
 
