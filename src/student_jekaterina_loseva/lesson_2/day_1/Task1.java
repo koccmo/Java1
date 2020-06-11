@@ -2,7 +2,7 @@ package student_jekaterina_loseva.lesson_2.day_1;
 
 import java.util.Scanner;
 
-public class task_1 {
+public class Task1 {
 
     public static void main(String[] args) {
 
@@ -24,4 +24,3 @@ public class task_1 {
     }
 
 }
-
