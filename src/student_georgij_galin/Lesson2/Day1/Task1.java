@@ -1,35 +1,28 @@
 package student_georgij_galin.Lesson2.Day1;
 
-//Написать консольную программу, которая запрашивает у пользователя два целых числа и
-//выводит на консоль результаты: сложения, вычитания, умножения и деления.
-
 import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
 
-        System.out.println("Эта программа запрашивает 2 целых числа и выполняет: сложение, вычитание, умножение и деление");
+        Scanner scanner = new Scanner(System.in);
 
-        // 1. get first number from user
-        Scanner myInput = new Scanner( System.in );
-        System.out.println("Enter first number: ");
-        int firstNumber = myInput.nextInt();
+        System.out.print("Enter first number:");
+        int FirstNumber = scanner.nextInt();
 
-        // 2. get second number from user
-        System.out.println("Enter second number: ");
-        int secondNumber = myInput.nextInt();
+        System.out.print("Enter second number:");
+        int SecondNumber = scanner.nextInt();
 
-        // 3. first number + second number
-        int summa = firstNumber + secondNumber;
-        int raznica = firstNumber - secondNumber;
-        int umnozenie = firstNumber * secondNumber;
-        double delenie = firstNumber / (double)secondNumber;
+        int sum = FirstNumber + SecondNumber;
+        int sub = FirstNumber - SecondNumber;
+        int multiple = FirstNumber * SecondNumber;
+        int division = FirstNumber / SecondNumber;
 
-        // 4. print result to console
-        System.out.println("Сумма = " + summa);
-        System.out.println("Разница = " + raznica);
-        System.out.println("Произведение = " + umnozenie);
-        System.out.println("Частное = " + delenie);
+        System.out.println(FirstNumber + " + " + SecondNumber + " = " + sum);
+        System.out.println(FirstNumber + " - " + SecondNumber + " = " + sub);
+        System.out.println(FirstNumber + " * " + SecondNumber + " = " + multiple);
+        System.out.println(FirstNumber + " / " + SecondNumber + " = " + division);
 
     }
 }
+
