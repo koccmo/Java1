@@ -1,7 +1,0 @@
-Дан код, нужно исправить ошибку компиляции.
-
-class Phone {
-    public static void main(String[] args) {
-    }
-
-}
