@@ -13,7 +13,7 @@ public class Task8 {
 
         // 1. get name from user
         Scanner myInput = new Scanner( System.in );
-        System.out.println("Enter your name: ");
+        System.out.println("Enter first number: ");
         String Name = myInput.next();
 
         // 2. print result to console

@@ -12,11 +12,11 @@ public class Task2 {
 
         // 1. get first number from user
         Scanner myInput = new Scanner( System.in );
-        System.out.println("Enter first number: ");
+        System.out.println("Enter first number ");
         double firstNumber = myInput.nextDouble();
 
         // 2. get second number from user
-        System.out.println("Enter second number: ");
+        System.out.println("Enter second number ");
         double secondNumber = myInput.nextDouble();
 
         // 3. first number + second number
