@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_2;
+package student_anvars_intezars.home_tasks.lesson_2.day1;
 
 import java.util.Scanner;
 
