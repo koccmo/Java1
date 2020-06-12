@@ -2,7 +2,7 @@ package student_anvars_intezars.home_tasks.lesson_2.day2;
 
 import java.util.Scanner;
 
-public class Book {
+public class Task3Book {
 
     private static Scanner reader = new Scanner (System.in);
 

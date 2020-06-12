@@ -2,7 +2,7 @@ package student_anvars_intezars.home_tasks.lesson_2.day2;
 
 import java.util.Scanner;
 
-public class Phone {
+public class Task4Phone {
 
     private static Scanner in = new Scanner (System.in);
 
