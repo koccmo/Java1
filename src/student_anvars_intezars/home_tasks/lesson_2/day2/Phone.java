@@ -26,9 +26,11 @@ public class Phone {
             System.out.println("Phone number");
             long phoneNumber = in.nextLong();
 
-            System.out.println("Name: " + name);
-            System.out.println("Surname: " + surname);
-            System.out.println("Work Place: " + placeOfWork);
-            System.out.println("Phone number: " + phoneNumber);}
+                System.out.println();
+                System.out.println ("The new contact is added");
+                System.out.println("Name: " + name);
+                System.out.println("Surname: " + surname);
+                System.out.println("Work Place: " + placeOfWork);
+                System.out.println("Phone number: " + phoneNumber);}
 
 }
