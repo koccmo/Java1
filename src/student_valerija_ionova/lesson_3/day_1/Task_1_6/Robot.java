@@ -21,9 +21,7 @@ package student_valerija_ionova.lesson_3.day_1.Task_1_6;
 
 public class Robot {
 
-    public Robot() {
 
-    }
 
         public void sayHello() {
             System.out.println("Hello!");
