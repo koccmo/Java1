@@ -6,8 +6,8 @@ public class Robot {
         System.out.println("Hello");}
 
         public void sayYourName(){
-        System.out.println("My name is ROBO");
-        }
+        System.out.println("My name is ROBO");}
+
     }
 
 
