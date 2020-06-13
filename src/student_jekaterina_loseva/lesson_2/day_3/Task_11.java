@@ -13,7 +13,7 @@ public class Task_11 {
         double thirdNumber = scanner.nextDouble();
         double average = (firstNumber + secondNumber + thirdNumber) / 3;
 
-        System.out.println("everage is: " + average);
+        System.out.println("average is: " + average);
 
     }
 
