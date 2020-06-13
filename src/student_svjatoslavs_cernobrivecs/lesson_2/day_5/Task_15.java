@@ -1,4 +1,4 @@
-package student_svjatoslavs_cernobrivecs.Lesson_2.day_5;
+package student_svjatoslavs_cernobrivecs.lesson_2.day_5;
 
 public class Task_15 {
 

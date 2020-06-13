@@ -1,4 +1,4 @@
-package student_svjatoslavs_cernobrivecs.Lesson_2.day_3;
+package student_svjatoslavs_cernobrivecs.lesson_2.day_3;
 
 import java.util.Scanner;
 

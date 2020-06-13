@@ -1,4 +1,4 @@
-package student_svjatoslavs_cernobrivecs.Lesson_2.day_6;
+package student_svjatoslavs_cernobrivecs.lesson_2.day_6;
 
 public class NoSleepNoFocus {
 
