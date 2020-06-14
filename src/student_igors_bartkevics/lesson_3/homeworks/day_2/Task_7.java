@@ -1,3 +1,4 @@
+/*
 Учимся работать со строками.
 
 Тема: создание переменной типа String.
@@ -10,3 +11,17 @@
 
     String myName = "Viktor";
     System.out.println(myName);
+ */
+
+package student_igors_bartkevics.lesson_3.homeworks.day_2;
+
+public class Task_7 {
+
+    public static void main(String[] args){
+
+        String myName = "Igors";
+        System.out.println(myName);
+
+    }
+
+}
