@@ -16,7 +16,7 @@
 
 package student_igors_bartkevics.lesson_3.homeworks.day_2;
 
-public class Task__8 {
+public class Task_8 {
 
     public static void main(String[] args){
 
