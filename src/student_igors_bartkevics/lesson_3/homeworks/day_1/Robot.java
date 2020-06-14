@@ -1,6 +1,6 @@
 package student_igors_bartkevics.lesson_3.homeworks.day_1;
 
-import java.util.Scanner;
+
 
 public class Robot {
 
@@ -8,19 +8,14 @@ public class Robot {
 
     }
 
-    String robotName;
+
 
     public void sayHello() {
-        System.out.println("Hello I am robot");
+        System.out.println("Hello!");
     }
 
-    public void setRobotName() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Set name for robot ");
-        robotName = scanner.nextLine();
-    }
 
     public void sayYourName() {
-            System.out.println("My name is " + robotName);
+            System.out.println("My name is ROBO");
     }
 }
