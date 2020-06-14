@@ -4,7 +4,7 @@ public class Task15ConsolePrintOut {
 
     public static void main(String[] args) {
 
-        System.out.println("I enjoy learning");
+        System.out.print("I enjoy learning ");
         System.out.print("Java");
     }
 }
