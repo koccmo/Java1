@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_3.homeworks.day_1;
+package student_igors_bartkevics.lesson_3.homeworks.day_1.Task_1_to_6;
 
 public class RobotDemo {
     public static void main(String[] args){
