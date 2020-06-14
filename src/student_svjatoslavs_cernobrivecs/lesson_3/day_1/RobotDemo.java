@@ -4,11 +4,13 @@ public class RobotDemo {
 
     public static void main(String[] args){
 
-        Robot robotHelloNumberOne = new Robot();
+
+        Robot robotHelloNumberOne = new Robot("Robocop");
         robotHelloNumberOne.sayHello();
         robotHelloNumberOne.sayYourName();
 
-        Robot robotHelloNumberTwo = new Robot();
+
+        Robot robotHelloNumberTwo = new Robot("Terminator");
         robotHelloNumberTwo.sayHello();
         robotHelloNumberTwo.sayYourName();
     }
