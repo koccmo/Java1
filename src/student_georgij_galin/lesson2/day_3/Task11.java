@@ -16,7 +16,7 @@ public class Task11 {
         double thirdNumber = scanner.nextDouble();
 
         double addition = firstNumber + secondNumber + thirdNumber;
-        double total = addition / 7;
+        double total = addition / 3;
 
         System.out.println("Average number: " + total);
 
