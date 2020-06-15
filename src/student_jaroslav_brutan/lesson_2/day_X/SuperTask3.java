@@ -1,6 +1,6 @@
 package student_jaroslav_brutan.lesson_2.day_X;
 
-public class Super_task_3 {
+public class SuperTask3 {
     public static void main(String[] args) {
 
         int numberOne = 10;

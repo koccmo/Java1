@@ -1,6 +1,6 @@
 package student_jaroslav_brutan.lesson_2.day_X;
 import java.util.Scanner;
-public class Super_task_5 {
+public class SuperTask5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter any number");
