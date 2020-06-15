@@ -1,4 +1,4 @@
-package student_Alexey_Tretyakov.lesson_2.day_1;
+package student_alexey_tretyakov.lesson_2;
 
 import java.util.Scanner;
 
