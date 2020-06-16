@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_3.day_6.Task_24;
+package student_valerija_ionova.lesson_3.day_6.task_24;
 
 public class DetiDemo {
     public static void main(String[] args){

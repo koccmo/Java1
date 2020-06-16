@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_3.day_6.Task_28;
+package student_valerija_ionova.lesson_3.day_6.task_28;
 
 /*Дописать код программы, что бы она запускалась
         и выводила на консоль производителя и модель компьютера.

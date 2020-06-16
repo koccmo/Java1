@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_3.day_4.Task_14;
+package student_valerija_ionova.lesson_3.day_4.task_14;
 
 
 /*Найти ошибку в коде.

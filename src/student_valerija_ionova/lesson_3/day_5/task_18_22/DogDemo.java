@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_3.day_5.Task_18_22;
+package student_valerija_ionova.lesson_3.day_5.task_18_22;
 
 /*Создать отдельный класс DogDemo,
 объявить в нём main() метод и продемонстрировать

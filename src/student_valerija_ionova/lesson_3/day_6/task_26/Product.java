@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_3.day_6.Task_26;
+package student_valerija_ionova.lesson_3.day_6.task_26;
 
 /*Разработать класс - продукт,
         у которого должны быть следующие характеристики:

@@ -1,11 +1,9 @@
-package student_valerija_ionova.lesson_3.day_6.Task_27;
+package student_valerija_ionova.lesson_3.day_6.task_27;
 
 /*Найти логическую ошибку в коде.
         Исправить и запустить программу так, что бы она выводила
         на консоль владельца банковского счёта и количество денег.
         Менять можно только класс BankAccount.*/
-
-import static student_valerija_ionova.lesson_3.day_6.Task_27.BankAccount.*;
 
 class BankAccount {
 

@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_3.day_4.Task_15;
+package student_valerija_ionova.lesson_3.day_4.task_15;
 
 /*Найти ошибку в коде.
 Исправить и запустить программу.

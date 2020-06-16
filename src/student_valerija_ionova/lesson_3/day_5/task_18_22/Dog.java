@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_3.day_5.Task_18_22;
+package student_valerija_ionova.lesson_3.day_5.task_18_22;
 
 /*Task18
 Создать класс собака (Dog)

@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_3.day_6.Task_24;
+package student_valerija_ionova.lesson_3.day_6.task_24;
 
 /*Выберите два разных объекта из реального мира.
 Для каждого объекта выделите 2 - 3 самых важных
