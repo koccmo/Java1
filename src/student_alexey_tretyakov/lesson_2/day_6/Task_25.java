@@ -1,4 +1,4 @@
-package student_Alexey_Tretyakov.lesson_2.day_6;
+package student_alexey_tretyakov.lesson_2.day_6;
 
 public class Task_25 {
     //class NoSleepNoFocus {

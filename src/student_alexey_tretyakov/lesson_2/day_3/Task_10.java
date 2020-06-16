@@ -1,6 +1,4 @@
-package student_Alexey_Tretyakov.lesson_2.day_3;
-
-import java.util.Scanner;
+package student_alexey_tretyakov.lesson_2.day_3;
 
 import static java.lang.Math.PI;
 

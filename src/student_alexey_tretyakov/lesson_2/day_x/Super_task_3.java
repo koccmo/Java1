@@ -1,4 +1,4 @@
-package student_Alexey_Tretyakov.lesson_2.day_x;
+package student_alexey_tretyakov.lesson_2.day_x;
 
 public class Super_task_3 {
    // public class CorrectDataTypes {

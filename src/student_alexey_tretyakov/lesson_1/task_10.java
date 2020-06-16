@@ -1,4 +1,4 @@
-package student_Alexey_Tretyakov.lesson_1;
+package student_alexey_tretyakov.lesson_1;
 
 public class task_10 {
 
