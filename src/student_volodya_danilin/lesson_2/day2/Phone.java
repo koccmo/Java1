@@ -7,7 +7,7 @@ package student_volodya_danilin.lesson_2.day2;
 //}
 
 class Phone {                                                // не было фигурной скобки после названия класса
-    public static void main(String[] args){                  // не было начала программы
+    public static void main(String[] args){                  // не было начала программы(метода)
 
     }
 }

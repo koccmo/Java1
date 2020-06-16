@@ -9,7 +9,7 @@ package student_volodya_danilin.lesson_2.day2;
 //}
 
 class book {
-    public static void main(String[] args){     //не было начала программы
+    public static void main(String[] args){     //не было начала программы(метода)
 
     }
 

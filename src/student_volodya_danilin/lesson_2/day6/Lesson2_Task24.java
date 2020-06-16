@@ -13,6 +13,6 @@ package student_volodya_danilin.lesson_2.day6;
 
 public class Lesson2_Task24 {
     public static void main(String[] args) {
-        System.out.println("Code outside the method will not compile!");         //код должен быть под 'шапкой'
+        System.out.println("Code outside the method will not compile!");         //код должен быть под методом
     }
 }
