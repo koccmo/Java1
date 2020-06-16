@@ -6,8 +6,10 @@ public class RobotDemo {
         Robot robot = new Robot();
         Robot robot2 = new Robot();
 
+
         robot.sayHello();
         robot.sayYourName();
+
 
         robot2.sayHello();
         robot2.sayYourName();

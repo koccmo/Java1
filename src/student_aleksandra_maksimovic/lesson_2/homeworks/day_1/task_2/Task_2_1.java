@@ -31,10 +31,10 @@ public class Task_2_1 {
 
 
         //4. print result to console
-        System.out.println("addition result = " + sum );
-        System.out.println("subtraction result = " + sub);
-        System.out.println("multiplication result = " + mul);
-        System.out.println("division result = " + div);
+        System.out.println(firstNumber + " + " + secondNumber + " = " + sum);
+        System.out.println(firstNumber + " - " + secondNumber + " = " + sub);
+        System.out.println(firstNumber + " * " + secondNumber + " = " + mul);
+        System.out.println(firstNumber + " / " + secondNumber + " = " + div);
     }
 
 

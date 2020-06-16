@@ -6,6 +6,6 @@ class Phone
 
 // missing an opening brace '({)'
 
-class Phone {
+          class Phone {
 
 }
