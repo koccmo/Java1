@@ -2,7 +2,7 @@ package student_aleksandra_maksimovic.lesson_2.homeworks.day_3;
 
 import java.util.Scanner;
 
-public class Task_9_2 {
+public class Task9 {
 
 
  /*   Write a Java program that takes a number as input and prints its

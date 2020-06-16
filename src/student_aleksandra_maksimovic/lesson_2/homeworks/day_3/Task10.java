@@ -3,7 +3,7 @@ package student_aleksandra_maksimovic.lesson_2.homeworks.day_3;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class Task_10 {
+public class Task10 {
     public static void main(String[] args) {
         //Write a Java program to print the area and perimeter of a circle.
         //

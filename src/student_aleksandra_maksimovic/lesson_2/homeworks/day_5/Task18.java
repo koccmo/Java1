@@ -1,4 +1,4 @@
-package student_aleksandra_maksimovic.lesson_2.homeworks.day_5.task_18;
+package student_aleksandra_maksimovic.lesson_2.homeworks.day_5;
 
 
 /*
@@ -12,7 +12,7 @@ class SizeMatters {
  */
 
 
-class SizeMatters {
+class Task18 {
     public static void main(String[] args) {
         System.out.println("Sorry, I have an errors.");
         System.out.println("Please fix me!");
