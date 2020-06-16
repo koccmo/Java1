@@ -1,4 +1,4 @@
-package student_vladislav_zagrebin.lesson_2.Lesson_examples;
+package student_vladislav_zagrebin.lesson_2.lesson_examples;
 
 import java.util.Scanner;
 
