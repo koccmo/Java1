@@ -18,6 +18,9 @@ public class Task10 {
         System.out.println("Enter your radius");
         Scanner myInput = new Scanner(System.in);
 
+		//Названия переменных!! r, pi, s, l .... ????
+		// привыкайте давать переменным понятные имена: radius, area, perimeter ....
+
         double r = myInput.nextDouble();
 
         double Pi = 3.1415926535897932384626433832795;
