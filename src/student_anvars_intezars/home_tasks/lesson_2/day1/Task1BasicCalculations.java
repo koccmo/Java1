@@ -25,7 +25,7 @@ class Task1BasicCalculations {
                 System.out.println("The result of Sum result is " + sumCalculation);
 
                 int subCalculation = firstNumber - secondNumber;
-                System.out.println("The ruslt of subtraction is " + subCalculation);
+                System.out.println("The result of subtraction is " + subCalculation);
 
                 double divCalculation = firstNumber / (double) secondNumber;
                 System.out.println("The result of division is " + divCalculation);

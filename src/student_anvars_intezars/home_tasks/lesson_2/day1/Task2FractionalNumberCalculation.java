@@ -12,6 +12,7 @@ public class Task2FractionalNumberCalculation {
         System.out.println ("To begin press enter two fractional numbers");
 
         System.out.println();
+
         System.out.println("Please enter the First fractional number");
         double firstNumber = in.nextDouble();
         System.out.println(firstNumber);
