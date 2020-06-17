@@ -13,6 +13,7 @@ public class Task_1 {
         System.out.print("Please enter second number: ");
         int secondNumber = scanner.nextInt();
 
+		// не объявляйте переменные заранее!!
         int sum, sub, mult;
         double div;
         sum = firstNumber + secondNumber;
