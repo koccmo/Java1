@@ -7,9 +7,11 @@ public class Task_1 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter first number:");
+        // названия переменных с маленькой буквы
         int FirstNumber = scanner.nextInt();
 
         System.out.print("Enter second number:");
+		// названия переменных с маленькой буквы
         int SecondNumber = scanner.nextInt();
 
         int sum = FirstNumber + SecondNumber;
