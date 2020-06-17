@@ -20,6 +20,7 @@ public class Task_2 {
         double secondNumber = myInput.nextDouble();
 
         // 3. first number + second number
+		// русские названия кирилицей? Давайте использовать ENG!
         double summa = firstNumber + secondNumber;
         double raznica = firstNumber - secondNumber;
         double umnozenie = firstNumber * secondNumber;
