@@ -5,7 +5,7 @@ public class Task10 {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
                System.out.println("Enter radius 7,5");
-               double area, perimeter;
+               double area, perimeter; // не объявляйте переменные заранее!!
                double radius = scanner.nextDouble();
                area = Math.PI * radius * radius;
                System.out.println("Area = " + area);

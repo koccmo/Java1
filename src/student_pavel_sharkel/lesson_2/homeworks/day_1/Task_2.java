@@ -13,8 +13,8 @@ public class Task_2 {
         System.out.print("Enter second number with floating point: ");
         double secondNumber = scanner.nextDouble();
 
-        double sum, sub, mult, div;
-        sum = firstNumber + secondNumber;
+        double sum, sub, mult, div;  // не объявляйте переменные заранее!!
+		sum = firstNumber + secondNumber;
         sub = firstNumber - secondNumber;
         mult = firstNumber * secondNumber;
         div =  firstNumber / secondNumber;

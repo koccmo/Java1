@@ -15,7 +15,7 @@ public class Task_8 {
         // 1. get name from user
         Scanner myInput = new Scanner( System.in );
         System.out.println("Введите Ваше имя: ");
-        String Name = myInput.next();
+        String Name = myInput.next(); // название переменных с маленькой буквы!
 
         // 2. print result to console
         System.out.println("Hello " + Name);
