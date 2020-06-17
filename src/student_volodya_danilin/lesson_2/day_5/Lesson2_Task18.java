@@ -1,4 +1,4 @@
-package student_volodya_danilin.lesson_2.day5;
+package student_volodya_danilin.lesson_2.day_5;
 
 //Заставьте эту программу работать!
 //

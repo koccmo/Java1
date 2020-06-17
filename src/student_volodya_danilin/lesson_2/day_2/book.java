@@ -1,4 +1,4 @@
-package student_volodya_danilin.lesson_2.day2;
+package student_volodya_danilin.lesson_2.day_2;
 
 //Дан код, нужно исправить ошибку компиляции.
 //

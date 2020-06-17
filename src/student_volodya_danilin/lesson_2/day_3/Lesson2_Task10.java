@@ -1,9 +1,8 @@
-package student_volodya_danilin.lesson_2.day3;
+package student_volodya_danilin.lesson_2.day_3;
 
 // Write a Java program to print the area and perimeter of a circle.
 
 import java.util.Scanner;
-import java.lang.Math.*;
 
 public class Lesson2_Task10 {
     public static void main(String[] args){
