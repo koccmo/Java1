@@ -2,6 +2,7 @@ package student_vladimir_kobenko.lesson2.homeworks.day_1;
 
 import java.util.Scanner;
 
+// названия классов с большой буквы!
 public class lesson2_Task1 {
     public static void main (String [] args){
         Scanner scanner = new Scanner(System.in);
