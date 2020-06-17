@@ -20,6 +20,7 @@ public class Task_1 {
         int secondNumber = myInput.nextInt();
 
         // 3. first number + second number
+		// русские названия кирилицей? Давайте использовать ENG!
         int summa = firstNumber + secondNumber;
         int raznica = firstNumber - secondNumber;
         int umnozenie = firstNumber * secondNumber;
