@@ -2,7 +2,7 @@ package student_alexey_tretyakov.lesson_2.day_1;
 
 import java.util.Scanner;
 
-public class task_1 {
+public class task_1 { // название класса должено начинаться с большой буквы
     public static void main(String[] args) {
 
         // Enter first number;
