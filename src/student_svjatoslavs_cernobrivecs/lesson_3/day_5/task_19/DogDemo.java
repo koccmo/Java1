@@ -1,4 +1,4 @@
-package student_svjatoslavs_cernobrivecs.lesson_3.day_5.Task_19;
+package student_svjatoslavs_cernobrivecs.lesson_3.day_5.task_19;
 
 public class DogDemo {
 
