@@ -8,7 +8,7 @@ public class Dog {
         this.color = color;
     }
     public void voice(){
-        System.out.println(this.color);
+        System.out.println(color);
     }
     public void changeColor(String newColor){
         System.out.println(newColor);
