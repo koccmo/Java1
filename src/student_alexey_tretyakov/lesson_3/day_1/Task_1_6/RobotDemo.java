@@ -34,18 +34,21 @@ public class RobotDemo {
 (вызовы у них методов sayHello() и sayYourName()).
           */
          Scanner scanner = new Scanner(System.in);
-         System.out.println("\n We make a whole army of robots!!!");
+         System.out.println("\n \n We make a whole army of robots!!!");
          System.out.print(" How many robots you want? Please, input number = ");
          int scanNumber = scanner.nextInt();
 
-        for (int i=1; i<=scanNumber; i++) {
+         Robot[] robotArmy = new Robot[scanNumber+1];
 
-            System.out.print("Robot number " + i );
-            robotNew.sayHello();
-            robotNew.sayYourName();
+         for (int i=1; i<=scanNumber; i++) {
+            robotArmy[i] = new Robot();
+            System.out.print("Robot number " + i + " say hello!  -  ");
+            robotArmy[i].sayHello();
+            robotArmy[i].sayYourName();
             System.out.println( " " + i );
 
         }
+
 
      }
 
