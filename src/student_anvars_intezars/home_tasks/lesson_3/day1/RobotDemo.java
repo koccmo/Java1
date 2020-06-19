@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_3.task1;
+package student_anvars_intezars.home_tasks.lesson_3.day1;
 
 public class RobotDemo {
 
