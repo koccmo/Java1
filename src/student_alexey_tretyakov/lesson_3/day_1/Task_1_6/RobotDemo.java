@@ -34,7 +34,7 @@ public class RobotDemo {
 (вызовы у них методов sayHello() и sayYourName()).
           */
          Scanner scanner = new Scanner(System.in);
-         System.out.println("\n We make whole robot's army !!!");
+         System.out.println("\n We make a whole army of robots!!!");
          System.out.print(" How many robots you want? Please, input number = ");
          int scanNumber = scanner.nextInt();
 
