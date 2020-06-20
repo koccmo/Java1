@@ -1,0 +1,1 @@
+JAVA_HOME is a system environment variable which represent JDK installation directory. When you install JDK in your machine (windows, Linux or unix) it creates a home directory and puts all its binary (bin), library(lib) and other
