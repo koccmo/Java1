@@ -8,5 +8,15 @@ public class RobotDemo {
             firstRobot.sayHello();
             firstRobot.sayYourName();
 
+         System.out.println();
+         Robot secondRobot = new Robot();
+            secondRobot.sayHello();
+            secondRobot.sayYourName();
+
+        System.out.println();
+        Robot thirdRobot = new Robot();
+        thirdRobot.sayHello();
+        thirdRobot.sayYourName();
+
     }
 }
