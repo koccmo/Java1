@@ -1,8 +1,8 @@
 package student_georgij_galin.lesson3.day_6.task_27;
 
 public class BankAccount {
-    private String owner;
-    private int money;
+    private final String owner;
+    private final int money;
 
     public BankAccount(String owner, int money){
         this.owner = owner;

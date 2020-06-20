@@ -1,9 +1,9 @@
 package student_georgij_galin.lesson3.day_5.task_21;
 
 public class Dog {
-    private String name;
-    private int age;
-    private String color;
+    private final String name;
+    private final int age;
+    private final String color;
 
     public Dog(String name, int age, String color) {
         this.name = name;

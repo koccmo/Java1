@@ -1,7 +1,7 @@
 package student_georgij_galin.lesson3.day_6.task_26;
 
 public class Product {
-    private String name;
+    private final String name;
     private double regularPrice;
     private double actualPrice;
 
@@ -9,14 +9,12 @@ public class Product {
         this.name = name;
     }
 
-    public double getRegularPrice(double regularPrice) {
+    public void getRegularPrice(double regularPrice) {
         this.regularPrice = regularPrice;
-        return regularPrice;
     }
 
-    public double getActualPrice(double actualPrice) {
+    public void getActualPrice(double actualPrice) {
         this.actualPrice = regularPrice * actualPrice / 100;
-        return actualPrice;
     }
 
     public void printInformation() {
