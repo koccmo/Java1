@@ -10,7 +10,7 @@ public class CorrectDataTyper {
         System.out.println("Number 2 = " + numberTwo);
 
         // тут приведение типа не нужно, так как numberTwo уже double
-        double sum = numberOne + (double) numberTwo;
+        double sum = numberOne +  numberTwo;
 
         System.out.println("Sum = " + sum);
     }
