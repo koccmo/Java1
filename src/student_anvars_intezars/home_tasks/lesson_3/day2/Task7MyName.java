@@ -1,6 +1,6 @@
 package student_anvars_intezars.home_tasks.lesson_3.day2;
 
-public class MyName {
+public class Task7MyName {
 
     public static void main(String[] args) {
 
