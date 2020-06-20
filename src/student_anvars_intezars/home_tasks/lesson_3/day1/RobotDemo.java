@@ -15,8 +15,8 @@ public class RobotDemo {
 
         System.out.println();
         Robot thirdRobot = new Robot();
-        thirdRobot.sayHello();
-        thirdRobot.sayYourName();
+            thirdRobot.sayHello();
+            thirdRobot.sayYourName();
 
     }
 }
