@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 public class Game {
 
-    private int [] scoreOfRolls = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0, 0, 0, 0};
+    private int [] scoreOfRolls = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0, 0, 0, 0,0};
 
     int count = 0;
 

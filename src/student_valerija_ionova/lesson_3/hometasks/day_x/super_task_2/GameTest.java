@@ -36,8 +36,8 @@ public class GameTest {
         bowling.roll(10);//11
 
 
-        String table = bowling.tableOfScore();
-        System.out.println(table);
+        //String table = bowling.tableOfScore();
+        //System.out.println(table);
 
         int score = bowling.score();
         System.out.println(score);
