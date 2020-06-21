@@ -2,7 +2,7 @@ package student_georgij_galin.lesson3.day_4;
 
 public class Phone {
 
-    private final String model;
+    private  String model;
 
     public Phone (String model) {
         this.model = model;

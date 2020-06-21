@@ -1,7 +1,7 @@
 package student_georgij_galin.lesson3.day_6.task_26;
 
 public class Product {
-    private final String name;
+    private  String name;
     private double regularPrice;
     private double actualPrice;
 
