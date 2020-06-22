@@ -77,19 +77,15 @@ public class Task10AboutClassString {
 
 
 
-
-    Источники:
-    https://topjava.ru/blog/stack-and-heap-in-java
-    http://proglang.su/java/strings-length
-    http://proglang.su/java-examples/strings-compare
-
-   }
-}
-
     4. String pool - является частью памяти под названием "Куча"/"Heap".
        Например, переменная типа String создается в части памяти "Стек" но сама
        строка уже будет храниться в области памяти "String Pool".
        Это отдельный участок памяти "Стек", в которой и хранится ссылочная переменная
        типа String.
+
+       Источники:
+        https://topjava.ru/blog/stack-and-heap-in-java
+        http://proglang.su/java/strings-length
+        http://proglang.su/java-examples/strings-compare
      */
 }
