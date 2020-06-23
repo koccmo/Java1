@@ -11,7 +11,7 @@ public class Television {
     }
 
     public void presentation() {
-        System.out.print("Television mark" + this.mark + ". Television price " + price + " EUR. ");
+        System.out.print("Television mark" + this.mark + ". Television price " + this.price + " EUR. ");
 
 
     }
