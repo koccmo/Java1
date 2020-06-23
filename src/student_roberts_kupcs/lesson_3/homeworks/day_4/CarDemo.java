@@ -1,4 +1,6 @@
-package teacher.lesson_3.homeworks.day_4;
+package student_roberts_kupcs.lesson_3.homeworks.day_4;
+
+import student_roberts_kupcs.lesson_3.homeworks.day_4.Car;
 
 public class CarDemo {
     public static void main(String[] args) {

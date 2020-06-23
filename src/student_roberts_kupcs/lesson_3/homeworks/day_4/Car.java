@@ -1,4 +1,4 @@
-package teacher.lesson_3.homeworks.day_4;
+package student_roberts_kupcs.lesson_3.homeworks.day_4;
 
 public class Car {
     private String model;
