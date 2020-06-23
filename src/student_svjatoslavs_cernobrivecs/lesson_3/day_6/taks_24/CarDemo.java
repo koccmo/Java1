@@ -1,4 +1,4 @@
-package student_svjatoslavs_cernobrivecs.lesson_3.day_6;
+package student_svjatoslavs_cernobrivecs.lesson_3.day_6.taks_24;
 
 public class CarDemo {
 
