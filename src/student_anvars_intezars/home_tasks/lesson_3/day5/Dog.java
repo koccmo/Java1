@@ -9,7 +9,7 @@ public class Dog {
     }
 
     public void voice () {
-        System.out.println("Bobik");
+        System.out.println("Sunny");
         }
 
 }

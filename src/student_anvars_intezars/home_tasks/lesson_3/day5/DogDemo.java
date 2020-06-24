@@ -4,7 +4,7 @@ public class DogDemo {
 
     public static void main(String[] args) {
 
-        Dog puppy = new Dog("Bobik");
+        Dog puppy = new Dog("Sunny");
             puppy.voice();
             puppy.voice();
             puppy.voice();
