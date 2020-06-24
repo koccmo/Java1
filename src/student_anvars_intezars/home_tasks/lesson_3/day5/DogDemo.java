@@ -4,9 +4,11 @@ public class DogDemo {
 
     public static void main(String[] args) {
 
-        Dog puppy = new Dog("Sunny");
+        Dog puppy = new Dog();
+            puppy.setName("Sunny");
+            puppy.setAge(5);
             puppy.voice();
-            puppy.voice();
-            puppy.voice();
+            System.out.println("Puppy age is " + puppy.getAge());
+
     }
 }
