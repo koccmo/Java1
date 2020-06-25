@@ -23,8 +23,8 @@ class ProductDemo {
     public static void main(String[] args) {
 
         Product product = new Product("Samsung S20");
-        product.regularPrice = 800.00;
-        product.discount = 0.053;
+        product.setRegularPrice(800);
+        product.setDiscount(0.053);
         product.actualPrice();
         product.printInformation();
     }
