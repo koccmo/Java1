@@ -7,7 +7,7 @@ public class DogDemo {
         Dog puppy = new Dog();
             puppy.setName("Sunny");
             puppy.setAge(5);
-            puppy.setColor("Brown");
+            puppy.setColor("Black");
             puppy.voice();
 
     }
