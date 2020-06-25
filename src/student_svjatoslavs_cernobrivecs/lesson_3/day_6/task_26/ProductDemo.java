@@ -4,7 +4,7 @@ public class ProductDemo {
 
     public static void main(String[] args){
 
-        Product car = new Product("Bmw",15000,32.7);
+        Product car = new Product("BMW",15000,32.7);
         car.printInformation();
     }
 }
