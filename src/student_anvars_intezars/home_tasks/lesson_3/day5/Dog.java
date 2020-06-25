@@ -4,6 +4,7 @@ public class Dog {
 
     private String name;
     private int age;
+    private int birthday;
 
     public String getName(String name) {
         return name;
@@ -23,5 +24,11 @@ public class Dog {
 
     public void voice() {
         System.out.println("Sunny");
+    }
+    public void happyBirthday() {
+        System.out.println("Happy Birthday!!!");
+        System.out.println("Sunny you are now " + (age+1 ));
+       ;
+
     }
 }

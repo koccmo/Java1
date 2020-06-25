@@ -8,7 +8,7 @@ public class DogDemo {
             puppy.setName("Sunny");
             puppy.setAge(5);
             puppy.voice();
-            System.out.println("Puppy age is " + puppy.getAge());
-
+            puppy.happyBirthday();
+            puppy.voice();
     }
 }
