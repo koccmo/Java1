@@ -40,4 +40,10 @@ public class Dog {
         public void setColor(String color) {
             this.color = color;
         }
+
+        public void changeColor(String newColor) {
+            System.out.println("Now my color is " + newColor);
+        }
+
+
 }

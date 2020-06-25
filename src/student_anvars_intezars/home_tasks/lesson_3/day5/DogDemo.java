@@ -9,6 +9,7 @@ public class DogDemo {
             puppy.setAge(5);
             puppy.setColor("Black");
             puppy.voice();
+            puppy.changeColor("Brown");
 
     }
 }
