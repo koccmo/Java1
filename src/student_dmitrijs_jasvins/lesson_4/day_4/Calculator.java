@@ -27,7 +27,11 @@ public class Calculator {
     }
 
     public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
-        return Math.max(firstNumber, secondNumber);
+        if (firstNumber > secondNumber) {
+            return firstNumber;
+        } else {
+            return secondNumber;
+        }
     }
 
     public int maxOfThreeNumber(int firstNumber, int secondNumber, int thirdNumber) {

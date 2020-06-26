@@ -11,11 +11,11 @@ public class Task_10 {
         int secondNumber = scanner.nextInt();
         System.out.println("Enter the third number:");
         int thirdNumber = scanner.nextInt();
-        if (firstNumber > (secondNumber | thirdNumber)) {
+        if (firstNumber > secondNumber && firstNumber > thirdNumber) {
             System.out.println("Largest number is : " + firstNumber);
-        } else if (secondNumber > (firstNumber | thirdNumber)) {
+        } else if (secondNumber > firstNumber && secondNumber > thirdNumber) {
             System.out.println("Largest number is : " + secondNumber);
-        } else if (thirdNumber > (firstNumber | secondNumber)) {
+        } else {
             System.out.println("Largest number is : " + thirdNumber);
         }
     }
