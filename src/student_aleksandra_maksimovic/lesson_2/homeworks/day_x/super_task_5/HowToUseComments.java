@@ -23,7 +23,7 @@ public class HowToUseComments {
 
         }
 
-        /*System.out.println("Goodbye! Have a nice day! ");*/     // Uncomment this code, to sаy goodbay!
+        /*System.out.println("Goodbye! Have a nice day! ");*/     // Uncomment this code, to sаy goodbye!
     }
 
 
