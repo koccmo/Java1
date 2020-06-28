@@ -27,11 +27,9 @@ public class RobotDemo {
          /* Task_6
          Создаём свою армию роботов!
 
-В этом задании мы продолжаем работать с классом Robot.
-
-В методе main(...) класса RobotDemo продемонстрируйте создание
-нескольких виртуальный обьектов робот и работу с ними
-(вызовы у них методов sayHello() и sayYourName()).
+        В методе main(...) класса RobotDemo продемонстрируйте создание
+        нескольких виртуальный обьектов робот и работу с ними
+        (вызовы у них методов sayHello() и sayYourName()).
           */
          Scanner scanner = new Scanner(System.in);
          System.out.println("\n \n We make a whole army of robots!!!");
