@@ -15,7 +15,7 @@ public class Product {
     }
 
     void printInformation(){
-        System.out.println("актуальнaja стоимост = " + actualPrice());
+        System.out.println("Product : " + name + " актуальнaja стоимост = " + actualPrice());
 
     }
 
