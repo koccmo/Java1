@@ -8,20 +8,20 @@ public class Task_2 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter First Number");
-        double FirstNumber = scanner.nextDouble();
+        double firstNumber = scanner.nextDouble();
 
         System.out.println("Enter Second number");
-        double SecondNumber = scanner.nextDouble();
+        double secondNumber = scanner.nextDouble();
 
-        double addition = FirstNumber + SecondNumber;
-        double subtraction = FirstNumber - SecondNumber;
-        double multiplication = FirstNumber * SecondNumber;
-        double division = FirstNumber / SecondNumber;
+        double addition = firstNumber + secondNumber;
+        double subtraction = firstNumber - secondNumber;
+        double multiplication = firstNumber * secondNumber;
+        double division = firstNumber / secondNumber;
 
-        System.out.println(FirstNumber + " + " + SecondNumber + " = " + addition);
-        System.out.println(FirstNumber + " - " + SecondNumber + " = " + subtraction);
-        System.out.println(FirstNumber + " * " + SecondNumber + " = " + multiplication);
-        System.out.println(FirstNumber + " / " + SecondNumber + " = " + division);
+        System.out.println(firstNumber + " + " + secondNumber + " = " + addition);
+        System.out.println(firstNumber + " - " + secondNumber + " = " + subtraction);
+        System.out.println(firstNumber + " * " + secondNumber + " = " + multiplication);
+        System.out.println(firstNumber + " / " + secondNumber + " = " + division);
     }
 }
 

@@ -7,13 +7,10 @@ public class Task_2 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number :");
         int number = scanner.nextInt();
-        if (number != 0) {
-            if (number > 0) {
-                System.out.println("Number is positive");
-            }
-            if (number < 1) {
-                System.out.println("Number is negative");
-            }
+        if (number > 0) {
+            System.out.println("Number is positive");
+        } else if (number < 0) {
+            System.out.println("Number is negative");
         } else {
             System.out.println("Number = 0");
         }
