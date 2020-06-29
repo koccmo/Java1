@@ -1,4 +1,6 @@
-package student_anvars_intezars.home_tasks.lesson_3.day4;
+package student_anvars_intezars.home_tasks.lesson_3.day4.task16;
+
+import student_anvars_intezars.home_tasks.lesson_3.day4.task16.Car;
 
 public class CarDemo {
 

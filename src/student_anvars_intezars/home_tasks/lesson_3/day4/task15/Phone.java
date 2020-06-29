@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_3.day4;
+package student_anvars_intezars.home_tasks.lesson_3.day4.task15;
 
 public class Phone {
 

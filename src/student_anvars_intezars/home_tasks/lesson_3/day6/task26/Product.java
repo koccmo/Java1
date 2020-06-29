@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_3.day6.Task26;
+package student_anvars_intezars.home_tasks.lesson_3.day6.task26;
 
 public class Product {
 

@@ -1,6 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_3.day6.Task26;
-
-import student_anvars_intezars.home_tasks.lesson_3.day6.Task26.Product;
+package student_anvars_intezars.home_tasks.lesson_3.day6.task26;
 
 public class ProductDemo {
 

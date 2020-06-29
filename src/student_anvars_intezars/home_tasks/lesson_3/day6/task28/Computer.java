@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_3.day6.Task28;
+package student_anvars_intezars.home_tasks.lesson_3.day6.task28;
 
 public class Computer {
 

@@ -1,6 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_3.day6.Task25;
-
-import student_anvars_intezars.home_tasks.lesson_3.day6.Task25.Circle;
+package student_anvars_intezars.home_tasks.lesson_3.day6.task25;
 
 public class CircleDemo {
 

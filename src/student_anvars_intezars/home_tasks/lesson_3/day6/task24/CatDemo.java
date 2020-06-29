@@ -1,6 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_3.day6.Task24;
-
-import student_anvars_intezars.home_tasks.lesson_3.day6.Task24.Cat;
+package student_anvars_intezars.home_tasks.lesson_3.day6.task24;
 
 public class CatDemo {
 

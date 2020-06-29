@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_3.day6.Task25;
+package student_anvars_intezars.home_tasks.lesson_3.day6.task25;
 
 public class Circle {
 

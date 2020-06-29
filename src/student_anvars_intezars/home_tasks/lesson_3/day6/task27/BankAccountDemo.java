@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_3.day6.Task27;
+package student_anvars_intezars.home_tasks.lesson_3.day6.task27;
 
 public class BankAccountDemo {
 
