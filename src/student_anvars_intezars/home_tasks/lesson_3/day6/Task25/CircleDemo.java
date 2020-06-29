@@ -1,6 +1,8 @@
-package student_anvars_intezars.home_tasks.lesson_3.day6;
+package student_anvars_intezars.home_tasks.lesson_3.day6.Task25;
 
-public class AreaOfCircleDemo {
+import student_anvars_intezars.home_tasks.lesson_3.day6.Task25.Circle;
+
+public class CircleDemo {
 
     public static void main(String[] args) {
 

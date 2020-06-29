@@ -1,4 +1,6 @@
-package student_anvars_intezars.home_tasks.lesson_3.day6;
+package student_anvars_intezars.home_tasks.lesson_3.day6.Task28;
+
+import student_anvars_intezars.home_tasks.lesson_3.day6.Task28.Computer;
 
 public class ComputerDemo {
 
