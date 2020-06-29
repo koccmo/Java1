@@ -20,7 +20,7 @@ public class Task_7 {
         int number2 = myInput.nextInt();
 
         if (number1 == number2){
-            System.out.println("Numbers are equals");
+            System.out.println("Numbers are equal");
         }else
             System.out.println("Numbers are different");
     }

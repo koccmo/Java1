@@ -24,7 +24,7 @@ public class Task_8 {
         double number3 = myInput.nextDouble();
 
         if ((number1 == number2)&&(number2 == number3)){
-            System.out.println("All nembers are equal");
+            System.out.println("All numbers are equal");
         }else{
             if((number1 != number2) && (number2 != number3) && (number1 != number3)){
                 System.out.println("All number are different");

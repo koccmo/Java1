@@ -6,20 +6,50 @@ package student_valerija_ionova.lesson_4.level_x.super_task_1;
 import student_valerija_ionova.lesson_4.level_x.super_task_1.FizzBuzz;
 
 public class FizzBuzzTest {
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        FizzBuzzTest fizzBuzzTest = new FizzBuzzTest();
+        fizzBuzzTest.fizzBuzzTest();
+        fizzBuzzTest.BuzzTest();
+        fizzBuzzTest.fizzTest();
+        fizzBuzzTest.notFizzBuzzTest();
+    }
 
+
+    public void fizzBuzzTest(){
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         if (fizzBuzz.detect(15).equals("FizzBuzz"))
-            System.out.println("Class FizzBuzz is working good if number /3 & /5 ");
+            System.out.println("Test FizzBuzz = OK ");
+        else System.out.println("Test FizzBuzz = FAIL");
+
+    }
+    public void fizzTest(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
 
         if (fizzBuzz.detect(3).equals("Fizz"))
-            System.out.println("Class FizzBuzz is working good if number /3");
+            System.out.println("Test Fizz = OK ");
+        else System.out.println("Test Fizz = FAIL");
+
+    }
+
+    public void BuzzTest(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
 
         if (fizzBuzz.detect(5).equals("Buzz"))
-            System.out.println("Class FizzBuzz is working good if number /5");
+            System.out.println("Test Buzz = OK ");
+        else System.out.println("Test Buzz = FAIL");
+
+    }
+
+
+    public void notFizzBuzzTest(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
 
         if (fizzBuzz.detect(4).equals("4"))
-            System.out.println("Class FizzBuzz is working good if number !/3 & !/5");
+            System.out.println("Test NotFizzBuzz = OK ");
+        else System.out.println("Test NotFizzBuzz = FAIL");
+
     }
-}
+
+    }
+
