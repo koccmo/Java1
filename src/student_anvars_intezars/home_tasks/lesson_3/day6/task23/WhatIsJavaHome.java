@@ -18,6 +18,9 @@ public class WhatIsJavaHome {
      from the command line, because that would be too easy. So if JAVA_HOME isn't already set,
      your next task is to find the directory to which you need to set it.
 
+     Sources:
+     https://stackoverflow.com/questions/2025290/what-is-java-home-how-does-the-jvm-find-the-javac-path-stored-in-java-home/27716151
+     http://sbndev.astro.umd.edu/wiki/Finding_and_Setting_JAVA_HOME
 
      */
 }
