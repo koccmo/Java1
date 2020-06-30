@@ -43,8 +43,8 @@ public class Calculator {
         return firstNumber * secondNumber;
     }
 
-    public double divide (int firstNumber, double secondNumber){
-        return firstNumber / secondNumber;
+    public double divide (int firstNumber, int secondNumber){
+        return firstNumber / (double)secondNumber;
     }
 
     public boolean isEven (int number){
@@ -54,24 +54,20 @@ public class Calculator {
     }
 
     public int maxOfTwoNumbers (int firstNumber, int secondNumber){
-        if (firstNumber > secondNumber) return firstNumber;
+        if (firstNumber >= secondNumber) return firstNumber;
         else
-            if (secondNumber > firstNumber) return secondNumber;
-            else
-                return 0;
-
+            return secondNumber;
     }
 
     public int maxOfThreeNumbers(int number1, int number2, int number3){
-        if ((number1 == number2) && (number2 == number3)) return 0;
-        else {
-            if (number1 > number2) {
-                if (number1 > number3) return number1;
+        if (number1 >= number2) {
+                if (number1 >= number3) return number1;
                 else return number3;
+
             } else {
-                if (number2 > number3) return number2;
+                if (number2 >= number3) return number2;
                 else return number3;
             }
-        }
+
     }
 }

@@ -16,9 +16,11 @@ public class Task_4 {
         System.out.println("Please input integer:");
         Scanner myInput = new Scanner (System.in);
         int number = myInput.nextInt();
+        if (number == 0) System.out.println("It's null!");
+        else
         if (number % 2 == 0) {
             System.out.println("It's even number");
         } else
-            System.out.println("It's even number");
+            System.out.println("It's odd number");
     }
 }
