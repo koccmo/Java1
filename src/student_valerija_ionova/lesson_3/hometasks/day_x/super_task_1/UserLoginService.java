@@ -15,13 +15,19 @@ public class UserLoginService {
 
 
         public boolean login(User user, String password){
-            if (user.getPassword().equals(password)) {
-                if (!user.blocked) user.restartTimesToBlock();
-                return true;
+            if (!user.blocked) {
+                if (user.getPassword().equals(password)) {
+                    if (!user.blocked) user.restartTimesToBlock();
+                    return true;
+                } else {
+                    user.timesToBlock--;
+                    if (user.timesToBlock == 0) user.toBlockUser();
+                    return false;
+
+                }
             }
             else {
-                user.timesToBlock--;
-                if (user.timesToBlock == 0) user.toBlockUser();
+                System.out.println("User is blocked! Please contact admin!");
                 return false;
             }
         }
