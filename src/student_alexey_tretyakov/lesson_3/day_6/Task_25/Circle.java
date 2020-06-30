@@ -1,4 +1,4 @@
-package student_alexey_tretyakov.lesson_3.day_6;
+package student_alexey_tretyakov.lesson_3.day_6.Task_25;
 
 import static java.lang.Math.PI;
 

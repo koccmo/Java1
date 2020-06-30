@@ -1,4 +1,4 @@
-package student_alexey_tretyakov.lesson_3.day_6;
+package student_alexey_tretyakov.lesson_3.day_6.Task_26;
 
 public class Product {
     private String productName;
@@ -28,7 +28,8 @@ public class Product {
         return actualPrice;
     }
     public void printInformation() {
-        System.out.println("\n Product name: " + productName + "\n Regular price: " + regularPrice
+        System.out.println("\n Product name: " + productName
+                           + "\n Regular price: " + regularPrice
                            + "\n Discount: " + discount * 100 + "%"
                             + "\n Actual price: " + actualPrice );
     }
