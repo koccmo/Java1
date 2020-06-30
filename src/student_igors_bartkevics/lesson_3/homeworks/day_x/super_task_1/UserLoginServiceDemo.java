@@ -10,27 +10,39 @@ public class UserLoginServiceDemo {
 
         System.out.println(service.login(userOne, "user-password-12345")); //Should return false
         System.out.println(userOne.getNumberOfAttempts());
-        if (userOne.getUserIsBlocked()) {System.out.println("User is blocked");}
+        if (userOne.getUserIsBlocked()) {
+            System.out.println("User is blocked");
+        }
 
         System.out.println(service.login(userOne, "user-password")); //Should return true
         System.out.println(userOne.getNumberOfAttempts());
-        if (userOne.getUserIsBlocked()) {System.out.println("User is blocked");}
+        if (userOne.getUserIsBlocked()) {
+            System.out.println("User is blocked");
+        }
 
         System.out.println(service.login(userOne, "user-password-12345")); //Should return false
         System.out.println(userOne.getNumberOfAttempts());
-        if (userOne.getUserIsBlocked()) {System.out.println("User is blocked");}
+        if (userOne.getUserIsBlocked()) {
+            System.out.println("User is blocked");
+        }
 
         System.out.println(service.login(userOne, "user-password-12345")); //Should return false
         System.out.println(userOne.getNumberOfAttempts());
-        if (userOne.getUserIsBlocked()) {System.out.println("User is blocked");}
+        if (userOne.getUserIsBlocked()) {
+            System.out.println("User is blocked");
+        }
 
         System.out.println(service.login(userOne, "user-password-12345")); //Should return false
         System.out.println(userOne.getNumberOfAttempts());
-        if (userOne.getUserIsBlocked()) {System.out.println("User is blocked");}
+        if (userOne.getUserIsBlocked()) {
+            System.out.println("User is blocked");
+        }
 
         System.out.println(service.login(userOne, "user-password")); //Should return true
         System.out.println(userOne.getNumberOfAttempts());
-        if (userOne.getUserIsBlocked()) {System.out.println("User is blocked");}
+        if (userOne.getUserIsBlocked()) {
+            System.out.println("User is blocked");
+        }
 
     }
 

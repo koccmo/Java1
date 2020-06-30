@@ -40,7 +40,9 @@ public class UserLoginService {
            }
            else {
                user.decreaseNumberOfAttempts();
-               if (user.getNumberOfAttempts() < 1) user.blockUser();
+               if (user.getNumberOfAttempts() < 1) {
+                   user.blockUser();
+               }
                return false;
            }
 
