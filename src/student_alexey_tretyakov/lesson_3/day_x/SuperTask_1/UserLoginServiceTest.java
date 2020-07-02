@@ -27,19 +27,15 @@ public class UserLoginServiceTest {
         //userOne = userLastState; //
 
         System.out.println("Change number of attempts.");
-        int i = userOne.userTimes;
         //userOne.userTimes = 3;
         System.out.println(" Now attempt number set is = " + userOne.userTimes);
-        do {
-            loginTest = service.login( userOne, "alex123" );
-            if ( loginTest ) {
-                System.out.println("Test OK. Attempt number after good logon = " + userOne.userTimes );
-                break;
-            } else {
-                System.out.println("Test FAIL !!! Attempt number = " + userOne.userTimes );
-            }
-            i++;
-        } while ( ( 0<=i )&&( i <= 3 ) );
+
+        loginTest = service.login( userOne, "alex123" );
+        if ( loginTest ) {
+           System.out.println("Test OK. Attempt number after good logon = " + userOne.userTimes );
+           } else {
+           System.out.println("Test FAIL !!! Attempt number = " + userOne.userTimes );
+        }
 
     }
 

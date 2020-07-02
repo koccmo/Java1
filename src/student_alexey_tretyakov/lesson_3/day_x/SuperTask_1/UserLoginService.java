@@ -7,7 +7,7 @@ public class UserLoginService {
         if ( user1.userState ) {
              if (user1.userTimes <= MaxAttempt) {
                 user1.userTimes++;
-                if (user1.userPassword.equals(userP)) {
+                if (user1.userPassword.equals( userP )) {
                     user1.userTimes = 1;
                     return true;
                 } else return false;
