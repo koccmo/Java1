@@ -25,8 +25,20 @@ public class Stock {
         }
     }
 
-    public String printInformation() {
-        return ("Company Name : " + name + ", Current price = "
+    public void printInformation() {
+        System.out.println("Company Name : " + name + ", Current price = "
                 + currentPrice + ", minPrice = " + minPrice + ", maxPrice = " + maxPrice);
+    }
+
+    public int getCurrentPrice() {
+        return currentPrice;
+    }
+
+    public int getMaxPrice() {
+        return maxPrice;
+    }
+
+    public int getMinPrice() {
+        return minPrice;
     }
 }

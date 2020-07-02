@@ -8,8 +8,7 @@ public class StockTest {
 
     public void test1() {
         Stock stock = new Stock("Apple", 10);
-        if (stock.printInformation().equals("Company Name : Apple, Current price = 10, " +
-                "minPrice = 10, maxPrice = 10")) {
+        if (stock.getCurrentPrice() == 10 && stock.getMaxPrice() == 10 && stock.getMinPrice() == 10) {
             System.out.println("Test = OK");
         } else {
             System.out.println("Test = FAIL");
@@ -18,8 +17,7 @@ public class StockTest {
         stock.updatePrice(4);
         stock.updatePrice(15);
 
-        if (stock.printInformation().equals("Company Name : Apple, Current price = 15, " +
-                "minPrice = 4, maxPrice = 15")) {
+        if (stock.getCurrentPrice() == 15 && stock.getMaxPrice() == 15 && stock.getMinPrice() == 4) {
             System.out.println("Test1 = OK");
         } else {
             System.out.println("Test1 = FAIL");
