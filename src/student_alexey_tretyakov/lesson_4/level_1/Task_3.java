@@ -11,7 +11,7 @@ public class Task_3 {
         switch (intNumber) {
             case 1 -> System.out.print(" Monday");
             case 2 -> System.out.print(" Tuesday");
-            case 3 ->  System.out.print(" Wensday");
+            case 3 ->  System.out.print(" Wednesday");
             case 4 ->  System.out.print(" Thursday");
             case 5 ->  System.out.print(" Friday");
             case 6 ->  System.out.print(" Saturday");
