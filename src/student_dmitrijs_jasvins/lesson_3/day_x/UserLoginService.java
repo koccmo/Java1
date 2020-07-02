@@ -14,7 +14,7 @@ public class UserLoginService {
             return true;
         } else {
             user.reduceRemainingLoginAttempts();
-            if (user.getRemainingLoginAttempts() == MIN_LOGIN_ATTEMPTS) {
+            if (user.getRemainingLoginAttempts() <= MIN_LOGIN_ATTEMPTS) {
                 user.block();
             }
             return false;

@@ -15,7 +15,8 @@ public class LightColorDetectorTest {
 
     public void lightColorDetectorTestFirstColor() {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        if (lightColorDetector.detector(400).equals("Violet")) {
+        String detectorColor = lightColorDetector.detect(400);
+        if (detectorColor.equals("Violet")) {
             System.out.println("First color test = OK");
         } else {
             System.out.println("First color test = FAIL");
@@ -24,7 +25,8 @@ public class LightColorDetectorTest {
 
     public void lightColorDetectorTestSecondColor() {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        if (lightColorDetector.detector(480).equals("Blue")) {
+        String detectedColor = lightColorDetector.detect(480);
+        if (detectedColor.equals("Blue")) {
             System.out.println("Second color test = OK");
         } else {
             System.out.println("Second color test = FAIL");
@@ -33,7 +35,8 @@ public class LightColorDetectorTest {
 
     public void lightColorDetectorTestThirdColor() {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        if (lightColorDetector.detector(530).equals("Green")) {
+        String detectedColor = lightColorDetector.detect(530);
+        if (detectedColor.equals("Green")) {
             System.out.println("Third color test = OK");
         } else {
             System.out.println(" Third color = FAIl");
@@ -42,7 +45,8 @@ public class LightColorDetectorTest {
 
     public void lightColorDetectorTestForthColor() {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        if (lightColorDetector.detector(580).equals("Yellow")) {
+        String detectedColor = lightColorDetector.detect(580);
+        if (detectedColor.equals("Yellow")) {
             System.out.println("The forth color test = OK");
         } else {
             System.out.println("The forth color test = FAIL");
@@ -51,7 +55,8 @@ public class LightColorDetectorTest {
 
     public void lightColorDetectorTestFifthColor() {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        if (lightColorDetector.detector(610).equals("Orange")) {
+        String detectedColor = lightColorDetector.detect(610);
+        if (detectedColor.equals("Orange")) {
             System.out.println("The fifth color test = OK");
         } else {
             System.out.println("The fifth color test = FAIL");
@@ -60,7 +65,8 @@ public class LightColorDetectorTest {
 
     public void lightColorDetectorTestSixColor() {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        if (lightColorDetector.detector(730).equals("Red")) {
+        String detectedColor = lightColorDetector.detect(730);
+        if (detectedColor.equals("Red")) {
             System.out.println("The six color test = OK");
         } else {
             System.out.println(" The six color test = FAIL");
@@ -69,7 +75,8 @@ public class LightColorDetectorTest {
 
     public void lightColorDetectorTestInvisibleLight() {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        if (lightColorDetector.detector(150).equals("Invisible Light")) {
+        String detectedColor = lightColorDetector.detect(150);
+        if (detectedColor.equals("Invisible Light")) {
             System.out.println("Invisible light test = OK");
         } else {
             System.out.println("Invisible light test = FAIL");

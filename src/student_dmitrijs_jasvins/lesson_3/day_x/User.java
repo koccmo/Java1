@@ -2,7 +2,7 @@ package student_dmitrijs_jasvins.lesson_3.day_x;
 
 public class User {
 
-    private final static int MAX_REMAINING_LOGIN_ATTEMPTS = 0;
+    private final static int MAX_REMAINING_LOGIN_ATTEMPTS = 3;
 
     private String name;
     private String password;
