@@ -1,7 +1,7 @@
 package student_dmitrijs_jasvins.lesson_2.day_x;
 
 public class SumTwoNumbers {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         int firstNumber = 0;
         int secondNumber = 0;
