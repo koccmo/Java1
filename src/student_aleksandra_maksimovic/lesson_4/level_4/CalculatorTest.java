@@ -22,12 +22,6 @@ public class CalculatorTest {
         calculatorTest.maxOfThreeNumbersTest8();
         calculatorTest.maxOfThreeNumbersTest9();
         calculatorTest.maxOfThreeNumbersTest10();
-
-
-        for (var i = 0; i < 3; i++) // - штука с помощью которой проверяла ,все ли варианты комбинаций покрывают тесты метода - maxOfThreeNumbersTest
-            for (var j = 0; j < 3; j++)
-                for (var k = 0; k < 3; k++)
-                    System.out.println(i + " " + k + " " + j);
     }
 
     public void additionTest() {
@@ -40,7 +34,6 @@ public class CalculatorTest {
         } else {
             System.out.println("Sum test = FAIL");
         }
-
     }
     public void subtractionTest() {
         int firstNumber = 10;
