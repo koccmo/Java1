@@ -1,8 +1,5 @@
 package student_aleksandra_maksimovic.lesson_4.level_5;
 
-import student_aleksandra_maksimovic.lesson_4.level_4.Calculator;
-import student_aleksandra_maksimovic.lesson_4.level_4.CalculatorTest;
-
 public class LightColorDetectorTest {
     public static void main(String[] args) {
         LightColorDetectorTest lightColorDetectorTest = new LightColorDetectorTest();
