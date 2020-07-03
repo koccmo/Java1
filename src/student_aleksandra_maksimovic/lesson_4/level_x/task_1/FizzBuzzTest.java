@@ -1,4 +1,4 @@
-package student_aleksandra_maksimovic.lesson_4.level_x;
+package student_aleksandra_maksimovic.lesson_4.level_x.task_1;
 
 
 public class FizzBuzzTest {
