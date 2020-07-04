@@ -21,22 +21,19 @@ public class Task_10 {
         int secondNumber = scanner.nextInt();
         System.out.println("Enter third number:");
         int thirdNumber = scanner.nextInt();
-        int biggerNumber = 0;
+        int biggerNumber = firstNumber;
 
 
         if ((firstNumber == secondNumber) && (firstNumber == thirdNumber)) {
             System.out.println("All numbers are equal");
         }
-        else {
-            if (firstNumber >= secondNumber) {
-                biggerNumber = firstNumber;
+        else if (((secondNumber >= thirdNumber) && (secondNumber > firstNumber)) ||
+                ((secondNumber >= firstNumber) && (secondNumber > thirdNumber))) {
+            biggerNumber = secondNumber;
             }
-            else  {
-                biggerNumber = secondNumber;
-            }
-            if (biggerNumber < thirdNumber) {
+
+        else if (((thirdNumber >= firstNumber) && (thirdNumber > secondNumber))) {
                 biggerNumber = thirdNumber;
-            }
         }
         System.out.println(biggerNumber);
 
