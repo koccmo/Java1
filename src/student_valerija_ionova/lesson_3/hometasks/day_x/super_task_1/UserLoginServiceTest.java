@@ -16,27 +16,45 @@ public class UserLoginServiceTest {
         UserLoginServiceTest userLoginServiceTest = new UserLoginServiceTest();
 
         userLoginServiceTest.rightPasswordTest();
+        userLoginServiceTest.rightPasswordTestWithRestartTimesToBlock();
         userLoginServiceTest.wrongPasswordTest();
+        userLoginServiceTest.wrongPasswordTestIfUserWillBeBlocked();
+        userLoginServiceTest.wrongPasswordTestTimesToBlock();
+        userLoginServiceTest.wrongPasswordTestWithBlockedUser();
 
         // в идеале каждый тест кейс надо оформлять в отдельный метод!
 		// так его проще будет найти и отдельно запустить
     }
 
-        public void rightPasswordTest(){
+    public void checkBoolean(String name, boolean methodsResult, boolean expectedResult){
+        if (methodsResult == expectedResult){
+            System.out.println(name+" = passed");
+        }else
+            System.out.println(name+" = failed");
+    }
 
+    public void checkInt(String name, int methodsResult, int expectedResult){
+        if (methodsResult == expectedResult){
+            System.out.println(name+" = passed");
+        }else
+            System.out.println(name+" = failed");
+    }
+
+        public void rightPasswordTest(){
             UserLoginService service = new UserLoginService();
             User userOne = new User("Bobby", "Anna123");
+            checkBoolean("Right password test", service.login(userOne, "Anna123"), true);
+    }
 
-            if(service.login(userOne, "Anna123")){
-                System.out.println("Method login is working good for right password");
-            }
-            else System.out.println("Method login isn't working good for right password");
+    public void rightPasswordTestWithRestartTimesToBlock(){
 
-            if (userOne.timesToBlock == 3){
-                System.out.println("Method login is working good with restart of times to block");
-            }else System.out.println("Method login isn't working good with restart of times to block");
+        UserLoginService service = new UserLoginService();
+        User userOne = new User("Bobby", "Anna123");
+        userOne.timesToBlock = 1;
+        service.login(userOne, "Anna123");
 
-        }
+        checkInt ("Right password test with restart times to block", userOne.timesToBlock, 3);
+    }
 
     public void wrongPasswordTest() {
 
@@ -44,24 +62,40 @@ public class UserLoginServiceTest {
         User userOne = new User("Bobby", "Anna123");
 
         userOne.timesToBlock = 1;
-        if (!service.login(userOne, "Anna")) {
-            System.out.println("Method login is working good for wrong password");
-        } else System.out.println("Method login isn't working good for wrong password");
+        checkBoolean("Test for wrong password", service.login(userOne, "Anna"), false);
+    }
 
-        if (userOne.timesToBlock == 0) {
-            System.out.println("Method login is working good with restart of times to block");
-        } else System.out.println("Method login isn't working good with restart of times to block");
+    public void wrongPasswordTestTimesToBlock() {
 
-        if (userOne.blocked) {
-            System.out.println("Block of the user is working good");
-        } else {
-            System.out.println("Block of the user isn't working good");
-        }
+        UserLoginService service = new UserLoginService();
+        User userOne = new User("Bobby", "Anna123");
 
-        if (!service.login(userOne, "Anna123")) {
-            System.out.println("Method login is working good for right password and blocked user");
-        } else System.out.println("Method login isn't working good for right password and blocked user");
+        userOne.timesToBlock = 1;
+        service.login(userOne, "Anna");
 
+        checkInt("Test for wrong password - times to block", userOne.timesToBlock, 0);
+    }
+
+    public void wrongPasswordTestIfUserWillBeBlocked() {
+
+        UserLoginService service = new UserLoginService();
+        User userOne = new User("Bobby", "Anna123");
+
+        userOne.timesToBlock = 1;
+        service.login(userOne, "Anna");
+
+        checkBoolean("Test for wrong password && user blocked", userOne.blocked, true);
+    }
+
+    public void wrongPasswordTestWithBlockedUser() {
+
+        UserLoginService service = new UserLoginService();
+        User userOne = new User("Bobby", "Anna123");
+
+        userOne.timesToBlock = 1;
+        service.login(userOne, "Anna");
+
+        checkBoolean("Test for login if user blocked", service.login(userOne, "Anna123"), false);
     }
 
 
