@@ -23,6 +23,7 @@ public class FizzBuzzTest {
         else System.out.println("Test FizzBuzz = FAIL");
 
     }
+
     public void fizzTest(){
         FizzBuzz fizzBuzz = new FizzBuzz();
 

@@ -23,22 +23,23 @@ public class LightColorDetectorTest {
 
     public static void main(String[] args) {
         LightColorDetectorTest lightColorDetectorTest = new LightColorDetectorTest();
+        lightColorDetectorTest.universalTest();
+    }
 
+    public void universalTest() {
         LightColorDetector detector = new LightColorDetector();
 
-        lightColorDetectorTest.checkResultString("VioletTest ", detector.detect(381), "Violet");
+        checkResultString("VioletTest ", detector.detect(381), "Violet");
 
-        lightColorDetectorTest.checkResultString("BlueTest ", detector.detect(460), "Blue");
+        checkResultString("BlueTest ", detector.detect(460), "Blue");
 
-        lightColorDetectorTest.checkResultString("GreenTest ", detector.detect(506), "Green");
+        checkResultString("GreenTest ", detector.detect(506), "Green");
 
-        lightColorDetectorTest.checkResultString("YellowTest ", detector.detect(580), "Yellow");
+        checkResultString("YellowTest ", detector.detect(580), "Yellow");
 
-        lightColorDetectorTest.checkResultString("RedTest ", detector.detect(700), "Red");
+        checkResultString("RedTest ", detector.detect(700), "Red");
 
-        lightColorDetectorTest.checkResultString("InvisibleTest ", detector.detect(0), "Invisible Light");
-
-
-
+        checkResultString("InvisibleTest ", detector.detect(0), "Invisible Light");
     }
+
 }

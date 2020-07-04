@@ -20,7 +20,8 @@ public class CalculatorTest {
         calculatorTest.substractTest();
         calculatorTest.multiplyTest();
         calculatorTest.divideTest();
-        calculatorTest.isEvenTest();
+        calculatorTest.isEvenTestTrue();
+        calculatorTest.isEvenTestFalse();
 
 
     }
@@ -57,11 +58,16 @@ public class CalculatorTest {
         checkResultInt("DivideTest", calculator.multiply(2, 40), 80);
     }
 
-    public void isEvenTest() {
+    public void isEvenTestTrue() {
         Calculator calculator = new Calculator();
         checkResultBoolean("isEvenTest", calculator.isEven(10), true);
+    }
+
+    public void isEvenTestFalse() {
+        Calculator calculator = new Calculator();
         checkResultBoolean("isEvenTest", calculator.isEven(5), false);
     }
+
 
 }
 

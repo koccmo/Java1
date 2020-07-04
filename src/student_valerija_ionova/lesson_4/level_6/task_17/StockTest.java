@@ -18,20 +18,29 @@ Company = "GOOG", Current Price = 10, Min Price = 10, Max Price = 10
 Company = "GOOG", Current Price = 14, Min Price = 7, Max Price = 15*/
 
 public class StockTest {
-    public static void main(String[] args){
-        Stock google = new Stock("GOOG", 10);
+    public static void main(String[] args) {
+        StockTest stockTest = new StockTest();
+        stockTest.testPrintInformationAfterCreation();
+        stockTest.printInformationAfterPriceChanges();
+
+    }
 
         //System.out.println(google.printInformation());
         //System.out.println("Company = \"GOOG\", Current Price = 10.0, " +
         //        "Min Price = 10.0, Max Price = 10.0");
 
+    public void testPrintInformationAfterCreation() {
+        Stock google = new Stock("GOOG", 10);
         if (google.printInformation().equals("Company = \"GOOG\", Current Price = 10.0, " +
-                "Min Price = 10.0, Max Price = 10.0")){
+                "Min Price = 10.0, Max Price = 10.0")) {
             System.out.println("Class Stock is working good");
-        }else{
+        } else {
             System.out.println("Class Stock isn't working");
         }
+    }
 
+    public void printInformationAfterPriceChanges(){
+        Stock google = new Stock("GOOG", 10);
         google.updatePrice(15);
         google.updatePrice(7);
         google.updatePrice(14);
@@ -45,5 +54,9 @@ public class StockTest {
             System.out.println("Class Stock is working good");
         } else{
             System.out.println("Class Stock isn't working");
-        }}
+        }
+    }
+
+
+
 }
