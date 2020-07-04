@@ -1,6 +1,6 @@
 package student_roberts_kupcs.lesson_3.homeworks.day_4;
 
-import static java.lang.System.out;
+import static java.lang.System.out;  // что это за импорт?
 
 public class BankAccountDemo {
     public static void main(String[] args) {
