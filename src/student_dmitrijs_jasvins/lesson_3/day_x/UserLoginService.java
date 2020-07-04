@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_3.day_x;
 
-public class UserLoginService {
+public class UserLoginService {  // а где тесты?!!!
 
     private final static int MIN_LOGIN_ATTEMPTS = 0;
 
