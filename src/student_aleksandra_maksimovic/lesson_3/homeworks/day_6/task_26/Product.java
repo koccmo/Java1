@@ -18,7 +18,6 @@ package student_aleksandra_maksimovic.lesson_3.homeworks.day_6.task_26;
     Класс с демонстрацией работы должен называться "ProductDemo".
 */
 
-import java.sql.SQLOutput;  // не оставляйте в коде не используемые импорты
 
 public class Product {
 

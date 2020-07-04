@@ -16,15 +16,13 @@ class Computer {
 
     // для удобства чтения программы соблюдайте правила форматирования кода
 	// отступы должны быть на одном уровне
-
-          public String getManufacturer() {
-              return manufacturer;
-          }
-
-          public String getModel() {
-              return model;
-          }
+    public String getManufacturer() {
+          return manufacturer;
       }
+    public String getModel() {
+      return model;
+    }
+}
 
 class ComputerDemo {
 
