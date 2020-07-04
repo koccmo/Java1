@@ -2,10 +2,12 @@ package student_dmitrijs_jasvins.lesson_3.day_x;
 
 public class User {
 
-    private String name;
+    private final static int MAX_REMAINING_LOGIN_ATTEMPTS = 3;
+
+    private String name;    // не используемое свойство!
     private String password;
     private boolean blocked;
-    private int remainingLoginAttempts = 3;
+    private int remainingLoginAttempts = MAX_REMAINING_LOGIN_ATTEMPTS;
 
     public User(String name, String password) {
         this.name = name;
@@ -13,7 +15,7 @@ public class User {
     }
 
     public void resetRemainingLoginAttempts() {
-        remainingLoginAttempts = 3;
+        remainingLoginAttempts = MAX_REMAINING_LOGIN_ATTEMPTS;
     }
 
     public void block() {

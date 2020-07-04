@@ -22,7 +22,7 @@ Write a class Game that has two methods:
 */
 package student_igors_bartkevics.lesson_3.homeworks.day_x.super_task_2;
 
-class Game {
+class Game {  // а где тесты?!
 
     private int[] rolls = new int[21];
     private int currentRoll = 0;

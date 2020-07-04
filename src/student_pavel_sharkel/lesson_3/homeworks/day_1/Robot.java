@@ -13,6 +13,8 @@ public class Robot {
             System.out.println("My name is " + this.name);
         }
 
+	// свойства класса и конструктор обычно пишут сверху
+
         private String name;
         public Robot(String robotName) {
             this.name = robotName;

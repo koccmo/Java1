@@ -8,9 +8,8 @@ public class Circle {
         this.radius = radius;
     }
 
-    public void calculateArea() {
-        double circleArea =  Math.PI * radius * radius;
-        System.out.println("Circle are is: " + circleArea);
+    public double calculateArea() {
+        return  Math.PI * radius * radius;
     }
 
 }

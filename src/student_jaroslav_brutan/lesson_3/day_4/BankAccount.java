@@ -2,7 +2,7 @@ package student_jaroslav_brutan.lesson_3.day_4;
 
 public class BankAccount {
     private String ownerFirstName;
-    private String ownerLastName;
+    private String ownerLastName;  // не используемое свойство!
     private int moneyAmount;
 
     public BankAccount(String ownerFirstName,

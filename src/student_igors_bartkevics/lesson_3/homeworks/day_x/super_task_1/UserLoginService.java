@@ -29,7 +29,7 @@ service.login(userOne, "user-password"); //Should return true
 
 package student_igors_bartkevics.lesson_3.homeworks.day_x.super_task_1;
 
-public class UserLoginService {
+public class UserLoginService {  // а где тесты?!!
 
        public boolean login(User user, String password){
            if (user.getUserPassword().equals(password)) {

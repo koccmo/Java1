@@ -5,7 +5,7 @@ public class Product {
     private String name;
     private double regularPrice;
     private double discount;
-    private double actualPrice;
+    private double actualPrice;    // не используемое свойство!
 
     public String getName() {
         return name;
