@@ -20,6 +20,8 @@ public class Circle {
         this.radius = setRadius;
     }
 
+    // по задаче этот метод должен не печатать площать на консоль,
+	// а возвращать его в качестве результата
     public void calculateArea(){
 
         double area = PI * this.radius * this.radius;
