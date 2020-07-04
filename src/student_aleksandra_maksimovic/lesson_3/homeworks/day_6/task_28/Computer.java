@@ -14,6 +14,9 @@ class Computer {
         this.model = model;
     }
 
+    // для удобства чтения программы соблюдайте правила форматирования кода
+	// отступы должны быть на одном уровне
+
           public String getManufacturer() {
               return manufacturer;
           }
