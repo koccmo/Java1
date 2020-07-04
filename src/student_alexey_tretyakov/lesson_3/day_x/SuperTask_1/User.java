@@ -4,7 +4,8 @@ public class User {
     public String userLoginName;
     public String userPassword;
     public int userTimes = 1;
-    public boolean userState = true ;
+    public boolean userState = true ;  // не удачное название свойства, не понятно что означает
+	// если речь идёт о блокировке пользователя так и назовите свойство blocked или activeUser
 
     public User ( String userName, String userPwd) {
         this.userLoginName = userName;
