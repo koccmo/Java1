@@ -4,7 +4,7 @@ public class User {
 
     private final static int MAX_REMAINING_LOGIN_ATTEMPTS = 3;
 
-    private String name;
+    private String name;    // не используемое свойство!
     private String password;
     private boolean blocked;
     private int remainingLoginAttempts = MAX_REMAINING_LOGIN_ATTEMPTS;
