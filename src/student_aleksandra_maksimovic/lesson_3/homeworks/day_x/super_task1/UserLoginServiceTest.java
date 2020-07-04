@@ -2,6 +2,7 @@ package student_aleksandra_maksimovic.lesson_3.homeworks.day_x.super_task1;
 
 public class UserLoginServiceTest {
 
+	// названия методов с маленькой буквы
     static void Check(String name, boolean result, boolean expectedResult)
     {
         System.out.println(name + ": " + (result == expectedResult ? "PASS" : "FAILED"));
