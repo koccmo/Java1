@@ -3,7 +3,7 @@ package student_alexey_tretyakov.lesson_3.day_6.Task_24;
 class LedLamp {
         private String lampType;
         private String lampColor;
-        private boolean switchOn;
+        private boolean switchOn;  // зачем это сойство если оно в классе не используется?
 
         public LedLamp ( String lampType,
                          String lampColor,
