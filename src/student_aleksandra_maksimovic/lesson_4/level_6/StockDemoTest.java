@@ -1,7 +1,6 @@
 package student_aleksandra_maksimovic.lesson_4.level_6;
 
 import student_aleksandra_maksimovic.testing.Tester;
-
 /*
 10 -> 12 -> 5 -> 7 -> 99 -> 77
 

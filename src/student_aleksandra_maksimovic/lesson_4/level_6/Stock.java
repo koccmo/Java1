@@ -1,9 +1,4 @@
 package student_aleksandra_maksimovic.lesson_4.level_6;
-
-import student_aleksandra_maksimovic.lesson_4.level_4.Calculator;
-
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 /*
 Необходимо реализовать класс Stock ("акция") таким образом,
 чтобы была возможность узнать текущую цену акции,
@@ -25,35 +20,6 @@ import javax.swing.plaf.synth.SynthOptionPaneUI;
 должны меняться только через метод updatePrice().
 Написать тестовые сценарии для класса Stock в классе StockTest.
 
-10 -> 12 -> 5 -> 7 -> 99 -> 77
-
-Test case max:
-
-999  = 999
-
-999 -> 1  = 999
-
-999 -> 2 -> 1000 = 1000
-
-999 -> 2 -> 1000 -> 8 = 1000
-
-
-9 -> 27
-
-Пример работы с классом Stock:
-
-Stock google = new Stock("GOOG", 10);
-google.printInformation();
-​
-google.updatePrice(15);
-google.updatePrice(7);
-google.updatePrice(14);
-​
-google.printInformation();
-
-Вывод в консоль:
-Company = "GOOG", Current Price = 10, Min Price = 10, Max Price = 10
-Company = "GOOG", Current Price = 14, Min Price = 7, Max Price = 15
  */
 public class Stock {
 
