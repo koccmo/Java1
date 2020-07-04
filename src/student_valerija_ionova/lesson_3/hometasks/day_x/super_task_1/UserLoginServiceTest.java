@@ -18,6 +18,8 @@ public class UserLoginServiceTest {
         userLoginServiceTest.rightPasswordTest();
         userLoginServiceTest.wrongPasswordTest();
 
+        // в идеале каждый тест кейс надо оформлять в отдельный метод!
+		// так его проще будет найти и отдельно запустить
     }
 
         public void rightPasswordTest(){
