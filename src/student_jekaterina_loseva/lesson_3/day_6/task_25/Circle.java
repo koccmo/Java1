@@ -8,6 +8,7 @@ public class Circle {
         this.radius = radius;
     }
 
+    // по заданию этот метод должен возвращать площадь а не выводить ее на консоль
     public void calculateArea() {
         double circleArea =  Math.PI * radius * radius;
         System.out.println("Circle are is: " + circleArea);
