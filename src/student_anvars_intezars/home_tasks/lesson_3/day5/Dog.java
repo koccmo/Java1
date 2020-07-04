@@ -4,7 +4,7 @@ public class Dog {
 
     private String name;
     private int age;
-    private int birthday;
+    private int birthday;  // не используемое свойство!
     private String color;
 
     public String getName(String name) {
