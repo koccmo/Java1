@@ -20,46 +20,76 @@ public class Task_3 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        /*
-        Version 1 (using String[]):
 
+        System.out.println("Enter number of day of week (1 - 7): ");
+        int numberOfWeek = scanner.nextInt();
+        String result = "";
+
+        //Version 1 (using String[]):
+        /*
         String[] daysOfWeek = {"Monday", "Tuesday", "Wednesday", "Thursday",
 
                                 "Friday", "Saturday", "Sunday"};
 
         System.out.println("Enter number of day of week (1 - 7): ");
         int numberOfWeek = scanner.nextInt();
-        System.out.println((daysOfWeek[numberOfWeek - 1]));
+        String result = daysOfWeek[numberOfWeek - 1];
         */
 
         // Version 2 using IF
-        System.out.println("Enter number of day of week (1 - 7): ");
-        int numberOfWeek = scanner.nextInt();
-
+        /*
         if (numberOfWeek == 1) {
-            System.out.println("Monday");
+            result = "Monday";
         }
         else if (numberOfWeek == 2) {
-            System.out.println("Tuesday");
+            result = "Tuesday";
         }
         else if (numberOfWeek == 3) {
-            System.out.println("Wednesday");
+            result = "Wednesday";
         }
         else if (numberOfWeek == 4) {
-            System.out.println("Thursday");
+            result = "Thursday";
         }
         else if (numberOfWeek == 5) {
-            System.out.println("Friday");
+            result = "Friday";
         }
         else if (numberOfWeek == 6) {
-            System.out.println("Saturday");
+            result = "Saturday";
         }
         else if (numberOfWeek == 7) {
-            System.out.println("Sunday");
+            result = "Sunday";
         }
         else {
-            System.out.println("Your entered wrong number");
+            result = "Your entered wrong number";
         }
+         */
+
+        // Version 3 using switch case
+
+        switch(numberOfWeek) {
+            case 1:
+                result = "Monday";
+                break;
+            case 2:
+                result = "Tuesday";
+                break;
+            case 3:
+                result = "Wednesday";
+                break;
+            case 4:
+                result = "Thursday";
+                break;
+            case 5:
+                result = "Friday";
+                break;
+            case 6:
+                result = "Saturday";
+                break;
+            case 7:
+                result = "Sunday";
+                break;
+        }
+        System.out.println(result);
     }
 
 }
