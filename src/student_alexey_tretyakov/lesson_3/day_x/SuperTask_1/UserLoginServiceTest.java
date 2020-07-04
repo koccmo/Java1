@@ -1,6 +1,9 @@
 package student_alexey_tretyakov.lesson_3.day_x.SuperTask_1;
 
 public class UserLoginServiceTest {
+
+
+	// каждый тест кейс в свой отдельный метод!!!
     public static void main(String[] args) {
 
         User userOne = new User("Alex", "alex123");
