@@ -1,4 +1,4 @@
-Q1. Q1 What is an Array?
+Q1. What is an Array?
 
     Array is a collection of similar data types.
     It can not have different data type.
