@@ -103,7 +103,6 @@ class Stock {
     }
 
     public void updatePrice(double newPrice) {
-        //this.price = newPrice;
         setPrice(newPrice);
         if (newPrice > this.maxPrice) {
             setMaxPrice(newPrice);
