@@ -19,12 +19,18 @@ public class Calculator {
     }
 
     public boolean isEven(int number) {
-        if (number % 2 == 0) {
-            return true;
-        }
-        else {
-            return false;
+        return (number % 2) == 0;
+    }
+
+    public int maxOfTwoNumbers(int firstNumber, int secondNumber){
+            if (firstNumber >= secondNumber) {
+                return firstNumber;
+            }
+            else {
+                return secondNumber;
+            }
 
         }
+
     }
-}
+

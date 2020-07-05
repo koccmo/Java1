@@ -10,9 +10,9 @@ public class CalculatorTest5 {
     public void isEvenTest() {
 
         Calculator calculator = new Calculator();
-        boolean result = calculator.isEven(5);
-        if (result = true) {
-            System.out.println("Even test = " + result);
+        boolean result = calculator.isEven(8);
+        if (result) {
+            System.out.println("Even test = OK ");
         } else {
             System.out.println("Even test = FAIL");
         }
