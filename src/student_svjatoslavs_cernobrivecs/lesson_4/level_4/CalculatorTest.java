@@ -9,6 +9,7 @@ public class CalculatorTest {
         calculatorTest.substractTest();
         calculatorTest.multiplyTest();
         calculatorTest.devideTest();
+        calculatorTest.isEvenTest();
     }
     public void sumTest(){
         int firstNumber = 10;
@@ -55,4 +56,15 @@ public class CalculatorTest {
         }
 
     }
+   public void isEvenTest(){
+        int number = 4;
+        Calculator calculator = new Calculator();
+        boolean result = calculator.isEvent(number);
+        if (result == true){
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+
+   }
 }

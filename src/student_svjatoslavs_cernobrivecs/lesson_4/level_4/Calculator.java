@@ -14,4 +14,7 @@ public class Calculator {
     public int devide(int firstNumber, int secondNumber){
         return firstNumber / secondNumber;
     }
+    public boolean isEvent(int number){
+        return number % 2 == 0;
+    }
 }
