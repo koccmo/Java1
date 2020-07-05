@@ -125,7 +125,7 @@ class CalculatorTest {
         }
     }
 
-    public void firstNumberMax() {
+    public void firstNumberMax() { // first number is bigger than second
         int firstNumber = 10;
         int secondNumber = 5;
         Calculator calculator = new Calculator();
@@ -139,7 +139,7 @@ class CalculatorTest {
         }
     }
 
-    public void secondNumberMax() {
+    public void secondNumberMax() { // second number is bigger than first
         int firstNumber = 5;
         int secondNumber = 10;
         Calculator calculator = new Calculator();
@@ -153,7 +153,7 @@ class CalculatorTest {
         }
     }
 
-    public void twoEqualNumbers() {
+    public void twoEqualNumbers() { // equal two numbers
         int firstNumber = 5;
         int secondNumber = 5;
         Calculator calculator = new Calculator();
@@ -171,15 +171,15 @@ class CalculatorTest {
         - второе число больше первого и третьего
         - третье число больше первого и второго
         - первые два равны и больше третьего
-        - второе и третее равны и больше первого
-        - первое и третее равны и больше второго
+        - второе и третье равны и больше первого
+        - первое и третье равны и больше второго
         - первые два равны и меньше третьего
-        - второе и третее равны и меньше первого
-        - первое и третее равны и меньше второго
-        - три числа равны
+        - второе и третье равны и меньше первого
+        - первое и третье равны и меньше второго
+        - все три числа равны
      */
 
-    public void firstBiggerThanSecondAndThird() {
+    public void firstBiggerThanSecondAndThird() { //- первое число больше второго и третьего
         int firstNumber = 10;
         int secondNumber = 5;
         int thirdNumber = 0;
@@ -194,7 +194,7 @@ class CalculatorTest {
         }
     }
 
-    public void secondBiggerThanFirstAndThird() {
+    public void secondBiggerThanFirstAndThird() { //- второе число больше первого и третьего
         int firstNumber = 5;
         int secondNumber = 10;
         int thirdNumber = 0;
@@ -209,7 +209,7 @@ class CalculatorTest {
         }
     }
 
-    public void thirdBiggerThanFirstAndSecond() {
+    public void thirdBiggerThanFirstAndSecond() { //- третье число больше первого и второго
         int firstNumber = 5;
         int secondNumber = 0;
         int thirdNumber = 10;
@@ -224,7 +224,7 @@ class CalculatorTest {
         }
     }
 
-    public void firstEqualSecondAndBiggerThanThird() {
+    public void firstEqualSecondAndBiggerThanThird() { //- первые два равны и больше третьего
         int firstNumber = 10;
         int secondNumber = 10;
         int thirdNumber = 5;
@@ -239,7 +239,7 @@ class CalculatorTest {
         }
     }
 
-    public void secondEqualThirdAndBiggerThanFirst() {
+    public void secondEqualThirdAndBiggerThanFirst() { //- второе и третье равны и больше первого
         int firstNumber = 0;
         int secondNumber = 10;
         int thirdNumber = 10;
@@ -254,7 +254,7 @@ class CalculatorTest {
         }
     }
 
-    public void firstEqualThirdAndBiggerThanSecond() {
+    public void firstEqualThirdAndBiggerThanSecond() { //- первое и третье равны и больше второго
         int firstNumber = 10;
         int secondNumber = 0;
         int thirdNumber = 10;
@@ -269,7 +269,7 @@ class CalculatorTest {
         }
     }
 
-    public void firstEqualSecondAndSmallerThanThird() {
+    public void firstEqualSecondAndSmallerThanThird() { //- первые два равны и меньше третьего
         int firstNumber = 0;
         int secondNumber = 0;
         int thirdNumber = 10;
@@ -284,7 +284,7 @@ class CalculatorTest {
         }
     }
 
-    public void secondEqualThirdAndSmallerThanFirst() {
+    public void secondEqualThirdAndSmallerThanFirst() { //- второе и третье равны и меньше первого
         int firstNumber = 10;
         int secondNumber = 0;
         int thirdNumber = 0;
@@ -299,7 +299,7 @@ class CalculatorTest {
         }
     }
 
-    public void firstEqualThirdAndSmallerThanSecond() {
+    public void firstEqualThirdAndSmallerThanSecond() { //- первое и третье равны и меньше второго
         int firstNumber = 0;
         int secondNumber = 10;
         int thirdNumber = 0;
@@ -314,7 +314,7 @@ class CalculatorTest {
         }
     }
 
-    public void threeEqualNumbers() {
+    public void threeEqualNumbers() { //- все три числа равны
         int firstNumber = 10;
         int secondNumber = 10;
         int thirdNumber = 10;
