@@ -20,7 +20,7 @@
 class LightColorDetector {
 ​
   public String detect(int wavelength) {
-    //TO DO
+    //TODO
   }
  */
 package student_igors_bartkevics.lesson_4.homeworks.day_5;
