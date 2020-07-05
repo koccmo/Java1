@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_4.homeworks.day_x.Super_task_1;
+package student_igors_bartkevics.lesson_4.homeworks.day_x.super_task_1;
 
 class FizzBuzzTest {
 
