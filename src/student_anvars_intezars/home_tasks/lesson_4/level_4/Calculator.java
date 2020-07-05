@@ -1,6 +1,6 @@
 package student_anvars_intezars.home_tasks.lesson_4.level_4;
 
-public class Caclulator {
+public class Calculator {
 
     public int sum(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
