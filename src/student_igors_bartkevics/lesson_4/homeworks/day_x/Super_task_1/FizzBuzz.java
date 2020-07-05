@@ -37,5 +37,4 @@ class FizzBuzz {
             return "" + number;
         }
     }
-
 }
