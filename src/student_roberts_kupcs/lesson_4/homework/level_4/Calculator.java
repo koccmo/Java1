@@ -31,7 +31,7 @@ class Calculator {
             return secondNumber;
         }
     }
-    public int maxThreeNumbers(int firstNumber, int secondNumber, int thirdNumber) {
+    public int maxOfThreeNumbers(int firstNumber, int secondNumber, int thirdNumber) {
         if (firstNumber >= secondNumber && secondNumber >=thirdNumber) {
             return firstNumber;
         } else if (secondNumber >= firstNumber && secondNumber >= thirdNumber) {

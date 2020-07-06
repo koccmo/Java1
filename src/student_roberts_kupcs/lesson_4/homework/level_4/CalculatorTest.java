@@ -16,6 +16,14 @@ class CalculatorTest {
         calculatorTest.maxTwoNumber2();
         calculatorTest.maxTwoNumber3();
 
+        calculatorTest.maxOfThreeNumbersTest1();
+        calculatorTest.maxOfThreeNumbersTest2();
+        calculatorTest.maxOfThreeNumbersTest3();
+        calculatorTest.maxOfThreeNumbersTest4();
+        calculatorTest.maxOfThreeNumbersTest5();
+        calculatorTest.maxOfThreeNumbersTest6();
+        calculatorTest.maxOfThreeNumbersTest7();
+
     }
 
     public void sumTest() {
@@ -102,6 +110,7 @@ class CalculatorTest {
         }
 
     }
+
     public void maxTwoNumber2() {
         int firstNumber = 5;
         int secondNumber = 10;
@@ -114,6 +123,7 @@ class CalculatorTest {
         }
 
     }
+
     public void maxTwoNumber3() {
         int firstNumber = 10;
         int secondNumber = 10;
@@ -125,6 +135,101 @@ class CalculatorTest {
             System.out.println("оба числа равны maxTwoNumber test = FAIL");
         }
 
+    }
+    //- первое число больше второго и третьего
+    public void maxOfThreeNumbersTest1() {
+        int firstNumber = 10;
+        int secondNumber = 5;
+        int thirdNumber = 2;
+        Calculator calculator = new Calculator();
+        int result = calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
+        if (result == 10){
+            System.out.println("первое число больше второго и третьего maxOfThreeNumbers test 1 = OK");
+        } else {
+            System.out.println("первое число больше второго и третьего maxOfThreeNumbers test 1 = FAIL");
+        }
+    }
+
+    //- второе число больше первого и третьего
+    public void maxOfThreeNumbersTest2() {
+        int firstNumber = 5;
+        int secondNumber = 10;
+        int thirdNumber = 2;
+        Calculator calculator = new Calculator();
+        int result = calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
+        if (result == 10){
+            System.out.println("второе число больше первого и третьего maxOfThreeNumbers test 2 = OK");
+        } else {
+            System.out.println("второе число больше первого и третьего maxOfThreeNumbers test 2 = FAIL");
+        }
+    }
+
+    //- третье число больше первого и второго
+    public void maxOfThreeNumbersTest3() {
+        int firstNumber = 2;
+        int secondNumber = 5;
+        int thirdNumber = 10;
+        Calculator calculator = new Calculator();
+        int result = calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
+        if (result == 10){
+            System.out.println("третье число больше первого и второго maxOfThreeNumbers test 3 = OK");
+        } else {
+            System.out.println("третье число больше первого и второго maxOfThreeNumbers test 3 = FAIL");
+        }
+    }
+
+    //- первые два равны и больше третьего
+    public void maxOfThreeNumbersTest4() {
+        int firstNumber = 5;
+        int secondNumber = 5;
+        int thirdNumber = 2;
+        Calculator calculator = new Calculator();
+        int result = calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
+        if (result == 5){
+            System.out.println("первые два равны и больше третьего maxOfThreeNumbers test 4 = OK");
+        } else {
+            System.out.println("первые два равны и больше третьего maxOfThreeNumbers test 4 = FAIL");
+        }
+    }
+
+    //- три числа равны
+    public void maxOfThreeNumbersTest5() {
+        int firstNumber = 5;
+        int secondNumber = 5;
+        int thirdNumber = 5;
+        Calculator calculator = new Calculator();
+        int result = calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
+        if (result == 5){
+            System.out.println("три числа равны maxOfThreeNumbers test 5 = OK");
+        } else {
+            System.out.println("три числа равны maxOfThreeNumbers test 5 = FAIL");
+        }
+    }
+    //-
+    public void maxOfThreeNumbersTest6() {
+        int firstNumber = 1;
+        int secondNumber = 2;
+        int thirdNumber = 2;
+        Calculator calculator = new Calculator();
+        int result = calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
+        if (result == 2){
+            System.out.println("maxOfThreeNumbers test 6 = OK");
+        } else {
+            System.out.println("maxOfThreeNumbers test 6 = FAIL");
+        }
+    }
+    //-
+    public void maxOfThreeNumbersTest7() {
+        int firstNumber = 5;
+        int secondNumber = 2;
+        int thirdNumber = 5;
+        Calculator calculator = new Calculator();
+        int result = calculator.maxOfThreeNumbers(firstNumber, secondNumber, thirdNumber);
+        if (result == 5){
+            System.out.println("maxOfThreeNumbers test 7 = OK");
+        } else {
+            System.out.println("maxOfThreeNumbers test 7 = FAIL");
+        }
     }
 
 }
