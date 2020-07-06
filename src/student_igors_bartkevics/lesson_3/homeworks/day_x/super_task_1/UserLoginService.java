@@ -32,16 +32,16 @@ package student_igors_bartkevics.lesson_3.homeworks.day_x.super_task_1;
 public class UserLoginService {  // а где тесты?!!
 
        public boolean login(User user, String password){
-           if (user.getUserPassword().equals(password)) {
-               if (!user.getUserIsBlocked()) {
-                   user.resetNumberOfAttempts();
-               }
+           if (user.getUserPassword().equals(password) && !user.getUserIsBlocked()) {
+               user.resetNumberOfAttempts();
                return true;
            }
            else {
-               user.decreaseNumberOfAttempts();
-               if (user.getNumberOfAttempts() < 1) {
-                   user.blockUser();
+               if (!user.getUserIsBlocked()) {
+                   user.decreaseNumberOfAttempts();
+                   if (user.getNumberOfAttempts() < 1) {
+                       user.blockUser();
+                   }
                }
                return false;
            }
