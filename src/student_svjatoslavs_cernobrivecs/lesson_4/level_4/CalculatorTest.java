@@ -10,6 +10,7 @@ public class CalculatorTest {
         calculatorTest.multiplyTest();
         calculatorTest.devideTest();
         calculatorTest.isEvenTest();
+        calculatorTest.maxOfTwoNumbers();
     }
     public void sumTest(){
         int firstNumber = 10;
@@ -57,14 +58,41 @@ public class CalculatorTest {
 
     }
    public void isEvenTest(){
-        int number = 4;
+        int number = 5;
         Calculator calculator = new Calculator();
         boolean result = calculator.isEvent(number);
-        if (result == true){
+        if (result){
             System.out.println("Even");
         } else {
             System.out.println("Odd");
         }
 
+
+
+        /*
+        - первое число больше второго
+        - второе число больше первого
+        - оба числа равны
+
+        Я придумал только этот костыль
+        Прошу понять и простить :D
+         */
+
    }
+
+   public void maxOfTwoNumbers(){
+        int firstNumber = 10;
+        int secondNumber = 5;
+        Calculator calculator = new Calculator();
+        int result = calculator.maxOfTwoNumbers(firstNumber, secondNumber);
+        if (firstNumber > secondNumber){
+            System.out.println("First number is bigger");
+        } else if (firstNumber < secondNumber) {
+            System.out.println("Second number is bigger");
+        } else {
+            System.out.println("Numbers are equal");
+        }
+   }
+
+
 }

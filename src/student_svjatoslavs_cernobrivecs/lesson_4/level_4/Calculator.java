@@ -17,4 +17,11 @@ public class Calculator {
     public boolean isEvent(int number){
         return number % 2 == 0;
     }
+    public int maxOfTwoNumbers(int firstNumber, int secondNumber){
+        if (firstNumber > secondNumber){
+            return firstNumber;
+        } else {
+            return secondNumber;
+        }
+    }
 }
