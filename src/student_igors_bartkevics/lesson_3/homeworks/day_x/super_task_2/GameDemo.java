@@ -1,14 +1,14 @@
 package student_igors_bartkevics.lesson_3.homeworks.day_x.super_task_2;
 
 import java.util.Random;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class GameDemo {
 
     public static void main(String[] args) {
         Random random = new Random();
         Game game1 = new Game();
-        Scanner scanner = new Scanner(System.in);
+        //Scanner scanner = new Scanner(System.in);
         int frame = 1;
         int pinNumber1;
         int pinNumber2;
