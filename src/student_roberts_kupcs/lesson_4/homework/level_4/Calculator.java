@@ -24,5 +24,21 @@ class Calculator {
         // иначе return false
         return (number % 2) == 0;
     }
+    public int maxTwoNumber(int firstNumber, int secondNumber) {
+        if (firstNumber >= secondNumber) {
+            return firstNumber;
+        } else {
+            return secondNumber;
+        }
+    }
+    public int maxThreeNumbers(int firstNumber, int secondNumber, int thirdNumber) {
+        if (firstNumber >= secondNumber && secondNumber >=thirdNumber) {
+            return firstNumber;
+        } else if (secondNumber >= firstNumber && secondNumber >= thirdNumber) {
+            return secondNumber;
+        } else {
+            return thirdNumber;
+        }
+    }
 
 }
