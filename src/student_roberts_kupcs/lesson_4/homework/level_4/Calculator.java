@@ -18,4 +18,11 @@ class Calculator {
         return firstNumber / secondNumber;
     }
 
+    public boolean isEven(int number) {
+        // реализуйте этот метод:
+        // return true - если число чётное (делится на 2 без остатка)
+        // иначе return false
+        return (number % 2) == 0;
+    }
+
 }

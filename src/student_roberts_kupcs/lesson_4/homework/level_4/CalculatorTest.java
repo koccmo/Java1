@@ -5,12 +5,12 @@ class CalculatorTest {
 
         CalculatorTest calculatorTest = new CalculatorTest();
         calculatorTest.sumTest();
-
         calculatorTest.subtractionTest();
-
         calculatorTest.multiplicationTest();
-
         calculatorTest.divisionTest();
+
+        calculatorTest.isEvenTestIsEven();
+        calculatorTest.isEvenTestIsOdd();
     }
 
     public void sumTest() {
@@ -58,6 +58,29 @@ class CalculatorTest {
             System.out.println("Division test = OK");
         } else {
             System.out.println("Division test = FAIL");
+        }
+    }
+
+    public void isEvenTestIsEven() {
+
+        Calculator calculator = new Calculator();
+        boolean result = calculator.isEven(12);
+
+        if (result ) {
+            System.out.println("isEven test = OK");
+        } else {
+            System.out.println("isEven test = FAIL");
+        }
+    }
+    public void isEvenTestIsOdd() {
+
+        Calculator calculator = new Calculator();
+        boolean result = calculator.isEven(7);
+
+        if (!result ) {
+            System.out.println("isOdd test = OK");
+        } else {
+            System.out.println("isOdd test = FAIL");
         }
     }
 }
