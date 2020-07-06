@@ -95,10 +95,5 @@ public class LightColorDetectorTest {
                 System.out.println("Invisible Light Test2 = FAIL");
             }
         }
-
-
-
-
-
-    }
+}
 
