@@ -78,18 +78,6 @@ class Stock {
         return result;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setMinPrice(double minPrice) {
-        this.minPrice = minPrice;
-    }
-
-    public void setMaxPrice(double maxPrice) {
-        this.maxPrice = maxPrice;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -103,12 +91,12 @@ class Stock {
     }
 
     public void updatePrice(double newPrice) {
-        setPrice(newPrice);
+        this.price = newPrice;
         if (newPrice > this.maxPrice) {
-            setMaxPrice(newPrice);
+            this.maxPrice = newPrice;
         }
         else if (newPrice < this.minPrice) {
-            setMinPrice(newPrice);
+            this.minPrice = newPrice;
         }
     }
 }
