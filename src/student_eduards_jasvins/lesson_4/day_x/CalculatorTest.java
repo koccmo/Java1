@@ -8,59 +8,51 @@ public class CalculatorTest {
         calculatorTest.subTest();
         calculatorTest.mulTest();
         calculatorTest.divTest();
-        calculatorTest.isEvenTest(40);
+        calculatorTest.isEvenTest();
     }
     public void sumTest() {
         int firstNumber = 35;
         int secondNumber = 40;
         Calculator calculator = new Calculator();
-        int result = calculator.sum(firstNumber, secondNumber);
-        if (result == 75) {
-            System.out.println("Sum test = OK");
-        } else {
-            System.out.println("Sum test = FAIL");
-        }
+        int actualResult = calculator.sum(firstNumber, secondNumber);
+        assertResult("Sum", actualResult, 75);
     }
     public void subTest() {
         int firstNumber = 35;
         int secondNumber = 15;
         Calculator calculator = new Calculator();
-        int result = calculator.sub(firstNumber, secondNumber);
-        if (result == 20) {
-            System.out.println("Sub test = OK");
-        } else {
-            System.out.println("Sub test = FAIL");
-        }
+        int actualResult = calculator.sub(firstNumber, secondNumber);
+        assertResult("Sub", actualResult, 20);
     }
     public void mulTest() {
         int firstNumber = 5;
         int secondNumber = 5;
         Calculator calculator = new Calculator();
-        int result = calculator.mul(firstNumber, secondNumber);
-        if (result == 25) {
-            System.out.println("Mul test = OK");
-        } else {
-            System.out.println("Mul test = FAIL");
-        }
+        int actualResult = calculator.mul(firstNumber, secondNumber);
+        assertResult("Mul", actualResult, 25);
     }
     public void divTest() {
         int firstNumber = 40;
         int secondNumber = 8;
         Calculator calculator = new Calculator();
-        int result = calculator.div(firstNumber, secondNumber);
-        if (result == 5) {
-            System.out.println("Div test = OK");
-        } else {
-            System.out.println("Div test = FAIL");
-        }
+        int actualResult = calculator.div(firstNumber, secondNumber);
+        assertResult("div", actualResult, 5);
     }
-    public void isEvenTest(int testValue) {
+    public void isEvenTest() {
         Calculator calculator = new Calculator();
-        boolean result = calculator.isEven(testValue);
-        if (result) {
-            System.out.println("isEven test = OK");
+        boolean actualResult = calculator.isEven(3);
+        if (actualResult) {
+            System.out.println("Number is even");
         } else {
-            System.out.println("isEven test = FAIL");
+            System.out.println("Number is odd");
         }
     }
+    private void assertResult(String name, int actualResult, int expectedResult){
+        if (actualResult == expectedResult) {
+            System.out.println(name + " test = OK");
+        } else {
+            System.out.println(name + " test = FAIL");
+        }
+    }
+
 }
