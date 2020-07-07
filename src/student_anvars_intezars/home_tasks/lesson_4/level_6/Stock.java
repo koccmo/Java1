@@ -8,45 +8,36 @@ public class Stock {
     private int minPrice;
 
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCurrentPrice(int currentPrice) {
+    public Stock(String name, int currentPrice) {
         this.currentPrice = currentPrice;
+        this.maxPrice = currentPrice;
+        this.minPrice = currentPrice;
     }
+        // Теперь создадим метод, который задаст новую цену и определит все ценовые категории
+     public void updatePrice(int newPrice) {
+            currentPrice = newPrice;
 
-    public int getCurrentPrice() {
+            // Сравниваем новую цену с максимальной и минимальной, чтобы определить их новые значения
+     if (newPrice > maxPrice) {
+                maxPrice = newPrice;
+     }
+     if (newPrice < minPrice) {
+                minPrice = newPrice;
+     }
+    }
+        //Теперь создадим геттеры для каждой категории цен, чтобы сравнить их значение в тесте
+        //после использования метода обновления цены
+     public int getMaxPrice(){
+         return maxPrice;
+     }
+     public int getMinPrice(){
+         return minPrice;
+     }
+     public int getCurrentPrice(){
         return currentPrice;
-    }
+     }
 
-    public void setMinPrice(int minPrice) {
-        this.minPrice = minPrice;
-    }
-
-    public int getMinPrice () {
-        return minPrice;
-    }
-
-    public void setMaxPrice(int maxPrice) {
-        this.maxPrice = maxPrice;
-    }
-
-    public int getMaxPrice() {
-        return maxPrice;
-    }
-
-    public void updatePrice(int currentPrice, int minPrice, int maxPrice) {
-        this.currentPrice = currentPrice;
-        this.minPrice = minPrice;
-        this.maxPrice = maxPrice;
-    }
-
-    public void printInformation() {
+     public void printInformation() {
         System.out.println("Company " + name + " Current price = " + currentPrice + ",");
         System.out.println("Min price = " + minPrice);
         System.out.println("Maximum price = " + maxPrice);
