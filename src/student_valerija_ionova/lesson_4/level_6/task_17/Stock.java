@@ -37,6 +37,22 @@ public class Stock {
         this.minPrice = currentPrice;
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public double getCurrentPrice(){
+        return currentPrice;
+    }
+
+    public double getMinPrice(){
+        return minPrice;
+    }
+
+    public double getMaxPrice(){
+        return maxPrice;
+    }
+
     public void updatePrice(double newPrice){
         if (newPrice < this.minPrice) this.minPrice = newPrice;
         if (newPrice > this.maxPrice) this.maxPrice = newPrice;
