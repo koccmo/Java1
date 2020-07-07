@@ -33,18 +33,10 @@ public class StockTest {
         }
     }
 
-    public void checkDouble(String name, double methodsResult, double expectedResult){
-        if (methodsResult == expectedResult){
-            System.out.println(name+" OK");
-        }else{
-            System.out.println(name+" FAIL");
-        }
-    }
-
     public void testGetInformationAfterCreation() {
         Stock google = new Stock("GOOG", 10);
 
-        checkString("testGetInformationAfterCreation", google.getInformation(), "Company = \"GOOG\", Current Price = 10.0, " +
+        checkString("Test GetInformation after creation", google.getInformation(), "Company = \"GOOG\", Current Price = 10.0, " +
                 "Min Price = 10.0, Max Price = 10.0");
     }
 
@@ -54,7 +46,7 @@ public class StockTest {
         google.updatePrice(7);
         google.updatePrice(14);
 
-        checkString("getInformationAfterPriceChanges", google.getInformation(), "Company = \"GOOG\", Current Price = 14.0, " +
+        checkString("Test getInformation after price changes", google.getInformation(), "Company = \"GOOG\", Current Price = 14.0, " +
                 "Min Price = 7.0, Max Price = 15.0");
     }
 
