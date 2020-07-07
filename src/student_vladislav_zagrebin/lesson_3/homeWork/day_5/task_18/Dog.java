@@ -1,4 +1,4 @@
-package student_vladislav_zagrebin.lesson_3.homeWork.task_18;
+package student_vladislav_zagrebin.lesson_3.homeWork.day_5.task_18;
 
 public class Dog {
 
