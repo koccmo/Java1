@@ -3,7 +3,6 @@ package student_jaroslav_brutan.lesson_3.day_6.task_24;
 public class Human {
     private String name;
     private int age;
-    private double weight;
 
 
     public void work() {
@@ -30,13 +29,6 @@ public class Human {
         this.age = age;
     }
 
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-}
+   }
 
 

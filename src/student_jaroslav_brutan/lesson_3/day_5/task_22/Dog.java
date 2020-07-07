@@ -1,6 +1,6 @@
 package student_jaroslav_brutan.lesson_3.day_5.task_22;
 
-import java.sql.SQLOutput;
+
 
 public class Dog {
     private String name;
