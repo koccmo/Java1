@@ -20,10 +20,9 @@ Company = "GOOG", Current Price = 14, Min Price = 7, Max Price = 15*/
 public class StockTest {
     public static void main(String[] args) {
         StockTest stockTest = new StockTest();
-        stockTest.testPrintInformationAfterCreation();
-        stockTest.printInformationAfterPriceChanges();
-        stockTest.newMinPrice();
-        stockTest.newCurrentPrice();
+        stockTest.testGetInformationAfterCreation();
+        stockTest.getInformationAfterPriceChanges();
+
     }
 
     public void checkString(String name, String methodsResult, String expectedResult){
@@ -42,39 +41,21 @@ public class StockTest {
         }
     }
 
-    public void testPrintInformationAfterCreation() {
+    public void testGetInformationAfterCreation() {
         Stock google = new Stock("GOOG", 10);
 
-        checkString("testPrintInformationAfterCreation", google.printInformation(), "Company = \"GOOG\", Current Price = 10.0, " +
+        checkString("testGetInformationAfterCreation", google.getInformation(), "Company = \"GOOG\", Current Price = 10.0, " +
                 "Min Price = 10.0, Max Price = 10.0");
     }
 
-    public void printInformationAfterPriceChanges(){
+    public void getInformationAfterPriceChanges(){
         Stock google = new Stock("GOOG", 10);
         google.updatePrice(15);
         google.updatePrice(7);
         google.updatePrice(14);
 
-        checkString("printInformationAfterPriceChanges", google.printInformation(), "Company = \"GOOG\", Current Price = 14.0, " +
+        checkString("getInformationAfterPriceChanges", google.getInformation(), "Company = \"GOOG\", Current Price = 14.0, " +
                 "Min Price = 7.0, Max Price = 15.0");
-    }
-
-    public void newMinPrice(){
-        Stock rimi = new Stock("RIMI", 12);
-        rimi.updatePrice(5);
-        checkDouble("newMinPrice", rimi.getMinPrice(), 5);
-    }
-
-    public void newCurrentPrice(){
-        Stock maxima = new Stock("MAXIMA", 18);
-        maxima.updatePrice(10);
-        checkDouble("newCurrentPrice", maxima.getCurrentPrice(), 10);
-    }
-
-    public void newMaxPrice(){
-        Stock shop = new Stock("Buga", 18);
-        shop.updatePrice(88);
-        checkDouble("newMaxPrice", shop.getMaxPrice(), 88);
     }
 
 
