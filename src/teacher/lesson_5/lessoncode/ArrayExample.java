@@ -16,6 +16,10 @@ class ArrayExample {
 		//index -    0 1 2 3
 		int[] marks = new int[4];
 
+		// int - 4 byte;   4 * 4 = 16 byte
+		// 1000000 * 4 = 40000000 byte
+		// OutOfMemoryException
+
 		// int -> 4 byte - new int[4] -> 4 * 4 = 16 byte RAM
 
 		// |0|0|0|0|
@@ -27,6 +31,8 @@ class ArrayExample {
 		marks[1] = 3;
 		marks[2] = 4;
 		marks[3] = 6;
+
+		marks[0] = 10;
 
 		printArrayToConsole(marks);
 
