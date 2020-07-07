@@ -40,7 +40,7 @@ public class CalculatorTest {
     }
     public void isEvenTest() {
         Calculator calculator = new Calculator();
-        boolean actualResult = calculator.isEven(3);
+        boolean actualResult = calculator.isEven(4);
         if (actualResult) {
             System.out.println("Number is even");
         } else {
