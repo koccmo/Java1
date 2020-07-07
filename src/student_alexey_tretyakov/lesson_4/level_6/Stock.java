@@ -15,17 +15,7 @@ public class Stock {
         System.out.println("Company " + companyName + ", Current Price = " + currentPrice
         + ", Min Price = " + minPrice +", Max Price = " + maxPrice + ".");
     }
-    /*public void setMinPrice(double inPrice ){
-        this.minPrice = inPrice;
-    }
-    public void setMaxPrice (double inPrice ){
-        this.maxPrice = inPrice;
-    }
-    public void setCurrentPrice (double inPrice ){
-        this.currentPrice = inPrice;
-    }
 
-     */
     public double getMinPrice(){
         return this.minPrice;
     }
