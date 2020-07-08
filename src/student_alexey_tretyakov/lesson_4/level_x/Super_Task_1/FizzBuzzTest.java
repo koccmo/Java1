@@ -2,7 +2,9 @@ package student_alexey_tretyakov.lesson_4.level_x.Super_Task_1;
 
 //import student_alexey_tretyakov.spec.Tester;
 
-public class FizzBuzzTest {/*
+import student_alexey_tretyakov.spec.Tester;
+
+public class FizzBuzzTest {
 
     public static void main(String[] args) {
 
@@ -14,6 +16,6 @@ public class FizzBuzzTest {/*
         fizzTester.testResult( ( testFizz.detect (19) ).equals("" + 19 ), "Число HE кратно 3 или 5.");
 
 
-    }*/
+    }
 }
 
