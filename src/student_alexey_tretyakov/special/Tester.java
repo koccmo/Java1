@@ -1,4 +1,4 @@
-package student_alexey_tretyakov.spec;
+package student_alexey_tretyakov.special;
 
 public class Tester {
     public void testResult(boolean status, String testingString ) {
