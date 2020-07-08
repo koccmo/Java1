@@ -13,7 +13,7 @@ public class Task_27 {
             numbers[i] = random.nextInt(1000);
             System.out.println(" Значения  в " + (i + 1) + " ячейке = " + numbers[i]);
         }
-        int maxInt = 0;
+        int maxInt = numbers[0];
         for (int number : numbers) {
             if (number >= maxInt) maxInt = number;
         }

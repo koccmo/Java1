@@ -12,7 +12,7 @@ public class Task_28 {
             numbers[i] = random.nextInt(1000);
             System.out.println(" Значения  в " + (i + 1) + " ячейке = " + numbers[i]);
         }
-        int minInt = 1000;
+        int minInt = numbers[0];
         for (int number : numbers) {
             if (number <= minInt) minInt = number;
         }
