@@ -17,7 +17,7 @@ public class ArrayUtilTest {
         Tester testerArray = new Tester();
         //int [] origArray = new int [inArray.length];
         int [] origArray = Arrays.copyOf(inArray,inArray.length);
-        
+
         ArrayUtil newArray = new ArrayUtil();
         newArray.createArray(inArray.length);
         int[] testArray;
