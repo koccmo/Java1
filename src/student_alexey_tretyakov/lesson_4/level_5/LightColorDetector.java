@@ -1,25 +1,19 @@
 package student_alexey_tretyakov.lesson_4.level_5;
 
-public class Task_16 {
+public class LightColorDetector {
 
-    static class LightColorDetector {
+     private String waveColor;
+     public String detect (int wavelength) {
 
-        private String waveColor;
-        public LightColorDetector (){}
-
-        public String detect(int wavelength) {
-
-            if ((380<=wavelength) && (wavelength<=449)) return waveColor ="Violet";
-            if ((450<=wavelength) &&(wavelength<=494)) return waveColor ="Blue";
-            if ((495<=wavelength) &&(wavelength<=569)) return waveColor ="Green";
-            if ((570<=wavelength) &&(wavelength<=589)) return waveColor ="Yellow";
-            if ((590<=wavelength) &&(wavelength<=619)) return waveColor ="Orange";
-            if ((620<=wavelength) &&(wavelength<=750)) return waveColor ="Red";
-            else return waveColor= "Invisible Light";
-
+         if ((380<=wavelength) && (wavelength<=449)) return waveColor ="Violet";
+         if ((450<=wavelength) && (wavelength<=494)) return waveColor ="Blue";
+         if ((495<=wavelength) && (wavelength<=569)) return waveColor ="Green";
+         if ((570<=wavelength) && (wavelength<=589)) return waveColor ="Yellow";
+         if ((590<=wavelength) && (wavelength<=619)) return waveColor ="Orange";
+         if ((620<=wavelength) && (wavelength<=750)) return waveColor ="Red";
+         else return waveColor= "Invisible Light";
         }
 
-    }
 
     public static void main(String[] args) {
 

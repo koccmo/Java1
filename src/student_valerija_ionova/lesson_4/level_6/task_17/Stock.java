@@ -37,13 +37,19 @@ public class Stock {
         this.minPrice = currentPrice;
     }
 
+
     public void updatePrice(double newPrice){
         if (newPrice < this.minPrice) this.minPrice = newPrice;
         if (newPrice > this.maxPrice) this.maxPrice = newPrice;
         this.currentPrice = newPrice;
     }
 
-    public String printInformation(){
+    public void printInformation(){
+        System.out.println("Company = \""+this.name+ "\", Current Price = "+this.currentPrice+"," +
+                " Min Price = "+this.minPrice+", Max Price = "+this.maxPrice);
+    }
+
+    public String getInformation(){
         return("Company = \""+this.name+ "\", Current Price = "+this.currentPrice+"," +
                 " Min Price = "+this.minPrice+", Max Price = "+this.maxPrice);
     }

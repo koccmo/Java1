@@ -5,22 +5,39 @@ import java.util.Random;
 class ForArrayExample {
 
 	public static void main(String[] args) {
+		int[] randomNumbers = createArray();
+		fillArrayWithRandomNumbers(randomNumbers);
+		printArrayToConsole(randomNumbers);
 
-		Random random = new Random();
-		//random.nextInt(10000);
-
-		int[] randomNumbers = new int[1000];
-
+		int sum = 0;
 		for (int i = 0; i < randomNumbers.length; i++) {
-			int randomNumber = random.nextInt(10000);
-			randomNumbers[i] = randomNumber;
-		}
+			sum = sum + randomNumbers[i];
 
-		for (int i = 0; i < randomNumbers.length; i++) {
-			System.out.println(randomNumbers[i]);
+			/*for (int j = 0; j < 3; j++) {
+				sum = sum + randomNumbers[i];
+			}*/
 		}
+		System.out.println("Array sum = " + sum);
 
 	}
 
+	private static void printArrayToConsole(int[] randomNumbers) {
+		for (int i = 0; i < randomNumbers.length; i++) {
+			System.out.println(randomNumbers[i]);
+		}
+	}
+
+	private static void fillArrayWithRandomNumbers(int[] randomNumbers) {
+		Random random = new Random();
+		for (int i = 0; i < randomNumbers.length; i++) {
+			// int randomNumber = random.nextInt(10000);
+			// randomNumbers[i] = randomNumber;
+			randomNumbers[i] = random.nextInt(10000);
+		}
+	}
+
+	private static int[] createArray() {
+		return new int[1000];
+	}
 
 }

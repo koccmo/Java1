@@ -20,43 +20,35 @@ Company = "GOOG", Current Price = 14, Min Price = 7, Max Price = 15*/
 public class StockTest {
     public static void main(String[] args) {
         StockTest stockTest = new StockTest();
-        stockTest.testPrintInformationAfterCreation();
-        stockTest.printInformationAfterPriceChanges();
+        stockTest.testGetInformationAfterCreation();
+        stockTest.getInformationAfterPriceChanges();
 
     }
 
-        //System.out.println(google.printInformation());
-        //System.out.println("Company = \"GOOG\", Current Price = 10.0, " +
-        //        "Min Price = 10.0, Max Price = 10.0");
-
-    public void testPrintInformationAfterCreation() {
-        Stock google = new Stock("GOOG", 10);
-        if (google.printInformation().equals("Company = \"GOOG\", Current Price = 10.0, " +
-                "Min Price = 10.0, Max Price = 10.0")) {
-            System.out.println("Class Stock is working good");
-        } else {
-            System.out.println("Class Stock isn't working");
+    public void checkString(String name, String methodsResult, String expectedResult){
+        if (methodsResult.equals(expectedResult)){
+            System.out.println(name+" OK");
+        }else{
+            System.out.println(name+" FAIL");
         }
     }
 
-    public void printInformationAfterPriceChanges(){
+    public void testGetInformationAfterCreation() {
+        Stock google = new Stock("GOOG", 10);
+
+        checkString("Test GetInformation after creation", google.getInformation(), "Company = \"GOOG\", Current Price = 10.0, " +
+                "Min Price = 10.0, Max Price = 10.0");
+    }
+
+    public void getInformationAfterPriceChanges(){
         Stock google = new Stock("GOOG", 10);
         google.updatePrice(15);
         google.updatePrice(7);
         google.updatePrice(14);
 
-        //System.out.println(google.printInformation());
-        //System.out.println("Company = \"GOOG\", Current Price = 14.0, " +
-        //        "Min Price = 7.0, Max Price = 15.0");
-
-        if (google.printInformation().equals("Company = \"GOOG\", Current Price = 14.0, " +
-                "Min Price = 7.0, Max Price = 15.0")){
-            System.out.println("Class Stock is working good");
-        } else{
-            System.out.println("Class Stock isn't working");
-        }
+        checkString("Test getInformation after price changes", google.getInformation(), "Company = \"GOOG\", Current Price = 14.0, " +
+                "Min Price = 7.0, Max Price = 15.0");
     }
-
 
 
 }
