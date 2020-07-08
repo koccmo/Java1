@@ -1,6 +1,6 @@
 package student_alexey_tretyakov.lesson_5.level_5_6;
 
-import student_alexey_tretyakov.spec.Tester;
+import student_alexey_tretyakov.special.Tester;
 
 import java.util.Arrays;
 

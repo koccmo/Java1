@@ -33,6 +33,20 @@ public class ArrayUtil {
         }
         return minInt;
     }
+    public void printEvenNumber(int[] inArray) {
+        for (int i =0; i < inArray.length; i++) {
+            if (inArray[i] % 2 == 0 ) {
+                System.out.println(" Чётное значение  в " + (i + 1) + " ячейке = " + inArray[i]);
+            }
+        }
+    }
+    public void printOddNumber(int[] inArray) {
+        for (int i =0; i < inArray.length; i++) {
+            if (inArray[i] % 2 != 0 ) {
+                System.out.println(" Нечётное значение  в " + (i + 1) + " ячейке = " + inArray[i]);
+            }
+        }
+    }
 
     public static void main(String[] args) {
         ArrayUtil newArray = new ArrayUtil();

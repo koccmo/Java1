@@ -2,7 +2,7 @@ package student_alexey_tretyakov.lesson_4.level_x.Super_Task_1;
 
 //import student_alexey_tretyakov.spec.Tester;
 
-import student_alexey_tretyakov.spec.Tester;
+import student_alexey_tretyakov.special.Tester;
 
 public class FizzBuzzTest {
 
