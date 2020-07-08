@@ -30,11 +30,7 @@ public class Calculator {
     }
 
     public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
-        if (firstNumber > secondNumber) {
-            return firstNumber;
-        } else {
-            return secondNumber;
-        }
+        return Math.max(firstNumber, secondNumber);
     }
 
     public int maxOfThreeNumber(int firstNumber, int secondNumber, int thirdNumber) {
@@ -45,6 +41,30 @@ public class Calculator {
         } else {
             return thirdNumber;
         }
+    }
+
+    public int getFirstNumber() {
+        return firstNumber;
+    }
+
+    public void setFirstNumber(int firstNumber) {
+        this.firstNumber = firstNumber;
+    }
+
+    public int getSecondNumber() {
+        return secondNumber;
+    }
+
+    public void setSecondNumber(int secondNumber) {
+        this.secondNumber = secondNumber;
+    }
+
+    public int getThirdNumber() {
+        return thirdNumber;
+    }
+
+    public void setThirdNumber(int thirdNumber) {
+        this.thirdNumber = thirdNumber;
     }
 }
 
