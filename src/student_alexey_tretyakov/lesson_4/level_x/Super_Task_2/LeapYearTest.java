@@ -8,6 +8,7 @@ public class LeapYearTest {
         testerLeapYear.testResult( testLeapYear.isLeapYear( 2020 ),"Высокосный год." );
         testerLeapYear.testResult( !testLeapYear.isLeapYear( 2019 ),"Не высокосный год." );
         testerLeapYear.testResult( testLeapYear.isLeapYear( 2000 ),"Высокосный год ( столетний ) ." );
+        testerLeapYear.testResult( !testLeapYear.isLeapYear( 2100 ),"Не высокосный год ( столетний ) ." );
     }
 
 }
