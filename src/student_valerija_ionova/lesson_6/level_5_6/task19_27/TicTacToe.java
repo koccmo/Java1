@@ -114,43 +114,55 @@ public class TicTacToe {
         return false;
     }
 
-    public Move getNextMove() {
+    public Move getNextMove(int player) {
 
         int x;
         int y;
         Scanner input = new Scanner(System.in);
 
         //Input of coordinate x
-        do {System.out.println("Please input x (0-2) for your move:");
-        x = input.nextInt();
-        }while((x<0)||(x>2));
-
-        //Input of coordinate y
-        do {System.out.println("Please input y (0-2) for your move:");
+        do {
+            System.out.println("Please input coordinates: x y (0-2) for player "+player+":");
+            x = input.nextInt();
             y = input.nextInt();
-        }while((y<0)||(y>2));
+            if (((x<0)||(x>2)) || ((y<0)||(y>2))){
+                System.out.println("Not correct coordinates!");
+            }
+        }while(((x<0)||(x>2)) || ((y<0)||(y>2)));
 
         Move move = new Move(x, y);
         return move;
     }
 
     public void printFieldToConsole(int[][] field){
-        int [] array = new int [3];
+        //int [] array = new int [3];
         for (int i = 0; i< 3; i++){
             for (int j = 0; j< 3; j++){
-                array[j] = field[i][j];
+                System.out.print(field[i][j]+" ");
+                //array[j] = field[i][j];
             }
-            System.out.println(Arrays.toString(array));
+            System.out.println();
+            //System.out.println(Arrays.toString(array));
         }
     }
 
     public void play() {
         int[][] field = createField();
+        System.out.println("Let's start game:");
+        printFieldToConsole(field);
         while(true) {
-            printFieldToConsole(field);
-            Move move0 = getNextMove();
-            field[move0.getX()][move0.getY()] = 0;
-            printFieldToConsole(field);
+            Move move0;
+            boolean freeField = false;
+            do {
+                move0 = getNextMove(0);
+                if (field[move0.getY()][move0.getX()] == -1){
+                    freeField = true;
+                }else{
+                    System.out.println("It's not free field! Please try one more time!");
+                }
+            }while(!freeField);
+
+            field[move0.getY()][move0.getX()] = 0;
             if (isWinPosition(field, 0)) {
                 System.out.println("Player 0 WIN!");
                 break;
@@ -161,8 +173,18 @@ public class TicTacToe {
             }
 
             printFieldToConsole(field);
-            Move move1 = getNextMove();
-            field[move1.getX()][move1.getY()] = 1;
+            Move move1;
+            freeField = false;
+            do {
+                move1 = getNextMove(1);
+                if (field[move1.getY()][move1.getX()] == -1){
+                    freeField = true;
+                }else{
+                    System.out.println("It's not free field! Please try one more time!");
+                }
+            }while(!freeField);
+
+            field[move1.getY()][move1.getX()] = 1;
             printFieldToConsole(field);
             if (isWinPosition(field, 1)) {
                 System.out.println("Player 1 WIN!");
