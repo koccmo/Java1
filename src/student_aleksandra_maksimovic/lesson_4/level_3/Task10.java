@@ -20,6 +20,7 @@ public class Task10 {
         System.out.println("Enter your third number : ");
         int thirdNumber = sc.nextInt();
 
+        // а если два первых числа равны и они больше третьего числа?
         if ((firstNumber > secondNumber) && (firstNumber > thirdNumber)) {
             System.out.println(firstNumber);
         } else if ((secondNumber > firstNumber) && (secondNumber > thirdNumber)) {
