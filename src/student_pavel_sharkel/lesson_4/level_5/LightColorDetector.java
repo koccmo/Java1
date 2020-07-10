@@ -13,6 +13,8 @@ public class LightColorDetector {
         System.out.println("Wave color is " + detect(waveLength));
 
     }
+
+    // почему тут static? мы static не учили и не применяем его!
     public static String detect(int wavelength) {
         String waveColor;
         if ((wavelength >= 380) && (wavelength <= 449)) {
