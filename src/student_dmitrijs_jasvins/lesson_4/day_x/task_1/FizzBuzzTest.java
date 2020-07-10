@@ -36,7 +36,7 @@ public class FizzBuzzTest {
         }
     }
 
-    public void testLastVariant() {
+    public void testLastVariant() {  // может более лучшее название метода??
         FizzBuzz fizzBuzz = new FizzBuzz();
         if (fizzBuzz.detect(14).equals("14")) {
             System.out.println("Test = OK");
