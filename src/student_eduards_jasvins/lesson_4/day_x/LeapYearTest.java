@@ -3,10 +3,10 @@ package student_eduards_jasvins.lesson_4.day_x;
 public class LeapYearTest {
     public static void main(String[] args) {
         LeapYearTest leapYearTest = new LeapYearTest();
-        leapYearTest.test();
-        leapYearTest.test2();
-        leapYearTest.test3();
-    }
+		leapYearTest.test();   // название тестового метода может отображать,
+		leapYearTest.test2();   // что за сченарий тестируется
+		leapYearTest.test3();   // это будет лучше чем test1(), test2(), test3()
+	}
     public void test() {
         LeapYear leapYear = new LeapYear();
         if (leapYear.leapYear(1891)) {
