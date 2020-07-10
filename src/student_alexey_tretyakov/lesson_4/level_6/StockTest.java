@@ -11,6 +11,9 @@ public class StockTest {
         }
    }
 
+
+   // каждый тест кейс в отдельный метод,
+   // когда тест упадёт мы будем чётко знать какой тест упал и быстрее решим проблему
     public static void main(String[] args) {
         Stock testCompany = new Stock("RRRR", 10);
         StockTest stockTest = new StockTest();
