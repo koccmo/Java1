@@ -12,6 +12,7 @@ public class CalculatorTest {
         calculatorTest.isEvenTest(40);
     }
 
+    // checkResult() - более лучшее название для этого метода
     public void isResult(String nameOfTest, boolean isOk) {
         if (isOk) {
             System.out.println(nameOfTest + " = OK");
