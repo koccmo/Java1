@@ -9,7 +9,7 @@ public class FizzBuzzTest {
     public static void main(String[] args) {
         FizzBuzzTest fizzBuzzTest = new FizzBuzzTest();
         fizzBuzzTest.fizzBuzzTest();
-        fizzBuzzTest.BuzzTest();
+        fizzBuzzTest.BuzzTest();  // название метода с маленькой буквы
         fizzBuzzTest.fizzTest();
         fizzBuzzTest.notFizzBuzzTest();
     }
