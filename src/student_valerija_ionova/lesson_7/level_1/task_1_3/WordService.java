@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_7.task_1;
+package student_valerija_ionova.lesson_7.level_1.task_1_3;
 
 /*Дана строка с текстом.
 Написать метод, который найдёт слово, которое в тексте встречается больше всего раз.
@@ -20,11 +20,10 @@ package student_valerija_ionova.lesson_7.task_1;
 - создать два массива: слово - количество
 - определить какое слово встречается чаще всего
 */
+
 import java.util.Arrays;
 
 public class WordService {
-
-
 
     public int countNumberOfWords(String text){
         int numberOfWords = 0;
@@ -39,6 +38,7 @@ public class WordService {
                 isWord = false;
             }
         }
+        //System.out.println("Number of words: "+numberOfWords);
         return numberOfWords;
     }
 
@@ -49,13 +49,10 @@ public class WordService {
         String [] arrayOfWords = new String [numberOfWords];
         String word = "";
         int wordsNumber = 0;
-        boolean isWord = true;
         for (int i=0; i< text.length(); i++){
             //System.out.println("char(i) "+text.charAt(i));
             if ((Character.isLetter(text.charAt(i))) || (text.charAt(i) == '\'')){
                 word += text.charAt(i);
-                //System.out.println("word: "+word);
-                //isWord = true;
             }else{
                 if (word.length() != 0) {
                     arrayOfWords[wordsNumber] = word;
@@ -64,16 +61,11 @@ public class WordService {
                 }
             }
         }
-        //System.out.println(Arrays.toString(arrayOfWords));
-        return arrayOfWords;
-    }
-
-    public String [] arrayToLowerCase(String [] array){
-        String [] newArray = new String [array.length];
-        for (int i= 0; i< array.length; i++){
-            newArray[i] = array[i].toLowerCase();
+        if (word.length() != 0) {
+            arrayOfWords[arrayOfWords.length-1] = word;
         }
-        return newArray;
+        //System.out.println("Array of words"+Arrays.toString(arrayOfWords));
+        return arrayOfWords;
     }
 
     public int [] countOfWords(String [] array){
@@ -83,7 +75,7 @@ public class WordService {
             int numberOfWord = 1;
             if (i != array.length-1){
                 for (int j=i+1; j<array.length; j++){
-                    if (array[j].equals(word)) {
+                    if (array[j].toLowerCase().equals(word.toLowerCase())) {
                         numberOfWord++;
                     }
                 }
@@ -92,12 +84,11 @@ public class WordService {
                 countOfWords[i] = numberOfWord;
             }
         }
+        //System.out.println("Count of words "+Arrays.toString(countOfWords));
         return countOfWords;
     }
 
     public String findMostFrequentWord(String [] words, int [] countOfWords) {
-
-
 
         String word ="";
         int max = 0;
@@ -107,8 +98,17 @@ public class WordService {
                 word = words[i];
             }
         }
-        return word;
+        //System.out.println("Word: "+word);
+        return word.toLowerCase();
     }
 
+    public String wordServiceFull (String text){
+
+        String [] wordsArray = createArrayOfWords(text);
+        //String [] wordsArrayToLowerCase = arrayToLowerCase(wordsArray);
+        int [] countOfWords = countOfWords(wordsArray);
+        return findMostFrequentWord(wordsArray, countOfWords);
+
+    }
 
 }

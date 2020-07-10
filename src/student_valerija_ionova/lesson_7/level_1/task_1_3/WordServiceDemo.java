@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_7.task_1;
+package student_valerija_ionova.lesson_7.level_1.task_1_3;
 
 import java.util.Scanner;
 
@@ -11,10 +11,13 @@ public class WordServiceDemo {
         WordService wordService = new WordService();
         String text = scanner.nextLine();
 
+        /*
         String [] wordsArray = wordService.createArrayOfWords(text);
         String [] wordsArrayToLowerCase = wordService.arrayToLowerCase(wordsArray);
         int [] countOfWords = wordService.countOfWords(wordsArrayToLowerCase);
         System.out.println("Most frequent word: "+ wordService.findMostFrequentWord(wordsArrayToLowerCase, countOfWords));
-
+        */
+        String word = wordService.wordServiceFull(text);
+        System.out.println(word);
     }
 }

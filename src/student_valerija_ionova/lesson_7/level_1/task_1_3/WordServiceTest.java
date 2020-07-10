@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_7.task_1;
+package student_valerija_ionova.lesson_7.level_1.task_1_3;
 
 import java.util.Arrays;
 
@@ -16,7 +16,7 @@ public class WordServiceTest {
         wordServiceTest.testCreateArrayOfWords2();
         wordServiceTest.testCreateArrayOfWords3();
 
-        wordServiceTest.testArrayToLowerCase();
+        //wordServiceTest.testArrayToLowerCase();
 
         wordServiceTest.testCountOfWords();
         wordServiceTest.testCountOfWords2();
@@ -26,7 +26,8 @@ public class WordServiceTest {
         wordServiceTest.testFindMostFrequentWordOneWord2();
         wordServiceTest.testFindMostFrequentWordOneWord3();
 
-        wordServiceTest.testFull();
+        wordServiceTest.testFull2Words();
+        wordServiceTest.testFull1Word();
     }
 
     public void checkResultString(String name, String methodsResult, String expectedresult){
@@ -102,13 +103,13 @@ public class WordServiceTest {
         checkResultArray("testCreateArrayOfWords3", wordService.createArrayOfWords("!Hello, Bobby! How are you? I'm fine."), expectedArray);
     }
 
-    public void testArrayToLowerCase(){
+    /*public void testArrayToLowerCase(){
         WordService wordService = new WordService();
         String [] newArray = {"HelLo"};
 
         String [] expectedArray = {"hello"};
         checkResultArray("testArrayToLowerCase", wordService.arrayToLowerCase(newArray), expectedArray);
-    }
+    }*/
 
     public void testCountOfWords(){
         WordService wordService = new WordService();
@@ -158,15 +159,18 @@ public class WordServiceTest {
         checkResultString("testFindMostFrequentWordOneWord", wordService.findMostFrequentWord(words, countOfWords), "me");
     }
 
-    public void testFull(){
+    public void testFull2Words(){
         WordService wordService = new WordService();
         String text = "]Hello, my little friend! Friend, how are you? Little?/";
+        checkResultString("testFull2Words", wordService.wordServiceFull(text), "little");
 
-        String [] wordsArray = wordService.createArrayOfWords(text);
-        String [] wordsArrayToLowerCase = wordService.arrayToLowerCase(wordsArray);
-        int [] countOfWords = wordService.countOfWords(wordsArrayToLowerCase);
-        checkResultString("testFull", wordService.findMostFrequentWord(wordsArrayToLowerCase, countOfWords), "little");
+    }
 
+    public void testFull1Word(){
+        WordService wordService = new WordService();
+        String text = "]Hello/";
+        checkResultString("testFull1Word", wordService.wordServiceFull(text), "hello");
+        //System.out.println(wordService.wordServiceFull(text));
     }
 
 }

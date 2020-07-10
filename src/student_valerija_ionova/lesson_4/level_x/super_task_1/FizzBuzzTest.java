@@ -9,7 +9,7 @@ public class FizzBuzzTest {
     public static void main(String[] args) {
         FizzBuzzTest fizzBuzzTest = new FizzBuzzTest();
         fizzBuzzTest.fizzBuzzTest();
-        fizzBuzzTest.BuzzTest();  // название метода с маленькой буквы
+        fizzBuzzTest.buzzTest();  // название метода с маленькой буквы
         fizzBuzzTest.fizzTest();
         fizzBuzzTest.notFizzBuzzTest();
     }
@@ -33,7 +33,7 @@ public class FizzBuzzTest {
 
     }
 
-    public void BuzzTest(){
+    public void buzzTest(){
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         if (fizzBuzz.detect(5).equals("Buzz"))
