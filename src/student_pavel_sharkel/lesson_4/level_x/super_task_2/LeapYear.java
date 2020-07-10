@@ -2,7 +2,7 @@ package student_pavel_sharkel.lesson_4.level_x.super_task_2;
 
 public class LeapYear {
 
-    int year;
+    int year;  // зачем хранить год?? это свойство нигде не используется!
 
     public boolean isLeapYear(int year) {
         this.year = year;
