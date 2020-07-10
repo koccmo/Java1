@@ -9,8 +9,8 @@ public class Task_12 {
         int[] numbers = new int[3];
 
         Random random = new Random();
-        for (int i=0; i < numbers.length; i++){
-            numbers[i] = random.nextInt(3);
+        for (int i = 0; i < numbers.length; i++){
+            numbers[i] = random.nextInt(10);
             System.out.println(numbers[i]);
         }
     }
