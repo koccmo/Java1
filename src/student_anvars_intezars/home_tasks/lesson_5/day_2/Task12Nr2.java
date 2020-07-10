@@ -7,7 +7,7 @@ public class Task12Nr2 {
     public static void main(String[] args) {
 
         // Второй вариант 12 задания из Day5. Можно исползовать не массив при выводе на консоль,
-        // а создать отдельную переменную
+        // а создать отдельную переменную(randomNumber).
 
         int[] numbers = new int[3];
         Random random = new Random();
