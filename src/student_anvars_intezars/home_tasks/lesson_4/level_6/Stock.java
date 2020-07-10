@@ -2,7 +2,7 @@ package student_anvars_intezars.home_tasks.lesson_4.level_6;
 
 public class Stock {
 
-    private String name;
+    private String name;  // unused field????? why????
     private int currentPrice;
     private int maxPrice;
     private int minPrice;
