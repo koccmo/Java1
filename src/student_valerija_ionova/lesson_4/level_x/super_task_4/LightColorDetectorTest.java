@@ -26,7 +26,7 @@ public class LightColorDetectorTest {
         lightColorDetectorTest.universalTest();
     }
 
-    public void universalTest() {
+    public void universalTest() {  // не не такие универсальные тесты не надо писать, каждый тест кейс в свой метод!
         LightColorDetector detector = new LightColorDetector();
 
         checkResultString("VioletTest ", detector.detect(381), "Violet");
