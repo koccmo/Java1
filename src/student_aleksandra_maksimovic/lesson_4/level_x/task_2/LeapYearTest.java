@@ -8,6 +8,8 @@ class LeapYearTest {
 
         var tester = new Tester();
 
+		// тут явно не все возможные сценарии протестированы!!
+		// и каждый тестовый сценарий в свой отдельный метод, а не в кучу
 
         LeapYear leapYear = new LeapYear();
 
