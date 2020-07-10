@@ -5,9 +5,11 @@ public class StockTest {
     public static void main(String[] args) {
 
         StockTest stockTest = new StockTest();
-        stockTest.StockTest1();
+        stockTest.StockTest1();  // name of the method must start from small letter
     }
 
+    // Please write separate tests for min/max/current price checks
+	// Good practice to check one thing in one test!!!
     public void StockTest1() {
         Stock stock = new Stock("Google", 10);
         if ((stock.getCurrentPrice()) == 10 && (stock.getMaxPrice()) == 10 && (stock.getMinPrice() == 10)) {
