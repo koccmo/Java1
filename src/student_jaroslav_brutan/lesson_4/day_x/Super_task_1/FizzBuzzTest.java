@@ -38,7 +38,7 @@ public class FizzBuzzTest {
         }
     }
 
-    public void notFizzBuzzTest(){
+    public void notFizzBuzzTest(){   // а по лучше название придумать этому тесту?
         FizzBuzz fizzBuzz = new FizzBuzz();
         String result = fizzBuzz.detect(16);
         if (result .equals("16")){
