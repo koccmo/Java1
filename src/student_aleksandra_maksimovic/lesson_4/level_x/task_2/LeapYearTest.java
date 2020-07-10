@@ -13,9 +13,9 @@ class LeapYearTest {
 
         LeapYear leapYear = new LeapYear();
 
-        tester.check(leapYear.isLeapYear(2020), "2020 is leap");
-
-        tester.checkFalse(leapYear.isLeapYear(2019), "2019 isn't leap");
-
+        tester.check(leapYear.isLeapYear(2020), "2020 is leap : Test divide to 4");
+        tester.checkFalse(leapYear.isLeapYear(2019), "2019 isn't leap : Test not divide to 4");
+        tester.checkFalse(leapYear.isLeapYear(1959), "1959 isn't leap : Test not divide to 100");
+        tester.checkFalse(leapYear.isLeapYear(1900), "1900 isn't leap : Test not divide to 400");
     }
 }
