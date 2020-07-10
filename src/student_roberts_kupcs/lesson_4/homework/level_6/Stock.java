@@ -20,6 +20,7 @@ class Stock {
         this.minimumCost = currentValue;
     }
 
+    // в этом коде есть логическая ошибка
     public void updatePrice(double newPrice) {
         if (newPrice < this.minimumCost) {
             this.minimumCost = newPrice;
