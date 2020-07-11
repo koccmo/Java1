@@ -35,27 +35,18 @@ class ArrayUtilTest {
     ArrayUtil arrayUtil = new ArrayUtil();
     Random random = new Random();
 
-    public void checkResult(String testName, int result, int expectedResult) {
-        if (result == expectedResult) {
-            System.out.println(testName + " = OK");
+    public void checkResult(boolean condition, String testName) {
+        if (condition) {
+            System.out.println(testName + " test = OK");
         } else {
-            System.out.println(testName + " = FAIL");
-        }
-    }
-
-    public void checkResult2(String testName, int result) {
-        if (!(result == 0)) {
-            System.out.println(testName + " = OK");
-        } else {
-            System.out.println(testName + " = FAIL");
+            System.out.println(testName + " test = FAIL");
         }
     }
 
     public void shouldCreateArray() {
-        // Write test implementation here !!!
-        //ArrayUtil arrayUtil = new ArrayUtil();
         int[] array = arrayUtil.createArray(3);
-        checkResult("Create array test", array.length, 3);
+        boolean condition = (array.length == 3);
+        checkResult(condition, "Create array");
     }
 
     public void shouldFillArrayWithRandomNumbers() {
@@ -65,7 +56,7 @@ class ArrayUtilTest {
         for (int i = 0; i < array.length; i++ ) {
             sum += array[i];
         }
-        checkResult2("Should fill array with random numbers test", sum);
+        checkResult(!(sum==0),"Fill array with random numbers");
     }
 
 }
