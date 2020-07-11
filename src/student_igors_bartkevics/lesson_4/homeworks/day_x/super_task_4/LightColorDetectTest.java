@@ -44,6 +44,15 @@ class LightColorDetectTest {
         lightColorDetectTest.redColorLight();
     }
 
+    /* Вот такой должен быть метод
+    private void checkResults(boolean condition, String testName) {
+		if (condition) {
+			System.out.println(testName + " = OK");
+		} else {
+			System.out.println(testName + " = FAIL");
+		}
+	}
+*/
     public void checkResult(String result, String expectedResult) {
         if (result.equals(expectedResult)) {
             if (expectedResult.equals("Invisible Light")) {

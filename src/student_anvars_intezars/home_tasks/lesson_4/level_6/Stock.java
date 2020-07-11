@@ -2,13 +2,14 @@ package student_anvars_intezars.home_tasks.lesson_4.level_6;
 
 public class Stock {
 
-    private String name;
+    private final String name;
     private int currentPrice;
     private int maxPrice;
     private int minPrice;
 
 
     public Stock(String name, int currentPrice) {
+        this.name = name;
         this.currentPrice = currentPrice;
         this.maxPrice = currentPrice;
         this.minPrice = currentPrice;

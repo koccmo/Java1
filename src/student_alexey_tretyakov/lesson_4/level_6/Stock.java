@@ -18,7 +18,7 @@ public class Stock {
 
     public double getMinPrice(){
         return this.minPrice;
-    }
+    }  // пустая строка между методами улучшает читаемость кода
     public double getMaxPrice(){
         return this.maxPrice;
     }

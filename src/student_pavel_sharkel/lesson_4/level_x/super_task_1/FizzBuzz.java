@@ -2,7 +2,7 @@ package student_pavel_sharkel.lesson_4.level_x.super_task_1;
 
 public class FizzBuzz {
 
-    int number;
+    int number;  // зачем хранить число?? это свойство нигде не используется!
 
     public String detect(int number) {
         this.number = number;

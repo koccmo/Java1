@@ -5,7 +5,9 @@ public class StockTest {
         StockTest stockTest = new StockTest();
         stockTest.test();
     }
-    
+
+	// Please write separate tests for min/max/current price checks
+	// Good practice to check one thing in one test!!!
     public void test() {
         Stock stock = new Stock("Tello", 10);
         if (stock.getCurrentPrice() == 10 && stock.getMinPrice() == 10 && stock.getMaxPrice() == 10) {

@@ -20,7 +20,7 @@ class LeapYear {
 public class LeapYear {
 
     public boolean isLeapYear(int year){
-        if (year % 4 != 0) return false;
+     /*   if (year % 4 != 0) return false;
         else {
             if (year % 100 != 0){
                 return true;
@@ -29,6 +29,11 @@ public class LeapYear {
                     return true;
                 }else return false;
             }
+        }*/
+        if (((year % 100 != 0) || (year % 400 == 0)) && (year % 4 == 0)) {
+            return true;
+        }else{
+            return false;
         }
     }
 

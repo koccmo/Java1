@@ -19,7 +19,7 @@ public class LightColorDetectorTest {
         } else {
             System.out.println("Violet test - false!");
         }
-        }
+        }   // пустая строка между методами улучшает читаемость кода
         public void blueTest(){
         LightColorDetector lightColorDetector = new LightColorDetector();
         String result = lightColorDetector.detect(455);

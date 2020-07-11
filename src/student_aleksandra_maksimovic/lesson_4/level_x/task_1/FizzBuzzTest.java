@@ -7,7 +7,7 @@ public class FizzBuzzTest {
         fizzBuzzTest.fizzTest();
         fizzBuzzTest.buzzTest();
         fizzBuzzTest.fizzBuzzTest();
-        fizzBuzzTest.fizzBuzzTest4();
+        fizzBuzzTest.fizzBuzzTest4();  // нужно более качественное название метода !!
 
     }
 
