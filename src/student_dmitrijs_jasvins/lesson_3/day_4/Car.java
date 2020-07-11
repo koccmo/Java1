@@ -14,7 +14,8 @@ public class Car {
     public String getModel() {
         return model;
     }
-    public String getOwner(){
+
+    public String getOwner() {
         return owner;
     }
 }

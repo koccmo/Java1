@@ -3,8 +3,8 @@ package student_igors_bartkevics.lesson_3.homeworks.day_6;
 class Product {
 
     private String name;
-    public double regularPrice;
-    public double discount;
+    private double regularPrice;
+    private double discount;
 
     public Product(String name) {
         this.name = name;
@@ -12,6 +12,14 @@ class Product {
 
     public double actualPrice() {
         return this.regularPrice - this.regularPrice * this.discount;
+    }
+
+    public void setRegularPrice(double regularPrice) {
+        this.regularPrice = regularPrice;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
     }
 
     public void printInformation() {

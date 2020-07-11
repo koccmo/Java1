@@ -1,6 +1,6 @@
 package student_aleksandra_maksimovic.lesson_2.homeworks.day_3;
 
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class Task10 {
@@ -21,14 +21,14 @@ public class Task10 {
 		//Названия переменных!! r, pi, s, l .... ????
 		// привыкайте давать переменным понятные имена: radius, area, perimeter ....
 
-        double r = myInput.nextDouble();
+        double radius = myInput.nextDouble();
 
-        double Pi = 3.1415926535897932384626433832795;
+        double constPi = 3.1415926535897932384626433832795;
 
-        double S = Pi * r * r;
-        double l = 2 * Pi * r;
+        double area = constPi * radius * radius;
+        double perimeter = 2 * constPi * radius;
 
-        System.out.println("Area = " + S);
-        System.out.println("Perimeter = " + l);
+        System.out.println("Area = " + area);
+        System.out.println("Perimeter = " + perimeter);
     }
 }

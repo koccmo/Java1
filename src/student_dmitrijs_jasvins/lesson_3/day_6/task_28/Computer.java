@@ -4,14 +4,16 @@ public class Computer {
     private String name;
     private String model;
 
-    public Computer(String name, String model){
+    public Computer(String name, String model) {
         this.name = name;
         this.model = model;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public String  getModel(){
+
+    public String getModel() {
         return model;
     }
 }

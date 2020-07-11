@@ -8,21 +8,21 @@ public class Task_1 {
 
         System.out.print("Enter first number:");
         // названия переменных с маленькой буквы
-        int FirstNumber = scanner.nextInt();
+        int firstNumber = scanner.nextInt();
 
         System.out.print("Enter second number:");
 		// названия переменных с маленькой буквы
-        int SecondNumber = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
 
-        int sum = FirstNumber + SecondNumber;
-        int sub = FirstNumber - SecondNumber;
-        int multiple = FirstNumber * SecondNumber;
-        int division = FirstNumber / SecondNumber;
+        int sum = firstNumber + secondNumber;
+        int sub = firstNumber - secondNumber;
+        int multiple = firstNumber * secondNumber;
+        int division = firstNumber / secondNumber;
 
-        System.out.println(FirstNumber + " + " + SecondNumber + " = " + sum);
-        System.out.println(FirstNumber + " - " + SecondNumber + " = " + sub);
-        System.out.println(FirstNumber + " * " + SecondNumber + " = " + multiple);
-        System.out.println(FirstNumber + " / " + SecondNumber + " = " + division);
+        System.out.println(firstNumber + " + " + secondNumber + " = " + sum);
+        System.out.println(firstNumber + " - " + secondNumber + " = " + sub);
+        System.out.println(firstNumber + " * " + secondNumber + " = " + multiple);
+        System.out.println(firstNumber + " / " + secondNumber + " = " + division);
 
     }
 }
