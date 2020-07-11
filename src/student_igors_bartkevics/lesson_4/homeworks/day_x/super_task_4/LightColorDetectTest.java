@@ -53,22 +53,11 @@ class LightColorDetectTest {
 		}
 	}
 */
-    public void checkResult(String result, String expectedResult) {
-        if (result.equals(expectedResult)) {
-            if (expectedResult.equals("Invisible Light")) {
-                System.out.println(expectedResult + " test = OK");
-            }
-            else {
-                System.out.println(expectedResult + " color light test = OK");
-            }
-        }
-        else {
-            if (expectedResult.equals("Invisible Light")) {
-                System.out.println(expectedResult + " test = FAIL");
-            }
-            else {
-                System.out.println(expectedResult + " color light test = FAIL");
-            }
+    private void checkResult(boolean condition, String testName) {
+        if (condition) {
+            System.out.println(testName + " test = OK");
+        } else {
+            System.out.println(testName + " test = FAIL");
         }
     }
 
@@ -77,50 +66,50 @@ class LightColorDetectTest {
     public void invisibleLight() { //Invisible light test
         int waveLength = 10;
         String expectedResult = "Invisible Light";
-        String result = lightColorDetector.detect(waveLength);
-        checkResult(result, expectedResult);
+        boolean condition =  (lightColorDetector.detect(waveLength).equals(expectedResult));
+        checkResult(condition, expectedResult);
     }
 
     public void violetColorLight() { //Violet color light test
         int waveLength = 380;
         String expectedResult = "Violet";
-        String result = lightColorDetector.detect(waveLength);
-        checkResult(result, expectedResult);
+        boolean condition =  (lightColorDetector.detect(waveLength).equals(expectedResult));
+        checkResult(condition, expectedResult);
     }
 
     public void blueColorLight() { //Blue color light test
         int waveLength = 460;
         String expectedResult = "Blue";
-        String result = lightColorDetector.detect(waveLength);
-        checkResult(result, expectedResult);
+        boolean condition =  (lightColorDetector.detect(waveLength).equals(expectedResult));
+        checkResult(condition, expectedResult);
     }
 
     public void greenColorLight() { //Green color light test
         int waveLength = 500;
         String expectedResult = "Green";
-        String result = lightColorDetector.detect(waveLength);
-        checkResult(result, expectedResult);
+        boolean condition =  (lightColorDetector.detect(waveLength).equals(expectedResult));
+        checkResult(condition, expectedResult);
     }
 
     public void yellowColorLight() { //Yellow color light test
         int waveLength = 580;
         String expectedResult = "Yellow";
-        String result = lightColorDetector.detect(waveLength);
-        checkResult(result, expectedResult);
+        boolean condition =  (lightColorDetector.detect(waveLength).equals(expectedResult));
+        checkResult(condition, expectedResult);
     }
 
     public void orangeColorLight() { //Orange color light test
         int waveLength = 600;
         String expectedResult = "Orange";
-        String result = lightColorDetector.detect(waveLength);
-        checkResult(result, expectedResult);
+        boolean condition =  (lightColorDetector.detect(waveLength).equals(expectedResult));
+        checkResult(condition, expectedResult);
     }
 
     public void redColorLight() { //Red color light test
         int waveLength = 750;
         String expectedResult = "Red";
-        String result = lightColorDetector.detect(waveLength);
-        checkResult(result, expectedResult);
+        boolean condition =  (lightColorDetector.detect(waveLength).equals(expectedResult));
+        checkResult(condition, expectedResult);
     }
 
 }
