@@ -117,11 +117,11 @@ public class TicTacToe {
         }
     }
 
-    public boolean checkIfWillWin (int [][] field, int player){
+    /*public boolean checkIfWillWin (int [][] field, int player){
         if ((isWinPosition(field, player)) || (isDrawPosition(field))){
             return true;
         }else return false;
-    }
+    }*/
 
     public boolean perspectiveLineHorizontal(int [][] field, Move move){
         boolean answer = false;
@@ -245,20 +245,14 @@ public class TicTacToe {
     public Move computersTurn (int [][] field) {
         Move move;
 
-        //If someone can win
+        //If PC can win
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (field[i][j] == -1) {
-                    System.out.println("field i= " + i + " j= " + j);
-                    for (int k = 0; k < 3; k++) {
+                    //System.out.println("field i= " + i + " j= " + j);
+                    /*for (int k = 0; k < 3; k++) {
                         System.out.println(Arrays.toString(field[k]));
-                    }
-                    int[][] ifField0 = new int[3][3];
-                    for (int k = 0; k < 3; k++) {
-                        for (int l = 0; l < 3; l++) {
-                            ifField0[k][l] = field[k][l];
-                        }
-                    }
+                    }*/
                     int[][] ifField1 = new int[3][3];
                     for (int k = 0; k < 3; k++) {
                         for (int l = 0; l < 3; l++) {
@@ -266,17 +260,35 @@ public class TicTacToe {
                         }
                     }
                     ifField1[i][j] = 1;
-                    ifField0[i][j] = 0;
 
                     if (isWinPosition(ifField1, 1)) {
-                        System.out.println("Voshol sjuda");
+                        //System.out.println("Voshol sjuda");
                         return new Move(j, i);
-                    }else{
-                        if (isWinPosition(ifField0, 0)){
-                            return new Move(j, i);
-                        }
                     }
 
+                }
+            }
+        }
+
+        // if player can win
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (field[i][j] == -1) {
+                    //System.out.println("field i= " + i + " j= " + j);
+                    /*for (int k = 0; k < 3; k++) {
+                        System.out.println(Arrays.toString(field[k]));
+                    }*/
+                    int[][] ifField0 = new int[3][3];
+                    for (int k = 0; k < 3; k++) {
+                        for (int l = 0; l < 3; l++) {
+                            ifField0[k][l] = field[k][l];
+                        }
+                    }
+                    ifField0[i][j] = 0;
+
+                    if (isWinPosition(ifField0, 0)){
+                            return new Move(j, i);
+                        }
                 }
             }
         }
@@ -288,7 +300,7 @@ public class TicTacToe {
                 if (field[i][j] == -1){
                 move = new Move(i, j);
                 if (ifPerspectiveMove(field, move)) {
-                    System.out.println("//if second");
+                    //System.out.println("//if second");
                     return move;
                 }
             }
@@ -303,14 +315,14 @@ public class TicTacToe {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (field[i][j] == -1)
-                    System.out.println("////if first");
+                    //System.out.println("////if first");
                     return new Move(i, j);
 
                 }
             }
         }
         move = new Move(0,0);
-        System.out.println("the End");
+        //System.out.println("the End");
         return move;
         }
 

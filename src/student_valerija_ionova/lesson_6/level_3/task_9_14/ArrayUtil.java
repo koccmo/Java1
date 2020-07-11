@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_6.level_3.task_9_13;
+package student_valerija_ionova.lesson_6.level_3.task_9_14;
 
 /*Добавьте в класс ArrayUtil метод для проверки содержит ли массив целых чисел указынное число.
 Напишите автоматические тесты в классе ArrayUtilTest доказывающие, что ваша реализацяия метода работает правильно.
@@ -27,7 +27,6 @@ Task14
 
 //import java.util.Scanner;
 import java.util.Random;
-import java.util.Arrays;
 
 public class ArrayUtil {
 

@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_5.level_5_task31_39;
+package student_valerija_ionova.lesson_5.level_5_6_task31_39;
 
 /*Task31
 Создайте класс ArrayUtil.
