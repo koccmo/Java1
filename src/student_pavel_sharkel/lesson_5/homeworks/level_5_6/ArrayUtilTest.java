@@ -1,4 +1,4 @@
-package student_pavel_sharkel.lesson_5.homeworks.level_5;
+package student_pavel_sharkel.lesson_5.homeworks.level_5_6;
 
 public class ArrayUtilTest {
 
@@ -7,6 +7,9 @@ public class ArrayUtilTest {
         ArrayUtilTest test = new ArrayUtilTest();
         test.shouldCreateArray();
         test.shouldFIllArrayWithRandomNumbers();
+        test.shouldFindMaxNumber();
+        test.shouldFindMinNumber();
+
     }
         public void shouldCreateArray() {
             ArrayUtil test1 = new ArrayUtil();
@@ -32,7 +35,32 @@ public class ArrayUtilTest {
                 } else {
                     System.out.println("Random filling test is FAILED");
                 }
-
             }
         }
+
+        public void shouldFindMaxNumber() {
+            ArrayUtil test = new ArrayUtil();
+            //int[] testArray = test.createArray(4);
+            int[] testArray = {2, 7, -1, 3};
+            int max = test.findMaxNumber(testArray);
+
+            if (max == 7) {
+                System.out.println("Max test is OK");
+            } else {
+                System.out.println("Max test is FAILED");
+            }
+        }
+
+        public void shouldFindMinNumber() {
+            ArrayUtil test = new ArrayUtil();
+            int[] testArray = {3, 9, -1, 0};
+            int min = test.findMinNumber(testArray);
+
+            if (min == -1) {
+                System.out.println("Min test is OK");
+            } else {
+                System.out.println("Min test is FAILED");
+            }
+        }
+
 }
