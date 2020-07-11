@@ -16,8 +16,8 @@ public class Task_25 {
 	int arrayLength = scanner.nextInt();
 	int[] array = new int[arrayLength];
         for (int i = 0 ; i < arrayLength ; i++ ) {
-		System.out.println("Enter array[" + i + "] : ");
-		array[i] = scanner.nextInt();
+			System.out.println("Enter array[" + i + "] : ");
+			array[i] = scanner.nextInt();
         }
 
 	for (int i = 0 ; i < arrayLength ; i++ ) {
