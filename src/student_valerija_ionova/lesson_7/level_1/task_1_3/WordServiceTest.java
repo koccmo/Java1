@@ -6,7 +6,6 @@ public class WordServiceTest {
     public static void main(String [] args){
         WordServiceTest wordServiceTest = new WordServiceTest();
 
-        //wordServiceTest.testFindMostFrequentWordOneWord();
         wordServiceTest.testCountNumberOfWords1();
         wordServiceTest.testCountNumberOfWords2();
         wordServiceTest.testCountNumberOfWords3();
@@ -15,8 +14,6 @@ public class WordServiceTest {
         wordServiceTest.testCreateArrayOfWords();
         wordServiceTest.testCreateArrayOfWords2();
         wordServiceTest.testCreateArrayOfWords3();
-
-        //wordServiceTest.testArrayToLowerCase();
 
         wordServiceTest.testCountOfWords();
         wordServiceTest.testCountOfWords2();
