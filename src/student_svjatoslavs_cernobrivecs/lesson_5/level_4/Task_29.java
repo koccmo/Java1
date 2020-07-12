@@ -12,7 +12,7 @@ public class Task_29 {
         }
         for (int i = 0 ; i < array.length; i++) {
             if (array[i] % 2 == 0) {
-                System.out.println("event is : " + array[i]);
+                System.out.println("even is : " + array[i]);
             }
         }
     }
