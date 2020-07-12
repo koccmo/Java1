@@ -3,9 +3,11 @@ package student_alexey_tretyakov.lesson_5.level_5_6;
 import java.util.Random;
 
 public class ArrayUtil {
+
     public int[] createArray(int arrayLength) {
         return new int[ arrayLength ];
     }
+
     public int[] fillArrayWithRandomNumbers( int[] numbers ) {
         Random random = new Random();
         int[] randomArray= new int [numbers.length];
@@ -14,11 +16,13 @@ public class ArrayUtil {
         }
         return randomArray;
     }
+
     public void printArrayToConsole(int[] inArray) {
         for (int i = 0; i < inArray.length; i++) {
             System.out.println(" Значения в " + (i + 1) + " ячейке = " + inArray[i]);
         }
     }
+
     public int findMaxNumber(int[] inArray) {
         int maxInt = inArray[0];
         for (int value : inArray) {
@@ -26,6 +30,7 @@ public class ArrayUtil {
         }
         return maxInt;
     }
+
     public int findMinNumber(int[] inArray) {
         int minInt = inArray[0];
         for (int value : inArray) {
@@ -33,6 +38,7 @@ public class ArrayUtil {
         }
         return minInt;
     }
+
     public void printEvenNumber(int[] inArray) {
         for (int i =0; i < inArray.length; i++) {
             if (inArray[i] % 2 == 0 ) {
@@ -40,6 +46,7 @@ public class ArrayUtil {
             }
         }
     }
+
     public void printOddNumber(int[] inArray) {
         for (int i =0; i < inArray.length; i++) {
             if (inArray[i] % 2 != 0 ) {
