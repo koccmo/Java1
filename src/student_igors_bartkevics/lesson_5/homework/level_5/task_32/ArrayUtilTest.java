@@ -17,7 +17,7 @@ class ArrayUtilTest {
 }
  */
 package student_igors_bartkevics.lesson_5.homework.level_5.task_32;
-
+import java.util.Objects;
 class ArrayUtilTest {
 
     public static void main(String[] args) {
