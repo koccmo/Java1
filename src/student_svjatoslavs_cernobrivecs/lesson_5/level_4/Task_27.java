@@ -10,11 +10,12 @@ public class Task_27 {
             numbers[i] = 1 + (int)(Math.random()*10);
             System.out.println("[" + i + "]" + numbers[i]);
         }
-        int max = 0;
-        for (int i = 0; i < numbers.length; i++)
+        int max = numbers[0];
+        for (int i = 0; i < numbers.length; i++){
             if (max < numbers[i]){
                 max = numbers[i];
             }
-            System.out.println("Biggest number is: " + max);
+        }
+        System.out.println("Biggest number is: " + max);
     }
 }
