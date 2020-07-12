@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_x_task_1_7;
+package student_valerija_ionova.lesson_x_task_1_14;
 
 /*Создайте класс BankAccountMaxBalanceFinderTest и протестируйте метод find().*/
 

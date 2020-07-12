@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_x_task_1_7;
+package student_valerija_ionova.lesson_x_task_1_14;
 
 /*Task 3
 Создайте класс Transaction, который будет представлять из себя
@@ -37,11 +37,15 @@ public class Transaction {
     private String owner;
     private int amount;
     private TransactionType transactionType;
+    //private ExpenseCategory expenseCategory;
 
-    public Transaction (String owner, int amount, TransactionType transaction){
+    public Transaction (String owner, int amount, TransactionType transaction
+                        //,ExpenseCategory expenseCategory
+    ){
         this.owner = owner;
         this.amount = amount;
         this.transactionType = transaction;
+        //this.expenseCategory = expenseCategory;
     }
 
     public String getOwner(){
@@ -65,5 +69,9 @@ public class Transaction {
             return true;
         }else return false;
     }
+
+    /*public ExpenseCategory getExpenseCategory(){
+        return expenseCategory;
+    }*/
 
 }

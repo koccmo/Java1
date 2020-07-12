@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_x_task_1_7;
+package student_valerija_ionova.lesson_x_task_1_14;
 
 /*Создаём класс BankAccount.
 Этот класс будет представлять банковский аккаунт и хранить все
