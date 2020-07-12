@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_4.homework.level_2;
+package student_roberts_kupcs.lesson_5.homework.level_2;
 
 import java.util.Random;
 
