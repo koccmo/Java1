@@ -7,7 +7,6 @@ package student_aleksandra_maksimovic.lesson_5.level_4;
 - распечатайте на консоль все элементы массива.
  */
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Task25 {
@@ -18,7 +17,7 @@ public class Task25 {
         int[] arr = new int[arrLength];
 
         for (int i = 0; i < arr.length; i++) {
-            System.out.println("Enter your next item Nr : " + (i + 1));
+            System.out.println("Enter your item Nr : " + (i + 1));
             int item = scanner.nextInt();
             arr[i] = item;
         }

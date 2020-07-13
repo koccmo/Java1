@@ -1,7 +1,6 @@
 package student_aleksandra_maksimovic.lesson_5.level_4;
 
 import java.util.Random;
-
 /*
 Напишите программу, в которой:
 - создайте массив произвольной длины
@@ -16,8 +15,6 @@ public class Task28 {
 
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(40);
-        }
-        for (int i = 0; i < arr.length; i++) {
             System.out.println("[" + i + "] = " + arr[i]);
         }
         int min = arr[0];

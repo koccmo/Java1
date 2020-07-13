@@ -13,9 +13,8 @@ public class Task27 {
         int[] arr = new int[8];
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
+
             arr[i] = random.nextInt(70);
-        }
-        for(int i = 0; i < arr.length; i++) {
             System.out.println("[" + i + "] = " + arr[i]);
         }
         int max = arr[0];

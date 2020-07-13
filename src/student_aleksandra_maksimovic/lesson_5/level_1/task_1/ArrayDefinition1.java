@@ -10,7 +10,6 @@ class ArrayDefinition1 {
     }
 
 }
-
  */
 class ArrayDefinition1 {
 

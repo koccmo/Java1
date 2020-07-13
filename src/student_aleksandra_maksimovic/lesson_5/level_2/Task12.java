@@ -7,7 +7,6 @@ import java.util.Random;
  - создать массив целых чисел длиной 3,
  - заполнить каждую ячейку массива случайным числом,
  - вывести значение каждой ячейки на консоль.
-
  */
 public class Task12 {
     public static void main(String[] args) {
