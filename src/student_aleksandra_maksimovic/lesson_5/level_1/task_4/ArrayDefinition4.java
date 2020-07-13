@@ -1,21 +1,20 @@
-package student_aleksandra_maksimovic.lesson_5.level_1.task_6;
+package student_aleksandra_maksimovic.lesson_5.level_1.task_4;
+
 /*
 Найдите ошибку в программе и исправить её:
 
-class ArrayDefinition6 {
+class ArrayDefinition4 {
 
     public static void main(String[] args) {
-        int numbers = {1, 2, 3, ;
+        int numbers = new {1, 2, 3};
     }
 
 }
  */
-
-class ArrayDefinition6 {
+class ArrayDefinition4 {
 
     public static void main(String[] args) {
-
-        int[] numbers = {1, 2, 3, 4};
+        int[] numbers = {1, 2, 3};
     }
 
 }

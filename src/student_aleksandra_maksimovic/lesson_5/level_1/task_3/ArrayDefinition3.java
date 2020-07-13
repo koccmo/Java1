@@ -10,9 +10,7 @@ class ArrayDefinition3 {
     }
 
 }
-
  */
-
 class ArrayDefinition3 {
 
     public static void main(String[] args) {
