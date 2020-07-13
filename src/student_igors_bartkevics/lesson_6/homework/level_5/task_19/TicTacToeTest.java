@@ -37,10 +37,23 @@ public class TicTacToeTest {
     TicTacToe ticTacToe = new TicTacToe();
 
     public void winPositionForHorizontals() {
-        int[][] field = {   {1,  0, 1},
-                            {0,  0, 0},
-                            {1, -1, 1}};
-        checkResult(ticTacToe.isWinPositionForHorizontals(field, 0), "Win position for horizontals");
+        int[][] field1 = {   { 1,  1,  1},
+                             {-1,  0,  0},
+                             { 0, -1, -1}};
+
+        int[][] field2 = {   { 0,  0, 1},
+                             { 1,  1, 1},
+                             {-1, -1, 0}};
+
+        int[][] field3 = {   {-1,  0, -1},
+                             { 0, -1,  0},
+                             { 1,  1,  1}};
+
+        boolean condition = ticTacToe.isWinPositionForHorizontals(field1, 1) &&
+                            ticTacToe.isWinPositionForHorizontals(field2, 1) &&
+                            ticTacToe.isWinPositionForHorizontals(field3, 1);
+
+        checkResult((condition), "Win position for horizontals");
     }
 
     public void checkResult(boolean condition, String testName) {
