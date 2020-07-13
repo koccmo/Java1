@@ -13,8 +13,8 @@ public class ArrayUtilTest {
         test.shouldFinMinNumber();
     }
     public void shouldCreateArray() {
-        ArrayUtil arrayUtil1 = new ArrayUtil();
-        int[] firstArray = arrayUtil1.createArray(5);
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] firstArray = arrayUtil.createArray(5);
         if(firstArray.length == 5) {
             System.out.println("Create Array Test = OK");
         }
@@ -23,9 +23,9 @@ public class ArrayUtilTest {
         }
     }
     public void shouldFillArrayWithRandomNumbers() {
-        ArrayUtil arrayUtil2 = new ArrayUtil();
-        int[] secondArray = arrayUtil2.createArray(5);
-        arrayUtil2.fillArrayWithRandomNumbers(secondArray);
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] secondArray = arrayUtil.createArray(5);
+        arrayUtil.fillArrayWithRandomNumbers(secondArray);
         System.out.println("Method Fill array with random numbers works:" );
         System.out.println(Arrays.toString(secondArray));
         System.out.println();
@@ -33,18 +33,18 @@ public class ArrayUtilTest {
         //затестить. Это не дает мне покоя )))
     }
     public void shouldFindMaxNumber() {
-        ArrayUtil arrayUtil3 = new ArrayUtil();
-        int[] thirdArray = arrayUtil3.createArray(5);
-        arrayUtil3.fillArrayWithRandomNumbers(thirdArray);
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] thirdArray = arrayUtil.createArray(5);
+        arrayUtil.fillArrayWithRandomNumbers(thirdArray);
         System.out.println(Arrays.toString(thirdArray));
-        arrayUtil3.findMaxNumber(thirdArray);
+        arrayUtil.findMaxNumber(thirdArray);
     }
     public void shouldFinMinNumber() {
-        ArrayUtil arrayUtil4 = new ArrayUtil();
-        int[] fourthArray = arrayUtil4.createArray(4);
-        arrayUtil4.fillArrayWithRandomNumbers(fourthArray);
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] fourthArray = arrayUtil.createArray(4);
+        arrayUtil.fillArrayWithRandomNumbers(fourthArray);
         System.out.println(Arrays.toString(fourthArray));
-        arrayUtil4.findMinNumber(fourthArray);
+        arrayUtil.findMinNumber(fourthArray);
     }
 
 }
