@@ -31,15 +31,15 @@ class ArrayUtilTest {
     public void sortArray() {
         int[] array = {2,0,4,6,9,0,1};
         arrayUtil.sortArray(array);
-        String result = Arrays.toString(array);
-        boolean condition = result.equals("[0, 0, 1, 2, 4, 6, 9]");
+        int[] expectedResult = {0,0,1,2,4,6,9};
+        boolean condition = Arrays.equals(array, expectedResult);
         checkResult(condition, "Sort array");
     }
 
     public void reverseArray() {
         int[] array = {2,0,4,6,9,0,1};
-        String result = Arrays.toString(arrayUtil.reverseArray(array));
-        boolean condition = result.equals("[1, 0, 9, 6, 4, 0, 2]");
+        int [] expectedResult = {1,0,9,6,4,0,2};
+        boolean condition = Arrays.equals(arrayUtil.reverseArray(array), expectedResult);
         checkResult(condition, "Reverse array");
     }
 
