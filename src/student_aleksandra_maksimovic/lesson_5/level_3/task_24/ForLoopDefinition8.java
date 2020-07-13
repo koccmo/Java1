@@ -11,7 +11,6 @@ class ForLoopDefinition8 {
             System.out.println(i);
         }
     }
-
 }
  */
 
