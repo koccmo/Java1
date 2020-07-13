@@ -12,7 +12,6 @@ public class UserLoginService {
             user.failedAttempts = 0;
             return true;
         }
-
         user.failedAttempts++;
         return false;
     }
