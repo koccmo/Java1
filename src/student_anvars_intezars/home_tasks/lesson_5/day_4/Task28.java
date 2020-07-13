@@ -20,6 +20,6 @@ public class Task28 {
             if (minElement > array[i]) {
                 minElement = array[i];
             }
-        }System.out.println("The largest value of array is " + minElement);
+        }System.out.println("The smallest value of array is " + minElement);
     }
 }

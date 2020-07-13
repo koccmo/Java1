@@ -16,9 +16,9 @@ public class Task27 {
             System.out.println("[" + i + "] = " + array[i]);
         }
         int maxElement = array[0];
-        for (int value : array) {
-            if (maxElement < value) {
-                maxElement = value;
+        for (int i = 0; i < array.length; i++) {
+            if (maxElement < array[i]) {
+                maxElement = array[i];
             }
         }System.out.println("The largest value of array is " + maxElement);
     }
