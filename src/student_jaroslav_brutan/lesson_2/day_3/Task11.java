@@ -5,11 +5,11 @@ public class Task11 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first number");
         // давайте переменным более осмысленные и понятные имена
-        int a = scanner.nextInt();
+        int firstNumber = scanner.nextInt();
         System.out.println("Enter second number");
-        int b = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
         System.out.println("Enter second number");
-        int c = scanner.nextInt();
-        System.out.println(a + b + c /(double) 3);
+        int thirdNumber = scanner.nextInt();
+        System.out.println(firstNumber + secondNumber + thirdNumber /(double) 3);
     }
 }
