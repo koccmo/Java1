@@ -4,9 +4,9 @@ package student_dmitrijs_jasvins.lesson_5.day_5_and_day_6;
 import java.util.Random;
 
 public class ArrayUtil {
+
     public int[] createArray(int arrayLength) {
-        int[] array = new int[arrayLength];
-        return array;
+        return new int[arrayLength];
     }
 
     public void fillArrayWithRandomNumbers(int[] array) {
@@ -25,18 +25,19 @@ public class ArrayUtil {
 
     public int findMaxNumber(int[] array) {
         int max = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > max) {
-                max = array[i];
+        for (int value : array) {
+            if (value > max) {
+                max = value;
             }
         }
         return max;
     }
-    public int findMinNumber(int[] array){
+
+    public int findMinNumber(int[] array) {
         int min = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if(array[i] < min){
-                min = array[i];
+        for (int value : array) {
+            if (value < min) {
+                min = value;
             }
         }
         return min;

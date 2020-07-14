@@ -1,4 +1,5 @@
 package student_dmitrijs_jasvins.lesson_5.day_1;
+
 /*
 class ArrayDefinition2 {
 
