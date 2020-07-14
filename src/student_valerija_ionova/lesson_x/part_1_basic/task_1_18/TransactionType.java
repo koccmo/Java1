@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_x_task_1_14;
+package student_valerija_ionova.lesson_x.part_1_basic.task_1_18;
 
 /*Создайте enum TransactionType, который будет представлять из себя
 тип транзакции и будет хранить два значения:

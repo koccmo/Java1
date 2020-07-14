@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_x_task_1_14;
+package student_valerija_ionova.lesson_x.part_1_basic.task_1_18;
 
 /*Решаем задачу: какая наибольшая сумма денег была у пользователя
 на счету за всё время (наибольший текущий баланс)?
