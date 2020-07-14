@@ -16,19 +16,14 @@ public class Task_28 {
         int[] array =  new int[arrayLength];
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(30);
-        }
-        for (int i = 0; i < array.length; i++) {
             System.out.println("[" + i + "] = " + array[i]);
         }
         int min = array[0];
         for (int i = 0; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
+                System.out.println("Smallest number is = " + min);
             }
-
         }
-        System.out.println("Smallest number is = " + min);
-
     }
-
 }

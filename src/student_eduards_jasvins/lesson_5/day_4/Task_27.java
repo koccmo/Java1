@@ -16,18 +16,14 @@ public class Task_27 {
         int[] array =  new int[arrayLength];
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(25);
-        }
-        for (int i = 0; i < array.length; i++) {
             System.out.println("[" + i + "] = " + array[i]);
         }
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
             if (array[i] > max) {
                 max = array[i];
+                System.out.println("Biggest number is = " + max);
             }
-
         }
-        System.out.println("Biggest number is = " + max);
-
     }
 }
