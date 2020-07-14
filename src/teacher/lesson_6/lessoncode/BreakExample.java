@@ -17,6 +17,4 @@ class BreakExample {
 		System.out.print("End!");
 	}
 
-
-
 }

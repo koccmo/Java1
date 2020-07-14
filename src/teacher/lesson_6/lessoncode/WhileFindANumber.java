@@ -14,10 +14,11 @@ public class WhileFindANumber {
 
 		int i = 0;
 		boolean isNumberFound = false;
-		while ((isNumberFound == false) && (i < arr.length)) {
+		while (i < arr.length) {
 			int number = arr[i];
 			if (number == numberToFind) {
 				isNumberFound = true;
+				break;
 			}
 			i++;
 		}

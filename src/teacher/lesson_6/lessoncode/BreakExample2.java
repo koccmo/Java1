@@ -14,7 +14,6 @@ class BreakExample2 {
 				System.out.println("" + i + "," + j + " = " + number);
 				break;
 			}
-			//break;
 		}
 	}
 
