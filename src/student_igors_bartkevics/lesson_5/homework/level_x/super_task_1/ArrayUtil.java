@@ -20,13 +20,15 @@ class ArrayUtil {
         return new int[arrayLength];
     }
 
-    public void fillArrayWithRandomNumbers(Random random, int[] array) {
+    public void fillArrayWithRandomNumbers(int[] array) {
+        Random random = new Random();
         for (int i = 0 ; i < array.length ; i++ ) {
             array[i] = random.nextInt(10) + 1;
         }
     }
 
-    public void fillArrayWithNumbers(Scanner scanner, int[] array) {
+    public void fillArrayWithNumbers(int[] array) {
+        Scanner scanner = new Scanner(System.in);
         for (int i = 0 ; i < array.length ; i++ ) {
             System.out.println("Enter array[" + i + "] : ");
             array[i] = scanner.nextInt();
@@ -75,6 +77,12 @@ class ArrayUtil {
                 System.out.println("Array[" + i + "] : " + array[i]);
             }
         }
+    }
+
+    public int getArrayLengthValueFromUser() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the length of array:");
+        return  scanner.nextInt();
     }
 
 }
