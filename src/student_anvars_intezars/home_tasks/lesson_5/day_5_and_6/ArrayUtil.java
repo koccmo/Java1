@@ -34,7 +34,7 @@ public class ArrayUtil {
         for (int i = 0; i < array.length; i++) {
             if (minElement > array[i]) {
                 minElement = array[i];
-                System.out.println("The smallest value of array is " + minElement);
+               System.out.println("The smallest value of array is " + minElement);
             }
         }
     }
