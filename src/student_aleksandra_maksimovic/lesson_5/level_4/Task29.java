@@ -11,7 +11,7 @@ import java.util.Random;
  */
 public class Task29 {
     public static void main(String[] args) {
-        int[] arr = new int[6];
+        int[] arr = new int[7];
         Random random = new Random();
 
         for (int i = 0; i < arr.length; i++) {

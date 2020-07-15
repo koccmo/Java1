@@ -20,6 +20,7 @@ public class Palindrome {
 
     public String [] arrayOfWords (String text){
         String [] arrayOfLetters = new String [text.length()];
+
         int j = 0;
         for (int i = 0; i<text.length(); i++){
             if (Character.isLetter(text.charAt(i))){
@@ -40,9 +41,6 @@ public class Palindrome {
         for (int i=0; i<arrayOfWords(text).length; i++){
             if (!arrayOfWords(text)[i].equals(arrayOfWords(text)[arrayOfWords(text).length-1-i])){
                 result = false;
-                /*System.out.println("i= "+i+" arrayOfWords(text)[i] "+arrayOfWords(text)[i]+
-                        " arrayOfWords(text)[arrayOfWords(text).length-1-i] "+arrayOfWords(text)[arrayOfWords(text).length-1-i]+
-                        " result "+result);*/
             }
         }
         return result;

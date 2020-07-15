@@ -4,7 +4,6 @@ public class ArrayUtilTest {
     public static void main(String[] args) {
         ArrayUtilTest arrayUtilTest = new ArrayUtilTest();
         arrayUtilTest.shouldCreateArray();
-        arrayUtilTest.shouldFillArrayWithRandomNumbers();
         arrayUtilTest.shouldFindMaxNumber();
         arrayUtilTest.shouldFindMinNumber();
     }
@@ -19,17 +18,6 @@ public class ArrayUtilTest {
         }
     }
 
-
-    private void shouldFillArrayWithRandomNumbers() {
-        ArrayUtil arrayUtil = new ArrayUtil();
-        int[] arrayNumbers = arrayUtil.createArray(3);
-        arrayUtil.fillArrayWithRandomNumbers(arrayNumbers);
-        if (arrayNumbers[0] != 0 && arrayNumbers[1] != 0 && arrayNumbers[2] != 0) {
-            System.out.println("Test = OK");
-        } else {
-            System.out.println("Test = FAIL");
-        }
-    }
 
     private void shouldFindMaxNumber() {
         ArrayUtil arrayUtil = new ArrayUtil();

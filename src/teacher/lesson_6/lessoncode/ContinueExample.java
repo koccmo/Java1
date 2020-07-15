@@ -11,7 +11,7 @@ class ContinueExample {
 		for(int i = 0; i < arr.length; i++) {
 			for(int j = 0; j < arr[i].length; j++) {
 				int number = arr[i][j];
-				if (j == 1) {
+				if (j == 0) {
 					continue;
 				}
 				System.out.println("" + i + "," + j + " = " + number);

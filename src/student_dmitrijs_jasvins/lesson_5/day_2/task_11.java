@@ -14,11 +14,11 @@ public class task_11 {
         int[] numbers = new int[3];
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < numbers.length; i++) {
-            System.out.println("Enter number Nr" + (i + 1) + ":");
+            System.out.println("Enter number Nr " + (i + 1) + ":");
             numbers[i] = scanner.nextInt();
         }
-        for (int number : numbers) {
-            System.out.println("Number = " + number);
+        for (int value : numbers) {
+            System.out.println("Number = " + value);
         }
     }
 }

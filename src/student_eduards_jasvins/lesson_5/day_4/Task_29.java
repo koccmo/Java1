@@ -25,7 +25,6 @@ public class Task_29 {
             if (array[i] % 2 == 0)
         System.out.println("Even numbers is = " + array[i]);
     }
-
 }
 
 

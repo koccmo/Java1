@@ -19,9 +19,9 @@ public class task_30 {
             array[i] = random.nextInt(50);
             System.out.println("[" + i + "] = " + array[i]);
         }
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 != 0){
-                System.out.print(array[i]+ " ");
+        for (int value : array) {
+            if (value % 2 != 0) {
+                System.out.print(value + " ");
             }
         }
     }

@@ -9,5 +9,5 @@ public class task_10 {
         numbers[1] = 2;
         numbers[2] = 3;
         System.out.println("Array = " + Arrays.toString(numbers));
-        }
     }
+}

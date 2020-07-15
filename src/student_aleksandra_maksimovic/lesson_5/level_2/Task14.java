@@ -1,7 +1,6 @@
 package student_aleksandra_maksimovic.lesson_5.level_2;
 
 import java.util.Random;
-
 /*
 Написать программу, в которой:
  - создать массив целых чисел длиной 3,

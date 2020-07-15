@@ -20,8 +20,6 @@ public class Task26 {
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(50);
-        }
-        for (int i = 0; i < arr.length; i++) {
             System.out.println("[" + i + "] = " + arr[i]);
         }
     }

@@ -3,11 +3,11 @@ package student_eduards_jasvins.lesson_4.day_x;
 public class LeapYearTest {
     public static void main(String[] args) {
         LeapYearTest leapYearTest = new LeapYearTest();
-		leapYearTest.test();   // название тестового метода может отображать,
-		leapYearTest.test2();   // что за сченарий тестируется
-		leapYearTest.test3();   // это будет лучше чем test1(), test2(), test3()
+		leapYearTest.notDivide4();
+		leapYearTest.notDivide100();
+		leapYearTest.notDivide400();
 	}
-    public void test() {
+    public void notDivide4() {
         LeapYear leapYear = new LeapYear();
         if (leapYear.leapYear(1891)) {
             System.out.println("Test = OK");
@@ -15,7 +15,7 @@ public class LeapYearTest {
             System.out.println("Test = FALSE");
         }
     }
-    public void test2() {
+    public void notDivide100() {
         LeapYear leapYear = new LeapYear();
         if (leapYear.leapYear(1952)) {
             System.out.println("Test 2 = OK");
@@ -23,9 +23,9 @@ public class LeapYearTest {
             System.out.println("Test 2 = FALSE");
         }
     }
-    public void test3() {
+    public void notDivide400() {
         LeapYear leapYear = new LeapYear();
-        if (leapYear.leapYear(2020)) {
+        if (leapYear.leapYear(2010)) {
             System.out.println("Test 3 = OK");
         } else {
             System.out.println("Test 3 = FALSE");

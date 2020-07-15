@@ -19,8 +19,6 @@ public class Task_26 {
         int[] numbers = new int[arrayLength];
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = random.nextInt(100);
-        }
-        for (int i = 0; i < numbers.length; i++) {
             System.out.println("[" + i + "] = " + numbers[i]);
         }
     }
