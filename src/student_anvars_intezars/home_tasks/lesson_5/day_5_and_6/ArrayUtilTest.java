@@ -34,7 +34,7 @@ public class ArrayUtilTest {
     }
     public void shouldFindMaxNumber() {
         ArrayUtil arrayUtil = new ArrayUtil();
-        int[] thirdArray = arrayUtil.createArray(5);
+        int[] thirdArray = arrayUtil.createArray(3);
         arrayUtil.fillArrayWithRandomNumbers(thirdArray);
         System.out.println(Arrays.toString(thirdArray));
         arrayUtil.findMaxNumber(thirdArray);
