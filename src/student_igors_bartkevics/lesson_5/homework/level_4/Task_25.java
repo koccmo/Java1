@@ -11,7 +11,8 @@ class Task_25 {
 
     public static void main(String[] args) {
     	Task_25 task = new Task_25();
-    	int[] array = task.createArray(task.getArrayLengthValueFromUser());
+    	int arrayLength = task.getArrayLengthValueFromUser();
+    	int[] array = task.createArray(arrayLength);
     	task.fillArrayWithNumbers(array);
     	task.printArrayToConsole(array);
     }
