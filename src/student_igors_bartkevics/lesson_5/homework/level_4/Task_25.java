@@ -7,21 +7,37 @@
 */
 package student_igors_bartkevics.lesson_5.homework.level_4;
 import java.util.Scanner;
-public class Task_25 {
+class Task_25 {
 
     public static void main(String[] args) {
-
-	Scanner scanner = new Scanner(System.in);
-	System.out.println("Enter the length of array:");
-	int arrayLength = scanner.nextInt();
-	int[] array = new int[arrayLength];
-        for (int i = 0 ; i < arrayLength ; i++ ) {
-			System.out.println("Enter array[" + i + "] : ");
-			array[i] = scanner.nextInt();
-        }
-
-	for (int i = 0 ; i < arrayLength ; i++ ) {
-		System.out.println("Array[" + i + "] : " + array[i]);	
-        }
+    	Task_25 task = new Task_25();
+    	int[] array = task.createArray(task.getArrayLengthValueFromUser());
+    	task.fillArrayWithNumbers(array);
+    	task.printArrayToConsole(array);
     }
+
+	public void printArrayToConsole(int[] array) {
+		for (int i = 0 ; i < array.length ; i++ ) {
+			System.out.println("Array[" + i + "] : " + array[i]);
+		}
+	}
+
+	public void fillArrayWithNumbers(int[] array) {
+    	Scanner scanner = new Scanner(System.in);
+		for (int i = 0; i < array.length; i++) {
+			System.out.println("Enter array[" + i + "] : ");
+			array[i] = scanner.nextInt(10);
+		}
+	}
+
+	public int[] createArray(int arrayLength) {
+		return new int[arrayLength];
+	}
+
+    public int getArrayLengthValueFromUser() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the length of array:");
+		return  scanner.nextInt();
+	}
+
 }
