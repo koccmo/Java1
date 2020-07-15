@@ -13,22 +13,25 @@ public class Task_26 {
 
     public static void main(String[] args) {
 
-        Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
         Task_26 task = new Task_26();
-
-        int[] array = task.createArray(scanner);
-        task.fillArrayWithRandomNumbers(random, array);
+        int arrayLength = task.getArrayLengthValueFromUser();
+        int[] array = task.createArray(arrayLength);
+        task.fillArrayWithRandomNumbers(array);
         task.printArrayOnScreen(array);
     }
 
-    public int[] createArray(Scanner scanner) {
-        System.out.println("Enter the length of array:");
-        int arrayLength = scanner.nextInt();
+    public int[] createArray(int arrayLength) {
         return new int[arrayLength];
     }
 
-    public void fillArrayWithRandomNumbers(Random random, int[] array) {
+    public int getArrayLengthValueFromUser() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the length of array:");
+        return scanner.nextInt();
+    }
+
+    public void fillArrayWithRandomNumbers(int[] array) {
+        Random random = new Random();
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(10);
         }
