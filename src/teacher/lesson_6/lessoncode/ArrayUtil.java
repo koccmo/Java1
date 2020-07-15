@@ -3,7 +3,24 @@ package teacher.lesson_6.lessoncode;
 import java.util.Random;
 import java.util.Scanner;
 
-class ArrayUtil {
+public class ArrayUtil {
+
+	public void printArrayToConsole(int[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println("Arr element = " + arr[i]);
+		}
+	}
+
+	public String convertArrayToString(int[] arr) {
+		String str = "{";
+		for (int i = 0; i < arr.length; i++) {
+			str = str + arr[i];
+			if (i < arr.length - 1) {
+				str = str + ",";
+			}
+		}
+		return str + "}";
+	}
 
 	public int getArrayLengthFromUser() {
 		Scanner sc = new Scanner(System.in);
@@ -28,12 +45,6 @@ class ArrayUtil {
 		Random random = new Random();
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = random.nextInt(1000);
-		}
-	}
-
-	public void printArrayToConsole(int[] arr) {
-		for (int i = 0; i < arr.length; i++) {
-			System.out.println("Arr element = " + arr[i]);
 		}
 	}
 

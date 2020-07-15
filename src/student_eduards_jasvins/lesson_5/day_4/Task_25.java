@@ -18,8 +18,6 @@ public class Task_25 {
         System.out.println("Fill arrays!");
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = scanner.nextInt();
-        }
-        for (int i = 0; i < numbers.length; i++) {
             System.out.println("[" + i + "]" + numbers[i]);
         }
     }

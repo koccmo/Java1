@@ -8,9 +8,11 @@ class WhileInfiniteLoop {
 			System.out.println("Infinite Loop!");
 		}
 
-		/*for (;;) {
+		/*
+		for (;;) {
 			System.out.println("Infinite Loop!");
-		}*/
+		}
+		*/
 
 	}
 
