@@ -1,4 +1,6 @@
+/*
 package student_alexey_tretyakov.lesson_4.level_1;
+
 
 import java.util.Scanner;
 
@@ -20,3 +22,4 @@ public class Task_3 {
         }
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package student_pavel_sharkel.lesson_4.level_1;
 
 import java.util.Scanner;
@@ -45,3 +46,4 @@ public class Task3 {
         }
     }
 }
+*/
