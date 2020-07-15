@@ -11,11 +11,13 @@ public class PowerCalculator {
     public int powerOfNumber(int number, int power){
         int result = 1;
         int j= 1;
-        do {if (power!=0) {
+        do {
+            if (power!=0) {
                 result *= number;
             }
             j++;
         } while (j<=power);
+
         return result;
     }
 
