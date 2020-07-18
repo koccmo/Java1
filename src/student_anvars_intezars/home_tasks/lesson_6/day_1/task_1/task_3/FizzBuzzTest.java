@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_6.task_3;
+package student_anvars_intezars.home_tasks.lesson_6.day_1.task_1.task_3;
 
 public class FizzBuzzTest {
 

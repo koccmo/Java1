@@ -1,6 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_6.task_1;
-
-import student_anvars_intezars.home_tasks.lesson_4.level_4.CalculatorTest5;
+package student_anvars_intezars.home_tasks.lesson_6.day_1.task_1;
 
 public class CalculatorTest {
 
