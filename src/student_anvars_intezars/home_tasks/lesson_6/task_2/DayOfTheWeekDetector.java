@@ -36,7 +36,7 @@ public class DayOfTheWeekDetector {
             result = "Sunday";
         }
         else {
-            System.out.println("Number, which is used is out of ranger from 1 till 7");
+            System.out.println("Number, which is used is out of range from 1 till 7");
         }
         return result;
     }
