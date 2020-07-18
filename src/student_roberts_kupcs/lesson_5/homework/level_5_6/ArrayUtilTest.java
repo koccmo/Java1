@@ -13,6 +13,8 @@ class ArrayUtilTest {
         ArrayUtilTest test = new ArrayUtilTest();
         test.shouldCreateArray();
         test.shouldFillArrayWithRandomNumbers();
+
+
     }
 
     public void shouldCreateArray() {

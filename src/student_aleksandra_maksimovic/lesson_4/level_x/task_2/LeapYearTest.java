@@ -1,3 +1,4 @@
+/*
 package student_aleksandra_maksimovic.lesson_4.level_x.task_2;
 
 import student_aleksandra_maksimovic.testing.Tester;
@@ -19,3 +20,5 @@ class LeapYearTest {
         tester.checkFalse(leapYear.isLeapYear(1900), "1900 isn't leap : Test not divide to 400");
     }
 }
+
+ */

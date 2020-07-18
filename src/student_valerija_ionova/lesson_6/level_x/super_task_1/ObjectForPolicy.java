@@ -6,39 +6,33 @@ public class ObjectForPolicy {
 
     private String name;
     private double cost;
-    private boolean ifIsFireRisk;
-    private boolean ifIsStealRisk;
+    ElectricDevice [] electricDevices;
+    private boolean isElectricDevices;
 
-    private ArrayList<ElectricDevice> electricalDevices;
-
-    public ObjectForPolicy(String name, double cost, ArrayList <ElectricDevice> devices){
+    public ObjectForPolicy(String name, double cost, ElectricDevice [] electricDevices){
         this.name = name;
         this.cost = cost;
-        this.electricalDevices = devices;
+        this.electricDevices = electricDevices;
+        this.isElectricDevices = true;
     }
 
-    public ArrayList<ElectricDevice> getElectricalDevices() {
-        return electricalDevices;
+    public ObjectForPolicy(String name, double cost){
+        this.name = name;
+        this.cost = cost;
+        this.electricDevices = null;
+        this.isElectricDevices = false;
+    }
+
+    public ElectricDevice [] getElectricDevices() {
+        return electricDevices;
     }
 
     public double getCost(){
         return cost;
     }
 
-    public void setIsIfIsStealRisk(boolean stealRisk){
-        ifIsStealRisk = stealRisk;
-    }
-
-    public boolean getIsIfIsStealRisk(){
-        return ifIsStealRisk;
-    }
-
-    public void setIfIsFireRisk(boolean fireRisk){
-        ifIsFireRisk = fireRisk;
-    }
-
-    public boolean getIfIsFireRisk(){
-        return ifIsFireRisk;
+    public boolean getIsElectricDevices(){
+        return isElectricDevices;
     }
 
 

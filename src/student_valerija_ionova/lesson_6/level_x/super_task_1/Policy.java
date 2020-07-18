@@ -5,5 +5,14 @@ package student_valerija_ionova.lesson_6.level_x.super_task_1;
 
 public class Policy {
 
-    //public double coefficientOfFireRisk()
+    private ObjectForPolicy [] objectsForPolicy;
+
+    public Policy (ObjectForPolicy [] objectsForPolicy){
+        this.objectsForPolicy = objectsForPolicy;
+    }
+
+    public ObjectForPolicy [] getObjectsForPolicy(){
+        return objectsForPolicy;
+    }
+
 }

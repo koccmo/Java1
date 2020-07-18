@@ -14,18 +14,38 @@ package student_volodya_danilin.lesson_3.day_5;
 //объявить в нём main() метод и продемонстрировать
 //использование класса собака (Dog).
 
+import java.util.Scanner;
+
 public class Dog {
 
     private String name;
+    private int age;
+    private String color;
+
+    Scanner sc1 = new Scanner(System.in);
 
 
-    Dog(String name) {
+    Dog(String name, int age, String color) {
         this.name = name;
+        this.age = age;
+        this.color = color;
     }
 
     public void voice() {
-       for (int i = 1; i <=3; i++){
-            System.out.println(this.name);
-        }
+       //for (int i = 1; i <=3; i++){
+       //     System.out.println(this.name);
+       //}
+       System.out.println(this.name + " is " + this.age + " years old.");
+       System.out.println(this.name + " is " + this.color);
+    }
+
+    public void happyBirthday(){
+        this.age = age + 1;
+        System.out.println("Happy birthday, dog!");
+    }
+
+    public void changeColor(String newColor) {
+        System.out.println("You can change color here: ");
+        this.color = sc1.nextLine();
     }
 }

@@ -6,7 +6,6 @@ public class Stock {
     private double currentPrice;
     private double minPrice;
     private double maxPrice;
-    private String information;  // зачем это свойство? оно вычисляется на основе всех остальных - его можно не хранить
 
     public Stock(String companyName, double currentPrice) {
         this.companyName = companyName;
@@ -24,14 +23,9 @@ public class Stock {
         }
     }
 
-    public String getPrintInformation() {
-           information = "Company = " + companyName + ", Current Price = " + currentPrice +
-                ", Min Price = " + minPrice + ", Max Price = " + maxPrice;
-           return information;
-    }
-
-    public void printInformation() {
-        System.out.println(information);
+    public void getPrintInformation() {
+        System.out.println("Company = " + companyName + ", Current Price = " + currentPrice +
+                ", Min Price = " + minPrice + ", Max Price = " + maxPrice);
     }
 
     public double getCurrentPrice() {

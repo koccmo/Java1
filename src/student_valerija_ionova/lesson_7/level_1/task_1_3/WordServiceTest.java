@@ -27,32 +27,32 @@ public class WordServiceTest {
         wordServiceTest.testFull1Word();
     }
 
-    public void checkResultString(String name, String methodsResult, String expectedresult){
-        if (methodsResult.equals(expectedresult)){
+    public void checkResultString(String name, String methodsResult, String expectedResult){
+        if (methodsResult.equals(expectedResult)){
             System.out.println(name+" OK");
         }else{
             System.out.println(name+" FAIL");
         }
     }
 
-    public void checkResultArray(String name, String [] methodsResult, String [] expectedresult){
-        if (Arrays.equals(methodsResult, expectedresult)){
+    public void checkResultArray(String name, String [] methodsResult, String [] expectedResult){
+        if (Arrays.equals(methodsResult, expectedResult)){
             System.out.println(name+" OK");
         }else{
             System.out.println(name+" FAIL");
         }
     }
 
-    public void checkResultArrayInt(String name, int [] methodsResult, int [] expectedresult){
-        if (Arrays.equals(methodsResult, expectedresult)){
+    public void checkResultArrayInt(String name, int [] methodsResult, int [] expectedResult){
+        if (Arrays.equals(methodsResult, expectedResult)){
             System.out.println(name+" OK");
         }else{
             System.out.println(name+" FAIL");
         }
     }
 
-    public void checkResultInt(String name, int methodsResult, int expectedresult){
-        if (methodsResult == expectedresult){
+    public void checkResultInt(String name, int methodsResult, int expectedResult){
+        if (methodsResult == expectedResult){
             System.out.println(name+" OK");
         }else{
             System.out.println(name+" FAIL");
@@ -61,52 +61,41 @@ public class WordServiceTest {
 
     public void testCountNumberOfWords1(){
         WordService wordService = new WordService();
-        checkResultInt("testCountNumberOfWords1", wordService.countNumberOfWords("!Hello,!"), 1);
+        checkResultInt("testCountNumberOfWords1", wordService.countNumberOfWordsInString("!Hello,!"), 1);
     }
 
     public void testCountNumberOfWords2(){
         WordService wordService = new WordService();
-        checkResultInt("testCountNumberOfWords2", wordService.countNumberOfWords("!Hello, Bobby!"), 2);
+        checkResultInt("testCountNumberOfWords2", wordService.countNumberOfWordsInString("!Hello, Bobby!"), 2);
     }
 
     public void testCountNumberOfWords3(){
         WordService wordService = new WordService();
-        checkResultInt("testCountNumberOfWords3", wordService.countNumberOfWords("!Hello, Bobby! How are you?"), 5);
+        checkResultInt("testCountNumberOfWords3", wordService.countNumberOfWordsInString("!Hello, Bobby! How are you?"), 5);
     }
 
     public void testCountNumberOfWords4(){
         WordService wordService = new WordService();
-        checkResultInt("testCountNumberOfWords4", wordService.countNumberOfWords("!Hello, Bobby! How are you? I'm fine."), 7);
+        checkResultInt("testCountNumberOfWords4", wordService.countNumberOfWordsInString("!Hello, Bobby! How are you? I'm fine."), 7);
     }
 
     public void testCreateArrayOfWords(){
         WordService wordService = new WordService();
         String [] expectedArray = {"Hello"};
-        //System.out.println(wordService.createArrayOfWords("!Hello,? "));
         checkResultArray("testCreateArrayOfWords", wordService.createArrayOfWords("!Hello,? "), expectedArray);
     }
 
     public void testCreateArrayOfWords2(){
         WordService wordService = new WordService();
         String [] expectedArray = {"Hello", "Bobby"};
-        //System.out.println(wordService.createArrayOfWords("!Hello,? "));
         checkResultArray("testCreateArrayOfWords2", wordService.createArrayOfWords("!Hello, Bobby!"), expectedArray);
     }
 
     public void testCreateArrayOfWords3(){
         WordService wordService = new WordService();
         String [] expectedArray = {"Hello", "Bobby", "How", "are", "you", "I'm", "fine"};
-        //System.out.println(wordService.createArrayOfWords("!Hello,? "));
         checkResultArray("testCreateArrayOfWords3", wordService.createArrayOfWords("!Hello, Bobby! How are you? I'm fine."), expectedArray);
     }
-
-    /*public void testArrayToLowerCase(){
-        WordService wordService = new WordService();
-        String [] newArray = {"HelLo"};
-
-        String [] expectedArray = {"hello"};
-        checkResultArray("testArrayToLowerCase", wordService.arrayToLowerCase(newArray), expectedArray);
-    }*/
 
     public void testCountOfWords(){
         WordService wordService = new WordService();
@@ -137,7 +126,7 @@ public class WordServiceTest {
 
         String [] words = {"Hello", "me"};
         int [] countOfWords = {1, 1};
-        checkResultString("testFindMostFrequentWordOneWord", wordService.findMostFrequentWord(words, countOfWords), "Hello");
+        checkResultString("testFindMostFrequentWordOneWord", wordService.findMostFrequentWord(words, countOfWords), "hello");
     }
 
     public void testFindMostFrequentWordOneWord2(){
@@ -167,7 +156,6 @@ public class WordServiceTest {
         WordService wordService = new WordService();
         String text = "]Hello/";
         checkResultString("testFull1Word", wordService.wordServiceFull(text), "hello");
-        //System.out.println(wordService.wordServiceFull(text));
     }
 
 }

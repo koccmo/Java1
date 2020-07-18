@@ -21,15 +21,17 @@ package student_valerija_ionova.lesson_7.level_1.task_1_3;
 - определить какое слово встречается чаще всего
 */
 
-import java.util.Arrays;
-
 public class WordService {
 
-    public int countNumberOfWords(String text){
+    public boolean isCharacterLetter(char symbol){
+        return ((Character.isLetter(symbol)) || (symbol == '\''));
+    }
+
+    public int countNumberOfWordsInString(String text){
         int numberOfWords = 0;
         boolean isWord = false;
         for (int i=0; i< text.length(); i++){
-            if ((Character.isLetter(text.charAt(i))) || (text.charAt(i) == '\'')){
+            if (isCharacterLetter(text.charAt(i))) {
                 if (!isWord){
                     numberOfWords++;
                 }
@@ -38,20 +40,24 @@ public class WordService {
                 isWord = false;
             }
         }
-        //System.out.println("Number of words: "+numberOfWords);
         return numberOfWords;
+    }
+
+    public String [] addLastWord(String [] arrayOfWords, String word){
+        if (word.length() != 0) {
+            arrayOfWords[arrayOfWords.length-1] = word;
+        }
+        return arrayOfWords;
     }
 
     public String [] createArrayOfWords(String text){
 
-        int numberOfWords = countNumberOfWords(text);
+        String [] arrayOfWords = new String [countNumberOfWordsInString(text)];
 
-        String [] arrayOfWords = new String [numberOfWords];
         String word = "";
         int wordsNumber = 0;
         for (int i=0; i< text.length(); i++){
-            //System.out.println("char(i) "+text.charAt(i));
-            if ((Character.isLetter(text.charAt(i))) || (text.charAt(i) == '\'')){
+            if (isCharacterLetter(text.charAt(i))){
                 word += text.charAt(i);
             }else{
                 if (word.length() != 0) {
@@ -61,15 +67,14 @@ public class WordService {
                 }
             }
         }
-        if (word.length() != 0) {
-            arrayOfWords[arrayOfWords.length-1] = word;
-        }
-        //System.out.println("Array of words"+Arrays.toString(arrayOfWords));
+        addLastWord(arrayOfWords, word);
         return arrayOfWords;
     }
 
     public int [] countOfWords(String [] array){
+
         int [] countOfWords = new  int [array.length];
+
         for (int i=0; i < array.length; i++){
             String word = array[i];
             int numberOfWord = 1;
@@ -84,7 +89,6 @@ public class WordService {
                 countOfWords[i] = numberOfWord;
             }
         }
-        //System.out.println("Count of words "+Arrays.toString(countOfWords));
         return countOfWords;
     }
 
@@ -98,14 +102,12 @@ public class WordService {
                 word = words[i];
             }
         }
-        //System.out.println("Word: "+word);
         return word.toLowerCase();
     }
 
     public String wordServiceFull (String text){
 
         String [] wordsArray = createArrayOfWords(text);
-        //String [] wordsArrayToLowerCase = arrayToLowerCase(wordsArray);
         int [] countOfWords = countOfWords(wordsArray);
         return findMostFrequentWord(wordsArray, countOfWords);
 
