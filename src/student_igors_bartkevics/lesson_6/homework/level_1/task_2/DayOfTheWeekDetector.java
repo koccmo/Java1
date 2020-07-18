@@ -38,21 +38,20 @@ package student_igors_bartkevics.lesson_6.homework.level_1.task_2;
 public class DayOfTheWeekDetector {
 
     public String detectDayName(int number) {
-        String result = "";
-        if ((number > 0) && (number < 8)) {
-            switch (number) {
-                case 1 -> result = "Monday";
-                case 2 -> result = "Tuesday";
-                case 3 -> result = "Wednesday";
-                case 4 -> result = "Thursday";
-                case 5 -> result = "Friday";
-                case 6 -> result =  "Saturday";
-                case 7 -> result =  "Sunday";
-            }
+        String result;
+        switch (number) {
+            case 1 -> result = "Monday";
+            case 2 -> result = "Tuesday";
+            case 3 -> result = "Wednesday";
+            case 4 -> result = "Thursday";
+            case 5 -> result = "Friday";
+            case 6 -> result =  "Saturday";
+            case 7 -> result =  "Sunday";
+            default -> result = "Wrong day number entered";
         }
-        else {
-            result = "Wrong day number entered";
-        }
+
+
+
         return result;
     }
 
