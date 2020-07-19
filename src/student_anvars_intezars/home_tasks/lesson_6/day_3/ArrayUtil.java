@@ -3,7 +3,7 @@ package student_anvars_intezars.home_tasks.lesson_6.day_3;
 public class ArrayUtil {
 
 
-    public int checkArrayLength (int[] array) {
+    public int checkArrayLength(int[] array) {
         return array.length;
     }
 
@@ -31,5 +31,17 @@ public class ArrayUtil {
         return maxIndex;
     }
 
+    public void replace(int[] array, int numberToReplace, int newNumber) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == numberToReplace) {
+                array[numberToReplace] = numberToReplace;
+            }
+            for (int j = 0; j < array.length; j++) {
+                    array[numberToReplace] = newNumber;
+                }
+            }
+
+        }
     }
+
 

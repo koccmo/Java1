@@ -1,5 +1,7 @@
 package student_anvars_intezars.home_tasks.lesson_6.day_3;
 
+import student_eduards_jasvins.lessoncode.Array;
+
 public class ArrayUtilTest {
 
     public static void main(String[] args) {
@@ -7,6 +9,7 @@ public class ArrayUtilTest {
         ArrayUtilTest arrayUtilTest = new ArrayUtilTest();
         arrayUtilTest.firstArrayUtilTest();
         arrayUtilTest.findSameNumberTest();
+        arrayUtilTest.replaceElementTest();
     }
 
     public void firstArrayUtilTest() {
@@ -31,7 +34,17 @@ public class ArrayUtilTest {
         else {
             System.out.println("Test for finding most repeated number = FAIL");
         }
+    }
 
-
+    public void replaceElementTest() {
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] array = {1,2,3};
+        arrayUtil.replace(array,0,4);
+        if (array[0] == 4) {
+            System.out.println("Test replacing element = OK");
+        }
+        else {
+            System.out.println("Test replacing element = FAIL");
+        }
     }
 }
