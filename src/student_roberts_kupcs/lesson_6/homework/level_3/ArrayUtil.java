@@ -55,28 +55,61 @@ class ArrayUtil {
         }
         return false;
     }
+
+    //Task_10
+    // Добавьте в класс ArrayUtil метод для проверки сколько раз содержит массив целых чисел указынное число.
+    //Напишите автоматические тесты в классе ArrayUtilTest доказывающие, что ваша реализацяия метода работает правильно.
+
     public int howMuchTimesNumberInArray(int[] array, int number) {
         int howMuch = 0;
-        for (int num: array) {
+        for (int num : array) {
             if (num == number) {
                 howMuch++;
             }
         }
         return howMuch;
     }
-    public void replaceFirstNumber(int[] array, int numberReplace, int newNumber) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == numberReplace) {
-                array[i] = newNumber;
+
+    //Task_11
+    //Добавьте в класс ArrayUtil метод для замены первого вхождения указанного числа в массиве целых чисел на другое число.
+    //Напишите автоматические тесты в классе ArrayUtilTest доказывающие, что ваша реализацяия метода работает правильно.
+    //
+    //Подсказка: void replace(int[] arr, int numberToReplace, int newNumber).
+
+    public void replace(int[] arr, int numberToReplace, int newNumber) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == numberToReplace) {
+                arr[i] = newNumber;
                 break;
             }
         }
     }
-    public void replaceNumbers(int[] array, int numberReplace, int newNumber) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == numberReplace) {
-                array[i] = newNumber;
+
+    // Task12
+    // Добавьте в класс ArrayUtil метод для замены вхождений указанного числа в массиве целых чисел на другое число.
+    //Напишите автоматические тесты в классе ArrayUtilTest доказывающие, что ваша реализацяия метода работает правильно.
+    //
+    //Подсказка: void replaceAll(int[] arr, int numberToReplace, int newNumber).
+
+    public void replaceAll(int[] arr, int numberToReplace, int newNumber) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == numberToReplace) {
+                arr[i] = newNumber;
             }
+        }
+    }
+
+    // Task_13
+    // Добавьте в класс ArrayUtil метод для переворота массива целых чисел.
+    //Напишите автоматические тесты в классе ArrayUtilTest доказывающие, что ваша реализацяия метода работает правильно.
+
+    public void arrayMirror(int[] arr, int num) {
+        int[] arr1 = new int[num];
+        System.out.println("Array mirror :");
+
+        for (int i = arr1.length - 1; i >= 0; i--) {
+            System.out.println(arr1[i] + " ");
+
         }
     }
 
