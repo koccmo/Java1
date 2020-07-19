@@ -1,0 +1,16 @@
+Напишите бесконечный цикл при помощи while и for.
+
+while(true) {
+    //тело цикла
+}
+
+boolean wise;
+wise = true;
+while (wise) {
+System.out.println("Not wise...";
+}
+
+int i = 1;
+for (; ;){
+    System.out.printf("Квадрат числа %d равен %d \n", i, i * i);
+}

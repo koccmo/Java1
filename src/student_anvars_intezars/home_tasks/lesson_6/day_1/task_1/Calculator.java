@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_6.task_1;
+package student_anvars_intezars.home_tasks.lesson_6.day_1.task_1;
 /*Упростите метод boolean isEven(int number).
 Код внутри этого метода может быть записан в одну строку.
 Перед изменением кода убедитесь, что у вас есть автоматические тесты для проверки этого кода.

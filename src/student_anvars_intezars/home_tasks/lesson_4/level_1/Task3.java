@@ -50,7 +50,7 @@ public class Task3 {
 
             default: {
                 System.out.println("The value, which you have entered");
-                System.out.print("does not correspond to neccessary one");
+                System.out.print("does not correspond to necessary one");
             }
 
         }
