@@ -65,13 +65,13 @@ public class TransactionDemo {
 
     public static void main(String[] args) {
 
-        Transaction withdrawalWithExpenseCategory = new Transaction(2000, TransactionType.WITHDRAWAL, ExpenseCategory.ENTERTAINMENT);
-        Transaction depositWithoutExpenseCategory = new Transaction(1000, TransactionType.DEPOSIT, null);
-        Transaction depositWithExpenseCategory = new Transaction(2000, TransactionType.DEPOSIT, ExpenseCategory.ENTERTAINMENT);
+        //Transaction withdrawalWithExpenseCategory = new Transaction(2000, TransactionType.WITHDRAWAL, ExpenseCategory.ENTERTAINMENT);
+        //Transaction depositWithoutExpenseCategory = new Transaction(1000, TransactionType.DEPOSIT, null);
+        //Transaction depositWithExpenseCategory = new Transaction(2000, TransactionType.DEPOSIT, ExpenseCategory.ENTERTAINMENT);
 
-        System.out.println("Withdrawal with expense category : " + withdrawalWithExpenseCategory.getExpenseCategory());
-        System.out.println("Deposit without expense category : " + depositWithoutExpenseCategory.getExpenseCategory());
-        System.out.println("Deposit with expense category : " + depositWithExpenseCategory.getExpenseCategory());
+        //System.out.println("Withdrawal with expense category : " + withdrawalWithExpenseCategory.getExpenseCategory());
+        //System.out.println("Deposit without expense category : " + depositWithoutExpenseCategory.getExpenseCategory());
+        //System.out.println("Deposit with expense category : " + depositWithExpenseCategory.getExpenseCategory());
     }
 
 }
