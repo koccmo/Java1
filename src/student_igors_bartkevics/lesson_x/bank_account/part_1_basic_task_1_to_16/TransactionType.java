@@ -14,7 +14,7 @@ public enum TransactionType {
 
 
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_1_basic;
+package student_igors_bartkevics.lesson_x.bank_account.part_1_basic_task_1_to_16;
 
 public enum TransactionType {
     DEPOSIT, WITHDRAWAL
