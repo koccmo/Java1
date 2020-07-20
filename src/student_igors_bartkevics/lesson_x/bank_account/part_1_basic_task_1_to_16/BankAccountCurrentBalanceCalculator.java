@@ -62,7 +62,7 @@ class BankAccountCurrentBalanceCalculator {
 Для этих целей применяется принцып Dependency Injection, но о нём мы будем
 говорить в другой раз.
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_1_basic;
+package student_igors_bartkevics.lesson_x.bank_account.part_1_basic_task_1_to_16;
 
 class BankAccountCurrentBalanceCalculator {
 
