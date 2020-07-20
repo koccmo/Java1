@@ -10,6 +10,7 @@ public class ArrayUtilTest {
         arrayUtilTest.firstArrayUtilTest();
         arrayUtilTest.findSameNumberTest();
         arrayUtilTest.replaceElementTest();
+        arrayUtilTest.replaceAllElementTest();
     }
 
     public void firstArrayUtilTest() {
@@ -45,6 +46,18 @@ public class ArrayUtilTest {
         }
         else {
             System.out.println("Test replacing element = FAIL");
+        }
+    }
+
+    public void replaceAllElementTest() {
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int [] array = {1,2,2,3};
+        arrayUtil.replaceAll(array,3,4);
+        if (array[3] == 4) {
+            System.out.println("Test for replacing specific number = OK");
+        }
+        else {
+            System.out.println("Test for replacing specific number = FAIL");
         }
     }
 }

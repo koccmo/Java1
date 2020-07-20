@@ -37,11 +37,33 @@ public class ArrayUtil {
                 array[numberToReplace] = numberToReplace;
             }
             for (int j = 0; j < array.length; j++) {
-                    array[numberToReplace] = newNumber;
+                array[numberToReplace] = newNumber;
+            }
+        }
+
+    }
+
+    public void replaceAll(int[] array, int numberToReplace, int newNumber) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == numberToReplace) {
+                array[i] = numberToReplace;
+            }
+            for (int j = 0; j < array.length; j++) {
+                if(array[j] == numberToReplace) {
+                   array[j] = newNumber;
                 }
             }
 
         }
-    }
+        }
+
+
+
+
+
+
+}
+
+
 
 
