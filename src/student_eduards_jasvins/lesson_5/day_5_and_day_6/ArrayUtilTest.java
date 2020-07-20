@@ -38,6 +38,8 @@ public class ArrayUtilTest {
         array[5] = 34;
         array[6] = 4;
 
+        // более короткая запись: int[] array = {25, 1, 5, 61, 22, 34, 4};
+
         int maxNumber = arrayUtil.findMaxNumber(array);
         if (maxNumber == 1) {
             System.out.println("Test 2 = OK");
