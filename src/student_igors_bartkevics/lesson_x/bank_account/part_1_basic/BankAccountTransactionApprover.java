@@ -76,16 +76,12 @@ class BankAccountTransactionApprover {
     public boolean approve(BankAccount bankAccount, Transaction newTransaction) {
 
         // если транзакция это депозит то её всегда разрешаем - пополнить банковский аккаунт можно всегда
-        if (newTransaction.isDeposit()) {
-            return true;
-        }
         // если транзакция это снятие денег со счето то:
         // return true - если у пользователя достаточно денег на балансе
         // return false - если у пользователя не достаточно денег на балансе
         // для получения текущего баланса воспользуйтесь свойством currentBalanceCalculator
         // значение которого вы получает через конструктор
-        else {
-            return (currentBalanceCalculator.calculate(bankAccount) > newTransaction.getAmount());
-        }
+        return (newTransaction.isDeposit()) ||
+                (newTransaction.isWithdrawal() && (currentBalanceCalculator.calculate(bankAccount) >= newTransaction.getAmount()));
     }
 }
