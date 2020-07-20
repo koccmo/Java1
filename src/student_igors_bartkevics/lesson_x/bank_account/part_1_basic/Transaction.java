@@ -55,7 +55,6 @@ package student_igors_bartkevics.lesson_x.bank_account.part_1_basic;
 
 class Transaction {
 
-    private String fullName;
     private int amount;
     private TransactionType transactionType;
 
