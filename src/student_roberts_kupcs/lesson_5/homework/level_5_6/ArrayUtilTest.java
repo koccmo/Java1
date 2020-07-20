@@ -14,11 +14,17 @@ class ArrayUtilTest {
         test.shouldCreateArray();
         test.shouldFillArrayWithRandomNumbers();
 
-
     }
 
     public void shouldCreateArray() {
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int arrayTest[] = arrayUtil.createArray(10);
 
+        if (arrayTest.length == 10) {
+            System.out.println("Test Create Array OK");
+        } else {
+            System.out.println("Test Create Array FALSE");
+        }
     }
 
     //Task34
@@ -27,7 +33,13 @@ class ArrayUtilTest {
     //из предыдущего задания.
 
     public void shouldFillArrayWithRandomNumbers() {
-        // Write test implementation here !!!
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] testArray = {5, 8, 3, 9, 1};
+        if (arrayUtil.findMaxNumber(testArray) == 9) {
+            System.out.println("Method findMaxNumber is OK");
+        } else {
+            System.out.println("Method findMaxNumber is FALSE");
+        }
     }
 
 }
