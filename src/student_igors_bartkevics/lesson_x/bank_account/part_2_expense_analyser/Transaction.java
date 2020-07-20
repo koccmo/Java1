@@ -97,9 +97,10 @@ class Transaction {
     private ExpenseCategory expenseCategory;
 
     // создайте конструктор класса с двумя параметрами: amount, transactionType.
-    Transaction(int amount, TransactionType transactionType) {
+    Transaction(int amount, TransactionType transactionType, ExpenseCategory expenseCategory) {
         this.amount = amount;
         this.transactionType = transactionType;
+        this.expenseCategory = expenseCategory;
     }
 
     // создайте геттер метод для свойства amount
@@ -114,5 +115,7 @@ class Transaction {
         return (this.transactionType == TransactionType.WITHDRAWAL);
     }
 
-
+    public ExpenseCategory getExpenseCategory() {
+        return expenseCategory;
+    }
 }
