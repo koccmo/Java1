@@ -17,5 +17,4 @@ public class task_12 {
             System.out.println("Numbers = " + numbers[i]);
         }
     }
-
 }
