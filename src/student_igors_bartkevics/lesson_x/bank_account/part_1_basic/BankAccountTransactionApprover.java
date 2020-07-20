@@ -82,6 +82,6 @@ class BankAccountTransactionApprover {
         // для получения текущего баланса воспользуйтесь свойством currentBalanceCalculator
         // значение которого вы получает через конструктор
         return (newTransaction.isDeposit()) ||
-                (newTransaction.isWithdrawal() && (currentBalanceCalculator.calculate(bankAccount) >= newTransaction.getAmount()));
+                (newTransaction.isWithdrawal() && ((currentBalanceCalculator.calculate(bankAccount) + bankAccount.getCreditLimit() )>= newTransaction.getAmount()));
     }
 }

@@ -46,7 +46,7 @@ class BankAccountTransactionApproverTest {
         transactions[2] = new Transaction(4000, TransactionType.DEPOSIT);
         transactions[3] = new Transaction(3500, TransactionType.WITHDRAWAL);
 
-        BankAccount bankAccount = new BankAccount("Name Surname", transactions);
+        BankAccount bankAccount = new BankAccount("Name Surname", transactions, 2000);
         BankAccountTransactionApprover transactionApprover = new BankAccountTransactionApprover(new BankAccountCurrentBalanceCalculator());
 
         //deposit transaction amount < current amount
@@ -70,9 +70,19 @@ class BankAccountTransactionApproverTest {
         checkResult(condition4, testName);
 
         //withdrawal transaction amount > current amount
-        Transaction testTransaction5 = new Transaction(2301, TransactionType.WITHDRAWAL);
-        boolean condition5 = !(transactionApprover.approve(bankAccount, testTransaction5));
+        Transaction testTransaction5 = new Transaction(2310, TransactionType.WITHDRAWAL);
+        boolean condition5 = (transactionApprover.approve(bankAccount, testTransaction5));
         checkResult(condition5, testName);
+
+        //withdrawal transaction amount = current amount + credit limit
+        Transaction testTransaction6 = new Transaction(4300, TransactionType.WITHDRAWAL);
+        boolean condition6 = (transactionApprover.approve(bankAccount, testTransaction6));
+        checkResult(condition6, testName);
+
+        //withdrawal transaction amount > current amount + credit limit
+        Transaction testTransaction7 = new Transaction(4301, TransactionType.WITHDRAWAL);
+        boolean condition7 = !(transactionApprover.approve(bankAccount, testTransaction7));
+        checkResult(condition7, testName);
     }
 
 

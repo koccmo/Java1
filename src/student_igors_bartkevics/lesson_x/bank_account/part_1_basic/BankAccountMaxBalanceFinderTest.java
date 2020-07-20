@@ -46,7 +46,7 @@ class BankAccountMaxBalanceFinderTest {
         transactions[3] = new Transaction(3500, TransactionType.WITHDRAWAL);
 
         BankAccountMaxBalanceFinder maxBalancerFinder = new BankAccountMaxBalanceFinder();
-        BankAccount bankAccount = new BankAccount("Name Surname", transactions);
+        BankAccount bankAccount = new BankAccount("Name Surname", transactions, 10000);
 
         boolean condition  = (maxBalancerFinder.find(bankAccount) == 5800);
         checkResult(condition, "Max balance finder");
