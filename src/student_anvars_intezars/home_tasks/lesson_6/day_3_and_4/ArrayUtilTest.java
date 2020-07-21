@@ -1,6 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_6.day_3;
-
-import student_eduards_jasvins.lessoncode.Array;
+package student_anvars_intezars.home_tasks.lesson_6.day_3_and_4;
 
 import java.util.Arrays;
 
@@ -14,6 +12,7 @@ public class ArrayUtilTest {
         arrayUtilTest.replaceElementTest();
         arrayUtilTest.replaceAllElementTest();
         arrayUtilTest.reverseArrayTest();
+        arrayUtilTest.sortArrayTest();
     }
 
     public void firstArrayUtilTest() {
@@ -64,8 +63,6 @@ public class ArrayUtilTest {
         }
     }
 
-
-
    public void reverseArrayTest() {
         ArrayUtil arrayUtil = new ArrayUtil();
         int[] array = {1,2,3,4,5};
@@ -76,6 +73,19 @@ public class ArrayUtilTest {
         }
         else {
             System.out.println("Test for reversing array = FAIl");
+        }
+    }
+
+    public void sortArrayTest() {
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] array = {3,1,2,5,4};
+        int[] arrayTwo = {1,2,3,4,5};
+        arrayUtil.sort(array);
+        if (Arrays.equals(array,arrayTwo)) {
+            System.out.println("Test for sorting array = OK");
+        }
+        else {
+            System.out.println("Test for sorting array = FAIl");
         }
     }
 }

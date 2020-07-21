@@ -1,6 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_6.day_3;
-
-import java.util.Arrays;
+package student_anvars_intezars.home_tasks.lesson_6.day_3_and_4;
 
 public class ArrayUtil {
 
@@ -67,9 +65,22 @@ public class ArrayUtil {
         }
     }
 
+    // Для решения данного метода, я решил использовать метод сортировки
+    // массива под названием "Bubble" - сравнивать соседние элементы
+    // друг с другом, по парам. Данный метод оказался более понятным.
+    public void sort (int[] array) {
+        for (int i = array.length-1; i > 0; i--)
+            for (int j = 0; j < i; j++){
+                if (array[j] > array[j + 1]) {
+                    int tmp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+                }
+            }
+        }
+    }
 
 
-}
 
 
 
