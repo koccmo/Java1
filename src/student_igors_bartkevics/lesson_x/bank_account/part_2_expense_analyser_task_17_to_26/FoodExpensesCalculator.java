@@ -28,8 +28,10 @@ class FoodExpensesCalculator {
 
 }
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_2_expense_analyser;
+package student_igors_bartkevics.lesson_x.bank_account.part_2_expense_analyser_task_17_to_26;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 public class FoodExpensesCalculator {
 
     public int calculateExpensesAmount(BankAccount bankAccount) {
@@ -38,24 +40,35 @@ public class FoodExpensesCalculator {
         // private методы в этом классе
 
         // 1. Берём все транзакции банковского аккаунта;
+        ArrayList<Transaction> allTransactions = selectAllBankAccountTransactions(bankAccount);
+
         // 2. Отбираем только WITHDRAWAL транзакции, так как они являются расходами;
-        ArrayList<Transaction> withdrawalTransactions = selectWithdrawalTransactions(bankAccount);
+        ArrayList<Transaction> withdrawalTransactions = selectWithdrawalTransactions(allTransactions);
 
         // 3. Из WITHDRAWAL транзакций отбираем транзакции у которых в категории расходов указано FOOD;
         ArrayList<Transaction> transactionsWithExpenseCategoryFood = selectTransactionsWithExpenseCategoryFood(withdrawalTransactions);
 
         // 4. Проходим по всем отобранным транзакциям и суммируем потраченные деньги.
+        return sumOfAmountsOfTransactions(transactionsWithExpenseCategoryFood);
+    }
+
+    public int sumOfAmountsOfTransactions(ArrayList<Transaction> transactions) {
         int foodExpensesAmount = 0;
-        for (Transaction transaction : transactionsWithExpenseCategoryFood) {
+        for (Transaction transaction : transactions) {
             foodExpensesAmount += transaction.getAmount();
         }
         return foodExpensesAmount;
     }
 
-    public ArrayList<Transaction> selectWithdrawalTransactions(BankAccount bankAccount) {
-        ArrayList<Transaction> withdrawalTransactions = new ArrayList<>();
+    public ArrayList<Transaction> selectAllBankAccountTransactions(BankAccount bankAccount) {
         Transaction[] transactions = bankAccount.getTransactions();
-        for (Transaction transaction : transactions) {
+        return new ArrayList<>(Arrays.asList(transactions));
+    }
+
+    public ArrayList<Transaction> selectWithdrawalTransactions(ArrayList<Transaction> allTransactions) {
+        ArrayList<Transaction> withdrawalTransactions = new ArrayList<>();
+
+        for (Transaction transaction : allTransactions) {
             if (transaction.isWithdrawal()) {
                 withdrawalTransactions.add(transaction);
             }
@@ -65,6 +78,7 @@ public class FoodExpensesCalculator {
 
     public ArrayList<Transaction> selectTransactionsWithExpenseCategoryFood(ArrayList<Transaction> withdrawalTransactions) {
         ArrayList<Transaction> transactionsWithExpenseCategoryFood = new ArrayList<>();
+
         for (Transaction withdrawalTransaction : withdrawalTransactions) {
             if (withdrawalTransaction.getExpenseCategory() == ExpenseCategory.FOOD) {
                 transactionsWithExpenseCategoryFood.add(withdrawalTransaction);

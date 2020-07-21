@@ -52,17 +52,20 @@ class FoodExpensesCalculator {
 Создайте класс FoodExpensesCalculatorTest и напишите автоматические юнит тесты
 для метода calculateExpensesAmount().
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_2_expense_analyser;
+package student_igors_bartkevics.lesson_x.bank_account.part_2_expense_analyser_task_17_to_26;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 class FoodExpensesCalculatorTest {
 
     public static void main(String[] args) {
         FoodExpensesCalculatorTest test = new FoodExpensesCalculatorTest();
+        test.selectAllBankAccountTransactions();
         test.selectWithdrawalTransactionsTest();
         test.selectTransactionsWithExpenseCategoryFoodTest();
+        test.sumOfAmountsOfTransactionsTest();
         test.calculateFoodExpenseAmountTest();
     }
 
@@ -90,6 +93,20 @@ class FoodExpensesCalculatorTest {
         checkResult(condition3, "Calculate food expense amount");
     }
 
+    public void sumOfAmountsOfTransactionsTest() {
+
+        FoodExpensesCalculator expensesCalculator = new FoodExpensesCalculator();
+
+        ArrayList<Transaction> transactions = new ArrayList<>();
+        transactions.add(new Transaction(1300, ExpenseCategory.FOOD));
+        transactions.add(new Transaction(1500, ExpenseCategory.COMMUNAL_PAYMENTS));
+        transactions.add(new Transaction(1000, ExpenseCategory.LOANS));
+        transactions.add(new Transaction(200, ExpenseCategory.FOOD));
+        transactions.add(new Transaction(10, ExpenseCategory.OTHERS));
+
+        boolean condition = (expensesCalculator.sumOfAmountsOfTransactions(transactions) == 4010);
+        checkResult(condition, "Sum of amounts of transactions");
+    }
 
     public void selectTransactionsWithExpenseCategoryFoodTest() {
 
@@ -113,6 +130,20 @@ class FoodExpensesCalculatorTest {
 
         FoodExpensesCalculator expensesCalculator = new FoodExpensesCalculator();
 
+        ArrayList<Transaction> transactions = new ArrayList<>();
+        transactions.add(new Transaction(3000));
+        transactions.add(new Transaction(1200, ExpenseCategory.FOOD));
+        transactions.add(new Transaction(4000));
+        transactions.add(new Transaction(3500, ExpenseCategory.ENTERTAINMENT));
+
+        boolean condition = (expensesCalculator.selectWithdrawalTransactions(transactions).get(0) == transactions.get(1)) &&
+                (expensesCalculator.selectWithdrawalTransactions(transactions).get(1) == transactions.get(3));
+        checkResult(condition, "Selection of withdrawal transactions");
+    }
+
+    public void selectAllBankAccountTransactions() {
+        FoodExpensesCalculator expensesCalculator = new FoodExpensesCalculator();
+
         Transaction[] transactions = new Transaction[4];
         transactions[0] = new Transaction(3000);
         transactions[1] = new Transaction(1200, ExpenseCategory.FOOD);
@@ -121,9 +152,9 @@ class FoodExpensesCalculatorTest {
 
         BankAccount bankAccount = new BankAccount("Name Surname", transactions, 200);
 
-        boolean condition = (expensesCalculator.selectWithdrawalTransactions(bankAccount).get(0) == transactions[1]) &&
-                (expensesCalculator.selectWithdrawalTransactions(bankAccount).get(1) == transactions[3]);
-        checkResult(condition, "Selection of withdrawal transactions");
+        ArrayList<Transaction> allTransactions = expensesCalculator.selectAllBankAccountTransactions(bankAccount);
+        boolean condition = Arrays.asList(transactions).equals(allTransactions);
+        checkResult(condition, "Select all bank account transactions");
     }
 
 
