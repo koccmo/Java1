@@ -1,6 +1,6 @@
 package student_anvars_intezars.home_tasks.lesson_6.day_4.task_15;
 
-public class InfiniteLoopTwo {
+public class InfiniteLoopTwoFor {
 
     public static void main(String[] args) {
 
