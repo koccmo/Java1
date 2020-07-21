@@ -2,6 +2,8 @@ package student_anvars_intezars.home_tasks.lesson_6.day_3;
 
 import student_eduards_jasvins.lessoncode.Array;
 
+import java.util.Arrays;
+
 public class ArrayUtilTest {
 
     public static void main(String[] args) {
@@ -11,6 +13,7 @@ public class ArrayUtilTest {
         arrayUtilTest.findSameNumberTest();
         arrayUtilTest.replaceElementTest();
         arrayUtilTest.replaceAllElementTest();
+        arrayUtilTest.reverseArrayTest();
     }
 
     public void firstArrayUtilTest() {
@@ -58,6 +61,21 @@ public class ArrayUtilTest {
         }
         else {
             System.out.println("Test for replacing specific number = FAIL");
+        }
+    }
+
+
+
+   public void reverseArrayTest() {
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] array = {1,2,3,4,5};
+        int[] arrayTwo = {5,4,3,2,1};
+        arrayUtil.reverse(array);
+        if (Arrays.equals(array,arrayTwo) ) {
+            System.out.println("Test for reversing array = OK");
+        }
+        else {
+            System.out.println("Test for reversing array = FAIl");
         }
     }
 }

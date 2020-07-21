@@ -1,5 +1,7 @@
 package student_anvars_intezars.home_tasks.lesson_6.day_3;
 
+import java.util.Arrays;
+
 public class ArrayUtil {
 
 
@@ -55,10 +57,15 @@ public class ArrayUtil {
             }
 
         }
+    }
+
+    public void reverse (int[] array) {
+        for (int i = 0; i < array.length / 2; i++) {
+            int tmp = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - i - 1] = tmp;
         }
-
-
-
+    }
 
 
 
