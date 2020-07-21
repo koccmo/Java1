@@ -1,0 +1,11 @@
+package student_anvars_intezars.home_tasks.lesson_6.day_4.task_15;
+
+public class InfiniteLoopTwo {
+
+    public static void main(String[] args) {
+
+        for (;;) {
+            System.out.println("Infinity is beyond!");
+        }
+    }
+}
