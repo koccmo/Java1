@@ -13,6 +13,8 @@ class ArrayUtilTest {
         ArrayUtilTest test = new ArrayUtilTest();
         test.shouldCreateArray();
         test.shouldFillArrayWithRandomNumbers();
+        test.shouldFindMaxNumber();
+        test.shouldFindMinNumber();
 
     }
 
@@ -33,12 +35,27 @@ class ArrayUtilTest {
     //из предыдущего задания.
 
     public void shouldFillArrayWithRandomNumbers() {
+
+    }
+
+    public void shouldFindMaxNumber() {
         ArrayUtil arrayUtil = new ArrayUtil();
         int[] testArray = {5, 8, 3, 9, 1};
         if (arrayUtil.findMaxNumber(testArray) == 9) {
             System.out.println("Method findMaxNumber is OK");
         } else {
             System.out.println("Method findMaxNumber is FALSE");
+        }
+    }
+
+    public void shouldFindMinNumber() {
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] testArray = {5, 8, 3, 9, 1};
+        if (arrayUtil.findMinNumber(testArray) == 1) {
+            System.out.println("Method findMinNumber is OK");
+        } else {
+            System.out.println("Method findMinNumber is FALSE");
+
         }
     }
 
