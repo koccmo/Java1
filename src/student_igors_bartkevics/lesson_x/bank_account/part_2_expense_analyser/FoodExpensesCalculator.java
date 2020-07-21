@@ -52,7 +52,7 @@ public class FoodExpensesCalculator {
         return foodExpensesAmount;
     }
 
-    private ArrayList<Transaction> selectWithdrawalTransactions(BankAccount bankAccount) {
+    public ArrayList<Transaction> selectWithdrawalTransactions(BankAccount bankAccount) {
         ArrayList<Transaction> withdrawalTransactions = new ArrayList<>();
         Transaction[] transactions = bankAccount.getTransactions();
         for (Transaction transaction : transactions) {
@@ -63,7 +63,7 @@ public class FoodExpensesCalculator {
         return withdrawalTransactions;
     }
 
-    private ArrayList<Transaction> selectTransactionsWithExpenseCategoryFood(ArrayList<Transaction> withdrawalTransactions) {
+    public ArrayList<Transaction> selectTransactionsWithExpenseCategoryFood(ArrayList<Transaction> withdrawalTransactions) {
         ArrayList<Transaction> transactionsWithExpenseCategoryFood = new ArrayList<>();
         for (Transaction withdrawalTransaction : withdrawalTransactions) {
             if (withdrawalTransaction.getExpenseCategory() == ExpenseCategory.FOOD) {
