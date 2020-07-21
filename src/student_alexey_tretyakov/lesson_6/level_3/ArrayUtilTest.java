@@ -22,6 +22,8 @@ public class ArrayUtilTest {
         test.shouldReplace();
         test.shouldReplaceAll();
         test.shouldReverseArray();
+        test.shouldResortArrayIncrease();
+        test.shouldResortArrayDecrease();
     }
 
     public void shouldCreateArray ( int arrayLength ) {
@@ -92,6 +94,22 @@ public class ArrayUtilTest {
         testArray = newArray.reverseArray( testArray );
         int[] expectedArray = { 15, 9, 21, 5, 11, 9, 7, 5, 3};
         testResult( Arrays.equals(testArray,expectedArray) , "Reverse numbers in array.");
+    }
+
+    public void shouldResortArrayIncrease () {
+        int[] testArray = { 3, 5, 7, 9, 11, 5, 21, 9, 15};
+        ArrayUtil newArray = new ArrayUtil();
+        testArray = newArray.resortArrayIncrease( testArray );
+        int[] expectedArray = { 3, 5, 5, 7, 9, 9, 11, 15, 21 };
+        testResult( Arrays.equals(testArray,expectedArray) , "Sorting numbers to increase in array.");
+    }
+
+    public void shouldResortArrayDecrease () {
+        int[] testArray = { 3, 5, 7, 9, 11, 5, 21, 9, 15};
+        ArrayUtil newArray = new ArrayUtil();
+        testArray = newArray.resortArrayDecrease( testArray );
+        int[] expectedArray = { 21, 15, 11, 9, 9, 7, 5, 5, 3};
+        testResult( Arrays.equals(testArray,expectedArray) , "Sorting numbers to decrease in array.");
     }
 
 
