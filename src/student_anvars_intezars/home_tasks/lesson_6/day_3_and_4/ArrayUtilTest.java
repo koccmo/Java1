@@ -1,6 +1,6 @@
-package student_anvars_intezars.home_tasks.lesson_6.day_3;
+package student_anvars_intezars.home_tasks.lesson_6.day_3_and_4;
 
-import student_eduards_jasvins.lessoncode.Array;
+import java.util.Arrays;
 
 public class ArrayUtilTest {
 
@@ -10,6 +10,9 @@ public class ArrayUtilTest {
         arrayUtilTest.firstArrayUtilTest();
         arrayUtilTest.findSameNumberTest();
         arrayUtilTest.replaceElementTest();
+        arrayUtilTest.replaceAllElementTest();
+        arrayUtilTest.reverseArrayTest();
+        arrayUtilTest.sortArrayTest();
     }
 
     public void firstArrayUtilTest() {
@@ -45,6 +48,44 @@ public class ArrayUtilTest {
         }
         else {
             System.out.println("Test replacing element = FAIL");
+        }
+    }
+
+    public void replaceAllElementTest() {
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int [] array = {1,2,2,3};
+        arrayUtil.replaceAll(array,3,4);
+        if (array[3] == 4) {
+            System.out.println("Test for replacing specific number = OK");
+        }
+        else {
+            System.out.println("Test for replacing specific number = FAIL");
+        }
+    }
+
+   public void reverseArrayTest() {
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] array = {1,2,3,4,5};
+        int[] arrayTwo = {5,4,3,2,1};
+        arrayUtil.reverse(array);
+        if (Arrays.equals(array,arrayTwo) ) {
+            System.out.println("Test for reversing array = OK");
+        }
+        else {
+            System.out.println("Test for reversing array = FAIl");
+        }
+    }
+
+    public void sortArrayTest() {
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] array = {3,1,2,5,4};
+        int[] arrayTwo = {1,2,3,4,5};
+        arrayUtil.sort(array);
+        if (Arrays.equals(array,arrayTwo)) {
+            System.out.println("Test for sorting array = OK");
+        }
+        else {
+            System.out.println("Test for sorting array = FAIl");
         }
     }
 }

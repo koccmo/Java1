@@ -7,11 +7,8 @@ public class Task_26 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter array length");
-
-        // для чего используется переменная arrayLength?
         int arrayLength = scanner.nextInt();
-        int[] numbers = new int[scanner.nextInt()];
-
+        int[] numbers = new int[arrayLength];
         Random randomNumbers = new Random();
         for (int i = 0;i < numbers.length;i++){
             numbers[i] = randomNumbers.nextInt(20);
