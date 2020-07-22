@@ -1,0 +1,17 @@
+Исправьте код программы:
+
+class Mother {
+
+}
+
+class Father {
+
+}
+
+class ChildFromMother extends Mother {
+
+}
+
+class ChildFromFather extends Mother {
+
+}
