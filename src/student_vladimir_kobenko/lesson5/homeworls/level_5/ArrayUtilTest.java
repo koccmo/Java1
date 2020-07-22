@@ -6,6 +6,8 @@ public class ArrayUtilTest {
 
     test.shouldCreateArray();
     test.shouldFillArrayWithRandomNumbers();
+    test.shouldFindMaxNumber();
+    test.shouldFindMinNumber();
     }
 
     public void shouldCreateArray () {
