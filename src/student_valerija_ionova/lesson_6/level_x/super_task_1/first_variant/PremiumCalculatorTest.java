@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_6.level_x.super_task_1;
+package student_valerija_ionova.lesson_6.level_x.super_task_1.first_variant;
 
 public class PremiumCalculatorTest {
 
@@ -186,7 +186,7 @@ public class PremiumCalculatorTest {
         electricDevices[3] = new ElectricDevice("SmallTV", 30);
         electricDevices[4] = new ElectricDevice("Fridge", 100, InsuranceCategory.FIRE);
 
-        checkDouble("testElectricDeviceInsurancePremiumSmallCoefficients", Math.round(premiumCalculator.insurancePremiumForElectricDevices(electricDevices)), 215);
+        checkDouble("testElectricDeviceInsurancePremiumSmallCoefficients", Math.round(premiumCalculator.insurancePremiumForElectricDevices(electricDevices)), 5);
     }
 
     public void testElectricDeviceInsurancePremiumBigCoefficient(){
@@ -199,7 +199,7 @@ public class PremiumCalculatorTest {
         electricDevices[3] = new ElectricDevice("SmallTV", 30);
         electricDevices[4] = new ElectricDevice("Fridge", 1000, InsuranceCategory.FIRE);
 
-        checkDouble("testElectricDeviceInsurancePremiumBigCoefficient", premiumCalculator.insurancePremiumForElectricDevices(electricDevices), 9330);
+        checkDouble("testElectricDeviceInsurancePremiumBigCoefficient", premiumCalculator.insurancePremiumForElectricDevices(electricDevices), 300);
     }
 
     public void testElectricDeviceInsuranceNoExtraInsurance(){
@@ -212,28 +212,28 @@ public class PremiumCalculatorTest {
         electricDevices[3] = new ElectricDevice("SmallTV", 30);
         electricDevices[4] = new ElectricDevice("Fridge", 100);
 
-        checkDouble("testElectricDeviceInsuranceNoExtraInsurance", premiumCalculator.insurancePremiumForElectricDevices(electricDevices), 5160);
+        checkDouble("testElectricDeviceInsuranceNoExtraInsurance", premiumCalculator.insurancePremiumForElectricDevices(electricDevices), 0);
     }
 
     public void testPolicyInsuranceNoElectricDeviceInsuranceOneObject(){
         PremiumCalculator premiumCalculator = new PremiumCalculator();
 
         ObjectForPolicy [] objectsForPolicy = new ObjectForPolicy[1];
-        objectsForPolicy[0] = new ObjectForPolicy("Home with tree", 1000);
+        objectsForPolicy[0] = new ObjectForPolicy();
         Policy policy = new Policy (objectsForPolicy);
 
-        checkDouble("testPolicyInsuranceNoElectricDeviceInsuranceOneObject", premiumCalculator.calculate(policy), 1000);
+        checkDouble("testPolicyInsuranceNoElectricDeviceInsuranceOneObject", premiumCalculator.calculate(policy), 0);
     }
 
     public void testPolicyInsuranceNoElectricDeviceInsuranceTwoObjects(){
         PremiumCalculator premiumCalculator = new PremiumCalculator();
 
         ObjectForPolicy [] objectsForPolicy = new ObjectForPolicy[2];
-        objectsForPolicy[0] = new ObjectForPolicy("Home with tree", 1000);
-        objectsForPolicy[1] = new ObjectForPolicy("Home without tree", 800);
+        objectsForPolicy[0] = new ObjectForPolicy();
+        objectsForPolicy[1] = new ObjectForPolicy();
         Policy policy = new Policy (objectsForPolicy);
 
-        checkDouble("testPolicyInsuranceNoElectricDeviceInsuranceTwoObjects", premiumCalculator.calculate(policy), 1800);
+        checkDouble("testPolicyInsuranceNoElectricDeviceInsuranceTwoObjects", premiumCalculator.calculate(policy), 0);
     }
 
     public void testPolicyInsuranceWithElectricDevicesInsuranceOneObject(){
@@ -247,10 +247,10 @@ public class PremiumCalculatorTest {
         electricDevices[4] = new ElectricDevice("Fridge", 100);
 
         ObjectForPolicy [] objectsForPolicy = new ObjectForPolicy[1];
-        objectsForPolicy[0] = new ObjectForPolicy("Home with tree", 1000, electricDevices);
+        objectsForPolicy[0] = new ObjectForPolicy(electricDevices);
         Policy policy = new Policy (objectsForPolicy);
 
-        checkDouble("testPolicyInsuranceWithElectricDevicesInsuranceOneObject", premiumCalculator.calculate(policy), 6160.0);
+        checkDouble("testPolicyInsuranceWithElectricDevicesInsuranceOneObject", premiumCalculator.calculate(policy), 0);
     }
 
     public void testPolicyInsuranceWithElectricDevicesInsuranceTwoObjects(){
@@ -264,11 +264,11 @@ public class PremiumCalculatorTest {
         electricDevices[4] = new ElectricDevice("Fridge", 100);
 
         ObjectForPolicy [] objectsForPolicy = new ObjectForPolicy[2];
-        objectsForPolicy[0] = new ObjectForPolicy("Home with tree", 1000, electricDevices);
-        objectsForPolicy[1] = new ObjectForPolicy("Home without tree", 800);
+        objectsForPolicy[0] = new ObjectForPolicy(electricDevices);
+        objectsForPolicy[1] = new ObjectForPolicy();
         Policy policy = new Policy (objectsForPolicy);
 
-        checkDouble("testPolicyInsuranceWithElectricDevicesInsuranceTwoObjects", premiumCalculator.calculate(policy), 6960);
+        checkDouble("testPolicyInsuranceWithElectricDevicesInsuranceTwoObjects", premiumCalculator.calculate(policy), 0);
     }
 
 

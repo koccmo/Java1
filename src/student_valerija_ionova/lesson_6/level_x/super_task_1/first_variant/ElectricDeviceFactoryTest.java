@@ -1,6 +1,4 @@
-package student_valerija_ionova.lesson_6.level_x.super_task_1;
-
-import student_valerija_ionova.lesson_x.part_2_basic.task_19_26.ExpenseCategory;
+package student_valerija_ionova.lesson_6.level_x.super_task_1.first_variant;
 
 public class ElectricDeviceFactoryTest {
 
@@ -11,7 +9,7 @@ public class ElectricDeviceFactoryTest {
         electricDeviceFactoryTest.testOfInsuranceCategoryCreateElectricDeviceWithBothExtraInsurance();
         electricDeviceFactoryTest.testOfInsuranceCategoryCreateElectricDeviceWithFireInsurance();
         electricDeviceFactoryTest.testOfInsuranceCategoryCreateElectricDeviceWithStealInsurance();
-electricDeviceFactoryTest.testOfAmountCreateElectricDeviceWithoutInsurance();
+        electricDeviceFactoryTest.testOfAmountCreateElectricDeviceWithoutInsurance();
 
     }
 
@@ -27,38 +25,38 @@ electricDeviceFactoryTest.testOfAmountCreateElectricDeviceWithoutInsurance();
         printResult(name, methodsResult == expectedResult);
     }
 
-    public void checkDouble(String name, double methodsResult, double expectedResult){
+    public void checkInt(String name, int methodsResult, int expectedResult){
         printResult(name, methodsResult == expectedResult);
     }
 
     public void testOfAmountCreateElectricDeviceWithBothExtraInsurance(){
         ElectricDeviceFactory electricDeviceFactory = new ElectricDeviceFactory();
-        ElectricDevice newElectricDevice = electricDeviceFactory.createElectricDeviceWithExtraInsurance("TV", 22.01, InsuranceCategory.BOTH);
-        checkDouble("testOfAmountCreateElectricDeviceWithBothExtraInsurance", newElectricDevice.getCost(), 22.01);
+        ElectricDevice newElectricDevice = electricDeviceFactory.createElectricDeviceWithExtraInsurance("TV", 22, InsuranceCategory.BOTH);
+        checkInt("testOfAmountCreateElectricDeviceWithBothExtraInsurance", newElectricDevice.getCost(), 22);
     }
 
     public void testOfInsuranceCategoryCreateElectricDeviceWithBothExtraInsurance(){
         ElectricDeviceFactory electricDeviceFactory = new ElectricDeviceFactory();
-        ElectricDevice newElectricDevice = electricDeviceFactory.createElectricDeviceWithExtraInsurance("TV", 22.01, InsuranceCategory.BOTH);
+        ElectricDevice newElectricDevice = electricDeviceFactory.createElectricDeviceWithExtraInsurance("TV", 22, InsuranceCategory.BOTH);
         checkBoolean("testOfInsuranceCategoryCreateElectricDeviceWithBothExtraInsurance", newElectricDevice.isBothInsurance(), true);
     }
 
     public void testOfInsuranceCategoryCreateElectricDeviceWithFireInsurance(){
         ElectricDeviceFactory electricDeviceFactory = new ElectricDeviceFactory();
-        ElectricDevice newElectricDevice = electricDeviceFactory.createElectricDeviceWithExtraInsurance("TV", 22.01, InsuranceCategory.FIRE);
+        ElectricDevice newElectricDevice = electricDeviceFactory.createElectricDeviceWithExtraInsurance("TV", 22, InsuranceCategory.FIRE);
         checkBoolean("testOfInsuranceCategoryCreateElectricDeviceWithFireInsurance", newElectricDevice.isFireInsurance(), true);
     }
 
     public void testOfInsuranceCategoryCreateElectricDeviceWithStealInsurance(){
         ElectricDeviceFactory electricDeviceFactory = new ElectricDeviceFactory();
-        ElectricDevice newElectricDevice = electricDeviceFactory.createElectricDeviceWithExtraInsurance("TV", 22.01, InsuranceCategory.STEAL);
+        ElectricDevice newElectricDevice = electricDeviceFactory.createElectricDeviceWithExtraInsurance("TV", 22, InsuranceCategory.STEAL);
         checkBoolean("testOfInsuranceCategoryCreateElectricDeviceWithStealInsurance", newElectricDevice.isStealInsurance(), true);
     }
 
     public void testOfAmountCreateElectricDeviceWithoutInsurance(){
         ElectricDeviceFactory electricDeviceFactory = new ElectricDeviceFactory();
-        ElectricDevice newElectricDevice = electricDeviceFactory.createElectricDeviceWithoutInsurance("TV", 22.01);
-        checkDouble("testOfAmountCreateElectricDeviceWithoutInsurance", newElectricDevice.getCost(), 22.01);
+        ElectricDevice newElectricDevice = electricDeviceFactory.createElectricDeviceWithoutInsurance("TV", 22);
+        checkInt("testOfAmountCreateElectricDeviceWithoutInsurance", newElectricDevice.getCost(), 22);
     }
 
 

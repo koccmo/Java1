@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_6.level_x.super_task_1;
+package student_valerija_ionova.lesson_6.level_x.super_task_1.first_variant;
 
 /*Написать программу для расчёта стоимости полюса страхования для недвижимой собственности.
 
@@ -30,8 +30,6 @@ calculate(Policy policy) Данный метод должен возвращат
 переданного ему в качестве параметра полюса страхования.
 
 который принимает */
-
-import java.util.Arrays;
 
 public class PremiumCalculator {
 
@@ -95,17 +93,19 @@ public class PremiumCalculator {
         return sum;
     }
 
-    public double insurancePremiumForElectricDevicesAmount(ElectricDevice[] electricDevices){
+    /*public double insurancePremiumForElectricDevicesAmount(ElectricDevice[] electricDevices){
         double sum = 0;
         for (int i=0; i<electricDevices.length; i++){
             sum += electricDevices[i].getCost();
         }
         return sum;
-    }
+    }*/
 
 
     public double insurancePremiumForElectricDevices(ElectricDevice[] electricDevices){
-        return fireInsurancePremium(electricDevices) + stealInsurancePremium(electricDevices) + insurancePremiumForElectricDevicesAmount(electricDevices);
+        return fireInsurancePremium(electricDevices) + stealInsurancePremium(electricDevices)
+                //+ insurancePremiumForElectricDevicesAmount(electricDevices)
+        ;
     }
 
 
@@ -113,13 +113,13 @@ public class PremiumCalculator {
         return (objectForPolicy.getIsElectricDevices());
     }
 
-    public double PremiumForObject(ObjectForPolicy [] objectsForPolicy){
+    /*public double PremiumForObject(ObjectForPolicy [] objectsForPolicy){
         double sum = 0;
         for (int i = 0; i < objectsForPolicy.length; i++) {
             sum += objectsForPolicy[i].getCost();
         }
         return sum;
-    }
+    }*/
 
     public double PremiumForObjectsElectricDevices(ObjectForPolicy [] objectsForPolicy){
         double sum = 0;
@@ -135,11 +135,12 @@ public class PremiumCalculator {
     public double calculate(Policy policy) {
         ObjectForPolicy[] objectsForPolicy = policy.getObjectsForPolicy();
 
-        return PremiumForObject(objectsForPolicy) + PremiumForObjectsElectricDevices(objectsForPolicy);
+        return PremiumForObjectsElectricDevices(objectsForPolicy);
+                //PremiumForObject(objectsForPolicy) +
     }
 
-    public void printPolicyPremium(Policy policy){
+    /*public void printPolicyPremium(Policy policy){
         System.out.println(calculate(policy));
-    }
+    }*/
 
 }

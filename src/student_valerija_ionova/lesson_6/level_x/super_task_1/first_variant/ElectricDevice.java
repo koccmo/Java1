@@ -1,29 +1,26 @@
-package student_valerija_ionova.lesson_6.level_x.super_task_1;
-
-import student_valerija_ionova.lesson_x.part_2_basic.task_19_26.ExpenseCategory;
-import student_valerija_ionova.lesson_x.part_2_basic.task_19_26.TransactionType;
+package student_valerija_ionova.lesson_6.level_x.super_task_1.first_variant;
 
 public class ElectricDevice {
 
     private String name;
-    private double cost;
+    private int cost;
     private InsuranceCategory insuranceCategory;
 
 
-    public ElectricDevice (String name, double cost, InsuranceCategory insuranceCategory){
+    public ElectricDevice (String name, int cost, InsuranceCategory insuranceCategory){
         this.name = name;
         this.cost = cost;
         this.insuranceCategory = insuranceCategory;
     }
 
-    public ElectricDevice (String name, double cost){
+    public ElectricDevice (String name, int cost){
         this.name = name;
         this.cost = cost;
         this.insuranceCategory = null;
     }
 
 
-    public double getCost(){
+    public int getCost(){
         return cost;
     }
 
@@ -35,8 +32,7 @@ public class ElectricDevice {
         return (InsuranceCategory.STEAL == this.insuranceCategory);
     }
 
-    public boolean isBothInsurance(){
-        return (InsuranceCategory.BOTH == this.insuranceCategory);
+    public boolean isBothInsurance(){return (InsuranceCategory.BOTH == this.insuranceCategory);
     }
 
 

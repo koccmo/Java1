@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_6.level_x.super_task_1;
+package student_valerija_ionova.lesson_6.level_x.super_task_1.first_variant;
 
 /*объект Policy - этот объект должет содержать полное описание страхового полюса и всех его деталей, которые нужны для
 расчёта стоимости страховки). */
