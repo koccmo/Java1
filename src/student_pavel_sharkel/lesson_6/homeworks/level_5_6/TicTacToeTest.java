@@ -1,4 +1,4 @@
-package student_pavel_sharkel.lesson_6.homeworks.level_5;
+package student_pavel_sharkel.lesson_6.homeworks.level_5_6;
 
 public class TicTacToeTest {
 
@@ -14,6 +14,7 @@ public class TicTacToeTest {
     ticTacToeTest.testWin2();
     ticTacToeTest.testDraw();
     ticTacToeTest.testDraw2();
+    ticTacToeTest.testCreate();
 
 
     }
@@ -165,6 +166,23 @@ public class TicTacToeTest {
             System.out.println("Draw2 test is FAILED");
         }
 
+    }
+
+    public void testCreate() {
+        TicTacToe ticTacToe = new TicTacToe();
+        int[][] field = ticTacToe.createField();
+
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if (field[i][j] == -1) {
+                    continue;
+                } else {
+                    System.out.println("Create test is FAILED");
+                }
+            }
+
+        }
+        System.out.println("Create test is OK");
     }
 
 
