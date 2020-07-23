@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_8.level_6;
+package student_valerija_ionova.lesson_8.level_6.task_30;
 
 /*Узнать в интернете, что такое varargs.
 Придумайте пример кода, в котором продемонстрируйте
