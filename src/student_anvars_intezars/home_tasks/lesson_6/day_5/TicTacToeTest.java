@@ -13,6 +13,8 @@ public class TicTacToeTest {
         ticTacToeTest.firstWinPositionVerticalTest();
         ticTacToeTest.secondWinPositionVerticalTest();
         ticTacToeTest.thirdWinPositionalVerticalTest();
+        ticTacToeTest.firstWinPositionDiagonalTest();
+        ticTacToeTest.secondWinPositionDiagonalTest();
     }
 
     public void firstWinPositionHorizontalTest() {
@@ -87,4 +89,29 @@ public class TicTacToeTest {
             System.out.println("Test for third vertical win = FAIL");
         }
     }
+
+    public void firstWinPositionDiagonalTest() {
+        TicTacToe ticTacToe = new TicTacToe();
+        int[][] field = {{1,0,0}, {0,1,0}, {0,0,1}};
+        boolean result = ticTacToe.isWinPositionForDiagonals(field,1);
+        if (result) {
+            System.out.println("Test for first diagonal win = OK");
+        }
+        else {
+            System.out.println("Test for first diagonal win = FAIL");
+        }
+    }
+
+    public void secondWinPositionDiagonalTest() {
+        TicTacToe ticTacToe = new TicTacToe();
+        int[][] field = {{0,0,1},{0,1,0},{1,0,0}};
+        boolean result = ticTacToe.isWinPositionForDiagonals(field,1);
+        if (result) {
+            System.out.println("Test for second diagonal win = OK");
+        }
+        else {
+            System.out.println("Test for second diagonal win = FAIL");
+        }
+    }
+
 }
