@@ -4,6 +4,7 @@ class TicTacToeTest {
     public static void main(String[] args) {
         TicTacToeTest ticTacToeTest = new TicTacToeTest();
         ticTacToeTest.testHorizontal();
+        ticTacToeTest.testVertical();
     }
 
     public void testHorizontal() {
@@ -15,6 +16,17 @@ class TicTacToeTest {
             System.out.println("Horizontal test is OK");
         } else {
             System.out.println("Horizontal test is FAIL");
+        }
+    }
+
+    public void testVertical() {
+        TicTacToe ticTacToe = new TicTacToe();
+
+        int[][] field = {{0, 1, 1}, {0, 1, 0}, {0, 0, 1}};
+        if (ticTacToe.isWinPositionForVerticals(field, 0)) {
+            System.out.println("Vertical test is OK");
+        } else {
+            System.out.println("Vertical test is FAIL");
         }
     }
 }
