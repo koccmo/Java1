@@ -1,4 +1,6 @@
-package student_anvars_intezars.home_tasks.lesson_6.day_5;
+package student_anvars_intezars.home_tasks.lesson_6.day_5_and_6;
+
+import java.util.Arrays;
 
 public class TicTacToe {
 
@@ -58,6 +60,10 @@ public class TicTacToe {
             if (isWinPosition(field,1));
         }
         return false;
+    }
+
+    public int[][] createField() {
+        return new int[][]{{-1,-1,-1},{-1,-1,-1},{-1,-1,-1}};
     }
 }
 

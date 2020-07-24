@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_6.day_5;
+package student_anvars_intezars.home_tasks.lesson_6.day_5_and_6;
 
 import java.util.Arrays;
 
@@ -24,6 +24,7 @@ public class TicTacToeTest {
         ticTacToeTest.seventhIsWinPositionTest();
         ticTacToeTest.eighthIsWinPositionTest();
         ticTacToeTest.isDrawPositionTest();
+        ticTacToeTest.createFieldTest();
     }
 
     public void firstWinPositionHorizontalTest() {
@@ -217,6 +218,7 @@ public class TicTacToeTest {
         boolean result = ticTacToe.isWinPosition(field,1);
         if (result) {
             System.out.println("Test for eighth wining position = OK");
+            System.out.println();
         }
         else {
             System.out.println("Test for eighth wining position = FAIL");
@@ -227,12 +229,25 @@ public class TicTacToeTest {
         TicTacToe ticTacToe = new TicTacToe();
         int[][] field = {{0,1,0}, {1,0,0}, {1,0,1}};
         boolean result = ticTacToe.isDrawPosition(field);
-        if (result == false) {
+        if (!result) {
             System.out.println("Test for draw = OK");
+            System.out.println();
         }
         else {
             System.out.println("Test for draw = FAIL");
         }
     }
 
+    public void createFieldTest() {
+        TicTacToe ticTacToe = new TicTacToe();
+        int[][] exampleField = {{-1,-1,-1},{-1,-1,-1},{-1,-1,-1}};
+        int[][] field = ticTacToe.createField();
+        if (Arrays.deepEquals(exampleField,field)) {
+            System.out.println("Test for creating Field = OK");
+        }
+        else {
+            System.out.println("Test for creating Field = FAIL");
+        }
+
+    }
 }
