@@ -30,6 +30,19 @@ public class TicTacToe {
         }
         return false;
     }
+
+    public boolean isWinPosition(int[][] field, int playerToCheck) {
+        if (isWinPositionForHorizontals(field,playerToCheck)) {
+            return true;
+        }
+        else if (isWinPositionForVerticals(field,playerToCheck)){
+            return true;
+        }
+        else if (isWinPositionForDiagonals(field,playerToCheck)) {
+            return true;
+        }
+        return false;
+    }
 }
 
 
