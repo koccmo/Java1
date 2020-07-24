@@ -1,6 +1,7 @@
 package student_anvars_intezars.home_tasks.lesson_6.day_5_and_6;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class TicTacToe {
 
@@ -64,6 +65,17 @@ public class TicTacToe {
 
     public int[][] createField() {
         return new int[][]{{-1,-1,-1},{-1,-1,-1},{-1,-1,-1}};
+    }
+
+    public Move getNextMove() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter two coordinates of squares of the field");
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        Move move = new Move();
+        move.getX();
+        move.getY();
+        return move;
     }
 }
 
