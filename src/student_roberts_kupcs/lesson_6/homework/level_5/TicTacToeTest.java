@@ -6,6 +6,7 @@ class TicTacToeTest {
         ticTacToeTest.testHorizontal();
         ticTacToeTest.testVertical();
         ticTacToeTest.testDiagonal();
+        ticTacToeTest.testWinPosition();
     }
 
     public void testHorizontal() {
@@ -39,6 +40,16 @@ class TicTacToeTest {
             System.out.println("Diagonal test is OK");
         } else {
             System.out.println("Diagona; test is FAIL");
+        }
+    }
+
+    public void testWinPosition() {
+        TicTacToe ticTacToe = new TicTacToe();
+        int[][] field = {{1, 0, 1}, {0, 1, 0}, {0, 0, 1}};
+        if (ticTacToe.isWinPosition(field, 1)) {
+            System.out.println("WinPosition test is OK");
+        } else {
+            System.out.println("WinPosition test is FAIL");
         }
     }
 }
