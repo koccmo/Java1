@@ -77,6 +77,10 @@ public class TicTacToe {
         move.getY();
         return move;
     }
+
+    public void printFieldToConsole(int[][] field) {
+        System.out.println(Arrays.deepToString(field));
+    }
 }
 
 
