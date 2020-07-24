@@ -23,6 +23,7 @@ public class TicTacToeTest {
         ticTacToeTest.sixthIsWinPositionTest();
         ticTacToeTest.seventhIsWinPositionTest();
         ticTacToeTest.eighthIsWinPositionTest();
+        ticTacToeTest.isDrawPositionTest();
     }
 
     public void firstWinPositionHorizontalTest() {
@@ -219,6 +220,18 @@ public class TicTacToeTest {
         }
         else {
             System.out.println("Test for eighth wining position = FAIL");
+        }
+    }
+
+    public void isDrawPositionTest() {
+        TicTacToe ticTacToe = new TicTacToe();
+        int[][] field = {{0,1,0}, {1,0,0}, {1,0,1}};
+        boolean result = ticTacToe.isDrawPosition(field);
+        if (result == false) {
+            System.out.println("Test for draw = OK");
+        }
+        else {
+            System.out.println("Test for draw = FAIL");
         }
     }
 
