@@ -66,4 +66,23 @@ class TicTacToe {
         }
     }
 
+    public boolean isDrawPosition(int[][] field) {
+        TicTacToe ticTacToe = new TicTacToe();
+        if ((!ticTacToe.isWinPositionForVerticals(field, 1)) && (ticTacToe.isWinPositionForVerticals(field, 0))) {
+            if ((!ticTacToe.isWinPositionForHorizontals(field, 1)) && (ticTacToe.isWinPositionForHorizontals(field, 0))) {
+                if ((!ticTacToe.isWinPositionForDiagonals(field, 1)) && (ticTacToe.isWinPositionForDiagonals(field, 0))) {
+                    for (int i = 0; i < field.length; i++) {
+                        for (int j = 0; j < field.length; j++) {
+                            if (field[i][j] != -1) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+
 }
