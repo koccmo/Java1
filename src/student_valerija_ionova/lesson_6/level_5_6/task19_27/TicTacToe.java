@@ -87,12 +87,8 @@ public class TicTacToe {
     }
 
     public boolean isWinPosition(int[][] field, int playerToCheck){
-        if ((isWinPositionForHorizontals(field, playerToCheck)) || (isWinPositionForDiagonals(field, playerToCheck)) ||
-                (isWinPositionForVerticals(field, playerToCheck))){
-            return true;
-        }else{
-            return false;
-        }
+        return (isWinPositionForHorizontals(field, playerToCheck)) || (isWinPositionForDiagonals(field, playerToCheck)) ||
+                (isWinPositionForVerticals(field, playerToCheck));
     }
 
     public boolean fullField( int [] [] arr){
