@@ -30,19 +30,19 @@ package student_roberts_kupcs.lesson_7.homework.level_1;
 class WorldService {
 
     public String findMostFrequentWord(String text) {
-        // Where my current word starts.Где начинается текущее слово.
+        // Где начинается текущее слово.
         int wordStart = 0;
-        // How many I counted. Сколько насчитал
+        // Сколько насчитал
         int wordCount = 0;
-        // The currently most frequent. В настоящее время наиболее часто
+        // наиболее часто
         String word = "";
         for (
                 int wordEnd = wordStart; wordEnd < text.length(); wordEnd++) {
-            // Is this the end of a word? // Это конец слова?
+            // Это конец слова?
             if (wordEnd > text.length() || text.charAt(wordEnd) == ' ') {
-                // We have a word! How many times does it occur?
+                //  У нас есть слово! Сколько раз.
                 String thisWord = text.substring(wordStart, wordEnd);
-                // How many times this word occurs.
+                // Сколько раз встречается это слово.
                 int thisWordCount = 0;
                 // Current start of search.
                 int search = -1;
