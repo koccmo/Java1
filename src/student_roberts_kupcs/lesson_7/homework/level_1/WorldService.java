@@ -28,4 +28,40 @@ package student_roberts_kupcs.lesson_7.homework.level_1;
 //собрать решение главной задачи.
 
 class WorldService {
+
+    public String findMostFrequentWord(String text) {
+        // Where my current word starts.Где начинается текущее слово.
+        int wordStart = 0;
+        // How many I counted. Сколько насчитал
+        int wordCount = 0;
+        // The currently most frequent. В настоящее время наиболее часто
+        String word = "";
+        for (
+                int wordEnd = wordStart; wordEnd < text.length(); wordEnd++) {
+            // Is this the end of a word? // Это конец слова?
+            if (wordEnd > text.length() || text.charAt(wordEnd) == ' ') {
+                // We have a word! How many times does it occur?
+                String thisWord = text.substring(wordStart, wordEnd);
+                // How many times this word occurs.
+                int thisWordCount = 0;
+                // Current start of search.
+                int search = -1;
+                // Count them.
+                while ((search = text.indexOf(thisWord, search + 1)) >= 0) {
+                    thisWordCount += 1;
+                }
+                // Is it longer?
+                if (thisWordCount > wordCount) {
+                    // Keep track.
+                    word = thisWord;
+                    wordCount = thisWordCount;
+                }
+                // Move start to the next word.
+                wordStart = wordEnd + 1;
+            }
+        }
+        return word;
+
+    }
+
 }
