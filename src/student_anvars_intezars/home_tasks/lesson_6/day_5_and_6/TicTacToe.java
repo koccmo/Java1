@@ -73,9 +73,7 @@ public class TicTacToe {
         System.out.println("Please enter two coordinates of squares of the field");
         int x = sc.nextInt();
         int y = sc.nextInt();
-        Move move = new Move();
-        move.getX();
-        move.getY();
+        Move move = new Move(x,y);
         return move;
     }
 
