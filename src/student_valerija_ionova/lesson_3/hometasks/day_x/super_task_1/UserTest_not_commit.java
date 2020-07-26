@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_3.hometasks.day_x.super_task_1;
+/*package student_valerija_ionova.lesson_3.hometasks.day_x.super_task_1;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -39,4 +39,4 @@ class UserTest_not_commit {
         user.toBlockUser();
         assertEquals(true, user.blocked);
     }
-}
+}*/
