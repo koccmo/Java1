@@ -10,7 +10,6 @@ public class WordService {
         //Слова запишем в массив, чтобы можно было каждое слово посчитать в дальнейшем.
         String [] lineOfTextToWords = text.split(" ");
         Arrays.sort(lineOfTextToWords);
-            //System.out.println(Arrays.toString(lineOfTextToWords));
 
             int mostFrequentWord = 0;
             int count = 0;
