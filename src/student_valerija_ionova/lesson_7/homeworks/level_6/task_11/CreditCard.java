@@ -35,7 +35,7 @@ package student_valerija_ionova.lesson_7.homeworks.level_6.task_11;
 Написать тестовые сценарии для класса CreditCard в классе CreditCardTest.
 Все тестовые сценарии должны отрабатывать без ошибок.
 */
-public class CreditCard {
+class CreditCard {
     private String cardsNumber;
     private int pinCode;
     private double balance = 0;

@@ -11,8 +11,6 @@ class ConstructorChaining {
         this.constructorName = constructorName;
     }
 
-    // допишите решение тут
-
 }
 
 Создайте в этом классе публичный конструктор с двумя параметрами.
@@ -20,7 +18,7 @@ class ConstructorChaining {
 
 Более подробно про этот подход можно прочитать: constructor chaining in Java.*/
 
-public class ConstructorChaining {
+class ConstructorChaining {
 
     private String constructorName;
     private int parameterCount;
@@ -30,10 +28,8 @@ public class ConstructorChaining {
     }
 
     public ConstructorChaining (String constructorName, int parameterCount){
-
         this("Bob");
         this.parameterCount = parameterCount;
-
     }
 
 }

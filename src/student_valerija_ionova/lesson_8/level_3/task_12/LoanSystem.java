@@ -9,7 +9,7 @@ class LoanSystem {
 
 }*/
 
-public abstract class LoanSystem {
+abstract class LoanSystem {
 
     abstract boolean canReceiveLoan();
 }

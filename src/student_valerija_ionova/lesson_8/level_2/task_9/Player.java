@@ -20,7 +20,7 @@ class ComputerPlayer {
 
 }*/
 
-public class Player {
+class Player {
 
     private String name;
 

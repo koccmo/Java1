@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_7.homeworks.level_1.task_1_3;
 
 import java.util.Scanner;
 
-public class WordServiceDemo {
+class WordServiceDemo {
     public static void main (String[] args){
 
         Scanner scanner = new Scanner (System.in);

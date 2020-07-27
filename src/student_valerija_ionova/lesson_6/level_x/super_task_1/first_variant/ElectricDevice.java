@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_6.level_x.super_task_1.first_variant;
 
-public class ElectricDevice {
+class ElectricDevice {
 
     private String name;
     private int cost;

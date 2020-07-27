@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_9.level_1.task_5;
 
-public class SafeDemo {
+class SafeDemo {
 
     public static void main (String [] args){
 

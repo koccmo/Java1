@@ -8,7 +8,7 @@ Task7
 Попробовать применить на практике знания
 полученные из второй главы ("Содержательные имена") книги Роберта Мартина "Чистый код" (Clean code).*/
 
-public class WordService {
+class WordService {
 
     public boolean isCharacterLetter(char symbol){
         return ((Character.isLetter(symbol)) || (symbol == '\''));

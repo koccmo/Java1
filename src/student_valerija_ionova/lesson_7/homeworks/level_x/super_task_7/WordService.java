@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_7;
 
-public class WordService {
+class WordService {
 
     public int [] createWordCountArray(String [] arrayOfWords){
         return (new int[arrayOfWords.length]);

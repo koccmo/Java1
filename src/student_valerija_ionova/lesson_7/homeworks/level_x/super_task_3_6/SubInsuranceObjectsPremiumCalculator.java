@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
-public class SubInsuranceObjectsPremiumCalculator {
+class SubInsuranceObjectsPremiumCalculator {
 
 	private FireRiskCoeficientDetector fireRiskCoeficientDetector = new FireRiskCoeficientDetector();
 	private TheftRiskCoeficientDetector theftRiskCoeficientDetector = new TheftRiskCoeficientDetector();

@@ -6,7 +6,7 @@ package student_valerija_ionova.lesson_7.homeworks.level_6.task_10;
 Написать тестовые сценарии для класса PowerCalculator в классе PowerCalculatorTest.
 Все тестовые сценарии должны отрабатывать без ошибок.*/
 
-public class PowerCalculator {
+class PowerCalculator {
 
     public int powerOfNumber(int number, int power){
         int result = 1;

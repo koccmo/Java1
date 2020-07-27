@@ -21,7 +21,7 @@ package student_valerija_ionova.lesson_7.homeworks.level_1.task_1_3;
 - определить какое слово встречается чаще всего
 */
 
-public class WordService {
+class WordService {
 
     public boolean isCharacterLetter(char symbol){
         return ((Character.isLetter(symbol)) || (symbol == '\''));

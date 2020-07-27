@@ -20,7 +20,7 @@ class HumanPlayer extends Player {
     }
 
 }*/
-public class Player {
+class Player {
     private String name;
 
     Player(String name) {

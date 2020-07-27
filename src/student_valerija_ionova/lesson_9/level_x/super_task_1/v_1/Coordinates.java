@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_9.level_x.super_task_1.v_1;
 
-public class Coordinates {
+class Coordinates {
 
     private int x;
     private int y;

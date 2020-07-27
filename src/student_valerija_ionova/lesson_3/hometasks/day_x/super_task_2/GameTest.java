@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_3.hometasks.day_x.super_task_2;
 
-public class GameTest {
+class GameTest {
     public static void main(String[] args){
 
         Game bowling = new Game();

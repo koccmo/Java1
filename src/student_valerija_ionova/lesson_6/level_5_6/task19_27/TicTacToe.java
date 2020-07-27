@@ -43,7 +43,7 @@ public void printFieldToConsole(int[][] field) {
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class TicTacToe {
+class TicTacToe {
 
     public int[][] createField(){
         int [][] game = {{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};

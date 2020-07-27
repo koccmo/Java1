@@ -1,10 +1,10 @@
-package student_valerija_ionova.lesson_8.level_4.task_15_19;
+package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 
 /*Создайте наследника класс Shape - класс Rectangle.
 Реализуйте в нём абстрактные методы из класса
 Shape: calculateArea() и calculatePerimeter().*/
 
-public class Rectangle extends Shape{
+class Rectangle extends Shape{
 
     private double width;
     private double height;

@@ -1,10 +1,10 @@
-package student_valerija_ionova.lesson_8.level_4.task_15_19;
+package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 
 /*Создайте наследника класс Shape - класс Square.
 Реализуйте в нём абстрактные методы из класса
 Shape: calculateArea() и calculatePerimeter().*/
 
-public class Square extends Shape{
+class Square extends Shape{
 
     private double lengthOfSide;
 

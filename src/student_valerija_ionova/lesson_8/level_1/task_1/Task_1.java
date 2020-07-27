@@ -6,7 +6,7 @@ package student_valerija_ionova.lesson_8.level_1.task_1;
 дефолтного конструктора.
 Дефолтный конструктор исчезает из класса, когда ты создаешь какой-то конструктор с аргументами.*/
 
-public class Task_1 {
+class Task_1 {
 
     public Task_1 (){
         System.out.println("It's default constructor!");

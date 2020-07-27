@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_8.level_5;
+package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 
 /*Task 20 Создайте класс ShapeUtil. В класе ShapeUtil реализуйте метод: Circle createRandomCircle();
 
@@ -13,11 +13,9 @@ TAsk 25 double calculateArea(Shape[] shapes); Этот метод расчиты
 TAsk 26 double calculatePerimeter(Shape[] shapes);
 */
 
-import student_valerija_ionova.lesson_8.level_4.task_15_19.*;
-
 import java.util.Random;
 
-public class ShapeUtil {
+class ShapeUtil {
 
     public Circle createRandomCircle(){
         Random number = new Random();

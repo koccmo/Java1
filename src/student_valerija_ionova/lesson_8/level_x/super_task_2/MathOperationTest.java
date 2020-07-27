@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_8.level_x.super_task_2;
 
-public class MathOperationTest {
+class MathOperationTest {
 
     public static void main (String [] args){
 

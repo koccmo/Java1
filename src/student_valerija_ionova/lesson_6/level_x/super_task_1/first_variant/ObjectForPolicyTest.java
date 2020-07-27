@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_6.level_x.super_task_1.first_variant;
 
-public class ObjectForPolicyTest {
+class ObjectForPolicyTest {
 
    public static void main(String [] args){
         ObjectForPolicyTest objectForPolicyTest = new ObjectForPolicyTest();

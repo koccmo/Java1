@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_x.part_1_basic.task_1_18;
 
 /*Создайте класс BankAccountMaxBalanceFinderTest и протестируйте метод find().*/
 
-public class BankAccountMaxBalanceFinderTest {
+class BankAccountMaxBalanceFinderTest {
 
     public static void main(String [] args){
         BankAccountMaxBalanceFinderTest balanceFinderTest = new BankAccountMaxBalanceFinderTest();

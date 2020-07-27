@@ -11,7 +11,7 @@ package student_valerija_ionova.lesson_2.homeworks.day3;
 
 import java.util.Scanner;
 
-public class Task_10 {
+class Task_10 {
     public static void main(String[] args) {
 
         System.out.println("Программа запрашивает радиус круга и выводит на экран площадь и периметр круга!");

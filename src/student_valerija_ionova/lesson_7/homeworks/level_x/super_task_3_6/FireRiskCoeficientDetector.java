@@ -3,7 +3,7 @@ package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_3_6;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class FireRiskCoeficientDetector {
+class FireRiskCoeficientDetector {
 
 	private static final BigDecimal STANDARD_FIRE_RISK_COEF = new BigDecimal("0.03");
 	private static final BigDecimal OVERPRICED_FIRE_RISK_COEF = new BigDecimal("0.04");

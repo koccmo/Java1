@@ -4,7 +4,7 @@ package student_valerija_ionova.lesson_8.level_1.task_2;
 или Java его автоматически добавит при компиляции
 кода? Ответьте на вопрос примером кода!*/
 
-public class Task_2_Demo {
+class Task_2_Demo {
     public static void main (String [] args){
 
         Task_2 demo = new Task_2();

@@ -11,7 +11,7 @@ ArrayList.add(int index, Object o); // Prepend the list*/
 
 import java.util.Arrays;
 
-public class Game {
+class Game {
 
     private int [] scoreOfRolls = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0, 0, 0, 0, 0};
 

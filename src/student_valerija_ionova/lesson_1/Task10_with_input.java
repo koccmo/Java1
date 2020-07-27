@@ -5,7 +5,7 @@ package student_valerija_ionova.lesson_1;
 
 import java.util.Scanner;
 
-public class Task10_with_input {
+class Task10_with_input {
     public static void main (String[] args){
         // 1. get name from user
         Scanner myInput = new Scanner( System.in );

@@ -19,7 +19,7 @@ class BankAccountMinBalanceFinder {
 
 }*/
 
-public class BankAccountMinBalanceFinder {
+class BankAccountMinBalanceFinder {
 
     public int find(BankAccount bankAccount) {
         Transaction[] transactions = bankAccount.getTransactions();

@@ -14,7 +14,7 @@ int[] copyInRange(int[] in, int leftBound, int rightBound) - вернуть но
 
 import java.util.Arrays;
 
-public class CopyTest {
+class CopyTest {
 
     public static void main(String[] args){
         CopyTest copyTest = new CopyTest();

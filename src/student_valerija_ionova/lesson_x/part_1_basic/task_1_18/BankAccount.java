@@ -18,7 +18,7 @@ class BankAccount {
 На данный момент банковский аккаунт будет хранить только совершённые с ним транзакции.
 Других свойств создавать нельзя.*/
 
-public class BankAccount {
+class BankAccount {
 
     private Transaction[] transactions;
     private boolean ifCreditAccount;

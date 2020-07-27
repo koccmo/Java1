@@ -7,7 +7,7 @@ package student_valerija_ionova.lesson_8.level_1.task_1;
 
 Дефолтный конструктор исчезает из класса, когда ты создаешь какой-то конструктор с аргументами.*/
 
-public class Task_1_Demo {
+class Task_1_Demo {
     public static void main(String[] args) {
 
         Task_1 demo = new Task_1();

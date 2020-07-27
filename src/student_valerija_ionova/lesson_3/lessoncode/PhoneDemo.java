@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_3.lessoncode;
 
-public class PhoneDemo {
+class PhoneDemo {
     public static void main (String[] args){
         Phone siemens = new Phone("Siemens");
 

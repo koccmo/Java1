@@ -1,10 +1,10 @@
-package student_valerija_ionova.lesson_8.level_4.task_15_19;
+package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 
 /*Создайте наследника класс Shape - класс Triangle.
 Реализуйте в нём абстрактные методы из класса
 Shape: calculateArea() и calculatePerimeter().*/
 
-public class Triangle extends Shape{
+class Triangle extends Shape{
 
     private double side1;
     private double side2;

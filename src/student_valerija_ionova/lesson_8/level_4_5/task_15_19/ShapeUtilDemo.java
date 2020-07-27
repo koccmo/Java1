@@ -1,8 +1,6 @@
-package student_valerija_ionova.lesson_8.level_5;
+package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 
-import student_valerija_ionova.lesson_8.level_4.task_15_19.Shape;
-
-public class ShapeUtilDemo {
+class ShapeUtilDemo {
 
     public static void main (String [ ]args) {
 

@@ -21,7 +21,7 @@ package student_valerija_ionova.lesson_9.level_5;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class FraudDetector{
+class FraudDetector{
 
     ArrayList <FraudRule> fraudRules;
 

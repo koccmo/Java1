@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_9.level_x.super_task_2;
 
-public class CreditCardDemo{
+class CreditCardDemo{
 
     public static void main (String [] args){
 

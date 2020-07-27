@@ -8,7 +8,7 @@ package student_valerija_ionova.lesson_3.hometasks.day_6.task_24;
 Demo класс для каждого описанного вами объекта
 и продемонстрируйте работу с объектом.*/
 
-public class Kids {
+class Kids {
     private String name;
     private int  age;
 

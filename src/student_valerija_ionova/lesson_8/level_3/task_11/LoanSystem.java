@@ -6,5 +6,5 @@ abstracts class LoanSystem {
 
 }*/
 
-public abstract class LoanSystem {
+abstract class LoanSystem {
 }

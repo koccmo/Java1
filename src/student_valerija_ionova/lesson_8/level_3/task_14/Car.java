@@ -25,7 +25,7 @@ class PetrolCar extends Car {
 
 }*/
 
-public abstract class Car {
+abstract class Car {
 
     abstract void accelerate();
 

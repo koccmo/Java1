@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_6.level_x.super_task_1.first_variant;
 
-public class ObjectForPolicy {
+class ObjectForPolicy {
 
     ElectricDevice [] electricDevices;
     private boolean isElectricDevices;

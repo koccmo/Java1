@@ -13,7 +13,7 @@ package student_valerija_ionova.lesson_3.hometasks.day_x.super_task_1;
 - Сбросить количество попыток входа
 - Заблокировать пользователя*/
 
-public class User {
+class User {
 
     private String login;
     private String password;

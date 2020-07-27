@@ -11,7 +11,7 @@ package student_valerija_ionova.lesson_3.hometasks.day_x.super_task_1;
 а также уменьшить кол-во попыток на вход и заблокировать пользователя,
 если кол-во попыток исчерпано.*/
 
-public class UserLoginService {
+class UserLoginService {
 
 
         public boolean login(User user, String password){

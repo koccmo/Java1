@@ -11,7 +11,7 @@ package student_valerija_ionova.lesson_2.homeworks.day6.Task24;
 //    }
 //}
 
-public class AttentionPlease {
+class AttentionPlease {
 
 
     public static void main(String[] args) {

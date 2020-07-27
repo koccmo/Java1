@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_7.homeworks.level_6.task_11;
 
-public class CreditCardTest {
+class CreditCardTest {
 
     public static void main (String [] args){
         CreditCardTest creditCardTest = new CreditCardTest();

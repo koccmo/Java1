@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_8.level_x.super_task_2;
 
-public class Division extends TwoArgumentMathOperation{
+class Division extends TwoArgumentMathOperation{
 
     public Division (MathOperation leftSide, MathOperation rightSide){
         super (leftSide, rightSide);

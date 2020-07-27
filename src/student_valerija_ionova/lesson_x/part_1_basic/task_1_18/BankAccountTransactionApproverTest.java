@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_x.part_1_basic.task_1_18;
 
-public class BankAccountTransactionApproverTest {
+class BankAccountTransactionApproverTest {
 
     public static void main(String[] args){
         BankAccountTransactionApproverTest bankAccountTransactionApproverTest = new BankAccountTransactionApproverTest();

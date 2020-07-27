@@ -16,7 +16,7 @@ package student_valerija_ionova.lesson_3.hometasks.day_6.task_26;
         Класс с объявлением продукта должен называться "Product".
         Класс с демонстрацией работы должен называться "ProductDemo".*/
 
-public class Product {
+class Product {
 
     private String name;
     public double price;

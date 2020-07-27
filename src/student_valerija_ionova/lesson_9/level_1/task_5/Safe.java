@@ -7,7 +7,7 @@ package student_valerija_ionova.lesson_9.level_1.task_5;
 Подсказка: реализуйте эту функциональность через публичные методы: getMoney(...), putMoney(...).
 Создайте класс демо и продемонстрируйте, принцып инкапсуляции в действии!*/
 
-public class Safe {
+class Safe {
 
     private int pinCode;
     private int moneyAmount;

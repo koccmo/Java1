@@ -17,7 +17,7 @@ google.printInformation();
 Company = "GOOG", Current Price = 10, Min Price = 10, Max Price = 10
 Company = "GOOG", Current Price = 14, Min Price = 7, Max Price = 15*/
 
-public class StockTest {
+class StockTest {
     public static void main(String[] args) {
         StockTest stockTest = new StockTest();
         stockTest.testGetInformationAfterCreation();

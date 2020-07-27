@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class ElectricDevice {
+class ElectricDevice {
 
     private String name;
     private BigDecimal cost;

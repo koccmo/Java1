@@ -6,7 +6,7 @@ package student_valerija_ionova.lesson_8.level_6.task_30;
 variable number of arguments
 */
 
-public class Task_30 {
+class Task_30 {
 
     public double sumOfNumbers(double ... numbers){
         double sum = 0;

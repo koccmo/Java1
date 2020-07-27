@@ -8,7 +8,7 @@ package student_valerija_ionova.lesson_5.level_x.super_task;
 - распечатайте на консоль все элементы массива.*/
 
 
-public class Task26 {
+class Task26 {
     public static void main(String [] args){
 
         ArrayUtil arrayUtil = new ArrayUtil();

@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_9.level_5;
 
-public class Transaction {
+class Transaction {
 
     private Trader trader;
     private int amount;

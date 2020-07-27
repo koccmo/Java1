@@ -31,7 +31,7 @@ calculate(Policy policy) Данный метод должен возвращат
 
 который принимает */
 
-public class PremiumCalculator {
+class PremiumCalculator {
 
     public boolean deviceIsFireInsured(ElectricDevice electricDevice){
         return ((electricDevice.isFireInsurance()) || (electricDevice.isBothInsurance()));

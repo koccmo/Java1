@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_9.level_5;
 
-public class Trader {
+class Trader {
 
     private String fullName;
     private String city;

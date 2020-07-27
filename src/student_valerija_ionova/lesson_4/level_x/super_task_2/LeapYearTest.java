@@ -3,7 +3,7 @@ package student_valerija_ionova.lesson_4.level_x.super_task_2;
 //Создать класс для тестов LeapYearTest
 //и покрыть тестами весь функционал класса LeapYear.
 
-public class LeapYearTest {
+class LeapYearTest {
     public static void main(String[] args){
         LeapYearTest leapYearTest = new LeapYearTest();
 

@@ -43,7 +43,7 @@ Task39
 из предыдущего задания.
 */
 
-public class ArrayUtilTest {
+class ArrayUtilTest {
     public static void main(String[] args) {
 
         ArrayUtilTest test = new ArrayUtilTest();

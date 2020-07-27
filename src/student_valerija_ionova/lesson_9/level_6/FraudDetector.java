@@ -17,7 +17,7 @@ getRuleName() у объекта FraudRule. Полученное таким об�
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class FraudDetector{
+class FraudDetector{
 
     ArrayList <FraudRule> fraudRules;
 

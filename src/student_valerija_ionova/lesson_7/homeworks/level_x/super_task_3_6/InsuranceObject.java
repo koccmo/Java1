@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InsuranceObject {
+class InsuranceObject {
 
 	private InsuranceObjectType insuranceObjectType;
 	private BigDecimal cadastralValue;

@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_x.part_2_basic.task_19_26;
 
-public class FoodExpensesCalculator {
+class FoodExpensesCalculator {
 
     public int calculateExpensesAmount(BankAccount bankAccount) {
 

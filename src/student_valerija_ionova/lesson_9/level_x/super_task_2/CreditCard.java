@@ -7,7 +7,7 @@ https://dzone.com/articles/design-patterns-the-builder-pattern
 https://howtodoinjava.com/design-patterns/creational/builder-pattern-in-java/
 Создайте Builder класс для одной из моделей данных из нашего курса и продемонстрируйте его использование.*/
 
-public class CreditCard {
+class CreditCard {
 
     //All final attributes
     private String cardsNumber;

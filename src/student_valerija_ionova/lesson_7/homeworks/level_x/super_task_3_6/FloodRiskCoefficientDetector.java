@@ -3,7 +3,7 @@ package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_3_6;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class FloodRiskCoefficientDetector {
+class FloodRiskCoefficientDetector {
 
     private static final BigDecimal STANDARD_FLOOD_RISK_COEF = new BigDecimal("0.07");
     private static final BigDecimal OVERPRICED_FLOOD_RISK_COEF = new BigDecimal("0.08");

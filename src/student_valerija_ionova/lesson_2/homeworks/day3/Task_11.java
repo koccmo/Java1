@@ -3,7 +3,7 @@ package student_valerija_ionova.lesson_2.homeworks.day3;
 //Write a Java program that takes three numbers as input to calculate and print the average of the numbers.
 import java.util.Scanner;
 
-public class Task_11 {
+class Task_11 {
     public static void main (String[] args){
 
         System.out.println("Программа запрашивает 3 числа и считает среднее арифметическое");

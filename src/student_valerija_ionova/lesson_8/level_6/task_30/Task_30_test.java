@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_8.level_6.task_30;
 
-public class Task_30_test {
+class Task_30_test {
 
     public static void main(String [] args){
 

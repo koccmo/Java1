@@ -18,7 +18,7 @@ Task21
 Task 22
 - Должна быть возможность менять цвет собаки на другой.*/
 
-public class Dog {
+class Dog {
 
     private String name;
     private int age;

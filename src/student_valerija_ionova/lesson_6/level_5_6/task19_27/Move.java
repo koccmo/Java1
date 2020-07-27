@@ -15,7 +15,7 @@ public Move getNextMove() {
     // верните созданный объект Move из метода.
 }*/
 
-public class Move {
+class Move {
     private int x;
     private int y;
 

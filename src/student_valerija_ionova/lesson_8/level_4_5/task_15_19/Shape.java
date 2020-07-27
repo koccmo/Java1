@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_8.level_4.task_15_19;
+package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 
 /*Task 15
 Создание иерархии класса Shape (геометрическая фигура).
@@ -8,7 +8,7 @@ package student_valerija_ionova.lesson_8.level_4.task_15_19;
 
 */
 
-public abstract class Shape {
+abstract class Shape {
 
     private String title;
 

@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_9.level_6;
 
-public class FraudRuleTest {
+class FraudRuleTest {
 
     public static void main (String [] args){
 

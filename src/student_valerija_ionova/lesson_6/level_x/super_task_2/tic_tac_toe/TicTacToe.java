@@ -13,7 +13,7 @@ package student_valerija_ionova.lesson_6.level_x.super_task_2.tic_tac_toe;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class TicTacToe {
+class TicTacToe {
 
     public int[][] createField(){
         int [][] game = {{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};

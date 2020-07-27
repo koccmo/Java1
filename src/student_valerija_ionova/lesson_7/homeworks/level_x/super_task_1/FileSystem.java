@@ -37,7 +37,7 @@ package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_1;
 
 import java.util.ArrayList;
 
-public class FileSystem {
+class FileSystem {
 
     private ArrayList <Disk> listOfDisks = new ArrayList <Disk> ();
 

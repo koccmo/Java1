@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_8.level_5;
+package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 
 /*Создайте класс ShapeUtilTest
 и напишите тесты для методов:
@@ -16,9 +16,7 @@ shape[1] = shapeUtil.createRandomSquare();
 shape[2] = shapeUtil.createRandomRectangle();
 shape[3] = shapeUtil.createRandomTriangle();*/
 
-import student_valerija_ionova.lesson_8.level_4.task_15_19.Shape;
-
-public class ShapeUtilTest {
+class ShapeUtilTest {
 
     public static void main (String [] args){
 

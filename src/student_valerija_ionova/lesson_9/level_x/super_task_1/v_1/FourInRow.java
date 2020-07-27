@@ -7,7 +7,7 @@ package student_valerija_ionova.lesson_9.level_x.super_task_1.v_1;
 
 import java.util.Scanner;
 
-public class FourInRow {
+class FourInRow {
 
     int [][] createNewField() {
         int[][] field = {{0, 0, 0, 0, 0, 0, 0},

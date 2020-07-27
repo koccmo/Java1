@@ -1,6 +1,6 @@
-package student_valerija_ionova.lesson_8.level_4.task_15_19;
+package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 
-public class CircleTest {
+class CircleTest {
 
     public static void main (String [] args){
 

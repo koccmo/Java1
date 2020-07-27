@@ -6,7 +6,7 @@ package student_valerija_ionova.lesson_9.level_6;
 import java.util.ArrayList;
 
 
-public class FraudDetectionResult {
+class FraudDetectionResult {
 
     private boolean fraud;
     private ArrayList <String> ruleNames;

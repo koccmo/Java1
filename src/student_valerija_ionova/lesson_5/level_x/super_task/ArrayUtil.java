@@ -5,7 +5,7 @@ package student_valerija_ionova.lesson_5.level_x.super_task;
 import java.util.Scanner;
 import java.util.Random;
 
-public class ArrayUtil {
+class ArrayUtil {
 
 
     //- запросите у пользователя с консоли длину массива

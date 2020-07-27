@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_1;
 
-public class ObjectOnDisk {
+class ObjectOnDisk {
 
     private String name;
     private int sizeInByte;

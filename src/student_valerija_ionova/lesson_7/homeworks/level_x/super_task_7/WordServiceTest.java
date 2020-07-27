@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_7;
 
 import java.util.Arrays;
 
-public class WordServiceTest {
+class WordServiceTest {
 
     public static void main (String [] args){
         WordServiceTest wordServiceTest = new WordServiceTest();

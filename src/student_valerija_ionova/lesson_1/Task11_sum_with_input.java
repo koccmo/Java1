@@ -4,7 +4,7 @@ package student_valerija_ionova.lesson_1;
 
 import java.util.Scanner;
 
-public class Task11_sum_with_input {
+class Task11_sum_with_input {
     public static void main (String[] args){
 
         System.out.println("This program prints the sum of two numbers :D");

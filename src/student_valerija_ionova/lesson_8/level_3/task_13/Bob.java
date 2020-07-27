@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_8.level_3.task_13;
 
-public class Bob extends Family{
+class Bob extends Family{
 
     private int numberOfFriends;
 

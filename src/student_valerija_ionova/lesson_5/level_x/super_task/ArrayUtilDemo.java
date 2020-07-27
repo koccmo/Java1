@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_5.level_x.super_task;
 
-public class ArrayUtilDemo {
+class ArrayUtilDemo {
     public static void main(String[] args){
 
         ArrayUtil arrayUtil = new ArrayUtil();

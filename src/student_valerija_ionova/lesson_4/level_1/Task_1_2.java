@@ -7,7 +7,7 @@ package student_valerija_ionova.lesson_4.level_1;
 
 import java.util.Scanner;
 
-public class Task_1_2 {
+class Task_1_2 {
     public static void main(String[] args){
         System.out.println("Please input the number:");
         Scanner number = new Scanner (System.in);

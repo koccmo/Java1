@@ -4,7 +4,7 @@ package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_3_6;
 
 import java.math.BigDecimal;
 
-public class InsurancePolicyPremiumCalculatorTest {
+class InsurancePolicyPremiumCalculatorTest {
 
     public static void main(String [] args){
         InsurancePolicyPremiumCalculatorTest insurancePolicyPremiumCalculatorTest = new InsurancePolicyPremiumCalculatorTest();

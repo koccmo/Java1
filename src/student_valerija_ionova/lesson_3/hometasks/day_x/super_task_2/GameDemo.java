@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_3.hometasks.day_x.super_task_2;
 
 import java.util.Scanner;
 
-public class GameDemo {
+class GameDemo {
     public static void main(String[] args){
 
         Game bowling = new Game();

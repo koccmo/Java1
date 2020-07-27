@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_3.hometasks.day_6.task_24;
 
-public class WashMachineDemo {
+class WashMachineDemo {
     public static void main(String[] args){
         WashMachine washMachine = new WashMachine("AEG", 489, true);
         washMachine.presentation();
