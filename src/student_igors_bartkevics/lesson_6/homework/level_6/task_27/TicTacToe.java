@@ -119,7 +119,7 @@ public class TicTacToe {
     }
 
     public boolean isDrawPosition(int[][] field) {
-        TicTacToe ticTacToe = new TicTacToe();
+        TicTacToe ticTacToe = new TicTacToe();  // а зачем тут создавать инстанцию класса?
 
         return ticTacToe.isFieldFilled(field) && !ticTacToe.isWinPosition(field, 1) &&
                 !ticTacToe.isWinPosition(field, 0);
@@ -139,7 +139,7 @@ public class TicTacToe {
     }
 
     public boolean isWinPosition(int[][] field, int playerToCheck) {
-        TicTacToe ticTacToe = new TicTacToe();
+        TicTacToe ticTacToe = new TicTacToe();   // а зачем тут создавать инстанцию класса?
         return ticTacToe.isWinPositionForHorizontals(field, playerToCheck) ||
                 ticTacToe.isWinPositionForVerticals(field, playerToCheck) ||
                 ticTacToe.isWinPositionForDiagonals(field, playerToCheck);
