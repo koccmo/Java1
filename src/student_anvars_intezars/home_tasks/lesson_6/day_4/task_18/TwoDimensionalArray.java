@@ -21,6 +21,7 @@ public class TwoDimensionalArray {
         Random random = new Random();
 
         // ставь фигурные скобки у цикла for в любом случае
+		// это улучшает чтение кода
         for (int i = 0; i < array.length; i++)
             for (int j = 0; j < array.length; j++)
                 array[i][j] = random.nextInt(10);
