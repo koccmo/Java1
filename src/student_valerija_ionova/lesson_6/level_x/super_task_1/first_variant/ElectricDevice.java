@@ -36,7 +36,7 @@ class ElectricDevice {
     }
 
 
-    public InsuranceCategory print(){
+    public InsuranceCategory print(){ // а почему метод называется print?
         return insuranceCategory;
     }
 
