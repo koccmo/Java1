@@ -1,6 +1,6 @@
 package student_roberts_kupcs.lesson_3.homeworks.day_4;
 
-public class Book {
+class Book {
 
     // title - expected ;
     private String title;

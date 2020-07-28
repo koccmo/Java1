@@ -1,6 +1,6 @@
 package student_roberts_kupcs.lesson_3.homeworks.day_6;
 
-public class BankAccountDemo {
+class BankAccountDemo {
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount("Viktor", 100000);
         String ownerFirstName = bankAccount.getOwner();

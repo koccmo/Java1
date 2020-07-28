@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_7.homework.level_1;
+package student_roberts_kupcs.lesson_7.homework.level_1.level_1;
 
 class WorldServiceTest {
     public static void main(String[] args) {

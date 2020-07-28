@@ -2,7 +2,7 @@ package student_roberts_kupcs.lesson_3.homeworks.day_1;
 
 
 
-public class RobotDemo {
+class RobotDemo {
     public static void main(String[] args) {
 
         // создайте экземпляр класса Robot вызвав конструктор класса Task_3

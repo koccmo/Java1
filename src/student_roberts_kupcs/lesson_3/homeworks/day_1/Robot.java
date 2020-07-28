@@ -2,7 +2,7 @@ package student_roberts_kupcs.lesson_3.homeworks.day_1;
 
     // Task_1
     // Создайте класс робот (Robot).
-public class Robot {
+class Robot {
 
     // Task_12
     // Добавьте в класс Robot свойство name

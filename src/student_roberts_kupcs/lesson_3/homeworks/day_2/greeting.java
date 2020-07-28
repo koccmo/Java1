@@ -1,7 +1,7 @@
 package student_roberts_kupcs.lesson_3.homeworks.day_2;
 
 // название класса с большой буквы!
-public class greeting {
+class greeting {
     public static void main(String[] args) {
 
         String userName = "Roberts";

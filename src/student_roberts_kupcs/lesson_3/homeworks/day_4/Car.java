@@ -1,6 +1,6 @@
 package student_roberts_kupcs.lesson_3.homeworks.day_4;
 
-public class Car {
+class Car {
     private String model;
 
     public Car(String newModel) {
