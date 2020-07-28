@@ -4,6 +4,7 @@ public class CalculatorTest {
     public static void main(String[] args) {
         CalculatorTest calculatorTest = new CalculatorTest();
         calculatorTest.numberIsEven();
+        // на отрицательный сченарий тоже надо проверять
     }
 
         public void numberIsEven () {
