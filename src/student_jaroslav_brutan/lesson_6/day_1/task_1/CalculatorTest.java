@@ -4,7 +4,7 @@ public class CalculatorTest {
     public static void main(String[] args) {
         CalculatorTest test = new CalculatorTest();
         test.isEvenTest();
-
+		// тест на отрицательный результат тоже нужен
     }
     public void isEvenTest(){
         int number = 6;
