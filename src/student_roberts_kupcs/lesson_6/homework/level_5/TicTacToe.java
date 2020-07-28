@@ -54,7 +54,7 @@ class TicTacToe {
     }
 
     public boolean isWinPosition(int[][] field, int playerToCheck) {
-        TicTacToe ticTacToe = new TicTacToe();
+        TicTacToe ticTacToe = new TicTacToe();  // зачем создавать тут инстанцию?
         if (ticTacToe.isWinPositionForHorizontals(field, playerToCheck)) {
             return true;
         } else if (ticTacToe.isWinPositionForVerticals(field, playerToCheck)) {
@@ -67,7 +67,9 @@ class TicTacToe {
     }
 
     public boolean isDrawPosition(int[][] field) {
-        TicTacToe ticTacToe = new TicTacToe();
+        TicTacToe ticTacToe = new TicTacToe();  // зачем создавать тут инстанцию?
+
+		// Эту вложенность if + for читать почти не возможно!
         if ((!ticTacToe.isWinPositionForVerticals(field, 1)) && (ticTacToe.isWinPositionForVerticals(field, 0))) {
             if ((!ticTacToe.isWinPositionForHorizontals(field, 1)) && (ticTacToe.isWinPositionForHorizontals(field, 0))) {
                 if ((!ticTacToe.isWinPositionForDiagonals(field, 1)) && (ticTacToe.isWinPositionForDiagonals(field, 0))) {
