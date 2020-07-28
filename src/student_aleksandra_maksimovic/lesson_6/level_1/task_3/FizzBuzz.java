@@ -25,6 +25,9 @@ class FizzBuzz {
  */
 public class FizzBuzz {
 
+	// условия лучше сразу выносить в отдельные private методы:
+	//private boolean isDevidedBy3(int number)
+	//private boolean isDevidedBy5(int number)
     public String detect(int number) {
         if ((number % 3 == 0) && (number % 5 == 0)) return "FizzBuzz";
         else if (number % 3 == 0) return "Fizz";
