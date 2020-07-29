@@ -1,6 +1,6 @@
-package student_roberts_kupcs.lesson_2.homeworks.day_x;
+package student_roberts_kupcs.lesson_2.homeworks.day_x.task_2;
 
-public class SumTwoNumbers {
+class SumTwoNumbers {
     public static void main(String[] args) {
         int numberOne = 1;  //Обращение к локальным переменным должно быть выполнено только после того, как они будут
         // инициализированы
