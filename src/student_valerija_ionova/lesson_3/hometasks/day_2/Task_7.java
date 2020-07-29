@@ -9,7 +9,7 @@ package student_valerija_ionova.lesson_3.hometasks.day_2;
 ваше имя. Выведете на консоль значение этой переменной.
     */
 
-public class Task_7 {
+class Task_7 {
     public static void main(String[] args) {
         String myName = "Valerija";
         System.out.println(myName);

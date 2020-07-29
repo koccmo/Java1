@@ -27,7 +27,7 @@ Task38
 
 import java.util.Random;
 
-public class ArrayUtil {
+class ArrayUtil {
 
     public int [] createArray(int arrayLength){
         int newArray [] = new int [arrayLength];

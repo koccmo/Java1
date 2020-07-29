@@ -10,7 +10,7 @@ package student_valerija_ionova.lesson_3.hometasks.day_1.task_1_6;
         Task_6
     }*/
 
-public class RobotDemo {
+class RobotDemo {
     public static void main(String[] args){
 
         // создайте экземпляр класса Robot вызвав конструктор класса

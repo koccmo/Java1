@@ -23,7 +23,7 @@ Stock ("акция") таким образом,
 Текущая, минимальная и максимальная стоимость
 должны меняться только через метод updatePrice().*/
 
-public class Stock {
+class Stock {
 
     private String name;
     private double currentPrice;

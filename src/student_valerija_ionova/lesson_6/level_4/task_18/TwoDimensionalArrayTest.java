@@ -5,7 +5,7 @@ package student_valerija_ionova.lesson_6.level_4.task_18;
 чисел в массиве.*/
 
 
-public class TwoDimensionalArrayTest {
+class TwoDimensionalArrayTest {
     public static void main(String[] args){
         TwoDimensionalArrayTest arrayTest = new TwoDimensionalArrayTest();
         arrayTest.testSumOfTwoDimensionalArray();

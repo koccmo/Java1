@@ -3,7 +3,7 @@ package student_roberts_kupcs.lesson_2.homeworks.day_1;
 
 import java.util.Scanner;
 
-public class Task_1 {
+class Task_1 {
     public static void main(String[] args) {
         Scanner myInput = new Scanner( System.in) ;
         System.out.println("Enter first number: ");

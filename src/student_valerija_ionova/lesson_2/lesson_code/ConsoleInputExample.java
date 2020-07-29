@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_2.lesson_code;
 
 import java.util.Scanner;
 
-public class ConsoleInputExample {
+class ConsoleInputExample {
     public static void main(String[] args){
 
         /* System.in - vhodnoj potok

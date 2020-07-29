@@ -2,7 +2,7 @@ package student_roberts_kupcs.lesson_3.homeworks.day_4;
 
 import static java.lang.System.out;  // что это за импорт?
 
-public class BankAccountDemo {
+class BankAccountDemo {
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount("Viktor", "Savonin", 100000);
         String ownerFirstName = bankAccount.getOwnerFirstName();

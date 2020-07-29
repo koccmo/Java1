@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_x.part_1_basic.task_1_18;
 
-public class BankAccountCurrentBalanceCalculatorTest {
+class BankAccountCurrentBalanceCalculatorTest {
     public static void main (String[] args){
         BankAccountCurrentBalanceCalculatorTest bankAccountCurrentBalanceCalculatorTest = new BankAccountCurrentBalanceCalculatorTest();
 

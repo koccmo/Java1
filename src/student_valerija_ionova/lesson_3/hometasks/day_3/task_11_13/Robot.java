@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_3.hometasks.day_3.task_11_13;
 
-public class Robot {
+class Robot {
 
     /*Task11
     Добавьте в класс Robot свойство name:*/

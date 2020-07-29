@@ -7,7 +7,7 @@ package student_valerija_ionova.lesson_2.homeworks.day2;
 
 import java.util.Scanner;
 
-public class Task_8 {
+class Task_8 {
     public static void main(String[] args) {
 
         System.out.println("Программа запрашивает имя и приветствует Вас!");

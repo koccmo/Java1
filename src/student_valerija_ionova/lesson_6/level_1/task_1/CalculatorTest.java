@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_6.level_1.task_1;
 
-public class CalculatorTest {
+class CalculatorTest {
     public static void main(String [] args){
         CalculatorTest calculatorTest = new CalculatorTest();
         calculatorTest.testIsEvenFalse();

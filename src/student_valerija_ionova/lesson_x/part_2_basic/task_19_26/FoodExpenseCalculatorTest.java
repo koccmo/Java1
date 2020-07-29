@@ -3,7 +3,7 @@ package student_valerija_ionova.lesson_x.part_2_basic.task_19_26;
 
 //Создайте класс FoodExpensesCalculatorTest и напишите автоматические юнит тесты для метода calculateExpensesAmount().
 
-public class FoodExpenseCalculatorTest {
+class FoodExpenseCalculatorTest {
 
     public static void main(String[] args) {
         FoodExpenseCalculatorTest foodExpenseCalculatorTest = new FoodExpenseCalculatorTest();

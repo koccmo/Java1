@@ -21,7 +21,7 @@ class FizzBuzz {
 
 }*/
 
-public class FizzBuzz {
+class FizzBuzz {
 
     public String detect(int number) {
         if ((number % 3 == 0) && (number % 5 == 0)) return "FizzBuzz";

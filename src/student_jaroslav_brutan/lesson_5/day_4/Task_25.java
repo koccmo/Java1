@@ -1,6 +1,6 @@
 package student_jaroslav_brutan.lesson_5.day_4;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class Task_25 {

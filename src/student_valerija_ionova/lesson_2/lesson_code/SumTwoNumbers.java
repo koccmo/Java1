@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_2.lesson_code;
 
-public class SumTwoNumbers {
+class SumTwoNumbers {
     public static void main(String[] args) {
 
         // one line comment

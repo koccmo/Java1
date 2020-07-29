@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_3.hometasks.day_6.task_24;
 
-public class WashMachine {
+class WashMachine {
     private String mark;
     private double price;
     private boolean isDrying;

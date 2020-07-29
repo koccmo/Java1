@@ -10,7 +10,7 @@ package student_valerija_ionova.lesson_3.hometasks.day_x.super_task_1;
 если кол-во попыток исчерпано.*/
 
 
-public class UserLoginServiceTest {
+class UserLoginServiceTest {
     public static void main(String[] args) {
 
         UserLoginServiceTest userLoginServiceTest = new UserLoginServiceTest();

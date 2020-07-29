@@ -10,7 +10,7 @@ import java.util.Random;
 
 class ArrayUtil {
     public int[] createArray(int arrayLength) {
-        int arrayIntegers[] = new int[arrayLength];
+        int[] arrayIntegers = new int[arrayLength];
         return arrayIntegers;
     }
 
@@ -21,7 +21,9 @@ class ArrayUtil {
 
     public void fillArrayWithRandomNumbers(int[] array) {
         Random rand = new Random();
-
+        for (int i = 0; i < array.length; i++) {
+            array[i] = rand.nextInt(50);
+        }
     }
 
     // Task35
@@ -29,14 +31,32 @@ class ArrayUtil {
     //распечатки массива целых чисел на консоль.
 
     public void printArrayToConsole(int[] array) {
-
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i] + " ");
+        }
     }
 
     //Task36
     //Создайте в классе ArrayUtil метод для
     //нахождения максимального числа в массиве целых чисел.
 
-    //public int findMaxNumber(int[] array) {
+    public int findMaxNumber(int[] array) {
+        int maxNumber = array[0];
+        for (int number : array) {
+            if (number > maxNumber) {
+                maxNumber = number;
+            }
+        }
+        return maxNumber;
+    }
 
-    //}
+    public int findMinNumber(int[] array) {
+        int minNumber = array[0];
+        for (int number : array) {
+            if (number < minNumber) {
+                minNumber = number;
+            }
+        }
+        return minNumber;
+    }
 }

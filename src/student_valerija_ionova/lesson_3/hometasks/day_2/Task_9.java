@@ -14,7 +14,7 @@ package student_valerija_ionova.lesson_3.hometasks.day_2;
 
 import java.util.Scanner;
 
-public class Task_9 {
+class Task_9 {
     public static void main(String[] args){
         //Запрашиваем имя
        System.out.println("Please input your name:");

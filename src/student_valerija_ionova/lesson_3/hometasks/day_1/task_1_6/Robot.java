@@ -14,7 +14,7 @@ package student_valerija_ionova.lesson_3.hometasks.day_1.task_1_6;
     }
     }*/
 
-public class Robot {
+class Robot {
 
         //Task2 В классе робот (Robot) создайте конструктор без параметров:
         public Robot() {

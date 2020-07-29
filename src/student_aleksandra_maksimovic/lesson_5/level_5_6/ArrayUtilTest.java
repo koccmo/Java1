@@ -23,8 +23,11 @@ import student_aleksandra_maksimovic.testing.Tester;
  */
 public class ArrayUtilTest {
     public static void main(String[] args) {
-        var tester = new Tester();
 
+		//не применяйте в одном месте два подхода с var и без!
+		// Или один или второй! А иначе логичный вопрос:
+		// почему в одном месте так, а в другом иначе?
+    	Tester tester = new Tester();
         ArrayUtil arrayUtil = new ArrayUtil();
 
         int[] arrTest =  arrayUtil.createArray(6);

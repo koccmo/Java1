@@ -8,7 +8,7 @@ public class Task_26 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter array length");
         int arrayLength = scanner.nextInt();
-        int[] numbers = new int[scanner.nextInt()];
+        int[] numbers = new int[arrayLength];
         Random randomNumbers = new Random();
         for (int i = 0;i < numbers.length;i++){
             numbers[i] = randomNumbers.nextInt(20);

@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_x.part_2_basic.task_19_26;
 
 //Для этого создайте класс TransactionFactoryTest и протестируйте методы создания транзакций.
 
-public class TransactionFactoryTest {
+class TransactionFactoryTest {
 
     public static void main(String [] args){
         TransactionFactoryTest transactionFactoryTest = new TransactionFactoryTest();

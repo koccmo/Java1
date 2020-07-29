@@ -7,7 +7,7 @@ package student_valerija_ionova.lesson_3.hometasks.day_6.task_25;
 Класс с объявлением фигуры круг должен называться "Circle".
 Класс с демонстрацией работы должен называться "CircleDemo".*/
 
-public class Circle {
+class Circle {
 
     private double radius;
 
