@@ -1,17 +1,7 @@
-package student_valerija_ionova.lesson_6.level_x.super_task_2.tic_tac_toe;
+package student_valerija_ionova.lesson_6.level_x.super_task_2.tic_tac_toe.v1;
 
-/*Создать простой искуственный интеллект (компьютерного игрока)
-для игры в крестики нолики из day_5 и day_6.
-Искусственный интеллект можно реализовать
-так, что он будет выбирать рандомную пустую клетку
-и ходить в неё. А можно научить компьютер распознавать
-выигрышные комбинации в один ход и выигрывать, а
-так же защищаться от проигрыша в один ход если это
-возможно.
-*/
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 class TicTacToe {
 
@@ -20,15 +10,12 @@ class TicTacToe {
         return game;
     }
 
-
-
     public boolean isWinPositionForHorizontals(int[][] field, int playerToCheck){
         boolean answer =false;
         for (int i=0; i<3; i++){
             if ((field[i][0] == playerToCheck) && (field[i][1] == playerToCheck) && (field[i][2] == playerToCheck)) {
                 answer = true;
             }
-
         }
         return answer;
     }
@@ -106,31 +93,20 @@ class TicTacToe {
     }
 
     public void printFieldToConsole(int[][] field){
-        //int [] array = new int [3];
         for (int i = 0; i< 3; i++){
             for (int j = 0; j< 3; j++){
                 System.out.print(field[i][j]+" ");
-                //array[j] = field[i][j];
             }
             System.out.println();
-            //System.out.println(Arrays.toString(array));
         }
     }
 
-    /*public boolean checkIfWillWin (int [][] field, int player){
-        if ((isWinPosition(field, player)) || (isDrawPosition(field))){
-            return true;
-        }else return false;
-    }*/
-
     public boolean perspectiveLineHorizontal(int [][] field, Move move){
         boolean answer = false;
-        //System.out.println("x= "+move.getX()+ " y= "+move.getY());
         switch (move.getX()){
             case 0:{
                 if (((field[move.getY()][1] == -1) || (field[move.getY()][1] == 1)) &&
                         ((field[move.getY()][2] == -1) || (field[move.getY()][2] == 1))) {
-                    //System.out.println("result0 "+answer);
                     answer = true;
                 }
             } break;
@@ -138,7 +114,6 @@ class TicTacToe {
                 if (((field[move.getY()][0] == -1) || (field[move.getY()][0] == 1)) &&
                         ((field[move.getY()][2] == -1) || (field[move.getY()][2] == 1))) {
                     answer = true;
-                    //System.out.println("result1 "+answer);
                 }
             } break;
             case 2:{
@@ -146,10 +121,8 @@ class TicTacToe {
                 if (((field[move.getY()][1] == -1) || (field[move.getY()][1] == 1)) &&
                         ((field[move.getY()][0] == -1) || (field[move.getY()][0] == 1))) {
                     answer = true;
-                    //System.out.println("result2 "+answer);
                 }
             }break;
-            //default: return false;
         }
         return answer;
     }
@@ -169,7 +142,6 @@ class TicTacToe {
                 if (((field[1][move.getX()] == -1) || (field[2][move.getX()] == 1)) &&
                         ((field[0][move.getX()] == -1) || (field[0][move.getX()] == 1))) answer = true;
             }break;
-            //default: return false;
         }
         return answer;
     }
@@ -208,7 +180,6 @@ class TicTacToe {
                 if (((field[1][move.getX()] == -1) || (field[2][move.getX()] == 1)) &&
                         ((field[0][move.getX()] == -1) || (field[0][move.getX()] == 1))) answer = true;
             }break;
-            //default: return false;
         }
     }
         return answer;
@@ -230,7 +201,6 @@ class TicTacToe {
                     if (((field[1][1] == -1) || (field[1][1] == 1)) &&
                             ((field[0][2] == -1) || (field[0][2] == 1))) answer = true;
                 }break;
-                //default: return false;
             }
         }
         return answer;
@@ -249,10 +219,6 @@ class TicTacToe {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (field[i][j] == -1) {
-                    //System.out.println("field i= " + i + " j= " + j);
-                    /*for (int k = 0; k < 3; k++) {
-                        System.out.println(Arrays.toString(field[k]));
-                    }*/
                     int[][] ifField1 = new int[3][3];
                     for (int k = 0; k < 3; k++) {
                         for (int l = 0; l < 3; l++) {
@@ -262,7 +228,6 @@ class TicTacToe {
                     ifField1[i][j] = 1;
 
                     if (isWinPosition(ifField1, 1)) {
-                        //System.out.println("Voshol sjuda");
                         return new Move(j, i);
                     }
 
@@ -274,10 +239,6 @@ class TicTacToe {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (field[i][j] == -1) {
-                    //System.out.println("field i= " + i + " j= " + j);
-                    /*for (int k = 0; k < 3; k++) {
-                        System.out.println(Arrays.toString(field[k]));
-                    }*/
                     int[][] ifField0 = new int[3][3];
                     for (int k = 0; k < 3; k++) {
                         for (int l = 0; l < 3; l++) {
@@ -300,7 +261,6 @@ class TicTacToe {
                 if (field[i][j] == -1){
                 move = new Move(i, j);
                 if (ifPerspectiveMove(field, move)) {
-                    //System.out.println("//if second");
                     return move;
                 }
             }
@@ -315,124 +275,13 @@ class TicTacToe {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (field[i][j] == -1)
-                    //System.out.println("////if first");
                     return new Move(i, j);
 
                 }
             }
         }
         move = new Move(0,0);
-        //System.out.println("the End");
         return move;
         }
-
-
-
-    public void playWithComputer() {
-        int[][] field = createField();
-        System.out.println("Let's start game:");
-        printFieldToConsole(field);
-        while(true) {
-            Move move0;
-            boolean freeField = false;
-            do {
-                move0 = getNextMove(0);
-                if (field[move0.getY()][move0.getX()] == -1){
-                    freeField = true;
-                }else{
-                    System.out.println("It's not free field! Please try one more time!");
-                }
-            }while(!freeField);
-
-            field[move0.getY()][move0.getX()] = 0;
-            if (isWinPosition(field, 0)) {
-                System.out.println("Player 0 WIN!");
-                break;
-            }
-            if (isDrawPosition(field)) {
-                System.out.println("DRAW!");
-                break;
-            }
-
-            printFieldToConsole(field);
-            System.out.println("Computers's turn!");
-
-            Move move1 = computersTurn(field);
-            /*freeField = false;
-            do {
-                move1 = getNextMove(1);
-                if (field[move1.getY()][move1.getX()] == -1){
-                    freeField = true;
-                }else{
-                    System.out.println("It's not free field! Please try one more time!");
-                }
-            }while(!freeField);*/
-
-
-            field[move1.getY()][move1.getX()] = 1;
-            printFieldToConsole(field);
-            if (isWinPosition(field, 1)) {
-                System.out.println("Player 1 WIN!");
-                break;
-            }
-            if (isDrawPosition(field)) {
-                System.out.println("DRAW!");
-                break;
-            }
-
-
-        }  //end of the game
-    }
-
-    public void play() {
-        int[][] field = createField();
-        System.out.println("Let's start game:");
-        printFieldToConsole(field);
-        while(true) {
-            Move move0;
-            boolean freeField = false;
-            do {
-                move0 = getNextMove(0);
-                if (field[move0.getY()][move0.getX()] == -1){
-                    freeField = true;
-                }else{
-                    System.out.println("It's not free field! Please try one more time!");
-                }
-            }while(!freeField);
-
-            field[move0.getY()][move0.getX()] = 0;
-            if (isWinPosition(field, 0)) {
-                System.out.println("Player 0 WIN!");
-                break;
-            }
-            if (isDrawPosition(field)) {
-                System.out.println("DRAW!");
-                break;
-            }
-
-            printFieldToConsole(field);
-            Move move1;
-            freeField = false;
-            do {
-                move1 = getNextMove(1);
-                if (field[move1.getY()][move1.getX()] == -1){
-                    freeField = true;
-                }else{
-                    System.out.println("It's not free field! Please try one more time!");
-                }
-            }while(!freeField);
-
-            field[move1.getY()][move1.getX()] = 1;
-            printFieldToConsole(field);
-            if (isWinPosition(field, 1)) {
-                System.out.println("Player 1 WIN!");
-                break;
-            }
-            if (isDrawPosition(field)) {
-                System.out.println("DRAW!");
-                break;
-            }
-        }
-    }
 
 }

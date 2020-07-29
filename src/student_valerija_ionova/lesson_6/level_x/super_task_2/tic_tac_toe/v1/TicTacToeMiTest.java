@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_6.level_x.super_task_2.tic_tac_toe;
+package student_valerija_ionova.lesson_6.level_x.super_task_2.tic_tac_toe.v1;
 
 import java.util.Arrays;
 
