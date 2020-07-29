@@ -7,4 +7,11 @@ package student_roberts_kupcs.lesson_7.homework.level_1.level_6;
 //Все тестовые сценарии должны отрабатывать без ошибок.
 
 class PowerCalculator {
+    public int numberPower(int number, int numpower) {
+        int result = 1;
+        for (int i = 1; i <= numpower; i++) {
+            result = result * number;
+        }
+        return result;
+    }
 }
