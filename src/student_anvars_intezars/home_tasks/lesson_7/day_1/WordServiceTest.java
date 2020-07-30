@@ -8,6 +8,7 @@ public class WordServiceTest {
         wordServiceTest.mostFrequentWordInTextTest();
         wordServiceTest.splitLineOfTextToWordsTest();
         wordServiceTest.countWordsInTextTest();
+        wordServiceTest.mostFrequentWordInTextTest2();
     }
 
     public void mostFrequentWordInTextTest() {
@@ -28,6 +29,7 @@ public class WordServiceTest {
         String[] result = wordService.getTextLineToArray(text);
         if ((result[0].equals("I")) && (result[1].equals("believe")) && (result[2].equals("in") && result[3].equals("programming"))) {
             //System.out.println(Arrays.toString(result));
+            System.out.println();
             System.out.println("Test for splitting line of text to words = OK");
             System.out.println();
         }
@@ -46,6 +48,19 @@ public class WordServiceTest {
         }
         else {
             System.out.println("Test for counting words = FAIL");
+        }
+    }
+
+    public void mostFrequentWordInTextTest2() {
+        WordService wordService = new WordService();
+        String wordsFromText = ("Our group is the best group");
+        System.out.println();
+        String result = wordService.findMostFrequentWord(wordsFromText);
+        if(result.equals("group")) {
+            System.out.println("Second test for finding most frequent word = OK");
+        }
+        else {
+            System.out.println("Second test for finding most frequent word = FAIL");
         }
     }
 }

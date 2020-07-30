@@ -6,9 +6,9 @@ class WordService {
 
     public String findMostFrequentWord(String text) {
         String[] readyText = getTextLineToArray(text);
-        countWordsInText(readyText);
+        String result = countWordsInText(readyText);
 
-        return text;
+        return result;
     }
 
 
