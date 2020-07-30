@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_7.homework.level_2_and_3;
+package student_igors_bartkevics.lesson_7.homework.level_2_and_3.task_4_to_7;
 
 import java.util.List;
 

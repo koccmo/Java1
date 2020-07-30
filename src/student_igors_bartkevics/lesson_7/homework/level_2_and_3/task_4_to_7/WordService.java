@@ -34,7 +34,7 @@ Task_2:
 Для этого создайте в классе WordService отдельные методы для каждой подзадачи.
 Напишите автоматические тесты для каждой подзадачи.
  */
-package student_igors_bartkevics.lesson_7.homework.level_2_and_3;
+package student_igors_bartkevics.lesson_7.homework.level_2_and_3.task_4_to_7;
 
 
 import java.util.ArrayList;
