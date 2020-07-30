@@ -15,7 +15,7 @@ class BankAccountMaxBalanceFinder {
 
 }*/
 
-public class BankAccountMaxBalanceFinder {
+class BankAccountMaxBalanceFinder {
 
     public int find(BankAccount bankAccount) {
         Transaction [] transactions = bankAccount.getTransactions();

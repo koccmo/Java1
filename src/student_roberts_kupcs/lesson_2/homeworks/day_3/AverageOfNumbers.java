@@ -2,7 +2,7 @@ package student_roberts_kupcs.lesson_2.homeworks.day_3;
 
 import java.util.Scanner;
 
-public class AverageOfNumbers {
+class AverageOfNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Number");

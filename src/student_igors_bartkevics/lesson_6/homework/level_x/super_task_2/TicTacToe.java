@@ -13,6 +13,8 @@ package student_igors_bartkevics.lesson_6.homework.level_x.super_task_2;
 import java.util.Random;
 import java.util.Scanner;
 
+
+// Этот класс на 400 строк кода так и просится разбить и упростить!
 public class TicTacToe {
 
     public static void main(String[] args) {

@@ -6,7 +6,7 @@ package student_valerija_ionova.lesson_5.level_x.super_task;
 - заполните массив числами полученными от пользователя
 - распечатайте на консоль все элементы массива.*/
 
-public class Task25 {
+class Task25 {
     public static void main (String [] args){
         ArrayUtil arrayUtil = new ArrayUtil();
 

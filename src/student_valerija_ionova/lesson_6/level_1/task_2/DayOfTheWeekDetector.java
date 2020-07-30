@@ -35,7 +35,7 @@ String detectDayName(int number).
 Создайте класс DayOfTheWeekDetectorTest и напишите
 автоматические тесты для всех сценариев.*/
 
-public class DayOfTheWeekDetector {
+class DayOfTheWeekDetector {
 
     String detectDayName(int number){
         switch (number){

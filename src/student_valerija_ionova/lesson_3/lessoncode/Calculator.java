@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_3.lessoncode;
 
-public class Calculator {
+class Calculator {
     public int sum (int numberOne, int numberTwo){
         return numberOne+numberTwo;
     }

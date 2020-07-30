@@ -5,7 +5,7 @@ package student_valerija_ionova.lesson_2.homeworks.day1;
 
 import java.util.Scanner;
 
-public class Task_1 {
+class Task_1 {
     public static void main(String[] args) {
 
         System.out.println("Эта программа запрашивает 2 целых числа и выполняет: сложение, вычитание, умножение и деление");

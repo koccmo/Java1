@@ -8,7 +8,7 @@ package student_valerija_ionova.lesson_5.level_2;
 
 import java.util.Scanner;
 
-public class Task11 {
+class Task11 {
     public static void main(String[] args) {
 
         int[] numbers = new int[3];

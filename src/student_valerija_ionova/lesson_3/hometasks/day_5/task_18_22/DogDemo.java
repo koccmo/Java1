@@ -14,7 +14,7 @@ Task22
 заставьте её подать голос снова и убедитесь в том,
 что собака изменила свой цвет.*/
 
-public class DogDemo {
+class DogDemo {
     public static void main (String[] args){
         Dog dog = new Dog("Bobby", 2, "pink");
         dog.voice();

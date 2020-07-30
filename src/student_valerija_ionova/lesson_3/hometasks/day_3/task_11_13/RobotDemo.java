@@ -11,7 +11,7 @@ robot2.sayHello();
 robot2.sayYourName();
     }*/
 
-public class RobotDemo {
+class RobotDemo {
     public static void main(String[] args){
 
         Robot robot1 = new Robot("Rider");

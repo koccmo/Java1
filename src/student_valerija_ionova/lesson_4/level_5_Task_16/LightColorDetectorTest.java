@@ -8,7 +8,7 @@ package student_valerija_ionova.lesson_4.level_5_Task_16;
 620 ... 750 - Красный ("Red")
 Вне диапазонов - невидимый спектр ("Invisible Light")*/
 
-public class LightColorDetectorTest {
+class LightColorDetectorTest {
     public static void main(String[] args) {
         LightColorDetectorTest lightColorDetectorTest = new LightColorDetectorTest();
 

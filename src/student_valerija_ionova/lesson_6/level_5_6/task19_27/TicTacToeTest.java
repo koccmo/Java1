@@ -21,7 +21,7 @@ public int[][] createField(). Метод должен создавать дву�
 
 import java.util.Arrays;
 
-public class TicTacToeTest {
+class TicTacToeTest {
     public static void main(String[] args){
         TicTacToeTest ticTacToeTest = new TicTacToeTest();
 

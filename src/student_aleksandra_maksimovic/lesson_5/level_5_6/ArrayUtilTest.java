@@ -27,7 +27,7 @@ public class ArrayUtilTest {
 		//не применяйте в одном месте два подхода с var и без!
 		// Или один или второй! А иначе логичный вопрос:
 		// почему в одном месте так, а в другом иначе?
-    	var tester = new Tester();
+    	Tester tester = new Tester();
         ArrayUtil arrayUtil = new ArrayUtil();
 
         int[] arrTest =  arrayUtil.createArray(6);

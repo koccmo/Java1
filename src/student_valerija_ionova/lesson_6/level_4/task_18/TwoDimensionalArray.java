@@ -14,7 +14,7 @@ int[][] arr = new int[10][20]; vert-gor
 
 import java.util.Random;
 
-public class TwoDimensionalArray {
+class TwoDimensionalArray {
 
     public int[][] newFilledTwoDimensionalArray(){
         int [][] newArray = new int [5][6];

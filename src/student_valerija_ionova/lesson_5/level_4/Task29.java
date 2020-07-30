@@ -9,7 +9,7 @@ package student_valerija_ionova.lesson_5.level_4;
 
 import java.util.Random;
 
-public class Task29 {
+class Task29 {
     public static void main(String[] args){
 
         //- создайте массив произвольной длины

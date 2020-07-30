@@ -28,7 +28,7 @@ Task14
 //import java.util.Scanner;
 import java.util.Random;
 
-public class ArrayUtil {
+class ArrayUtil {
 
 
     public int [] createArray(int arrayLength){

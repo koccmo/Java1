@@ -6,7 +6,7 @@ package student_valerija_ionova.lesson_5.level_x.super_task;
 - распечатайте на консоль все элементы массива
 - найдите наибольшее число в массиве и выведети его на консоль.*/
 
-public class Task27 {
+class Task27 {
 
     public static void main (String [] args){
         ArrayUtil arrayUtil = new ArrayUtil();

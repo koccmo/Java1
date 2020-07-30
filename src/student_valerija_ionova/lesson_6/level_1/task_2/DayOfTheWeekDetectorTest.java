@@ -3,7 +3,7 @@ package student_valerija_ionova.lesson_6.level_1.task_2;
 /*Создайте класс DayOfTheWeekDetectorTest и напишите
 автоматические тесты для всех сценариев*/
 
-public class DayOfTheWeekDetectorTest {
+class DayOfTheWeekDetectorTest {
     public static void main(String [] args){
         DayOfTheWeekDetectorTest detectorTest = new DayOfTheWeekDetectorTest();
         detectorTest.testMonday();

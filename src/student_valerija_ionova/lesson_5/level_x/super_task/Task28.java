@@ -6,7 +6,7 @@ package student_valerija_ionova.lesson_5.level_x.super_task;
 - распечатайте на консоль все элементы массива
 - найдите наименьшее число в массиве и выведети его на консоль.*/
 
-public class Task28 {
+class Task28 {
 
     public static void main (String[] args){
         ArrayUtil arrayUtil = new ArrayUtil();

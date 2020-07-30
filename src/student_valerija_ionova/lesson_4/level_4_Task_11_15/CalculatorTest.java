@@ -9,7 +9,7 @@ Test13 Добавьте в класс CalculatorTest тесты для этог�
 Task14 Добавьте в класс CalculatorTest тесты для этого метода.
 }*/
 
-public class CalculatorTest {
+class CalculatorTest {
     public static void main(String[] args) {
 
         //Calculator calculator = new Calculator();

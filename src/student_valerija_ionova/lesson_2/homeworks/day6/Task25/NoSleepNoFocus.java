@@ -11,7 +11,7 @@ package student_valerija_ionova.lesson_2.homeworks.day6.Task25;
 //
 //PS: Текст (строка) в Java пишется в двойных кавычках.
 
-public class NoSleepNoFocus {
+class NoSleepNoFocus {
     public static void main(String[] args) {
         System.out.println("I wanna coffee");
         System.out.println("So bad");

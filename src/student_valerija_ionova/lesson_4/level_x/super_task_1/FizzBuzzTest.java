@@ -5,7 +5,7 @@ package student_valerija_ionova.lesson_4.level_x.super_task_1;
 
 import student_valerija_ionova.lesson_4.level_x.super_task_1.FizzBuzz;
 
-public class FizzBuzzTest {
+class FizzBuzzTest {
     public static void main(String[] args) {
         FizzBuzzTest fizzBuzzTest = new FizzBuzzTest();
         fizzBuzzTest.fizzBuzzTest();

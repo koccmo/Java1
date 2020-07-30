@@ -8,7 +8,7 @@ package student_valerija_ionova.lesson_5.level_4;
 
 import java.util.Random;
 
-public class Task28 {
+class Task28 {
     public static void main(String[] args){
 
         //- создайте массив произвольной длины

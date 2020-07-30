@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_x.part_2_basic.task_19_26;
 
-public enum ExpenseCategory {
+enum ExpenseCategory {
 
         COMMUNAL_PAYMENTS,  // комунальные платежи
         FOOD,               // еда

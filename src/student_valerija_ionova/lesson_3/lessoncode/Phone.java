@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_3.lessoncode;
 
-public class Phone {
+class Phone {
     private String model;
     private String color;
 

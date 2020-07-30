@@ -43,7 +43,7 @@ public void printFieldToConsole(int[][] field) {
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class TicTacToe {
+class TicTacToe {
 
     public int[][] createField(){
         int [][] game = {{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};
@@ -87,12 +87,8 @@ public class TicTacToe {
     }
 
     public boolean isWinPosition(int[][] field, int playerToCheck){
-        if ((isWinPositionForHorizontals(field, playerToCheck)) || (isWinPositionForDiagonals(field, playerToCheck)) ||
-                (isWinPositionForVerticals(field, playerToCheck))){
-            return true;
-        }else{
-            return false;
-        }
+        return (isWinPositionForHorizontals(field, playerToCheck)) || (isWinPositionForDiagonals(field, playerToCheck)) ||
+                (isWinPositionForVerticals(field, playerToCheck));
     }
 
     public boolean fullField( int [] [] arr){

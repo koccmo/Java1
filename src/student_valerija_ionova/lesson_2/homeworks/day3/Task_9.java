@@ -15,7 +15,7 @@ package student_valerija_ionova.lesson_2.homeworks.day3;
 
 import java.util.Scanner;
 
-public class Task_9 {
+class Task_9 {
     public static void main(String[] args) {
 
         System.out.println("Программа запрашивает число и выводит на экран его таблицу умножения!");

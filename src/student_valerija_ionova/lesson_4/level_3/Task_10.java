@@ -9,7 +9,7 @@ PS: перед решением этой задачи распишите на б
 
 import java.util.Scanner;
 
-public class Task_10 {
+class Task_10 {
     public static void main(String[] args) {
 
         //Input of first number

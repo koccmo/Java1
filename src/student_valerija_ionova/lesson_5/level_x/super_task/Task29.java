@@ -6,7 +6,7 @@ package student_valerija_ionova.lesson_5.level_x.super_task;
 - распечатайте на консоль все элементы массива
 - найдите все чётные числа в массиве и выведети их на консоль.*/
 
-public class Task29 {
+class Task29 {
 
     public static void main (String[] args){
         ArrayUtil arrayUtil = new ArrayUtil();

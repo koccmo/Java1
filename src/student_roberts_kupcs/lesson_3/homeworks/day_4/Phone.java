@@ -1,6 +1,6 @@
 package student_roberts_kupcs.lesson_3.homeworks.day_4;
 
-public class Phone {
+class Phone {
     private String model;
 
     // Error:(6, 12) java: invalid method declaration; return type required (public Book)

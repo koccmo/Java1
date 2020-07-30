@@ -12,7 +12,7 @@ class ArrayLength3 {
 }
 */
 
-public class ArrayLength3 {
+class ArrayLength3 {
 
     public static void main(String[] args) {
         int [] numbers = new int[2];

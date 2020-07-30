@@ -32,7 +32,7 @@ Task 4
     // - true если транзакция является снятием денег со счёта
     // - false если транзакция не является снятием денег со счёта*/
 
-public class Transaction {
+class Transaction {
 
     private String owner;
     private int amount;

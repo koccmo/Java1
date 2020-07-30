@@ -3,7 +3,7 @@ package student_valerija_ionova.lesson_6.level_1.task_3;
 //Создайте класс FizzBuzzTest и напишите автоматические тесты
 //на все сценарии.
 
-public class FizzBuzzTest {
+class FizzBuzzTest {
     public static void main(String [] args){
         FizzBuzzTest fizzBuzzTest = new FizzBuzzTest();
         fizzBuzzTest.testFizzBuzz();

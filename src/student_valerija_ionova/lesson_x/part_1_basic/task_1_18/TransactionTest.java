@@ -4,7 +4,7 @@ package student_valerija_ionova.lesson_x.part_1_basic.task_1_18;
 Для каждого метода напишите два тест кейса, один на позитивный результат,
 другой на негативный.*/
 
-public class TransactionTest {
+class TransactionTest {
     public static void main(String[] args){
         TransactionTest transactionTest = new TransactionTest();
         transactionTest.testIsDepositTrue();

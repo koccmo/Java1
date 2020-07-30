@@ -8,7 +8,7 @@ package student_valerija_ionova.lesson_5.level_4;
 
 import java.util.Scanner;
 
-public class Task25 {
+class Task25 {
 
     public static void main(String[] args){
 

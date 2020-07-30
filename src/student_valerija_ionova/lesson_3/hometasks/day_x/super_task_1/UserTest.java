@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_3.hometasks.day_x.super_task_1;
 
-public class UserTest {
+class UserTest {
     public static void main(String[] args){
 
         UserTest userTest = new UserTest();

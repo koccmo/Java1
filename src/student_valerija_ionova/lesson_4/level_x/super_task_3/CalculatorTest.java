@@ -9,9 +9,9 @@ Test13 Добавьте в класс CalculatorTest тесты для этог�
 Task14 Добавьте в класс CalculatorTest тесты для этого метода.
 }*/
 
-import student_valerija_ionova.lesson_4.level_4_Task_11_15.Calculator;
 
-public class CalculatorTest {
+
+class CalculatorTest {
     public static void main(String[] args) {
 
         //Calculator calculator = new Calculator();

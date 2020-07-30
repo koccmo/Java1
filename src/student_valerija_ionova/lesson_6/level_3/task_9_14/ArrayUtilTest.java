@@ -28,7 +28,7 @@ Task14
 
 import java.util.Arrays;
 
-public class ArrayUtilTest {
+class ArrayUtilTest {
 
     public static void main(String[] args) {
 

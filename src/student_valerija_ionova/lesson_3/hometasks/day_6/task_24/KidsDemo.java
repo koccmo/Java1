@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_3.hometasks.day_6.task_24;
 
-public class KidsDemo {
+class KidsDemo {
     public static void main(String[] args){
         Kids kids1 = new Kids("Глория",10);
         kids1.sayAboutYou();
