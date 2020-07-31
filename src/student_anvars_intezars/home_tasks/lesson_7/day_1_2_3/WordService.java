@@ -1,12 +1,12 @@
-package student_anvars_intezars.home_tasks.lesson_7.day_1;
+package student_anvars_intezars.home_tasks.lesson_7.day_1_2_3;
 
 import java.util.Arrays;
 
 class WordService {
 
     public String findMostFrequentWord(String text) {
-        String[] readyText = getTextLineToArray(text);
-        String resultOfCount = countWordsAfterTextIsSplit(readyText);
+        String[] textAfterSplit = getTextLineToArray(text);
+        String resultOfCount = countWordsAfterTextIsSplit(textAfterSplit);
 
         return resultOfCount;
     }

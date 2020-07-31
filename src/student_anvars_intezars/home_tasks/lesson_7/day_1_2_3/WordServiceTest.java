@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_7.day_1;
+package student_anvars_intezars.home_tasks.lesson_7.day_1_2_3;
 
 public class WordServiceTest {
 
@@ -13,9 +13,9 @@ public class WordServiceTest {
 
     public void mostFrequentWordInTextTest() {
         WordService wordService = new WordService();
-        String text = ("My name is Anvar. My name has muslim roots.");
-        String result = wordService.findMostFrequentWord(text);
-        if (result.equals("My")) {
+        String textExample = ("My name is Anvar. My name has muslim roots.");
+        String resultAfterSearch = wordService.findMostFrequentWord(textExample);
+        if (resultAfterSearch.equals("My")) {
             System.out.println("Test for finding most frequent word = OK");
         }
         else {
@@ -25,9 +25,12 @@ public class WordServiceTest {
 
     public void splitLineOfTextToWordsTest() {
         WordService wordService = new WordService();
-        String text = ("I believe in programming");
-        String[] result = wordService.getTextLineToArray(text);
-        if ((result[0].equals("I")) && (result[1].equals("believe")) && (result[2].equals("in") && result[3].equals("programming"))) {
+        String textExample = ("I believe in programming");
+        String[] textAfterSplit = wordService.getTextLineToArray(textExample);
+        if ((textAfterSplit[0].equals("I"))
+                && (textAfterSplit[1].equals("believe"))
+                && (textAfterSplit[2].equals("in")
+                && textAfterSplit[3].equals("programming"))) {
             //System.out.println(Arrays.toString(result));
             System.out.println();
             System.out.println("Test for splitting line of text to words = OK");
@@ -41,8 +44,8 @@ public class WordServiceTest {
     public void countWordsInTextTest() {
         WordService wordService = new WordService();
         String text = ("How many text words in this text");
-        String[] result = wordService.getTextLineToArray(text);
-        String mostFrequentWord = wordService.countWordsAfterTextIsSplit(result);
+        String[] textAfterSplit = wordService.getTextLineToArray(text);
+        String mostFrequentWord = wordService.countWordsAfterTextIsSplit(textAfterSplit);
         if(mostFrequentWord.equals("text")) {
             System.out.println("Test for counting words = OK");
         }
@@ -53,10 +56,10 @@ public class WordServiceTest {
 
     public void mostFrequentWordInTextTest2() {
         WordService wordService = new WordService();
-        String wordsFromText = ("Our group is the best group");
+        String textExample = ("Our group is the best group");
         System.out.println();
-        String result = wordService.findMostFrequentWord(wordsFromText);
-        if(result.equals("group")) {
+        String resultAfterSearch = wordService.findMostFrequentWord(textExample);
+        if(resultAfterSearch.equals("group")) {
             System.out.println("Second test for finding most frequent word = OK");
         }
         else {
