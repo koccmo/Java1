@@ -40,7 +40,7 @@ class FraudDetectorTest {
         Trader trader = new Trader("Pokemon", "Riga");
         Transaction transaction = new Transaction (trader, 100);
 
-        checkResult("testRule1",detector.isFraud(transaction).getFraud() == true);
+        checkResult("testRule1",detector.isFraud(transaction).getFraud());
     }
 
     void testRule1RuleName(){
@@ -60,7 +60,7 @@ class FraudDetectorTest {
         Trader trader = new Trader("Batman", "Riga");
         Transaction transaction = new Transaction (trader, 1000001);
 
-        checkResult("testRule2",detector.isFraud(transaction).getFraud() == true);
+        checkResult("testRule2",detector.isFraud(transaction).getFraud());
     }
 
     void testRule2RuleName(){
@@ -80,7 +80,7 @@ class FraudDetectorTest {
         Trader trader = new Trader("Batman", "Sydney");
         Transaction transaction = new Transaction (trader, 10001);
 
-        checkResult("testRule3",detector.isFraud(transaction).getFraud() == true);
+        checkResult("testRule3",detector.isFraud(transaction).getFraud());
     }
 
     void testRule3RuleName(){
@@ -100,7 +100,7 @@ class FraudDetectorTest {
         Trader trader = new Trader("Batman", "Jamaica");
         Transaction transaction = new Transaction (trader, 10001);
 
-        checkResult("testRule4",detector.isFraud(transaction).getFraud() == true);
+        checkResult("testRule4",detector.isFraud(transaction).getFraud());
     }
 
     void testRule4RuleName(){
@@ -120,7 +120,7 @@ class FraudDetectorTest {
         Trader trader = new Trader("Batman", "German");
         Transaction transaction = new Transaction (trader, 10001);
 
-        checkResult("testRule5",detector.isFraud(transaction).getFraud() == true);
+        checkResult("testRule5",detector.isFraud(transaction).getFraud());
     }
 
     void testRule5RuleName(){
@@ -140,7 +140,7 @@ class FraudDetectorTest {
         Trader trader = new Trader("Batman", "German");
         Transaction transaction = new Transaction (trader, 101);
 
-        checkResult("testRule5False",detector.isFraud(transaction).getFraud() == false);
+        checkResult("testRule5False",!detector.isFraud(transaction).getFraud());
     }
 
     void testRule2Rule5RuleName(){
