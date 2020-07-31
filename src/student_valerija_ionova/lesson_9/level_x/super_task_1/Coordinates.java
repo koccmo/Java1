@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_9.level_x.super_task_1.v_1;
+package student_valerija_ionova.lesson_9.level_x.super_task_1;
 
 class Coordinates {
 
