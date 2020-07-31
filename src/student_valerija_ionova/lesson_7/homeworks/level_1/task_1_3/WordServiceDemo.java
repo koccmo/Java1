@@ -11,12 +11,6 @@ class WordServiceDemo {
         WordService wordService = new WordService();
         String text = scanner.nextLine();
 
-        /*
-        String [] wordsArray = wordService.createArrayOfWords(text);
-        String [] wordsArrayToLowerCase = wordService.arrayToLowerCase(wordsArray);
-        int [] countOfWords = wordService.countOfWords(wordsArrayToLowerCase);
-        System.out.println("Most frequent word: "+ wordService.findMostFrequentWord(wordsArrayToLowerCase, countOfWords));
-        */
         String word = wordService.wordServiceFull(text);
         System.out.println(word);
     }
