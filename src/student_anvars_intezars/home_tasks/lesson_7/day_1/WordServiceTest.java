@@ -42,7 +42,7 @@ public class WordServiceTest {
         WordService wordService = new WordService();
         String text = ("How many text words in this text");
         String[] result = wordService.getTextLineToArray(text);
-        String mostFrequentWord = wordService.countWordsInText(result);
+        String mostFrequentWord = wordService.countWordsAfterTextIsSplit(result);
         if(mostFrequentWord.equals("text")) {
             System.out.println("Test for counting words = OK");
         }

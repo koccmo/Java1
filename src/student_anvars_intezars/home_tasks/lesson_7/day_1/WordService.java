@@ -6,9 +6,9 @@ class WordService {
 
     public String findMostFrequentWord(String text) {
         String[] readyText = getTextLineToArray(text);
-        String result = countWordsInText(readyText);
+        String resultOfCount = countWordsAfterTextIsSplit(readyText);
 
-        return result;
+        return resultOfCount;
     }
 
 
@@ -18,8 +18,8 @@ class WordService {
         return lineOfTextToWords;
     }
 
-    public String countWordsInText(String[] lineOfTextToWords) {
-        int mostFrequentWord = 0;
+    public String countWordsAfterTextIsSplit(String[] lineOfTextToWords) {
+        int howManyTimesWordIsCounted = 0;
         int count = 0;
         String word = lineOfTextToWords[0];
         String current = lineOfTextToWords[0];
@@ -30,12 +30,12 @@ class WordService {
                 count = 1;
                 current = lineOfTextToWords[i];
             }
-            if (mostFrequentWord < count) {
-                mostFrequentWord = count;
+            if (howManyTimesWordIsCounted < count) {
+                howManyTimesWordIsCounted = count;
                 word = lineOfTextToWords[i];
             }
         }
-        System.out.println("Most frequent word is " + word + ", found " + mostFrequentWord +" times in the text");
+        System.out.println("Most frequent word is " + word + ", found " + howManyTimesWordIsCounted +" times in the text");
         return word;
     }
 
