@@ -1,7 +1,6 @@
 package student_volodya_danilin.lesson_5.level_5;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 class ArrayUtil {
@@ -16,11 +15,7 @@ class ArrayUtil {
         for (int i = 0; i <array.length; i++) {
             array[i] = randomNumber.nextInt(100);
         }
-        /*array[4] = 10; //проверка методов
-        array[6] = 888;
-        array[7] = 10;
-        array[8] = 888;
-        array[9] = 888;*/
+
         return array;
     }
 
@@ -120,6 +115,9 @@ class ArrayUtilTest {
         arrayUtilTest.shouldFillArrayWithRandomNumbers();
         arrayUtilTest.printArray("Filling new array...");
 
+        arrayUtilTest.shouldPrepareArrayForTests();
+        arrayUtilTest.printArray("Filling array with test numbers 10 and 888");
+
         arrayUtilTest.shouldCheckArrayForNumber();
         arrayUtilTest.shouldCheckHowManyTimesNumber();
 
@@ -151,6 +149,14 @@ class ArrayUtilTest {
     public void shouldFillArrayWithRandomNumbers() {
         this.arrayUtil.fillArrayWithRandomNumbers(this.newArray);
     }
+    public void shouldPrepareArrayForTests () {
+        this.newArray[1] = 10;
+        this.newArray[4] = 10;
+        this.newArray[6] = 888;
+        this.newArray[7] = 10;
+        this.newArray[8] = 888;
+        this.newArray[9] = 888;
+    }
 
     public void shouldCheckArrayForNumber () {
         int[] testArray = this.newArray;
@@ -179,7 +185,7 @@ class ArrayUtilTest {
         int[] testArray = this.newArray;
         int searchValue = 888;
         int newValue = 333;
-        int count = 2;
+        int count = 2; // сколько раз будем менять searchValue на newValue
 
         this.newArray = this.arrayUtil.replaceGivenNumber(testArray, searchValue, newValue, count);
     }
