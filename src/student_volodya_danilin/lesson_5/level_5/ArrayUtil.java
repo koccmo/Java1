@@ -12,6 +12,7 @@ class ArrayUtil {
 
     public int [] fillArrayWithRandomNumbers(int[] array) {
         Random randomNumber = new Random();
+
         for (int i = 0; i <array.length; i++) {
             array[i] = randomNumber.nextInt(100);
         }
@@ -44,6 +45,7 @@ class ArrayUtil {
 
     public int[] replaceGivenNumberOnce (int[] array, int searchValue, int newValue) {
         int result;
+
         for (int i = 0; i < array.length; i++){
             if(array[i] == searchValue) {
                 array[i] = newValue;
@@ -54,7 +56,6 @@ class ArrayUtil {
     }
 
     public int[] replaceGivenNumber (int[] array, int searchValue, int newValue, int count) {
-
         int counter = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -71,7 +72,8 @@ class ArrayUtil {
 
     public int[] sortArray (int[] array) {
         boolean isChanged = true;
-        int x;
+        int x;  //местный clipboard куда будем временно записывать значение массива
+
         while (isChanged) {
             isChanged = false;
             for (int i = 0; i < (array.length - 1); i++) {
@@ -87,9 +89,9 @@ class ArrayUtil {
     }
 
     public int[] reverseArray (int[] array) {
-
         int[] newArray = new int[array.length];
         int j = 0;
+
         for (int i = array.length - 1; i >= 0; i--) {
             newArray[j] = array[i];
             j++;
@@ -109,17 +111,20 @@ class ArrayUtilTest {
 
         ArrayUtilTest arrayUtilTest = new ArrayUtilTest();
 
+        System.out.println();
         arrayUtilTest.shouldCreateArray();
         arrayUtilTest.printArray("Creating new array...");
 
         arrayUtilTest.shouldFillArrayWithRandomNumbers();
-        arrayUtilTest.printArray("Filling new array...");
+        arrayUtilTest.printArray("Filling new array with random numbers...");
 
         arrayUtilTest.shouldPrepareArrayForTests();
-        arrayUtilTest.printArray("Filling array with test numbers 10 and 888");
+        arrayUtilTest.printArray("Adding test numbers 10 and 888 to array...");
+        System.out.println();
 
         arrayUtilTest.shouldCheckArrayForNumber();
         arrayUtilTest.shouldCheckHowManyTimesNumber();
+        System.out.println();
 
         arrayUtilTest.printArray("Array before replacing first number 10");
         arrayUtilTest.shouldCheckForNumberAndReplace();
@@ -128,6 +133,7 @@ class ArrayUtilTest {
         arrayUtilTest.shouldReplaceGivenNumber();
         arrayUtilTest.printArray("Array after replacing number 888 2 times");
 
+        System.out.println();
         arrayUtilTest.shouldReverseArray();
         arrayUtilTest.printArray("Array after reverse");
 
@@ -149,6 +155,7 @@ class ArrayUtilTest {
     public void shouldFillArrayWithRandomNumbers() {
         this.arrayUtil.fillArrayWithRandomNumbers(this.newArray);
     }
+
     public void shouldPrepareArrayForTests () {
         this.newArray[1] = 10;
         this.newArray[4] = 10;
@@ -162,7 +169,7 @@ class ArrayUtilTest {
         int[] testArray = this.newArray;
         int searchValue = 10;
         boolean result = this.arrayUtil.checkArrayForNumber(testArray, searchValue);
-        System.out.print("Does have 10? : ");
+        System.out.print("Does array contain number 10? : ");
         System.out.println(result);
     }
 
