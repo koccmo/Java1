@@ -18,7 +18,7 @@ class InsurancePolicyCalculator {
         return premium;
     }
 
-    public BigDecimal calculate(Policy policy, RiskType riskType) {
+    private BigDecimal calculate(Policy policy, RiskType riskType) {
         BigDecimal premium = BigDecimal.ZERO;
         for (InsuranceObject insuranceObject: policy.getInsuranceObjects()) {
             BigDecimal premiumForRisk = calculate(insuranceObject, riskType);
@@ -27,13 +27,13 @@ class InsurancePolicyCalculator {
         return premium;
     }
 
-    public BigDecimal calculate(InsuranceObject insuranceObject, RiskType riskType) {
+    private BigDecimal calculate(InsuranceObject insuranceObject, RiskType riskType) {
         BigDecimal subObjectValueForSpecificRisk = calculateValue(insuranceObject, riskType);
         BigDecimal riskCoefficient = getRiskCoefficient(riskType, subObjectValueForSpecificRisk);
         return subObjectValueForSpecificRisk.multiply(riskCoefficient);
     }
 
-    public BigDecimal calculateValue(InsuranceObject insuranceObject, RiskType riskType) {
+    private BigDecimal calculateValue(InsuranceObject insuranceObject, RiskType riskType) {
         BigDecimal value = BigDecimal.ZERO;
         for (SubInsuranceObject subInsuranceObject: insuranceObject.getSubInsuranceObjects()) {
             if (subInsuranceObject.containsRiskType(riskType)) {
@@ -43,7 +43,7 @@ class InsurancePolicyCalculator {
         return value;
     }
 
-    public BigDecimal getRiskCoefficient(RiskType riskType, BigDecimal subObjectValueForSpecificRisk) {
+    private BigDecimal getRiskCoefficient(RiskType riskType, BigDecimal subObjectValueForSpecificRisk) {
         if (riskType == RiskType.FIRE) {
             if (subObjectValueForSpecificRisk.compareTo(new BigDecimal("2000.00")) < 0) {
                 return new BigDecimal("0.03");
