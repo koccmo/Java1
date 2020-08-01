@@ -22,22 +22,21 @@ class FraudDetector{
     ArrayList <FraudRule> fraudRules;
 
     FraudDetector (FraudRule... fraudRules){
-        this.fraudRules = new ArrayList<FraudRule>(Arrays.asList(fraudRules));
+        this.fraudRules = new ArrayList<>(Arrays.asList(fraudRules));
     }
 
     FraudDetectionResult isFraud (Transaction t){
-        boolean resultBoolean = false;
-        ArrayList <String> resultString = new ArrayList <String>();
+
+        FraudDetectionResult result = new FraudDetectionResult();
 
         for (FraudRule fraudRule : fraudRules){
             if (fraudRule.isFraud(t)) {
-                resultBoolean = true;
-                resultString.add(fraudRule.getRuleName());
+                result.setFraud(true);
+                result.addRuleName(fraudRule.getRuleName());
             }
         }
-        FraudDetectionResult result = new FraudDetectionResult(resultBoolean, resultString);
-        if (resultBoolean){
-            System.out.println(t.toString()+"\nFraud rules:\n"+resultString);
+        if (result.getFraud()){
+            System.out.println(t.toString());
         }
         return result;
     }

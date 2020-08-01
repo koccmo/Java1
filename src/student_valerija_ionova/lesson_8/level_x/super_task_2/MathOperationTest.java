@@ -13,6 +13,7 @@ class MathOperationTest {
         test.testArgument();
         test.testMultipleOperations();
         test.testMultipleOperations2();
+        test.testDivisionBy0();
     }
 
     public void resultOfTest(String name, boolean resultOfTest){
@@ -87,5 +88,14 @@ class MathOperationTest {
         Multiplication result3 = new Multiplication(result1, result2);
 
         resultOfTest("testMultipleOperations2", result3.calculate() == 45);
+    }
+
+    public void testDivisionBy0(){
+        Argument arg1 = new Argument(10);
+        Argument arg2 = new Argument(0);
+
+        Division result1 = new Division(arg1, arg2);
+
+        resultOfTest("testDivisionBy0", result1.calculate() == 0);
     }
 }

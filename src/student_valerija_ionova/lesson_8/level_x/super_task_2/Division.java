@@ -8,7 +8,12 @@ class Division extends TwoArgumentMathOperation{
 
     @Override
     public double calculate(){
-        return (calculateLeftSide() / calculateRightSide());
+        if (calculateRightSide() == 0){
+            System.out.println("Division and 0 are not friends!!");
+            return 0;
+        }else {
+            return (calculateLeftSide() / calculateRightSide());
+        }
     }
 
 }
