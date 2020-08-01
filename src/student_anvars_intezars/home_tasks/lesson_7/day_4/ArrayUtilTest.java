@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_6.day_3_and_4;
+package student_anvars_intezars.home_tasks.lesson_7.day_4;
 
 import java.util.Arrays;
 
