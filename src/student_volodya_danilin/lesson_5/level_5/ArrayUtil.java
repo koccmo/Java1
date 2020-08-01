@@ -16,7 +16,6 @@ class ArrayUtil {
         for (int i = 0; i <array.length; i++) {
             array[i] = randomNumber.nextInt(100);
         }
-
         return array;
     }
 
@@ -72,7 +71,7 @@ class ArrayUtil {
 
     public int[] sortArray (int[] array) {
         boolean isChanged = true;
-        int x;  //местный clipboard куда будем временно записывать значение массива
+        int x;  //местный clipboard куда будем временно записывать значение ячейки массива
 
         while (isChanged) {
             isChanged = false;
