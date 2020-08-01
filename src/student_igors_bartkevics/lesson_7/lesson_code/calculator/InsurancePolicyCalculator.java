@@ -28,10 +28,9 @@ class InsurancePolicyCalculator {
     }
 
     public BigDecimal calculate(InsuranceObject insuranceObject, RiskType riskType) {
-        BigDecimal premium = BigDecimal.ZERO;
         BigDecimal subObjectValueForSpecificRisk = calculateValue(insuranceObject, riskType);
         BigDecimal riskCoefficient = getRiskCoefficient(riskType, subObjectValueForSpecificRisk);
-        return premium.add(subObjectValueForSpecificRisk.multiply(riskCoefficient));
+        return subObjectValueForSpecificRisk.multiply(riskCoefficient);
     }
 
     public BigDecimal calculateValue(InsuranceObject insuranceObject, RiskType riskType) {
