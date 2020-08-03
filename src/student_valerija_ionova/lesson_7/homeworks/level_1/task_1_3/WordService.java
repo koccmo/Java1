@@ -110,7 +110,5 @@ class WordService {
         String [] wordsArray = createArrayOfWords(text);
         int [] countOfWords = countOfWords(wordsArray);
         return findMostFrequentWord(wordsArray, countOfWords);
-
     }
-
 }

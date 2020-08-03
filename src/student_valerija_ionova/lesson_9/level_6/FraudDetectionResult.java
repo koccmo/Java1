@@ -9,19 +9,15 @@ import java.util.ArrayList;
 class FraudDetectionResult {
 
     private boolean fraud;
-    private ArrayList <String> ruleNames;
+    private ArrayList <String> ruleNames = new ArrayList<> ();
 
-    FraudDetectionResult (boolean fraud, ArrayList <String> ruleNames) {
-        this.fraud = fraud;
-        this.ruleNames = ruleNames;
-    }
-
-    boolean getFraud(){
-        return fraud;
-    }
 
     void setFraud (boolean fraud){
         this.fraud = fraud;
+    }
+
+    boolean getFraud (){
+        return fraud;
     }
 
     ArrayList <String> getRuleName(){
@@ -31,7 +27,5 @@ class FraudDetectionResult {
     void addRuleName(String ruleName){
         this.ruleNames.add(ruleName);
     }
-
-
 
 }

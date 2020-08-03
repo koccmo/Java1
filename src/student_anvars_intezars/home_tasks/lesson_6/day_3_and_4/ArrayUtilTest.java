@@ -18,8 +18,8 @@ public class ArrayUtilTest {
     public void firstArrayUtilTest() {
         ArrayUtil arrayUtil = new ArrayUtil();
         int[] array = new int[4];
-        int result = arrayUtil.checkArrayLength(array);
-        if (array.length == result) {
+        int resultOfCheckingArrayLength = arrayUtil.checkArrayLength(array);
+        if (array.length == resultOfCheckingArrayLength) {
             System.out.println("Test checking array length = OK");
         }
         else {
@@ -30,8 +30,8 @@ public class ArrayUtilTest {
     public void findSameNumberTest() {
         ArrayUtil arrayUtil = new ArrayUtil();
         int[] array = {1,2,3,4,2,2,2,};
-        int result = arrayUtil.findTheSameNumber(array);
-        if (result == 2) {
+        int resultOfFindingTheSameNumber = arrayUtil.findTheSameNumber(array);
+        if (resultOfFindingTheSameNumber == 2) {
             System.out.println("Test for finding most repeated number = OK");
         }
         else {
@@ -54,7 +54,7 @@ public class ArrayUtilTest {
     public void replaceAllElementTest() {
         ArrayUtil arrayUtil = new ArrayUtil();
         int [] array = {1,2,2,3};
-        arrayUtil.replaceAll(array,3,4);
+        arrayUtil.replaceAllElementsInArray(array,3,4);
         if (array[3] == 4) {
             System.out.println("Test for replacing specific number = OK");
         }
@@ -65,10 +65,9 @@ public class ArrayUtilTest {
 
    public void reverseArrayTest() {
         ArrayUtil arrayUtil = new ArrayUtil();
-        int[] array = {1,2,3,4,5};
-        int[] arrayTwo = {5,4,3,2,1};
-        arrayUtil.reverse(array);
-        if (Arrays.equals(array,arrayTwo) ) {
+        int[] firstArray = {1,2,3,4,5}; int[] secondArray = {5,4,3,2,1};
+        arrayUtil.reverseElementsInArray(firstArray);
+        if (Arrays.equals(firstArray,secondArray) ) {
             System.out.println("Test for reversing array = OK");
         }
         else {
@@ -78,10 +77,9 @@ public class ArrayUtilTest {
 
     public void sortArrayTest() {
         ArrayUtil arrayUtil = new ArrayUtil();
-        int[] array = {3,1,2,5,4};
-        int[] arrayTwo = {1,2,3,4,5};
-        arrayUtil.sort(array);
-        if (Arrays.equals(array,arrayTwo)) {
+        int[] firstArray = {3,1,2,5,4}; int[] secondArray = {1,2,3,4,5};
+        arrayUtil.sortByUsingBubbleMethod(firstArray);
+        if (Arrays.equals(firstArray,secondArray)) {
             System.out.println("Test for sorting array = OK");
         }
         else {
