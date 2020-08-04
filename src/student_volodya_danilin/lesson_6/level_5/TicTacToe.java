@@ -123,16 +123,7 @@ public class TicTacToe {
     }
 
     public Move getNextMove() {
-        Scanner inputNumber = new Scanner(System.in);
-
-        System.out.print("Input row (x) : ");
-        int x = inputNumber.nextInt();
-
-        System.out.print("Input col (y) : ");
-        int y = inputNumber.nextInt();
-
-        Move result = new Move(x, y);
-
+        Move result = new Move();
         return result;
     }
 
@@ -146,7 +137,7 @@ public class TicTacToe {
             System.out.println("Player 0 turn!");
             Move move0 = getNextMove();
             field[move0.getX()][move0.getY()] = 0;
-            printFieldToConsole(field);
+            //printFieldToConsole(field);
 
             if (isWinPosition(field, 0)) {
                 System.out.println("Player 0 WIN!");
@@ -198,21 +189,22 @@ class Move {
     private int x;
     private int y;
 
-    Move(int x, int y){
-        this.x = x;
-        this.y = y;
-    }
-
-    public int getX() {
+    public Move(){
         Scanner inputNumber = new Scanner(System.in);
         System.out.print("Input x : ");
-        return inputNumber.nextInt();
+        this.x = inputNumber.nextInt();
+
+        System.out.print("Enter y : ");
+        this.y = inputNumber.nextInt();
+    }
+
+
+    public int getX() {
+        return this.x;
     }
 
     public int getY() {
-        Scanner inputNumber = new Scanner(System.in);
-        System.out.print("Input y : ");
-        return inputNumber.nextInt();
+        return this.y;
     }
 }
 
