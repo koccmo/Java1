@@ -22,7 +22,7 @@ Task_2:
         System.out.println("This transaction is deposit transaction!");
     }
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_1_basic;
+package student_igors_bartkevics.lesson_x.bank_account.part_1_basic_task_1_to_16;
 
 public class TransactionTypeDemo {
 

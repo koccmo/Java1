@@ -30,7 +30,7 @@ class Transaction {
 Для каждого метода напишите два тест кейса, один на позитивный результат,
 другой на негативный.
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_1_basic;
+package student_igors_bartkevics.lesson_x.bank_account.part_1_basic_task_1_to_16;
 
 class TransactionTest {
 

@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_x.bank_account.part_1_basic;
+package student_igors_bartkevics.lesson_x.bank_account.part_1_basic_task_1_to_16;
 
 class BankAccountCurrentBalanceCalculatorTest {
 
@@ -13,7 +13,7 @@ class BankAccountCurrentBalanceCalculatorTest {
         transactions[1] = (new Transaction(2500, TransactionType.DEPOSIT));
         transactions[2] = (new Transaction(3500, TransactionType.WITHDRAWAL));
         BankAccountCurrentBalanceCalculator calculator = new BankAccountCurrentBalanceCalculator();
-        BankAccount bankAccount = new BankAccount("Name Surname", transactions);
+        BankAccount bankAccount = new BankAccount("Name Surname", transactions, 0);
         checkResult(calculator.calculate(bankAccount) == 2000, "Current amount calculation");
     }
 
