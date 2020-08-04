@@ -2,7 +2,7 @@ package student_jaroslav_brutan.lesson_7.day_1;
 
 import java.util.Arrays;
 
-public class WordService_2 {
+public class WordService {
 
     String text = "Hello hello from Latvia with love";
 
