@@ -10,7 +10,16 @@ public class TicTacToe {
         return new int[rows][cols];
     }
 
-    public int[][] prepareField(int[][] array) {
+    public int[][] prepareNewGameField(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
+                array[i][j] = (-1);
+            }
+        }
+        return array;
+    }
+
+    public int[][] prepareFieldForTest(int[][] array) {
         Random playerMoves = new Random();
 
         for (int i = 0; i < array.length; i++) {
@@ -93,23 +102,33 @@ public class TicTacToe {
     }
 
     public boolean isWinPosition(int[][] field, int playerToCheck) {
-        if (isWinPositionForHorizontals(field, playerToCheck)) return true;
-        if (isWinPositionForVerticals(field, playerToCheck)) return true;
-        if (isWinPositionForDiagonals(field, playerToCheck)) return true;
-        else return false;
+        boolean result = false;
+        if (isWinPositionForHorizontals(field, playerToCheck) ||
+            isWinPositionForVerticals(field, playerToCheck) ||
+            isWinPositionForDiagonals(field, playerToCheck) &&
+                (!fieldContainsEmptySpace(field))) {
+                result = true;
+        }
+        return result;
     }
 
     public boolean isDrawPosition(int[][] field) {
-        return isWinPosition(field, 0) == isWinPosition(field, 1);
+        boolean result = false;
+            if (!fieldContainsEmptySpace(field)) {
+                if (isWinPosition(field, 0) == isWinPosition(field, 1)) {
+                    result = true;
+                }
+            }
+        return result;
     }
-/*
+
     public Move getNextMove() {
         Scanner inputNumber = new Scanner(System.in);
 
-        System.out.print("Input x : ");
+        System.out.print("Input row (x) : ");
         int x = inputNumber.nextInt();
 
-        System.out.print("Input y : ");
+        System.out.print("Input col (y) : ");
         int y = inputNumber.nextInt();
 
         Move result = new Move(x, y);
@@ -117,13 +136,18 @@ public class TicTacToe {
         return result;
     }
 
+
+
     public void play() {
         int[][] field = createField(3, 3);
+        prepareNewGameField(field);
         while(true) {
             printFieldToConsole(field);
+            System.out.println("Player 0 turn!");
             Move move0 = getNextMove();
             field[move0.getX()][move0.getY()] = 0;
             printFieldToConsole(field);
+
             if (isWinPosition(field, 0)) {
                 System.out.println("Player 0 WIN!");
                 break;
@@ -133,7 +157,9 @@ public class TicTacToe {
                 break;
             }
 
+
             printFieldToConsole(field);
+            System.out.println("Player 1 turn!");
             Move move1 = getNextMove();
             field[move1.getX()][move1.getY()] = 1;
             printFieldToConsole(field);
@@ -148,14 +174,26 @@ public class TicTacToe {
         }
     }
 
+    public boolean fieldContainsEmptySpace(int[][] field) { // должна ли игра продолжаться?
+        boolean result = false;
+            for (int i = 0; i < field.length; i++) {
+                for (int j = 0; j < field[0].length; j++) {
+                    if (field[i][j] == (-1)) {
+                        result = true;
+                    }
+                }
+            }
+        return result;
+    }
+
     private void printFieldToConsole(int[][] field) {
         for (int[] fieldRow : field) {
             System.out.println(Arrays.toString(fieldRow));
         }
     }
-*/
+
 }
-/*
+
 class Move {
     private int x;
     private int y;
@@ -168,15 +206,13 @@ class Move {
     public int getX() {
         Scanner inputNumber = new Scanner(System.in);
         System.out.print("Input x : ");
-        int x = inputNumber.nextInt();
-        return x;
+        return inputNumber.nextInt();
     }
 
     public int getY() {
         Scanner inputNumber = new Scanner(System.in);
         System.out.print("Input y : ");
-        int y = inputNumber.nextInt();
-        return y;
+        return inputNumber.nextInt();
     }
 }
 
@@ -188,7 +224,6 @@ class PlayTicTacToe {
 }
 
 
- */
 
 class TicTacToeTest {
 
@@ -224,7 +259,7 @@ class TicTacToeTest {
 
 
     void shouldPrepareField() {
-        this.gameField = ticTacToe.prepareField(this.gameField);
+        this.gameField = ticTacToe.prepareFieldForTest(this.gameField);
     }
 
     void shouldCheckWinPositionHorizontal() {
