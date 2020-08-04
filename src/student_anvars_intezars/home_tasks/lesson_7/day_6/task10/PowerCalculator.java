@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_7.day_6;
+package student_anvars_intezars.home_tasks.lesson_7.day_6.task10;
 
 import org.w3c.dom.ls.LSOutput;
 
