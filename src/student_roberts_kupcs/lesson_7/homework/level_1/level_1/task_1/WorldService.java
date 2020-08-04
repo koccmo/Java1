@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_7.homework.level_1.level_1;
+package student_roberts_kupcs.lesson_7.homework.level_1.level_1.task_1;
 
 //Дана строка с текстом.
 //Написать метод, который найдёт слово, которое в тексте встречается больше всего раз.

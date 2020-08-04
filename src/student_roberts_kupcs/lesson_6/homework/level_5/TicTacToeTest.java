@@ -10,10 +10,13 @@ class TicTacToeTest {
         ticTacToeTest.testDrawPosition();
     }
 
+    //task_19
     public void testHorizontal() {
         TicTacToe ticTacToe = new TicTacToe();
 
-        int[][] field = {{1, 0, 0}, {1, 1, 1}, {0, 1, 0}};
+        int[][] field = {{1, 0, 0},
+                {1, 1, 1},
+                {0, 1, 0}};
 
         if (ticTacToe.isWinPositionForHorizontals(field, 1)) {
             System.out.println("Horizontal test is OK");
@@ -22,10 +25,13 @@ class TicTacToeTest {
         }
     }
 
+    //task_20
     public void testVertical() {
         TicTacToe ticTacToe = new TicTacToe();
 
-        int[][] field = {{0, 1, 1}, {0, 1, 0}, {0, 0, 1}};
+        int[][] field = {{0, 1, 1},
+                {0, 1, 0},
+                {0, 0, 1}};
         if (ticTacToe.isWinPositionForVerticals(field, 0)) {
             System.out.println("Vertical test is OK");
         } else {
@@ -33,10 +39,13 @@ class TicTacToeTest {
         }
     }
 
+    //task_21
     public void testDiagonal() {
         TicTacToe ticTacToe = new TicTacToe();
 
-        int[][] field = {{1, 0, 0}, {1, 0, 0}, {0, 1, 1}};
+        int[][] field = {{1, 0, 0},
+                {1, 0, 0},
+                {0, 1, 1}};
         if (ticTacToe.isWinPositionForDiagonals(field, 0)) {
             System.out.println("Diagonal test is OK");
         } else {
@@ -44,6 +53,7 @@ class TicTacToeTest {
         }
     }
 
+    //task_22
     public void testWinPosition() {
         TicTacToe ticTacToe = new TicTacToe();
         int[][] field = {{1, 0, 1}, {0, 1, 0}, {0, 0, 1}};
@@ -57,7 +67,9 @@ class TicTacToeTest {
     public void testDrawPosition() {
         TicTacToe ticTacToe = new TicTacToe();
 
-        int[][] field = {{0, 1, 1}, {1, 0, 0}, {1, 0, 1}};
+        int[][] field = {{0, 1, 1},
+                {1, 0, 0},
+                {1, 0, 1}};
         if (ticTacToe.isDrawPosition(field)) {
             System.out.println("Draw Position test is OK");
         } else {
