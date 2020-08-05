@@ -35,7 +35,6 @@ class Palindrome {
         return arrayOfWordsRightLength;
     }
 
-
     public boolean isPalindrome(String text){
         boolean result = true;
         for (int i=0; i<arrayOfWords(text).length; i++){

@@ -12,11 +12,12 @@ interface BookReader {
 
     String [][] getListOfReadBooks (BookLibrary library);
 
+    String [][] getListOfNotReadBooks (BookLibrary library);
+
     ArrayList<Book> findBookByAuthor (String author, BookLibrary library);
 
     ArrayList<Book> findBookByTitle (String title, BookLibrary library);
 
     boolean isRead (Book book, BookLibrary library, boolean ifIsRead);
-
 
 }
