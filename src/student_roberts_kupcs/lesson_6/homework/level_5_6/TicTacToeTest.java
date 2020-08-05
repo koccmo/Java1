@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_6.homework.level_5;
+package student_roberts_kupcs.lesson_6.homework.level_5_6;
 
 class TicTacToeTest {
     public static void main(String[] args) {
@@ -8,6 +8,8 @@ class TicTacToeTest {
         ticTacToeTest.testDiagonal();
         ticTacToeTest.testWinPosition();
         ticTacToeTest.testDrawPosition();
+        ticTacToeTest.createFieldTest();
+
     }
 
     //task_19
@@ -76,5 +78,26 @@ class TicTacToeTest {
             System.out.println("Draw Position test is FAIL");
 
         }
+    }
+
+    //task24
+    public void createFieldTest() {
+        TicTacToe ticTacToe = new TicTacToe();
+
+        int[][] field = {
+                {-1, -1, -1},
+                {-1, -1, -1},
+                {-1, -1, -1}
+        };
+
+
+        /*if (ticTacToe.createField() {
+            System.out.println("Create field test is OK");
+        }
+        else  {
+            System.out.println("Create field test is FAIL");
+        }*/
+
+
     }
 }

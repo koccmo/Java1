@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_6.homework.level_5;
+package student_roberts_kupcs.lesson_6.homework.level_5_6;
 
 //Дано поле игры крестики нолики размерностью три на три клетки.
 //Поле представлено двумерным массивом целых чисел, где:
@@ -91,5 +91,15 @@ class TicTacToe {
         return false;
     }
 
+    //task_24
+    public int[][] createField(int[][] field) {
+        /*int[][]*/ field = new int[3][3];
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                field[i][j] = -1;
+            }
+        }
+        return field;
+    }
 
 }
