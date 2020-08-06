@@ -27,7 +27,7 @@ class CreditCardTest {
         int depositResult = creditCard.deposit(8978,15);
         if (depositResult == 15) { System.out.println();
             System.out.println("Test for deposit = OK");
-        } else {
+        }else {
             System.out.println("Test for deposit = FAIL");
         }
     }
