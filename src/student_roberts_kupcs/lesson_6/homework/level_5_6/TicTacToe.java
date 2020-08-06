@@ -27,6 +27,12 @@ package student_roberts_kupcs.lesson_6.homework.level_5_6;
 import java.util.Scanner;
 
 class TicTacToe {
+
+    public static void main(String[] args) {
+        TicTacToe game = new TicTacToe();
+        game.play();
+    }
+
     //task_19
     public boolean isWinPositionForHorizontals(int[][] field, int playerToCheck) {
         for (int i = 0; i < field.length; i++) {
@@ -94,9 +100,8 @@ class TicTacToe {
     }
 
     //task_24
-    public int[][] createField(int[][] field) {
-        /*int[][]*/
-        field = new int[3][3];
+    public int[][] createField() {
+        int[][] field = new int[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 field[i][j] = -1;
@@ -115,6 +120,7 @@ class TicTacToe {
         Move move = new Move(x, y);
         return move;
     }
+
     //task 26
     public void printFieldToConsole(int[][] field) {
         for (int i = 0; i < field.length; i++) {
@@ -122,10 +128,42 @@ class TicTacToe {
                 if (j == field[i].length - 1) {
                     System.out.println(field[i][j]);
                 } else {
-                    System.out.println(field[i][j] + " ");
+                    System.out.println(field[i][j] + " | ");
                 }
             }
             System.out.println();
+        }
+    }
+
+    //task 27
+    public void play() {
+        int[][] field = createField();
+        while (true) {
+            printFieldToConsole(field);
+            Move move0 = getNextMove();
+            field[move0.getX()][move0.getY()] = 0;
+            printFieldToConsole(field);
+            if (isWinPosition(field, 0)) {
+                System.out.println("Player 0 WIN!");
+                break;
+            }
+            if (isDrawPosition(field)) {
+                System.out.println("DRAW!");
+                break;
+            }
+
+            printFieldToConsole(field);
+            Move move1 = getNextMove();
+            field[move1.getX()][move1.getY()] = 1;
+            printFieldToConsole(field);
+            if (isWinPosition(field, 1)) {
+                System.out.println("Player 1 WIN!");
+                break;
+            }
+            if (isDrawPosition(field)) {
+                System.out.println("DRAW!");
+                break;
+            }
         }
     }
 }
