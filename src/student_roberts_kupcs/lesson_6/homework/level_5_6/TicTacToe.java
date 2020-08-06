@@ -115,4 +115,17 @@ class TicTacToe {
         Move move = new Move(x, y);
         return move;
     }
+    //task 26
+    public void printFieldToConsole(int[][] field) {
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if (j == field[i].length - 1) {
+                    System.out.println(field[i][j]);
+                } else {
+                    System.out.println(field[i][j] + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
 }
