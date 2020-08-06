@@ -24,6 +24,8 @@ package student_roberts_kupcs.lesson_6.homework.level_5_6;
 //Создать класс TicTacToeTest
 //и написать тесты для разработанного метода.
 
+import java.util.Scanner;
+
 class TicTacToe {
     //task_19
     public boolean isWinPositionForHorizontals(int[][] field, int playerToCheck) {
@@ -93,7 +95,8 @@ class TicTacToe {
 
     //task_24
     public int[][] createField(int[][] field) {
-        /*int[][]*/ field = new int[3][3];
+        /*int[][]*/
+        field = new int[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 field[i][j] = -1;
@@ -102,4 +105,14 @@ class TicTacToe {
         return field;
     }
 
+    //task25
+    public Move getNextMove() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1 Kоординатu клетки куда хочет походить игрок: ");
+        int x = sc.nextInt();
+        System.out.println("2 Kоординатu клетки куда хочет походить игрок: ");
+        int y = sc.nextInt();
+        Move move = new Move(x, y);
+        return move;
+    }
 }
