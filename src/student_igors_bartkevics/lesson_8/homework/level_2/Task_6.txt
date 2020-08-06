@@ -1,0 +1,13 @@
+Исправьте код программы:
+
+interface Mother {
+
+}
+
+interface Father {
+
+}
+
+class Child implements Mother, Father {
+
+}
