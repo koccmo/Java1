@@ -2,9 +2,6 @@ package student_jaroslav_brutan.lesson_7.day_6;
 
 public class Palindrome {
 
-    public static void main(String[] args) {
-
-    }
     boolean isPalindrome(String text){
         String mainText = text.toLowerCase().replaceAll("[^A-Za-z^]", "");
         StringBuffer palText = new StringBuffer(mainText).reverse();
@@ -14,9 +11,11 @@ public class Palindrome {
                 result = false;
                 System.out.println("Word is not a palindrome!");
                 break;
+            } else {
+                System.out.println("Word is a palindrome!");
+                break;
             }
         }
-        System.out.println("Word is a palindrome!");
         return result;
 
 
