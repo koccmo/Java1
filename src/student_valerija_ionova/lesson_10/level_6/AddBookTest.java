@@ -1,5 +1,7 @@
 package student_valerija_ionova.lesson_10.level_6;
 
+import java.util.ArrayList;
+
 public class AddBookTest {
 
     public static void main (String [] args){
@@ -24,8 +26,9 @@ public class AddBookTest {
         Book book1 = new Book ("Tree", "Darvin");
         BookLibrary bookLibrary = new BookLibrary();
         bookReader.addBook(book1, bookLibrary);
-
-        printResult("testAddFirstBook", bookLibrary.getBookLibrary().get(0).getTitle().equals("Tree"));
+        ArrayList <Book> expectedResult = new ArrayList <>();
+        expectedResult.add(book1);
+        printResult("testAddFirstBook", bookLibrary.getBookLibrary().equals(expectedResult));
     }
 
     void testAddSecondNewBook(){

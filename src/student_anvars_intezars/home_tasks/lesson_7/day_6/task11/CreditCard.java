@@ -38,17 +38,23 @@ class CreditCard {
         }else {
             System.out.println("Withdraw is declined. Credit debt is higher than credit limit.");
         }
-        System.out.println("Withdraw successful. You have used " + amount + " of you Credit Limit");
+        System.out.println("Withdraw successful. You have used " + amount + " of your Credit Limit.");
         return balance;
     }
 
     public int deposit(int pinCode, int amount) {
         int currentPinCode = getCreditCardPinCode();
         if (currentPinCode == pinCode) {
-            balance = balance + amount;
+            System.out.println("Pin Code is OK");
         }else {
             System.out.println("Operation is declined. Incorrect Pin Code");
         }
+        if (creditDebt > 0) {
+            creditDebt = creditDebt + amount;
+        }else if (creditDebt == 0) {
+            balance = balance + amount;
+        }
+        System.out.println("Deposit successful. You have deposited " + amount + " on your account.");
         return balance;
     }
 }

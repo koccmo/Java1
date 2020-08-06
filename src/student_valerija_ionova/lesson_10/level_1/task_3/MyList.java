@@ -19,10 +19,10 @@ package student_valerija_ionova.lesson_10.level_1.task_3;
 public interface MyList {
 
 
-    void addElement(); // Добавляет элемент в массив
+    String [] addElement(String text); // Добавляет элемент в массив
 
-    void insertElement(int index); // Вставляет элемент в середину массива
+    String [] insertElement(int index, String text); // Вставляет элемент в середину массива
 
-    void deleteElement(int index); //Удаляет ячейку массива, сокращая его длину
+    String [] deleteElement(int index); //Удаляет ячейку массива, сокращая его длину
 
 }
