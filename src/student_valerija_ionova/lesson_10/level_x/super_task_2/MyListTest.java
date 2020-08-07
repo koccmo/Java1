@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_10.level_x.super_task_2;
 
 import java.util.Arrays;
 
-public class MyListTest {
+class MyListTest {
 
     public static void main (String [] args){
 

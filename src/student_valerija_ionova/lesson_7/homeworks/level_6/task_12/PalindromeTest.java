@@ -34,14 +34,12 @@ class PalindromeTest {
 
     public void testArrayOfWordsOneWord(){
         Palindrome palindrome = new Palindrome();
-        //System.out.println(Arrays.toString(palindrome.arrayOfWords("Hello,oli:pko")));
         String [] arrayOfLetters = {"h", "e", "l", "l", "o"};
         checkStringArray("Test ArrayOfWordsOneWord", palindrome.arrayOfWords("Hello"), arrayOfLetters);
     }
 
     public void testArrayOfWordsTwoWords(){
         Palindrome palindrome = new Palindrome();
-        //System.out.println(Arrays.toString(palindrome.arrayOfWords("Hello, Bob!!")));
         String [] arrayOfLetters = {"h", "e", "l", "l", "o", "b", "o", "b"};
         checkStringArray("Test ArrayOfWordsOneWord", palindrome.arrayOfWords("Hello, Bob!!"), arrayOfLetters);
     }

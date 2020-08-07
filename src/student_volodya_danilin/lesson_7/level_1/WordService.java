@@ -9,9 +9,9 @@ public class WordService {
         int currentMaxCounter = 0;
         int newMaxCounter = 0;
 
-        String[] textWord = text.trim().split("\\s+");
+        String[] textWord = text.trim().split("\\s+"); // splitting text into separate words
 
-        int wordInTextCount = textWord.length;
+        int wordInTextCount = textWord.length; // how many words are in given text string
 
         for (int i = 0; i < wordInTextCount; i++) { // choosing a word to check
             for (int j = 0; j < wordInTextCount; j++) { // comparing chosen word with each word in text
@@ -31,7 +31,6 @@ public class WordService {
 
 class WordServiceTest {
 
-    private static Object WordService;
     private String stringForTests = "1   2 2   3 3 3   4 4 4 4   1 1 1";
     private WordService wordService;
 
@@ -45,7 +44,8 @@ class WordServiceTest {
     }
 
     void shouldTestFindMostFrequentWord() {
-        System.out.print(wordService.findMostFrequentWord(this.stringForTests));
+        System.out.println("Given text: " + stringForTests);
+        System.out.println("First most frequent word: " + wordService.findMostFrequentWord(this.stringForTests));
 
     }
 
