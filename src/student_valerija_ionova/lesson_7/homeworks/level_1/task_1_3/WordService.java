@@ -5,20 +5,6 @@ package student_valerija_ionova.lesson_7.homeworks.level_1.task_1_3;
 
 Если несколько слов в тексте встречаются одинаково максимальное число раз,
 то возвращаем то слово, которое стоит в тексте первым.
-
-Подумайте на какие подзадачи можно разбить эту задачу?
-Распишите на бумаге каждую подзадачу в отдельности:
-- как она называется,
-- что её надо передать на вход (параметры),
-- что будет возвращать в качестве результата.
-
-
-- посчитать количество слов
-- создать массив слов из строки
-- Нижний регистр
-- создать массив кол-ва слов
-- создать два массива: слово - количество
-- определить какое слово встречается чаще всего
 */
 
 class WordService {
@@ -43,11 +29,10 @@ class WordService {
         return numberOfWords;
     }
 
-    public String [] addLastWord(String [] arrayOfWords, String word){
+    void addLastWord(String [] arrayOfWords, String word){
         if (word.length() != 0) {
             arrayOfWords[arrayOfWords.length-1] = word;
         }
-        return arrayOfWords;
     }
 
     public String [] createArrayOfWords(String text){
@@ -84,10 +69,8 @@ class WordService {
                         numberOfWord++;
                     }
                 }
-                countOfWords[i] = numberOfWord;
-            }else{
-                countOfWords[i] = numberOfWord;
             }
+            countOfWords[i] = numberOfWord;
         }
         return countOfWords;
     }

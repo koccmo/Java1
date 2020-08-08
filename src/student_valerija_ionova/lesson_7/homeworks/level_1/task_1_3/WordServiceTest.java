@@ -102,7 +102,6 @@ class WordServiceTest {
         String [] newArray = {"Hello", "Bobby"};
         int [] expectedArray = {1, 1};
         checkResultArrayInt("testCountOfWords", wordService.countOfWords(newArray), expectedArray);
-        //System.out.println(Arrays.toString(wordService.countOfWords(newArray)));
     }
 
     public void testCountOfWords2(){
@@ -110,7 +109,6 @@ class WordServiceTest {
         String [] newArray = {"Hello", "Bobby", "Hello"};
         int [] expectedArray = {2, 1, 1};
         checkResultArrayInt("testCountOfWords2", wordService.countOfWords(newArray), expectedArray);
-        //System.out.println(Arrays.toString(wordService.countOfWords(newArray)));
     }
 
     public void testCountOfWords3(){
@@ -118,7 +116,6 @@ class WordServiceTest {
         String [] newArray = {"Hello"};
         int [] expectedArray = {1};
         checkResultArrayInt("testCountOfWords3", wordService.countOfWords(newArray), expectedArray);
-        //System.out.println(Arrays.toString(wordService.countOfWords(newArray)));
     }
 
     public void testFindMostFrequentWordOneWord(){
