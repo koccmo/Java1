@@ -20,10 +20,6 @@ public class CreditCard {
 
     }
 
-    public int getCardNumber() {
-        return cardNumber;
-    }
-
     public int getPinCode() {
         return pinCode;
     }
@@ -36,20 +32,14 @@ public class CreditCard {
         return creditLimit;
     }
 
-    public int getCreditDebt() {
-        return creditDebt;
-    }
-
-    public void setCardNumber(int cardNumber) {
-        this.cardNumber = cardNumber;
-    }
-
     public void setCreditLimit(int creditLimit) {
-        this.creditLimit = creditLimit;
-    }
 
-    public void setCreditDebt(int creditDebt) {
-        this.creditDebt = creditDebt;
+       if (checkPin(pinCode)) {
+           this.creditLimit = creditLimit;
+       }
+       else {
+           showError(1);
+       }
     }
 
     public String showError(int errorCode) {
@@ -93,6 +83,10 @@ public class CreditCard {
                 }
             }
             this.balance = this.balance + depositAmount;
+            System.out.println("Counting notes, please wait...");
+            System.out.println("Deposit has been made!");
+        } else {
+            showError(1);
         }
     }
 
@@ -105,11 +99,17 @@ public class CreditCard {
                 if (withdrawAmount >= this.balance) {
                     this.creditDebt = this.creditDebt + ((this.balance - withdrawAmount) * (-1));
                     this.balance = 0;
+                    System.out.println("Counting notes...");
+                    System.out.println("Withdraw has been made!");
                 }
                 else {
                     this.balance = this.balance - withdrawAmount;
+                    System.out.println("Counting notes...");
+                    System.out.println("Withdraw has been made!");
                 }
             }
+        } else {
+            showError(1);
         }
     }
 
@@ -117,12 +117,8 @@ public class CreditCard {
 
 class CreditCardTestAuto {
     protected CreditCard creditCard;
-    protected CreditCardTest creditCardTest;
-    protected int cardNumber;
-    protected int cardPin;
     protected int balance;
     protected int creditLimit;
-    protected int creditDebt;
     public static void main(String[] Args) {
 
         CreditCardTestAuto autoTest = new CreditCardTestAuto();
@@ -162,9 +158,6 @@ class CreditCardTestAuto {
         System.out.println("\nDepositing 45$...");
         autoTest.creditCard.depositMoney(45);
         autoTest.creditCard.printCardInfo();
-
-
-
     }
 }
 
@@ -174,37 +167,57 @@ class CreditCardTest {
     protected int cardPin;
     protected int balance;
     protected int creditLimit;
-    protected int creditDebt;
+
     Scanner userInput = new Scanner(System.in);
     
     public static void main(String[] Args) {
 
         CreditCardTest cardTest = new CreditCardTest();
-        cardTest.runTest();
 
+        int userChoice = cardTest.bankMenu();
 
-
+        while (userChoice != 0) {
+            switch (userChoice) {
+                case 0 -> {
+                }
+                case 1 -> {
+                    cardTest.depositMoney();
+                    cardTest.creditCard.printCardInfo();
+                }
+                case 2 -> {
+                    cardTest.withdrawMoney();
+                    cardTest.creditCard.printCardInfo();
+                }
+                case 3 -> {
+                    cardTest.askNewCreditCardDetails();
+                    cardTest.createNewCreditCard();
+                    cardTest.creditCard.printCardInfo();
+                }
+                case 4 -> {
+                    cardTest.creditCard.printCardInfo();
+                }
+                case 5 -> {
+                    cardTest.changeCreditLimit();
+                    cardTest.creditCard.printCardInfo();
+                }
+            }
+                userChoice = cardTest.bankMenu();
+        }
     }
 
-    private void runTest() {
-
-        askNewCreditCardDetails();
-        createNewCreditCard();
-        //cardPin = 0;
-        creditCard.printCardInfo();
-
-        depositMoney();
-        creditCard.printCardInfo();
-
-        withdrawMoney();
-        creditCard.printCardInfo();
-
-        withdrawMoney();
-        creditCard.printCardInfo();
-
-        depositMoney();
-        creditCard.printCardInfo();
-
+    int bankMenu() {
+        int menuItem;
+        System.out.println();
+        System.out.println("MENU: ");
+        System.out.println("1 - DEPOSIT FUNDS");
+        System.out.println("2 - WITHDRAW FUNDS");
+        System.out.println("3 - ORDER NEW CARD");
+        System.out.println("4 - SEE CARD STATUS");
+        System.out.println("5 - SET NEW CREDIT LIMIT");
+        System.out.println("0 - EXIT");
+        System.out.print("ENTER : ");
+        menuItem = userInput.nextInt();
+        return menuItem;
     }
 
 
@@ -234,7 +247,7 @@ class CreditCardTest {
     void createNewCreditCard() {
         this.creditCard = new CreditCard(cardNumber, cardPin);
         cardPin = 0;
-        this.creditCard.creditLimit = 500;
+        System.out.println("New card has been made!");
     }
 
     void depositMoney() {
@@ -257,5 +270,14 @@ class CreditCardTest {
         }
     }
 
-
+    void changeCreditLimit() {
+        if (authenticateUser()) {
+            System.out.print("Enter new credit limit : ");
+            creditCard.setCreditLimit(userInput.nextInt());
+            System.out.println("Credit limit has been changed!");
+        }
+        else {
+            creditCard.showError(1);
+        }
+    }
 }
