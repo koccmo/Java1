@@ -9,7 +9,8 @@ public class PowerCalculator {
         if (power == 0) {
             return 1;
         }
-        else {
+        else
+            {
             for (int i = 1; i < power; i++) {
                 result = number * result;
             }
