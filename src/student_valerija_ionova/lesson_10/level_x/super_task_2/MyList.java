@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_10.level_x.super_task_2;
 
-public interface MyList {
+interface MyList {
 
 
     void addElement(String string); // Добавляет элемент в массив
