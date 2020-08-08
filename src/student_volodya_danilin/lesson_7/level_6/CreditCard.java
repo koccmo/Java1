@@ -174,6 +174,8 @@ class CreditCardTest {
 
         CreditCardTest cardTest = new CreditCardTest();
 
+        showIntro();
+
         int userChoice = cardTest.bankMenu();
 
         while (userChoice != 0) {
@@ -203,6 +205,12 @@ class CreditCardTest {
             }
                 userChoice = cardTest.bankMenu();
         }
+    }
+
+    private static void showIntro() {
+        System.out.println("Hello and welcome! " +
+                           "\nYou MUST have a card if you want to use this ATM!" +
+                           "\nCreate one in the menu below!");
     }
 
     int bankMenu() {
