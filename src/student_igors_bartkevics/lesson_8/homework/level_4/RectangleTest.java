@@ -1,6 +1,6 @@
 package student_igors_bartkevics.lesson_8.homework.level_4;
 
-public class RectangleTest {
+class RectangleTest {
 
     Rectangle rectangle = new Rectangle("Rectangle", 2.0, 5.0);
 
