@@ -8,26 +8,36 @@ class WordServiceVariant2 {
 
     private String mostFrequentWord(String [] wordsArray){
         int maxNumberOfWords = 0;
-        int currentNumberOfWords = 0;
         String mostFrequentWord = "";
-        for (int i = 0; i < wordsArray.length; i++){
-            for (int j = 0; j < wordsArray.length; j++){
-                if (wordsArray[i].equalsIgnoreCase(wordsArray[j])){
-                    currentNumberOfWords ++;
-                }
-            }
+        for (String word : wordsArray){
+            int currentNumberOfWords = countNumberOfCurrentWord(word, wordsArray);
             if (currentNumberOfWords > maxNumberOfWords){
-                maxNumberOfWords = currentNumberOfWords;
-                mostFrequentWord = wordsArray[i];
+                mostFrequentWord = updateMostFrequentWord(word);
+                maxNumberOfWords = updateNumberOfMostFrequentWord(currentNumberOfWords);
             }
-            currentNumberOfWords = 0;
         }
         return mostFrequentWord;
+    }
+
+    private String updateMostFrequentWord(String word){
+        return word;
+    }
+
+    private int updateNumberOfMostFrequentWord(int number){
+        return number;
+    }
+
+    private int countNumberOfCurrentWord(String word, String [] wordsArray){
+        int currentNumberOfWords = 0;
+        for (String currentWord : wordsArray){
+            if (word.equalsIgnoreCase(currentWord)){
+                currentNumberOfWords ++;
+            }
+        }
+        return currentNumberOfWords;
     }
 
     String wordService(String text){
         return mostFrequentWord(testToWordsArray(text));
     }
-
-
 }
