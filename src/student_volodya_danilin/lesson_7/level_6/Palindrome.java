@@ -35,7 +35,7 @@ class PalindromeTest {
     }
 
     void testIsPalindrome() {
-        System.out.println("Testing isPalindrome method...");
+        System.out.println("Testing boolean isPalindrome method...");
         System.out.print(this.truePalindrome + " should be true :");
         System.out.print(palindrome.isPalindrome(this.truePalindrome));
         System.out.println();
