@@ -1,4 +1,4 @@
 package student_valerija_ionova.lesson_8.level_1.task_3;
 
-public class Address {
+class Address {
 }

@@ -1,0 +1,8 @@
+Исправьте код программы:
+
+class Person extends Object {
+
+
+}
+
+Не хватало буквы "s" в "extend"

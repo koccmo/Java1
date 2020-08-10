@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_8.level_2.task_9;
 
-/*Внесите изменения в код программы так,
+/* Внесите изменения в код программы так,
 чтобы можно было создать экземпляр класса
 ComputerPlayer. Класс ComputerPlayer должен
 наследоваться от класса Player. Изменения
