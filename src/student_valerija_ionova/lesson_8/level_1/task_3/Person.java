@@ -15,7 +15,7 @@ class Person {
 Напишите программу, которая продемонстрирует
 ответ на этот вопрос.*/
 
-public class Person {
+class Person {
     private String fullName;
     private int age;
     private Address address;
