@@ -11,27 +11,29 @@ Shape: calculateArea() и calculatePerimeter().
  */
 package student_igors_bartkevics.lesson_8.homework.level_4;
 
-class Triangle extends Shape{
+
+
+class Triangle extends Shape {
     private double firstSide;
     private double secondSide;
-    private double base;
-    private double height;
-    Triangle(String title, double firstSide, double secondSide, double base, double height) {
+    private double thirdSide;
+
+    Triangle(String title, double firstSide, double secondSide, double thirdSide) {
         super(title);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        this.base = base;
-        this.height = height;
+        this.thirdSide = thirdSide;
     }
 
     @Override
     double calculateArea() {
-        return 0.5 * base * height;
+        double halfOfPerimeter = calculatePerimeter() / 2;
+        return Math.sqrt(halfOfPerimeter * (halfOfPerimeter - firstSide) *
+                (halfOfPerimeter - secondSide) * (halfOfPerimeter - thirdSide));
     }
 
     @Override
     double calculatePerimeter() {
-        return firstSide + secondSide + base;
+        return firstSide + secondSide + thirdSide;
     }
 }
-
