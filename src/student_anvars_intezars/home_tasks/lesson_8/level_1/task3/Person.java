@@ -4,6 +4,5 @@ class Person {
 
     String fullName;
     int age;
-    //private Address address; - не смог использовать эту переменную, так как
-    // требовал импорт другого студента
+    String address;
 }

@@ -8,6 +8,7 @@ class PersonDemo {
 
         System.out.println("person1.fullName " + person1.fullName);
         System.out.println("person1.age " + person1.age);
+        System.out.println("person1.address " + person1.address);
 
 
 
