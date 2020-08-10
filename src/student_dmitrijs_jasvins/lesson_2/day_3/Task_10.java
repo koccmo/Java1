@@ -9,7 +9,7 @@ public class Task_10 {
         double radius = scanner.nextDouble();
         double area = Math.PI * (radius * radius);
         System.out.println("Area is :" + area);
-        double perimeter = Math.PI * (2 * radius);
-        System.out.println("Perimeter is :" + perimeter);
+        double length = Math.PI * (2 * radius);
+        System.out.println("Length is :" + length);
     }
 }
