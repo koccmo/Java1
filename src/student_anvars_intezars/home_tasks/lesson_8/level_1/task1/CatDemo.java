@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_8.task1;
+package student_anvars_intezars.home_tasks.lesson_8.level_1.task1;
 
 public class CatDemo {
 
