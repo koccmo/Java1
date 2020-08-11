@@ -7,9 +7,9 @@ Shape: calculateArea() и calculatePerimeter().
 Напишите тесты для класса Square.
 
  */
-package student_igors_bartkevics.lesson_8.homework.level_4;
+package student_igors_bartkevics.lesson_8.homework.level_5;
 
-class Square extends Shape{
+class Square extends Shape {
 
     private double side;
     Square(String title, double side) {

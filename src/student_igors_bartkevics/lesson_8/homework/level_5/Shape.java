@@ -20,11 +20,15 @@ abstract class Shape {
 Объявите в классе Shape абстрактный метод
 для подсчёта периметра.
  */
-package student_igors_bartkevics.lesson_8.homework.level_4;
+package student_igors_bartkevics.lesson_8.homework.level_5;
 
 abstract class Shape {
 
     private String title;
+
+    public String getTitle() {
+        return title;
+    }
 
     Shape(String title) {
         this.title = title;

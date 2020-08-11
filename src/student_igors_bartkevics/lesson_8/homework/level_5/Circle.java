@@ -24,9 +24,9 @@ class Circle extends Shape {
 
 }
  */
-package student_igors_bartkevics.lesson_8.homework.level_4;
-import java.lang.Math;
-class Circle extends Shape{
+package student_igors_bartkevics.lesson_8.homework.level_5;
+
+class Circle extends Shape {
 
     private double radius;
 
