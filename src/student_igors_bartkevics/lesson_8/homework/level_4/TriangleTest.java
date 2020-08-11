@@ -11,8 +11,7 @@ class TriangleTest {
     }
 
     void calculateAreaTest() {
-        double area = (int)(triangle.calculateArea() * 100.0) / 100.0;
-        checkResult(area == 43.3, "Calculate area");
+        checkResult(triangle.calculateArea() == 43.3, "Calculate area");
     }
 
     void calculatePerimeterTest() {

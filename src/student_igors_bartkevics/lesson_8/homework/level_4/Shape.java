@@ -33,4 +33,8 @@ abstract class Shape {
     abstract double calculateArea();
 
     abstract double calculatePerimeter();
+
+    public double roundUpDouble(double value) {
+        return (int)(value * 100.0) / 100.0;
+    }
 }

@@ -28,8 +28,9 @@ class Triangle extends Shape {
     @Override
     double calculateArea() {
         double halfOfPerimeter = calculatePerimeter() / 2;
-        return Math.sqrt(halfOfPerimeter * (halfOfPerimeter - firstSide) *
+        double area = Math.sqrt(halfOfPerimeter * (halfOfPerimeter - firstSide) *
                 (halfOfPerimeter - secondSide) * (halfOfPerimeter - thirdSide));
+        return roundUpDouble(area);
     }
 
     @Override

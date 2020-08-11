@@ -19,11 +19,11 @@ class Rectangle extends Shape{
 
     @Override
     double calculateArea() {
-        return width * length;
+        return roundUpDouble(width * length);
     }
 
     @Override
     double calculatePerimeter() {
-        return 2 * (width + length);
+        return roundUpDouble(2 * (width + length));
     }
 }

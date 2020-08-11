@@ -19,11 +19,11 @@ class Square extends Shape{
 
     @Override
     double calculateArea() {
-        return side * side;
+        return roundUpDouble(side * side);
     }
 
     @Override
     double calculatePerimeter() {
-        return 4 * side;
+        return roundUpDouble(4 * side);
     }
 }
