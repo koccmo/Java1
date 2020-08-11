@@ -15,6 +15,7 @@ import java.util.Arrays;
 
 public class TicTacToeTest {
 
+/*
     public static void main(String[] args) {
 
         TicTacToeTest test = new TicTacToeTest();
@@ -162,7 +163,18 @@ public class TicTacToeTest {
         checkResult(condition, "Create field");
     }
 
-    public void drawPosition() {
+	public int[][] createField() {
+		int[][] field = new int[3][3];
+		for (int row = 0; row < 3; row++) {
+			for (int column = 0; column < 3; column++) {
+				field[row][column] = -1;
+			}
+		}
+		return field;
+	}
+
+
+	public void drawPosition() {
         int[][] field1 = {   {-1,  1,  0},
                              { 1,  0,  0},    //not filled
                              { 1,  0,  1}};
@@ -314,4 +326,5 @@ public class TicTacToeTest {
             System.out.println(testName + " test = FAIL");
         }
     }
+*/
 }
