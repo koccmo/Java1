@@ -1,4 +1,4 @@
-package student_eduards_jasvins.lesson_7;
+package student_eduards_jasvins.lesson_7.day_1;
 
 import java.util.Arrays;
 
