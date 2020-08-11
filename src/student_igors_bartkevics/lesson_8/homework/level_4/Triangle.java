@@ -35,6 +35,6 @@ class Triangle extends Shape {
 
     @Override
     double calculatePerimeter() {
-        return firstSide + secondSide + thirdSide;
+        return roundUpDouble(firstSide + secondSide + thirdSide);
     }
 }
