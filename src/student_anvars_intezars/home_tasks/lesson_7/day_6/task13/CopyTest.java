@@ -9,6 +9,7 @@ class CopyTest {
         CopyTest copyTest = new CopyTest();
         copyTest.firsCopyTest();
         copyTest.secondCopyTest();
+        copyTest.thirdCopyTest();
     }
 
     void firsCopyTest() {
@@ -26,9 +27,25 @@ class CopyTest {
     void secondCopyTest() {
         Copy copy = new Copy();
         int[] firstArray = {2,5,7,10,2};
+        int [] secondArray = {5,7};
         int [] resultOfCopy = copy.copyInRange(firstArray,4,9);
-        for (int i = 0; i < resultOfCopy.length; i++)
-        System.out.println(resultOfCopy[i]);
+        if (Arrays.equals(resultOfCopy,secondArray)) {
+            System.out.println("Second test for copying a certain range of numbers in array = OK");
+        }else {
+            System.out.println("Second test for copying a certain range of numbers in array = FAIL");
+        }
+    }
+
+    void thirdCopyTest() {
+        Copy copy = new Copy();
+        int [] firstArray = {-1,2,3,9};
+        int [] secondArray = {-1,2};
+        int [] resultOfCopy = copy.copyInRange(firstArray,-1,2);
+        if (Arrays.equals(resultOfCopy,secondArray)) {
+            System.out.println("Third test for copying a certain range of numbers in array = OK");
+        }else {
+            System.out.println("Third test for copying a certain range of numbers in array = FAIL");
+        }
     }
 
 }
