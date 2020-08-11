@@ -8,7 +8,6 @@ class WordService {
         String[] stringArray = wordService.splitString( inText );
         int[] wordCount=  wordService.wordCounter( stringArray );
         int maxTimes = wordService.findIndexOfMaxTimes(wordCount);
-
         return stringArray[maxTimes];
     }
 
@@ -34,7 +33,7 @@ class WordService {
     public int findIndexOfMaxTimes(int[] inArray) {
         int maxInt = inArray[0];
         int maxIndex = 0;
-        for (int i=0; i< inArray.length;i++) {
+        for (int i = 0; i< inArray.length; i++) {
             if (inArray[i] > maxInt)  { maxIndex = i;}
         }
         return maxIndex;
