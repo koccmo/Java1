@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_8.homework.level_3;
+package student_roberts_kupcs.lesson_8.homework.level_3.Task_11;
 
 //Исправьте код программы так, что бы он компилировался.
 //
