@@ -1,0 +1,14 @@
+Найти в интернете (javadoc) иерархию наследования
+для класса java.util.ArrayList.
+
+
+ArrayList<E> extends AbstractList<E>
+            |
+            V
+AbstractList<E> extends AbstractCollection<E>   =>  AbstractCollection<E> implements Collection<E>
+            |                                                            |
+            V                                                            V
+AbstractCollection<E> extends java.lang.Object          Collection<E> extends Iterable<E>
+
+
+ArrayList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable
