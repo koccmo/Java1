@@ -1,6 +1,6 @@
 package student_anvars_intezars.home_tasks.lesson_8.level_2.task_9;
 
-public class Player {
+class Player {
 
     private String name;
 
@@ -9,7 +9,11 @@ public class Player {
     }
 }
 
-class ComputerPlayer {
+class ComputerPlayer extends Player {
 
+    ComputerPlayer(String name) {
+        super(name);
+    }
 }
+
 

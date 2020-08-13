@@ -1,6 +1,6 @@
 package student_jaroslav_brutan.lesson_3.day_6.task_24;
 
-public class Human {
+ class Human {
     private String name;
     private int age;
 
