@@ -6,8 +6,6 @@ class PhoneDemo {
     public static void main(String[] args) {
 
         Phone phone = new Phone(4);
-        SmartPhone smartPhone = new SmartPhone(5);
         System.out.println(phone);
-        System.out.println(smartPhone);
     }
 }
