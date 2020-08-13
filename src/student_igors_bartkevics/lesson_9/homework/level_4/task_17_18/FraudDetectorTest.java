@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_9.homework.level_4.task_17;
+package student_igors_bartkevics.lesson_9.homework.level_4.task_17_18;
 
 public class FraudDetectorTest {
 
@@ -11,6 +11,8 @@ public class FraudDetectorTest {
         test.transactionAmountExceedsLimitTest();
         test.transactionAmountDoesNotExceedLimitTest();
         test.transactionAmountIsEqualToLimitTest();
+        test.traderIsFromSidney();
+        test.traderIsNotFromSidney();
 
     }
 
@@ -39,6 +41,15 @@ public class FraudDetectorTest {
         checkResult(condition, "Transaction amount is equal to limit");
     }
 
+    void traderIsFromSidney() {
+        boolean condition = detector.isTraderFromSidney(new Trader("John Smith", "Sidney"));
+        checkResult(condition, "Trader is from Sidney");
+    }
+
+    void traderIsNotFromSidney() {
+        boolean condition = !detector.isTraderFromSidney(new Trader("John Smith", "Chicago"));
+        checkResult(condition, "Trader is NOT from Sidney");
+    }
 
     public void checkResult(boolean condition, String testName) {
         if (condition) {

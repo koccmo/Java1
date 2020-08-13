@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_9.homework.level_4.task_17;
+package student_igors_bartkevics.lesson_9.homework.level_4.task_17_18;
 
 class Trader {
 
@@ -12,5 +12,9 @@ class Trader {
 
     public String getFullName() {
         return fullName;
+    }
+
+    public String getCity() {
+        return city;
     }
 }
