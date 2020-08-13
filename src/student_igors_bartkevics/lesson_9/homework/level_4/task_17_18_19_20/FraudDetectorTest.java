@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_9.homework.level_4.task_17_18_19;
+package student_igors_bartkevics.lesson_9.homework.level_4.task_17_18_19_20;
 
 public class FraudDetectorTest {
 
@@ -13,16 +13,18 @@ public class FraudDetectorTest {
         test.transactionAmountIsEqualToLimitTest();
         test.traderIsFromSidney();
         test.traderIsNotFromSidney();
+        test.traderIsFromJamaica();
+        test.traderIsNotFromJamaica();
 
     }
 
     void isNotPokemonTest() {
-        boolean condition = !detector.isPokemon(new Trader("Igors", "Riga"));
+        boolean condition = !detector.isPokemon(new Trader("Igors", "Riga", "Latvia"));
         checkResult(condition, "Trader is not Pokemon");
     }
 
     void pokemonTest() {
-        boolean condition = detector.isPokemon(new Trader("Pokemon", "Tokyo"));
+        boolean condition = detector.isPokemon(new Trader("Pokemon", "Tokyo", "Japan"));
         checkResult(condition, "Trader is Pokemon");
     }
 
@@ -42,13 +44,23 @@ public class FraudDetectorTest {
     }
 
     void traderIsFromSidney() {
-        boolean condition = detector.isTraderFromSidney(new Trader("John Smith", "Sidney"));
+        boolean condition = detector.isTraderFromSidney(new Trader("John Smith", "Sidney", "Australia"));
         checkResult(condition, "Trader is from Sidney");
     }
 
     void traderIsNotFromSidney() {
-        boolean condition = !detector.isTraderFromSidney(new Trader("John Smith", "Chicago"));
+        boolean condition = !detector.isTraderFromSidney(new Trader("John Smith", "Chicago", "USA"));
         checkResult(condition, "Trader is NOT from Sidney");
+    }
+
+    void traderIsFromJamaica() {
+        boolean condition = detector.isTraderFromJamaica(new Trader("Bob Marley", "Kingston", "Jamaica"));
+        checkResult(condition, "Trader is from Jamaica");
+    }
+
+    void traderIsNotFromJamaica() {
+        boolean condition = !detector.isTraderFromJamaica(new Trader("John Smith", "Chicago", "USA"));
+        checkResult(condition, "Trader is NOT from Jamaica");
     }
 
     public void checkResult(boolean condition, String testName) {
