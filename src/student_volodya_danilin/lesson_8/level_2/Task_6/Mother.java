@@ -1,16 +1,10 @@
 package student_volodya_danilin.lesson_8.level_2.Task_6;
 
-class Mother {
-    void methodMother() {}
+interface Mother {
 }
 
-class Father {
-    void methodFather() {}
+interface Father {
 }
 
-class Child  {
-
-    Mother mother = new Mother();
-    Father father = new Father();
-
+class Child implements Mother, Father  {
 }

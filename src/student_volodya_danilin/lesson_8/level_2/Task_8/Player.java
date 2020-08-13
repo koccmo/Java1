@@ -13,7 +13,7 @@ class Player {
 class HumanPlayer extends Player {
 
     HumanPlayer(String name) {
-        super("Jordan");
+        super(name);
     }
 
 }
