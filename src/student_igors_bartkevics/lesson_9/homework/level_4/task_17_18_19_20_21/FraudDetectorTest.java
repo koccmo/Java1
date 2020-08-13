@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_9.homework.level_4.task_17_18_19_20;
+package student_igors_bartkevics.lesson_9.homework.level_4.task_17_18_19_20_21;
 
 public class FraudDetectorTest {
 
@@ -15,7 +15,8 @@ public class FraudDetectorTest {
         test.traderIsNotFromSidney();
         test.traderIsFromJamaica();
         test.traderIsNotFromJamaica();
-
+        test.traderIsFromGermanyTest();
+        test.traderIsNotFromGermanyTest();
     }
 
     void isNotPokemonTest() {
@@ -29,17 +30,17 @@ public class FraudDetectorTest {
     }
 
     void transactionAmountExceedsLimitTest() {
-        boolean condition = detector.isTransactionAmountExceedingLimit(1000001);
+        boolean condition = detector.isTransactionAmountExceedingLimit(1000001, FraudDetector.LIMIT);
         checkResult(condition, "Transaction amount exceeds limit");
     }
 
     void transactionAmountDoesNotExceedLimitTest() {
-        boolean condition = !detector.isTransactionAmountExceedingLimit(100000);
+        boolean condition = !detector.isTransactionAmountExceedingLimit(100000, FraudDetector.LIMIT);
         checkResult(condition, "Transaction amount does not exceed limit");
     }
 
     void transactionAmountIsEqualToLimitTest() {
-        boolean condition = !detector.isTransactionAmountExceedingLimit(1000000);
+        boolean condition = !detector.isTransactionAmountExceedingLimit(1000000, FraudDetector.LIMIT);
         checkResult(condition, "Transaction amount is equal to limit");
     }
 
@@ -61,6 +62,16 @@ public class FraudDetectorTest {
     void traderIsNotFromJamaica() {
         boolean condition = !detector.isTraderFromJamaica(new Trader("John Smith", "Chicago", "USA"));
         checkResult(condition, "Trader is NOT from Jamaica");
+    }
+
+    void traderIsFromGermanyTest() {
+        boolean condition = detector.isTraderFromGermany(new Trader("Christoph Waltz", "Munich", "Germany"));
+        checkResult(condition, "Trader is from Germany");
+    }
+
+    void traderIsNotFromGermanyTest() {
+        boolean condition = !detector.isTraderFromGermany(new Trader("John Smith", "Chicago", "USA"));
+        checkResult(condition, "Trader is NOT from Germany");
     }
 
     public void checkResult(boolean condition, String testName) {
