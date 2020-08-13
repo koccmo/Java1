@@ -5,7 +5,7 @@ class FraudRuleTest {
     FraudRule rule1 = new FraudRule1("Rule 1");
     FraudRule rule2 = new FraudRule2("Rule 2");
     FraudRule rule3 = new FraudRule3("Rule 3");
-    FraudRule1 rule4 = new FraudRule1("Rule 4");
+    FraudRule rule4 = new FraudRule4("Rule 4");
     FraudRule1 rule5 = new FraudRule1("Rule 5");
 
     public static void main(String[] args) {
@@ -18,7 +18,8 @@ class FraudRuleTest {
         test.transactionAmountLessThan1000000Test(); //Rule 2 check
         test.traderIsFromSydney();      //Rule 3 check
         test.traderIsNotFromSydney();  //Rule 3 check
-
+        test.traderIsFromJamaica();      //Rule 4 check
+        test.traderIsNotFromJamaica();  //Rule 4 check
 
 
     }
@@ -77,6 +78,22 @@ class FraudRuleTest {
         Transaction transaction = new Transaction(trader, 100000);
         boolean condition = !rule3.isFraud(transaction);
         checkResult(condition, "Trader is NOT from Sydney");
+    }
+
+    //Rule 4 positive test (Trader is from Jamaica)
+    void traderIsFromJamaica() {
+        Trader trader = new Trader("Bob Marley", "Kingston", "Jamaica");
+        Transaction transaction = new Transaction(trader, 100000);
+        boolean condition = rule4.isFraud(transaction);
+        checkResult(condition, "Trader is from Jamaica");
+    }
+
+    //Rule 4 negative test (Trader is NOT from Jamaica)
+    void traderIsNotFromJamaica() {
+        Trader trader = new Trader("Sam Johnson", "Chicago", "USA");
+        Transaction transaction = new Transaction(trader, 100000);
+        boolean condition = !rule4.isFraud(transaction);
+        checkResult(condition, "Trader is NOT from Jamaica");
     }
 
     public void checkResult(boolean condition, String testName) {
