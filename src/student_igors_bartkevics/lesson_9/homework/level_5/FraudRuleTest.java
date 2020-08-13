@@ -6,7 +6,7 @@ class FraudRuleTest {
     FraudRule rule2 = new FraudRule2("Rule 2");
     FraudRule rule3 = new FraudRule3("Rule 3");
     FraudRule rule4 = new FraudRule4("Rule 4");
-    FraudRule1 rule5 = new FraudRule1("Rule 5");
+    FraudRule rule5 = new FraudRule5("Rule 5");
 
     public static void main(String[] args) {
         FraudRuleTest test = new FraudRuleTest();
@@ -20,11 +20,14 @@ class FraudRuleTest {
         test.traderIsNotFromSydney();  //Rule 3 check
         test.traderIsFromJamaica();      //Rule 4 check
         test.traderIsNotFromJamaica();  //Rule 4 check
-
+        test.traderIsFromGermanyAndTransactionAmountExceeds1000();    //Rule 5 check
+        test.traderIsFromGermanyAndTransactionAmountEquals1000();     //Rule 5 check
+        test.traderIsFromGermanyAndTransactionAmountIsLessThan1000(); //Rule 5 check
+        test.traderIsNotFromGermanyAndTransactionAmountExceeds1000(); //Rule 5 check
 
     }
 
-    //Rule 1 positive test (Trader is Pokemon)
+    //Rule 1 positive test
     void pokemonTest() {
         Trader trader = new Trader("Pokemon", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 100);
@@ -32,7 +35,7 @@ class FraudRuleTest {
         checkResult(condition, "Trader is Pokemon");
     }
 
-    //Rule 1 negative test (Trader is NOT Pokemon)
+    //Rule 1 negative test
     void notPokemonTest() {
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 100);
@@ -40,7 +43,7 @@ class FraudRuleTest {
         checkResult(condition, "Trader is NOT Pokemon");
     }
 
-    //Rule 2 positive test (Transaction amount exceeds 1000000)
+    //Rule 2 positive test
     void transactionAmountExceeds1000000Test() {
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 1000001);
@@ -48,7 +51,7 @@ class FraudRuleTest {
         checkResult(condition, "Transaction amount exceeds 1000000");
     }
 
-    //Rule 2 negative test (Transaction amount equals 1000000)
+    //Rule 2 negative test
     void transactionAmountEquals1000000Test() {
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 1000000);
@@ -56,7 +59,7 @@ class FraudRuleTest {
         checkResult(condition, "Transaction amount equals 1000000");
     }
 
-    //Rule 2 negative test (Transaction amount less than 1000000)
+    //Rule 2 negative test
     void transactionAmountLessThan1000000Test() {
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 100000);
@@ -64,7 +67,7 @@ class FraudRuleTest {
         checkResult(condition, "Transaction amount does NOT exceed 1000000");
     }
 
-    //Rule 3 positive test (Trader is from Sydney)
+    //Rule 3 positive test
     void traderIsFromSydney() {
         Trader trader = new Trader("Sam Johnson", "Sydney", "Australia");
         Transaction transaction = new Transaction(trader, 100000);
@@ -72,7 +75,7 @@ class FraudRuleTest {
         checkResult(condition, "Trader is from Sydney");
     }
 
-    //Rule 3 negative test (Trader is NOT from Sydney)
+    //Rule 3 negative test
     void traderIsNotFromSydney() {
         Trader trader = new Trader("Sam Johnson", "Chicago", "USA");
         Transaction transaction = new Transaction(trader, 100000);
@@ -80,7 +83,7 @@ class FraudRuleTest {
         checkResult(condition, "Trader is NOT from Sydney");
     }
 
-    //Rule 4 positive test (Trader is from Jamaica)
+    //Rule 4 positive test
     void traderIsFromJamaica() {
         Trader trader = new Trader("Bob Marley", "Kingston", "Jamaica");
         Transaction transaction = new Transaction(trader, 100000);
@@ -88,12 +91,44 @@ class FraudRuleTest {
         checkResult(condition, "Trader is from Jamaica");
     }
 
-    //Rule 4 negative test (Trader is NOT from Jamaica)
+    //Rule 4 negative test
     void traderIsNotFromJamaica() {
         Trader trader = new Trader("Sam Johnson", "Chicago", "USA");
         Transaction transaction = new Transaction(trader, 100000);
         boolean condition = !rule4.isFraud(transaction);
         checkResult(condition, "Trader is NOT from Jamaica");
+    }
+
+    //Rule 5 positive test
+    void traderIsFromGermanyAndTransactionAmountExceeds1000() {
+        Trader trader = new Trader("Christoph Waltz", "Munich", "Germany");
+        Transaction transaction = new Transaction(trader, 1001);
+        boolean condition = rule5.isFraud(transaction);
+        checkResult(condition, "Trader is from Germany and transaction amount exceeds 1000");
+    }
+
+    //Rule 5 negative test
+    void traderIsFromGermanyAndTransactionAmountEquals1000() {
+        Trader trader = new Trader("Christoph Waltz", "Munich", "Germany");
+        Transaction transaction = new Transaction(trader, 1000);
+        boolean condition = !rule5.isFraud(transaction);
+        checkResult(condition, "Trader is from Germany and transaction amount equals 1000");
+    }
+
+    //Rule 5 negative test
+    void traderIsFromGermanyAndTransactionAmountIsLessThan1000() {
+        Trader trader = new Trader("Christoph Waltz", "Munich", "Germany");
+        Transaction transaction = new Transaction(trader, 999);
+        boolean condition = !rule5.isFraud(transaction);
+        checkResult(condition, "Trader is from Germany and transaction amount is less than 1000");
+    }
+
+    //Rule 5 negative test
+    void traderIsNotFromGermanyAndTransactionAmountExceeds1000() {
+        Trader trader = new Trader("Larry Clark", "Los Angeles", "USA");
+        Transaction transaction = new Transaction(trader, 1001);
+        boolean condition = !rule5.isFraud(transaction);
+        checkResult(condition, "Trader is NOT from Germany and transaction amount exceeds 1000");
     }
 
     public void checkResult(boolean condition, String testName) {
