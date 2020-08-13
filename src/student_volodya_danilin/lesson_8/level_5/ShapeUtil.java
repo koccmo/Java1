@@ -14,26 +14,40 @@ public class ShapeUtil {
 
     Circle createRandomCircle() {
         Circle result;
-        result = new Circle(rnd.nextInt(10) + 1);
+        result = new Circle(rnd.nextInt(10) + 3);
         return result;
     }
 
     Square createRandomSquare() {
         Square result;
-        result = new Square(rnd.nextInt(10) + 1);
+        result = new Square(rnd.nextInt(10) + 3);
         return result;
     }
 
     Rectangle createRandomRectangle() {
         Rectangle result;
-        result = new Rectangle(rnd.nextInt(10) + 1, rnd.nextInt(10) + 1);
+        int a, b;
+        do {
+            a = rnd.nextInt(10) + 3;
+            b = rnd.nextInt(7) + 3;
+        }
+        while (a == b);
+
+        result = new Rectangle(a, b);
         return result;
     }
 
     Triangle createRandomTriangle() {
         Triangle result;
-        result = new Triangle(rnd.nextInt(10) + 1,
-                              rnd.nextInt(10) + 1, rnd.nextInt(10) + 1);
+        int a, b, c;
+        do {
+            a = rnd.nextInt(10) + 5;
+            b = rnd.nextInt(11) + 5;
+            c = rnd.nextInt(12) + 5;
+        }
+        while ((a + b < c) || (a + c < b) || (b + c < a));
+
+        result = new Triangle(a, b, c);
         return result;
     }
 
@@ -73,6 +87,7 @@ public class ShapeUtil {
         result = shapePerimeterSum / shapeCounter;
         return result;
     }
+
 
     double calculateArea(Shape shape) {
         return shape.calculateArea();

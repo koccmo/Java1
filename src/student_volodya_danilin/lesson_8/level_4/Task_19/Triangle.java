@@ -17,6 +17,13 @@ public class Triangle extends Shape {
         this.sideC = sideC;
     }
 
+    boolean isTriangleValid() {
+        boolean result = false;
+        if ((sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideB + sideC > sideA)) {
+            result = true;
+        }
+        return result;
+    }
 
     boolean allSidesEqual() {
         boolean result = false;
@@ -74,35 +81,42 @@ public class Triangle extends Shape {
     public double calculateArea() {
         double result;
 
-        if (allSidesEqual()) {
-            result = (Math.sqrt(3) / 4) * sideA * sideA;
-            return result;
-        }
+        if (isTriangleValid()) {
 
-        if (twoSidesEqual()) {
-            result = calculationSideB * Math.sqrt(calculationSideA * calculationSideA
-            - (calculationSideB * calculationSideB / 4)) / 2;
-            return result;
-        }
-
-        if (isStraightTriangle()) {
-            result = calculationSideA * calculationSideB / 2;
-            return result;
-        }
-        else
-            {
-            double halfPerimeter = calculatePerimeter() / 2;
-            result = Math.sqrt(halfPerimeter * (halfPerimeter - sideA)
-                    * (halfPerimeter - sideB)
-                    * (halfPerimeter - sideC));
-            return result;
+            if (allSidesEqual()) {
+                result = (Math.sqrt(3) / 4) * sideA * sideA;
+                return result;
             }
+
+            if (twoSidesEqual()) {
+                result = calculationSideB * Math.sqrt(calculationSideA * calculationSideA
+                        - (calculationSideB * calculationSideB / 4)) / 2;
+                return result;
+            }
+
+            if (isStraightTriangle()) {
+                result = calculationSideA * calculationSideB / 2;
+                return result;
+            } else {
+                double halfPerimeter = calculatePerimeter() / 2;
+                result = Math.sqrt(halfPerimeter * (halfPerimeter - sideA)
+                        * (halfPerimeter - sideB)
+                        * (halfPerimeter - sideC));
+                return result;
+            }
+        }
+        result = 0;
+        return result;
     }
 
     @Override
     public double calculatePerimeter() {
         int result;
-        result = sideA + sideB + sideC;
+        if (isTriangleValid()) {
+            result = sideA + sideB + sideC;
+            return result;
+        }
+        result = 0;
         return result;
     }
 }
