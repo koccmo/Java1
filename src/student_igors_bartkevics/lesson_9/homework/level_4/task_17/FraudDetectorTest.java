@@ -6,22 +6,39 @@ public class FraudDetectorTest {
 
     public static void main(String[] args) {
         FraudDetectorTest test = new FraudDetectorTest();
-        test.goodTraderTest();
-        test.fraudTraderTest();
+        test.isNotPokemonTest();
+        test.pokemonTest();
+        test.transactionAmountExceedsLimitTest();
+        test.transactionAmountDoesNotExceedLimitTest();
+        test.transactionAmountIsEqualToLimitTest();
 
     }
 
-    void goodTraderTest() {
-        Trader goodTrader = new Trader("Igors", "Riga");
-        boolean condition = !detector.isFraud(new Transaction(goodTrader, 100));
-        checkResult(condition, "Good trader");
+    void isNotPokemonTest() {
+        boolean condition = !detector.isPokemon(new Trader("Igors", "Riga"));
+        checkResult(condition, "Trader is not Pokemon");
     }
 
-    void fraudTraderTest() {
-        Trader fraudTrader = new Trader("Pokemon", "Tokyo");
-        boolean condition = detector.isFraud(new Transaction(fraudTrader, 100));
-        checkResult(condition, "Fraud trader");
+    void pokemonTest() {
+        boolean condition = detector.isPokemon(new Trader("Pokemon", "Tokyo"));
+        checkResult(condition, "Trader is Pokemon");
     }
+
+    void transactionAmountExceedsLimitTest() {
+        boolean condition = detector.isTransactionAmountExceedingLimit(1000001);
+        checkResult(condition, "Transaction amount exceeds limit");
+    }
+
+    void transactionAmountDoesNotExceedLimitTest() {
+        boolean condition = !detector.isTransactionAmountExceedingLimit(100000);
+        checkResult(condition, "Transaction amount does not exceed limit");
+    }
+
+    void transactionAmountIsEqualToLimitTest() {
+        boolean condition = !detector.isTransactionAmountExceedingLimit(1000000);
+        checkResult(condition, "Transaction amount is equal to limit");
+    }
+
 
     public void checkResult(boolean condition, String testName) {
         if (condition) {

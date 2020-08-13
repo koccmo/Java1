@@ -4,8 +4,17 @@ class FraudDetector {
 
     boolean isFraud(Transaction t) {
         Trader trader = t.getTrader();
+        int transactionAmount = t.getAmount();
+        return (isPokemon(trader) || !isTransactionAmountExceedingLimit(transactionAmount));
+    }
+
+    boolean isPokemon(Trader trader) {
         String traderFullName = trader.getFullName();
-        return (traderFullName.equals("Pokemon"));
+        return traderFullName.equals("Pokemon");
+    }
+
+    boolean isTransactionAmountExceedingLimit(int transactionAmount) {
+        return (transactionAmount > 1000000 );
     }
 
 }
