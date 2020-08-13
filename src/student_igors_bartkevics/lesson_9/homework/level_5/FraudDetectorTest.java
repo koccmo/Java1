@@ -5,9 +5,12 @@ import java.util.ArrayList;
 public class FraudDetectorTest {
 
     ArrayList<FraudRule> fraudRules = new ArrayList<>();
+    FraudDetector fraudDetector = new FraudDetector(fraudRules);
 
     public static void main(String[] args) {
         FraudDetectorTest test = new FraudDetectorTest();
+
+        test.initializeFraudRules();
 
         test.pokemonTest();      //Rule 1 check
         test.notPokemonTest();  //Rule 1 check
@@ -25,15 +28,16 @@ public class FraudDetectorTest {
 
     }
 
-    //Rule 1 positive test
-    void pokemonTest() {
+    void initializeFraudRules() {
         fraudRules.add(new FraudRule1("Rule 1"));
         fraudRules.add(new FraudRule2("Rule 2"));
         fraudRules.add(new FraudRule3("Rule 3"));
         fraudRules.add(new FraudRule4("Rule 4"));
         fraudRules.add(new FraudRule5("Rule 5"));
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
+    }
 
+    //Rule 1 positive test
+    void pokemonTest() {
         Trader trader = new Trader("Pokemon", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 100);
         boolean condition = fraudDetector.isFraud(transaction);
@@ -42,8 +46,6 @@ public class FraudDetectorTest {
 
     //Rule 1 negative test
     void notPokemonTest() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
-
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 100);
         boolean condition = !fraudDetector.isFraud(transaction);
@@ -52,8 +54,6 @@ public class FraudDetectorTest {
 
     //Rule 2 positive test
     void transactionAmountExceeds1000000Test() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
-
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 1000001);
         boolean condition = fraudDetector.isFraud(transaction);
@@ -62,8 +62,6 @@ public class FraudDetectorTest {
 
     //Rule 2 negative test
     void transactionAmountEquals1000000Test() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
-
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 1000000);
         boolean condition = !fraudDetector.isFraud(transaction);
@@ -72,8 +70,6 @@ public class FraudDetectorTest {
 
     //Rule 2 negative test
     void transactionAmountLessThan1000000Test() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
-
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 100000);
         boolean condition = !fraudDetector.isFraud(transaction);
@@ -82,8 +78,6 @@ public class FraudDetectorTest {
 
     //Rule 3 positive test
     void traderIsFromSydney() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
-
         Trader trader = new Trader("Sam Johnson", "Sydney", "Australia");
         Transaction transaction = new Transaction(trader, 100000);
         boolean condition = fraudDetector.isFraud(transaction);
@@ -92,8 +86,6 @@ public class FraudDetectorTest {
 
     //Rule 3 negative test
     void traderIsNotFromSydney() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
-
         Trader trader = new Trader("Sam Johnson", "Chicago", "USA");
         Transaction transaction = new Transaction(trader, 100000);
         boolean condition = !fraudDetector.isFraud(transaction);
@@ -102,8 +94,6 @@ public class FraudDetectorTest {
 
     //Rule 4 positive test
     void traderIsFromJamaica() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
-
         Trader trader = new Trader("Bob Marley", "Kingston", "Jamaica");
         Transaction transaction = new Transaction(trader, 100000);
         boolean condition = fraudDetector.isFraud(transaction);
@@ -112,7 +102,7 @@ public class FraudDetectorTest {
 
     //Rule 4 negative test
     void traderIsNotFromJamaica() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
+        //FraudDetector fraudDetector = new FraudDetector(fraudRules);
 
         Trader trader = new Trader("Sam Johnson", "Chicago", "USA");
         Transaction transaction = new Transaction(trader, 100000);
@@ -122,8 +112,6 @@ public class FraudDetectorTest {
 
     //Rule 5 positive test
     void traderIsFromGermanyAndTransactionAmountExceeds1000() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
-
         Trader trader = new Trader("Christoph Waltz", "Munich", "Germany");
         Transaction transaction = new Transaction(trader, 1001);
         boolean condition = fraudDetector.isFraud(transaction);
@@ -132,8 +120,6 @@ public class FraudDetectorTest {
 
     //Rule 5 negative test
     void traderIsFromGermanyAndTransactionAmountEquals1000() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
-
         Trader trader = new Trader("Christoph Waltz", "Munich", "Germany");
         Transaction transaction = new Transaction(trader, 1000);
         boolean condition = !fraudDetector.isFraud(transaction);
@@ -142,8 +128,6 @@ public class FraudDetectorTest {
 
     //Rule 5 negative test
     void traderIsFromGermanyAndTransactionAmountIsLessThan1000() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
-
         Trader trader = new Trader("Christoph Waltz", "Munich", "Germany");
         Transaction transaction = new Transaction(trader, 999);
         boolean condition = !fraudDetector.isFraud(transaction);
@@ -152,8 +136,6 @@ public class FraudDetectorTest {
 
     //Rule 5 negative test
     void traderIsNotFromGermanyAndTransactionAmountExceeds1000() {
-        FraudDetector fraudDetector = new FraudDetector(fraudRules);
-
         Trader trader = new Trader("Larry Clark", "Los Angeles", "USA");
         Transaction transaction = new Transaction(trader, 1001);
         boolean condition = !fraudDetector.isFraud(transaction);
