@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_9.homework.level_4.task_17_18_19_20_21;
+package student_igors_bartkevics.lesson_9.homework.level_4;
 
 class Trader {
 
