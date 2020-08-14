@@ -11,5 +11,5 @@ class LoanSystem {
 
 abstract class LoanSystem {
 
-    abstract boolean canReceiveLoan();
+    abstract boolean canReceiveLoan(Human human);
 }
