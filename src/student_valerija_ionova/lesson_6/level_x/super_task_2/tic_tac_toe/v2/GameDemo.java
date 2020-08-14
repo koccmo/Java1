@@ -5,7 +5,7 @@ class GameDemo {
     public static void main (String [] args){
 
         Player player1 = Player.COMPUTER;
-        Player player2 = Player.HUMAN;
+        Player player2 = Player.COMPUTER;
 
         Game game = new Game(player1, player2);
 
