@@ -1,10 +1,13 @@
 package student_valerija_ionova.lesson_6.level_x.super_task_2.tic_tac_toe.v2;
 
-class GameForTwoDemo {
+class GameDemo {
 
     public static void main (String [] args){
 
-        GameForTwo game = new GameForTwo();
+        Player player1 = Player.COMPUTER;
+        Player player2 = Player.HUMAN;
+
+        Game game = new Game(player1, player2);
 
         game.play();
     }
