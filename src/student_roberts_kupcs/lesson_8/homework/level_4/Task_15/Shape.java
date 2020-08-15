@@ -19,5 +19,15 @@ package student_roberts_kupcs.lesson_8.homework.level_4.Task_15;
 //Объявите в классе Shape абстрактный метод
 //для подсчёта периметра.
 
-class Shape {
+abstract class Shape {
+
+    private String title;
+
+    Shape(String title) {
+        this.title = title;
+    }
+
+    abstract double calculateArea();
+
+    abstract double calculatePerimetr();
 }
