@@ -1,6 +1,6 @@
 package student_roberts_kupcs.lesson_8.homework.level_3.Task_13;
 
-public class House extends Buildings {
+class House extends Buildings {
 
     private int streetNumber;
     private String streetName;
