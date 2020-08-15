@@ -29,5 +29,5 @@ abstract class Shape {
 
     abstract double calculateArea();
 
-    abstract double calculatePerimetr();
+    abstract double calculatePerimeter();
 }
