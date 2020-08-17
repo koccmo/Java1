@@ -1,6 +1,6 @@
 package student_anvars_intezars.home_tasks.lesson_3.day6.task25;
 
-public class Circle {
+class Circle {
 
     private double radius;
     public double numberP;
