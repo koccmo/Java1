@@ -1,4 +1,4 @@
-package student_jaroslav_brutan.lesson_7.day_6;
+package student_jaroslav_brutan.lesson_7.day_6.task_12;
 
 public class PalindromeTest {
 

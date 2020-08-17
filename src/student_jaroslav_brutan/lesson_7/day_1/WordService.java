@@ -4,8 +4,6 @@ import java.util.Arrays;
 
 public class WordService {
 
-    String text = "Hello hello from Latvia with love";
-
     public String[] textToArray(String text){
         /* метод для создания массива из строки */
 
