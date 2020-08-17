@@ -51,8 +51,24 @@ class ShapeUtil {
     double calculateArea(Shape[] shapes) {
         double sumOfAresOfShapes = 0;
         for (int i = 0; i < shapes.length; i++) {
-            sumOfAresOfShapes = sumOfAresOfShapes +shapes[i].calculateArea();
+            sumOfAresOfShapes = sumOfAresOfShapes + shapes[i].calculateArea();
         }
         return sumOfAresOfShapes;
+    }
+
+    double calculatePerimeter(Shape[] shapes) {
+        double sumOfPerimetersOfShapes = 0;
+        for (int i = 0; i < shapes.length; i++) {
+            sumOfPerimetersOfShapes = sumOfPerimetersOfShapes + shapes[i].calculatePerimeter();
+        }
+        return sumOfPerimetersOfShapes;
+    }
+
+    double calculateArea(Shape shape) {
+        return shape.calculateArea();
+    }
+
+    double calculatePerimeter(Shape shape) {
+        return shape.calculatePerimeter();
     }
 }
