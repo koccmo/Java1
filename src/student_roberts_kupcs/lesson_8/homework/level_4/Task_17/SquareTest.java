@@ -1,16 +1,17 @@
-package student_roberts_kupcs.lesson_8.homework.level_4.Task_16;
+package student_roberts_kupcs.lesson_8.homework.level_4.Task_17;
 
-class CircleTest {
+
+class SquareTest {
     public static void main(String[] args) {
-        CircleTest circleTest = new CircleTest();
-        circleTest.calculateAreaTest();
-        circleTest.calculatePerimeterTest();
+        SquareTest squareTest = new SquareTest();
+        squareTest.calculateAreaTest();
+        squareTest.calculatePerimeterTest();
 
     }
 
     public void calculateAreaTest() {
-        Circle circle = new Circle("Circle", 2);
-        if (circle.calculateArea() == 12.566) {
+        Square square = new Square("Square", 3);
+        if (square.calculateArea() == 9.0) {
             System.out.println("Calculate Area Test OK");
         } else {
             System.out.println("Calculate Area Test FAIL");
@@ -18,8 +19,8 @@ class CircleTest {
     }
 
     public void calculatePerimeterTest() {
-        Circle circle = new Circle("Circle", 2);
-        if (circle.calculatePerimeter() == 12.566) {
+        Square square = new Square("Square", 3);
+        if (square.calculatePerimeter() == 12.0) {
             System.out.println("Calculate perimeter Test OK");
         } else {
             System.out.println("Calculate Perimeter Test FAIL");
