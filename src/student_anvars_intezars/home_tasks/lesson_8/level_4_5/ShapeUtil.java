@@ -63,4 +63,12 @@ class ShapeUtil {
         }
         return sumOfPerimetersOfShapes;
     }
+
+    double calculateArea(Shape shape) {
+        return shape.calculateArea();
+    }
+
+    double calculatePerimeter(Shape shape) {
+        return shape.calculatePerimeter();
+    }
 }
