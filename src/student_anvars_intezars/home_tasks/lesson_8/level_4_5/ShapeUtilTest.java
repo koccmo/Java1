@@ -11,8 +11,8 @@ class ShapeUtilTest {
     void createCircleTest() {
         ShapeUtil shapeUtil = new ShapeUtil();
         Circle resultOfRandomCircle = shapeUtil.createRandomCircle();
-        double resultOfArea = resultOfRandomCircle.calculateArea();
-        System.out.println(resultOfArea);
+        System.out.println(resultOfRandomCircle);
         }
+
     }
 
