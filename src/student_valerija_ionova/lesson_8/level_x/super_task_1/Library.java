@@ -8,7 +8,7 @@ class Library {
     private ArrayList<Book> allBooks;
 
     public Library (Book ... allBooks){
-        this.allBooks = new ArrayList<Book>(Arrays.asList(allBooks));
+        this.allBooks = new ArrayList<>(Arrays.asList(allBooks));
     }
 
     public ArrayList <Book> getAllBooks(){
