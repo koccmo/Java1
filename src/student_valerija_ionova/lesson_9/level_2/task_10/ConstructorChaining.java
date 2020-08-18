@@ -28,7 +28,7 @@ class ConstructorChaining {
     }
 
     public ConstructorChaining (String constructorName, int parameterCount){
-        this("Bob");
+        this(constructorName);
         this.parameterCount = parameterCount;
     }
 
