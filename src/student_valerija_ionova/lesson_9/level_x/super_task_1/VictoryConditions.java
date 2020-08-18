@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_9.level_x.super_task_1;
 
 public class VictoryConditions {
 
-    boolean winDiagonal1 (int [][] field, int player){
+    /*boolean winDiagonal1 (int [][] field, int player){
 
         int inDiagonal = 0;
         for (int i = 0; i < 3; i++){
@@ -126,6 +126,6 @@ public class VictoryConditions {
 
     boolean win (int [][] field, int player){
         return (winHorizontal(field, player) || winVertical(field, player) || winDiagonal(field, player));
-    }
+    }*/
 
 }
