@@ -42,6 +42,10 @@ class Field {
         return field;
     }
 
+    void setField (int [][] board){
+        this.field = board;
+    }
+
     boolean win (int player){
         return (winHorizontal(player) || winVertical(player) || winDiagonal(player));
     }
