@@ -1,4 +1,4 @@
-package student_dmitrijs_jasvins.lesson_9.day_4;
+package student_dmitrijs_jasvins.lesson_9.day_4_5_6;
 
 public class Trader {
 
@@ -16,5 +16,11 @@ public class Trader {
 
     public String getCity() {
         return city;
+    }
+
+    @Override
+    public String toString() {
+        return "Trader - " + name +
+                ". City - " + city + ", ";
     }
 }
