@@ -6,7 +6,7 @@ class FourInRowTest {
 
         FourInRowTest test = new FourInRowTest();
 
-        test.testCoordinatesNotInFieldFalse();
+        /*test.testCoordinatesNotInFieldFalse();
         test.testCoordinatesNotInFieldTrue();
 
         test.testWinHorizontalFalse();
@@ -20,7 +20,7 @@ class FourInRowTest {
         test.testWinDiagonal1False();
 
         test.testWinDiagonal2False();
-        test.testWinDiagonal2True();
+        test.testWinDiagonal2True();*/
 
     }
 
@@ -32,7 +32,7 @@ class FourInRowTest {
         }
     }
 
-    void testCoordinatesNotInFieldFalse(){
+    /*void testCoordinatesNotInFieldFalse(){
         PlayersMove fourInRow = new PlayersMove();
 
         checkResult("testCoordinatesNotInField", !fourInRow.coordinatesNotInField(1));
@@ -42,9 +42,9 @@ class FourInRowTest {
         PlayersMove fourInRow = new PlayersMove();
 
         checkResult("testCoordinatesNotInFieldTrue", fourInRow.coordinatesNotInField(7));
-    }
+    }*/
 
-    void testWinHorizontalFalse(){
+    /*void testWinHorizontalFalse(){
         VictoryConditions victoryConditions = new VictoryConditions();
         int[][] field = {{0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0},
@@ -166,6 +166,6 @@ class FourInRowTest {
                 {0, 3, 0, 0, 0, 8, 0}};
 
         checkResult("testWinDiagonal2True", victoryConditions.winDiagonal2(field, 3));
-    }
+    }*/
 
 }
