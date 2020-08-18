@@ -39,6 +39,7 @@ class FraudDetector {
             if (rule.isFraud(transaction)) {
                 result = true;
                 ruleName = rule.getRuleName();
+                System.out.println(transaction.toString());
                 break;
             }
         }

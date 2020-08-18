@@ -23,4 +23,13 @@ class Trader {
     public String getCountry() {
         return country;
     }
+
+    @Override
+    public String toString() {
+        return "Trader{" +
+                "Full name: " + fullName +
+                ", city: " + city +
+                ", country: " + country +
+                '}';
+    }
 }
