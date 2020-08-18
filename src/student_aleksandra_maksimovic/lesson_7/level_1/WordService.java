@@ -38,7 +38,9 @@ public class WordService {
             }
         }
 
-        return wordCounts;
+        return wordCounts;      //var words = service.splitString("one two three");
+        //System.out.println(words);
+
     }
 
     public String findMostFrequentWord(String text) {
@@ -62,8 +64,6 @@ public class WordService {
     public static void main(String[] args) {
         var service = new WordService();
         service.findMostFrequentWord("mama papa papa mama kot sov");
-        //var words = service.splitString("one two three");
-        //System.out.println(words);
 
 
     }
