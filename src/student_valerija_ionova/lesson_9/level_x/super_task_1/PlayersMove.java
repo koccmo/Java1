@@ -9,44 +9,44 @@ import java.util.Scanner;
 
 class PlayersMove {
 
-    Field gameBoard = new Field();
+    //Field gameBoard = new Field();
 
-    int getX (int [][] field){
+    Coordinates newMove(Field field){
+        int x = getX(field);
+        int y = getY(field, x);
+        return new Coordinates(x, y);
+    }
+
+    private int getX (Field field){
         System.out.println("Please enter number of Column (1-7):");
         int x;
         Scanner input = new Scanner(System.in);
         do{
             x = input.nextInt()-1;
             ifNecessaryNotificationAboutError(field, x);
-        }while(coordinatesNotInField(x) || !gameBoard.freePlace(field, x));
+        }while(coordinatesNotInField(x) || !field.freePlace(x));
         return x;
     }
 
-    int getY (int [][] field, int x){
+    private int getY (Field field, int x){
         int y = 0;
         for (int i = 5; i>0; i--){
-            if (field[i][x] == 0){
+            if (field.getField()[i][x] == 0){
                 return i;
             }
         }
         return y;
     }
 
-    Coordinates newMove(int [][] field){
-        int x = getX(field);
-        int y = getY(field, x);
-        return new Coordinates(x, y);
-    }
-
-    boolean coordinatesNotInField(int x){
+    private boolean coordinatesNotInField(int x){
         return ((x < 0)||(x > 6));
     }
 
-    void ifNecessaryNotificationAboutError(int [][] field, int x){
+    private void ifNecessaryNotificationAboutError(Field field, int x){
         if (coordinatesNotInField(x)){
             System.out.println("Not valid coordinates");
         }else {
-            if (!gameBoard.freePlace(field, x)) {
+            if (!field.freePlace(x)) {
                 System.out.println("No free places in this column!");
             }
         }
