@@ -6,8 +6,6 @@ class FourInRowTest {
 
         FourInRowTest test = new FourInRowTest();
 
-        /*test.testCoordinatesNotInFieldFalse();
-        test.testCoordinatesNotInFieldTrue();
 
         test.testWinHorizontalFalse();
         test.testWinHorizontalTrue();
@@ -20,7 +18,7 @@ class FourInRowTest {
         test.testWinDiagonal1False();
 
         test.testWinDiagonal2False();
-        test.testWinDiagonal2True();*/
+        test.testWinDiagonal2True();
 
     }
 
@@ -32,33 +30,21 @@ class FourInRowTest {
         }
     }
 
-    /*void testCoordinatesNotInFieldFalse(){
-        PlayersMove fourInRow = new PlayersMove();
-
-        checkResult("testCoordinatesNotInField", !fourInRow.coordinatesNotInField(1));
-    }
-
-    void testCoordinatesNotInFieldTrue(){
-        PlayersMove fourInRow = new PlayersMove();
-
-        checkResult("testCoordinatesNotInFieldTrue", fourInRow.coordinatesNotInField(7));
-    }*/
-
-    /*void testWinHorizontalFalse(){
-        VictoryConditions victoryConditions = new VictoryConditions();
+    void testWinHorizontalFalse(){
+        Field board = new Field();
         int[][] field = {{0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0},
                 {0, 3, 3, 3, 0, 0, 0},
                 {0, 0, 0, 3, 3, 0, 0},
                 {0, 0, 3, 0, 0, 0, 0},
                 {0, 0, 3, 8, 8, 8, 8}};
+        board.setField(field);
 
-
-        checkResult("testWinHorizontalFalse", !victoryConditions.winHorizontal(field, 3));
+        checkResult("testWinHorizontalFalse", !board.win(3));
     }
 
     void testWinHorizontalTrue(){
-        VictoryConditions victoryConditions = new VictoryConditions();
+        Field board = new Field();
 
         int[][] field = {{0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0},
@@ -66,13 +52,13 @@ class FourInRowTest {
                 {0, 0, 0, 3, 3, 0, 0},
                 {0, 0, 3, 0, 0, 0, 0},
                 {0, 0, 3, 8, 8, 8, 8}};
-
-        checkResult("testWinHorizontalTrue", victoryConditions.winHorizontal(field, 8));
+        board.setField(field);
+        checkResult("testWinHorizontalTrue", board.win(8));
     }
 
     void testWinHorizontalTrue2(){
 
-        VictoryConditions victoryConditions = new VictoryConditions();
+        Field board = new Field();
 
         int[][] field = {{0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0},
@@ -80,13 +66,13 @@ class FourInRowTest {
                 {0, 0, 0, 3, 3, 0, 0},
                 {0, 0, 3, 0, 0, 0, 0},
                 {0, 0, 8, 8, 8, 8, 0}};
-
-        checkResult("testWinHorizontalTrue2", victoryConditions.winHorizontal(field, 8));
+        board.setField(field);
+        checkResult("testWinHorizontalTrue2", board.win(8));
     }
 
     void testWinVerticalTrue(){
 
-        VictoryConditions victoryConditions = new VictoryConditions();
+        Field board = new Field();
 
         int[][] field = {{3, 0, 0, 0, 0, 0, 0},
                 {3, 0, 0, 0, 0, 0, 0},
@@ -94,13 +80,13 @@ class FourInRowTest {
                 {3, 0, 0, 3, 3, 0, 0},
                 {0, 0, 3, 0, 0, 0, 0},
                 {0, 0, 8, 8, 8, 8, 0}};
-
-        checkResult("testWinVerticalTrue", victoryConditions.winVertical(field, 3));
+        board.setField(field);
+        checkResult("testWinVerticalTrue", board.win(3));
     }
 
     void testWinVerticalFalse(){
 
-        VictoryConditions victoryConditions = new VictoryConditions();
+        Field board = new Field();
 
         int[][] field = {{3, 0, 0, 0, 0, 0, 0},
                 {3, 0, 0, 0, 0, 0, 0},
@@ -108,13 +94,13 @@ class FourInRowTest {
                 {3, 0, 0, 3, 3, 0, 0},
                 {0, 0, 3, 0, 0, 0, 0},
                 {0, 0, 8, 8, 8, 8, 0}};
-
-        checkResult("testWinVerticalFalse", !victoryConditions.winVertical(field, 3));
+        board.setField(field);
+        checkResult("testWinVerticalFalse", !board.win(3));
     }
 
     void testWinDiagonal1True(){
 
-        VictoryConditions victoryConditions = new VictoryConditions();
+        Field board = new Field();
 
         int[][] field = {{8, 0, 0, 0, 0, 3, 0},
                 {0, 3, 0, 0, 0, 0, 0},
@@ -122,13 +108,13 @@ class FourInRowTest {
                 {0, 0, 0, 3, 0, 8, 0},
                 {0, 0, 8, 0, 3, 0, 0},
                 {0, 3, 0, 0, 0, 0, 0}};
-
-        checkResult("testWinDiagonal1True", victoryConditions.winDiagonal1(field, 3));
+        board.setField(field);
+        checkResult("testWinDiagonal1True", board.win(3));
     }
 
     void testWinDiagonal1False(){
 
-        VictoryConditions victoryConditions = new VictoryConditions();
+        Field board = new Field();
 
         int[][] field = {{8, 0, 0, 0, 0, 3, 0},
                 {0, 3, 0, 0, 0, 0, 0},
@@ -136,13 +122,13 @@ class FourInRowTest {
                 {0, 0, 0, 3, 0, 8, 0},
                 {0, 0, 8, 0, 3, 0, 0},
                 {0, 3, 0, 0, 0, 8, 0}};
-
-        checkResult("testWinDiagonal1False", !victoryConditions.winDiagonal1(field, 3));
+        board.setField(field);
+        checkResult("testWinDiagonal1False", !board.win(3));
     }
 
     void testWinDiagonal2False(){
 
-        VictoryConditions victoryConditions = new VictoryConditions();
+        Field board = new Field();
 
         int[][] field = {{8, 0, 0, 0, 0, 3, 0},
                 {0, 3, 0, 0, 0, 0, 0},
@@ -150,13 +136,13 @@ class FourInRowTest {
                 {0, 0, 0, 3, 0, 8, 0},
                 {0, 0, 8, 0, 3, 0, 0},
                 {0, 3, 0, 0, 0, 8, 0}};
-
-        checkResult("testWinDiagonal2False", !victoryConditions.winDiagonal2(field, 3));
+        board.setField(field);
+        checkResult("testWinDiagonal2False", !board.win(3));
     }
 
     void testWinDiagonal2True(){
 
-        VictoryConditions victoryConditions = new VictoryConditions();
+        Field board = new Field();
 
         int[][] field = {{8, 0, 0, 0, 0, 3, 0},
                 {0, 3, 0, 0, 0, 0, 0},
@@ -164,8 +150,8 @@ class FourInRowTest {
                 {0, 0, 0, 3, 0, 8, 0},
                 {0, 0, 3, 0, 3, 0, 0},
                 {0, 3, 0, 0, 0, 8, 0}};
-
-        checkResult("testWinDiagonal2True", victoryConditions.winDiagonal2(field, 3));
-    }*/
+        board.setField(field);
+        checkResult("testWinDiagonal2True", board.win( 3));
+    }
 
 }
