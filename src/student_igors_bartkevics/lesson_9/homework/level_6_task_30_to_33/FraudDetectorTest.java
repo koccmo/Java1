@@ -1,37 +1,48 @@
-package student_igors_bartkevics.lesson_9.homework.level_6;
+package student_igors_bartkevics.lesson_9.homework.level_6_task_30_to_33;
 
-class FraudRuleTest {
+import java.util.ArrayList;
 
-    FraudRule rule1 = new FraudRule1("Rule 1");
-    FraudRule rule2 = new FraudRule2("Rule 2");
-    FraudRule rule3 = new FraudRule3("Rule 3");
-    FraudRule rule4 = new FraudRule4("Rule 4");
-    FraudRule rule5 = new FraudRule5("Rule 5");
+public class FraudDetectorTest {
+
+    ArrayList<FraudRule> fraudRules = new ArrayList<>();
+    FraudDetector fraudDetector = new FraudDetector(fraudRules);
 
     public static void main(String[] args) {
-        FraudRuleTest test = new FraudRuleTest();
+        FraudDetectorTest test = new FraudDetectorTest();
 
-        test.pokemonTest();        //Rule 1 check
-        test.notPokemonTest();    //Rule 1 check
-        test.transactionAmountExceeds1000000Test();    //Rule 2 check
-        test.transactionAmountEquals1000000Test();    //Rule 2 check
-        test.transactionAmountLessThan1000000Test(); //Rule 2 check
-        test.traderIsFromSydney();      //Rule 3 check
-        test.traderIsNotFromSydney();  //Rule 3 check
-        test.traderIsFromJamaica();      //Rule 4 check
-        test.traderIsNotFromJamaica();  //Rule 4 check
-        test.traderIsFromGermanyAndTransactionAmountExceeds1000();    //Rule 5 check
-        test.traderIsFromGermanyAndTransactionAmountEquals1000();     //Rule 5 check
-        test.traderIsFromGermanyAndTransactionAmountIsLessThan1000(); //Rule 5 check
+        test.initializeFraudRules();
+
+        test.pokemonTest();      //Rule 1 check
+        test.notPokemonTest();  //Rule 1 check
+        test.transactionAmountExceeds1000000Test();     //Rule 2 check
+        test.transactionAmountEquals1000000Test();     //Rule 2 check
+        test.transactionAmountLessThan1000000Test();  //Rule 2 check
+        test.traderIsFromSydney();        //Rule 3 check
+        test.traderIsNotFromSydney();    //Rule 3 check
+        test.traderIsFromJamaica();     //Rule 4 check
+        test.traderIsNotFromJamaica(); //Rule 4 check
+        test.traderIsFromGermanyAndTransactionAmountExceeds1000();       //Rule 5 check
+        test.traderIsFromGermanyAndTransactionAmountEquals1000();       //Rule 5 check
+        test.traderIsFromGermanyAndTransactionAmountIsLessThan1000();  //Rule 5 check
         test.traderIsNotFromGermanyAndTransactionAmountExceeds1000(); //Rule 5 check
 
+    }
+
+    void initializeFraudRules() {
+        fraudRules.add(new FraudRule1("Rule 1"));
+        fraudRules.add(new FraudRule2("Rule 2"));
+        fraudRules.add(new FraudRule3("Rule 3"));
+        fraudRules.add(new FraudRule4("Rule 4"));
+        fraudRules.add(new FraudRule5("Rule 5"));
     }
 
     //Rule 1 positive test
     void pokemonTest() {
         Trader trader = new Trader("Pokemon", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 100);
-        boolean condition = rule1.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = result.isFraud() && ruleName.equals("Rule 1");
         checkResult(condition, "Trader is Pokemon");
     }
 
@@ -39,7 +50,9 @@ class FraudRuleTest {
     void notPokemonTest() {
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 100);
-        boolean condition = !rule1.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = !result.isFraud() && (ruleName == null);
         checkResult(condition, "Trader is NOT Pokemon");
     }
 
@@ -47,7 +60,9 @@ class FraudRuleTest {
     void transactionAmountExceeds1000000Test() {
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 1000001);
-        boolean condition = rule2.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = result.isFraud() && ruleName.equals("Rule 2");
         checkResult(condition, "Transaction amount exceeds 1000000");
     }
 
@@ -55,7 +70,9 @@ class FraudRuleTest {
     void transactionAmountEquals1000000Test() {
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 1000000);
-        boolean condition = !rule2.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = !result.isFraud() && (ruleName == null);
         checkResult(condition, "Transaction amount equals 1000000");
     }
 
@@ -63,7 +80,9 @@ class FraudRuleTest {
     void transactionAmountLessThan1000000Test() {
         Trader trader = new Trader("Sam Johnson", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 100000);
-        boolean condition = !rule2.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = !result.isFraud() && (ruleName == null);
         checkResult(condition, "Transaction amount does NOT exceed 1000000");
     }
 
@@ -71,7 +90,9 @@ class FraudRuleTest {
     void traderIsFromSydney() {
         Trader trader = new Trader("Sam Johnson", "Sydney", "Australia");
         Transaction transaction = new Transaction(trader, 100000);
-        boolean condition = rule3.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = result.isFraud() && ruleName.equals("Rule 3");
         checkResult(condition, "Trader is from Sydney");
     }
 
@@ -79,7 +100,9 @@ class FraudRuleTest {
     void traderIsNotFromSydney() {
         Trader trader = new Trader("Sam Johnson", "Chicago", "USA");
         Transaction transaction = new Transaction(trader, 100000);
-        boolean condition = !rule3.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = !result.isFraud() && (ruleName == null);
         checkResult(condition, "Trader is NOT from Sydney");
     }
 
@@ -87,23 +110,31 @@ class FraudRuleTest {
     void traderIsFromJamaica() {
         Trader trader = new Trader("Bob Marley", "Kingston", "Jamaica");
         Transaction transaction = new Transaction(trader, 100000);
-        boolean condition = rule4.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = result.isFraud() && ruleName.equals("Rule 4");
         checkResult(condition, "Trader is from Jamaica");
     }
 
     //Rule 4 negative test
     void traderIsNotFromJamaica() {
+        //FraudDetector fraudDetector = new FraudDetector(fraudRules);
+
         Trader trader = new Trader("Sam Johnson", "Chicago", "USA");
         Transaction transaction = new Transaction(trader, 100000);
-        boolean condition = !rule4.isFraud(transaction);
-        checkResult(condition, "Trader is NOT from Jamaica");
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = !result.isFraud() && (ruleName == null);
+        checkResult(condition, "Trader is from Jamaica");
     }
 
     //Rule 5 positive test
     void traderIsFromGermanyAndTransactionAmountExceeds1000() {
         Trader trader = new Trader("Christoph Waltz", "Munich", "Germany");
         Transaction transaction = new Transaction(trader, 1001);
-        boolean condition = rule5.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = result.isFraud() && ruleName.equals("Rule 5");
         checkResult(condition, "Trader is from Germany and transaction amount exceeds 1000");
     }
 
@@ -111,7 +142,9 @@ class FraudRuleTest {
     void traderIsFromGermanyAndTransactionAmountEquals1000() {
         Trader trader = new Trader("Christoph Waltz", "Munich", "Germany");
         Transaction transaction = new Transaction(trader, 1000);
-        boolean condition = !rule5.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = !result.isFraud() && (ruleName == null);
         checkResult(condition, "Trader is from Germany and transaction amount equals 1000");
     }
 
@@ -119,7 +152,9 @@ class FraudRuleTest {
     void traderIsFromGermanyAndTransactionAmountIsLessThan1000() {
         Trader trader = new Trader("Christoph Waltz", "Munich", "Germany");
         Transaction transaction = new Transaction(trader, 999);
-        boolean condition = !rule5.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = !result.isFraud() && (ruleName == null);
         checkResult(condition, "Trader is from Germany and transaction amount is less than 1000");
     }
 
@@ -127,9 +162,12 @@ class FraudRuleTest {
     void traderIsNotFromGermanyAndTransactionAmountExceeds1000() {
         Trader trader = new Trader("Larry Clark", "Los Angeles", "USA");
         Transaction transaction = new Transaction(trader, 1001);
-        boolean condition = !rule5.isFraud(transaction);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        String ruleName = result.getRuleName();
+        boolean condition = !result.isFraud() && (ruleName == null);
         checkResult(condition, "Trader is NOT from Germany and transaction amount exceeds 1000");
     }
+
 
     public void checkResult(boolean condition, String testName) {
         if (condition) {

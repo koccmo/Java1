@@ -1,7 +1,7 @@
-package student_igors_bartkevics.lesson_9.homework.level_6;
+package student_igors_bartkevics.lesson_9.homework.level_6_task_30_to_33;
 
-class FraudRule5 extends FraudRule {
-    public FraudRule5(String ruleName) {
+class FraudRule4 extends FraudRule {
+    public FraudRule4(String ruleName) {
         super(ruleName);
     }
 
@@ -10,7 +10,7 @@ class FraudRule5 extends FraudRule {
     public boolean isFraud(Transaction t) {
         Trader trader = t.getTrader();
         String country = trader.getCountry();
-        return country.equals("Germany") && (t.getAmount() > 1000);
+        return country.equals("Jamaica");
     }
 
 }
