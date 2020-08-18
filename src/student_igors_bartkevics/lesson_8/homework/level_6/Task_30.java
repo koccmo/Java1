@@ -1,8 +1,8 @@
 package student_igors_bartkevics.lesson_8.homework.level_6;
 
-public class Task_30 {
+class Task_30 {
 
-    public int sumOfVarArgs(int...values) {
+    int sumOfVarArgs(int...values) {
         int sum = 0;
         for (int value: values) {
             sum += value;
