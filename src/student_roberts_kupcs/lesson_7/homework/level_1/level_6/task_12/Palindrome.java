@@ -16,6 +16,9 @@ package student_roberts_kupcs.lesson_7.homework.level_1.level_6.task_12;
 //Написать тестовые сценарии для класса Palindrome в классе PalindromeTest.
 //Все тестовые сценарии должны отрабатывать без ошибок.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Palindrome {
 
 

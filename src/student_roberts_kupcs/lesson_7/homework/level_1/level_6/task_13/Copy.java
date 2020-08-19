@@ -12,6 +12,11 @@ package student_roberts_kupcs.lesson_7.homework.level_1.level_6.task_13;
 //Написать тестовые сценарии для класса Copy в классе CopyTest.
 //Все тестовые сценарии должны отрабатывать без ошибок.
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
+@CodeReviewComment(teacher = "А где тесты? Нет тестов, нет доказательства что этот код работает!")
 class Copy {
     public int[] copyInRange(int[] in, int leftBound, int rightBound) {
         int[] newA = new int[in.length];

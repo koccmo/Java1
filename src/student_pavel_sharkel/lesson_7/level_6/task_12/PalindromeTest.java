@@ -4,7 +4,7 @@ import teacher.codereview.CodeReview;
 import teacher.codereview.CodeReviewComment;
 
 @CodeReview(approved = true)
-@CodeReviewComment(teacher = "Всешда нужны тесты на позитивный и негативный сценарии!")
+@CodeReviewComment(teacher = "Всегда нужны тесты на позитивный и негативный сценарии!")
 class PalindromeTest {
 
     public static void main(String[] args) {
