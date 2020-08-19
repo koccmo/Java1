@@ -1,6 +1,7 @@
 package student_aleksandra_maksimovic.lesson_7.level_6.task_10;
 
 import student_aleksandra_maksimovic.lesson_7.level_1.WordService;
+import teacher.codereview.CodeReview;
 
 /*
 Разработать класс PowerCalculator, который реализует единственный функциональный метод
@@ -9,6 +10,8 @@ import student_aleksandra_maksimovic.lesson_7.level_1.WordService;
 Написать тестовые сценарии для класса PowerCalculator в классе PowerCalculatorTest.
 Все тестовые сценарии должны отрабатывать без ошибок.
  */
+
+@CodeReview(approved = true)
 public class PowerCalculator {
     public int elevate(int number, int power) {
 
