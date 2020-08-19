@@ -1,7 +1,10 @@
 package student_aleksandra_maksimovic.lesson_7.level_6.task_12;
 
 import student_aleksandra_maksimovic.testing.Tester;
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
 
+@CodeReview(approved = true)
 public class PalindromeTest {
     public static void main(String[] args) {
         PalindromeTest test = new PalindromeTest();
@@ -20,11 +23,13 @@ public class PalindromeTest {
         tester.check(palindrome.isPalindrome(" S ...uM ...mU.. s"), "Is palindrome true test #1");
     }
 
+    @CodeReviewComment(teacher = "Метод с большой буквы!")
     public void PalindromeFalseTest() {
         Palindrome palindrome = new Palindrome();
         tester.check(!palindrome.isPalindrome("hELLO wORLD"), "Is not palindrome test #1");
     }
 
+	@CodeReviewComment(teacher = "Метод с большой буквы!")
     public void PalindromeNullTextTest() {
         Palindrome palindrome = new Palindrome();
         tester.check(!palindrome.isPalindrome("       ..       "), "No text to check palindrome test #1");

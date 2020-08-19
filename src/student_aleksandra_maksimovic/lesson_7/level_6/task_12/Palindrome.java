@@ -20,6 +20,11 @@ boolean isPalindrome(String text) - метод возвращает true, есл
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
+@CodeReviewComment(teacher = "import java.util.Arrays - не используемый импорт")
 public class Palindrome {
 
     public boolean isValidChar(char ch) {
