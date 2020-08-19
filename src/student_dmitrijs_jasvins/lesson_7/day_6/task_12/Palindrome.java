@@ -2,6 +2,9 @@ package student_dmitrijs_jasvins.lesson_7.day_6.task_12;
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Palindrome {
 
     boolean isPalindrome(String text) {
