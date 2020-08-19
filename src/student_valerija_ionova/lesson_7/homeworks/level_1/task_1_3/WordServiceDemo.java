@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_7.homeworks.level_1.task_1_3;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class WordServiceDemo {
     public static void main (String[] args){
 

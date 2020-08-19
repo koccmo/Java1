@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_7.homeworks.level_1.task_1_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class MostFrequentWordTest {
 
     public static void main (String [] args){

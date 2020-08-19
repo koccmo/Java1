@@ -1,5 +1,9 @@
 package student_valerija_ionova.lesson_7.homeworks.level_1.task_1_3;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 class WordServiceVariant2 {
 
     private String [] testToWordsArray(String text){
@@ -19,10 +23,12 @@ class WordServiceVariant2 {
         return mostFrequentWord;
     }
 
+    @CodeReviewComment(teacher = "Зачем этот метод нужен? Он же вообще ничего не делает?")
     private String updateMostFrequentWord(String word){
         return word;
     }
 
+	@CodeReviewComment(teacher = "Зачем этот метод нужен? Он же вообще ничего не делает?")
     private int updateNumberOfMostFrequentWord(int number){
         return number;
     }

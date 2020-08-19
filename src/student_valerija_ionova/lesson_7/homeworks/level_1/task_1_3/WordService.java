@@ -7,6 +7,10 @@ package student_valerija_ionova.lesson_7.homeworks.level_1.task_1_3;
 то возвращаем то слово, которое стоит в тексте первым.
 */
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class WordService {
 
     public boolean isCharacterLetter(char symbol){
@@ -35,6 +39,7 @@ class WordService {
         }
     }
 
+    @CodeReviewComment(teacher = "String.split()?")
     public String [] createArrayOfWords(String text){
 
         String [] arrayOfWords = new String [countNumberOfWordsInString(text)];
