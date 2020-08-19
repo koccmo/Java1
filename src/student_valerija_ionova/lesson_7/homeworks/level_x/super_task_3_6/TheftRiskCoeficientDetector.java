@@ -3,6 +3,9 @@ package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_3_6;
 import java.math.BigDecimal;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TheftRiskCoeficientDetector {
 
 	private static final BigDecimal STANDARD_THEFT_RISK_COEF = new BigDecimal("0.01");

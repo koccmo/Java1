@@ -1,5 +1,9 @@
 package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_1;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class Disk {
 
     private char name;
@@ -88,7 +92,7 @@ class Disk {
         return placeOfDisk;
     }
 
-
+	@CodeReviewComment(teacher = "Unused method, remove it!")
     public void printArrayOfDisk(String name) {
         System.out.println(name);
         for (int i = 0; i < freeIndex; i++) {

@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ObjectOnDisk {
 
     private String name;
