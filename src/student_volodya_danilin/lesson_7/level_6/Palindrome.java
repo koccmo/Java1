@@ -2,6 +2,10 @@ package student_volodya_danilin.lesson_7.level_6;
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 public class Palindrome {
 
     boolean isPalindrome(String text) {
@@ -23,6 +27,8 @@ public class Palindrome {
     }
 }
 
+@CodeReview(approved = true)
+@CodeReviewComment(teacher = "Нужны тесты на позитивный и негативный сценарии!")
 class PalindromeTest {
     private Palindrome palindrome = new Palindrome();
     String truePalindrome = "abcba";
