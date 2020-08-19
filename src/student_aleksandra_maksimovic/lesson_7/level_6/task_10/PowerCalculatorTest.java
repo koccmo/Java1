@@ -1,7 +1,9 @@
 package student_aleksandra_maksimovic.lesson_7.level_6.task_10;
 
 import student_aleksandra_maksimovic.testing.Tester;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class PowerCalculatorTest {
     public static void main(String[] args) {
         PowerCalculatorTest test = new PowerCalculatorTest();
