@@ -2,6 +2,11 @@ package student_volodya_danilin.lesson_7.level_1;
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
+@CodeReviewComment(teacher = "Unused import statement: import java.util.Arrays. Always remove unused imports from your code please!")
 public class WordService {
 
     public String findMostFrequentWord(String text) {
