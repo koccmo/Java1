@@ -1,5 +1,8 @@
 package student_alexey_tretyakov.lesson_7.level_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PowerCalculatorTest {
 
     public static void main(String[] args) {
