@@ -1,5 +1,10 @@
 package student_jaroslav_brutan.lesson_7.day_6.task_11;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
+@CodeReviewComment(teacher = "Поправьте имплементацию и напишите тесты так, что бы найденные ошибки учитывались в тестах.")
 public class CreditCardTest {
 
     public static void main(String[] args) {
