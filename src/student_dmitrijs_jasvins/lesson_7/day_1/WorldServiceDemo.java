@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_7.day_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class WorldServiceDemo {
     public static void main(String[] args) {
         WordService wordService = new WordService();
