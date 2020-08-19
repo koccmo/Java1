@@ -5,6 +5,9 @@ package student_valerija_ionova.lesson_7.homeworks.level_6.task_13;
 
 int[] copyInRange(int[] in, int leftBound, int rightBound)*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Copy {
 
     int[] copyInRange(int[] in, int leftBound, int rightBound){

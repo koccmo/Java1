@@ -14,6 +14,9 @@ int[] copyInRange(int[] in, int leftBound, int rightBound) - вернуть но
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class CopyTest {
 
     public static void main(String[] args){
