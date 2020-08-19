@@ -1,11 +1,17 @@
 package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_7;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class WordService {
 
+	@CodeReviewComment(teacher = "public really? May be private?")
     public int [] createWordCountArray(String [] arrayOfWords){
         return (new int[arrayOfWords.length]);
     }
 
+	@CodeReviewComment(teacher = "public really? May be private?")
     public int countWords(String [] textArray, int wordCount){
         int wordCounter = 0;
         for (String s : textArray) {
@@ -16,6 +22,7 @@ class WordService {
         return wordCounter;
     }
 
+	@CodeReviewComment(teacher = "public really? May be private?")
     public int [] fillWordCountArray (String [] textArray, int [] wordCountArray){
         for (int wordCount = 0; wordCount < textArray.length; wordCount++) {
             wordCountArray[wordCount] = countWords(textArray, wordCount);
@@ -23,7 +30,7 @@ class WordService {
     return wordCountArray;
     }
 
-
+	@CodeReviewComment(teacher = "public really? May be private?")
     public int indexOfMostFrequentWordInArray(int [] wordCountArray){
         int maxIndex = 0;
         int maxCountOfWords = 0;
@@ -46,6 +53,7 @@ class WordService {
         return textArray[indexOfMostFrequentWordInArray(filledWordCountArray)];
     }
 
+    @CodeReviewComment(teacher = "public really? May be private?")
     public String[] convertStringToWordArray(String text) {
         return  text.split(" ");
     }

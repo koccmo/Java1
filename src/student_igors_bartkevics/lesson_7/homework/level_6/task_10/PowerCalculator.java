@@ -7,6 +7,9 @@
  */
 package student_igors_bartkevics.lesson_7.homework.level_6.task_10;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PowerCalculator {
 
     public double exponentiation(double base, int exponent) {

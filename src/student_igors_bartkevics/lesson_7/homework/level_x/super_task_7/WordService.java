@@ -51,6 +51,10 @@ class WordService {
  */
 package student_igors_bartkevics.lesson_7.homework.level_x.super_task_7;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class WordService {
 
     public String findMostFrequentWord(String text) {
@@ -88,6 +92,7 @@ class WordService {
         return max;
     }
 
+    @CodeReviewComment(teacher = "public really? May be private?")
     public String[] convertStringToWordArray(String text) {
         return  text.split(" ");
     }

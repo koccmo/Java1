@@ -1,5 +1,9 @@
 package student_jaroslav_brutan.lesson_7.day_6.task_11;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 public class CreditCard {
 
     private double cardNumber;
@@ -7,6 +11,8 @@ public class CreditCard {
     private int cardBalance;
     private int creditLimit;
     private int creditLiability;
+
+    @CodeReviewComment(teacher = "Это свойство не используется, зачем оно нужно?")
     private int moneyAmount;
 
     public CreditCard(double cardNumber, int pinCode) {
@@ -41,6 +47,9 @@ public class CreditCard {
         this.creditLiability = creditLiability;
     }
 
+    @CodeReviewComment(teacher = "Не корректная логика!")
+    @CodeReviewComment(teacher = "Пин код неправильный, а баланс будет меняться!")
+    @CodeReviewComment(teacher = "Напишите тесты и убедитесь в этом.")
     public int withdraw(int pinCode, int moneyAmount) {
         int yourPincode = getPinCode();
         if (yourPincode == pinCode) {
@@ -59,7 +68,10 @@ public class CreditCard {
         return cardBalance;
     }
 
-    public int deposit(int pinCode, int moneyAmount) {
+	@CodeReviewComment(teacher = "Не корректная логика!")
+	@CodeReviewComment(teacher = "Пин код неправильный, а баланс будет меняться!")
+	@CodeReviewComment(teacher = "Напишите тесты и убедитесь в этом.")
+	public int deposit(int pinCode, int moneyAmount) {
         int yourPincode = getPinCode();
         if (yourPincode == pinCode) {
             System.out.println("Pin code is correct!");

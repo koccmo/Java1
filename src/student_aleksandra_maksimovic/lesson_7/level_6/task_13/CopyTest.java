@@ -1,9 +1,11 @@
 package student_aleksandra_maksimovic.lesson_7.level_6.task_13;
 
 import student_aleksandra_maksimovic.testing.Tester;
+import teacher.codereview.CodeReview;
 
 import java.util.Arrays;
 
+@CodeReview(approved = true)
 public class CopyTest {
     public static void main(String[] args) {
         CopyTest test = new CopyTest();

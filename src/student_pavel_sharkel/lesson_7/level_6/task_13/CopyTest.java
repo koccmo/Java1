@@ -2,6 +2,9 @@ package student_pavel_sharkel.lesson_7.level_6.task_13;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = false)
 public class CopyTest {
     public static void main(String[] args) {
 

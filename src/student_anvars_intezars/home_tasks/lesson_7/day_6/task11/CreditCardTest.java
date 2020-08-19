@@ -2,6 +2,11 @@ package student_anvars_intezars.home_tasks.lesson_7.day_6.task11;
 
 import java.sql.SQLOutput;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
+@CodeReviewComment(teacher = "import java.sql.SQLOutput - не используемый импорт, удалить")
 class CreditCardTest {
 
     public static void main(String[] args) {

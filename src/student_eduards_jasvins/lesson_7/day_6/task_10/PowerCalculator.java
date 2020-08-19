@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_7.day_6.task_10;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class PowerCalculator {
 
     public int powerCalculator(int power, int number) {

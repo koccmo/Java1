@@ -1,5 +1,9 @@
 package student_anvars_intezars.home_tasks.lesson_7.day_6.task11;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 class CreditCard {
 
     private int cardNumber;
@@ -7,6 +11,7 @@ class CreditCard {
     private int balance;
     private int creditLimit;
     private int creditDebt;
+    @CodeReviewComment(teacher = "Это свойство не используется, зачем оно нужно?")
     private int amount;
 
     CreditCard(int cardNumber, int pinCode) {
@@ -17,14 +22,19 @@ class CreditCard {
         creditLimit = 1000;
     }
 
+    @CodeReviewComment(teacher = "public? May be private?")
     public int getCreditCardNumber() {
         return cardNumber;
     }
 
+	@CodeReviewComment(teacher = "public? May be private?")
     public int getCreditCardPinCode() {
         return pinCode;
     }
 
+    @CodeReviewComment(teacher = "Не корректная реализация метода!")
+    @CodeReviewComment(teacher = "При неверной пин коде всё равно будет меняться баланс!")
+    @CodeReviewComment(teacher = "Напиши на это тест и проверь это, а потом исправь!")
     public int withdraw(int pinCode, int amount) {
         int currentPinCode = getCreditCardPinCode();
         if (currentPinCode == pinCode) {
@@ -42,6 +52,9 @@ class CreditCard {
         return balance;
     }
 
+	@CodeReviewComment(teacher = "Не корректная реализация метода!")
+	@CodeReviewComment(teacher = "При неверной пин коде всё равно будет меняться баланс!")
+	@CodeReviewComment(teacher = "Напиши на это тест и проверь это, а потом исправь!")
     public int deposit(int pinCode, int amount) {
         int currentPinCode = getCreditCardPinCode();
         if (currentPinCode == pinCode) {

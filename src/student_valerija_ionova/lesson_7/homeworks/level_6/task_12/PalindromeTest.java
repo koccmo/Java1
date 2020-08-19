@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_7.homeworks.level_6.task_12;
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PalindromeTest {
     public static void main(String [] args){
         PalindromeTest palindromeTest = new PalindromeTest();

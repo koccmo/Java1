@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_3_6;
 
 import java.math.BigDecimal;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class InsuranceObjectPremiumCalculator {
 
 	private SubInsuranceObjectsPremiumCalculator subInsuranceObjectsPremiumCalculator = new SubInsuranceObjectsPremiumCalculator();

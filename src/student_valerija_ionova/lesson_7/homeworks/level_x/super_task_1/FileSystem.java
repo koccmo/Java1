@@ -37,8 +37,13 @@ package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_1;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class FileSystem {
 
+	@CodeReviewComment(teacher = "From left side use List<Disk> instead of ArrayList<Disk>.")
     private ArrayList <Disk> listOfDisks = new ArrayList <Disk> ();
 
     public boolean createDisk(char name, int size) {

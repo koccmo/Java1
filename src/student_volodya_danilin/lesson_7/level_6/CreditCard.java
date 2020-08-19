@@ -2,6 +2,11 @@ package student_volodya_danilin.lesson_7.level_6;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
+@CodeReviewComment(teacher = "Fix small issues with withdrawal() and deposit() methods please!")
 public class CreditCard {
     protected int cardNumber;
     protected int pinCode;
@@ -70,6 +75,8 @@ public class CreditCard {
         return result;
     }
 
+    @CodeReviewComment(teacher = "return boolean? true - операция закончиласть учпешно, false - нет.")
+    @CodeReviewComment(teacher = "Представьте, что у вас нет консоли! Но результат операции надо вернуть клиенту.")
     void depositMoney(int depositAmount) {
         if (checkPin(pinCode)) {
             if (this.creditDebt > 0) {
@@ -90,7 +97,9 @@ public class CreditCard {
         }
     }
 
-    void withdrawMoney(int withdrawAmount) {
+	@CodeReviewComment(teacher = "return boolean? true - операция закончиласть учпешно, false - нет.")
+	@CodeReviewComment(teacher = "Представьте, что у вас нет консоли! Но результат операции надо вернуть клиенту.")
+	void withdrawMoney(int withdrawAmount) {
         if (checkPin(pinCode)) {
             if (withdrawAmount > (this.creditLimit + this.balance - this.creditDebt)) {
                 System.out.println(showError(0));
