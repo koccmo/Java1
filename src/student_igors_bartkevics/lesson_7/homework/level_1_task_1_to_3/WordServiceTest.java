@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_7.homework.level_1_task_1_to_3;
 
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class WordServiceTest {
 
     public static void main(String[] args ) {
