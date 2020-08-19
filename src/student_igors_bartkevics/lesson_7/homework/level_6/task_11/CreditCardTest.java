@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_7.homework.level_6.task_11;
 
 import java.math.BigDecimal;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class CreditCardTest {
 
     public static void main(String[] args) {
