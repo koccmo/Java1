@@ -5,7 +5,9 @@ package student_roberts_kupcs.lesson_7.homework.level_1.level_2;
 //Для этого создайте в классе WordService отдельные методы для каждой подзадачи.
 //Напишите автоматические тесты для каждой подзадачи.
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class WorldService {
 
     public String findMostFrequentWord(String text) {

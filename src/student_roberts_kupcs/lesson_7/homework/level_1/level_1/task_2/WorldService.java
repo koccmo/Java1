@@ -1,5 +1,8 @@
 package student_roberts_kupcs.lesson_7.homework.level_1.level_1.task_2;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class WorldService {
 
         String text;

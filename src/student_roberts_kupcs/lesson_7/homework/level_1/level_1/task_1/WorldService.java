@@ -27,8 +27,15 @@ package student_roberts_kupcs.lesson_7.homework.level_1.level_1.task_1;
 //Убедитесь, что вы сможете из решений всех подзадач
 //собрать решение главной задачи.
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class WorldService {
 
+	@CodeReviewComment(teacher = "Сложная имплементация. Попробуй её разбить на "
+			+ "более маленькие методы и дать им хорошие названия."
+			+ "Тогда код будет читаться проще.")
     public String findMostFrequentWord(String text) {
         // Где начинается текущее слово.
         int wordStart = 0;
