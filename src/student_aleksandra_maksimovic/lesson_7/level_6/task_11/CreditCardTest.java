@@ -1,7 +1,11 @@
 package student_aleksandra_maksimovic.lesson_7.level_6.task_11;
 
 import student_aleksandra_maksimovic.testing.Tester;
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
 
+@CodeReview(approved = false)
+@CodeReviewComment(teacher = "Удалить не нужные методы из класса CreditCard и подправить тесты.")
 public class CreditCardTest {
     public static void main(String[] args) {
         CreditCardTest test = new CreditCardTest();

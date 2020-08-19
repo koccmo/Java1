@@ -1,5 +1,7 @@
 package student_aleksandra_maksimovic.lesson_7.level_6.task_11;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
 
 /*
 Необходимо разработать класс "кредитная карта" CreditCard
@@ -37,8 +39,11 @@ package student_aleksandra_maksimovic.lesson_7.level_6.task_11;
 Написать тестовые сценарии для класса CreditCard в классе CreditCardTest.
 Все тестовые сценарии должны отрабатывать без ошибок.
  */
+
+@CodeReview(approved = false)
 public class CreditCard {
 
+	@CodeReviewComment(teacher = "Зачем это свойство если оно не используется?")
     private String cardNumber;
     private String pinCode;
     private int balance;
@@ -106,18 +111,27 @@ public class CreditCard {
         return this.balance;
     }
 
+    @CodeReviewComment(teacher = "Зачем этот метод? Если только для тестов то его надо удалить.")
+	@CodeReviewComment(teacher = "Этот метод нарушает инкапсуляцию.")
     public void setBalance(int balance) {
         this.balance = balance;
     }
 
-    public void setCreditLimit(int creditLimit) {
+	@CodeReviewComment(teacher = "Зачем этот метод? Если только для тестов то его надо удалить.")
+	@CodeReviewComment(teacher = "Этот метод нарушает инкапсуляцию.")
+	public void setCreditLimit(int creditLimit) {
         this.creditLimit = creditLimit;
     }
 
-    public int getCreditLoan() {
+	@CodeReviewComment(teacher = "Зачем этот метод? Если только для тестов то его надо удалить.")
+	@CodeReviewComment(teacher = "Этот метод нарушает инкапсуляцию.")
+	public int getCreditLoan() {
         return this.creditLoan;
     }
-    public void setCreditLoan(int creditLoan) {
+
+	@CodeReviewComment(teacher = "Зачем этот метод? Если только для тестов то его надо удалить.")
+	@CodeReviewComment(teacher = "Этот метод нарушает инкапсуляцию.")
+	public void setCreditLoan(int creditLoan) {
         this.creditLoan = creditLoan;
     }
 
