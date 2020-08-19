@@ -1,5 +1,9 @@
 package student_pavel_sharkel.lesson_7.level_1.task_2_3;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 class WordService {
 
 
@@ -9,7 +13,8 @@ class WordService {
     }
 
     public String[] fromStringToArray(String text) {
-        WordService wordService = new WordService();
+        @CodeReviewComment(teacher = "Зачем тут создавать инстанцию WordService?")
+    	WordService wordService = new WordService();
         String[] wordsArray = new String[wordService.howManyWordsInString(text)];
 
         int wordsTotalNumber = 0;
@@ -21,6 +26,7 @@ class WordService {
     }
 
     public int[] repeatingNumberArray(String text) {
+		@CodeReviewComment(teacher = "Зачем тут создавать инстанцию WordService?")
         WordService wordService = new WordService();
         int wordsTotalNumber = wordService.howManyWordsInString(text);
         int[] wordsArrayPosition = new int[wordsTotalNumber];
@@ -36,6 +42,7 @@ class WordService {
     }
 
     public String findMostFrequentWord(String text) {
+		@CodeReviewComment(teacher = "Зачем тут создавать инстанцию WordService?")
         WordService wordService = new WordService();
         int wordsTotalNumber = wordService.howManyWordsInString(text);
         int maxRepeat = 0;
