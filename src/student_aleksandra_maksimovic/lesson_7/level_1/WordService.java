@@ -4,8 +4,18 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 public class WordService {
 
+	@CodeReviewComment(teacher = "Сложная имплементация. "
+			+ "Посмотри стандартный метод String.split()"
+			+ "и его примеры использования.")
+	@CodeReviewComment(teacher = "ArrayList<String> wordsList = new ArrayList<String>();"
+			+ "лучше слева от знака = использовать интерфейс List вот так:"
+			+ "List<String> wordsList = new ArrayList<>();")
     public ArrayList<String> splitString(String text) {
         String  word = "";
         ArrayList<String> wordsList = new ArrayList<String>();
@@ -28,6 +38,7 @@ public class WordService {
     public Map<String, Integer> countWords(String text) {
         ArrayList<String> words = this.splitString(text);
 
+        @CodeReviewComment(teacher = "Почему выбрана имплементация LinkedHashMap?")
         var wordCounts = new LinkedHashMap<String, Integer>();
 
         for (String word : words) {

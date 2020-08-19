@@ -1,10 +1,13 @@
 package student_aleksandra_maksimovic.lesson_7.level_1;
 
 import student_aleksandra_maksimovic.testing.Tester;
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
 
 import java.util.List;
 import java.util.Map;
 
+@CodeReview(approved = true)
 public class WordServiceTest {
     public static void main(String[] args) {
         WordServiceTest test = new WordServiceTest();
@@ -23,6 +26,7 @@ public class WordServiceTest {
     Tester tester= new Tester();
 
     public void splitToWordsTest() {
+    	@CodeReviewComment(teacher = "List должен быть параметризирован тем типом, что в нём хранится List<String>")
         List result = wordService.splitString("one one two two");
         List expectedResult = List.of("one", "one", "two", "two");
         tester.check(result.equals(expectedResult), "Split to words test #1");
@@ -41,6 +45,7 @@ public class WordServiceTest {
     }
 
     public void countWordsTest() {
+		@CodeReviewComment(teacher = "Map должен быть параметризирован теми типами, что в нём хранятся Map<String, Integer>")
         Map result = wordService.countWords("split is fun fun fun really fun");
         Map expectedResult = Map.of("split", 1, "is", 1, "fun", 4, "really", 1);
         tester.check(result.equals(expectedResult), "countWordsTest #1");
