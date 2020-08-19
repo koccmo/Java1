@@ -12,6 +12,10 @@ int[] copyInRange(int[] in, int leftBound, int rightBound) - вернуть но
 Написать тестовые сценарии для класса Copy в классе CopyTest.
 Все тестовые сценарии должны отрабатывать без ошибок.
  */
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Copy {
 
     int[] copyInRange(int[] in, int leftBound, int rightBound) {
