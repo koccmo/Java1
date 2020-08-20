@@ -73,7 +73,6 @@ class CreditCard {
 
 
     public void changeCreditLimit(double amount){
-        //creditBalance = creditLimit - creditBalance;
         creditLimit = amount;
         creditBalance = amount;
     }
