@@ -1,6 +1,6 @@
 package student_roberts_kupcs.lesson_8.homework.level_4.Task_16;
 
-class Circle extends Shape {
+/*class Circle extends Shape {
 
     private double radius;
 
@@ -21,3 +21,4 @@ class Circle extends Shape {
 
     }
 }
+*/
