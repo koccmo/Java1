@@ -43,15 +43,15 @@ class ObjectOnDiskFactoryTest {
     public void testCreateNewFileExtension(){
         ObjectOnDiskFactory objectOnDiskFactory = new ObjectOnDiskFactory();
 
-        ObjectOnDisk objectOnDisk1 = objectOnDiskFactory.createNewFile("CV", ExtensionOfFile.exe);
+        ObjectOnDisk objectOnDisk1 = objectOnDiskFactory.createNewFile("CV", ExtensionOfFile.EXE);
 
-        checkExtension("testCreateNewFileSize", objectOnDisk1.getExtension(), ExtensionOfFile.exe);
+        checkExtension("testCreateNewFileSize", objectOnDisk1.getExtension(), ExtensionOfFile.EXE);
     }
 
     public void testCreateNewFileSize(){
         ObjectOnDiskFactory objectOnDiskFactory = new ObjectOnDiskFactory();
 
-        ObjectOnDisk objectOnDisk1 = objectOnDiskFactory.createNewFile("CV", ExtensionOfFile.exe);
+        ObjectOnDisk objectOnDisk1 = objectOnDiskFactory.createNewFile("CV", ExtensionOfFile.EXE);
 
         checkInt("testCreateNewFileSize", objectOnDisk1.getSizeInByte(), 5);
     }
@@ -59,7 +59,7 @@ class ObjectOnDiskFactoryTest {
     public void testCreateNewFileName(){
         ObjectOnDiskFactory objectOnDiskFactory = new ObjectOnDiskFactory();
 
-        ObjectOnDisk objectOnDisk1 = objectOnDiskFactory.createNewFile("CV", ExtensionOfFile.exe);
+        ObjectOnDisk objectOnDisk1 = objectOnDiskFactory.createNewFile("CV", ExtensionOfFile.EXE);
 
         checkString("testCreateNewFileName", objectOnDisk1.getName(), "CV");
     }
