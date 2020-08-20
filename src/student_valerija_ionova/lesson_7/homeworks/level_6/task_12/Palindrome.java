@@ -24,7 +24,7 @@ class Palindrome {
 
 	@CodeReviewComment(teacher = "public method really? May be private?")
 	@CodeReviewComment(teacher = "Because clients will invoke only isPalindrome() method.")
-    public String [] arrayOfWords (String text){
+    private String [] arrayOfWords (String text){
         String [] arrayOfLetters = new String [text.length()];
 
         int j = 0;
