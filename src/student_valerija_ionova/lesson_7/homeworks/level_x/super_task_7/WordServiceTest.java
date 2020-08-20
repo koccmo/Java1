@@ -14,14 +14,6 @@ class WordServiceTest {
         wordServiceTest.testFindMostFrequentWordFourWord();
         wordServiceTest.testtestFindMostFrequentWordFourWordSameCount();
 
-        wordServiceTest.convertStringToWordArray();
-
-        wordServiceTest.testCreateWordCountArray();
-        wordServiceTest.testFillWordCountArray();
-        wordServiceTest.testCountWords();
-
-        wordServiceTest.testIndexOfMostFrequentWordInArray();
-
     }
 
     public void printResultOfTest(String name,boolean ifTestPassed){
@@ -34,14 +26,6 @@ class WordServiceTest {
 
     public void checkString(String name, String methodsResult, String expectedResult){
         printResultOfTest(name, methodsResult.equals(expectedResult));
-    }
-
-    public void checkStringArray(String name, String [] methodsResult, String [] expectedResult){
-        printResultOfTest(name, Arrays.equals(methodsResult, expectedResult));
-    }
-
-    public void checkIntArray(String name, int [] methodsResult, int [] expectedResult){
-        printResultOfTest(name, Arrays.equals(methodsResult, expectedResult));
     }
 
     public void checkInt(String name, int methodsResult, int expectedResult){
@@ -72,43 +56,4 @@ class WordServiceTest {
         checkString("testtestFindMostFrequentWordFourWordSameCount", wordService.findMostFrequentWord("Bob found Bob and foun Robert and"), "Bob");
     }
 
-
-    public void convertStringToWordArray(){
-        WordService wordService = new WordService();
-
-        String [] expectedArray = {"Bob", "found", "Bob"};
-        checkStringArray("convertStringToWordArray", wordService.convertStringToWordArray("Bob found Bob"), expectedArray);
-    }
-
-    public void testCreateWordCountArray(){
-        WordService wordService = new WordService();
-
-        String [] arrayOfWords = {"Bob", "found", "Bob"};
-        int[] expectedArray = {0, 0, 0};
-        checkIntArray ("testCreateWordCountArray", wordService.createWordCountArray(arrayOfWords), expectedArray);
-    }
-
-    public void testFillWordCountArray(){
-        WordService wordService = new WordService();
-
-        String [] arrayOfWords = {"Bob", "found", "Bob"};
-        int [] newWordCountArray = new int [3];
-        int[] expectedArray = {2, 1, 2};
-        checkIntArray ("testFillWordCountArray", wordService.fillWordCountArray(arrayOfWords, newWordCountArray), expectedArray);
-    }
-
-    public void testCountWords(){
-        WordService wordService = new WordService();
-
-        String [] arrayOfWords = {"Bob", "found", "Bob"};
-        checkInt ("testCountWords", wordService.countWords(arrayOfWords, 2), 2);
-    }
-
-
-    public void testIndexOfMostFrequentWordInArray(){
-        WordService wordService = new WordService();
-
-        int[] wordCountArray = {2, 1, 2, 1, 2};
-        checkInt ("testIndexOfMostFrequentWordInArray", wordService.indexOfMostFrequentWordInArray(wordCountArray), 0);
-    }
 }

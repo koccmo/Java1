@@ -16,21 +16,11 @@ class WordServiceVariant2 {
         for (String word : wordsArray){
             int currentNumberOfWords = countNumberOfCurrentWord(word, wordsArray);
             if (currentNumberOfWords > maxNumberOfWords){
-                mostFrequentWord = updateMostFrequentWord(word);
-                maxNumberOfWords = updateNumberOfMostFrequentWord(currentNumberOfWords);
+                mostFrequentWord = word;
+                maxNumberOfWords = currentNumberOfWords;
             }
         }
         return mostFrequentWord;
-    }
-
-    @CodeReviewComment(teacher = "Зачем этот метод нужен? Он же вообще ничего не делает?")
-    private String updateMostFrequentWord(String word){
-        return word;
-    }
-
-	@CodeReviewComment(teacher = "Зачем этот метод нужен? Он же вообще ничего не делает?")
-    private int updateNumberOfMostFrequentWord(int number){
-        return number;
     }
 
     private int countNumberOfCurrentWord(String word, String [] wordsArray){

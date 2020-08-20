@@ -10,7 +10,15 @@ package student_roberts_kupcs.lesson_8.homework.level_4.Task_16;
 //класс через конструктор.
 //
 //class Circle extends Shape {
+//private String title;
 //
+//    Shape(String title) {
+//        this.title = title;
+//    }
+//
+//    abstract double calculateArea();
+//
+//    abstract double calculatePerimeter();
 //    private double radius;
 //
 //    Circle(double radius) {
@@ -24,13 +32,5 @@ package student_roberts_kupcs.lesson_8.homework.level_4.Task_16;
 //}
 
 abstract class Shape {
-    private String title;
 
-    Shape(String title) {
-        this.title = title;
-    }
-
-    abstract double calculateArea();
-
-    abstract double calculatePerimeter();
 }
