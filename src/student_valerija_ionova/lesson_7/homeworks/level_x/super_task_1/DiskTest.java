@@ -48,7 +48,7 @@ class DiskTest {
 
         ObjectOnDiskFactory objectOnDiskFactory = new ObjectOnDiskFactory();
 
-        ObjectOnDisk objectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.java);
+        ObjectOnDisk objectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.JAVA);
         disk.addObjectOnDisk(objectOnDisk);
 
         checkString("testAddObjectOnDiskOneObjectName", disk.getPlaceOfDisk()[0].getName(), "Good_File");
@@ -60,7 +60,7 @@ class DiskTest {
 
         ObjectOnDiskFactory objectOnDiskFactory = new ObjectOnDiskFactory();
 
-        ObjectOnDisk objectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.java);
+        ObjectOnDisk objectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.JAVA);
         disk.addObjectOnDisk(objectOnDisk);
 
         checkInt("testAddObjectOnDiskOneObjectSize", disk.getPlaceOfDisk()[0].getSizeInByte(), 5);
@@ -71,7 +71,7 @@ class DiskTest {
 
         ObjectOnDiskFactory objectOnDiskFactory = new ObjectOnDiskFactory();
 
-        ObjectOnDisk objectOnDisk1 = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.java);
+        ObjectOnDisk objectOnDisk1 = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.JAVA);
         disk.addObjectOnDisk(objectOnDisk1);
 
         ObjectOnDisk objectOnDisk2 = objectOnDiskFactory.createNewFolder("Bad_Folder");
@@ -85,10 +85,10 @@ class DiskTest {
 
         ObjectOnDiskFactory objectOnDiskFactory = new ObjectOnDiskFactory();
 
-        ObjectOnDisk objectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.java);
+        ObjectOnDisk objectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.JAVA);
         disk.addObjectOnDisk(objectOnDisk);
 
-        ObjectOnDisk newObjectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.java);
+        ObjectOnDisk newObjectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.JAVA);
 
         checkBoolean("testEnoughSpaceOnDiskTrue", disk.enoughSpaceOnDisk(newObjectOnDisk), true);
     }
@@ -98,10 +98,10 @@ class DiskTest {
 
         ObjectOnDiskFactory objectOnDiskFactory = new ObjectOnDiskFactory();
 
-        ObjectOnDisk objectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.java);
+        ObjectOnDisk objectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.JAVA);
         disk.addObjectOnDisk(objectOnDisk);
 
-        ObjectOnDisk newObjectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.java);
+        ObjectOnDisk newObjectOnDisk = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.JAVA);
 
         checkBoolean("testEnoughSpaceOnDiskFalse", disk.enoughSpaceOnDisk(newObjectOnDisk), false);
     }
@@ -127,7 +127,7 @@ class DiskTest {
 
         ObjectOnDiskFactory objectOnDiskFactory = new ObjectOnDiskFactory();
 
-        ObjectOnDisk objectOnDisk1 = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.java);
+        ObjectOnDisk objectOnDisk1 = objectOnDiskFactory.createNewFile("Good_File", ExtensionOfFile.JAVA);
         disk.addObjectOnDisk(objectOnDisk1);
 
         ObjectOnDisk objectOnDisk2 = objectOnDiskFactory.createNewFolder("Bad_Folder");
@@ -135,7 +135,7 @@ class DiskTest {
 
         disk.deleteFolderOrFileFromDisk("Bad_Folder");
 
-        ObjectOnDisk objectOnDisk3 = objectOnDiskFactory.createNewFile("New_File", ExtensionOfFile.txt);
+        ObjectOnDisk objectOnDisk3 = objectOnDiskFactory.createNewFile("New_File", ExtensionOfFile.TXT);
         disk.addObjectOnDisk(objectOnDisk3);
 
         checkString("testDeleteFolderOrFileFromDisk", disk.getPlaceOfDisk()[5].getName(), "New_File");
@@ -167,7 +167,7 @@ class DiskTest {
 
         disk.deleteFolderOrFileFromDisk("Big_Folder");
 
-        ObjectOnDisk objectOnDisk3 = objectOnDiskFactory.createNewFile("New_File", ExtensionOfFile.txt);
+        ObjectOnDisk objectOnDisk3 = objectOnDiskFactory.createNewFile("New_File", ExtensionOfFile.TXT);
         disk.addObjectOnDisk(objectOnDisk3);
 
         checkString("testAddFolderAddSubFolderDeleteBothAddNewFile", disk.getPlaceOfDisk()[0].getName(), "New_File");
@@ -187,14 +187,14 @@ class DiskTest {
 
         disk.deleteFolderOrFileFromDisk("Big_Folder");
 
-        ObjectOnDisk objectOnDisk3 = objectOnDiskFactory.createNewFile("New_File", ExtensionOfFile.txt);
+        ObjectOnDisk objectOnDisk3 = objectOnDiskFactory.createNewFile("New_File", ExtensionOfFile.TXT);
         disk.addObjectOnDisk(objectOnDisk3);
 
-        ObjectOnDisk objectOnDisk4 = objectOnDiskFactory.createNewFile("Newest_File", ExtensionOfFile.java);
+        ObjectOnDisk objectOnDisk4 = objectOnDiskFactory.createNewFile("Newest_File", ExtensionOfFile.JAVA);
         disk.addObjectOnDisk(objectOnDisk4);
 
         checkString("testAddFolderAddSubFolderDeleteBothAddTwoNewFiles", disk.getPlaceOfDisk()[5].getName(), "Newest_File");
-        //disk.printArrayOfDisk("testAddFolderAddSubFolderDeleteBothAddTwoNewFiles");
+
     }
 
 
