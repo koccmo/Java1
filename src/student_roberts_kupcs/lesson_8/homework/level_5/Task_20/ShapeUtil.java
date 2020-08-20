@@ -11,11 +11,20 @@ import java.util.Random;
 
 class ShapeUtil {
 
-        public Circle createRandomCircle() {
+    public Circle createRandomCircle() {
 
         Random rd = new Random();
         double radius = rd.nextInt(10);
         return new Circle("Circle", radius);
 
     }
+
+    public Square createRandomSquare() {
+
+        Random rd = new Random();
+        double side = rd.nextInt(10);
+        return new Square("Square", side);
+
+    }
+
 }
