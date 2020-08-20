@@ -7,6 +7,7 @@ import java.util.List;
 class Reader {
     private String fullName;
     private String userID; //could be personal code
+    private String address;
     private List<Book> booksTaken = new ArrayList<>();
     private BigDecimal credit;
 }
