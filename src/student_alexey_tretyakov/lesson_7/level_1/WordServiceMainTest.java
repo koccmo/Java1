@@ -4,9 +4,8 @@ import java.util.Arrays;
 
 import teacher.codereview.CodeReview;
 import teacher.codereview.CodeReviewComment;
-//import java.util.Objects;
 
-@CodeReview(approved = false)
+//@CodeReview(approved = false)
 class WordServiceMainTest {
 
     public static void main(String[] args) {
@@ -21,7 +20,6 @@ class WordServiceMainTest {
     private void wordServiceTest(){
 
         WordService wordService = new WordService();
-        //@CodeReviewComment(teacher = "Зачем объявление переменной выносить в отдельную строку?")
         String testString = "Hello ! Hello all ! Hello all programmers ! Hello all Java's programmers !";
         testString = wordService.findMostFrequentWord( testString );
         testResult("Word service.", ( testString.equals("Hello")));
