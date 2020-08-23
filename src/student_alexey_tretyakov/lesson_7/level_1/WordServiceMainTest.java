@@ -16,24 +16,22 @@ class WordServiceMainTest {
         wordServiceMainTest.spiltStringTest();
         wordServiceMainTest.wordCounterTest();
         wordServiceMainTest.findIndexOfMaxTimesTest();
-
     }
 
     private void wordServiceTest(){
 
         WordService wordService = new WordService();
-        @CodeReviewComment(teacher = "Зачем объявление переменной выносить в отдельную строку?")
-        String testString;
-        testString = "Hello ! Hello all ! Hello all programmers ! Hello all Java's programmers !";
+        //@CodeReviewComment(teacher = "Зачем объявление переменной выносить в отдельную строку?")
+        String testString = "Hello ! Hello all ! Hello all programmers ! Hello all Java's programmers !";
         testString = wordService.findMostFrequentWord( testString );
-        testResult( ( testString.equals("Hello")), "Word service.");
+        testResult("Word service.", ( testString.equals("Hello")));
     }
     private void spiltStringTest () {
         String testString;
         testString = "Hello ! Hello all ! Hello all programmers ! Hello all Java's programmers !";
         String [] simpleArray = {"Hello", "!", "Hello", "all", "!", "Hello", "all", "programmers", "!",
                 "Hello", "all", "Java's", "programmers", "!" };
-        testResult( Arrays.equals( testString.split(" "), simpleArray),"Split string." );
+        testResult("Split string.", Arrays.equals( testString.split(" "), simpleArray));
     }
     private void  wordCounterTest (){
         String testString;
@@ -41,21 +39,21 @@ class WordServiceMainTest {
         WordService testWordService = new WordService();
         int [] testCounter = testWordService.wordCounter( testString.split(" "));
         int [] simpleArray = { 4, 4, 4, 3, 4, 4, 3, 2, 4, 4, 3, 1, 2, 4};
-        testResult(Arrays.equals( testCounter, simpleArray ), "Word counter.");
+        testResult("Word counter.", Arrays.equals( testCounter, simpleArray ));
     }
     private void findIndexOfMaxTimesTest () {
         String testString;
         testString = "Hello ! Hello all ! Hello all programmers ! Hello all Java's programmers !";
         WordService testWordService = new WordService();
         int [] testCounter = testWordService.wordCounter( testString.split(" "));
-        testResult(testWordService.findIndexOfMaxTimes(testCounter) == 0,"Find index of max times.");
+        testResult("Find index of max times.", testWordService.findIndexOfMaxTimes(testCounter) == 0);
     }
 
-    private void testResult(boolean status, String testingString ) {
-        if ( status ) {
-            System.out.println( testingString + " Test OK.");
+    private void testResult( String testName, boolean testStatus) {
+        if ( testStatus ) {
+            System.out.println( testName + " Test OK.");
         } else {
-            System.out.println( testingString + " Test FAIL!!!");
+            System.out.println( testName + " Test FAIL!!!");
         }
     }
 }
