@@ -11,9 +11,10 @@ class PalindromeTest {
 
         PalindromeTest palindromeTest = new PalindromeTest();
         palindromeTest.testForPalindrome();
+        palindromeTest.testForPalindrome2();
     }
 
-    public void testForPalindrome() {
+    void testForPalindrome() {
         Palindrome palindrome = new Palindrome();
         String palindromeTextExample = ("no lemon no melon");
         boolean result = palindrome.isPalindrome(palindromeTextExample);
@@ -21,6 +22,17 @@ class PalindromeTest {
             System.out.println("Test for palindrome = OK");
         }else {
             System.out.println("Test for palindrome = FAIL");
+        }
+    }
+
+    void testForPalindrome2() {
+        Palindrome palindrome = new Palindrome();
+        String palindromeTextExample = ("my dog is happy");
+        boolean result = palindrome.isPalindrome(palindromeTextExample);
+        if (result) {
+            System.out.println("Second test for palindrome = OK");
+        } else {
+            System.out.println("Second test for palindrome = FAIL");
         }
     }
 }
