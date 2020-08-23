@@ -6,6 +6,9 @@ package student_aleksandra_maksimovic.lesson_8.level_4_5;
 для подсчёта периметра
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 abstract class Shape {
 
     private String title;

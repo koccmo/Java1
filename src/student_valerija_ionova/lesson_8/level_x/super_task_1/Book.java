@@ -17,6 +17,9 @@ package student_valerija_ionova.lesson_8.level_x.super_task_1;
 
 import java.util.Date;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Book {
 
     private String title;

@@ -1,7 +1,9 @@
 package student_volodya_danilin.lesson_8.level_4.Task_19;
 
 import student_volodya_danilin.lesson_8.level_4.Task_15.Shape;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class Triangle extends Shape {
 
     int sideA;

@@ -1,5 +1,8 @@
 package student_volodya_danilin.lesson_8.level_4.Task_17;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Main {
     public static void main(String[] Args) {
 

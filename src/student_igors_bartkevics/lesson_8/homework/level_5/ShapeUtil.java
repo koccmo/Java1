@@ -90,6 +90,9 @@ package student_igors_bartkevics.lesson_8.homework.level_5;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ShapeUtil {
 
     public Circle createRandomCircle() {

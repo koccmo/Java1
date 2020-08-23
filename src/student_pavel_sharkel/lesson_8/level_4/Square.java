@@ -1,5 +1,8 @@
 package student_pavel_sharkel.lesson_8.level_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Square extends Shape{
 
     private double side, area, perimeter;

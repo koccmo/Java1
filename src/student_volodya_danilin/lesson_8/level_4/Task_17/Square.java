@@ -1,7 +1,9 @@
 package student_volodya_danilin.lesson_8.level_4.Task_17;
 
 import student_volodya_danilin.lesson_8.level_4.Task_15.Shape;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class Square extends Shape {
 
     private int side;

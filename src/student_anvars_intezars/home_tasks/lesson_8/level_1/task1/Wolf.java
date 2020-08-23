@@ -6,6 +6,9 @@ package student_anvars_intezars.home_tasks.lesson_8.level_1.task1;
 в классе явным образом или генерироваться автоматически.
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
  class Wolf {
 
      int age;

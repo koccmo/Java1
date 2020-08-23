@@ -1,5 +1,8 @@
 package student_jaroslav_brutan.lesson_8.day_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Circle extends Shape {
 
     private double radius;

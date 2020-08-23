@@ -2,7 +2,9 @@ package student_aleksandra_maksimovic.lesson_8.level_4_5;
 
 import student_aleksandra_maksimovic.testing.Tester;
 import student_aleksandra_maksimovic.utils.DoubleUtils;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class CircleTest {
     public static void main(String[] args) {
         CircleTest test = new CircleTest();

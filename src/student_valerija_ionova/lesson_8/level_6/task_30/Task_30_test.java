@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_8.level_6.task_30;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Task_30_test {
 
     public static void main(String [] args){

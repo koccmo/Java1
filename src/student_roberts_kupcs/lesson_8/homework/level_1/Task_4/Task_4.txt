@@ -1,5 +1,6 @@
 Исправьте код программы:
 
+@CodeReview(approved = true)
 class Person extends Object {    //extend -- extends
 
 

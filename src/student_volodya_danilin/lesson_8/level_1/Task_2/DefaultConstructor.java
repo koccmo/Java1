@@ -7,7 +7,9 @@ package student_volodya_danilin.lesson_8.level_1.Task_2;
 конструктор будет добавлен во время компиляции.
  */
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class DefaultConstructor {
 
 

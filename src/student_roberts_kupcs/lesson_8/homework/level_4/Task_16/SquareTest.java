@@ -1,6 +1,6 @@
 package student_roberts_kupcs.lesson_8.homework.level_4.Task_16;
 
-class SquareTest {
+/*class SquareTest {
     public static void main(String[] args) {
         SquareTest circleTest = new SquareTest();
         circleTest.calculateAreaTest();
@@ -25,4 +25,4 @@ class SquareTest {
             System.out.println("Calculate Perimeter Test FAIL");
         }
     }
-}
+}*/

@@ -1,5 +1,8 @@
 package student_volodya_danilin.lesson_8.level_1.Task_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Example {
 
     int numberFromExample;

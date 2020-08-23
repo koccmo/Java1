@@ -22,6 +22,8 @@ class HumanPlayer extends Player {
  */
 package student_igors_bartkevics.lesson_8.homework.level_2;
 
+import teacher.codereview.CodeReview;
+
 public class Task_8 {
 
     class Player {
@@ -34,6 +36,7 @@ public class Task_8 {
 
     }
 
+	@CodeReview(approved = true)
     class HumanPlayer extends Player {
 
         HumanPlayer(String name) {

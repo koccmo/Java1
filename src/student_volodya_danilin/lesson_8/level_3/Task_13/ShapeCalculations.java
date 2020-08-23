@@ -2,6 +2,9 @@ package student_volodya_danilin.lesson_8.level_3.Task_13;
 
 import java.text.DecimalFormat;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 abstract class ShapeCalculations {
 
     String shape;

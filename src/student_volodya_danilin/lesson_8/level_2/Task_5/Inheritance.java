@@ -1,5 +1,8 @@
 package student_volodya_danilin.lesson_8.level_2.Task_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Inheritance {
 
     /*

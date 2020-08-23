@@ -5,9 +5,11 @@ import student_volodya_danilin.lesson_8.level_4.Task_16.Circle;
 import student_volodya_danilin.lesson_8.level_4.Task_17.Square;
 import student_volodya_danilin.lesson_8.level_4.Task_18.Rectangle;
 import student_volodya_danilin.lesson_8.level_4.Task_19.Triangle;
+import teacher.codereview.CodeReview;
 
 import java.util.Random;
 
+@CodeReview(approved = true)
 public class ShapeUtil {
 
     Random rnd = new Random();

@@ -1,5 +1,8 @@
 package student_roberts_kupcs.lesson_8.homework.level_4.Task_19;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Triangle extends Shape {
     private double side1;
     private double side2;
