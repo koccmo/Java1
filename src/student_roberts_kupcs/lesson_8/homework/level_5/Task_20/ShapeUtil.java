@@ -30,4 +30,13 @@ class ShapeUtil {
 
     }
 
+    //Task_22
+    public Rectangle createRandomRectangle() {
+
+        Random rd = new Random();
+        int side1 = rd.nextInt(2);
+        int side2 = rd.nextInt(3);
+        return new Rectangle("Rectangle", side1, side2);
+    }
+
 }
