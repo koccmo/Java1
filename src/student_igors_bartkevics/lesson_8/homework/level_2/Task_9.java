@@ -21,6 +21,8 @@ class ComputerPlayer {
  */
 package student_igors_bartkevics.lesson_8.homework.level_2;
 
+import teacher.codereview.CodeReview;
+
 class Task_9 {
 
     class Player {
@@ -33,6 +35,7 @@ class Task_9 {
 
     }
 
+	@CodeReview(approved = true)
     class ComputerPlayer extends Player{
         ComputerPlayer(String name) {
             super(name);

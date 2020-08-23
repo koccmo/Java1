@@ -8,6 +8,7 @@ class Father {
 
 }
 
+@CodeReview(approved = true)
 class Child extends Mother  /*, Father */  {    //class Child extends Mother or Father {
 
 }

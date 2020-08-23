@@ -20,6 +20,8 @@ class ComputerPlayer {
 
 }*/
 
+import teacher.codereview.CodeReview;
+
 class Player {
 
     private String name;
@@ -30,6 +32,7 @@ class Player {
 
 }
 
+@CodeReview(approved = true)
 class ComputerPlayer extends Player{
 
     public ComputerPlayer(String name){

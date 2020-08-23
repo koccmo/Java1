@@ -1,5 +1,7 @@
 package student_volodya_danilin.lesson_8.level_2.Task_9;
 
+import teacher.codereview.CodeReview;
+
 class Player {
 
     private String name;
@@ -10,6 +12,7 @@ class Player {
 
 }
 
+@CodeReview(approved = true)
 class ComputerPlayer extends Player {
 
     ComputerPlayer(String name) {
