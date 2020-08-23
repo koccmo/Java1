@@ -1,5 +1,8 @@
 package student_pavel_sharkel.lesson_8.level_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class CircleTest {
     public static void main(String[] args) {
 

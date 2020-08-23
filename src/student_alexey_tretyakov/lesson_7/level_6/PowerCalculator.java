@@ -8,9 +8,9 @@ import teacher.codereview.CodeReviewComment;
 @CodeReview(approved = true)
 @CodeReviewComment(teacher = "import java.text.DecimalFormat - не используемый импорт, удалить")
 class PowerCalculator {
-     // считает любые степень (+ или -) и основание ( всегда положительное ).
+     // считает любые степень (+ или -) и основание ( всегда положительное, можно дробное ).
     // дробная степень числа округляется до ближайшего целого .
-    //
+    // точность до 6 знаков после запятой
     private double base ;
     private int power;
 

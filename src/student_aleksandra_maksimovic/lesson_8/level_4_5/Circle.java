@@ -13,6 +13,9 @@ PS: подсказка - необходимые значения для
 
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Circle extends Shape{
 
     private double radius;

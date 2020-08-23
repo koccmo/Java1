@@ -14,6 +14,9 @@ package student_roberts_kupcs.lesson_8.homework.level_2.Task_7;
 
 //Приведите пример кода.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Animal {
     String name;
     int age;

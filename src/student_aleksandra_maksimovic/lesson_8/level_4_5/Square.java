@@ -1,4 +1,7 @@
 package student_aleksandra_maksimovic.lesson_8.level_4_5;
+
+import teacher.codereview.CodeReview;
+
 /*
 Создание иерархии класса Shape (геометрическая фигура).
 
@@ -8,6 +11,7 @@ Shape: calculateArea() и calculatePerimeter().
 Напишите тесты для класса Square.
 
  */
+@CodeReview(approved = true)
 class Square extends Shape {
 
     private double squareSide;

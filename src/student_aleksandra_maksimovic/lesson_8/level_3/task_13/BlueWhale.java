@@ -1,5 +1,8 @@
 package student_aleksandra_maksimovic.lesson_8.level_3.task_13;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BlueWhale extends Mammals {
 
     public BlueWhale(boolean breatheAir, boolean babiesFeedMilk) {

@@ -6,6 +6,9 @@ package student_aleksandra_maksimovic.lesson_8.level_6;
 variable number of arguments
 */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class VarArgs {
 
     public int addAll(int ... numbers)

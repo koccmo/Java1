@@ -15,6 +15,9 @@ class Person {
 Напишите программу, которая продемонстрирует
 ответ на этот вопрос.*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Person {
     private String fullName;
     private int age;

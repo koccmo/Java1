@@ -1,5 +1,7 @@
 package student_anvars_intezars.home_tasks.lesson_8.level_4_5;
 
+import teacher.codereview.CodeReview;
+
 abstract class Shape {
 
     private double radius;
@@ -18,6 +20,7 @@ abstract class Shape {
     abstract double calculatePerimeter();
     }
 
+@CodeReview(approved = true)
     class Circle extends Shape {
 
         private double radius;
@@ -34,6 +37,7 @@ abstract class Shape {
         }
     }
 
+@CodeReview(approved = true)
     class Square extends Shape {
 
         private double length;
@@ -45,6 +49,7 @@ abstract class Shape {
         double calculatePerimeter() { return 4 * length; }
     }
 
+@CodeReview(approved = true)
     class Rectangle extends Shape {
 
         private double length;
@@ -62,6 +67,7 @@ abstract class Shape {
         }
     }
 
+@CodeReview(approved = true)
     class Triangle extends Shape {
 
         private double basis;

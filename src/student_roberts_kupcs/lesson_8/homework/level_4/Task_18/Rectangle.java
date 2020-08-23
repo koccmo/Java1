@@ -7,6 +7,9 @@ package student_roberts_kupcs.lesson_8.homework.level_4.Task_18;
 //Shape: calculateArea() и calculatePerimeter().
 //Напишите тесты для класса Rectangle.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Rectangle extends Shape {
 
     private int side1;

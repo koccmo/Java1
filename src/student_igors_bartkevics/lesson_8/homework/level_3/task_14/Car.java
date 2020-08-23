@@ -26,6 +26,9 @@ class PetrolCar extends Car {
  */
 package student_igors_bartkevics.lesson_8.homework.level_3.task_14;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 abstract class Car {
 
     abstract void accelerate();

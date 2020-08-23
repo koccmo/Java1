@@ -19,6 +19,9 @@ package student_roberts_kupcs.lesson_8.homework.level_4.Task_15;
 //Объявите в классе Shape абстрактный метод
 //для подсчёта периметра.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 abstract class Shape {
 
     private String title;

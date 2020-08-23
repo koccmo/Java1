@@ -12,3 +12,5 @@ Java не поддерживает множественное наследова
 результата как множественное наследование.
 
 Источник: https://javarush.ru/groups/posts/731-mnozhestvennoe-nasledovanie-v-java-kompozicija-v-sravnenii-s-nasledovaniem
+
+@CodeReview(approved = true)

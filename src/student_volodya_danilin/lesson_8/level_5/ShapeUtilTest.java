@@ -1,9 +1,11 @@
 package student_volodya_danilin.lesson_8.level_5;
 
 import student_volodya_danilin.lesson_8.level_4.Task_15.Shape;
+import teacher.codereview.CodeReview;
 
 import java.text.DecimalFormat;
 
+@CodeReview(approved = true)
 public class ShapeUtilTest {
     public static void main(String[] Args) {
         DecimalFormat df = new DecimalFormat("#.##");

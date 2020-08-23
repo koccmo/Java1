@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_8.day_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Varags {
 
     public int sumNumbers (int... numbers) {

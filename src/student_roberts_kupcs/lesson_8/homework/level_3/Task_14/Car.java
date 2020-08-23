@@ -1,5 +1,7 @@
 package student_roberts_kupcs.lesson_8.homework.level_3.Task_14;
 
+import teacher.codereview.CodeReview;
+
 //Исправьте код программы так, что бы он компилировался.
 //Класс Car менять нельзя.
 //Классы ElectricCar и PetrolCar должны наследоваться
@@ -30,6 +32,7 @@ abstract class Car {
 
 }
 
+@CodeReview(approved = true)
 class ElectricCar extends Car {
 
     private int batteryCharge;
@@ -40,6 +43,7 @@ class ElectricCar extends Car {
     }
 }
 
+@CodeReview(approved = true)
 class PetrolCar extends Car {
 
     private double petrolTankCapacity;

@@ -26,6 +26,9 @@ class Circle extends Shape {
  */
 package student_igors_bartkevics.lesson_8.homework.level_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Circle extends Shape {
 
     private double radius;

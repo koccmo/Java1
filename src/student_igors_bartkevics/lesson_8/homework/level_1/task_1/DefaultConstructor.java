@@ -6,6 +6,9 @@
  */
 package student_igors_bartkevics.lesson_8.homework.level_1.task_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class DefaultConstructor {
 
     private String overview;

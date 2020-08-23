@@ -16,6 +16,10 @@ shape[2] = shapeUtil.createRandomRectangle();
 shape[3] = shapeUtil.createRandomTriangle();
  */
 package student_igors_bartkevics.lesson_8.homework.level_5;
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ShapeUtilTest {
 
     public static void main(String[] args) {

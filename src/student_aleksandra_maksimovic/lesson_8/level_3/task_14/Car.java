@@ -26,12 +26,15 @@ class PetrolCar extends Car {
 }
  */
 
+import teacher.codereview.CodeReview;
+
 abstract class Car {
 
     abstract void accelerate();
 
 }
 
+@CodeReview(approved = true)
 class ElectricCar extends Car {
 
     private int batteryCharge;
@@ -46,6 +49,7 @@ class ElectricCar extends Car {
     }
 }
 
+@CodeReview(approved = true)
 class PetrolCar extends Car {
 
     private double petrolTankCapacity;

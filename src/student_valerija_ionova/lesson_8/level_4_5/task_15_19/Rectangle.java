@@ -4,6 +4,9 @@ package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 Реализуйте в нём абстрактные методы из класса
 Shape: calculateArea() и calculatePerimeter().*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Rectangle extends Shape{
 
     private double width;

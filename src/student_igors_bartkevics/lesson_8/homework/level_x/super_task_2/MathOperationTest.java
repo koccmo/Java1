@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_8.homework.level_x.super_task_2;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class MathOperationTest {
 
     public static void main(String[] args) {

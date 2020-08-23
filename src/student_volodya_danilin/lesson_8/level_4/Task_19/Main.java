@@ -2,6 +2,9 @@ package student_volodya_danilin.lesson_8.level_4.Task_19;
 
 import java.text.DecimalFormat;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Main {
     public static void main(String[] Args) {
         DecimalFormat df = new DecimalFormat("#.##");

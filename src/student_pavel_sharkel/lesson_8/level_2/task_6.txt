@@ -6,6 +6,7 @@ class Father extends Mother{
 
 }
 
+@CodeReview(approved = true)
 class Child extends Father {
 
 }

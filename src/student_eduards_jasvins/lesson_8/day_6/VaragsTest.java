@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_8.day_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class VaragsTest {
     public static void main(String[] args) {
         VaragsTest varagsTest = new VaragsTest();

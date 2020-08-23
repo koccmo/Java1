@@ -3,13 +3,16 @@ package student_volodya_danilin.lesson_8.level_1.Task_3;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Address {
 
     List<String> addressList = new ArrayList<>();
 
 }
 
-
+@CodeReview(approved = true)
 class Person {
 
     private String fullName;

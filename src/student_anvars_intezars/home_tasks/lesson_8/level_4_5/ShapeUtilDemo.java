@@ -1,5 +1,8 @@
 package student_anvars_intezars.home_tasks.lesson_8.level_4_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ShapeUtilDemo {
 
     public static void main(String[] args) {

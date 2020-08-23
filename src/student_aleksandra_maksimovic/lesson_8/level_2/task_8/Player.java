@@ -1,4 +1,7 @@
 package student_aleksandra_maksimovic.lesson_8.level_2.task_8;
+
+import teacher.codereview.CodeReview;
+
 /*
 Исправьте код программы так, что бы он компилировался.
 Изменения можно вносить только в класс HumanPlayer.
@@ -30,6 +33,7 @@ public class Player {
 
 }
 
+@CodeReview(approved = true)
 class HumanPlayer extends Player {
 
     public HumanPlayer(String name) {
