@@ -1,8 +1,11 @@
 package student_igors_bartkevics.lesson_8.homework.level_6;
 
-public class Task_30 {
+import teacher.codereview.CodeReview;
 
-    public int sumOfVarArgs(int...values) {
+@CodeReview(approved = true)
+class Task_30 {
+
+    int sumOfVarArgs(int...values) {
         int sum = 0;
         for (int value: values) {
             sum += value;

@@ -37,6 +37,11 @@ package student_roberts_kupcs.lesson_7.homework.level_1.level_6.task_11;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 class CreditCard {
     private String cardNumber;
     private int cardPinCode;
@@ -70,6 +75,7 @@ class CreditCard {
 
     //}
     //metod to deposit money
+	@CodeReviewComment(teacher = "Вместо KB.nextLong() передавайте amouunt как переметр этому методу.")
     public void deposit(int cardPinCode) {
         long amouunt;
         System.out.println("Enter amount want to deposit : ");
@@ -82,6 +88,7 @@ class CreditCard {
     }
 
     //Metod to withdraw money
+	@CodeReviewComment(teacher = "cardPinCode - вообще не проверяется? Забирай деньги кто хочет?")
     public void withdraw(int cardPinCode) {
         long amount;
         System.out.println("Enter amount want to withdraw : ");

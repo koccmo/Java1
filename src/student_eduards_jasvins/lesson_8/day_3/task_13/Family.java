@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_8.day_3.task_13;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Family {
     public static void main(String[] args) {
         Larry larry = new Larry("Avocado", 10, 3);

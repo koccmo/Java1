@@ -4,6 +4,9 @@ package student_valerija_ionova.lesson_8.level_2.task_7;
 Когда это нужно делать?
 Приведите пример кода.*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Task_7 {
 
     protected String name;

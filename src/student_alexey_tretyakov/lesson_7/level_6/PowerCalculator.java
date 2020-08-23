@@ -2,6 +2,11 @@ package student_alexey_tretyakov.lesson_7.level_6;
 
 import java.text.DecimalFormat;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
+@CodeReviewComment(teacher = "import java.text.DecimalFormat - не используемый импорт, удалить")
 class PowerCalculator {
      // считает любые степень (+ или -) и основание ( всегда положительное ).
     // дробная степень числа округляется до ближайшего целого .
@@ -9,6 +14,7 @@ class PowerCalculator {
     private double base ;
     private int power;
 
+    @CodeReviewComment(teacher = "Зачем этот конструктор?")
     public PowerCalculator(){}
 
     public PowerCalculator(double base, int power) {

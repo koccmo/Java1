@@ -16,6 +16,9 @@ shape[1] = shapeUtil.createRandomSquare();
 shape[2] = shapeUtil.createRandomRectangle();
 shape[3] = shapeUtil.createRandomTriangle();*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ShapeUtilTest {
 
     public static void main (String [] args){

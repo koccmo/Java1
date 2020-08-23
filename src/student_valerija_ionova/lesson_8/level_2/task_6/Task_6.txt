@@ -8,10 +8,12 @@ class Father {
 
 }
 
+@CodeReview(approved = true)
 class ChildFromMother extends Mother {
 
 }
 
+@CodeReview(approved = true)
 class ChildFromFather extends Mother {
 
 }

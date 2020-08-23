@@ -3,6 +3,9 @@ package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_3_6;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Policy {
 
 	private List<InsuranceObject> insuranceObjects = new ArrayList<>();

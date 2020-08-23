@@ -13,8 +13,13 @@ package student_eduards_jasvins.lesson_7.day_6.task_11;
 
 import java.math.BigDecimal;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 public class CreditCard {
 
+	@CodeReviewComment(teacher = "Это свойство не используется, зачем оно нужно?")
     private String cardNumber;
     private String pinCode;
     private BigDecimal balance;

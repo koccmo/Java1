@@ -2,6 +2,9 @@ package student_anvars_intezars.home_tasks.lesson_7.day_4;
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ArrayUtilTest {
 
     public static void main(String[] args) {

@@ -2,11 +2,12 @@ package student_valerija_ionova.lesson_7.homeworks.level_6.task_12;
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PalindromeTest {
     public static void main(String [] args){
         PalindromeTest palindromeTest = new PalindromeTest();
-        palindromeTest.testArrayOfWordsOneWord();
-        palindromeTest.testArrayOfWordsTwoWords();
 
         palindromeTest.testIsPalindromeIfPalindromeSixLetters();
         palindromeTest.testIsPalindromeIfPalindromeFiveLetters();
@@ -31,18 +32,6 @@ class PalindromeTest {
         }
     }
 
-
-    public void testArrayOfWordsOneWord(){
-        Palindrome palindrome = new Palindrome();
-        String [] arrayOfLetters = {"h", "e", "l", "l", "o"};
-        checkStringArray("Test ArrayOfWordsOneWord", palindrome.arrayOfWords("Hello"), arrayOfLetters);
-    }
-
-    public void testArrayOfWordsTwoWords(){
-        Palindrome palindrome = new Palindrome();
-        String [] arrayOfLetters = {"h", "e", "l", "l", "o", "b", "o", "b"};
-        checkStringArray("Test ArrayOfWordsOneWord", palindrome.arrayOfWords("Hello, Bob!!"), arrayOfLetters);
-    }
 
     public void testIsPalindromeIfPalindromeSixLetters(){
         Palindrome palindrome = new Palindrome();

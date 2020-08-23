@@ -36,10 +36,16 @@ package student_valerija_ionova.lesson_7.homeworks.level_x.super_task_1;
 смотри на картинке: Defrag_example.png (картинка лежит рядом с заданием).*/
 
 import java.util.ArrayList;
+import java.util.List;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class FileSystem {
 
-    private ArrayList <Disk> listOfDisks = new ArrayList <Disk> ();
+	@CodeReviewComment(teacher = "From left side use List<Disk> instead of ArrayList<Disk>.")
+    private List<Disk> listOfDisks = new ArrayList <Disk> ();
 
     public boolean createDisk(char name, int size) {
         if (Character.isLetter(name)) {
@@ -51,7 +57,7 @@ class FileSystem {
         }
     }
 
-    public ArrayList <Disk> getListOfDisks(){
+    public List <Disk> getListOfDisks(){
         return listOfDisks;
     }
 

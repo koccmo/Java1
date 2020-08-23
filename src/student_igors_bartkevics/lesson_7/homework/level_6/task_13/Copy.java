@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_7.homework.level_6.task_13;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Copy {
 
     public int[] copyInRange(int[] in, int leftBound, int rightBound) {

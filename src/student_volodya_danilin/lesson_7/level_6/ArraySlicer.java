@@ -16,6 +16,9 @@ int[] copyInRange(int[] in, int leftBound, int rightBound) - вернуть но
 import java.util.Arrays;
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ArraySlicer {
 
     int[] copyInRange(int[] in, int leftBound, int rightBound) {

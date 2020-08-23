@@ -6,6 +6,24 @@ public class BookDemo {
 		Book book1 = new Book("Star", "A");
 		Book book2 = new Book("Star", "A");
 
+		Book book3 = new Book("Star", "A");
+		Book book4 = book3;
+
+		if (book3.equals(book4)) {
+			System.out.println("Book 3 equals Book 4!");
+		}
+
+		if (book3.equals(null) == false) {
+			System.out.println("Book 3 not equals null!");
+		}
+
+		//Object obj = new Wallet(100, "123");
+		//Book b = (Book) obj;
+
+
+		Object o = new Book("A", "B");
+		// o.getTitle()
+
 		//book1 = book2;
 
 		if (book1 == book2) {

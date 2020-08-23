@@ -15,6 +15,9 @@ TAsk 26 double calculatePerimeter(Shape[] shapes);
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ShapeUtil {
 
     public Circle createRandomCircle(){

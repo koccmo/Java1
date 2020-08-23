@@ -2,6 +2,9 @@ package student_roberts_kupcs.lesson_8.homework.level_2.Task_8;
 
 //
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Player {
     private String name;
 

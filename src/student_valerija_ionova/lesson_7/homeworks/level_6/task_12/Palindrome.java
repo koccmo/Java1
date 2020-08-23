@@ -16,9 +16,15 @@ boolean isPalindrome(String text) - метод возвращает true, есл
 Написать тестовые сценарии для класса Palindrome в классе PalindromeTest.
 Все тестовые сценарии должны отрабатывать без ошибок.*/
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class Palindrome {
 
-    public String [] arrayOfWords (String text){
+	@CodeReviewComment(teacher = "public method really? May be private?")
+	@CodeReviewComment(teacher = "Because clients will invoke only isPalindrome() method.")
+    private String [] arrayOfWords (String text){
         String [] arrayOfLetters = new String [text.length()];
 
         int j = 0;

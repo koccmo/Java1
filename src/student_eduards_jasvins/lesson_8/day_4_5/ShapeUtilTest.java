@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_8.day_4_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ShapeUtilTest {
     public static void main(String[] args) {
         ShapeUtilTest shapeUtilTest = new ShapeUtilTest();

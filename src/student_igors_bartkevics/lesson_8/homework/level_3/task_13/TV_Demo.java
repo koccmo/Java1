@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_8.homework.level_3.task_13;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TV_Demo {
 
     public static void main(String[] args) {

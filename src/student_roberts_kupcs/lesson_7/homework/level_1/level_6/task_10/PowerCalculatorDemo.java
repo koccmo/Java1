@@ -1,9 +1,11 @@
 package student_roberts_kupcs.lesson_7.homework.level_1.level_6.task_10;
 
 import student_roberts_kupcs.lesson_7.homework.level_1.level_6.task_10.PowerCalculator;
+import teacher.codereview.CodeReview;
 
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 class PowerCalculatorDemo {
     public static void main(String[] args) {
 

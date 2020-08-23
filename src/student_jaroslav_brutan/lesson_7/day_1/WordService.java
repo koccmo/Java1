@@ -1,10 +1,13 @@
 package student_jaroslav_brutan.lesson_7.day_1;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
 import java.util.Arrays;
 
+@CodeReview(approved = true)
+@CodeReviewComment(teacher = "import java.util.Arrays - не используемый импорт, такие надо убирать.")
 public class WordService {
-
-    String text = "Hello hello from Latvia with love";
 
     public String[] textToArray(String text){
         /* метод для создания массива из строки */

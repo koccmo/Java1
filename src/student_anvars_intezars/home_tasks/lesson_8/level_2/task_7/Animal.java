@@ -11,7 +11,7 @@ Lion и Dog сначала отработает конструктор клас�
 объектов.
 
 
-
+@CodeReview(approved = true)
 class Animal {
 
     String name;

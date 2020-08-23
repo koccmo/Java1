@@ -15,6 +15,9 @@ package student_roberts_kupcs.lesson_8.homework.level_1.Task_3;
 //Напишите программу, которая продемонстрирует
 //ответ на этот вопрос.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Person {
 
     private String fullName;

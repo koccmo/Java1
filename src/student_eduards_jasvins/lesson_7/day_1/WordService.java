@@ -2,6 +2,9 @@ package student_eduards_jasvins.lesson_7.day_1;
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class WordService {
 
     public String findMostFrequentWord(String text) {

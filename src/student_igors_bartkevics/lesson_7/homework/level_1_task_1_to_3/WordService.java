@@ -40,6 +40,10 @@ package student_igors_bartkevics.lesson_7.homework.level_1_task_1_to_3;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class WordService {
 
 
@@ -69,6 +73,7 @@ class WordService {
         return mostFrequentWord;
     }
 
+    @CodeReviewComment(teacher = "Сложная имплементация. Лучше использовать String.split() метод.")
     public List<String> selectWordsFromText(String text) {
         List<String> words= new ArrayList<>();
         String word = "";

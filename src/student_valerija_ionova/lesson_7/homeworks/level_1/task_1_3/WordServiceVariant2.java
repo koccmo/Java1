@@ -1,5 +1,9 @@
 package student_valerija_ionova.lesson_7.homeworks.level_1.task_1_3;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 class WordServiceVariant2 {
 
     private String [] testToWordsArray(String text){
@@ -12,19 +16,11 @@ class WordServiceVariant2 {
         for (String word : wordsArray){
             int currentNumberOfWords = countNumberOfCurrentWord(word, wordsArray);
             if (currentNumberOfWords > maxNumberOfWords){
-                mostFrequentWord = updateMostFrequentWord(word);
-                maxNumberOfWords = updateNumberOfMostFrequentWord(currentNumberOfWords);
+                mostFrequentWord = word;
+                maxNumberOfWords = currentNumberOfWords;
             }
         }
         return mostFrequentWord;
-    }
-
-    private String updateMostFrequentWord(String word){
-        return word;
-    }
-
-    private int updateNumberOfMostFrequentWord(int number){
-        return number;
     }
 
     private int countNumberOfCurrentWord(String word, String [] wordsArray){

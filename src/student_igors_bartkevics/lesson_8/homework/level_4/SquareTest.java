@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_8.homework.level_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class SquareTest {
 
     Square square = new Square("Square", 5.0);

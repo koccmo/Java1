@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_8.homework.level_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TriangleTest {
 
     Triangle triangle = new Triangle("Triangle", 10.0, 10.0, 10.0);

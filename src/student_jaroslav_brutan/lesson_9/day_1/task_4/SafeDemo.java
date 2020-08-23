@@ -6,7 +6,10 @@ public class SafeDemo {
 
         Safe safe = new Safe();
 
-        safe.pinCode = 1234;
+        safe.pinCode = 1234; 
         safe.moneyInSafe = 153.40;
+
+        System.out.println(safe.toString());
+        //System.out.println("Pin code - " + safe.pinCode + ", money in safe - " + safe.moneyInSafe);
     }
 }

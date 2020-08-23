@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_7.homework.level_6.task_12;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Palindrome {
 
     boolean isPalindrome(String text) {

@@ -2,6 +2,10 @@ package student_volodya_danilin.lesson_7.level_6;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 public class PowerCalculator {
 
     public int numberPower(int number, int power) {
@@ -19,6 +23,9 @@ public class PowerCalculator {
     }
 }
 
+@CodeReview(approved = false)
+@CodeReviewComment(teacher = "Это не автоматический тест!")
+@CodeReviewComment(teacher = "Автоматический тест должен проверять результат, а не просто выводить его на консоль!")
 class PowerCalculatorTest {
     private PowerCalculator powerCalculator = new PowerCalculator();
     Random randomNumber = new Random();

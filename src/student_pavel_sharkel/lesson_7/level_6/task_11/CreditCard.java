@@ -1,5 +1,9 @@
 package student_pavel_sharkel.lesson_7.level_6.task_11;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 public class CreditCard {
 
     private int number;
@@ -36,7 +40,7 @@ public class CreditCard {
 
     boolean ifCreditLimitIsOk() {return getCreditLimit() > getCreditDebt();}
 
-
+	@CodeReviewComment(teacher = "Можно было сделать, чтобы метод возвращал boolean для интикации выполнилась операция успешно или нет.")
     public void withdraw(int pin, int withdrawValue) {
         if (!ifPinIsOk(pin) || !ifCreditLimitIsOk()) {
             System.out.println("Withdraw refused");
@@ -53,6 +57,7 @@ public class CreditCard {
         }
     }
 
+	@CodeReviewComment(teacher = "Можно было сделать, чтобы метод возвращал boolean для интикации выполнилась операция успешно или нет.")
     public void deposit(int pin, int depositValue) {
         if (!ifPinIsOk(pin)) {
             System.out.println("Pin is incorrect");

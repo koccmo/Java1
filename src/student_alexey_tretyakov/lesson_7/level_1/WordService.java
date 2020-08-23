@@ -1,9 +1,13 @@
 package student_alexey_tretyakov.lesson_7.level_1;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 class WordService {
 
     public String findMostFrequentWord(String inText) {
-
+		@CodeReviewComment(teacher = "Зачем тут создавать новую инстанцию WordService?")
         WordService wordService = new WordService();
         String[] stringArray = wordService.splitString( inText );
         int[] wordCount=  wordService.wordCounter( stringArray );

@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_7.homeworks.level_6.task_11;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
 /*Необходимо разработать класс "кредитная карта" CreditCard
 с учетом инкапсуляции, которая обладает следующими характеристиками:
 
@@ -35,6 +38,7 @@ package student_valerija_ionova.lesson_7.homeworks.level_6.task_11;
 Написать тестовые сценарии для класса CreditCard в классе CreditCardTest.
 Все тестовые сценарии должны отрабатывать без ошибок.
 */
+@CodeReview(approved = true)
 class CreditCard {
     private String cardsNumber;
     private int pinCode;
@@ -69,7 +73,6 @@ class CreditCard {
 
 
     public void changeCreditLimit(double amount){
-        //creditBalance = creditLimit - creditBalance;
         creditLimit = amount;
         creditBalance = amount;
     }
@@ -96,6 +99,7 @@ class CreditCard {
         }
     }
 
+    @CodeReviewComment(teacher = "public method really?")
     public void updateBalanceAndCreditBalanceDeposit(double amount){
         if (creditBalance == creditLimit){
             balance += amount;

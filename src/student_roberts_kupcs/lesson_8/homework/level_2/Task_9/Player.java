@@ -7,7 +7,9 @@ package student_roberts_kupcs.lesson_8.homework.level_2.Task_9;
 //в код можно вносить только в класс ComputerPlayer.
 //
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class Player {
 
     private String name;

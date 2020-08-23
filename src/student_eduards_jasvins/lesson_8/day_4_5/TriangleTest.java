@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_8.day_4_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TriangleTest {
     public static void main(String[] args) {
         TriangleTest triangleTest = new TriangleTest();

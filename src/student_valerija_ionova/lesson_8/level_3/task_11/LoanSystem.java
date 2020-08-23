@@ -6,5 +6,8 @@ abstracts class LoanSystem {
 
 }*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 abstract class LoanSystem {
 }
