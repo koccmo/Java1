@@ -1,5 +1,8 @@
 package student_aleksandra_maksimovic.lesson_8.level_3.task_13;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 abstract class Mammals {
     private boolean breatheAir;
     private boolean babiesFeedMilk;

@@ -8,6 +8,10 @@ package student_roberts_kupcs.lesson_8.homework.level_3.Task_12;
 //    abstract boolean canReceiveLoan(Human human);
 //
 //}
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 abstract class LoanSystem {
 
     abstract boolean canReceiveLoan();

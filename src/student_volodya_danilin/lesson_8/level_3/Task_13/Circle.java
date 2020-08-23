@@ -1,5 +1,8 @@
 package student_volodya_danilin.lesson_8.level_3.Task_13;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Circle extends ShapeCalculations {
 
     int radius;

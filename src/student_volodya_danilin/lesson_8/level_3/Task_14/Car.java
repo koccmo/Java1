@@ -1,11 +1,14 @@
 package student_volodya_danilin.lesson_8.level_3.Task_14;
 
+import teacher.codereview.CodeReview;
+
 abstract class Car {
 
     abstract void accelerate();
 
 }
 
+@CodeReview(approved = true)
 class ElectricCar extends Car {
 
     private int batteryCharge;
@@ -17,6 +20,7 @@ class ElectricCar extends Car {
     }
 }
 
+@CodeReview(approved = true)
 class PetrolCar extends Car {
 
     private double petrolTankCapacity;

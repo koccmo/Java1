@@ -9,6 +9,9 @@ class LoanSystem {
 
 }*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 abstract class LoanSystem {
 
     abstract boolean canReceiveLoan(Human human);
