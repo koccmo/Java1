@@ -6,6 +6,9 @@ package student_valerija_ionova.lesson_8.level_6.task_30;
 variable number of arguments
 */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Task_30 {
 
     public double sumOfNumbers(double ... numbers){

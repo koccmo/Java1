@@ -1,5 +1,8 @@
 package student_anvars_intezars.home_tasks.lesson_8.level_6.task30;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class VarargsExampleDemo {
 
     public static void main(String[] args) {

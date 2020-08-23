@@ -4,6 +4,8 @@ package student_aleksandra_maksimovic.lesson_8.level_4_5;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
 /*
 Создайте класс ShapeUtil.
 В класе ShapeUtil реализуйте метод:
@@ -25,6 +27,7 @@ import java.util.Random;
     }
     #28 -
     */
+@CodeReview(approved = true)
  class ShapeUtil {
 
      Random rnd = new Random();

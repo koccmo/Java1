@@ -1,6 +1,8 @@
 package student_roberts_kupcs.lesson_8.homework.level_4.Task_17;
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class SquareTest {
     public static void main(String[] args) {
         SquareTest squareTest = new SquareTest();

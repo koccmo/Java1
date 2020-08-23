@@ -1,5 +1,8 @@
 package student_pavel_sharkel.lesson_8.level_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Rectangle extends Shape {
 
     private double sideA, sideB, area, perimeter;

@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_8.homework.level_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Task_30 {
 
     int sumOfVarArgs(int...values) {

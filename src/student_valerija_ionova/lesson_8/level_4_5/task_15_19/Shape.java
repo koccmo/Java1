@@ -8,6 +8,9 @@ package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 
 */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 abstract class Shape {
 
     private String title;

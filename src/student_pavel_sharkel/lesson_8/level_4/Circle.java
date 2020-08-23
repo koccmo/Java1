@@ -2,6 +2,9 @@ package student_pavel_sharkel.lesson_8.level_4;
 
 import java.lang.Math;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Circle extends Shape {
 
     private double radius, area, perimeter;

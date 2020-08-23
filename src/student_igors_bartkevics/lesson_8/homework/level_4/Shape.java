@@ -22,6 +22,9 @@ abstract class Shape {
  */
 package student_igors_bartkevics.lesson_8.homework.level_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 abstract class Shape {
 
     private String title;

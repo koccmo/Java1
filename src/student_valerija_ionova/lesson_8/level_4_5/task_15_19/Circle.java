@@ -5,6 +5,9 @@ package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 Реализуйте в нём абстрактные методы из класса
 */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Circle extends Shape{
 
     private double radius;

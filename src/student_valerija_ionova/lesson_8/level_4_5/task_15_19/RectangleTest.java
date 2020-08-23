@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_8.level_4_5.task_15_19;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class RectangleTest {
     public static void main(String [] args){
 

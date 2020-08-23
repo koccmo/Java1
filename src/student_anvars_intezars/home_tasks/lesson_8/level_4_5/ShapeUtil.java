@@ -2,6 +2,9 @@ package student_anvars_intezars.home_tasks.lesson_8.level_4_5;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ShapeUtil {
 
 
