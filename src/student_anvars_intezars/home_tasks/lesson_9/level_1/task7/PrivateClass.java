@@ -1,6 +1,6 @@
 package student_anvars_intezars.home_tasks.lesson_9.level_1.task7;
 
-public class PrivateClass {
+class PrivateClass {
 
     private String title;
     private String author;
