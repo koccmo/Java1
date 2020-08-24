@@ -6,10 +6,10 @@ class NewSafeDemo {
 
         NewSafe mySafe = new NewSafe(112233,1000);
         int moneyTaken = mySafe.getMoney(112233,400);
-        int moneyLeft = mySafe.putMoney(112233,600);
+        int currentAmount = mySafe.putMoney(112233,600);
 
         System.out.println("After entering password I took " + moneyTaken + " from safe");
-        System.out.println("Then I added more money. Now I have " + moneyLeft);
+        System.out.println("Then I added more money. Now I have " + currentAmount);
 
     }
 }
