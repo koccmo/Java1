@@ -39,4 +39,29 @@ class ShapeUtil {
         return new Rectangle("Rectangle", side1, side2);
     }
 
+    //Task_23
+    public Triangle createRandomTriangle() {
+
+        Random rd = new Random();
+        double side1 = rd.nextInt(2);
+        double side2 = rd.nextInt(3);
+        double side3 = rd.nextInt(4);
+        double height = rd.nextInt(5);
+        return new Triangle("Triangle", side1, side2, side3);
+    }
+
+    //Task_24
+    Shape createRandomShape() {
+        Random rnd = new Random();
+        int randomNumber = rnd.nextInt(4);
+        if (randomNumber == 0) {
+            return createRandomCircle();
+        } else if (randomNumber == 1) {
+            return createRandomSquare();
+        } else if (randomNumber == 2) {
+            return createRandomRectangle();
+        } else {
+            return createRandomTriangle();
+        }
+    }
 }

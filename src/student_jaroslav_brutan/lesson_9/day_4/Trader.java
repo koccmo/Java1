@@ -9,4 +9,20 @@ class Trader {
         this.fullName = fullName;
         this.city = city;
     }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void rogueOrNot(){
+        if (this.fullName.equals("Pokemon")){
+            System.out.println("Access denied!");
+        } else {
+            System.out.println("Hello! What's your transaction amount?");
+        }
+    }
 }
