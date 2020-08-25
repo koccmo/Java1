@@ -43,12 +43,12 @@ class BookReaderImpl implements  BookReader{
     @Override
     public String[][] getListOfReadBooks(BookLibrary library) {
         return getListOfReadOrNotReadBooks(library, true);
-    }
+    } //Task24
 
     @Override
     public String[][] getListOfNotReadBooks(BookLibrary library) {
         return getListOfReadOrNotReadBooks(library, false);
-    }
+    }//Task 25
 
     String [][] getListOfReadOrNotReadBooks(BookLibrary library, boolean status){
         String [][] result = new String [library.getBookLibrary().size()][2];
@@ -96,7 +96,7 @@ class BookReaderImpl implements  BookReader{
         return result;
     }
 
-    public boolean isRead (Book book, BookLibrary library, boolean isRead){
+    public boolean isRead (Book book, BookLibrary library, boolean isRead){     //Task23
         if (bookReaderUtil.isBookInLibrary(book, library)){
             for (Book element : library.getBookLibrary()){
                 if (element.equals(book)){
