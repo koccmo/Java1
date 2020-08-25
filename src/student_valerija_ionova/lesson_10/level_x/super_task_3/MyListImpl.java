@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 class MyListImpl implements MyList {
 
-    LinkedList list = new LinkedList();
+    LinkedList list;
 
     MyListImpl (LinkedList list){
         this.list = list;
@@ -23,6 +23,7 @@ class MyListImpl implements MyList {
 
     @Override
     public void deleteElement(int index) {
+        if (list.size() > 0)
         list.remove(index);
     }
 }

@@ -13,6 +13,7 @@ class MyListImplTest {
         myListImplTest.testInsertFirst();
         myListImplTest.testDeleteFirst();
         myListImplTest.testDeleteSecond();
+        myListImplTest.testDeleteNoElements();
     }
 
     void printResult (String name, boolean testPassed){
@@ -86,6 +87,16 @@ class MyListImplTest {
         expectedList.add(2);
 
         printResult("testDeleteSecond", list.equals(expectedList));
+    }
+
+    void testDeleteNoElements(){
+        LinkedList list = new LinkedList();
+
+        MyListImpl myList = new MyListImpl(list);
+        myList.deleteElement(0);
+        LinkedList expectedList = new LinkedList();
+
+        printResult("testDeleteNoElement", list.equals(expectedList));
     }
 
 }
