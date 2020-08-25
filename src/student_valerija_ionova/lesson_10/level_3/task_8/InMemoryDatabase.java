@@ -12,7 +12,8 @@ package student_valerija_ionova.lesson_10.level_3.task_8;
 import java.util.ArrayList;
 
 class InMemoryDatabase implements  Database{
-    private ArrayList<Product> products = new ArrayList<> ();
+
+    private ArrayList <Product> products = new ArrayList<> ();
 
     ArrayList <Product> getProducts(){
         return products;
@@ -25,7 +26,7 @@ class InMemoryDatabase implements  Database{
 
     @Override
     public Product findByTitle(String productTitle) {
-        Product result;
+
         for (Product product : products){
             if (product.getTitle().equals(productTitle)){
                 return product;
