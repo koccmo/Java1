@@ -7,16 +7,16 @@ class Palindrome {
 
     boolean isPalindrome(String text) {
         char[] letters = getTextLettersInArray(text);
-        checkLettersForPalindromeInArray(letters);
-        return true;
+        boolean result = checkLettersForPalindromeInArray(letters);
+        return result;
     }
 
-    public char[] getTextLettersInArray(String text) {
+    char[] getTextLettersInArray(String text) {
         char[] letterOfTextInArray = text.toCharArray();
         return letterOfTextInArray;
     }
 
-    public boolean checkLettersForPalindromeInArray(char[] letterOfTextInArray) {
+    boolean checkLettersForPalindromeInArray(char[] letterOfTextInArray) {
         int i = 0;
         int j = letterOfTextInArray.length - 1;
             while (j > i) {

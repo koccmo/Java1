@@ -9,4 +9,12 @@ class Transaction {
         this.trader = trader;
         this.amount = amount;
     }
+
+    public Trader getTrader() {
+        return trader;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
 }
