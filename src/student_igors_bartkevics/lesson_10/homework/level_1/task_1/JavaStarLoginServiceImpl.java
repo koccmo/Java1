@@ -24,6 +24,7 @@ package student_igors_bartkevics.lesson_10.homework.level_1.task_1;
 
 class JavaStarLoginServiceImpl implements JavaStarLoginService {
 
+    @Override
     public boolean canLogin(String login, String password) {
         return notNull(login)
                 && login.equals("javastar")
