@@ -25,6 +25,7 @@ class MyListImpl implements  MyList{
     @Override
     public void insertElement(int index, String string) {
         String [] newArray = new String [array.length+1];
+
         for (int i = 0; i< index; i++){
             newArray[i] = array[i];
         }
@@ -37,13 +38,15 @@ class MyListImpl implements  MyList{
 
     @Override
     public void deleteElement(int index) {
-        String [] newArray = new String [array.length-1];
-        for (int i = 0; i< index; i++){
+        if (array.length > 0){
+        String[] newArray = new String[array.length - 1];
+        for (int i = 0; i < index; i++) {
             newArray[i] = array[i];
         }
-        for (int i = index+1; i< array.length; i++){
-            newArray[i-1] = array[i];
+        for (int i = index + 1; i < array.length; i++) {
+            newArray[i - 1] = array[i];
         }
         array = newArray;
+    }
     }
 }
