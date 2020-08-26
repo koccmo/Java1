@@ -2,12 +2,13 @@ package student_valerija_ionova.lesson_x.pac_man.pac_man_1;
 
 import java.util.Random;
 
-public class NewLevel {
+public class NewLevelMonsters {
 
     MoveInformation [] monsters (int level, GameField field){
 
         MoveInformation [] monstersArray = new MoveInformation [level + 2];
         for (int i = 0; i < monstersArray.length; i++){
+            monstersArray[i] = new MoveInformation( Direction.LEFT, new Coordinates(0, 0));
             monstersArray[i].setCoordinates(createRandomCoordinates(field));
             monstersArray[i].setDirection(createRandomDirection());
         }
