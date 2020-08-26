@@ -10,13 +10,25 @@ class Game {
         PacManMove pacManMove = new PacManMove();
         PacManFactory pacManFactory =new PacManFactory();
         MoveInformation pacManMoveInformation = pacManFactory.createPacMan(19, 10, Direction.LEFT); ///Что делать с направлением?
+        gameField.updateField(3, pacManMoveInformation.getCoordinates());
 
         MonsterMove monsterMove = new MonsterMove();
 
         MonsterFactory monsterFactory = new MonsterFactory();
+
+        MoveInformation [] monstersMoveInformationArray = new MoveInformation [3];
         MoveInformation monster1MoveInformation = monsterFactory.createMonster(5, 2, Direction.LEFT);
         MoveInformation monster2MoveInformation = monsterFactory.createMonster(16, 2, Direction.DOWN);
         MoveInformation monster3MoveInformation = monsterFactory.createMonster(34, 2, Direction.RIGHT);
+
+        monstersMoveInformationArray[0] = monster1MoveInformation;
+        monstersMoveInformationArray[1] = monster2MoveInformation;
+        monstersMoveInformationArray[2] = monster3MoveInformation;
+
+        for (MoveInformation info : monstersMoveInformationArray){
+            gameField.updateField(2, info.getCoordinates());
+        }
+
 
         VictoryOrLose victoryOrLose = new VictoryOrLose();
 
@@ -32,7 +44,7 @@ class Game {
             gameField.updateField(3, coordinatesPM);
             pacManMoveInformation.setCoordinates(coordinatesPM);
 
-            if (victoryOrLose.lose(pacManMoveInformation, monster1MoveInformation, monster2MoveInformation, monster3MoveInformation)) {
+            if (victoryOrLose.lose(pacManMoveInformation, monstersMoveInformationArray)) {
                 life--;
                 System.out.println("Lives: " + life);
                 minusLife = true;
@@ -72,8 +84,7 @@ class Game {
             monster3MoveInformation.setCoordinates(newCoordinates);
 
             if (!minusLife){
-                if (victoryOrLose.lose(pacManMoveInformation, monster1MoveInformation, monster2MoveInformation,
-                        monster3MoveInformation)) {
+                if (victoryOrLose.lose(pacManMoveInformation, monstersMoveInformationArray)) {
                     life--;
                     System.out.println("Lives: " + life);
                 }
