@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_x.pac_man.pac_man_1;
 
 import java.util.Random;
 
-public class MonsterMove {
+class MonsterMove {
 
     Coordinates getNextMove (GameField field, MoveInformation moveInformation) {
 
