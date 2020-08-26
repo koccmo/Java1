@@ -1,11 +1,11 @@
-package student_igors_bartkevics.lesson_10.homework.level_2.Task_4;
+package student_igors_bartkevics.lesson_10.homework.level_2.Task_4_5;
 
-class DayOfTheWeekDetectorSwitchVersionTest {
+class DayOfTheWeekDetectorArrayVersionTest {
 
-    DayOfTheWeekDetector detector = new DayOfTheWeekDetectorSwitchVersion();
+    DayOfTheWeekDetector detector = new DayOfTheWeekDetectorArrayVersion();
 
     public static void main(String[] args) {
-        DayOfTheWeekDetectorSwitchVersionTest test = new DayOfTheWeekDetectorSwitchVersionTest();
+        DayOfTheWeekDetectorArrayVersionTest test = new DayOfTheWeekDetectorArrayVersionTest();
         test.mondayTest();
         test.tuesdayTest();
         test.wednesdayTest();
