@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_x.pac_man.pac_man_1;
 
-public class IfPossibleMove {
+class IfPossibleMove {
 
     boolean possibleMove(GameField field, MoveInformation moveInformation){
 
