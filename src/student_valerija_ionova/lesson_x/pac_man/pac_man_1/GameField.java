@@ -42,7 +42,7 @@ class GameField {
                     System.out.print("  ");
                 }else{
                     if (board[i][j] == 0){
-                        System.out.print("  "); //должно быть *
+                        System.out.print("* "); //должно быть *
                     }else{
                         System.out.print(board[i][j] + " ");
                     }
