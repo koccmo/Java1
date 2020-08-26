@@ -1,6 +1,5 @@
 package student_valerija_ionova.lesson_10.level_6;
 
-import java.util.Objects;
 
 public class Book {
 

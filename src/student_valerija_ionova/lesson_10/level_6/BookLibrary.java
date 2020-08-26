@@ -5,10 +5,10 @@ import java.util.Arrays;
 
 public class BookLibrary {
 
-    ArrayList<Book> bookLibrary;
+    private ArrayList<Book> bookLibrary;
 
     BookLibrary (Book ... books){
-        this.bookLibrary = new ArrayList <Book>(Arrays.asList(books));
+        this.bookLibrary = new ArrayList <>(Arrays.asList(books));
     }
 
     ArrayList <Book> getBookLibrary(){
