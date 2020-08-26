@@ -64,4 +64,16 @@ class ShapeUtil {
             return createRandomTriangle();
         }
     }
+
+    //Task_25
+    double calculateArea(Shape[] shapes) {
+        double areaSum = 0;
+        for (Shape shape : shapes){
+            areaSum = areaSum + shape.calculateArea();
+        }
+        return areaSum;
+    }
+
+    //Task_26
+
 }
