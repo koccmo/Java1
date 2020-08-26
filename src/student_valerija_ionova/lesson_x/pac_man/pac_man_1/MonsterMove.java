@@ -1,40 +1,44 @@
 package student_valerija_ionova.lesson_x.pac_man.pac_man_1;
 
-
 import java.util.Random;
 
 public class MonsterMove {
 
     Coordinates getNextMove (GameField field, MoveInformation moveInformation) {
 
-        if (movementContinues(field, moveInformation)){
-            return newCoordinates(moveInformation);
-        }else{
-            Direction newDirection = createNewDirection();
+        if (!movementContinues(field, moveInformation)){
+            Direction newDirection = createNewDirection(field, moveInformation);
             moveInformation.setDirection(newDirection);
-            return newCoordinates(moveInformation);
         }
 
+        return newCoordinates(moveInformation);
     }
 
-    private Direction createNewDirection(){ //Учесть старыее координаты и стены!!!!
-        int x;
-        int y;
+    private Direction createNewDirection(GameField field, MoveInformation moveInformation){
 
-        Random rd = new Random();
-        int input = rd.nextInt(4);
-        switch (input){
-            //case 0 : Direction direction =
+        boolean validDirection = false;
+        Direction direction = moveInformation.getDirection();
+
+        while (!validDirection) {
+            Random rd = new Random();
+            int input = rd.nextInt(4);
+            switch (input) {
+                case 0 : direction = Direction.UP; break;
+                case 1 : direction = Direction.DOWN; break;
+                case 2 : direction = Direction.LEFT; break;
+                case 3 : direction = Direction.RIGHT; break;
+            }
+
+            moveInformation.setDirection(direction);
+            if (movementContinues(field, moveInformation)) validDirection = true;
         }
-
-
-        return Direction.DOWN;
+        return direction;
     }
 
     private boolean movementContinues(GameField field, MoveInformation moveInformation){
 
             IfPossibleMove ifPossibleMove = new IfPossibleMove();
-            return ifPossibleMove.possibleMoveForMonster(field, moveInformation);
+            return ifPossibleMove.possibleMove(field, moveInformation);
 
     }
 
