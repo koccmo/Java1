@@ -1,16 +1,15 @@
 package student_valerija_ionova.lesson_x.pac_man.pac_man_1;
 
-public class Game {
+class Game {
 
     public static void main(String [] args) {
-        boolean gameContinues = false;
 
         GameField gameField = new GameField();
         gameField.createNewFieldManually();
 
         PacManMove pacManMove = new PacManMove();
         PacManFactory pacManFactory =new PacManFactory();
-        pacManFactory.createPacMan(19, 11, Direction.LEFT); ///Что делать с направлением?
+        MoveInformation pacManMoveInformation = pacManFactory.createPacMan(19, 10, Direction.LEFT); ///Что делать с направлением?
 
         MonsterMove monsterMove = new MonsterMove();
 
@@ -19,26 +18,44 @@ public class Game {
         MoveInformation monster2MoveInformation = monsterFactory.createMonster(16, 2, Direction.DOWN);
         MoveInformation monster3MoveInformation = monsterFactory.createMonster(34, 2, Direction.RIGHT);
 
-        int i=0;
+        VictoryOrLose victoryOrLose = new VictoryOrLose();
 
-        while (i<100){
+        int life = 3;
+
+        while (life>0) {
+            boolean minusLife = false;
             gameField.printBoard();
 
-            //pacManMove.getNextMove(gameField);
+            Coordinates coordinatesPM = pacManMove.getNextMove(gameField, pacManMoveInformation);
+            gameField.updateField(4, pacManMoveInformation.getCoordinates());
+            gameField.updateFieldOfBonuses(4, pacManMoveInformation.getCoordinates());
+            gameField.updateField(3, coordinatesPM);
+            pacManMoveInformation.setCoordinates(coordinatesPM);
+
+            if (victoryOrLose.lose(pacManMoveInformation, monster1MoveInformation, monster2MoveInformation, monster3MoveInformation)) {
+                life--;
+                System.out.println("Lives: " + life);
+                minusLife = true;
+            }
+
+            if (victoryOrLose.win(gameField)) {
+                break;
+            }
 
             Coordinates newCoordinates = monsterMove.getNextMove(gameField, monster1MoveInformation);
             if (gameField.getElementOfBonusField(monster1MoveInformation.getCoordinates()) == 0) {
                 gameField.updateField(0, monster1MoveInformation.getCoordinates());
-            }else{
+            } else {
                 gameField.updateField(4, monster1MoveInformation.getCoordinates());
             }
             gameField.updateField(2, newCoordinates);
             monster1MoveInformation.setCoordinates(newCoordinates);
 
+
             newCoordinates = monsterMove.getNextMove(gameField, monster2MoveInformation);
             if (gameField.getElementOfBonusField(monster1MoveInformation.getCoordinates()) == 0) {
                 gameField.updateField(0, monster2MoveInformation.getCoordinates());
-            }else{
+            } else {
                 gameField.updateField(4, monster2MoveInformation.getCoordinates());
             }
             gameField.updateField(2, newCoordinates);
@@ -47,14 +64,21 @@ public class Game {
             newCoordinates = monsterMove.getNextMove(gameField, monster3MoveInformation);
             if (gameField.getElementOfBonusField(monster1MoveInformation.getCoordinates()) == 0) {
                 gameField.updateField(0, monster3MoveInformation.getCoordinates());
-            }else{
+            } else {
                 gameField.updateField(4, monster3MoveInformation.getCoordinates());
             }
 
             gameField.updateField(2, newCoordinates);
             monster3MoveInformation.setCoordinates(newCoordinates);
 
-            i++;
+            if (!minusLife){
+                if (victoryOrLose.lose(pacManMoveInformation, monster1MoveInformation, monster2MoveInformation,
+                        monster3MoveInformation)) {
+                    life--;
+                    System.out.println("Lives: " + life);
+                }
+            }
         }
+        System.out.println("\n The End! \n Score: "+ (362 - gameField.numberOfBonuses()));
     }
 }
