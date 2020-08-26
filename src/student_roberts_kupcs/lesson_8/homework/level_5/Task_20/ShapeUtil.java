@@ -83,4 +83,13 @@ class ShapeUtil {
         return perimeterSum;
     }
 
+    //27
+    double calculateArea(Shape shape) {
+        return shape.calculateArea();
+    }
+
+    double calculatePerimeter(Shape shape) {
+        return shape.calculatePerimeter();
+    }
+
 }
