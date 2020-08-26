@@ -8,4 +8,6 @@ interface MyList {
 
     int getElement(int index); //get element from list with index
 
+    boolean contains(int value); //return true if list contains element with value
+
 }
