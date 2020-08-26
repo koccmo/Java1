@@ -4,6 +4,8 @@ public class GameField {
 
     private int [][] board = new int [15][42];
 
+    private int [][] bonusBoard = createNewFieldManually();
+
     // 0 - point
     // 1 - wall
     // 2 - monster
@@ -29,6 +31,7 @@ public class GameField {
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
         };
         this.board = field;
+        System.out.println();
         return field;
     }
 
@@ -39,7 +42,7 @@ public class GameField {
                     System.out.print("  ");
                 }else{
                     if (board[i][j] == 0){
-                        System.out.print("* ");
+                        System.out.print("  "); //должно быть *
                     }else{
                         System.out.print(board[i][j] + " ");
                     }
@@ -53,6 +56,27 @@ public class GameField {
         return board[coordinates.getY()][coordinates.getX()];
     }
 
+    int getElementOfBonusField(Coordinates coordinates){
+        return bonusBoard[coordinates.getY()][coordinates.getX()];
+    }
 
+    void updateField (int number, Coordinates coordinates){
+        board[coordinates.getY()][coordinates.getX()] = number;
+    }
+
+    boolean gameEndNoBonuses(){
+        return numberOfBonuses() == 0;
+    }
+
+    private int numberOfBonuses(){
+        int result = 0;
+        for (int i = 0; i < 15; i++){
+            for (int j = 0; j < 42; j++) {
+                    if (bonusBoard[i][j] == 0)
+                        result ++;
+                }
+            }
+        return result;
+    }
 
 }
