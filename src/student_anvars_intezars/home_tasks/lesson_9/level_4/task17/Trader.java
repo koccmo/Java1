@@ -13,6 +13,10 @@ class Trader {
     String getFullName() {
         return fullName;
     }
+
+    String getCity() {
+        return city;
+    }
 }
 
 class Transaction {
@@ -38,7 +42,7 @@ class FraudDetector {
 
 
     boolean isFraud(Trader trader, int amount) {
-        if (compareTraderName(trader) || (compareAmount(amount))) {
+        if (compareTraderName(trader) || (compareAmount(amount) || (compareCity(trader)))) {
             return true;
         } else {
             return false;
@@ -51,6 +55,16 @@ class FraudDetector {
         if (traderName.equals("Pokemon")) {
         }
         return true;
+    }
+
+    boolean compareCity(Trader trader) {
+        String cityName = trader.getCity();
+        if (cityName.equals("Sidney")) {
+            return true;
+        } else {
+        return false;
+    }
+
     }
 
     boolean compareAmount(int amount) {

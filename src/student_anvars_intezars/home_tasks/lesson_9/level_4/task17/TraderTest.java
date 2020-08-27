@@ -7,6 +7,7 @@ class TraderTest {
         TraderTest traderTest = new TraderTest();
         traderTest.firstTestForFraud();
         traderTest.secondTestForFraud();
+        traderTest.thirdTestForFraud();
     }
 
     void firstTestForFraud() {
@@ -32,6 +33,19 @@ class TraderTest {
             System.out.println("Test for detecting fraud by amount = OK");
         } else {
             System.out.println("Test for detecting fraud by amount = FAIL");
+        }
+    }
+
+    void thirdTestForFraud() {
+        Trader thirdTrader = new Trader("Andrey","Sidney");
+        Transaction thirdTransaction = new Transaction(thirdTrader,2000);
+        int amountOfThirdTransaction = thirdTransaction.getAmount();
+        FraudDetector fraudDetector = new FraudDetector();
+        boolean result = fraudDetector.isFraud(thirdTrader,amountOfThirdTransaction);
+        if (result) {
+            System.out.println("Test for detecting fraud by city = OK");
+        } else {
+            System.out.println("Test for detecting fraud by city = FAIL");
         }
     }
 }
