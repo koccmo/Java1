@@ -6,7 +6,7 @@ class FraudDetectorTest {
         fraudDetectorTest.testIsPokemon();
         fraudDetectorTest.testIsMore1000000();
         fraudDetectorTest.testFromSidney();
-
+        fraudDetectorTest.testTraderFromJamaica();
 
     }
 
@@ -40,6 +40,17 @@ class FraudDetectorTest {
             System.out.println("Test from Sidney OK");
         } else {
             System.out.println("Test from Sidney is FAIL");
+        }
+    }
+
+    void testTraderFromJamaica() {
+        Trader roberts = new Trader("Jamaica");
+        Transaction transaction = new Transaction(roberts, 1000);
+
+        if (roberts.getCountry().equals("Jamaica")) {
+            System.out.println("Test trader from Jamaica OK");
+        } else {
+            System.out.println("Test trader from Jamaica is FAIL");
         }
     }
 }

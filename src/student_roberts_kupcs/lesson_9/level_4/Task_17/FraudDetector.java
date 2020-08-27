@@ -3,7 +3,7 @@ package student_roberts_kupcs.lesson_9.level_4.Task_17;
 class FraudDetector {
     boolean isFraud(Transaction t) {
 
-        return isPokemon(t) || isMore1000000(t);
+        return isPokemon(t) || isMore1000000(t) || fromSidney(t);
     }
 
     private boolean isPokemon(Transaction t) {
@@ -20,5 +20,11 @@ class FraudDetector {
 
     private boolean fromSidney(Transaction t) {
         return t.getTrader().getCity().equals("Sidney");
+    }
+
+    //Task_20 - Rule 4: все транзакции от трейдеров из страны Ямайка должны быть отклонены.
+
+    private boolean traderFromJamaica(Transaction t) {
+        return t.getTrader().getCountry().equals("Jamaica");
     }
 }
