@@ -7,6 +7,7 @@ class FraudDetectorTest {
         fraudDetectorTest.testIsMore1000000();
         fraudDetectorTest.testFromSidney();
         fraudDetectorTest.testTraderFromJamaica();
+        fraudDetectorTest.testTraderFromGermany();
 
     }
 
@@ -51,6 +52,17 @@ class FraudDetectorTest {
             System.out.println("Test trader from Jamaica OK");
         } else {
             System.out.println("Test trader from Jamaica is FAIL");
+        }
+    }
+
+    void testTraderFromGermany() {
+        Trader roberts = new Trader("Germany");
+        Transaction transaction = new Transaction(roberts, 1002);
+
+        if ((roberts.getCountry().equals("Germany")) && (transaction.getAmount() > 1000)) {
+            System.out.println("Test trader from Germany OK");
+        } else {
+            System.out.println("Test trader from Germany FAIL");
         }
     }
 }

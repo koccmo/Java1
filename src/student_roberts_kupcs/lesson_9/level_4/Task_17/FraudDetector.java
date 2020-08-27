@@ -27,4 +27,10 @@ class FraudDetector {
     private boolean traderFromJamaica(Transaction t) {
         return t.getTrader().getCountry().equals("Jamaica");
     }
+
+    //Task_21 - Rule 5: все транзакции трейдеров из Германии на сумму больше 1000 должны быть отклонены.
+
+    private boolean traderFromGermany_More1000(Transaction t) {
+        return ((t.getTrader().getCountry().equals("Germany")) && (t.getAmount() > 1000));
+    }
 }
