@@ -15,4 +15,10 @@ class FraudDetector {
     private boolean isMore1000000(Transaction t) {
         return t.getAmount() > 1000000;
     }
+
+    //Task 19 - Rule 3: все транзакции трейдеров из города "Сидней" должны быть отклонены.
+
+    private boolean fromSidney(Transaction t) {
+        return t.getTrader().getCity().equals("Sidney");
+    }
 }
