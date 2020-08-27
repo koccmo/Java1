@@ -1,3 +1,8 @@
+/*
+Functional interface is an interface that contains only one abstract method.
+It can have only one functionality to exhibit.
+ */
+
 package student_igors_bartkevics.lesson_10.homework.level_3.task_6;
 
 import java.util.ArrayList;
