@@ -28,13 +28,17 @@ class Transaction {
     Trader getTraderFromTransaction() {
         return trader;
     }
+
+    int getAmount () {
+        return amount;
+    }
 }
 
 class FraudDetector {
 
 
-    boolean isFraud(Trader trader) {
-        if (compareTraderName(trader)) {
+    boolean isFraud(Trader trader, int amount) {
+        if (compareTraderName(trader) || (compareAmount(amount))) {
             return true;
         } else {
             return false;
@@ -47,6 +51,15 @@ class FraudDetector {
         if (traderName.equals("Pokemon")) {
         }
         return true;
+    }
+
+    boolean compareAmount(int amount) {
+        int traderAmount = amount;
+        if (traderAmount > 1000000) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
