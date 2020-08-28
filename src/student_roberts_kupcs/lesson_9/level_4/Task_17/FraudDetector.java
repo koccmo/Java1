@@ -3,7 +3,7 @@ package student_roberts_kupcs.lesson_9.level_4.Task_17;
 class FraudDetector {
     boolean isFraud(Transaction t) {
 
-        return isPokemon(t) || isMore1000000(t) || fromSidney(t);
+        return isPokemon(t) || isMore1000000(t) || fromSidney(t) || traderFromJamaica(t) || traderFromGermany_More1000(t);
     }
 
     private boolean isPokemon(Transaction t) {
