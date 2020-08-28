@@ -54,7 +54,9 @@ class FraudDetector {
                 ||
            (compareCity(trader)
                 ||
-           (compareCountry(trader))))) {
+           (compareCountry(trader)
+                ||
+           (compareCountryAndAmount(trader,amount)))))) {
             return true;
         } else {
             return false;
@@ -94,6 +96,14 @@ class FraudDetector {
         } else {
             return false;
         }
+    }
+
+    boolean compareCountryAndAmount(Trader trader, int amount) {
+        String countryName = trader.getCountry();
+        if (countryName.equals("Germany") && (amount > 1000)) {
+            return true;
+        }
+        return false;
     }
 }
 

@@ -9,6 +9,7 @@ class TraderTest {
         traderTest.secondTestForFraud();
         traderTest.thirdTestForFraud();
         traderTest.fourthTestForFraud();
+        traderTest.fifthTestForFraud();
     }
 
     void firstTestForFraud() {
@@ -60,6 +61,19 @@ class TraderTest {
             System.out.println("Test for detecting fraud by country = OK");
         } else {
             System.out.println("Test for detecting fraud by country = FAIL");
+        }
+    }
+
+    void fifthTestForFraud() {
+        Trader fifthTrader = new Trader("Sasha","Moscow","Germany");
+        Transaction fifthTransaction = new Transaction(fifthTrader,1001);
+        int amountOfFifthTransaction = fifthTransaction.getAmount();
+        FraudDetector fraudDetector = new FraudDetector();
+        boolean result = fraudDetector.isFraud(fifthTrader,amountOfFifthTransaction);
+        if (result) {
+            System.out.println("Test for detecting fraud by country and amount = OK");
+        } else {
+            System.out.println("Test for detecting fraud by country and amount = FAIL");
         }
     }
 }
