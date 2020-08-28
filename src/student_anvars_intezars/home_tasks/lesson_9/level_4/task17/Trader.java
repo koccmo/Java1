@@ -4,10 +4,12 @@ class Trader {
 
     private String fullName;
     private String city;
+    private String country;
 
-    Trader(String fullName, String city) {
+    Trader(String fullName, String city,String country) {
         this.fullName = fullName;
         this.city = city;
+        this.country = country;
     }
 
     String getFullName() {
@@ -16,6 +18,10 @@ class Trader {
 
     String getCity() {
         return city;
+    }
+
+    String getCountry() {
+        return country;
     }
 }
 
@@ -42,13 +48,18 @@ class FraudDetector {
 
 
     boolean isFraud(Trader trader, int amount) {
-        if (compareTraderName(trader) || (compareAmount(amount) || (compareCity(trader)))) {
+        if (compareTraderName(trader)
+                ||
+           (compareAmount(amount)
+                ||
+           (compareCity(trader)
+                ||
+           (compareCountry(trader))))) {
             return true;
         } else {
             return false;
         }
     }
-
 
     boolean compareTraderName (Trader trader) {
         String traderName = trader.getFullName();
@@ -76,5 +87,13 @@ class FraudDetector {
         }
     }
 
+    boolean compareCountry(Trader trader) {
+        String countryName = trader.getCountry();
+        if (countryName.equals("Jamaica")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 

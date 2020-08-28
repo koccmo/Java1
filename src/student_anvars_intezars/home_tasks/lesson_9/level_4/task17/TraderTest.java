@@ -8,10 +8,11 @@ class TraderTest {
         traderTest.firstTestForFraud();
         traderTest.secondTestForFraud();
         traderTest.thirdTestForFraud();
+        traderTest.fourthTestForFraud();
     }
 
     void firstTestForFraud() {
-        Trader firstTrader = new Trader("Pokemon","Riga");
+        Trader firstTrader = new Trader("Pokemon","Riga","Latvia");
         Transaction firstTransaction = new Transaction(firstTrader,1000);
         int amountOfFirstTransaction = firstTransaction.getAmount();
         FraudDetector fraudDetector = new FraudDetector();
@@ -24,7 +25,7 @@ class TraderTest {
     }
 
     void secondTestForFraud() {
-        Trader secondTrader = new Trader("Digimon","Riga");
+        Trader secondTrader = new Trader("Digimon","Riga","Latvia");
         Transaction secondTransaction = new Transaction(secondTrader,1000001);
         int amountOfSecondTransaction = secondTransaction.getAmount();
         FraudDetector fraudDetector = new FraudDetector();
@@ -37,7 +38,7 @@ class TraderTest {
     }
 
     void thirdTestForFraud() {
-        Trader thirdTrader = new Trader("Andrey","Sidney");
+        Trader thirdTrader = new Trader("Andrey","Sidney","USA");
         Transaction thirdTransaction = new Transaction(thirdTrader,2000);
         int amountOfThirdTransaction = thirdTransaction.getAmount();
         FraudDetector fraudDetector = new FraudDetector();
@@ -46,6 +47,19 @@ class TraderTest {
             System.out.println("Test for detecting fraud by city = OK");
         } else {
             System.out.println("Test for detecting fraud by city = FAIL");
+        }
+    }
+
+    void fourthTestForFraud () {
+        Trader fourthTrader = new Trader("Vasily","Krasnodar","Jamaica");
+        Transaction fourthTransaction = new Transaction(fourthTrader,4500);
+        int amountOfFourthTransaction = fourthTransaction.getAmount();
+        FraudDetector fraudDetector = new FraudDetector();
+        boolean result = fraudDetector.isFraud(fourthTrader,amountOfFourthTransaction);
+        if(result) {
+            System.out.println("Test for detecting fraud by country = OK");
+        } else {
+            System.out.println("Test for detecting fraud by country = FAIL");
         }
     }
 }
