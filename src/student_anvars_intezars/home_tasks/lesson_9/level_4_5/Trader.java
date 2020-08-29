@@ -141,4 +141,28 @@ class FraudRule1 extends FraudRule {
     }
     }
 
+class FraudRule2 extends FraudRule {
+
+    public FraudRule2(String ruleName) {
+        super(ruleName);
+    }
+
+    public boolean isFraud(Trader trader, int amount) {
+        if (compareAmount(amount)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean compareAmount(int amount) {
+        int traderAmount = amount;
+        if (traderAmount > 1000000) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
 

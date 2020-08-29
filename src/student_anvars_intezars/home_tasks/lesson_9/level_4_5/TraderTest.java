@@ -1,5 +1,7 @@
 package student_anvars_intezars.home_tasks.lesson_9.level_4_5;
 
+import java.sql.SQLOutput;
+
 class TraderTest {
 
     public static void main(String[] args) {
@@ -11,6 +13,7 @@ class TraderTest {
         traderTest.fourthTestForFraud();
         traderTest.fifthTestForFraud();
         traderTest.sixthTestForFraud();
+        traderTest.seventhTestForFraud();
     }
 
     void firstTestForFraud() {
@@ -86,6 +89,17 @@ class TraderTest {
             System.out.println("Test for Rule1 = OK");
         } else {
             System.out.println("Test for Rule = FAIL");
+        }
+    }
+
+    void seventhTestForFraud() {
+        Trader seventhTrader = new Trader("Petja","Riga","Latvia");
+        FraudRule2 fraudRule2 = new FraudRule2("Find amount > 1000000");
+        boolean result = fraudRule2.isFraud(seventhTrader,1000001);
+        if (result) {
+            System.out.println("Test for Rule2 = OK");
+        } else {
+            System.out.println("Test for RUle2 = FAIL");
         }
     }
 }
