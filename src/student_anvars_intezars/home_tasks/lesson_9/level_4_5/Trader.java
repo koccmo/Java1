@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_9.level_4.task17;
+package student_anvars_intezars.home_tasks.lesson_9.level_4_5;
 
 class Trader {
 
@@ -106,4 +106,39 @@ class FraudDetector {
         return false;
     }
 }
+
+abstract class FraudRule {
+
+    private String ruleName;
+
+    public FraudRule(String ruleName) {
+        this.ruleName = ruleName;
+    }
+
+    public abstract boolean isFraud(Trader trader, int amount);
+
+}
+
+class FraudRule1 extends FraudRule {
+
+    public FraudRule1(String ruleName) {
+        super(ruleName);
+    }
+
+    public boolean isFraud(Trader trader, int amount) {
+        if (compareTraderName(trader)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean compareTraderName(Trader trader) {
+        String traderName = trader.getFullName();
+        if (traderName.equals("Pokemon")) {
+        }
+        return true;
+    }
+    }
+
 

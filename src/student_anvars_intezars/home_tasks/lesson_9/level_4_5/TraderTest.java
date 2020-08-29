@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_9.level_4.task17;
+package student_anvars_intezars.home_tasks.lesson_9.level_4_5;
 
 class TraderTest {
 
@@ -10,6 +10,7 @@ class TraderTest {
         traderTest.thirdTestForFraud();
         traderTest.fourthTestForFraud();
         traderTest.fifthTestForFraud();
+        traderTest.sixthTestForFraud();
     }
 
     void firstTestForFraud() {
@@ -74,6 +75,17 @@ class TraderTest {
             System.out.println("Test for detecting fraud by country and amount = OK");
         } else {
             System.out.println("Test for detecting fraud by country and amount = FAIL");
+        }
+    }
+
+    void sixthTestForFraud() {
+        Trader sixthTrader = new Trader("Pokemon","Sochi","Russia Federation");
+        FraudRule1 fraudRule1 = new FraudRule1("Find Pokemon");
+        boolean result = fraudRule1.isFraud(sixthTrader,1000);
+        if (result) {
+            System.out.println("Test for Rule1 = OK");
+        } else {
+            System.out.println("Test for Rule = FAIL");
         }
     }
 }
