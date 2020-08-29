@@ -14,6 +14,7 @@ class MyListTest {
         myListTest.testDeleteFirst();
         myListTest.testDeleteSecond();
         myListTest.testDeleteLast();
+        myListTest.testDeleteFromNullArray();
     }
 
 
@@ -77,5 +78,14 @@ class MyListTest {
         MyListImpl myList = new MyListImpl(arrayStart);
         myList.deleteElement(4);
         printResult("testDeleteFirst", Arrays.equals(expectedArray,myList.getArray()));
+    }
+
+    void testDeleteFromNullArray (){
+        String [] arrayStart = {};
+        String [] expectedArray = {};
+
+        MyListImpl myList = new MyListImpl(arrayStart);
+        myList.deleteElement(0);
+        printResult("testDeleteNullArray", Arrays.equals(expectedArray,myList.getArray()));
     }
 }
