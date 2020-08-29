@@ -26,7 +26,7 @@ class FraudRuleTest {
 
     void testRule1True(){
         FraudRule1 rule1 = new FraudRule1("FraudRule1");
-        Trader pokemon = new Trader ("Pokemon", "New York");
+        Trader pokemon = new Trader ("Pokemon", "New York", "Latvia");
         Transaction t = new Transaction(pokemon, 100);
 
         checkResult("testRule1True", rule1.isFraud(t) == true);
@@ -35,7 +35,7 @@ class FraudRuleTest {
     void testRule1False(){
 
         FraudRule1 rule1 = new FraudRule1("FraudRule1");
-        Trader trader = new Trader ("PokyMan", "New York");
+        Trader trader = new Trader ("PokyMan", "New York", "Latvia");
         Transaction t = new Transaction(trader, 100);
 
         checkResult("testRule1False", rule1.isFraud(t) == false);
@@ -45,7 +45,7 @@ class FraudRuleTest {
     void testRule2True(){
 
         FraudRule2 rule2 = new FraudRule2("FraudRule2");
-        Trader trader = new Trader ("Bob", "New York");
+        Trader trader = new Trader ("Bob", "New York", "Latvia");
         Transaction t = new Transaction(trader, 1000008);
 
         checkResult("testRule2True", rule2.isFraud(t) == true);
@@ -54,7 +54,7 @@ class FraudRuleTest {
     void testRule3(){
 
         FraudRule3 rule3 = new FraudRule3("FraudRule3");
-        Trader trader = new Trader ("Bob", "Sydney");
+        Trader trader = new Trader ("Bob", "Sydney", "Latvia");
         Transaction t = new Transaction(trader, 10008);
 
         checkResult("testRule3", rule3.isFraud(t) == true);
@@ -63,7 +63,7 @@ class FraudRuleTest {
     void testRule4(){
 
         FraudRule4 rule4 = new FraudRule4("FraudRule4");
-        Trader trader = new Trader ("Bob", "Jamaica");
+        Trader trader = new Trader ("Bob", "Riga", "Jamaica");
         Transaction t = new Transaction(trader, 10008);
 
         checkResult("testRule4", rule4.isFraud(t) == true);
@@ -72,7 +72,7 @@ class FraudRuleTest {
     void testRule5GermanAnd1000(){
 
         FraudRule5 rule5 = new FraudRule5("FraudRule5");
-        Trader trader = new Trader ("Bob", "German");
+        Trader trader = new Trader ("Bob", "German", "Latvia");
         Transaction t = new Transaction(trader, 10008);
 
         checkResult("testRule5", rule5.isFraud(t) == true);
@@ -81,7 +81,7 @@ class FraudRuleTest {
     void testRule5GermanLessThan1000(){
 
         FraudRule5 rule5 = new FraudRule5("FraudRule5");
-        Trader trader = new Trader ("Bob", "German");
+        Trader trader = new Trader ("Bob", "German", "Latvia");
         Transaction t = new Transaction(trader, 108);
 
         checkResult("testRule5GermanLessThan1000", rule5.isFraud(t) == false);
