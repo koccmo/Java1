@@ -27,7 +27,7 @@ class FraudDetectorTest {
 
         FraudDetector detector = new FraudDetector (new FraudRule1("rule"), new FraudRule2("rule"), new FraudRule3("rule"), new FraudRule4("rule"), new FraudRule5("rule"));
 
-        Trader trader = new Trader("Pokemon", "Riga");
+        Trader trader = new Trader("Pokemon", "Riga", "Latvia");
         Transaction transaction = new Transaction (trader, 100);
 
         checkResult("testRule1",detector.isFraud(transaction) == true);
@@ -37,7 +37,7 @@ class FraudDetectorTest {
 
         FraudDetector detector = new FraudDetector (new FraudRule1("rule"), new FraudRule2("rule"), new FraudRule3("rule"), new FraudRule4("rule"), new FraudRule5("rule"));
 
-        Trader trader = new Trader("Batman", "Riga");
+        Trader trader = new Trader("Batman", "Riga", "Latvia");
         Transaction transaction = new Transaction (trader, 1000001);
 
         checkResult("testRule2",detector.isFraud(transaction) == true);
@@ -47,7 +47,7 @@ class FraudDetectorTest {
 
         FraudDetector detector = new FraudDetector (new FraudRule1("rule"), new FraudRule2("rule"), new FraudRule3("rule"), new FraudRule4("rule"), new FraudRule5("rule"));
 
-        Trader trader = new Trader("Batman", "Sydney");
+        Trader trader = new Trader("Batman", "Sydney", "Latvia");
         Transaction transaction = new Transaction (trader, 10001);
 
         checkResult("testRule3",detector.isFraud(transaction) == true);
@@ -57,7 +57,7 @@ class FraudDetectorTest {
 
         FraudDetector detector = new FraudDetector (new FraudRule1("rule"), new FraudRule2("rule"), new FraudRule3("rule"), new FraudRule4("rule"), new FraudRule5("rule"));
 
-        Trader trader = new Trader("Batman", "Jamaica");
+        Trader trader = new Trader("Batman", "Riga", "Jamaica");
         Transaction transaction = new Transaction (trader, 10001);
 
         checkResult("testRule4",detector.isFraud(transaction) == true);
@@ -67,7 +67,7 @@ class FraudDetectorTest {
 
         FraudDetector detector = new FraudDetector (new FraudRule1("rule"), new FraudRule2("rule"), new FraudRule3("rule"), new FraudRule4("rule"), new FraudRule5("rule"));
 
-        Trader trader = new Trader("Batman", "German");
+        Trader trader = new Trader("Batman", "German", "Latvia");
         Transaction transaction = new Transaction (trader, 10001);
 
         checkResult("testRule5",detector.isFraud(transaction) == true);
@@ -77,7 +77,7 @@ class FraudDetectorTest {
 
         FraudDetector detector = new FraudDetector (new FraudRule1("rule"), new FraudRule2("rule"), new FraudRule3("rule"), new FraudRule4("rule"), new FraudRule5("rule"));
 
-        Trader trader = new Trader("Batman", "German");
+        Trader trader = new Trader("Batman", "German", "Latvia");
         Transaction transaction = new Transaction (trader, 101);
 
         checkResult("testRule5False",detector.isFraud(transaction) == false);
