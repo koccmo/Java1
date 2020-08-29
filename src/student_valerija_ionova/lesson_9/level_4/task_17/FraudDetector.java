@@ -25,7 +25,7 @@ class FraudDetector {
     }
 
     private boolean isJamaica(Transaction t){
-        return(t.getTrader().getCity().equals("Jamaica"));
+        return(t.getTrader().getCountry().equals("Jamaica"));
     }
 
     private boolean isGermanAnd1000(Transaction t){
