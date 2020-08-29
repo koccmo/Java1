@@ -25,7 +25,7 @@ class FraudDetectorTest {
     }
 
     void testIsPokemon(){
-        Trader pokemon = new Trader("Pokemon", "New York");
+        Trader pokemon = new Trader("Pokemon", "New York", "Latvia");
         Transaction transaction = new Transaction(pokemon, 200);
 
         FraudDetector fraudDetector = new FraudDetector();
@@ -34,7 +34,7 @@ class FraudDetectorTest {
     }
 
     void testIsNotPokemon(){
-        Trader smith = new Trader("Smith", "California");
+        Trader smith = new Trader("Smith", "California", "Latvia");
         Transaction transaction = new Transaction(smith, 500);
 
         FraudDetector fraudDetector = new FraudDetector();
@@ -43,7 +43,7 @@ class FraudDetectorTest {
     }
 
     void testIsTooBigAmount(){
-        Trader smith = new Trader("Smith", "California");
+        Trader smith = new Trader("Smith", "California", "Latvia");
         Transaction transaction = new Transaction(smith, 1000005);
 
         FraudDetector fraudDetector = new FraudDetector();
@@ -52,7 +52,7 @@ class FraudDetectorTest {
     }
 
     void testIsSydney(){
-        Trader smith = new Trader("Smith", "Sydney");
+        Trader smith = new Trader("Smith", "Sydney", "Latvia");
         Transaction transaction = new Transaction(smith, 10005);
 
         FraudDetector fraudDetector = new FraudDetector();
@@ -61,7 +61,7 @@ class FraudDetectorTest {
     }
 
     void testIsSydneyAndBigAmount(){
-        Trader smith = new Trader("Smith", "Sydney");
+        Trader smith = new Trader("Smith", "Sydney", "Latvia");
         Transaction transaction = new Transaction(smith, 1000005);
 
         FraudDetector fraudDetector = new FraudDetector();
@@ -70,7 +70,7 @@ class FraudDetectorTest {
     }
 
     void testIsJamaica(){
-        Trader smith = new Trader("Smith", "Jamaica");
+        Trader smith = new Trader("Smith", "BumBum", "Jamaica");
         Transaction transaction = new Transaction(smith, 10005);
 
         FraudDetector fraudDetector = new FraudDetector();
@@ -79,7 +79,7 @@ class FraudDetectorTest {
     }
 
     void testIsGermanAnd1000(){
-        Trader smith = new Trader("Smith", "German");
+        Trader smith = new Trader("Smith", "German", "Latvia");
         Transaction transaction = new Transaction(smith, 10005);
 
         FraudDetector fraudDetector = new FraudDetector();
@@ -88,7 +88,7 @@ class FraudDetectorTest {
     }
 
     void testIsGermanAndLessThan1000(){
-        Trader smith = new Trader("Smith", "German");
+        Trader smith = new Trader("Smith", "German", "Latvia");
         Transaction transaction = new Transaction(smith, 105);
 
         FraudDetector fraudDetector = new FraudDetector();
