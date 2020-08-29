@@ -14,6 +14,7 @@ class TraderTest {
         traderTest.rule2TestForFraud();
         traderTest.rule3TestForFraud();
         traderTest.rule4TestForFraud();
+        traderTest.rule5TestForFraud();
     }
 
     void firstTestForFraud() {
@@ -122,6 +123,17 @@ class TraderTest {
             System.out.println("Test for Rule4 = OK");
         } else {
             System.out.println("Test for RUle4 = FAIL");
+        }
+    }
+
+    void rule5TestForFraud() {
+        Trader tenthTrader = new Trader("Anton","Berlin","Germany");
+        FraudRule5 fraudRule5 = new FraudRule5("Find fraud by country and amount");
+        boolean result = fraudRule5.isFraud(tenthTrader,1001);
+        if (result) {
+            System.out.println("Test for Rule5 = OK");
+        } else {
+            System.out.println("Test for Rule5 = FAIL");
         }
     }
 }

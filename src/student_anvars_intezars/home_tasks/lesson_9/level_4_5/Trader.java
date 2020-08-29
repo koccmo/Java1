@@ -213,3 +213,27 @@ class FraudRule4 extends FraudRule {
     }
 }
 
+class FraudRule5 extends FraudRule {
+
+    public FraudRule5(String ruleName) {
+        super(ruleName);
+    }
+
+    public boolean isFraud(Trader trader, int amount) {
+        if (compareCountryAndAmount(trader,amount)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean compareCountryAndAmount(Trader trader, int amount) {
+        String countryName = trader.getCountry();
+        if (countryName.equals("Germany") && (amount > 1000)) {
+            return true;
+        }
+        return false;
+    }
+}
+
+
