@@ -165,4 +165,28 @@ class FraudRule2 extends FraudRule {
     }
 }
 
+class FraudRule3 extends FraudRule {
+
+    public FraudRule3(String ruleName) {
+        super(ruleName);
+    }
+
+    public boolean isFraud(Trader trader, int amount) {
+        if (compareCity(trader)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean compareCity(Trader trader) {
+        String cityName = trader.getCity();
+        if (cityName.equals("Sidney")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
 
