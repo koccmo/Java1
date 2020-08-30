@@ -1,6 +1,6 @@
 package student_anvars_intezars.home_tasks.lesson_9.level_5;
 
-/*class FraudDetector {
+class FraudDetector {
 
     private FraudRule[] fraudRules;
 
@@ -12,11 +12,10 @@ package student_anvars_intezars.home_tasks.lesson_9.level_5;
     boolean isFraud(Trader trader, int amount) {
         boolean result = false;
         for (int i = 0; i < fraudRules.length; i++) {
-            if (isFraud(trader, amount)) {
-                return true;
-            } else {
-                return false;
+            if (fraudRules[i].isFraud(trader, amount)) {
+                result = true;
             }
         }
+        return result;
     }
-}*/
+}
