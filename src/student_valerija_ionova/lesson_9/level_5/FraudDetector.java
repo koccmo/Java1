@@ -26,7 +26,7 @@ class FraudDetector{
     ArrayList <FraudRule> fraudRules;
 
     FraudDetector (FraudRule ... fraudRules){
-        this.fraudRules = new ArrayList<FraudRule>(Arrays.asList(fraudRules));
+        this.fraudRules = new ArrayList<>(Arrays.asList(fraudRules));
     }
 
     boolean isFraud (Transaction t){
