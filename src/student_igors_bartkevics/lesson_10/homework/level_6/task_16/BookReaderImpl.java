@@ -30,4 +30,5 @@ class BookReaderImpl implements BookReader {
         }
         else return false;
     }
+
 }
