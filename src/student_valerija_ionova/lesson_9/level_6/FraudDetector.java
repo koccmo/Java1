@@ -36,7 +36,7 @@ class FraudDetector{
             }
         }
         if (result.getFraud()){
-            System.out.println(t.toString());
+            System.out.println("FraudRules: "+result.getRuleName()+"\n"+t.toString());
         }
         return result;
     }
