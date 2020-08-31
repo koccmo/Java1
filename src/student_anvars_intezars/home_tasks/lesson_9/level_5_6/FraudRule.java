@@ -8,6 +8,10 @@ abstract class FraudRule {
         this.ruleName = ruleName;
     }
 
+    String getRuleName() {
+        return ruleName;
+    }
+
     public abstract boolean isFraud(Trader trader, int amount);
 }
 
