@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_9.level_5_6;
+package student_anvars_intezars.home_tasks.lesson_9.level_6;
 
 class FraudRule4 extends FraudRule {
 
