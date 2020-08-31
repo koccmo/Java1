@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_9.level_5;
+package student_anvars_intezars.home_tasks.lesson_9.level_5_6;
 
 abstract class FraudRule {
 
@@ -6,6 +6,10 @@ abstract class FraudRule {
 
     public FraudRule(String ruleName) {
         this.ruleName = ruleName;
+    }
+
+    String getRuleName() {
+        return ruleName;
     }
 
     public abstract boolean isFraud(Trader trader, int amount);
