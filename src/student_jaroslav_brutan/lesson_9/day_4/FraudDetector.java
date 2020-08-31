@@ -5,7 +5,7 @@ class FraudDetector {
     boolean isFraud(Transaction t){
 
         return thiefPokemon(t) || moreThan1000000(t) || thiefCity(t) ||
-                traderJamaica(t) || traderGermanyMoreThan1000(t);
+                traderFromJamaica(t) || traderGermanyMoreThan1000(t);
     }
 
     private boolean thiefPokemon(Transaction t){
@@ -23,7 +23,7 @@ class FraudDetector {
         return t.getTrader().getCity().equals("Sydney");
     }
 
-    private boolean traderJamaica(Transaction t){
+    private boolean traderFromJamaica(Transaction t){
 
         return t.getTrader().getCountry().equals("Jamaica");
     }
