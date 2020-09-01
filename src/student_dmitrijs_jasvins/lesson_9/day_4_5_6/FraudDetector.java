@@ -4,6 +4,9 @@ package student_dmitrijs_jasvins.lesson_9.day_4_5_6;
 import java.util.Arrays;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class FraudDetector {
     private List<FraudRule> fraudRules;
 
