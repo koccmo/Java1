@@ -46,6 +46,7 @@ class Transaction {
 }
 
 @CodeReview(approved = false)
+//покемон метод исправлен
 class FraudDetector {
 
     boolean isFraud(Trader trader, int amount) {
