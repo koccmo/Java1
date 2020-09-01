@@ -7,6 +7,9 @@ package student_roberts_kupcs.lesson_9.level_1.Task_5;
 //Подсказка: реализуйте эту функциональность через публичные методы: getMoney(...), putMoney(...).
 //Создайте класс демо и продемонстрируйте, принцып инкапсуляции в действии!
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Safe {
     private int password;
     private double amountOfMoney;

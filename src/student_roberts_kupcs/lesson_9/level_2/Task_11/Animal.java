@@ -4,12 +4,16 @@ package student_roberts_kupcs.lesson_9.level_2.Task_11;
 //Продемонстрируйте использование протектед конструктора в родительском классе.
 //Продемонстрируйте вызов протектед конструктора из класса потомка.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Animal {
     protected Animal(String arg) {
         System.out.println("Constructing an animal: " + arg);
     }
 }
 
+@CodeReview(approved = true)
 class Dog extends Animal {
     public Dog() {
         super("From Dog constructor");
@@ -17,6 +21,7 @@ class Dog extends Animal {
     }
 }
 
+@CodeReview(approved = true)
 class Test {
 
     public static void main(String[] args) {

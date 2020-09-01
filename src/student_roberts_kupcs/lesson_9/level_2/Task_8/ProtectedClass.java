@@ -18,6 +18,9 @@ package student_roberts_kupcs.lesson_9.level_2.Task_8;
 // Защищенная видимость используется для обозначения «видимой для производных классов»;
 // это имеет смысл для вещей внутри класса, но обычно не имеет значения на уровне класса.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ProtectedClass {
 
     private String title;
