@@ -13,7 +13,7 @@ class BookReaderImplTest {
 
     void addPositiveWhenLibraryIsEmptyTest() {
         Book book3 = new Book("Hunt A., Thomas D.", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
+        BookReader bookReader = new BookReaderImpl();
         checkResult(bookReader.addBook(book3), "Add positive when library is empty");
     }
 
@@ -21,7 +21,7 @@ class BookReaderImplTest {
         Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
         Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
         Book book3 = new Book("Hunt A., Thomas D.", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
+        BookReader bookReader = new BookReaderImpl();
         bookReader.addBook(book1);
         bookReader.addBook(book2);
         checkResult(bookReader.addBook(book3), "Add positive when library is not empty");
@@ -31,7 +31,7 @@ class BookReaderImplTest {
         Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
         Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
         Book book3 = new Book("Hunt A., Thomas D.", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
+        BookReader bookReader = new BookReaderImpl();
         bookReader.addBook(book1);
         bookReader.addBook(book2);
         checkResult(!bookReader.addBook(book2), "Add negative");

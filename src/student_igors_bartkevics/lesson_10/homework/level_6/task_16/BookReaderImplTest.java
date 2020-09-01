@@ -18,11 +18,9 @@ class BookReaderImplTest {
     }
 
     void addPositiveWhenLibraryIsEmptyTest() {
-        Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
-        Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
         Book book3 = new Book("Hunt A., Thomas D.", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
-        boolean condition = bookReader.addBook(book3) && bookReader.getLibrary().get(0).equals(book3);
+        BookReader bookReader = new BookReaderImpl();
+        boolean condition = bookReader.addBook(book3);
         checkResult(condition, "Add positive when library is empty");
     }
 
@@ -30,7 +28,7 @@ class BookReaderImplTest {
         Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
         Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
         Book book3 = new Book("Hunt A., Thomas D.", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
+        BookReader bookReader = new BookReaderImpl();
         bookReader.addBook(book1);
         bookReader.addBook(book2);
         checkResult(bookReader.addBook(book3), "Add positive when library is not empty");
@@ -39,8 +37,7 @@ class BookReaderImplTest {
     void addBookThatAlreadyIsInLibraryTest() {
         Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
         Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
-        Book book3 = new Book("Hunt A., Thomas D.", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
+        BookReader bookReader = new BookReaderImpl();
         bookReader.addBook(book1);
         bookReader.addBook(book2);
         checkResult(!bookReader.addBook(book2), "Add book that already is in library");
@@ -50,7 +47,7 @@ class BookReaderImplTest {
         Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
         Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
         Book book3 = new Book("", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
+        BookReader bookReader = new BookReaderImpl();
         bookReader.addBook(book1);
         bookReader.addBook(book2);
         checkResult(!bookReader.addBook(book3), "Add book with no author");
@@ -60,7 +57,7 @@ class BookReaderImplTest {
         Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
         Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
         Book book3 = new Book("", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
+        BookReader bookReader = new BookReaderImpl();
         bookReader.addBook(book1);
         bookReader.addBook(book2);
         checkResult(!bookReader.addBook(book3), "Add book with no title");
@@ -70,7 +67,7 @@ class BookReaderImplTest {
         Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
         Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
         Book book3 = new Book("", "");
-        BookReaderImpl bookReader = new BookReaderImpl();
+        BookReader bookReader = new BookReaderImpl();
         bookReader.addBook(book1);
         bookReader.addBook(book2);
         checkResult(!bookReader.addBook(book3), "Add book with no title and author");
@@ -86,7 +83,7 @@ class BookReaderImplTest {
         Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
         Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
         Book book3 = new Book("Hunt A., Thomas D.", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
+        BookReader bookReader = new BookReaderImpl();
         bookReader.addBook(book1);
         bookReader.addBook(book2);
         bookReader.addBook(book3);
@@ -97,7 +94,7 @@ class BookReaderImplTest {
         Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
         Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
         Book book3 = new Book("Hunt A., Thomas D.", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
+        BookReader bookReader = new BookReaderImpl();
         bookReader.addBook(book1);
         bookReader.addBook(book2);
         checkResult(!bookReader.removeBook(book3), "Remove book negative when library is not empty");
@@ -110,27 +107,4 @@ class BookReaderImplTest {
             System.out.println(testName + " test = FAIL");
         }
     }
-
-    /*
-    void containsPositiveTest() {
-        Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
-        Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
-        Book book3 = new Book("Hunt A., Thomas D.", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
-        bookReader.getLibrary().add(book1);
-        bookReader.getLibrary().add(book2);
-        checkResult(bookReader.contains(book2), "Contains positive");
-    }
-
-    void containsNegativeTest() {
-        Book book1 = new Book("Bates B., Sierra K.", "Head First Java");
-        Book book2 = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
-        Book book3 = new Book("Hunt A., Thomas D.", "The Pragmatic Programmer. From Journeyman to Master");
-        BookReaderImpl bookReader = new BookReaderImpl();
-        bookReader.getLibrary().add(book1);
-        bookReader.getLibrary().add(book2);
-        checkResult(!bookReader.contains(book3), "Contains negative");
-    }
-     */
-
 }
