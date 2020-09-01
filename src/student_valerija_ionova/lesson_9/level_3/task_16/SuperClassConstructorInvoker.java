@@ -13,6 +13,9 @@ public class SuperClassConstructorInvoker {
     }
 }*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class SuperClassConstructorInvoker {
 
     public SuperClassConstructorInvoker() {

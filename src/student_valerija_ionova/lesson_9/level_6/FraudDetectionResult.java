@@ -5,7 +5,9 @@ package student_valerija_ionova.lesson_9.level_6;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class FraudDetectionResult {
 
     private boolean fraud;

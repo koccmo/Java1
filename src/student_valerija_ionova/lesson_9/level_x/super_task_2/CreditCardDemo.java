@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_9.level_x.super_task_2;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class CreditCardDemo{
 
     public static void main (String [] args){

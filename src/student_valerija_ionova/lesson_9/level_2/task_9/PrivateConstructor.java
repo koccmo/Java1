@@ -6,6 +6,9 @@ package student_valerija_ionova.lesson_9.level_2.task_9;
 в демо классе. Подсказка кроется в названии класса!
 PS: не забудьте закоментировать не компилирующийся код в демо классе.*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PrivateConstructor {
 
     private PrivateConstructor(){};

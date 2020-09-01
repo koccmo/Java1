@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_9.level_5;
 
 //Task27 Rule 4: все транзакции от трейдеров из страны Ямайка должны быть отклонены.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FraudRule4 extends FraudRule{
 
     FraudRule4 (String fraudRule4){

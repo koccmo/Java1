@@ -18,6 +18,9 @@ class ConstructorChaining {
 
 Более подробно про этот подход можно прочитать: constructor chaining in Java.*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ConstructorChaining {
 
     private String constructorName;

@@ -3,6 +3,9 @@ package student_valerija_ionova.lesson_9.level_5;
 //Task23 создайте абстрактный класс FraudRule.
 //Task31 В абстрактном классе FraudRule реализуйте get() метод для свойства ruleName: String getRuleName();
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 abstract class FraudRule {
 
     private String ruleName;

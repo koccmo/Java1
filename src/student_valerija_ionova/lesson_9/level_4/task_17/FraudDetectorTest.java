@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_9.level_4.task_17;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FraudDetectorTest {
 
     public static void main (String [] args){
