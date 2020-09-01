@@ -2,14 +2,14 @@ package student_dmitrijs_jasvins.lesson_10.day_1.task_2;
 
 public interface ArrayUtil {
 
-    int[] createArray(int arrayLength);
+        int[] createArray(int arrayLength);
 
-    void fillArrayWithRandomNumbers(int[] array);
+        void fillArrayWithRandomNumbers(int[] array);
 
-    void printArrayToConsole(int[] array);
+        void printArrayToConsole(int[] array);
 
-    int findMaxNumber(int[] array);
+        int findMaxNumber(int[] array);
 
-    int findMinNumber(int[] array);
+        int findMinNumber(int[] array);
 
-}
+    }
