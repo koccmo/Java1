@@ -66,11 +66,13 @@ class FraudDetector {
 
     @CodeReviewComment(teacher = "Неправильно реализован метод. Всегда return true?")
    boolean compareTraderName (Trader trader) {
-        String traderName = trader.getFullName();
-        if (traderName.equals("Pokemon")) {
-        }
-        return true;
-    }
+       String traderName = trader.getFullName();
+       if (traderName.equals("Pokemon")) {
+           return true;
+       } else {
+           return false;
+       }
+   }
 
     boolean compareCity(Trader trader) {
         String cityName = trader.getCity();
