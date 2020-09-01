@@ -3,6 +3,7 @@ package student_anvars_intezars.home_tasks.lesson_9.level_6;
 import teacher.codereview.CodeReview;
 
 @CodeReview(approved = false)
+//исправлено
 class FraudRule1 extends FraudRule {
 
     public FraudRule1(String ruleName) {
