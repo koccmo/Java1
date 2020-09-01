@@ -1,6 +1,5 @@
 package student_dmitrijs_jasvins.lesson_10.day_2;
 
-
 import java.util.Scanner;
 
 public class DayOfTheWeekDemo {
@@ -38,4 +37,5 @@ public class DayOfTheWeekDemo {
         DayOfTheWeekDemo dayOfTheWeekDemo2 = new DayOfTheWeekDemo(dayOfTheWeekArrayVersion);
         dayOfTheWeekDemo2.run();
     }
+
 }
