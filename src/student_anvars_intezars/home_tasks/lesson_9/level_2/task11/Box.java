@@ -14,7 +14,6 @@ public class Box {
 
     class AnotherBox extends Box {
     	@CodeReviewComment(teacher = "Свойство, которое не инициализируется?")
-        protected String material;
 
     	@CodeReviewComment(teacher = ""
 				+ "protected AnotherBox(String size, String material) {"
