@@ -1,5 +1,9 @@
 package student_eduards_jasvins.lesson_9.day_2.task_10;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 public class ConstructorChaining {
 
     private String constructorName;
@@ -9,6 +13,7 @@ public class ConstructorChaining {
         this.constructorName = constructorName;
     }
 
+    @CodeReviewComment(teacher = "this(constructorName); ??? ")
     public ConstructorChaining (String constructorName, int parameterCount) {
         this("Eduards");
         this.parameterCount = parameterCount;

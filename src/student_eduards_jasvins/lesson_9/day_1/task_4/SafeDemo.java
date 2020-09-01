@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_9.day_1.task_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class SafeDemo {
     public static void main(String[] args) {
         Safe safe = new Safe();
