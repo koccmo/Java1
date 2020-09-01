@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_6.day_1;
 
-public class FizzBuzz {
+class FizzBuzz {
     public String detect (int number) {
 
 		// условия лучше сразу выносить в отдельные private методы:

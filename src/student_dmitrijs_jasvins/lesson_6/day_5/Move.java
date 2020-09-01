@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_6.day_5;
 
-public class Move {
+class Move {
     private int x;
     private int y;
 

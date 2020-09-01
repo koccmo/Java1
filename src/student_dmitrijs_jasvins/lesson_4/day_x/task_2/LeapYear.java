@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_4.day_x.task_2;
 
-public class LeapYear {
+class LeapYear {
 
     public boolean isLeapYear(int year) {
         if (year % 4 != 0) {

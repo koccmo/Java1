@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_4.day_4;
 
-public class Calculator {
+class Calculator {
 
     private int firstNumber;
     private int secondNumber;

@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_3.day_x;
 
-public class User {
+class User {
 
     private final static int MAX_REMAINING_LOGIN_ATTEMPTS = 3;
 

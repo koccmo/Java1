@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_6.day_4.task_18;
 
-public class TwoDimensionalArrayTest {
+class TwoDimensionalArrayTest {
     public static void main(String[] args) {
         TwoDimensionalArrayTest twoDimensionalArrayTest = new TwoDimensionalArrayTest();
         twoDimensionalArrayTest.sumTest();

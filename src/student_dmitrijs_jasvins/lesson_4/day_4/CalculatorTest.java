@@ -2,7 +2,7 @@ package student_dmitrijs_jasvins.lesson_4.day_4;
 
 // assert - utverzdenie(proverka)
 
-public class CalculatorTest {
+class CalculatorTest {
     public static void main(String[] args) {
         CalculatorTest calculatorTest = new CalculatorTest();
         calculatorTest.resultAddition();

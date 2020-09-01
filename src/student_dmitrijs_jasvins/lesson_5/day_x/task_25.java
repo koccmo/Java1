@@ -8,7 +8,7 @@ package student_dmitrijs_jasvins.lesson_5.day_x;
 - распечатайте на консоль все элементы массива.
  */
 
-public class task_25 {
+class task_25 {
     public static void main(String[] args) {
         ArrayUtil arrayUtil = new ArrayUtil();
         int arrayLength = arrayUtil.getArrayLengthFromUser();

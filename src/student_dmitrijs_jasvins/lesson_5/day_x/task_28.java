@@ -7,7 +7,7 @@ package student_dmitrijs_jasvins.lesson_5.day_x;
 - найдите наименьшее число в массиве и выведети его на консоль.
  */
 
-public class task_28 {
+class task_28 {
     public static void main(String[] args) {
         ArrayUtil arrayUtil = new ArrayUtil();
         int[] array = arrayUtil.newArrayWithRandomLength();

@@ -13,9 +13,9 @@ public class ConstructorChaining {
         this.constructorName = constructorName;
     }
 
-	@CodeReviewComment(teacher = "this(constructorName); ??")
-    public ConstructorChaining(String constructorName, int parameterCount) {
-    	this("Dmitry");
+    @CodeReviewComment(teacher = "this(constructorName); ??")
+    public ConstructorChaining(int parameterCount) {
+        this("Dmitry");
         this.parameterCount = parameterCount;
     }
 }

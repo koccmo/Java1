@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_4.day_x.task_2;
 
-public class LeapYearTest {
+class LeapYearTest {
 
     public static void main(String[] args) {
         LeapYearTest leapYearTest = new LeapYearTest();

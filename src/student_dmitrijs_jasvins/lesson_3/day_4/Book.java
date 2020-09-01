@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_3.day_4;
 
-public class Book {
+class Book {
 
     private final String title;
 

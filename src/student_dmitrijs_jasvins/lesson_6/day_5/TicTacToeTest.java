@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_6.day_5;
 
-public class TicTacToeTest {
+class TicTacToeTest {
     public static void main(String[] args) {
         TicTacToeTest ticTacToeTest = new TicTacToeTest();
         ticTacToeTest.winningPositionForHorizontal();

@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_3.day_5.task_21;
 
-public class DogDemo {
+class DogDemo {
     public static void main(String[] args) {
         Dog firstDog = new Dog("Dmitry", 5, "Red");
         System.out.println("First dog : ");

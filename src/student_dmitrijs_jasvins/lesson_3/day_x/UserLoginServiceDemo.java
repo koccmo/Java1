@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_3.day_x;
 
-public class UserLoginServiceDemo {
+class UserLoginServiceDemo {
     public static void main(String[] args) {
         UserLoginService service = new UserLoginService();
         User userOne = new User("user-login", "user-password");

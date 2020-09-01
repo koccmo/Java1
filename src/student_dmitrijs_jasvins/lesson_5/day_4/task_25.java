@@ -10,7 +10,7 @@ package student_dmitrijs_jasvins.lesson_5.day_4;
 
 import java.util.Scanner;
 
-public class task_25 {
+class task_25 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter array length :");

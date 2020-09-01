@@ -2,7 +2,7 @@ package student_dmitrijs_jasvins.lesson_6.day_3;
 
 import java.util.Arrays;
 
-public class ArrayUtilTest {
+class ArrayUtilTest {
     public static void main(String[] args) {
         ArrayUtilTest arrayUtilTest = new ArrayUtilTest();
         arrayUtilTest.shouldCreateArray();

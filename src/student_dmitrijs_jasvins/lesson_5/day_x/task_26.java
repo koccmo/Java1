@@ -6,7 +6,7 @@ package student_dmitrijs_jasvins.lesson_5.day_x;
 - заполните массив случайными числами
 - распечатайте на консоль все элементы массива.
  */
-public class task_26 {
+class task_26 {
     public static void main(String[] args) {
         ArrayUtil arrayUtil = new ArrayUtil();
         int arrayLength = arrayUtil.getArrayLengthFromUser();

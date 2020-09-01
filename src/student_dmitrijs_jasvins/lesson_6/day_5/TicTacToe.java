@@ -2,7 +2,7 @@ package student_dmitrijs_jasvins.lesson_6.day_5;
 
 import java.util.Scanner;
 
-public class TicTacToe {
+class TicTacToe {
     public boolean isWinPositionForHorizontals(int[][] field, int playerToCheck) {
         for (int i = 0; i < 3; i++) {
             if (field[i][0] == playerToCheck && field[i][1] == playerToCheck && field[i][2] == playerToCheck) {

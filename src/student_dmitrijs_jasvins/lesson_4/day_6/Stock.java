@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_4.day_6;
 
-public class Stock {
+class Stock {
     private String name;
     private int currentPrice;
     private int maxPrice;
