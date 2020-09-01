@@ -20,7 +20,9 @@ class FraudRule1 extends FraudRule {
     boolean compareTraderName(Trader trader) {
         String traderName = trader.getFullName();
         if (traderName.equals("Pokemon")) {
+            return true;
+        } else {
+            return false;
         }
-        return true;
     }
 }
