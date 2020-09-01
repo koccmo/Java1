@@ -20,6 +20,7 @@ class FraudRule1 extends FraudRule {
     }
 
     @CodeReviewComment(teacher = "Не корректная реализация метода!")
+    //исправлено
     boolean compareTraderName(Trader trader) {
         String traderName = trader.getFullName();
         if (traderName.equals("Pokemon")) {
