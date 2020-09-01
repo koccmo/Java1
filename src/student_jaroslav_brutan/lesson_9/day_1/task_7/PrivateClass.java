@@ -1,5 +1,8 @@
 package student_jaroslav_brutan.lesson_9.day_1.task_7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class PrivateClass {
 
     private String title;
