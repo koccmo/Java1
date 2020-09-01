@@ -1,5 +1,8 @@
 package student_anvars_intezars.home_tasks.lesson_9.level_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FraudRule3 extends FraudRule {
 
     public FraudRule3(String ruleName) {

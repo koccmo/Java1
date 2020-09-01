@@ -1,5 +1,8 @@
 package student_anvars_intezars.home_tasks.lesson_9.level_1.task4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Safe {
 
     public int pinCode;
