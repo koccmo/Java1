@@ -8,5 +8,8 @@ package student_volodya_danilin.lesson_9.level_1.Task_2;
 
 // default'ным оператором доступа, aka package-private
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Rocket {
 }
