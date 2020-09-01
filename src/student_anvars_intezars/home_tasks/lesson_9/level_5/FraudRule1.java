@@ -4,6 +4,7 @@ import teacher.codereview.CodeReview;
 import teacher.codereview.CodeReviewComment;
 
 @CodeReview(approved = false)
+//исправлено
 class FraudRule1 extends FraudRule {
 
     public FraudRule1(String ruleName) {
