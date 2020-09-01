@@ -11,6 +11,9 @@ package student_igors_bartkevics.lesson_9.homework.level_1.task_5;
 import java.math.BigDecimal;
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class SafeVer2 {
     private int[] pinCode;
     private BigDecimal moneyAmountInSafe;

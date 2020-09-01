@@ -17,6 +17,10 @@ Protected классы создавать нельзя так как в прот
 наследоваться от класса Protected из других пакетов. Таким образом класс с модификатором
 доступа Protected ни чем не отлечался бы от класса с дефолтным модификатором доступа.
  */
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProtectedClass {
 
     private String title;

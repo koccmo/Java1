@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_9.homework.level_1.task_5;
 
 import java.math.BigDecimal;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class SafeVer2Demo {
 
     public static void main(String[] args) {

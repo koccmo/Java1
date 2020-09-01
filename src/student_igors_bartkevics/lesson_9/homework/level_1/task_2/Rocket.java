@@ -8,6 +8,9 @@ Task_2:
  */
 package student_igors_bartkevics.lesson_9.homework.level_1.task_2;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Rocket {
     private String model;
 }

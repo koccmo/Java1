@@ -9,6 +9,9 @@ Task_1:
  */
 package student_igors_bartkevics.lesson_9.homework.level_1.task_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Plane {
     private String model;
 }
