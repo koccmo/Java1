@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_9.homework.level_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FraudRuleTest {
 
     FraudRule rule1 = new FraudRule1("Rule 1");

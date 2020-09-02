@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_3.day_6.task_28;
 
-public class Computer {
+class Computer {
     private String name;
     private String model;
 

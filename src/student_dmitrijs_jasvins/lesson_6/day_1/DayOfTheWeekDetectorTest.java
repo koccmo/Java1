@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_6.day_1;
 
-public class DayOfTheWeekDetectorTest {
+class DayOfTheWeekDetectorTest {
     public static void main(String[] args) {
         DayOfTheWeekDetectorTest dayOfTheWeekDetectorTest = new DayOfTheWeekDetectorTest();
         dayOfTheWeekDetectorTest.mondayTest();

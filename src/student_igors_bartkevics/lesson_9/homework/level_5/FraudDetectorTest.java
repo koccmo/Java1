@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_9.homework.level_5;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class FraudDetectorTest {
 
     ArrayList<FraudRule> fraudRules = new ArrayList<>();

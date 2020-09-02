@@ -13,6 +13,9 @@ package student_volodya_danilin.lesson_9.level_2.Task_8;
 следовательно оператор доступа protected на наружных классах нам ни к чему.
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProtectedClass {
 
     private String title;

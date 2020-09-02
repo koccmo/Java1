@@ -1,5 +1,9 @@
 package student_anvars_intezars.home_tasks.lesson_9.level_4;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class Trader {
 
     private String fullName;
@@ -25,6 +29,7 @@ class Trader {
     }
 }
 
+@CodeReview(approved = true)
 class Transaction {
 
     private Trader trader;
@@ -40,6 +45,8 @@ class Transaction {
     }
 }
 
+@CodeReview(approved = false)
+//покемон метод исправлен
 class FraudDetector {
 
     boolean isFraud(Trader trader, int amount) {
@@ -59,11 +66,13 @@ class FraudDetector {
     }
 
    boolean compareTraderName (Trader trader) {
-        String traderName = trader.getFullName();
-        if (traderName.equals("Pokemon")) {
-        }
-        return true;
-    }
+       String traderName = trader.getFullName();
+       if (traderName.equals("Pokemon")) {
+           return true;
+       } else {
+           return false;
+       }
+   }
 
     boolean compareCity(Trader trader) {
         String cityName = trader.getCity();

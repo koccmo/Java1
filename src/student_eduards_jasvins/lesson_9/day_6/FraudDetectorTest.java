@@ -1,6 +1,8 @@
 package student_eduards_jasvins.lesson_9.day_6;
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class FraudDetectorTest {
     public static void main(String[] args) {
         FraudDetectorTest fraudDetectorTest = new FraudDetectorTest();

@@ -9,7 +9,7 @@ import java.util.Scanner;
 - заполните массив случайными числами
 - распечатайте на консоль все элементы массива.
  */
-public class task_26 {
+class task_26 {
     public static void main(String[] args) {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);

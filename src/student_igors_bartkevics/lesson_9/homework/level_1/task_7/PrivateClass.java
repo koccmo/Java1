@@ -18,6 +18,9 @@ package student_igors_bartkevics.lesson_9.homework.level_1.task_7;
 само по себе противоречит сущности использования классов в Java.
 */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 /*private*/ class PrivateClass {
 
     private String title;

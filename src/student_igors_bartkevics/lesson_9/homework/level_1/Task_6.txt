@@ -1,5 +1,6 @@
 Исправьте код класса Book так, что бы он соответствовал принцыпу инкапсуляции.
 
+@CodeReview(approved = true)
 class Book {
 
     private String title;

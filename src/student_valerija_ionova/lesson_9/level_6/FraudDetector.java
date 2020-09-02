@@ -17,6 +17,9 @@ getRuleName() у объекта FraudRule. Полученное таким об�
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FraudDetector{
 
     ArrayList <FraudRule> fraudRules;
@@ -36,7 +39,7 @@ class FraudDetector{
             }
         }
         if (result.getFraud()){
-            System.out.println(t.toString());
+            System.out.println("FraudRules: "+result.getRuleName()+"\n"+t.toString());
         }
         return result;
     }

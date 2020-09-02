@@ -4,7 +4,7 @@ package student_dmitrijs_jasvins.lesson_5.day_x;
 import java.util.Random;
 import java.util.Scanner;
 
-public class ArrayUtil {
+class ArrayUtil {
 
     public int getArrayLengthFromUser() {
         Scanner scanner = new Scanner(System.in);

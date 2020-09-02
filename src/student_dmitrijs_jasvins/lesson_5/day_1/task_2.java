@@ -10,7 +10,7 @@ class ArrayDefinition2 {
 }
 
  */
-public class task_2 {
+class task_2 {
     public static void main(String[] args) {
         int[] number = new int[10];
     }

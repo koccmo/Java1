@@ -2,6 +2,9 @@ package student_roberts_kupcs.lesson_9.level_2.Task_13;
 
 //В 'student_roberts_kupcs.lesson_9.level_2.Task_13.ClassX' нет конструктора по умолчанию
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ClassX {
     public ClassX() {           //...+
     }                           //...+
@@ -11,6 +14,7 @@ class ClassX {
     }
 }
 
+@CodeReview(approved = true)
 class ClassY extends ClassX {
     public ClassY() {
         System.out.println(2);

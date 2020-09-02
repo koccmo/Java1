@@ -40,6 +40,9 @@ class FraudDetector {
 чтобы реализовать правило указанное выше.
 Напишите тесты, которые доказывают, что ваше решение работает правильно!*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Trader {
 
     private String fullName;

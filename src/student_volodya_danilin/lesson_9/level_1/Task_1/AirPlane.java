@@ -9,6 +9,9 @@ package student_volodya_danilin.lesson_9.level_1.Task_1;
 
 // оператором доступа public
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class AirPlane {
 
 }

@@ -14,6 +14,9 @@ protected class ProtectedClass {
         Напиши свой ответ в коментарии над исправленным кодом
         Этот класс невохможно использовать из вне*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProtectedClass {
 
     private String title;

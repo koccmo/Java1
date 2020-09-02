@@ -1,11 +1,18 @@
 package student_anvars_intezars.home_tasks.lesson_9.level_4;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
+@CodeReviewComment(teacher = "POKEMON - этому тесту нужно позитивный и негативный сценарий, тогда отловишь баг в своём коде.")
+// Ошибка найдена. Метод исправлен. Глупо по невнимательности не заметил :/
 class TraderTest {
 
     public static void main(String[] args) {
 
         TraderTest traderTest = new TraderTest();
         traderTest.firstTestForFraud();
+        traderTest.fifthTestForFraud();
         traderTest.secondTestForFraud();
         traderTest.thirdTestForFraud();
         traderTest.fourthTestForFraud();

@@ -1,5 +1,6 @@
 Какой будет результат выполнения следующей программы?
 
+@CodeReview(approved = true)
 Результат:
 Class A Constructor
 Class B Constructor

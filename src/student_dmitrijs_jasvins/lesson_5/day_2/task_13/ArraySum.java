@@ -7,7 +7,7 @@ package student_dmitrijs_jasvins.lesson_5.day_2.task_13;
  */
 
 
-public class ArraySum {
+class ArraySum {
     static int sum(int[] array) {
         int sum = 0;
         for (int number : array) {

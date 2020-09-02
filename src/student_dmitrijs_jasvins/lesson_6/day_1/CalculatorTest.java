@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_6.day_1;
 
-public class CalculatorTest {
+class CalculatorTest {
     public static void main(String[] args) {
         CalculatorTest calculatorTest = new CalculatorTest();
         calculatorTest.numberIsEven();

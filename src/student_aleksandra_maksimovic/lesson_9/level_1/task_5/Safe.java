@@ -7,6 +7,10 @@ package student_aleksandra_maksimovic.lesson_9.level_1.task_5;
 Подсказка: реализуйте эту функциональность через публичные методы: getMoney(...), putMoney(...).
 Создайте класс демо и продемонстрируйте, принцып инкапсуляции в действии!
  */
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Safe {
     private String pinCode;
     private int amount;

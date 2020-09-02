@@ -1,7 +1,7 @@
 package student_dmitrijs_jasvins.lesson_3.day_5.task_20;
 
 
-public class Dog {
+class Dog {
     public String name;
     public int age;
 

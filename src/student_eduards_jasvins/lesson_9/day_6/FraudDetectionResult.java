@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_9.day_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class  FraudDetectionResult {
 
     private boolean fraud;

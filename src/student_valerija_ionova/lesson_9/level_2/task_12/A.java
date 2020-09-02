@@ -2,6 +2,8 @@ package student_valerija_ionova.lesson_9.level_2.task_12;
 
 /*Какой будет результат выполнения следующей программы?
 
+@CodeReview(approved = true)
+
 Class A Constructor
 Class B Constructor
 Class C Constructor

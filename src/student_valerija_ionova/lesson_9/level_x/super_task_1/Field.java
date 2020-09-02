@@ -1,5 +1,7 @@
 package student_valerija_ionova.lesson_9.level_x.super_task_1;
 
+import teacher.codereview.CodeReviewComment;
+
 class Field {
 
     private int [][] field;
@@ -29,6 +31,7 @@ class Field {
         return (field[0][x] == 0);
     }
 
+    @CodeReviewComment(teacher = "isFull() ????")
     boolean fullField(){
         for (int i = 0; i < 6; i++){
             for (int j = 0; j < 7; j++){
@@ -38,6 +41,7 @@ class Field {
         return true;
     }
 
+    @CodeReviewComment(teacher = "А зачем? Может не стоит отдавать внутренний массиив наружу?")
     int [][] getField(){
         return field;
     }
@@ -46,6 +50,7 @@ class Field {
         this.field = board;
     }
 
+    @CodeReviewComment(teacher = "isWin(), and public?")
     boolean win (int player){
         return (winHorizontal(player) || winVertical(player) || winDiagonal(player));
     }

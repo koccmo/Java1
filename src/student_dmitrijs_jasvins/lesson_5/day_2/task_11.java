@@ -9,7 +9,7 @@ package student_dmitrijs_jasvins.lesson_5.day_2;
 
 import java.util.Scanner;
 
-public class task_11 {
+class task_11 {
     public static void main(String[] args) {
         int[] numbers = new int[3];
         Scanner scanner = new Scanner(System.in);

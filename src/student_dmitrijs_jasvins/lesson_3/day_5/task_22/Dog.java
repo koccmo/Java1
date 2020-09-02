@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_3.day_5.task_22;
 
-public class Dog {
+class Dog {
 
     private String name;
     private String color;

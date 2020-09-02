@@ -2,7 +2,7 @@ package student_dmitrijs_jasvins.lesson_6.day_4.task_18;
 
 import java.util.Random;
 
-public class TwoDimensionalArray {
+class TwoDimensionalArray {
 
     public void fillTwoDimensionalArrayWithRandomNumber(int[][] array) {
         Random random = new Random();

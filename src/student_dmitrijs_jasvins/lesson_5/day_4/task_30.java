@@ -10,7 +10,7 @@ import java.util.Random;
 - найдите все нечётные числа в массиве и выведети их на консоль.
  */
 
-public class task_30 {
+class task_30 {
     public static void main(String[] args) {
         Random random = new Random();
         int arrayLength = random.nextInt(50);

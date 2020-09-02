@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_5.day_5_and_day_6;
 
-public class ArrayUtilTest {
+class ArrayUtilTest {
     public static void main(String[] args) {
         ArrayUtilTest arrayUtilTest = new ArrayUtilTest();
         arrayUtilTest.shouldCreateArray();

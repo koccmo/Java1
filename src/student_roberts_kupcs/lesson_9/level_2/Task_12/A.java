@@ -1,5 +1,9 @@
 package student_roberts_kupcs.lesson_9.level_2.Task_12;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
+
 //Class A Constructor
 //Class B Constructor
 //Class C Constructor

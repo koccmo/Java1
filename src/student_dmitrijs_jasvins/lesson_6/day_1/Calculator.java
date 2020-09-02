@@ -19,7 +19,7 @@ class Calculator {
 }
  */
 
-public class Calculator {
+class Calculator {
     public boolean isEven(int number) {
         return number % 2 == 0;
     }

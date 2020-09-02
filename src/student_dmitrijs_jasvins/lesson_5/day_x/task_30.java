@@ -8,7 +8,7 @@ package student_dmitrijs_jasvins.lesson_5.day_x;
 - найдите все нечётные числа в массиве и выведети их на консоль.
  */
 
-public class task_30 {
+class task_30 {
     public static void main(String[] args) {
         ArrayUtil arrayUtil = new ArrayUtil();
         int[] array = arrayUtil.newArrayWithRandomLength();

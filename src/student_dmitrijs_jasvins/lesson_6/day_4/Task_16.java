@@ -5,7 +5,7 @@ package student_dmitrijs_jasvins.lesson_6.day_4;
 для циклов while и for.
  */
 
-public class Task_16 {
+class Task_16 {
     public static void main(String[] args) {
         int number = 0;
         while (number != 150) {

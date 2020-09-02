@@ -13,6 +13,9 @@ package student_roberts_kupcs.lesson_9.level_1.Task_7;
 //Как вы думаете, почему private классы создавать нельзя?
 //Напиши свой ответ в коментарии над исправленным кодом.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PrivateClass {    //Модификатор private здесь запрещен
 
     //Приватный класс верхнего уровня не имеет большого смысла,

@@ -1,5 +1,8 @@
 package student_pavel_sharkel.lesson_9.level_1.task_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Safe {
 
     private int password;

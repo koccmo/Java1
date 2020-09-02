@@ -5,6 +5,9 @@ package student_jaroslav_brutan.lesson_9.day_2.task_8;
 только для подклассов в другом пакете или для любого класса в пакете класса protected.
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProtectedClass {
 
     private String title;

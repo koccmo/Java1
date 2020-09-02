@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_4.day_5;
 
-public class LightColorDetectorTest {
+class LightColorDetectorTest {
     public static void main(String[] args) {
 
         LightColorDetectorTest lightColorDetectorTest = new LightColorDetectorTest();

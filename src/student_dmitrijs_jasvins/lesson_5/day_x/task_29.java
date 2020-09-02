@@ -7,7 +7,7 @@ package student_dmitrijs_jasvins.lesson_5.day_x;
 - найдите все чётные числа в массиве и выведети их на консоль.
  */
 
-public class task_29 {
+class task_29 {
     public static void main(String[] args) {
         ArrayUtil arrayUtil = new ArrayUtil();
         int[] array = arrayUtil.newArrayWithRandomLength();

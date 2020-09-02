@@ -6,6 +6,9 @@ package student_valerija_ionova.lesson_9.level_4.task_17;
 //Task20 - Rule 4: все транзакции от трейдеров из страны Ямайка должны быть отклонены.
 //Task21 - Rule 5: все транзакции трейдеров из Германии на сумму больше 1000 должны быть отклонены.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FraudDetector {
 
     boolean isFraud(Transaction t) {

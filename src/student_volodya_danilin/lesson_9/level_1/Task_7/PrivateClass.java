@@ -5,6 +5,9 @@ package student_volodya_danilin.lesson_9.level_1.Task_7;
 в этом случае этот класс будет бесполезен для остального кода.
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PrivateClass {
 
     private String title;
