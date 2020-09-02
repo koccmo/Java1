@@ -8,7 +8,7 @@ package student_valerija_ionova.lesson_11.level_1.task_2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TypeOfDatesInList {
+class TypeOfDatesInList {
     public static void main (String [] args) {
         List<String> listOfIntegers = new ArrayList<>();
         listOfIntegers.add("It's object String");
