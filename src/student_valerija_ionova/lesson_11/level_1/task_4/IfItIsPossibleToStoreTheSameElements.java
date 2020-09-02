@@ -7,7 +7,7 @@ package student_valerija_ionova.lesson_11.level_1.task_4;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IfItIsPossibleToStoreTheSameElements {
+class IfItIsPossibleToStoreTheSameElements {
 
     public static void main (String [] args) {
         List<Integer> listForExample = new ArrayList<>();
