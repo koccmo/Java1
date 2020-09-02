@@ -5,8 +5,9 @@ class Transaction {
     private Trader trader;
     private int amount;
 
-    Transaction(Trader t) {
+    Transaction(Trader t, int amount) {
         this.trader = t;
+        this.amount = amount;
     }
 
     int getAmount() {
@@ -17,9 +18,8 @@ class Transaction {
         return  this.trader;
     }
 
-    void prepareDeposit(Trader t, int amount) {
-        this.trader = t;
-        this.amount = amount;
+    String getCountry(Transaction t) {
+        return t.trader.getCountry();
     }
 
 }

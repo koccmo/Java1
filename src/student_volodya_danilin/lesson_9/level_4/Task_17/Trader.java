@@ -10,6 +10,7 @@ class Trader {
     Trader(String fullName) {
         this.fullName = fullName;
         this.city = "Default city";
+        this.country = "Default country";
     }
 
     Trader(String fullName, String city) {
