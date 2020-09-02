@@ -29,7 +29,7 @@ public class Book {
 
 import java.util.Objects;
 
-public class Book {
+class Book {
     private String title;
     private String author;
 
