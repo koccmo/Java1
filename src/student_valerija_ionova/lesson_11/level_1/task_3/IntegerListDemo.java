@@ -12,7 +12,7 @@ package student_valerija_ionova.lesson_11.level_1.task_3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IntegerListDemo {
+class IntegerListDemo {
 
     public static void main (String [] args){
 
