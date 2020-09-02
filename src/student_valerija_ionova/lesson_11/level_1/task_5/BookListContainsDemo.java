@@ -3,7 +3,7 @@ package student_valerija_ionova.lesson_11.level_1.task_5;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookListContainsDemo {
+class BookListContainsDemo {
 
     public static void main (String [] args) {
 
