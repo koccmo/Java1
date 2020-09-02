@@ -140,7 +140,4 @@ class BookReaderImpl implements BookReader {
         return getListOfBooksWithIsReadState(true);
     }
 
-    public String[] getListOfUnreadBooks() {
-        return getListOfBooksWithIsReadState(false);
-    }
 }
