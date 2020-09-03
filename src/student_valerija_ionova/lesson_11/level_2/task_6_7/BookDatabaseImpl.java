@@ -7,10 +7,19 @@ Task6
 
 Task7
 Данный метод предназначен для удаления книги с указанным id в качестве параметра метода
-из базы данных.*/
+из базы данных.
+
+Task8
+boolean delete(Book book);
+
+Task9
+Optional<Book> findById(Long bookId);
+
+*/
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 class BookDatabaseImpl implements  BookDatabase{
@@ -38,6 +47,32 @@ class BookDatabaseImpl implements  BookDatabase{
             }
         }
         return false;
+    }
+
+    @Override
+    public boolean delete(Book book) {
+        for (int i = 0; i < bookDataBase.size(); i++){
+            if (book.equals(bookDataBase.get(i).getBook())){
+                bookDataBase.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public Optional<Book> findById(Long bookId) {
+        for (int i = 0; i < bookDataBase.size(); i++){
+            if (bookDataBase.get(i).getNumber().equals(bookId)){
+                return Optional.of(bookDataBase.get(i).getBook());
+            }
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    public List<Book> findByAuthor(String author) {
+        return null;
     }
 
     BookAndId getBookAndId (Long index){
