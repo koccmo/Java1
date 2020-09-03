@@ -15,6 +15,8 @@ boolean delete(Book book);
 Task9
 Optional<Book> findById(Long bookId);
 
+Task10
+List<Book> findByAuthor(String author);
 */
 
 import java.util.ArrayList;
@@ -72,7 +74,13 @@ class BookDatabaseImpl implements  BookDatabase{
 
     @Override
     public List<Book> findByAuthor(String author) {
-        return null;
+        List <Book> booksOfAuthor = new ArrayList <>();
+        for (int i = 0; i< bookDataBase.size(); i++){
+            if (bookDataBase.get(i).getBook().getAuthor().equals(author)){
+                booksOfAuthor.add(bookDataBase.get(i).getBook());
+            }
+        }
+        return booksOfAuthor;
     }
 
     BookAndId getBookAndId (Long index){
