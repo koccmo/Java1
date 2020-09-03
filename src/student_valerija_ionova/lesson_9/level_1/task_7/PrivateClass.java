@@ -14,6 +14,9 @@ private class PrivateClass {
 Напиши свой ответ в коментарии над исправленным кодом.
 Всё ещё они бесполезны :)*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PrivateClass {
 
     private String title;

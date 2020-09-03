@@ -9,6 +9,9 @@ class Book {
 
 }*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Book {
     private String title;
     private String author;

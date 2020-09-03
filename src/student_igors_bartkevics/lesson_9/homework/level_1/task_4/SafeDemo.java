@@ -3,6 +3,9 @@ package student_igors_bartkevics.lesson_9.homework.level_1.task_4;
 import java.math.BigDecimal;
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class SafeDemo {
     public static void main(String[] args) {
         int[] pinCode = {0, 0, 0, 0};

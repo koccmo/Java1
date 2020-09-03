@@ -1,5 +1,8 @@
 package student_anvars_intezars.home_tasks.lesson_9.level_1.task5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class NewSafe {
 
     private int password;

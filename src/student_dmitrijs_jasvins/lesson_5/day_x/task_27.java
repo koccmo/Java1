@@ -8,7 +8,7 @@ package student_dmitrijs_jasvins.lesson_5.day_x;
 - найдите наибольшее число в массиве и выведети его на консоль.
  */
 
-public class task_27 {
+class task_27 {
     public static void main(String[] args) {
         ArrayUtil arrayUtil = new ArrayUtil();
         int[] array = arrayUtil.newArrayWithRandomLength();

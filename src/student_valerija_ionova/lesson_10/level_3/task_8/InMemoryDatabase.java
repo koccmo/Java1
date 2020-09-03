@@ -10,12 +10,13 @@ package student_valerija_ionova.lesson_10.level_3.task_8;
 */
 
 import java.util.ArrayList;
+import java.util.List;
 
 class InMemoryDatabase implements  Database{
 
-    private ArrayList <Product> products = new ArrayList<> ();
+    private List<Product> products = new ArrayList<> ();
 
-    ArrayList <Product> getProducts(){
+    List <Product> getProducts(){
         return products;
     }
 

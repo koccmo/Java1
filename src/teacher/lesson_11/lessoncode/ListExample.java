@@ -10,8 +10,12 @@ public class ListExample {
 
 		// int, long, double, float, boolean
 
+
 		Integer numberI = Integer.parseInt("3");
 		Long nuberL = Long.parseLong("3");
+
+		//List<Integer> numbers = new ArrayList<>();
+		//List<Integer> numbers = new LinkedList<>();
 
 		List<Integer> numbers = new ArrayList<>();
 
@@ -19,7 +23,8 @@ public class ListExample {
 		System.out.println("List isEmpty = " + numbers.isEmpty());
 
 		numbers.add(Integer.parseInt("4"));
-		numbers.add(3);
+
+		numbers.add(3); // -> numbers.add(new Integer(3));
 		numbers.add(4);
 		numbers.add(5); // -> numbers.add(new Integer(5))
 		numbers.add(6);
@@ -54,6 +59,7 @@ public class ListExample {
 
 		List<Integer> numbersToRemove = new ArrayList<>();
 		numbersToRemove.add(Integer.parseInt("777"));
+		numbersToRemove.add(Integer.parseInt("999"));
 
 		numbers.removeAll(numbersToRemove);
 

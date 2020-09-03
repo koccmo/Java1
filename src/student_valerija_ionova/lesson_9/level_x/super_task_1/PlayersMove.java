@@ -7,6 +7,9 @@ package student_valerija_ionova.lesson_9.level_x.super_task_1;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PlayersMove {
 
     //Field gameBoard = new Field();

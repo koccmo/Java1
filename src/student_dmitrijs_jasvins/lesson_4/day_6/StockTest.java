@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_4.day_6;
 
-public class StockTest {
+class StockTest {
     public static void main(String[] args) {
         StockTest stockTest = new StockTest();
         stockTest.test1();

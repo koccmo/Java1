@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_3.day_6.task_25;
 
-public class Circle {
+class Circle {
     private double radius;
 
     public Circle(double radius) {

@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_4.day_x.task_1;
 
-public class FizzBuzzTest {
+class FizzBuzzTest {
     public static void main(String[] args) {
         FizzBuzzTest fizzBuzzTest = new FizzBuzzTest();
         fizzBuzzTest.testFizz();

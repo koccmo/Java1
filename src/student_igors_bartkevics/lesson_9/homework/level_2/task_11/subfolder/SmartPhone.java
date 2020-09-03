@@ -1,7 +1,9 @@
 package student_igors_bartkevics.lesson_9.homework.level_2.task_11.subfolder;
 
 import student_igors_bartkevics.lesson_9.homework.level_2.task_11.Phone;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class SmartPhone extends Phone {
 
     protected SmartPhone(int ringVolume) {

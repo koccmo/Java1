@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_6.day_1;
 
-public class DayOfTheWeekDetector {
+class DayOfTheWeekDetector {
     String detectDayName(int number){
         switch (number){
             case 1: return "Monday";

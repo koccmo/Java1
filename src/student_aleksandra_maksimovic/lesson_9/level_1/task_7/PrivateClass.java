@@ -17,6 +17,9 @@ private class PrivateClass {
 
   */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PrivateClass {
 
     private String title;

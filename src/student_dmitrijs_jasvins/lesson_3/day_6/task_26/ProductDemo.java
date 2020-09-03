@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_3.day_6.task_26;
 
-public class ProductDemo {
+class ProductDemo {
     public static void main(String[] args) {
         Product myProduct = new Product("Computer");
         myProduct.setRegularPrice(350);

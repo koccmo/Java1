@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_9.day_4_5_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class FraudRule5 extends FraudRule {
     public FraudRule5(String name) {
         super(name);

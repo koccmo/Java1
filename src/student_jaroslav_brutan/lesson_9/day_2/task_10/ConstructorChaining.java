@@ -1,5 +1,8 @@
 package student_jaroslav_brutan.lesson_9.day_2.task_10;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ConstructorChaining {
 
     private String constructorName;

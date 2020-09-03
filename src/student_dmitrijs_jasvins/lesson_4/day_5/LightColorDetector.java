@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_4.day_5;
 
-public class LightColorDetector {
+class LightColorDetector {
 
     public String detect(int waveLength) {
         if (waveLength >= 380 && waveLength <= 449) {

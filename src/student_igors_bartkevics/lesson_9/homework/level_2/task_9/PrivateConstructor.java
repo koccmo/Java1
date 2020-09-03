@@ -7,6 +7,9 @@ PS: не забудьте закоментировать не компилиру
  */
 package student_igors_bartkevics.lesson_9.homework.level_2.task_9;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PrivateConstructor {
     private PrivateConstructor() {
     }

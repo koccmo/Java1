@@ -1,5 +1,8 @@
 package student_anvars_intezars.home_tasks.lesson_9.level_1.task7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class PrivateClass {
 
     private String title;

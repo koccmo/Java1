@@ -9,7 +9,7 @@ package student_dmitrijs_jasvins.lesson_5.day_2.task_13;
 
 import java.util.Random;
 
-public class ArrayDemo {
+class ArrayDemo {
     public static void main(String[] args) {
         int[] array = new int[3];
         Random random = new Random();

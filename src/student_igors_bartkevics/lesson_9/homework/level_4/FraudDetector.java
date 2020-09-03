@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_9.homework.level_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FraudDetector {
     public static int LIMIT = 1000000;
     public static int LIMIT_FOR_GERMANY = 1000;

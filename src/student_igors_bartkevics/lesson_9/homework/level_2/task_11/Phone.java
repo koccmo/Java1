@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_9.homework.level_2.task_11;
 
 //Where use protected constructors?
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Phone {
     private int ringVolume;
     protected Phone(int ringVolume) {

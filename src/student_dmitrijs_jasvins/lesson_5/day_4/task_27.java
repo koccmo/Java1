@@ -10,7 +10,7 @@ package student_dmitrijs_jasvins.lesson_5.day_4;
 
 import java.util.Random;
 
-public class task_27 {
+class task_27 {
     public static void main(String[] args) {
         Random random = new Random();
         int arrayLength = random.nextInt(50);

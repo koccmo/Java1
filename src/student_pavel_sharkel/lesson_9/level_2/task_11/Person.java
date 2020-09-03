@@ -1,5 +1,8 @@
 package student_pavel_sharkel.lesson_9.level_2.task_11;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Person {
 
     private int age;

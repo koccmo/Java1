@@ -1,5 +1,11 @@
 package student_anvars_intezars.home_tasks.lesson_9.level_1.task4;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
+@CodeReviewComment(teacher = "В задании надо было продемонстрировать доступ к "
+		+ "публичным свойствам класса напрямую, без методов.")
 class SafeDemo {
 
     public static void main(String[] args) {

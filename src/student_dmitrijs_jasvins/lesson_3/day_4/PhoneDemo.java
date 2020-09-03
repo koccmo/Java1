@@ -1,6 +1,6 @@
 package student_dmitrijs_jasvins.lesson_3.day_4;
 
-public class PhoneDemo {
+class PhoneDemo {
     public static void main(String[] args) {
         Phone dmitrijsPhone = new Phone("Iphone");
         String modelName = dmitrijsPhone.getModel();

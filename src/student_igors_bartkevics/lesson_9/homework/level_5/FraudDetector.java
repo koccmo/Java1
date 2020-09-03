@@ -24,8 +24,13 @@ package student_igors_bartkevics.lesson_9.homework.level_5;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class FraudDetector {
 
+	@CodeReviewComment(teacher = "private field?")
     ArrayList<FraudRule> fraudRules;
 
     public FraudDetector(ArrayList<FraudRule> fraudRules) {

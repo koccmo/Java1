@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_9.homework.level_x.super_task_2;
 
 import javax.print.attribute.standard.MediaSize;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Trader {
 
     private String fullName;

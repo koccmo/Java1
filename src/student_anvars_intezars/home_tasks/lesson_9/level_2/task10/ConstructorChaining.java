@@ -1,5 +1,10 @@
 package student_anvars_intezars.home_tasks.lesson_9.level_2.task10;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
+//Исправлено. В этом же классе создал другой конструктор.
 class ConstructorChaining {
 
     private String constructorName;
@@ -9,9 +14,10 @@ class ConstructorChaining {
         this.constructorName = constructorName;
     }
 
-    public ConstructorChaining (String constructorName, int parameterCount) {
-        ConstructorChaining constructorChaining  = new ConstructorChaining(constructorName);
-        this.constructorName = constructorName;
-        this.parameterCount= parameterCount;
+    private ConstructorChaining(int parameterCount) {
+        this.parameterCount = parameterCount;
     }
+
+
+
 }
