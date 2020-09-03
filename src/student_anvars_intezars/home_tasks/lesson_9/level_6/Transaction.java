@@ -16,4 +16,10 @@ class Transaction {
     int getAmount () {
         return amount;
     }
+
+    @Override
+    public String toString() {
+        return "Transaction [trader=" + trader
+                + ", amount=" + amount + "]";
+    }
 }

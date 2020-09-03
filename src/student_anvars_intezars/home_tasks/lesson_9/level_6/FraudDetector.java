@@ -19,6 +19,8 @@ class FraudDetector {
             if (fraudRules[i].isFraud(trader, amount)) {
                 result = true;
                 fraudDetectionResult.setRuleName(fraudRules[i].getRuleName());
+                String generalInfoOfFraud = trader.toString();
+                System.out.println(generalInfoOfFraud);
             }
         } fraudDetectionResult.setFraud(result);
 
