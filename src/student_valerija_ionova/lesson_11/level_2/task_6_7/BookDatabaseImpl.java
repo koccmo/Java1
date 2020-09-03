@@ -17,6 +17,18 @@ Optional<Book> findById(Long bookId);
 
 Task10
 List<Book> findByAuthor(String author);
+
+Task11
+List<Book> findByTitle(String title);
+
+Task12
+int countAllBooks();
+
+Task13
+void deleteByAuthor(String author);
+
+Task14
+void deleteByTitle(String title);
 */
 
 import java.util.ArrayList;
@@ -81,6 +93,40 @@ class BookDatabaseImpl implements  BookDatabase{
             }
         }
         return booksOfAuthor;
+    }
+
+    @Override
+    public List<Book> findByTitle(String title) {
+        List <Book> booksWithTitle = new ArrayList <>();
+        for (int i = 0; i< bookDataBase.size(); i++){
+            if (bookDataBase.get(i).getBook().getTitle().equals(title)){
+                booksWithTitle.add(bookDataBase.get(i).getBook());
+            }
+        }
+        return booksWithTitle;
+    }
+
+    @Override
+    public int countAllBooks() {
+        return bookDataBase.size();
+    }
+
+    @Override
+    public void deleteByAuthor(String author) {
+        for (int i = 0; i < bookDataBase.size(); i++){
+            if (bookDataBase.get(i).getBook().getAuthor().equals(author)){
+                bookDataBase.remove(i);
+            }
+        }
+    }
+
+    @Override
+    public void deleteByTitle(String title) {
+        for (int i = 0; i < bookDataBase.size(); i++){
+            if (bookDataBase.get(i).getBook().getTitle().equals(title)){
+                bookDataBase.remove(i);
+            }
+        }
     }
 
     BookAndId getBookAndId (Long index){
