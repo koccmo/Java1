@@ -1,4 +1,4 @@
-package student_volodya_danilin.lesson_9.level_4.Task_17;
+package student_volodya_danilin.lesson_9.level_4_5;
 
 class Trader {
 
@@ -24,9 +24,7 @@ class Trader {
     }
 
     void deposit(Transaction t, FraudDetector fd) {
-        if (!fd.isFraud(t)) {
             this.moneyAmount += t.getAmount();
-        }
     }
 
     String getFullName() {
