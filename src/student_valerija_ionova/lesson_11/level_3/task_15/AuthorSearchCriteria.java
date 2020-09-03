@@ -1,5 +1,7 @@
 package student_valerija_ionova.lesson_11.level_3.task_15;
 
+//Task16 Создайте класс AuthorSearchCriteria:
+
 class AuthorSearchCriteria {
 
     private String authorToSearch;
