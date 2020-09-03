@@ -16,11 +16,10 @@ public class Demo {
             new FraudRule5("German over limit"),
         };
 
-
         FraudDetector fd = new FraudDetector(fraudRules);
 
         System.out.println("\nTesting rule 1, Trader name Pokemon");
-        System.out.println("Should be denied ...");
+        System.out.print("Should be denied ... ");
         Trader trader1 = new Trader("Pokemon");
         Transaction tr1 = new Transaction(trader1, 100);
         if (fd.isFraud(tr1)) {
@@ -31,7 +30,7 @@ public class Demo {
         }
 
         System.out.println("\nTesting rule 1, Trader name not Pokemon");
-        System.out.println("Should be allowed ...");
+        System.out.print("Should be allowed ... ");
         Trader trader1a = new Trader("not Pokemon");
         Transaction tr1a = new Transaction(trader1a, 100);
         if (!fd.isFraud(tr1a)) {
@@ -42,7 +41,7 @@ public class Demo {
         }
 
         System.out.println("\nTesting rule 2, transaction amount 1 000 000 + 1");
-        System.out.println("Should be denied ...");
+        System.out.print("Should be denied ... ");
         Trader trader2 = new Trader("TestName");
         Transaction tr2 = new Transaction(trader2, 1000001);
         if (fd.isFraud(tr2)) {
@@ -53,7 +52,7 @@ public class Demo {
         }
 
         System.out.println("\nTesting rule 2, transaction amount 1 000 000");
-        System.out.println("Should be allowed ...");
+        System.out.print("Should be allowed ... ");
         Trader trader2a = new Trader("TestName");
         Transaction tr2a = new Transaction(trader2a, 1000000);
         if (!fd.isFraud(tr2a)) {
@@ -64,7 +63,7 @@ public class Demo {
         }
 
         System.out.println("\nTesting rule 3, trader from banned city Sydney");
-        System.out.println("Should be denied ...");
+        System.out.print("Should be denied ... ");
         Trader trader3 = new Trader("TestName", "Sydney");
         Transaction tr3 = new Transaction(trader3, 100);
         if (fd.isFraud(tr3)) {
@@ -75,7 +74,7 @@ public class Demo {
         }
 
         System.out.println("\nTesting rule 3, trader from not banned city ");
-        System.out.println("Should be allowed ...");
+        System.out.print("Should be allowed ... ");
         Trader trader3a = new Trader("TestName", "not banned city");
         Transaction tr3a = new Transaction(trader3a, 100);
         if (!fd.isFraud(tr3a)) {
@@ -86,7 +85,7 @@ public class Demo {
         }
 
         System.out.println("\nTesting rule 4, trader from banned country Jamaica");
-        System.out.println("Should be denied ...");
+        System.out.print("Should be denied ... ");
         Trader trader4 = new Trader("Jah", "Kingston", "Jamaica");
         Transaction tr4 = new Transaction(trader4, 100);
         if (fd.isFraud(tr4)) {
@@ -97,7 +96,7 @@ public class Demo {
         }
 
         System.out.println("\nTesting rule 4, trader from not banned country");
-        System.out.println("Should be allowed ...");
+        System.out.print("Should be allowed ... ");
         Trader trader4a = new Trader("Jah", "Moscow", "not banned");
         Transaction tr4a = new Transaction(trader4a, 100);
         if (!fd.isFraud(tr4a)) {
@@ -108,7 +107,7 @@ public class Demo {
         }
 
         System.out.println("\nTesting rule 5, german limit 1000 + 1");
-        System.out.println("Should be denied ...");
+        System.out.print("Should be denied ... ");
         Trader trader5 = new Trader("Name", "Koln", "Germany");
         Transaction tr5 = new Transaction(trader5, 1001);
         if (fd.isFraud(tr5)) {
@@ -119,7 +118,7 @@ public class Demo {
         }
 
         System.out.println("\nTesting rule 5, german limit 1000");
-        System.out.println("Should be allowed ...");
+        System.out.print("Should be allowed ... ");
         Trader trader5a = new Trader("Name", "Koln", "Germany");
         Transaction tr5a = new Transaction(trader5a, 1000);
         if (!fd.isFraud(tr5a)) {

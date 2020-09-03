@@ -17,11 +17,11 @@ class FraudDetector {
         for (FraudRule fraudRule : fraudRules) {
             if (fraudRule.isFraud(t)) {
                 result = true;
-                System.out.println("DENIED!");
             }
         }
 
         if (!result) {
+            System.out.println("ALLOWED");
             System.out.println("No fraud found!");
         }
 

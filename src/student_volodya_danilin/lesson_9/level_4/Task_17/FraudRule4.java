@@ -12,6 +12,7 @@ class FraudRule4 extends FraudRule{
 
         if (t.getCountry(t).equals("Jamaica")) {
             result = true;
+            System.out.println("DENIED");
             System.out.println("Traders from Jamaica banned!");
         }
 

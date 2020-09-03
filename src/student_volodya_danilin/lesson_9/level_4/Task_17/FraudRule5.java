@@ -13,6 +13,7 @@ class FraudRule5 extends FraudRule{
         if (t.getTrader().getCountry().equals("Germany")
         && t.getAmount() > 1000) {
             result = true;
+            System.out.println("DENIED");
             System.out.println("Limit for German traders is 1000$");
         }
 

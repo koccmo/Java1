@@ -12,6 +12,7 @@ class FraudRule2 extends FraudRule{
 
             if (t.getAmount() > 1000000) {
                 result = true;
+                System.out.println("DENIED");
                 System.out.println("Transaction amount too big!");
         }
 

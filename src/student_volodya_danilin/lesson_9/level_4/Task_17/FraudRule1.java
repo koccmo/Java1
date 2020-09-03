@@ -12,6 +12,7 @@ class FraudRule1 extends FraudRule{
 
         if (t.getTrader().getFullName().equals("Pokemon")) {
             result = true;
+            System.out.println("DENIED");
             System.out.println("Pokemon not allowed to trade!");
         }
 

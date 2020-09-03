@@ -22,4 +22,8 @@ class Transaction {
         return t.trader.getCountry();
     }
 
+    String getCity(Transaction t) {
+        return t.trader.getCity();
+    }
+
 }

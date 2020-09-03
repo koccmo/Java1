@@ -10,8 +10,9 @@ class FraudRule3 extends FraudRule{
 
         boolean result = false;
 
-        if (t.getTrader().getCity().equals("Sydney")) {
+        if (t.getCity(t).equals("Sydney")) {
             result = true;
+            System.out.println("DENIED");
             System.out.println("Traders from Sydney banned!");
         }
 
