@@ -17,6 +17,9 @@ class SearchCriteriaTest {
             authorSearchCriteriaTest.testAndSearchCriteriaTrue();
             authorSearchCriteriaTest.testAndSearchCriteriaFalse();
 
+            authorSearchCriteriaTest.testOrSearchCriteriaTrue();
+            authorSearchCriteriaTest.testOrSearchCriteriaFalse();
+
         }
 
     void checkResult (String name, boolean testPassed){
@@ -97,6 +100,28 @@ class SearchCriteriaTest {
         AndSearchCriteria andSearchCriteria =
                 new AndSearchCriteria(searchCriteria1, searchCriteria2);
         checkResult("testAndSearchCriteriaTrue", !andSearchCriteria.match(book1));
+    }
+
+    void testOrSearchCriteriaTrue(){
+
+        Book book1 = new Book("Author1", "Title1", "2000");
+
+        SearchCriteria searchCriteria1 = new TitleSearchCriteria("Title1");
+        SearchCriteria searchCriteria2 = new AuthorSearchCriteria("Author17");
+
+       OrSearchCriteria orSearchCriteria = new OrSearchCriteria(searchCriteria1, searchCriteria2);
+        checkResult("testOrSearchCriteriaTrue", orSearchCriteria.match(book1));
+    }
+
+    void testOrSearchCriteriaFalse(){
+
+        Book book1 = new Book("Author1", "Title1", "2000");
+
+        SearchCriteria searchCriteria1 = new TitleSearchCriteria("Title12");
+        SearchCriteria searchCriteria2 = new YearOfIssueSearchCriteria("1589");
+
+        OrSearchCriteria orSearchCriteria = new OrSearchCriteria(searchCriteria1, searchCriteria2);
+        checkResult("testOrSearchCriteriaFalse", !orSearchCriteria.match(book1));
     }
 
 }
