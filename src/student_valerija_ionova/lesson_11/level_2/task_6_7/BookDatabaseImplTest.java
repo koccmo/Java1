@@ -21,6 +21,7 @@ class BookDatabaseImplTest {
         bookDatabaseImplTest.testRemoveBookByBookListCheck();
         bookDatabaseImplTest.testFindByIdTrue();
         bookDatabaseImplTest.testFindByIdFalse();
+        bookDatabaseImplTest.testFindBookByAuthor();
 
     }
 
@@ -191,6 +192,26 @@ class BookDatabaseImplTest {
         bookDatabase.save(book3);
 
         checkResult("testFindByIdFalse", bookDatabase.findById(15L).equals(Optional.empty()));
+    }
+
+    void testFindBookByAuthor(){
+
+        Book book1 = new Book ("Author1", "Title1");
+        Book book2 = new Book ("Author2", "Title2");
+        Book book3 = new Book ("Author3", "Title3");
+        Book book4 = new Book ("Author2", "Title4");
+
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.save(book4);
+
+        List <Book> result = new ArrayList<>();
+        result.add(book2);
+        result.add(book4);
+
+        checkResult("testFindBookByAuthor", bookDatabase.findByAuthor("Author2").equals(result));
     }
 
 }
