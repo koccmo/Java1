@@ -20,9 +20,9 @@ public class Demo {
         FraudDetector fd = new FraudDetector(fraudRules);
 
         System.out.println("\nTesting rule 1, Trader name Pokemon");
+        System.out.println("Should be denied ...");
         Trader trader1 = new Trader("Pokemon");
         Transaction tr1 = new Transaction(trader1, 100);
-        System.out.println("Should be denied ...");
         if (fd.isFraud(tr1)) {
             System.out.println("Test OK");
         }
@@ -73,6 +73,7 @@ public class Demo {
         else {
             System.out.println("Test FAIL");
         }
+
         System.out.println("\nTesting rule 3, trader from not banned city ");
         System.out.println("Should be allowed ...");
         Trader trader3a = new Trader("TestName", "not banned city");
@@ -94,6 +95,7 @@ public class Demo {
         else {
             System.out.println("Test FAIl");
         }
+
         System.out.println("\nTesting rule 4, trader from not banned country");
         System.out.println("Should be allowed ...");
         Trader trader4a = new Trader("Jah", "Moscow", "not banned");
@@ -115,6 +117,7 @@ public class Demo {
         else {
             System.out.println("Test FAIL");
         }
+
         System.out.println("\nTesting rule 5, german limit 1000");
         System.out.println("Should be allowed ...");
         Trader trader5a = new Trader("Name", "Koln", "Germany");
