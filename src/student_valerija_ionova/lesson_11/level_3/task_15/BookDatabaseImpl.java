@@ -29,6 +29,8 @@ void deleteByAuthor(String author);
 
 Task14
 void deleteByTitle(String title);
+
+Task22 List<Book> find(SearchCriteria searchCriteria);
 */
 
 import java.util.ArrayList;
@@ -127,6 +129,17 @@ class BookDatabaseImpl implements BookDatabase {
                 bookDataBase.remove(i);
             }
         }
+    }
+
+    @Override
+    public List<Book> find(SearchCriteria searchCriteria) {
+        List <Book> books = new ArrayList <>();
+        for (int i = 0; i < bookDataBase.size(); i++){
+            if (searchCriteria.match(bookDataBase.get(i).getBook())){
+                books.add(bookDataBase.get(i).getBook());
+            }
+        }
+        return books;
     }
 
     BookAndId getBookAndId (Long index){
