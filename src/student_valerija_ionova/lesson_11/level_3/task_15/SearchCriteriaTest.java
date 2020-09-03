@@ -11,7 +11,8 @@ class SearchCriteriaTest {
             authorSearchCriteriaTest.testAuthorMatchBookFalse();
             authorSearchCriteriaTest.testTitleMatchBookTrue();
             authorSearchCriteriaTest.testTitleMatchBookFalse();
-
+            authorSearchCriteriaTest.testYearMatchBookTrue();
+            authorSearchCriteriaTest.testYearMatchBookFalse();
 
         }
 
@@ -25,7 +26,7 @@ class SearchCriteriaTest {
 
     void testAuthorMatchBookTrue(){
 
-        Book book1 = new Book("Author1", "Title1");
+        Book book1 = new Book("Author1", "Title1", "2000");
 
         AuthorSearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Author1");
         checkResult("testAuthorMatchBookTrue", authorSearchCriteria.match(book1));
@@ -33,7 +34,7 @@ class SearchCriteriaTest {
 
     void testAuthorMatchBookFalse(){
 
-        Book book1 = new Book("Author1", "Title1");
+        Book book1 = new Book("Author1", "Title1", "2000");
 
         AuthorSearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Author15");
         checkResult("testAuthorMatchBookFalse", !authorSearchCriteria.match(book1));
@@ -41,7 +42,7 @@ class SearchCriteriaTest {
 
     void testTitleMatchBookTrue(){
 
-        Book book1 = new Book("Author1", "Title1");
+        Book book1 = new Book("Author1", "Title1", "2000");
 
         TitleSearchCriteria titleSearchCriteria = new TitleSearchCriteria("Title1");
         checkResult("testTitleMatchBookTrue", titleSearchCriteria.match(book1));
@@ -49,10 +50,26 @@ class SearchCriteriaTest {
 
     void testTitleMatchBookFalse(){
 
-        Book book1 = new Book("Author1", "Title1");
+        Book book1 = new Book("Author1", "Title1", "2000");
 
         TitleSearchCriteria titleSearchCriteria = new TitleSearchCriteria("NoTitle");
         checkResult("testTitleMatchBookFalse", !titleSearchCriteria.match(book1));
+    }
+
+    void testYearMatchBookTrue(){
+
+        Book book1 = new Book("Author1", "Title1", "2000");
+
+        YearOfIssueSearchCriteria yearOfIssueSearchCriteria = new YearOfIssueSearchCriteria("2000");
+        checkResult("testYearMatchBookTrue", yearOfIssueSearchCriteria.match(book1));
+    }
+
+    void testYearMatchBookFalse(){
+
+        Book book1 = new Book("Author1", "Title1", "2000");
+
+        YearOfIssueSearchCriteria yearOfIssueSearchCriteria = new YearOfIssueSearchCriteria("2008");
+        checkResult("testYearMatchBookFalse", !yearOfIssueSearchCriteria.match(book1));
     }
 
 }
