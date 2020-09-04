@@ -1,8 +1,10 @@
-package student_valerija_ionova.lesson_11.level_5.task_28;
+package student_valerija_ionova.lesson_11.level_5.task_28_29;
 
 /*Task28 Map<String, List<Book>> getAuthorToBooksMap();
     Данный метод должен возвращать мап в котором ключём является
     автор, а значением список книг этого автора.
+
+Task29 Map<String, Integer> getEachAuthorBookCount();
 */
 
 import java.util.*;
@@ -160,6 +162,30 @@ class BookDatabaseImpl implements BookDatabase {
             mapOfAuthorsBooks.put(differentAuthors.get(i), listOfBooks);
         }
         return mapOfAuthorsBooks;
+    }
+
+    @Override
+    public Map<String, Integer> getEachAuthorBookCount() {
+        Map <String, Integer> mapOfAuthorsBooksCount = new HashMap<>();
+
+        List <String> differentAuthors = createListOfDifferentAuthors();
+
+        for (int i = 0; i < differentAuthors.size(); i++){
+            Integer countOfBooks = countNumberOfBooksOfAuthor(differentAuthors.get(i));
+            mapOfAuthorsBooksCount.put(differentAuthors.get(i), countOfBooks);
+        }
+        return mapOfAuthorsBooksCount;
+    }
+
+    private Integer countNumberOfBooksOfAuthor(String author){
+        Integer count = 0;
+
+        for (int j = 0; j < bookDataBase.size(); j++){
+            if (bookDataBase.get(j).getBook().getAuthor().equals(author)){
+                count++;
+            }
+        }
+        return count;
     }
 
     private List <Book> createListOfBooksOfAuthor(String author){
