@@ -1,5 +1,7 @@
 package student_volodya_danilin.lesson_10.level_2.Task_5;
 
+import student_dmitrijs_jasvins.lesson_10.day_1.task_2.ArrayUtil;
+
 import java.util.Scanner;
 
 class DayOfTheWeekDetectorDemo {
@@ -17,12 +19,6 @@ class DayOfTheWeekDetectorDemo {
         DayOfTheWeekDetector detectorIf = new DayOfTheWeekDetectorIfVersion("If method");
         DayOfTheWeekDetectorDemo demoIf = new DayOfTheWeekDetectorDemo(detectorIf);
 
-        DayOfTheWeekDetector detectorSwitch = new DayOfTheWeekDetectorSwitchVersion("Switch method");
-        DayOfTheWeekDetectorDemo demoSwitch = new DayOfTheWeekDetectorDemo(detectorSwitch);
-
-        DayOfTheWeekDetector detectorArray = new DayOfTheWeekDetectorArrayVersion("String Array method");
-        DayOfTheWeekDetectorDemo demoArray = new DayOfTheWeekDetectorDemo(detectorArray);
-
         System.out.println("\nTest 1 \nTesting " + demoIf.detector.getDetectorName() + " ... ");
         System.out.println("Entering 7, demoIf : " + demoIf.detector.detectDayName(7));
         if (demoIf.detector.detectDayName(7).equals("Sunday")) {
@@ -32,6 +28,10 @@ class DayOfTheWeekDetectorDemo {
             System.out.println("Test FAIL");
         }
         System.out.println("Entering 8, demoIf : " + demoIf.detector.detectDayName(8));
+
+
+        DayOfTheWeekDetector detectorSwitch = new DayOfTheWeekDetectorSwitchVersion("Switch method");
+        DayOfTheWeekDetectorDemo demoSwitch = new DayOfTheWeekDetectorDemo(detectorSwitch);
 
         System.out.println("\nTest 2 \nTesting " + demoSwitch.detector.getDetectorName() + " ... ");
         System.out.println("Entering 7, demoSwitch : " + demoSwitch.detector.detectDayName(7));
@@ -43,6 +43,10 @@ class DayOfTheWeekDetectorDemo {
         }
         System.out.println("Entering 8, demoSwitch : " + demoSwitch.detector.detectDayName(8));
 
+
+        DayOfTheWeekDetector detectorArray = new DayOfTheWeekDetectorArrayVersion("String Array method");
+        DayOfTheWeekDetectorDemo demoArray = new DayOfTheWeekDetectorDemo(detectorArray);
+
         System.out.println("\nTest 3 \nTesting " + demoArray.detector.getDetectorName() + " ... ");
         System.out.println("Entering 7, demoArray : " + demoArray.detector.detectDayName(7));
         if (demoArray.detector.detectDayName(7).equals("Sunday")) {
@@ -53,14 +57,17 @@ class DayOfTheWeekDetectorDemo {
         }
         System.out.println("Entering 8, demoArray : " + demoArray.detector.detectDayName(8));
 
+        System.out.println("\nAuto tests are finished! \nStarting app ... ");
+
         run();
     }
 
     static void run() {
         DayOfTheWeekDetector detector = new DayOfTheWeekDetectorIfVersion("IF method");
         DayOfTheWeekDetectorDemo demo = new DayOfTheWeekDetectorDemo(detector);
+
         System.out.println("\n\n\nWelcome to : \nWhats the day today? \nDefault method is IF method," +
-                "\nYou can proceed with the tests without selecting method!");
+                "\nYou can proceed with the tests!");
         Scanner sc = new Scanner(System.in);
         int totalTests = 0;
         while (true) {
