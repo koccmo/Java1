@@ -59,6 +59,8 @@ class DayOfTheWeekDetectorDemo {
     static void run() {
         DayOfTheWeekDetector detector = new DayOfTheWeekDetectorIfVersion("IF method");
         DayOfTheWeekDetectorDemo demo = new DayOfTheWeekDetectorDemo(detector);
+        System.out.println("\n\n\nWelcome to : \nWhats the day today? \nDefault method is IF method," +
+                "\nYou can proceed with the tests without selecting method!");
         Scanner sc = new Scanner(System.in);
         int totalTests = 0;
         while (true) {
@@ -96,13 +98,13 @@ class DayOfTheWeekDetectorDemo {
             if (menuNumberSelect == 2) {
                 int numberToDetect = 0;
                 while (numberToDetect != 44) {
-                    totalTests++;
                     System.out.println("\n=== NUMBER ENTRY MENU ===");
                     System.out.println("Enter 44 to go back");
                     System.out.println("Enter numbers for testing ... ");
                     System.out.print("Enter : ");
                     numberToDetect = sc.nextInt();
                     if (numberToDetect != 44) {
+                        totalTests++;
                         System.out.println(". . . . . . . . . . ");
                         for (int i = 0; i < 3; i++) {
                             System.out.print(demo.detector.detectDayName(numberToDetect) + " ");
