@@ -3,6 +3,7 @@ package student_volodya_danilin.lesson_9.level_4.Task_17;
 import teacher.codereview.CodeReview;
 
 @CodeReview(approved = true)
+
 public class Demo {
 
     public static void main(String[] Args) {
@@ -22,8 +23,7 @@ public class Demo {
 
         System.out.println("\nTest 2 \nTesting money amount too big");
         Trader trader2 = new Trader("Trader1");
-        Transaction t2 = new Transaction(trader2);
-        t2.prepareDeposit(trader2, 1000001);
+        Transaction t2 = new Transaction(trader2, 1000001);
         if (fd.amountTooBig(t2)) {
             System.out.println("Test OK");
         }
@@ -53,8 +53,7 @@ public class Demo {
 
         System.out.println("\nTest 5 \nTesting German money limit");
         Trader trader5 = new Trader("Klaus", "Koln", "Germany");
-        Transaction t5 = new Transaction(trader5);
-        t5.prepareDeposit(trader5, 10001);
+        Transaction t5 = new Transaction(trader5, 10001);
         if (fd.germanOverLimit(t5)) {
             System.out.println("Test OK");
         }
@@ -63,3 +62,4 @@ public class Demo {
         }
     }
 }
+
