@@ -15,6 +15,9 @@ class BookDatabaseTest {
             authorSearchCriteriaTest.testFindUniqueBooks();
             authorSearchCriteriaTest.testFindUniqueBooksNotAll();
 
+            authorSearchCriteriaTest.testContainsBookTrue();
+            authorSearchCriteriaTest.testContainsBookFalse();
+
         }
 
     void checkResult (String name, boolean testPassed){
@@ -108,6 +111,42 @@ class BookDatabaseTest {
         setForCheck.add(book4);
 
         checkResult("testFindUniqueBooksNotAll", Objects.equals(bookDatabase.findUniqueBooks(), setForCheck));
+    }
+
+    void testContainsBookTrue(){
+
+        Book book1 = new Book("Author1", "Title1", "2009");
+        Book book2 = new Book("Author1", "Title8", "2009");
+        Book book3 = new Book("Author3", "Title3", "2007");
+        Book book4 = new Book("Author1", "Title4", "2009");
+
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.save(book4);
+
+        Book newBook3 = new Book("Author3", "Title3", "2007");
+
+        checkResult("testContainsBookTrue", bookDatabase.contains(newBook3));
+    }
+
+    void testContainsBookFalse(){
+
+        Book book1 = new Book("Author1", "Title1", "2009");
+        Book book2 = new Book("Author1", "Title8", "2009");
+        Book book3 = new Book("Author3", "Title3", "2007");
+        Book book4 = new Book("Author1", "Title4", "2009");
+
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.save(book4);
+
+        Book newBook3 = new Book("Author45", "Title3", "2007");
+
+        checkResult("testContainsBookFalse", !bookDatabase.contains(newBook3));
     }
 
 }
