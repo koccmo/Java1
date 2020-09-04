@@ -1,6 +1,6 @@
 package student_anvars_intezars.home_tasks.lesson_10.level_1.task_2;
 
-interface ArrayUtilImpl {
+interface ArrayUtil {
 
     int[] createArray(int arrayLength);
 

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.OptionalInt;
 import java.util.Random;
 
-class ArrayUtilImp implements ArrayUtilImpl{
+class ArrayUtilImp implements ArrayUtil {
 
     public int[] createArray(int arrayLength) {
         return new int[arrayLength];
