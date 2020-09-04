@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_11.level_5.task_28;
+package student_valerija_ionova.lesson_11.level_5.task_28_29;
 
 
 import java.util.List;
@@ -37,5 +37,7 @@ interface BookDatabase {
     boolean contains(Book book);
 
     Map<String, List<Book>> getAuthorToBooksMap();
+
+    Map<String, Integer> getEachAuthorBookCount();
 
 }
