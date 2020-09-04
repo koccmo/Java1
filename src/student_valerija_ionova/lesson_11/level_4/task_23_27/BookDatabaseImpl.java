@@ -35,6 +35,8 @@ Task22 List<Book> find(SearchCriteria searchCriteria);
 Task23 Set<String> findUniqueAuthors();
 
 Task24 Set<String> findUniqueTitles();
+
+Task26 boolean contains(Book book);
 */
 
 import java.util.*;
@@ -169,6 +171,16 @@ class BookDatabaseImpl implements BookDatabase {
             uniqueBooks.add(bookDataBase.get(i).getBook());
         }
         return uniqueBooks;
+    }
+
+    @Override
+    public boolean contains(Book book) {
+        for (int i = 0; i < bookDataBase.size(); i++){
+            if (book.equals(bookDataBase.get(i).getBook())){
+                return true;
+            }
+        }
+        return false;
     }
 
     BookAndId getBookAndId (Long index){
