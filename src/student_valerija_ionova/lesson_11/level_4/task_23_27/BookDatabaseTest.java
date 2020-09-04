@@ -13,6 +13,7 @@ class BookDatabaseTest {
             authorSearchCriteriaTest.testFindUniqueTitles();
 
             authorSearchCriteriaTest.testFindUniqueBooks();
+            authorSearchCriteriaTest.testFindUniqueBooksNotAll();
 
         }
 
@@ -86,6 +87,27 @@ class BookDatabaseTest {
         setForCheck.add(book4);
 
         checkResult("testFindUniqueBooks", Objects.equals(bookDatabase.findUniqueBooks(), setForCheck));
+    }
+
+    void testFindUniqueBooksNotAll(){
+
+        Book book1 = new Book("Author1", "Title1", "2009");
+        Book book2 = new Book("Author1", "Title1", "2009");
+        Book book3 = new Book("Author3", "Title3", "2007");
+        Book book4 = new Book("Author1", "Title4", "2009");
+
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.save(book4);
+
+        Set<Book> setForCheck = new HashSet<>();
+        setForCheck.add(book1);
+        setForCheck.add(book3);
+        setForCheck.add(book4);
+
+        checkResult("testFindUniqueBooksNotAll", Objects.equals(bookDatabase.findUniqueBooks(), setForCheck));
     }
 
 }
