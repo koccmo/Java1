@@ -3,7 +3,7 @@
 @CodeReview(approved = true)
 class PrivateConstructor {
 
-    private PrivateConstructor() {
+    PrivateConstructor() {
 
     }
 
@@ -11,3 +11,5 @@ class PrivateConstructor {
 }
 
  */
+
+

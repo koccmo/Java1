@@ -13,6 +13,7 @@ class Trader {
     Trader(String fullName) {
         this.fullName = fullName;
         this.city = "Default city";
+        this.country = "Default country";
     }
 
     Trader(String fullName, String city) {
@@ -26,9 +27,7 @@ class Trader {
     }
 
     void deposit(Transaction t, FraudDetector fd) {
-        if (!fd.isFraud(t)) {
             this.moneyAmount += t.getAmount();
-        }
     }
 
     String getFullName() {
