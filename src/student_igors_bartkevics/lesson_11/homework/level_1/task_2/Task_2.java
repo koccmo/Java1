@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_11.homework.level_1;
+package student_igors_bartkevics.lesson_11.homework.level_1.task_2;
 
 import java.util.ArrayList;
 import java.util.List;
