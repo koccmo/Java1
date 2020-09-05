@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_10.level_x.super_task_3.v2;
 
 class MyListImpl implements  MyList{
 
-    LinkedListFromMe linkedListFromMe = new LinkedListFromMe();
+    LinkedListFromMe linkedListFromMe;
 
     MyListImpl (LinkedListFromMe linkedListFromMe){
         this.linkedListFromMe = linkedListFromMe;
@@ -30,6 +30,6 @@ class MyListImpl implements  MyList{
 
     @Override
     public void deleteElement(int index) {
-
+        linkedListFromMe.deleteElementFromList(index);
     }
 }
