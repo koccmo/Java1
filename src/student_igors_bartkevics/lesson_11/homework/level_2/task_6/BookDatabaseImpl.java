@@ -8,12 +8,16 @@ class BookDatabaseImpl implements BookDatabase{
     List<Book> books = new ArrayList<>();
     Long currentId = 1L;
 
+    public Long getCurrentId() {
+        return currentId;
+    }
+
     @Override
     public Long save(Book book) {
         books.add(book);
         Long bookId = currentId;
         book.setId(bookId);
         currentId++;
-        return bookId;
+        return currentId;
     }
 }
