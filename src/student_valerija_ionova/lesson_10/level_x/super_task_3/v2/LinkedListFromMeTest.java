@@ -22,6 +22,14 @@ public class LinkedListFromMeTest {
         linkedListFromMeTest.testOfDeleteThirdElementForLastElement();
         linkedListFromMeTest.testOfDeleteLastElement();
 
+        linkedListFromMeTest.testOfInsertFirstElementCheckOfElement();
+        linkedListFromMeTest.testOfInsertFirstElementCheckOfLength();
+        linkedListFromMeTest.testOfInsertThirdElementLength();
+        linkedListFromMeTest.testOfInsertThirdElementForInsertedElement();
+        linkedListFromMeTest.testOfInsertThirdElementForNextElement();
+        linkedListFromMeTest.testOfInsertThirdElementForLastElement();
+        linkedListFromMeTest.testOfInsertLastElement();
+
 
     }
 
@@ -174,6 +182,102 @@ public class LinkedListFromMeTest {
         myList.deleteElement(3);
 
         printResult("testOfDeleteLastElement", myList.getElement(2).equals(expectedResult));
+    }
+
+    void testOfInsertFirstElementCheckOfElement(){
+        LinkedListFromMe linkedListFromMe = new LinkedListFromMe();
+        MyListImpl myList = new MyListImpl(linkedListFromMe);
+        myList.addElement(34);
+        myList.addElement(56);
+
+        ElementOfLinkedList expectedResult = new ElementOfLinkedList(145, new ElementOfLinkedList(34, new ElementOfLinkedList(56, null)));
+
+        myList.insertElement(0, 145);
+
+        printResult("testOfInsertFirstElementCheckOfElement", myList.getElement(0).equals(expectedResult));
+    }
+
+    void testOfInsertFirstElementCheckOfLength(){
+        LinkedListFromMe linkedListFromMe = new LinkedListFromMe();
+        MyListImpl myList = new MyListImpl(linkedListFromMe);
+        myList.addElement(34);
+        myList.addElement(56);
+
+        int expectedResult = 3;
+        myList.insertElement(0, 145);
+
+        printResult("testOfInsertFirstElementCheckOfLength", myList.sizeOfList() == expectedResult);
+    }
+
+    void testOfInsertThirdElementLength(){
+        LinkedListFromMe linkedListFromMe = new LinkedListFromMe();
+        MyListImpl myList = new MyListImpl(linkedListFromMe);
+        myList.addElement(2);
+        myList.addElement(3);
+        myList.addElement(4);
+        myList.addElement(5); //third element
+        myList.addElement(6);
+
+        int expectedResult = 6;
+        myList.insertElement(3, 145);
+        printResult("testOfInsertThirdElementLength", myList.sizeOfList() == expectedResult);
+    }
+
+    void testOfInsertThirdElementForInsertedElement(){
+        LinkedListFromMe linkedListFromMe = new LinkedListFromMe();
+        MyListImpl myList = new MyListImpl(linkedListFromMe);
+        myList.addElement(2);
+        myList.addElement(3);
+        myList.addElement(4);
+        myList.addElement(5); //third element
+
+        ElementOfLinkedList newElement = new ElementOfLinkedList(6666, new ElementOfLinkedList(5, null));
+        myList.insertElement(3, 6666);
+
+        printResult("testOfInsertThirdElementForInsertedElement", myList.getElement(3).equals(newElement));
+    }
+
+    void testOfInsertThirdElementForNextElement(){
+        LinkedListFromMe linkedListFromMe = new LinkedListFromMe();
+        MyListImpl myList = new MyListImpl(linkedListFromMe);
+        myList.addElement(2);
+        myList.addElement(3);
+        myList.addElement(4);
+        myList.addElement(5); //third element
+
+        ElementOfLinkedList result = new ElementOfLinkedList(5, null);
+        myList.insertElement(3, 6666);
+
+        printResult("testOfInsertThirdElementForNextElement", myList.getElement(4).equals(result));
+    }
+
+    void testOfInsertThirdElementForLastElement(){
+        LinkedListFromMe linkedListFromMe = new LinkedListFromMe();
+        MyListImpl myList = new MyListImpl(linkedListFromMe);
+        myList.addElement(2);
+        myList.addElement(3);
+        myList.addElement(4);
+        myList.addElement(5); //third
+
+        ElementOfLinkedList expectedResult =
+                new ElementOfLinkedList(4, new ElementOfLinkedList(6666, new ElementOfLinkedList(5, null)));
+        myList.insertElement(3, 6666);
+
+        printResult("testOfInsertThirdElementForLastElement", myList.getElement(2).equals(expectedResult));
+    }
+
+    void testOfInsertLastElement(){
+        LinkedListFromMe linkedListFromMe = new LinkedListFromMe();
+        MyListImpl myList = new MyListImpl(linkedListFromMe);
+        myList.addElement(2);
+        myList.addElement(3);
+        myList.addElement(4);
+        myList.addElement(5);
+
+        ElementOfLinkedList expectedResult = new ElementOfLinkedList(6666, null);
+        myList.insertElement(4, 6666);
+
+        printResult("testOfInsertLastElement", myList.getElement(4).equals(expectedResult));
     }
 
 
