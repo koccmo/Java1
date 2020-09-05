@@ -9,7 +9,7 @@ class TitleSearchCriteria implements SearchCriteria {
     }
 
     public boolean match(Book book) {
-        return (book.getTitle().equals(titleToSearch));
+        return book.getTitle().equals(titleToSearch);
     }
 
 }
