@@ -12,9 +12,8 @@ class BookReaderImpl implements BookReader {
         return library.isEmpty();
     }
 
-    public boolean isBookInReaderLibrary(Book bookToCheck) {
+    boolean isBookInReaderLibrary(Book bookToCheck) {
         boolean result = false;
-
         for (Book book : library) {
             if (book.getAuthor().equals(bookToCheck.getAuthor()) &&
                     book.getTitle().equals(bookToCheck.getTitle())) {
