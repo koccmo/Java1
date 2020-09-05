@@ -4,46 +4,46 @@ class AndSearchCriteriaTest {
 
     public static void main(String[] args) {
         AndSearchCriteriaTest test = new AndSearchCriteriaTest();
-        test.matchPositiveTest();
-        test.matchNegativeLeftCriteriaFaultTest();
-        test.matchNegativeRightCriteriaFaultTest();
-        test.matchNegativeBothCriteriaFaultTest();
+        test.matchPositiveBothConditionsMatchTest();
+        test.matchNegativeLeftConditionDoesNotMatchRightConditionMatchTest();
+        test.matchNegativeLeftConditionMatchesRightConditionDoesNotMatchTest();
+        test.matchNegativeBothConditionsDoNotMatchTest();
     }
 
-    void matchPositiveTest() {
+    void matchPositiveBothConditionsMatchTest() {
         SearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Martin R.");
         SearchCriteria titleSearchCriteria = new TitleSearchCriteria("Clean Code - A Handbook of Agile Software Craftsmanship");
         SearchCriteria andSearchCriteria = new AndSearchCriteria(authorSearchCriteria, titleSearchCriteria);
         Book book = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship");
         boolean condition = andSearchCriteria.match(book);
-        checkResult(condition, "Match positive");
+        checkResult(condition, "Match positive, both conditions match");
     }
 
-    void matchNegativeLeftCriteriaFaultTest() {
+    void matchNegativeLeftConditionDoesNotMatchRightConditionMatchTest() {
         SearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Martin R.");
         SearchCriteria titleSearchCriteria = new TitleSearchCriteria("Clean Code - A Handbook of Agile Software Craftsmanship");
         SearchCriteria andSearchCriteria = new AndSearchCriteria(authorSearchCriteria, titleSearchCriteria);
         Book book = new Book("Martin K.", "Clean Code - A Handbook of Agile Software Craftsmanship");
         boolean condition = !andSearchCriteria.match(book);
-        checkResult(condition, "Match negative left criteria fault");
+        checkResult(condition, "Match negative, left condition does not match right condition matches");
     }
 
-    void matchNegativeRightCriteriaFaultTest() {
+    void matchNegativeLeftConditionMatchesRightConditionDoesNotMatchTest() {
         SearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Martin R.");
         SearchCriteria titleSearchCriteria = new TitleSearchCriteria("Clean Code - A Handbook of Agile Software Craftsmanship");
         SearchCriteria andSearchCriteria = new AndSearchCriteria(authorSearchCriteria, titleSearchCriteria);
         Book book = new Book("Martin R.", "Clean Code - A Handbook of Agile Software Craftsmanship rev 2");
         boolean condition = !andSearchCriteria.match(book);
-        checkResult(condition, "Match negative right criteria fault");
+        checkResult(condition, "Match negative, left condition matches right condition does not match");
     }
 
-    void matchNegativeBothCriteriaFaultTest() {
+    void matchNegativeBothConditionsDoNotMatchTest() {
         SearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Martin R.");
         SearchCriteria titleSearchCriteria = new TitleSearchCriteria("Clean Code - A Handbook of Agile Software Craftsmanship");
         SearchCriteria andSearchCriteria = new AndSearchCriteria(authorSearchCriteria, titleSearchCriteria);
         Book book = new Book("Martin K.", "Clean Code - A Handbook of Agile Software Craftsmanship rev 2");
         boolean condition = !andSearchCriteria.match(book);
-        checkResult(condition, "Match negative both criteria fault");
+        checkResult(condition, "Match negative, both conditions do not match");
     }
 
     public void checkResult(boolean condition, String testName) {
