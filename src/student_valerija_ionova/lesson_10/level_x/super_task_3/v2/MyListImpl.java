@@ -25,7 +25,7 @@ class MyListImpl implements  MyList{
 
     @Override
     public void insertElement(int index, int number) {
-
+        linkedListFromMe.insertElement(index, number);
     }
 
     @Override
