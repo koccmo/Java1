@@ -43,4 +43,12 @@ class ElementOfLinkedList {
     public int hashCode() {
         return Objects.hash(information, address);
     }
+
+    @Override
+    public String toString() {
+        return "ElementOfLinkedList{" +
+                "information=" + information +
+                ", address=" + address +
+                '}';
+    }
 }
