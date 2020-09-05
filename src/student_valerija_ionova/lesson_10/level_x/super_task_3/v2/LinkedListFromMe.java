@@ -13,20 +13,11 @@ class LinkedListFromMe {
         return lengthOfList;
     }
 
-    ElementOfLinkedList getAddressOfFirstElement(){
-        return firstElement.getAddress();
-    }
-
     LinkedListFromMe(){
         firstElement = new ElementOfLinkedList();
         lastElement = firstElement;
     }
 
-    /*
-    void createNewLinkedListFromMe(){
-        firstElement = new ElementOfLinkedList();
-        lastElement = firstElement;
-    }*/
 
     void addElement(int information){
         ElementOfLinkedList newElement = new ElementOfLinkedList();
@@ -50,7 +41,6 @@ class LinkedListFromMe {
         ElementOfLinkedList nextElement = getElementOfListByIndex(0);
         for (int i = 0; i <= index; i++){
             if (i == index) {
-                //exElement.setInformation(nextElement.getInformation());
                 exElement.setAddress(nextElement.getAddress());
             }else {
                 exElement = nextElement;
@@ -61,7 +51,19 @@ class LinkedListFromMe {
     }
 
     void insertElement(int index, int number) {
-
+        if (index == lengthOfList){
+            addElement(number);
+        }else{
+            ElementOfLinkedList exElement;
+            if (index == 0){
+                exElement = firstElement;
+            }else{
+                exElement = getElementOfListByIndex(index-1);
+            }
+            ElementOfLinkedList nextElement = getElementOfListByIndex(index);
+            exElement.setAddress(new ElementOfLinkedList(number, nextElement));
+        }
+        lengthOfList ++;
     }
 
 }
