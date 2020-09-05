@@ -22,6 +22,8 @@ class BookLibrary {
         menuNumberToActionMap.put(3, new FindByAuthorUIAction(bookDatabase));
         menuNumberToActionMap.put(4, new FindByTitleUIAction(bookDatabase));
         menuNumberToActionMap.put(5, new DeleteByIdUIAction(bookDatabase));
+        menuNumberToActionMap.put(6, new DeleteByBookUIAction(bookDatabase));
+        menuNumberToActionMap.put(7, new DeleteByBookUIAction(bookDatabase));
     }
 
     public void run() {
@@ -34,6 +36,8 @@ class BookLibrary {
                     "3   Find book by author\n" +
                     "4   Find book by title\n" +
                     "5   Delete book by title\n" +
+                    "6   Delete book\n" +
+                    "7   Number of books in library" +
                     "0   Exit");
 
             Scanner sc = new Scanner(System.in);
