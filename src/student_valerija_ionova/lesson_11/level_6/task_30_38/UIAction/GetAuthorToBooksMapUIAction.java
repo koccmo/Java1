@@ -13,7 +13,7 @@ public class GetAuthorToBooksMapUIAction implements UIAction{
 
     @Override
     public void execute() {
-        System.out.println("Please see books of each author:");
-        bookDatabase.getAuthorToBooksMap();
+        System.out.println("Please see books of each author:" + bookDatabase.getAuthorToBooksMap());
+
     }
 }
