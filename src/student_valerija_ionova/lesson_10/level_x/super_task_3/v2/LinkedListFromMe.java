@@ -45,4 +45,23 @@ class LinkedListFromMe {
         return foundedElement;
     }
 
+    void deleteElementFromList(int index) {
+        ElementOfLinkedList exElement = firstElement;
+        ElementOfLinkedList nextElement = getElementOfListByIndex(0);
+        for (int i = 0; i <= index; i++){
+            if (i == index) {
+                //exElement.setInformation(nextElement.getInformation());
+                exElement.setAddress(nextElement.getAddress());
+            }else {
+                exElement = nextElement;
+                nextElement = nextElement.getAddress();
+            }
+        }
+        lengthOfList --;
+    }
+
+    void insertElement(int index, int number) {
+
+    }
+
 }
