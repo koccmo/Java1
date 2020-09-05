@@ -30,6 +30,7 @@ class BookLibrary {
         menuNumberToActionMap.put(11, new FindUniqueTitlesUIAction(bookDatabase));
         menuNumberToActionMap.put(12, new FindUniqueBooksUIAction(bookDatabase));
         menuNumberToActionMap.put(13, new ContainsUIAction(bookDatabase));
+        menuNumberToActionMap.put(14, new GetAuthorToBooksMapUIAction(bookDatabase));
     }
 
     public void run() {
@@ -50,6 +51,7 @@ class BookLibrary {
                     "11  Find unique titles" +
                     "12  Find unique books" +
                     "13  Check if entered book is in library" +
+                    "14  Get books of all authors" +
                     "0   Exit");
 
             Scanner sc = new Scanner(System.in);
