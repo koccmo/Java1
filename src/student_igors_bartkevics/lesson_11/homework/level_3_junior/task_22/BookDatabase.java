@@ -3,7 +3,7 @@ package student_igors_bartkevics.lesson_11.homework.level_3_junior.task_22;
 import java.util.List;
 import java.util.Optional;
 
-public interface BookDatabase {
+interface BookDatabase {
 
     Long save(Book book);
 
