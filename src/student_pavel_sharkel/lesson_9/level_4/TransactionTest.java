@@ -13,6 +13,7 @@ public class TransactionTest {
         transactionTest.cityFalseTest();
         transactionTest.countryTrueTest();
         transactionTest.countryFalseTest();
+        transactionTest.germanCheckingTest();
 
     }
 
@@ -103,6 +104,18 @@ public class TransactionTest {
             System.out.println("County false test is FAILED");
         } else {
             System.out.println("Country false test is OK");
+        }
+    }
+
+    public void germanCheckingTest() {
+        Trader trader = new Trader("Tim", "Berlin", "Germany");
+        Transaction transaction = new Transaction(trader, 5000);
+        FraudDetector fraudDetector = new FraudDetector();
+
+        if (fraudDetector.isGermanTransaction(trader,transaction)) {
+            System.out.println("German transactions over 1000 test is FAILED");
+        } else {
+            System.out.println("German transactions over 1000 test is OK");
         }
     }
 }

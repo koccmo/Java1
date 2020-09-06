@@ -34,7 +34,6 @@ class FraudDetector {
         }
 
         boolean isCountryOk(Trader trader) {
-
             if (trader.getCountry().equals("Jamaica")) {
                 return false;
             } else {
@@ -42,4 +41,11 @@ class FraudDetector {
             }
         }
 
+        boolean isGermanTransaction(Trader trader, Transaction transaction) {
+            if (trader.getCountry().equals("Germany") && transaction.getAmount() > 1000) {
+                return false;
+            } else {
+                return true;
+            }
+        }
 }
