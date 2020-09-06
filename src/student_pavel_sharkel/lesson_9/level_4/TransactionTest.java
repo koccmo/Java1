@@ -1,6 +1,6 @@
 package student_pavel_sharkel.lesson_9.level_4;
 
-public class TransactionTest {
+class TransactionTest {
 
     public static void main(String[] args) {
 
