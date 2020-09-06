@@ -18,14 +18,12 @@ public class InMemoryDatabase implements  Database{
 
     @Override
     public Optional <Product> findByTitle(String productTitle) {
-            Optional <Product> result = Optional.empty();
             for (Product product : products){
                 if (product.getTitle().equals(productTitle)){
-                    result = Optional.ofNullable(product);
+                    return Optional.of(product);
                 }
             }
-
-        return result;
+        return Optional.empty();
     }
 
 

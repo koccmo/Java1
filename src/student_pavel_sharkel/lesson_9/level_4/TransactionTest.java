@@ -7,6 +7,8 @@ public class TransactionTest {
         TransactionTest transactionTest = new TransactionTest();
         transactionTest.isPokemonTest();
         transactionTest.notPokemonTest();
+        transactionTest.valueTrueTest();
+        transactionTest.valueFalseTest();
 
     }
 
@@ -31,6 +33,30 @@ public class TransactionTest {
             System.out.println("Is Pokemon test is FAILED");
         } else {
             System.out.println("Is Pokemon test is OK");
+        }
+    }
+
+    public void valueTrueTest() {
+        Trader trader = new Trader("TestName", "Jekabpils");
+        Transaction transaction = new Transaction(trader, 10);
+        FraudDetector fraudDetector = new FraudDetector();
+
+        if (fraudDetector.isValueOk(trader)) {
+            System.out.println("Value true test is OK");
+        } else {
+            System.out.println("Value true test is FAILED");
+        }
+    }
+
+    public void valueFalseTest() {
+        Trader trader = new Trader("TestName", "Jekabpils");
+        Transaction transaction = new Transaction(trader, 1000000);
+        FraudDetector fraudDetector = new FraudDetector();
+
+        if (fraudDetector.isValueOk(trader)) {
+            System.out.println("Value false test is OK");
+        } else {
+            System.out.println("Value false test is FAILED");
         }
     }
 }

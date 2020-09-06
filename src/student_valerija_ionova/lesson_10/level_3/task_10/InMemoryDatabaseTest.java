@@ -1,6 +1,8 @@
 package student_valerija_ionova.lesson_10.level_3.task_10;
 
 
+import java.util.Optional;
+
 class InMemoryDatabaseTest {
 
     public static void main (String [] args){
@@ -38,9 +40,9 @@ class InMemoryDatabaseTest {
         inMemoryDatabase.save(milk);
         inMemoryDatabase.save(bread);
 
-        Product result = inMemoryDatabase.findByTitle("Bread").orElse(null);
+        Product expectedResult = new Product("Bread");
 
-        printResult("testProductFind", result.getTitle().equals("Bread"));
+        printResult("testProductFindTrue", expectedResult.equals(inMemoryDatabase.findByTitle("Bread").get()));
     }
 
     void testProductFindNotFound(){
@@ -51,9 +53,9 @@ class InMemoryDatabaseTest {
         inMemoryDatabase.save(milk);
         inMemoryDatabase.save(bread);
 
-        Product result = inMemoryDatabase.findByTitle("Potatoes").orElse(null);
+        Optional result = Optional.empty();
 
-        printResult("testProductFind", result == null);
+        printResult("testProductFindNotFound", inMemoryDatabase.findByTitle("Juice").equals(result));
     }
 
 

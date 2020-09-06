@@ -1,9 +1,9 @@
 package student_valerija_ionova.lesson_11.level_6.task_30_38.UIAction;
 
-import student_valerija_ionova.lesson_11.level_6.task_30_38.Book;
+
 import student_valerija_ionova.lesson_11.level_6.task_30_38.BookDatabase;
 
-import java.util.Optional;
+
 import java.util.Scanner;
 
 class DeleteByIdUIAction implements  UIAction{

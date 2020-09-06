@@ -21,7 +21,17 @@ class BookLibrary {
         menuNumberToActionMap.put(2, new FindByIdUIAction(bookDatabase));
         menuNumberToActionMap.put(3, new FindByAuthorUIAction(bookDatabase));
         menuNumberToActionMap.put(4, new FindByTitleUIAction(bookDatabase));
-        menuNumberToActionMap.put(5, new DeleteByIdUIAction(bookDatabase));
+        menuNumberToActionMap.put(5, new DeleteByTitleUIAction(bookDatabase));
+        menuNumberToActionMap.put(6, new DeleteByBookUIAction(bookDatabase));
+        menuNumberToActionMap.put(7, new CountAllBooksUIAction(bookDatabase));
+        menuNumberToActionMap.put(8, new DeleteByAuthorUIAction(bookDatabase));
+        menuNumberToActionMap.put(9, new DeleteByTitleUIAction(bookDatabase));
+        menuNumberToActionMap.put(10, new FindUniqueAuthorsUIAction(bookDatabase));
+        menuNumberToActionMap.put(11, new FindUniqueTitlesUIAction(bookDatabase));
+        menuNumberToActionMap.put(12, new FindUniqueBooksUIAction(bookDatabase));
+        menuNumberToActionMap.put(13, new ContainsUIAction(bookDatabase));
+        menuNumberToActionMap.put(14, new GetAuthorToBooksMapUIAction(bookDatabase));
+        menuNumberToActionMap.put(15, new GetEachAuthorsCountUIAction(bookDatabase));
     }
 
     public void run() {
@@ -34,6 +44,16 @@ class BookLibrary {
                     "3   Find book by author\n" +
                     "4   Find book by title\n" +
                     "5   Delete book by title\n" +
+                    "6   Delete book by book\n" +
+                    "7   Number of books in library\n" +
+                    "8   Delete by author\n" +
+                    "9   Delete by title\n" +
+                    "10  Find unique authors\n" +
+                    "11  Find unique titles\n" +
+                    "12  Find unique books\n" +
+                    "13  Check if entered book is in library\n" +
+                    "14  Get books of all authors\n" +
+                    "15  Get each author book count\n"+
                     "0   Exit");
 
             Scanner sc = new Scanner(System.in);

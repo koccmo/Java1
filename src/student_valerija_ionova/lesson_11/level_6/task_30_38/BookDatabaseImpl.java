@@ -15,9 +15,6 @@ public class BookDatabaseImpl implements BookDatabase {
     private List<BookAndId> bookDataBase = new ArrayList<>();
     private Long number = 0L;
 
-    List <BookAndId> getBookDataBase(){
-        return bookDataBase;
-    }
 
     @Override
     public Long save(Book book) {
@@ -150,6 +147,7 @@ public class BookDatabaseImpl implements BookDatabase {
         }
         return false;
     }
+
 
     @Override
     public Map<String, List<Book>> getAuthorToBooksMap() {

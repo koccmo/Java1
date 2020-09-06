@@ -40,24 +40,29 @@ class BookDatabaseTestTODO {
         bookDatabase.save(book6);
 
         Map<String, List<Book>> result = new HashMap<>();
-        List <Book> listOfBooks = new ArrayList<>();
-        listOfBooks.add(book1);
-        listOfBooks.add(book2);
-        result.put("Author1", listOfBooks);
-        listOfBooks.clear();
-        listOfBooks.add(book3);
-        listOfBooks.add(book4);
-        result.put("Author3", listOfBooks);
-        listOfBooks.clear();
-        listOfBooks.add(book2);
-        result.put("Author2", listOfBooks);
-        listOfBooks.clear();
-        listOfBooks.add(book6);
-        result.put("Author20", listOfBooks);
 
-        System.out.println(bookDatabase.getAuthorToBooksMap());
-        //Как сравнить map не учитывая порядок??? :(
-        //checkResult("testContainsBookFalse",);
+        List <Book> listOfBooks1 = new ArrayList<>();
+        listOfBooks1.add(book1);
+        listOfBooks1.add(book2);
+        result.put("Author1", listOfBooks1);
+
+        List <Book> listOfBooks2 = new ArrayList<>();
+        listOfBooks2.add(book3);
+        listOfBooks2.add(book4);
+        result.put("Author3", listOfBooks2);
+
+        List <Book> listOfBooks3 = new ArrayList<>();
+        listOfBooks3.add(book5);
+        result.put("Author2", listOfBooks3);
+
+        List <Book> listOfBooks4 = new ArrayList<>();
+        listOfBooks4.add(book6);
+        result.put("Author20", listOfBooks4);
+
+        //System.out.println(bookDatabase.getAuthorToBooksMap());
+
+        //System.out.println("\n" + result);
+        checkResult("testGetAuthorToBooksMap", compareTwoMaps(result, bookDatabase.getAuthorToBooksMap()));
     }
 
     void testGetAuthorsBookCount(){
@@ -83,9 +88,21 @@ class BookDatabaseTestTODO {
         result.put("Author2", 1);
         result.put("Author20", 1);
 
-        System.out.println(bookDatabase.getEachAuthorBookCount());
-        //Как сравнить map не учитывая порядок??? :(
-        //checkResult("testContainsBookFalse",);
+        //System.out.println(bookDatabase.getEachAuthorBookCount());
+        
+        checkResult("testGetAuthorsBookCount", compareTwoMaps(result, bookDatabase.getEachAuthorBookCount()));
+    }
+
+    boolean compareTwoMaps(Map map1, Map map2 ){
+        if (map1.size()!=map2.size()){
+            return false;
+        }else{
+            for (Object key : map1.keySet()){
+                Object value = map1.get(key);
+                if (!value.equals(map2.get(key))) return false;
+            }
+        }
+        return true;
     }
 
 }

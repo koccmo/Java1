@@ -208,9 +208,5 @@ class BookDatabaseImpl implements BookDatabase {
     }
 
 
-    BookAndId getBookAndId (Long index){
-        return bookDataBase.get(index.intValue());
-    }
-
 
 }
