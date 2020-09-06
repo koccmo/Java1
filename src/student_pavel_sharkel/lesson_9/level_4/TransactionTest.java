@@ -9,12 +9,13 @@ public class TransactionTest {
         transactionTest.notPokemonTest();
         transactionTest.valueTrueTest();
         transactionTest.valueFalseTest();
+        transactionTest.cityTrueTest();
+        transactionTest.cityFalseTest();
 
     }
 
     public void notPokemonTest() {
         Trader trader = new Trader("Albert", "Ludza");
-        //Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector();
 
         if (fraudDetector.isFraud(trader)) {
@@ -26,7 +27,6 @@ public class TransactionTest {
 
     public void isPokemonTest() {
         Trader trader = new Trader("Pokemon", "Talsi");
-        //Transaction transaction = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector();
 
         if (fraudDetector.isFraud(trader)) {
@@ -57,6 +57,28 @@ public class TransactionTest {
             System.out.println("Value false test is OK");
         } else {
             System.out.println("Value false test is FAILED");
+        }
+    }
+
+    public void cityTrueTest() {
+        Trader trader = new Trader("Janis", "Orge");
+        FraudDetector fraudDetector = new FraudDetector();
+
+        if (fraudDetector.isCityOk(trader)) {
+            System.out.println("City true test is OK");
+        } else {
+            System.out.println("City true test is FAILED");
+        }
+    }
+
+    public void cityFalseTest() {
+        Trader trader = new Trader("Robert", "Sydney");
+        FraudDetector fraudDetector = new FraudDetector();
+
+        if (fraudDetector.isCityOk(trader)) {
+            System.out.println("City false test is FAILED");
+        } else {
+            System.out.println("City false test is OK");
         }
     }
 }
