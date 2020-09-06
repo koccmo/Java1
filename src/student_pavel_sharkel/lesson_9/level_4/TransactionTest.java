@@ -11,11 +11,13 @@ public class TransactionTest {
         transactionTest.valueFalseTest();
         transactionTest.cityTrueTest();
         transactionTest.cityFalseTest();
+        transactionTest.countryTrueTest();
+        transactionTest.countryFalseTest();
 
     }
 
     public void notPokemonTest() {
-        Trader trader = new Trader("Albert", "Ludza");
+        Trader trader = new Trader("Albert", "Ludza", "Latvija");
         FraudDetector fraudDetector = new FraudDetector();
 
         if (fraudDetector.isFraud(trader)) {
@@ -26,7 +28,7 @@ public class TransactionTest {
     }
 
     public void isPokemonTest() {
-        Trader trader = new Trader("Pokemon", "Talsi");
+        Trader trader = new Trader("Pokemon", "Talsi", "Latvija");
         FraudDetector fraudDetector = new FraudDetector();
 
         if (fraudDetector.isFraud(trader)) {
@@ -37,7 +39,7 @@ public class TransactionTest {
     }
 
     public void valueTrueTest() {
-        Trader trader = new Trader("TestName", "Jekabpils");
+        Trader trader = new Trader("TestName", "Jekabpils", "Latvija");
         Transaction transaction = new Transaction(trader, 10);
         FraudDetector fraudDetector = new FraudDetector();
 
@@ -49,7 +51,7 @@ public class TransactionTest {
     }
 
     public void valueFalseTest() {
-        Trader trader = new Trader("TestName", "Jekabpils");
+        Trader trader = new Trader("TestName", "Jekabpils", "Latvija");
         Transaction transaction = new Transaction(trader, 1000000);
         FraudDetector fraudDetector = new FraudDetector();
 
@@ -61,7 +63,7 @@ public class TransactionTest {
     }
 
     public void cityTrueTest() {
-        Trader trader = new Trader("Janis", "Orge");
+        Trader trader = new Trader("Janis", "Orge", "Latvija");
         FraudDetector fraudDetector = new FraudDetector();
 
         if (fraudDetector.isCityOk(trader)) {
@@ -72,13 +74,35 @@ public class TransactionTest {
     }
 
     public void cityFalseTest() {
-        Trader trader = new Trader("Robert", "Sydney");
+        Trader trader = new Trader("Robert", "Sydney", "Australia");
         FraudDetector fraudDetector = new FraudDetector();
 
         if (fraudDetector.isCityOk(trader)) {
             System.out.println("City false test is FAILED");
         } else {
             System.out.println("City false test is OK");
+        }
+    }
+
+    public void countryTrueTest() {
+        Trader trader = new Trader("John", "Vilnius", "Lithuania");
+        FraudDetector fraudDetector = new FraudDetector();
+
+        if (fraudDetector.isCountryOk(trader)) {
+            System.out.println("County true test is OK");
+        } else {
+            System.out.println("Country true test is FAILED");
+        }
+    }
+
+    public void countryFalseTest() {
+        Trader trader = new Trader("Albert", "Kingston", "Jamaica");
+        FraudDetector fraudDetector = new FraudDetector();
+
+        if (fraudDetector.isCountryOk(trader)) {
+            System.out.println("County false test is FAILED");
+        } else {
+            System.out.println("Country false test is OK");
         }
     }
 }

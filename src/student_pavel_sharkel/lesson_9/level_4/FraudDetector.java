@@ -3,7 +3,7 @@ package student_pavel_sharkel.lesson_9.level_4;
 class FraudDetector {
 
     boolean isFraud(Trader trader) {
-        if (isNameOk(trader) && isValueOk(trader) && isCityOk(trader)) { return true;} else {return false;}
+        if (isNameOk(trader) && isValueOk(trader) && isCityOk(trader) && isCountryOk(trader)) { return true;} else {return false;}
 
         }
 
@@ -27,6 +27,15 @@ class FraudDetector {
 
         boolean isCityOk(Trader trader) {
             if (trader.getCity().equals("Sydney")) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        boolean isCountryOk(Trader trader) {
+
+            if (trader.getCountry().equals("Jamaica")) {
                 return false;
             } else {
                 return true;
