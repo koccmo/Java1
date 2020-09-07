@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_10.level_2.task_4;
+package student_anvars_intezars.home_tasks.lesson_10.level_2.task_4_5;
 
 interface DayOfTheWeekDetector {
 
