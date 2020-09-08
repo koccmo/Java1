@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_10.level_6;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BookReaderImpl implements  BookReader{
 
     BookReaderUtil bookReaderUtil = new BookReaderUtil();

@@ -1,6 +1,6 @@
 package teacher.lesson_12.lessoncode;
 
-public class AccessDeniedException extends Exception {
+public class AccessDeniedException extends RuntimeException {
 
 	private String invalidSequrityKey;
 

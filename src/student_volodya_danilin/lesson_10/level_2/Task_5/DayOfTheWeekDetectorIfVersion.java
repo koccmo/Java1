@@ -1,7 +1,12 @@
 package student_volodya_danilin.lesson_10.level_2.Task_5;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class DayOfTheWeekDetectorIfVersion implements DayOfTheWeekDetector {
 
+	@CodeReviewComment(teacher = "This field must be private!")
     String detectorName;
 
     DayOfTheWeekDetectorIfVersion(String detectorName) {

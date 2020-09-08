@@ -1,5 +1,7 @@
 Найдите в интернете информацию про класс java.util.Optional.
 
+@CodeReview(approved = true)
+
 Для чего применяются объекты этого класса?
     Класс Optional<T> добавленный в JDK 8. Этот класс призван чтобы спасти нас от
     NullPointerException (NPE) и от проверок на null.

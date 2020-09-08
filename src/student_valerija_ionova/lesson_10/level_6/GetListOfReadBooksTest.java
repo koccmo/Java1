@@ -3,6 +3,11 @@ package student_valerija_ionova.lesson_10.level_6;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
+@CodeReviewComment(teacher = "Please remove unused imports.")
 public class GetListOfReadBooksTest {
 
     public static void main (String [] args){

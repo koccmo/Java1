@@ -8,6 +8,10 @@ package student_igors_bartkevics.lesson_10.homework.level_3.task_6;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
+
 @FunctionalInterface
 interface Flyable {
     void fly();

@@ -1,5 +1,10 @@
 package student_igors_bartkevics.lesson_10.homework.level_2.Task_4_5;
+
 import java.util.Scanner;
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class DayOfTheWeekDetectorDemo {
 
     private DayOfTheWeekDetector detector;

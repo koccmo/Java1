@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_10.level_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class BookIsReadTest {
 
     public static void main (String [] args){

@@ -1,5 +1,8 @@
 package student_anvars_intezars.home_tasks.lesson_10.level_1.task_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 interface MyList {
 
     //При помощи данного метода, у пользователья будет возможность добавить новый эелемент списка данных

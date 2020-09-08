@@ -1,7 +1,12 @@
-package student_anvars_intezars.home_tasks.lesson_10.level_2.task_4;
+package student_anvars_intezars.home_tasks.lesson_10.level_2.task_4_5;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 class DayOfTheWeekDetectorIfVersion implements DayOfTheWeekDetector{
 
+	@CodeReviewComment(teacher = "Put @Override annotation on methods from interfaces.")
      public String detectDayName(int number) {
         if (number == 1) {
             return "Monday";

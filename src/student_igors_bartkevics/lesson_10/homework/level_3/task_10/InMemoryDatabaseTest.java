@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_10.homework.level_3.task_10;
 
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class InMemoryDatabaseTest {
 
     public static void main(String[] args) {

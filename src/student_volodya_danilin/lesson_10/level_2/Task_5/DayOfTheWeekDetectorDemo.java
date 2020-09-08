@@ -1,13 +1,19 @@
 package student_volodya_danilin.lesson_10.level_2.Task_5;
 
 import student_dmitrijs_jasvins.lesson_10.day_1.task_2.ArrayUtil;
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
 
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 class DayOfTheWeekDetectorDemo {
 
     DayOfTheWeekDetector detector;
+
+    @CodeReviewComment(teacher = "Remove unused field!")
     Scanner userInput = new Scanner(System.in);
+	@CodeReviewComment(teacher = "Remove unused field!")
     int userNumber;
 
     DayOfTheWeekDetectorDemo(DayOfTheWeekDetector detector) {

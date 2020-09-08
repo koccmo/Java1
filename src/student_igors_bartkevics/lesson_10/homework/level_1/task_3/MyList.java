@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_10.homework.level_1.task_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 interface MyList {
 
     void add(int value); //add new element to end of the list
