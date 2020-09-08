@@ -2,8 +2,13 @@ package student_anvars_intezars.home_tasks.lesson_10.level_2.task_4_5;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 class DayOfTheWeekDetectorDemo {
 
+	@CodeReviewComment(teacher = "This property not used, why this property exists?")
     private DayOfTheWeekDetector dayOfTheWeekDetector;
 
     DayOfTheWeekDetectorDemo(DayOfTheWeekDetector dayOfTheWeekDetector) {

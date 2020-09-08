@@ -6,6 +6,9 @@ package student_anvars_intezars.home_tasks.lesson_10.level_3.task_6;
 число положительным, либо отрицательным.
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class FunctionalInterfaceDemo {
 
     public static void main(String[] args) {
