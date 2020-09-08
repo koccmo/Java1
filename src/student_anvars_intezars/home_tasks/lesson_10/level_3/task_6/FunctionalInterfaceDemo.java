@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_10.level_3;
+package student_anvars_intezars.home_tasks.lesson_10.level_3.task_6;
 
 /*
 В данном коде отображено как работает абстратный метод,
