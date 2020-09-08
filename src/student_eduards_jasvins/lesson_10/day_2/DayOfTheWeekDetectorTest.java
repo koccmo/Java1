@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_10.day_2;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class DayOfTheWeekDetectorTest {
 
     public static void main(String[] args) {
