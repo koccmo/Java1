@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_10.level_x.super_task_3.v2;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ElementOfLinkedList {
 
     private int information;

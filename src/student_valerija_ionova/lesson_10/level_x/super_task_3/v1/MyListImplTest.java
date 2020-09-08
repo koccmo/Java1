@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_10.level_x.super_task_3.v1;
 
 import java.util.LinkedList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class MyListImplTest {
 
     public static void main (String [] args){

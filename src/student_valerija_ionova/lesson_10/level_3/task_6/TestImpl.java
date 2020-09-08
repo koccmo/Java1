@@ -4,6 +4,9 @@ package student_valerija_ionova.lesson_10.level_3.task_6;
 // Основное назначение – использование в лямбда выражениях и method reference.
 //функциональные интерфейсы могут содержать дополнительно абстрактные методы, определенные в классе Object
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TestImpl {
 
     public static void main(String[] args){

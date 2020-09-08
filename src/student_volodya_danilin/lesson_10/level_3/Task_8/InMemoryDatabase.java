@@ -3,8 +3,13 @@ package student_volodya_danilin.lesson_10.level_3.Task_8;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class InMemoryDatabase implements Database{
 
+	@CodeReviewComment(teacher = "Must be private field!")
     List<Product> productList = new ArrayList<>();
 
     @Override

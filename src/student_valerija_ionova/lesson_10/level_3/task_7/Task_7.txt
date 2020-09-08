@@ -2,6 +2,8 @@
 
 Нет, тут 2 метода.
 
+@CodeReview(approved = true)
+
 interface Database {
 
     void save(Product product);

@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_10.level_x.super_task_3.v1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 interface MyList {
 
 

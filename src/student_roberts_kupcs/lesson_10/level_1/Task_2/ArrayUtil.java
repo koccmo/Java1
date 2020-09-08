@@ -1,5 +1,8 @@
 package student_roberts_kupcs.lesson_10.level_1.Task_2;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 interface ArrayUtil {
 
     int[] createArray(int arrayLength);

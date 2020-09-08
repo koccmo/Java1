@@ -1,7 +1,12 @@
 package student_valerija_ionova.lesson_10.level_x.super_task_2;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class MyListImpl implements  MyList{
 
+	@CodeReviewComment(teacher = "Must be private!")
     String [] array;
 
     MyListImpl (String [] array){

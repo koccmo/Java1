@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_10.level_x.super_task_1;
 
 //Класс контекста использующий интерфейс стратегии
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Context {
 
     private Strategy strategy;

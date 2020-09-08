@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_10.level_6;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class FindBookByTitle {
 
     public static void main (String [] args){

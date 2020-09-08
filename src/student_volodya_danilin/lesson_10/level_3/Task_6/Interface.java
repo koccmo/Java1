@@ -6,6 +6,10 @@ package student_volodya_danilin.lesson_10.level_3.Task_6;
 Ниже приведён пример :
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
+
 interface Interface {
     void abstractPrint(String message);     // <- абстрактный метод
 

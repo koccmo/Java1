@@ -16,6 +16,9 @@ package student_valerija_ionova.lesson_10.level_1.task_3;
 
 Цель этого задания самостоятельно разработать свой интерфейс MyList.*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public interface MyList {
 
 
