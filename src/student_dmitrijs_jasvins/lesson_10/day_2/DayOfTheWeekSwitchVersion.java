@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_10.day_2;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class DayOfTheWeekSwitchVersion implements DayOfTheWeekDetector {
     @Override
     public String detectDayName(int number) {
