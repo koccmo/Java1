@@ -1,5 +1,7 @@
 Является ли следующий интерфейс функциональным?
 
+@CodeReview(approved = true)
+
 interface Database {
 
     void save(Product product);                 // 1-ый абстрактный метод

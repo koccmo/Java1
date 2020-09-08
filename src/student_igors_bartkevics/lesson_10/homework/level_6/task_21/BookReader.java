@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_10.homework.level_6.task_21;
 
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 interface BookReader {
 
     boolean addBook(Book book);

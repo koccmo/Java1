@@ -1,10 +1,16 @@
 package student_igors_bartkevics.lesson_10.homework.level_3.task_8;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
 import student_dmitrijs_jasvins.lesson_9.day_2.task_12.A;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+@CodeReview(approved = true)
+@CodeReviewComment(teacher = "Please delete unused import statements.")
 class InMemoryDatabase implements Database{
 
     private List<Product> listOfProducts = new ArrayList<>();
