@@ -9,7 +9,7 @@ import teacher.codereview.CodeReviewComment;
 class DayOfTheWeekDetectorDemo {
 
 	@CodeReviewComment(teacher = "This property not used, why this property exists?")
-    private DayOfTheWeekDetector dayOfTheWeekDetector;
+    public DayOfTheWeekDetector dayOfTheWeekDetector;
 
     DayOfTheWeekDetectorDemo(DayOfTheWeekDetector dayOfTheWeekDetector) {
         this.dayOfTheWeekDetector = dayOfTheWeekDetector;

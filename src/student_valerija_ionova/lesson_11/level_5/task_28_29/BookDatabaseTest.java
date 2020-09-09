@@ -3,11 +3,11 @@ package student_valerija_ionova.lesson_11.level_5.task_28_29;
 
 import java.util.*;
 
-class BookDatabaseTestTODO {
+class BookDatabaseTest {
 
         public static void main (String [] args){
 
-            BookDatabaseTestTODO authorSearchCriteriaTest = new BookDatabaseTestTODO();
+            BookDatabaseTest authorSearchCriteriaTest = new BookDatabaseTest();
 
             authorSearchCriteriaTest.testGetAuthorToBooksMap();
             authorSearchCriteriaTest.testGetAuthorsBookCount();
@@ -89,7 +89,7 @@ class BookDatabaseTestTODO {
         result.put("Author20", 1);
 
         //System.out.println(bookDatabase.getEachAuthorBookCount());
-        
+
         checkResult("testGetAuthorsBookCount", compareTwoMaps(result, bookDatabase.getEachAuthorBookCount()));
     }
 
