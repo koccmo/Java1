@@ -13,4 +13,8 @@ class Transaction {
     public int getAmount() {
         return amount;
     }
+
+    public Trader getTrader() {
+        return trader;
+    }
 }

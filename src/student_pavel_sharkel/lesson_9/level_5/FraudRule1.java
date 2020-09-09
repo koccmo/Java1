@@ -7,6 +7,7 @@ class FraudRule1 extends FraudRule {
     }
 
     public boolean isFraud(Transaction t) {
+        Trader trader = t.getTrader();
             String traderName = trader.getFullName();
             if (traderName.equals("Pokemon")) {
                 return false;
