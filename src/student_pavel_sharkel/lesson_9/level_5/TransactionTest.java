@@ -5,80 +5,81 @@ class TransactionTest {
     public static void main(String[] args) {
 
         TransactionTest transactionTest = new TransactionTest();
-        transactionTest.isPokemonTest();
         transactionTest.notPokemonTest();
+        transactionTest.isPokemonTest();
         transactionTest.valueTrueTest();
         transactionTest.valueFalseTest();
         transactionTest.cityTrueTest();
         transactionTest.cityFalseTest();
-        transactionTest.countryTrueTest();
-        transactionTest.countryFalseTest();
-        transactionTest.germanCheckingTest();
 
     }
 
-    public void notPokemonTest() {
+    void notPokemonTest() {
         Trader trader = new Trader("Albert", "Ludza", "Latvija");
-        FraudDetector fraudDetector = new FraudDetector();
+        FraudRule rule1 = new FraudRule1("rule1");
+        Transaction t = new Transaction(trader, 200);
 
-        if (fraudDetector.isFraud(trader)) {
+        if (rule1.isFraud(t)) {
             System.out.println("Not Pokemon test is OK");
         } else {
             System.out.println("Not Pokemon test is FAILED");
         }
     }
 
-    public void isPokemonTest() {
+    void isPokemonTest() {
         Trader trader = new Trader("Pokemon", "Talsi", "Latvija");
-        FraudDetector fraudDetector = new FraudDetector();
+        FraudRule rule1 = new FraudRule1("rule1");
+        Transaction t = new Transaction(trader, 200);
 
-        if (fraudDetector.isFraud(trader)) {
+        if (rule1.isFraud(t)) {
             System.out.println("Is Pokemon test is FAILED");
         } else {
             System.out.println("Is Pokemon test is OK");
         }
     }
 
-    public void valueTrueTest() {
+    void valueTrueTest() {
         Trader trader = new Trader("TestName", "Jekabpils", "Latvija");
-        Transaction transaction = new Transaction(trader, 10);
-        FraudDetector fraudDetector = new FraudDetector();
+        FraudRule rule2 = new FraudRule2("rule2");
+        Transaction t = new Transaction(trader, 10);
 
-        if (fraudDetector.isValueOk(trader)) {
+        if (rule2.isFraud(t)) {
             System.out.println("Value true test is OK");
         } else {
             System.out.println("Value true test is FAILED");
         }
     }
 
-    public void valueFalseTest() {
+    void valueFalseTest() {
         Trader trader = new Trader("TestName", "Jekabpils", "Latvija");
-        Transaction transaction = new Transaction(trader, 1000000);
-        FraudDetector fraudDetector = new FraudDetector();
+        FraudRule rule2 = new FraudRule2("rule2");
+        Transaction t = new Transaction(trader, 1000000);
 
-        if (fraudDetector.isValueOk(trader)) {
+        if (rule2.isFraud(t)) {
             System.out.println("Value false test is OK");
         } else {
             System.out.println("Value false test is FAILED");
         }
     }
 
-    public void cityTrueTest() {
+    void cityTrueTest() {
         Trader trader = new Trader("Janis", "Orge", "Latvija");
-        FraudDetector fraudDetector = new FraudDetector();
+        FraudRule rule3 = new FraudRule3("rule3");
+        Transaction t = new Transaction(trader, 100);
 
-        if (fraudDetector.isCityOk(trader)) {
+        if (rule3.isFraud(t)) {
             System.out.println("City true test is OK");
         } else {
             System.out.println("City true test is FAILED");
         }
     }
 
-    public void cityFalseTest() {
+    void cityFalseTest() {
         Trader trader = new Trader("Robert", "Sydney", "Australia");
-        FraudDetector fraudDetector = new FraudDetector();
+        FraudRule rule3 = new FraudRule3("rule3");
+        Transaction t = new Transaction(trader, 100);
 
-        if (fraudDetector.isCityOk(trader)) {
+        if (rule3.isFraud(t)) {
             System.out.println("City false test is FAILED");
         } else {
             System.out.println("City false test is OK");
