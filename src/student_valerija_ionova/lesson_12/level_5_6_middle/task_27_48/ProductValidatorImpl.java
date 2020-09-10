@@ -2,34 +2,27 @@ package student_valerija_ionova.lesson_12.level_5_6_middle.task_27_48;
 
 /*Task34
 Создайте класс ProductValidatorImpl который реализует интерфейс ProductValidator.
+*/
 
-Приведём ещё раз все выбвинутые на данный момент требования к валидации:
-
-К названию продукта выдвигаются следующие требования:
-- не должно быть пустым
-- не должно быть короче 3 символов
-- не должно быть длиннее 100 символов
-- должно содержать только английские буквы и цифры, другие символы не допустимы
-
-К цене продукта выдвигаются следующие требования:
-- не должна быть пустой
-- должна содержать только цифры
-- не может быть 0
-
-К описанию продукта выдвигаются следующие требования:
-- не должно быть длиннее 2000 символов
-- должно содержать только английские буквы и цифры, другие символы не допустимы
-
-
-Что вы будете делать дальше после того как внешний интерфейс системы уже определён?*/
-
+import java.util.ArrayList;
 import java.util.List;
 
 class ProductValidatorImpl implements ProductValidator{
 
+    private ProductTitleValidationRule titleValidationRule;
+
+    public ProductValidatorImpl(ProductTitleValidationRule titleValidationRule) {
+        this.titleValidationRule = titleValidationRule;
+    }
 
     @Override
     public List<ValidationException> validate(Product product) {
-        return null;
+        List<ValidationException> exceptions = new ArrayList<>();
+        try {
+            titleValidationRule.validate(product);
+        } catch (ValidationException e) {
+            exceptions.add(e);
+        }
+        return exceptions;
     }
 }
