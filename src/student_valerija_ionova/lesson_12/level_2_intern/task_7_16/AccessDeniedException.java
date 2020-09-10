@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_12.level_2_intern.task_7;
+package student_valerija_ionova.lesson_12.level_2_intern.task_7_16;
 
 /*Для описания ошибки обозначающей, что у пользователя нет
 прав вызывать метод findByUid() нужно создать свой класс ошибки:

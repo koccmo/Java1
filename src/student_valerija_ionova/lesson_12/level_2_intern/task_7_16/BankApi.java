@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_12.level_2_intern.task_7;
+package student_valerija_ionova.lesson_12.level_2_intern.task_7_16;
 
 /*Task10
 В интерфейсе мы сможем чётко обозначить

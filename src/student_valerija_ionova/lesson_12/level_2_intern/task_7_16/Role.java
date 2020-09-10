@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_12.level_2_intern.task_7;
+package student_valerija_ionova.lesson_12.level_2_intern.task_7_16;
 
 /*Вам поручили разработать API (Application User Interface)
 и его реализацию для доступа к базе клиентов банка.
