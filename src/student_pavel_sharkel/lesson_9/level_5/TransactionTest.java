@@ -13,6 +13,9 @@ class TransactionTest {
         transactionTest.cityFalseTest();
         transactionTest.countryTrueTest();
         transactionTest.countryFalseTest();
+        transactionTest.overGermanFalseTest();
+        transactionTest.overGermanTrue1Test();
+        transactionTest.overGermanTrue2Test();
 
     }
 
@@ -112,15 +115,40 @@ class TransactionTest {
         }
     }
 
-    public void germanCheckingTest() {
+    void overGermanFalseTest() {
         Trader trader = new Trader("Tim", "Berlin", "Germany");
-        Transaction transaction = new Transaction(trader, 5000);
-        FraudDetector fraudDetector = new FraudDetector();
+        FraudRule rule5 = new FraudRule5("rule5");
+        Transaction t = new Transaction(trader, 5000);
 
-        if (fraudDetector.isGermanTransaction(trader,transaction)) {
-            System.out.println("German transactions over 1000 test is FAILED");
+        if (rule5.isFraud(t)) {
+            System.out.println("German transactions over 1000 false test is FAILED");
         } else {
-            System.out.println("German transactions over 1000 test is OK");
+            System.out.println("German transactions over 1000 false test is OK");
         }
     }
+
+    void overGermanTrue1Test() {
+        Trader trader = new Trader("Nel", "Hamburd", "Germany");
+        FraudRule rule5 = new FraudRule5("rule5");
+        Transaction t = new Transaction(trader, 500);
+
+        if (rule5.isFraud(t)) {
+            System.out.println("German transactions over 1000 true1 test is OK");
+        } else {
+            System.out.println("German transactions over 1000 true1 test is FAILED");
+        }
+    }
+
+    void overGermanTrue2Test() {
+        Trader trader = new Trader("Ted", "Liverpool", "Great Britain");
+        FraudRule rule5 = new FraudRule5("rule5");
+        Transaction t = new Transaction(trader, 5000);
+
+        if (rule5.isFraud(t)) {
+            System.out.println("German transactions over 1000 true1 test is OK");
+        } else {
+            System.out.println("German transactions over 1000 true1 test is FAILED");
+        }
+    }
+
 }
