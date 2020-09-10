@@ -21,4 +21,7 @@ class UserCredentials {
     }
     // созжайте конструктор класса, в котором вы получаете список ролей
 
+    boolean containsRole(Role roleToFind){
+        return roles.contains(roleToFind);
+    }
 }
