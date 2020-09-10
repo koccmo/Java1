@@ -4,6 +4,8 @@ package student_valerija_ionova.lesson_12.level_2_intern.task_7;
 Для описания клиентов банка, данных к которым мы хотим дать доступ,
 создайте класс BankClient:*/
 
+import java.util.Objects;
+
 class BankClient {
 
     private String uid;      // уникальный идентификатор клиета
@@ -20,6 +22,20 @@ class BankClient {
 
     String getFullName(){
         return fullName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BankClient that = (BankClient) o;
+        return Objects.equals(uid, that.uid) &&
+                Objects.equals(fullName, that.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(uid, fullName);
     }
     // созжайте конструктор класса, в котором вы получите значения указанных свойств
 
