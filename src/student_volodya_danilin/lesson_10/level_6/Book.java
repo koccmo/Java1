@@ -18,7 +18,11 @@ class Book {
         this.isRead = false;
     }
 
-    void printBookInfo() {
+    void printBookInfo() { //Task_17
         System.out.println(this.title + " [" + this.author + "]");
+    }
+
+    void printPersonalBookInfo() {
+        System.out.println(this.title + " by " + this.author + "\nis read: " + this.isRead );
     }
 }

@@ -8,43 +8,48 @@ class BookReaderImpl implements BookReader{
     List<Book> bookList = new ArrayList<>();
 
     @Override
-    public void addBook(Book ... book) {
+    public boolean addBook(Book ... book) {
+        boolean result = false;
+
         for (Book value : book) {
-            if (canAddBook(value)) {
+            if (!isDuplicateBook(value)
+            && !isBlankBookInfo(value)) {
                 bookList.add(value);
+                result = true;
             }
         }
+        return result;
     }
 
-    void removeBook(Book book) {
-        if (canRemoveBook(book)) {
+    List<Book> getBookList() {
+        return this.bookList;
+    }
+
+    boolean removeBook(Book book) {  //Task_16
+        boolean result = false;
+
+        if (bookSearch(book).equals(book)) {
             bookList.remove(book);
+            result = true;
         }
+        return result;
     }
 
-    boolean isDuplicateBook(Book book) {
+    boolean isDuplicateBook(Book book) {  //Task_14
         boolean result = false;
         if (bookSearch(book).author.equals(book.author)
         && bookSearch(book).title.equals(book.title)) {
             result = true;
-            System.out.println("Duplicate books not allowed!");
+            System.out.println("Duplicate books are not allowed!");
         }
         return result;
     }
 
-    boolean isEmptyBookInfo(Book book) {
+    boolean isBlankBookInfo(Book book) {  //Task_15
         boolean result = false;
         if (book.author.isBlank() || book.title.isBlank()) {
             result = true;
             System.out.println("Author/Title can't be blank!");
-        }
-        return result;
-    }
-
-    boolean canAddBook(Book book) {
-        boolean result = true;
-        if (isDuplicateBook(book) || isEmptyBookInfo(book)) {
-            result = false;
         }
         return result;
     }
@@ -60,7 +65,7 @@ class BookReaderImpl implements BookReader{
         return result;
     }
 
-    ArrayList<Book> authorSearchExact(String author) {
+    ArrayList<Book> authorSearchExact(String author) { //Task_18
         ArrayList<Book> result = new ArrayList<>();
         for (Book value : bookList) {
             if (value.author.equals(author)) {
@@ -73,7 +78,7 @@ class BookReaderImpl implements BookReader{
         return result;
     }
 
-    ArrayList<Book> authorSearchStartsWith(String author) {
+    ArrayList<Book> authorSearchStartsWith(String author) { //Task_19
         ArrayList<Book> result = new ArrayList<>();
         for (Book value : bookList) {
             if (value.author.startsWith(author)) {
@@ -103,22 +108,30 @@ class BookReaderImpl implements BookReader{
         return result;
     }
 
-    boolean canFindBook(Book book) {
+    boolean setIsReadTrue(Book ... book) { //Task_22
         boolean result = false;
-        if (bookSearch(book).title.equals(book.title)
-                && bookSearch(book).author.equals(book.author)) {
-            result = true;
-        }
-        else {
-            System.out.println("Book was not found in database!");
+        for (Book value : book) {
+            if (bookSearch(value).equals(value)) {
+                value.isRead = true;
+                result = true;
+            }
+            else {
+                System.out.println("Can't find the book!");
+            }
         }
         return result;
     }
 
-    boolean canRemoveBook(Book book) {
+    boolean setIsReadFalse(Book ... book) { //Task_23
         boolean result = false;
-        if (canFindBook(book)) {
-            result = true;
+        for (Book value : book) {
+            if (bookSearch(value).equals(value)) {
+                value.isRead = false;
+                result = true;
+            }
+            else {
+                System.out.println("Can't find the book!");
+            }
         }
         return result;
     }
@@ -127,6 +140,24 @@ class BookReaderImpl implements BookReader{
         System.out.println("Available books : ");
         for (Book value : bookList) {
             value.printBookInfo();
+        }
+    }
+
+    void printReadBooks() { //Task_24
+        System.out.println("Read books : ");
+        for (Book value : bookList) {
+            if (value.isRead) {
+                System.out.println(value.title + " [" + value.author + "]");
+            }
+        }
+    }
+
+    void printUnreadBooks() {
+        System.out.println("Unread books : ");
+        for (Book value : bookList) {
+            if (!value.isRead) {
+                System.out.println(value.title + " [" + value.author + "]");
+            }
         }
     }
 }
