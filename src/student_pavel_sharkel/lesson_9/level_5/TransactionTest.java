@@ -11,6 +11,8 @@ class TransactionTest {
         transactionTest.valueFalseTest();
         transactionTest.cityTrueTest();
         transactionTest.cityFalseTest();
+        transactionTest.countryTrueTest();
+        transactionTest.countryFalseTest();
 
     }
 
@@ -86,22 +88,24 @@ class TransactionTest {
         }
     }
 
-    public void countryTrueTest() {
+    void countryTrueTest() {
         Trader trader = new Trader("John", "Vilnius", "Lithuania");
-        FraudDetector fraudDetector = new FraudDetector();
+        FraudRule rule4 = new FraudRule4("rule4");
+        Transaction t = new Transaction(trader, 100);
 
-        if (fraudDetector.isCountryOk(trader)) {
+        if (rule4.isFraud(t)) {
             System.out.println("County true test is OK");
         } else {
             System.out.println("Country true test is FAILED");
         }
     }
 
-    public void countryFalseTest() {
+    void countryFalseTest() {
         Trader trader = new Trader("Albert", "Kingston", "Jamaica");
-        FraudDetector fraudDetector = new FraudDetector();
+        FraudRule rule4 = new FraudRule4("rule4");
+        Transaction t = new Transaction(trader, 100);
 
-        if (fraudDetector.isCountryOk(trader)) {
+        if (rule4.isFraud(t)) {
             System.out.println("County false test is FAILED");
         } else {
             System.out.println("Country false test is OK");
