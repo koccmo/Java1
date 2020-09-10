@@ -43,6 +43,10 @@ class Product {
         this.description = description;
     }
 
+    public boolean isTitleNull(){
+        return title == null;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
