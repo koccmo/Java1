@@ -4,7 +4,7 @@ import java.util.List;
 
 class ProductValidatorImplTest {
 
-    private ProductValidator validator = new ProductValidatorImpl(new ProductTitleValidationRule());
+    private ProductValidator validator = new ProductValidatorImpl(new ProductTitleValidationRule(), new ProductPriceValidationRule());
 
     public static void main(String[] args) {
         ProductValidatorImplTest test = new ProductValidatorImplTest();
