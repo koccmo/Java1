@@ -7,9 +7,7 @@ package student_valerija_ionova.lesson_12.level_5_6_middle.task_27_48;
 class ProductTitleValidationRule implements FieldValidationRule {
 
     public void validate(Product product) throws ValidationException {
-        if (product.isTitleNull()) throw new ValidationException("RULE-1", "Title can not be empty", "title");
-
-        if (product.getTitle().equals("")) throw new ValidationException("RULE-1", "Title can not be empty", "title");
+        if (product.isTitleNull() || product.getTitle().equals("")) throw new ValidationException("RULE-1", "Title can not be empty", "title");
 
         if (product.getTitle().length() < 3) throw new ValidationException("RULE-2",
                 "Title should be at least 3 symbols", "title");
