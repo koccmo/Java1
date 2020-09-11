@@ -1,12 +1,22 @@
 package student_pavel_sharkel.lesson_9.level_5;
 
+import java.util.ArrayList;
+
 class FraudDetector {
 
-    FraudRule[] fraudRules;
+    private ArrayList<FraudRule> fraudRules;
 
-    public FraudDetector(Trader trader) {
-
+    public FraudDetector(ArrayList<FraudRule> fraudRules) {
+        this.fraudRules = fraudRules;
         }
 
-
-}
+     boolean isFraud(Transaction t) {
+        boolean result = false;
+        for (FraudRule fraudRule : fraudRules) {
+            if (fraudRule.isFraud(t)) {
+                return true;
+            }
+        }
+         return result;
+     }
+    }
