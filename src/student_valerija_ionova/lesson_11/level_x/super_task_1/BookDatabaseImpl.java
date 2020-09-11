@@ -101,11 +101,20 @@ public class BookDatabaseImpl implements BookDatabase {
     }
 
     @Override
-    public List<Book> find(SearchCriteria searchCriteria) {
+    public List<Book> find(List <SearchCriteria>searchCriteria) {
+
         List <Book> books = new ArrayList <>();
-        for (int i = 0; i < bookDataBase.size(); i++){
-            if (searchCriteria.match(bookDataBase.get(i).getBook())){
-                books.add(bookDataBase.get(i).getBook());
+
+        for (int i = 0; i < bookDataBase.size(); i++) {
+            boolean bookOk = true;
+            if (searchCriteria != null){
+                for (int j = 0; j < searchCriteria.size(); j++) {
+                    if (!searchCriteria.get(j).match(bookDataBase.get(i).getBook())) {
+                        bookOk = false;
+                        break;
+                    }
+                }
+                if (bookOk) books.add(bookDataBase.get(i).getBook());
             }
         }
         return books;
