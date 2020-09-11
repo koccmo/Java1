@@ -8,7 +8,7 @@ import student_valerija_ionova.lesson_11.level_6.task_30_38.BookDatabase;
 import java.util.List;
 import java.util.Scanner;
 
-class FindByTitleUIAction implements UIAction{
+class FindByTitleUIAction implements UIAction {
 
     BookDatabase bookDatabase;
 

@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_11.level_6.task_30_38;
 
 //Task19 Создайте класс AndSearchCriteria:
 
-class AndSearchCriteria implements SearchCriteria {
+public class AndSearchCriteria implements SearchCriteria {
 
     private SearchCriteria leftCondition;
     private SearchCriteria rightCondition;
