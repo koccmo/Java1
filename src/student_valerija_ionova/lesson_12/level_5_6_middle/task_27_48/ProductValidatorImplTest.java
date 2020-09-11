@@ -4,7 +4,7 @@ import java.util.List;
 
 class ProductValidatorImplTest {
 
-    private ProductValidator validator = new ProductValidatorImpl(new ProductTitleValidationRule(), new ProductPriceValidationRule());
+    private ProductValidator validator = new ProductValidatorImpl(new ProductTitleValidationRule(), new ProductPriceValidationRule(), new ProductDescriptionValidationRule());
 
     public static void main(String[] args) {
         ProductValidatorImplTest test = new ProductValidatorImplTest();
@@ -28,9 +28,12 @@ class ProductValidatorImplTest {
         test.rule8_contains_not_correct_symbols();
 
         test.rules_ok();
-        // тесты на остальные правила допишите по аналогии
-        // тестов будет много! напишите их все!
-        // они пишутся легко, и если вы напишите их все то ваше решение будет полностью протестировано!
+
+        test.rule1and5();
+        test.rule2and6();
+        test.rule3and7();
+        test.rule4and6();
+
     }
 
     //- RULE-1: Название не должно быть пустым
@@ -121,12 +124,12 @@ class ProductValidatorImplTest {
         checkResult(exceptions.size() == 1, "rule7_too_long_description");
         checkResult(exceptions.get(0).getRuleName().equals("RULE-7"), "rule7_too_long_description");
         checkResult(exceptions.get(0).getFieldName().equals("description"), "rule7_too_long_description");
-        checkResult(exceptions.get(0).getDescription().equals("Description must be less than 2000 symbols"), "rule7_too_long_description");
+        checkResult(exceptions.get(0).getDescription().equals("Description must contain less than 2000 symbols"), "rule7_too_long_description");
     }
 
     //- RULE-8: должно содержать только английские буквы и цифры, другие символы не допустимы
     public void rule8_contains_not_correct_symbols() {
-        Product product = new Product("Milk", 1, "description");
+        Product product = new Product("Milk", 1, "description:)");
         List<ValidationException> exceptions = validator.validate(product);
         checkResult(exceptions.size() == 1, "rule8_contains_not_correct_symbols");
         checkResult(exceptions.get(0).getRuleName().equals("RULE-8"), "rule8_contains_not_correct_symbols");
@@ -139,6 +142,62 @@ class ProductValidatorImplTest {
         Product product = new Product("Milk", 1, "description");
         List<ValidationException> exceptions = validator.validate(product);
         checkResult(exceptions.size() == 0, "rules_ok");
+    }
+
+    public void rule1and5() {
+        Product product = new Product(null, null, "IDontKnowWhatIsIt");
+        List<ValidationException> exceptions = validator.validate(product);
+        checkResult(exceptions.size() == 2, "rule1and5");
+
+        checkResult(exceptions.contains(new ValidationException("RULE-1", "Title can not be empty", "title")),
+                "rule1and5");
+        checkResult(exceptions.contains(new ValidationException("RULE-5", "Price can not be empty","price")),
+                "rule1and5");
+    }
+
+    public void rule2and6() {
+        Product product = new Product("Br", 0, "IDontKnowWhatIsIt");
+        List<ValidationException> exceptions = validator.validate(product);
+        checkResult(exceptions.size() == 2, "rule2and6");
+
+        checkResult(exceptions.contains(new ValidationException("RULE-2",
+                "Title should be at least 3 symbols", "title")), "rule2and6");
+        checkResult(exceptions.contains(new ValidationException("RULE-6", "Price must be bigger than 0", "price")),
+                "rule2and6");
+    }
+
+    public void rule3and7() {
+        Product product = new Product(longString, 2, longString);
+        List<ValidationException> exceptions = validator.validate(product);
+        checkResult(exceptions.size() == 2, "rule3and7");
+
+        checkResult(exceptions.contains(new ValidationException("RULE-3",
+                "Title should be less than 101 symbols", "title")), "rule3and7");
+        checkResult(exceptions.contains(new ValidationException("RULE-7",
+                        "Description must contain less than 2000 symbols", "description")),
+                "rule3and7");
+    }
+
+    public void rule4and6() {
+        Product product = new Product("Smile:)", 0, "description");
+        List<ValidationException> exceptions = validator.validate(product);
+        checkResult(exceptions.size() == 2, "rule4and6");
+
+        checkResult(exceptions.contains(new ValidationException("RULE-4",
+                "Title should contain only number and letters", "title")), "rule4and6");
+        checkResult(exceptions.contains(new ValidationException("RULE-6", "Price must be bigger than 0", "price")),
+                "rule4and6");
+    }
+
+    public void rule5and8() {
+        Product product = new Product("Smile", null, "description:)");
+        List<ValidationException> exceptions = validator.validate(product);
+        checkResult(exceptions.size() == 2, "rule5and8");
+
+        checkResult(exceptions.contains(new ValidationException("RULE-5", "Price can not be empty","price")), "rule5and8");
+        checkResult(exceptions.contains(new ValidationException("RULE-8",
+                        "Description can contain only letters and numbers", "description")),
+                "rule5and8");
     }
 
 
