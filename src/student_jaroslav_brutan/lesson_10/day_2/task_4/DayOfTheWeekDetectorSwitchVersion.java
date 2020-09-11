@@ -1,7 +1,7 @@
 package student_jaroslav_brutan.lesson_10.day_2.task_4;
 
 public class DayOfTheWeekDetectorSwitchVersion implements DayOfTheWeekDetector {
-
+    @Override
     public String detectDayName(int number){
         switch (number){
             case 1: return "Monday";
