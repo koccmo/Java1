@@ -1,9 +1,9 @@
-package student_aleksandra_maksimovic.lesson_9.level_4.task_17;
+package student_aleksandra_maksimovic.lesson_9.level_6;
 
 
 public class FraudDetectorTest {
 
-    FraudDetector fraudDetector = new FraudDetector();
+   FraudDetector fraudDetector = new FraudDetector();
 
     public static void main(String[] args) {
 
@@ -20,12 +20,20 @@ public class FraudDetectorTest {
         detector.testIsPokemonAndExceedsLimit();
     }
 
-    void checkResult(String name,  boolean testResult){
+    void checkResult(String name, boolean testResult){
         if (testResult){
             System.out.println(name + " test = OK");
         }else{
             System.out.println(name+" test = FAIL");
         }
+    }
+
+    void checkResult(String name, FraudDetectionResult testResult, boolean expectedResult){
+        checkResult(name + "(" + testResult.getRuleName() + ")", testResult.getFraud() == expectedResult);
+    }
+
+    void checkResult(String name, FraudDetectionResult testResult){
+        checkResult(name, testResult, true);
     }
 
     void testIsPokemon(){
@@ -36,10 +44,10 @@ public class FraudDetectorTest {
     }
 
     void testIsNotPokemon(){
-        Trader  notPokemon = new Trader("Vasja", "Riga", "Latvia");
+        Trader notPokemon = new Trader("Vasja", "Riga", "Latvia");
         Transaction transaction = new Transaction(notPokemon, 700);
 
-        checkResult("testIsNotPokemon", !fraudDetector.isFraud(transaction));
+        checkResult("testIsNotPokemon", fraudDetector.isFraud(transaction), false);
     }
 
     void testIsTransactionExceedsLimit(){
@@ -53,7 +61,7 @@ public class FraudDetectorTest {
         Trader anna = new Trader("Anna", "La Coruna", "Spain");
         Transaction transaction = new Transaction(anna, 999999);
 
-        checkResult("testIsTransactionNotExceedsLimit",!fraudDetector.isFraud(transaction));
+        checkResult("testIsTransactionNotExceedsLimit", fraudDetector.isFraud(transaction), false);
     }
 
     void testIsSydney(){
@@ -81,7 +89,7 @@ public class FraudDetectorTest {
         Trader gans = new Trader("Gans", "Berlin", "German");
         Transaction transaction = new Transaction(gans, 999);
 
-        checkResult("testIsGermanAndLessThen1000", !fraudDetector.isFraud(transaction));
+        checkResult("testIsGermanAndLessThen1000", fraudDetector.isFraud(transaction), false);
     }
 
     void testIsGermanAndExceedsLimit(){

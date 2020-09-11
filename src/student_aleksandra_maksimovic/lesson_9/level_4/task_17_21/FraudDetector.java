@@ -1,4 +1,4 @@
-package student_aleksandra_maksimovic.lesson_9.level_4.task_17;
+package student_aleksandra_maksimovic.lesson_9.level_4.task_17_21;
 /*
 - Rule 1: трейдер по имени "Pokemon" является мошенником, все его транзакции должны быть отклонены.
 - Rule 2: все транзакции на сумму больше 1000000 должны быть отклонены.
