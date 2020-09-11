@@ -25,7 +25,7 @@ class FindByIdUIAction implements UIAction {
 
         if (bookOpt.isPresent()){
             Book foundedBook = bookOpt.get();
-            System.out.println("Book has been finded: \n" + foundedBook);
+            System.out.println("Book has been founded: \n" + foundedBook);
         }else{
             System.out.println("No book with id: " + id);
         }
