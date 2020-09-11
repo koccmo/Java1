@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_10.level_2.Task_4;
+package student_roberts_kupcs.lesson_10.level_2.Task_4_5;
 
 class DayOfTheWeekDetectorIfVersion {
     // Try to use switch here!!

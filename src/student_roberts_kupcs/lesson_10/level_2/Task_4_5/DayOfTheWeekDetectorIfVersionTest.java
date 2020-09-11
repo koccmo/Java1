@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_10.level_2.Task_4;
+package student_roberts_kupcs.lesson_10.level_2.Task_4_5;
 
 class DayOfTheWeekDetectorIfVersionTest {
     public static void main(String[] args) {
