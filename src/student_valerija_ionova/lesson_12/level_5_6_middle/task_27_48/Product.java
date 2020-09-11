@@ -47,6 +47,10 @@ class Product {
         return title == null;
     }
 
+    public boolean isPriceNull(){
+        return price == null;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
