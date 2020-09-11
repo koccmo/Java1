@@ -1,7 +1,7 @@
 package student_jaroslav_brutan.lesson_10.day_2.task_4;
 
 public class DayOfTheWeekDetectorArrayVersion implements DayOfTheWeekDetector{
-
+    @Override
     public String detectDayName(int number) {
         String[] dayOfTheWeek = new String[7];
         dayOfTheWeek[0] = "Monday";
