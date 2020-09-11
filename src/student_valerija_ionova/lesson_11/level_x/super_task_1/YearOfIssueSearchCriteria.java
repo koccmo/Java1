@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_11.level_x.super_task_1;
 
 //Task 18 Создайте класс YearOfIssueSearchCriteria:
 
-class YearOfIssueSearchCriteria implements SearchCriteria {
+public class YearOfIssueSearchCriteria implements SearchCriteria {
 
     private String yearOfIssueToSearch;
 
