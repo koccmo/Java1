@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_11.homework.level_1_intern;
+package student_roberts_kupcs.lesson_11.homework.level_1_intern.Task_1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
