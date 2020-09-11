@@ -34,6 +34,9 @@ class ProductValidatorImplTest {
         test.rule3and7();
         test.rule4and6();
 
+        test.rule1and5and7();
+        test.rule1and6and8();
+
     }
 
     //- RULE-1: Название не должно быть пустым
@@ -194,10 +197,39 @@ class ProductValidatorImplTest {
         List<ValidationException> exceptions = validator.validate(product);
         checkResult(exceptions.size() == 2, "rule5and8");
 
-        checkResult(exceptions.contains(new ValidationException("RULE-5", "Price can not be empty","price")), "rule5and8");
+        checkResult(exceptions.contains(new ValidationException("RULE-5", "Price can not be empty","price")),
+                "rule5and8");
         checkResult(exceptions.contains(new ValidationException("RULE-8",
                         "Description can contain only letters and numbers", "description")),
                 "rule5and8");
+    }
+
+    public void rule1and5and7() {
+        Product product = new Product(null, null, longString);
+        List<ValidationException> exceptions = validator.validate(product);
+        checkResult(exceptions.size() == 3, "rule1and5and7");
+
+        checkResult(exceptions.contains(new ValidationException("RULE-1", "Title can not be empty", "title")),
+                "rule1and5and7");
+        checkResult(exceptions.contains(new ValidationException("RULE-5", "Price can not be empty","price")),
+                "rule1and5and7");
+        checkResult(exceptions.contains(new ValidationException("RULE-7",
+                        "Description must contain less than 2000 symbols", "description")),
+                "rule1and5and7");
+    }
+
+    public void rule1and6and8() {
+        Product product = new Product("", 0, "description:)");
+        List<ValidationException> exceptions = validator.validate(product);
+        checkResult(exceptions.size() == 3, "rule1and6and8");
+
+        checkResult(exceptions.contains(new ValidationException("RULE-1", "Title can not be empty", "title")),
+                "rule1and6and8");
+        checkResult(exceptions.contains(new ValidationException("RULE-6", "Price must be bigger than 0", "price")),
+                "rule1and6and8");
+        checkResult(exceptions.contains(new ValidationException("RULE-8",
+                        "Description can contain only letters and numbers", "description")),
+                "rule1and6and8");
     }
 
 
