@@ -2,6 +2,8 @@ package student_valerija_ionova.lesson_12.level_5_6_middle.task_27_48;
 
 //Task30
 
+import java.util.Objects;
+
 class ValidationException extends Exception{
 
     private String ruleName;
@@ -28,4 +30,18 @@ class ValidationException extends Exception{
         return fieldName;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ValidationException that = (ValidationException) o;
+        return Objects.equals(ruleName, that.ruleName) &&
+                Objects.equals(description, that.description) &&
+                Objects.equals(fieldName, that.fieldName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ruleName, description, fieldName);
+    }
 }
