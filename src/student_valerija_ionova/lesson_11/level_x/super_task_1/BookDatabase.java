@@ -1,10 +1,7 @@
 package student_valerija_ionova.lesson_11.level_x.super_task_1;
 
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 public interface BookDatabase {
 
@@ -26,7 +23,7 @@ public interface BookDatabase {
 
     void deleteByTitle(String title);
 
-    List<Book> find(SearchCriteria searchCriteria);
+    List<Book> find(List<SearchCriteria> searchCriteria);
 
     Set<String> findUniqueAuthors();
 
