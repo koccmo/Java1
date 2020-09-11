@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_12.level_5_6_middle.task_27_48;
 
 //Task30
 
-class ValidationException extends RuntimeException{
+class ValidationException extends Exception{
 
     private String ruleName;
 
