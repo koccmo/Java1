@@ -1,10 +1,10 @@
 package student_valerija_ionova.lesson_11.level_6.task_30_38;
 
-class TitleSearchCriteria implements SearchCriteria {
+public class TitleSearchCriteria implements SearchCriteria {
 
     private String titleToSearch;
 
-    TitleSearchCriteria (String titleToSearch){
+    public TitleSearchCriteria (String titleToSearch){
         this.titleToSearch = titleToSearch;
     }
 

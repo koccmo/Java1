@@ -3,10 +3,9 @@ package student_valerija_ionova.lesson_11.level_6.task_30_38.UIAction;
 
 import student_valerija_ionova.lesson_11.level_6.task_30_38.BookDatabase;
 
-
 import java.util.Scanner;
 
-class DeleteByIdUIAction implements  UIAction{
+class DeleteByIdUIAction implements UIAction {
 
     private BookDatabase bookDatabase;
 

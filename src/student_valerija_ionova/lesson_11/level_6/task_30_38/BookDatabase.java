@@ -26,7 +26,7 @@ public interface BookDatabase {
 
     void deleteByTitle(String title);
 
-    List<Book> find(SearchCriteria searchCriteria);
+    List<Book> find(List<SearchCriteria> searchCriteria);
 
     Set<String> findUniqueAuthors();
 
