@@ -6,7 +6,7 @@ package student_valerija_ionova.lesson_11.level_6.task_30_38;
 */
 
 
-interface SearchCriteria {
+public interface SearchCriteria {
 
     boolean match(Book book);
 

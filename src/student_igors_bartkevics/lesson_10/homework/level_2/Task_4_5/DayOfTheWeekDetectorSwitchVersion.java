@@ -7,6 +7,8 @@ import teacher.codereview.CodeReviewComment;
 class DayOfTheWeekDetectorSwitchVersion implements DayOfTheWeekDetector {
 
 	@CodeReviewComment(teacher = "Where is @Override annotation?")
+    //Corrected
+    @Override
     public String detectDayName(int number) {
 
         return switch (number) {
