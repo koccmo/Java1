@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_11.level_6.task_30_38;
 
-class OrSearchCriteria implements SearchCriteria {
+public class OrSearchCriteria implements SearchCriteria {
 
     private SearchCriteria leftCondition;
     private SearchCriteria rightCondition;

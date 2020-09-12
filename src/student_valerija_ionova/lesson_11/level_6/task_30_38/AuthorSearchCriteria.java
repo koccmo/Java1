@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_11.level_6.task_30_38;
 
 //Task16 Создайте класс AuthorSearchCriteria:
 
-class AuthorSearchCriteria implements SearchCriteria {
+public class AuthorSearchCriteria implements SearchCriteria {
 
     private String authorToSearch;
 

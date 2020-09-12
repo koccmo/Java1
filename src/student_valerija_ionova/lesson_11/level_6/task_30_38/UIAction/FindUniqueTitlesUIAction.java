@@ -2,7 +2,7 @@ package student_valerija_ionova.lesson_11.level_6.task_30_38.UIAction;
 
 import student_valerija_ionova.lesson_11.level_6.task_30_38.BookDatabase;
 
-public class FindUniqueTitlesUIAction implements  UIAction{
+public class FindUniqueTitlesUIAction implements UIAction {
 
     BookDatabase bookDatabase;
 

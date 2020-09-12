@@ -19,8 +19,8 @@ class Test {
         fahrenheitTemperature = fahrenheit.convert(celsiusTemperature);
 
         System.out.println("Celsius : " + celsiusTemperature);
-        System.out.println("Kelvin : " + kelvinTemperature);
-        System.out.println("Fahrenheit : " + fahrenheitTemperature);
+        System.out.println("Kelvin : " + df.format(kelvinTemperature));
+        System.out.println("Fahrenheit : " + df.format(fahrenheitTemperature));
 
         System.out.println();
 
