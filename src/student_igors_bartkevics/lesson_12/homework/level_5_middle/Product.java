@@ -21,18 +21,17 @@ class Product {
  */
 package student_igors_bartkevics.lesson_12.homework.level_5_middle;
 
-import java.math.BigDecimal;
 import java.util.Objects;
 
 class Product {
 
     // создайте нужные свойства класса
     private String name;
-    private BigDecimal price;
+    private Integer price;
     private String description;
 
     // создайте конструктор класса
-    public Product(String name, BigDecimal price, String description) {
+    public Product(String name, Integer price, String description) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -48,11 +47,11 @@ class Product {
         this.name = name;
     }
 
-    public BigDecimal getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
