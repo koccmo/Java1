@@ -1,4 +1,4 @@
-package student_pavel_sharkel.lesson_9.level_5;
+package student_pavel_sharkel.lesson_9.level_5_6;
 
 abstract class FraudRule {
 
@@ -10,4 +10,7 @@ abstract class FraudRule {
 
     public abstract boolean isFraud(Transaction t);
 
+    public String getRuleName() {
+        return ruleName;
+    }
 }

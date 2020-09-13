@@ -1,17 +1,16 @@
-package student_pavel_sharkel.lesson_9.level_5;
+package student_pavel_sharkel.lesson_9.level_5_6;
 
-class FraudRule5 extends FraudRule {
+class FraudRule4 extends FraudRule {
 
-    public FraudRule5(String ruleName) {
+    public FraudRule4(String ruleName) {
         super(ruleName);
     }
 
     public boolean isFraud(Transaction t) {
         Trader trader = t.getTrader();
         String traderCountry = trader.getCountry();
-        int transactionValue = t.getAmount();
 
-        if (traderCountry.equals("Germany") && (transactionValue > 1000)) {
+        if (traderCountry.equals("Jamaica")) {
             return false;
         } else {
             return true;
