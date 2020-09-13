@@ -10,4 +10,8 @@ class UserCredentials {
     UserCredentials(List<Role> roles) {
         this.roles = roles;
     }
+
+    boolean contains(Role role) {
+        return roles.contains(role);
+    }
 }
