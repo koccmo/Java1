@@ -22,6 +22,8 @@ class ProductValidatorImplTest {
     ProductValidator validator = new ProductValidatorImpl(new ProductTitleValidationRule(),
             new ProductPriceValidationRule(), new ProductDescriptionValidationRule());
 
+    String title = "This is very long product title value that exceeds hundred words and matches the rule number three condition";
+
     String description = "This is very long product description value that exceeds 2000 words and matches the rule number three condition " +
             "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
             "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
@@ -58,6 +60,10 @@ class ProductValidatorImplTest {
         test.rule8_v1();
         test.rule8_v2();
         test.rule8_v3();
+        test.rule1_v1_and_rule5();
+        test.rule2_and_rule7();
+        test.rule6_and_rule8();
+        test.rule3_and_rule5_and_rule8();
 
 
         // тесты на остальные правила допишите по аналогии
@@ -95,7 +101,6 @@ class ProductValidatorImplTest {
 
     //RULE-3: название не должно быть длиннее 100 символов
     public void rule3() {
-        String title = "This is very long product title value that exceeds hundred words and matches the rule number three condition";
         Product product = new Product(title, 1, "description");
         List<ValidationException> exceptions = validator.validate(product);
         checkResult(exceptions.size() == 1, "rule3 title contains more than 100 symbols");
@@ -195,6 +200,38 @@ class ProductValidatorImplTest {
         checkResult(exceptions.get(0).getRuleName().equals("RULE-8"), "rule8 description contains question mark");
         checkResult(exceptions.get(0).getFieldName().equals("description"), "rule8 description contains question mark");
         checkResult(exceptions.get(0).getDescription().equals("Description can contain only english letters and numbers"), "rule8 description contains question mark");
+    }
+
+    public void rule1_v1_and_rule5() {
+        Product product = new Product(null, null, "description");
+        List<ValidationException> exceptions = validator.validate(product);
+        checkResult(exceptions.size() == 2, "rule1_v1_and_rule5");
+        checkResult(exceptions.contains(new ValidationException("RULE-1", "Title can not be empty", "title")), "rule1_v1_and_rule5");
+        checkResult(exceptions.contains(new ValidationException("RULE-5", "Price can not be empty", "price")), "rule1_v1_and_rule5");
+    }
+
+    public void rule2_and_rule7() {
+        Product product = new Product("di", 100, description);
+        List<ValidationException> exceptions = validator.validate(product);
+        checkResult(exceptions.size() == 2, "rule2_and_rule7");
+        checkResult(exceptions.contains(new ValidationException("RULE-2", "Title can not be shorter than 3 symbols", "title")), "rule2_and_rule7");
+        checkResult(exceptions.contains(new ValidationException("RULE-7", "Description can not be longer than 2000 symbols", "description")), "rule2_and_rule7");
+    }
+
+    public void rule6_and_rule8() {
+        Product product = new Product("title", -100, "description ;p");
+        List<ValidationException> exceptions = validator.validate(product);
+        checkResult(exceptions.size() == 2, "rule6_and_rule8");
+        checkResult(exceptions.contains(new ValidationException("RULE-6", "Price has to be greater than 0", "price")), "rule6_and_rule8");
+        checkResult(exceptions.contains(new ValidationException("RULE-8", "Description can contain only english letters and numbers", "description")), "rule6_and_rule8");
+    }
+    public void rule3_and_rule5_and_rule8() {
+        Product product = new Product(title, null, "description ;p");
+        List<ValidationException> exceptions = validator.validate(product);
+        checkResult(exceptions.size() == 3, "rule3_and_rule5_and_rule8");
+        checkResult(exceptions.contains(new ValidationException("RULE-3", "Title can not be longer than 100 symbols", "title")), "rule3_and_rule5_and_rule8");
+        checkResult(exceptions.contains(new ValidationException("RULE-5", "Price can not be empty", "price")), "rule3_and_rule5_and_rule8");
+        checkResult(exceptions.contains(new ValidationException("RULE-8", "Description can contain only english letters and numbers", "description")), "rule3_and_rule5_and_rule8");
     }
 
     public void checkResult(boolean condition, String testName) {

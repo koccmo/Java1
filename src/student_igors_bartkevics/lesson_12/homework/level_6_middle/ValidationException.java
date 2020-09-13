@@ -1,5 +1,7 @@
 package student_igors_bartkevics.lesson_12.homework.level_6_middle;
 
+import java.util.Objects;
+
 class ValidationException extends Exception {
 
     // название валидационного правила, которое создало эту ошибку
@@ -33,4 +35,15 @@ class ValidationException extends Exception {
     public String getFieldName() {
         return fieldName;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ValidationException that = (ValidationException) o;
+        return Objects.equals(ruleName, that.ruleName) &&
+                Objects.equals(description, that.description) &&
+                Objects.equals(fieldName, that.fieldName);
+    }
+
 }
