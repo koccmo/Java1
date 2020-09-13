@@ -17,4 +17,9 @@ class Transaction {
     public Trader getTrader() {
         return trader;
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
