@@ -15,6 +15,12 @@ class Main {
 }
 
 Какой результат мы получим?
+================================
+Result:
+1. Got the Test Exception
+   Inside finally block
+================================
+
 1. Got the Test Exception
    Inside finally block
 
@@ -23,7 +29,3 @@ class Main {
 3. Inside finally block
 
 4. Compiler Error
-
-Result:
-1. Got the Test Exception
-   Inside finally block
