@@ -174,10 +174,10 @@ class TransactionTest {
         Transaction t = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
 
-        if (fraudDetector.isFraud(t)) {
-            System.out.println("Fraud detector true test is OK");
-        } else {
+        if (fraudDetector.isFraud(t) == null) {
             System.out.println("Fraud detector true test is FAILED");
+        } else {
+            System.out.println("Fraud detector true test is OK");
         }
 
     }
@@ -200,7 +200,7 @@ class TransactionTest {
         Transaction t = new Transaction(trader, 100);
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
 
-        if (fraudDetector.isFraud(t)) {
+        if (fraudDetector.isFraud(t) == null) {
             System.out.println("Fraud detector false test is FAILED");
         } else {
             System.out.println("Fraud detector false test is OK");

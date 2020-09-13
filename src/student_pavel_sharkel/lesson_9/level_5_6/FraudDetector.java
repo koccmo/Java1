@@ -1,6 +1,7 @@
 package student_pavel_sharkel.lesson_9.level_5_6;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 class FraudDetector {
 
@@ -10,13 +11,16 @@ class FraudDetector {
         this.fraudRules = fraudRules;
         }
 
-     boolean isFraud(Transaction t) {
+     FraudDetectionResult isFraud(Transaction t) {
         boolean result = false;
+        String fraudName = null;
+        FraudDetectionResult fraudDetectionResult = new FraudDetectionResult(result,fraudName);
         for (FraudRule fraudRule : fraudRules) {
             if (fraudRule.isFraud(t)) {
-                return true;
+                result = true;
+                fraudName = fraudDetectionResult.getRuleName();
             }
         }
-         return result;
+         return new FraudDetectionResult(result, fraudName);
      }
     }
