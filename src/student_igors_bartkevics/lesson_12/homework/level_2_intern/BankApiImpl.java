@@ -40,7 +40,7 @@ class BankApiImpl implements BankApi {
 
         // если в credentials нет роли Role.CAN_SEARCH_CLIENTS
         // то метод должен кидать ошибку AccessDeniedException
-        if (!credentials.contains(Role.CAN_SEARCH_CLIENTS)) {
+        if (!credentials.hasRole(Role.CAN_SEARCH_CLIENTS)) {
             throw new AccessDeniedException("You've got no rights to search clients");
         }
         // иначе производить поиск клиента с указанным uid

@@ -27,7 +27,7 @@ class UserCredentials {
         this.roles = roles;
     }
 
-    boolean contains(Role role) {
+    boolean hasRole(Role role) {
         return roles.contains(role);
     }
 }
