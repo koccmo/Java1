@@ -6,9 +6,12 @@ import java.util.List;
 class ProductValidatorImpl implements ProductValidator {
 
     private ProductTitleValidationRule titleValidationRule;
+    private ProductPriceValidationRule priceValidationRule;
 
-    public ProductValidatorImpl(ProductTitleValidationRule titleValidationRule) {
+    public ProductValidatorImpl(ProductTitleValidationRule titleValidationRule,
+                                ProductPriceValidationRule productPriceValidationRule) {
         this.titleValidationRule = titleValidationRule;
+        this.priceValidationRule = productPriceValidationRule;
     }
 
     @Override
@@ -16,6 +19,11 @@ class ProductValidatorImpl implements ProductValidator {
         List<ValidationException> exceptions = new ArrayList<>();
         try {
             titleValidationRule.validate(product);
+        } catch (ValidationException e) {
+            exceptions.add(e);
+        }
+        try {
+            priceValidationRule.validate(product);
         } catch (ValidationException e) {
             exceptions.add(e);
         }

@@ -19,7 +19,8 @@ import java.util.List;
 
 class ProductValidatorImplTest {
 
-    ProductValidator validator = new ProductValidatorImpl(new ProductTitleValidationRule());
+    ProductValidator validator = new ProductValidatorImpl(new ProductTitleValidationRule(),
+            new ProductPriceValidationRule());
 
     public static void main(String[] args) {
         ProductValidatorImplTest test = new ProductValidatorImplTest();
@@ -117,20 +118,20 @@ class ProductValidatorImplTest {
     public void rule5() {
         Product product = new Product("title", null, "description");
         List<ValidationException> exceptions = validator.validate(product);
-        checkResult(exceptions.size() == 1, "rule5");
-        checkResult(exceptions.get(0).getRuleName().equals("RULE-5"), "rule5");
-        checkResult(exceptions.get(0).getFieldName().equals("price"), "rule5");
-        checkResult(exceptions.get(0).getDescription().equals("Price can not be empty"), "rule5");
+        checkResult(exceptions.size() == 1, "rule5 price is null");
+        checkResult(exceptions.get(0).getRuleName().equals("RULE-5"), "rule5 price is null");
+        checkResult(exceptions.get(0).getFieldName().equals("price"), "rule5 price is null");
+        checkResult(exceptions.get(0).getDescription().equals("Price can not be empty"), "rule5 price is null");
     }
 
     //RULE-6: цена должна быть больше 0
     public void rule6() {
         Product product = new Product("title", 0, "description");
         List<ValidationException> exceptions = validator.validate(product);
-        checkResult(exceptions.size() == 1, "rule6");
-        checkResult(exceptions.get(0).getRuleName().equals("RULE-6"), "rule6");
-        checkResult(exceptions.get(0).getFieldName().equals("price"), "rule6");
-        checkResult(exceptions.get(0).getDescription().equals("Price has to be greater than 0"), "rule6");
+        checkResult(exceptions.size() == 1, "rule6 price is zero");
+        checkResult(exceptions.get(0).getRuleName().equals("RULE-6"), "rule6 price is zero");
+        checkResult(exceptions.get(0).getFieldName().equals("price"), "rule6 price is zero");
+        checkResult(exceptions.get(0).getDescription().equals("Price has to be greater than 0"), "rule6 price is zero");
     }
 
     //RULE-7: описание не должно быть длиннее 2000 символов
