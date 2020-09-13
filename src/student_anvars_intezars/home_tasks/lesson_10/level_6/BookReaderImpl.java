@@ -14,6 +14,17 @@ class BookReaderImpl implements BookReader {
 
     @Override
     public boolean isAddedBook(Book book) {
+        if (booksEqualByAuthorAndTitle(book)
+                &&
+           (booksHaveTitleAndAuthor(book))) {
+            save(book);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean booksEqualByAuthorAndTitle(Book book) {
         String newBookTitle = book.getTitle();
         String newBookAuthor = book.getAuthor();
         for (int i = 0; i < books.size(); i++) {
@@ -25,10 +36,24 @@ class BookReaderImpl implements BookReader {
                 }
             }
         }
-        save(book);
+        return true;
+    }
+
+    @Override
+    public boolean booksHaveTitleAndAuthor(Book book) {
+        if (book.getTitle().equals("") || (book.getAuthor().equals(""))) {
+            return false;
+        }
         return true;
     }
 }
+
+
+
+
+
+
+
     //Первый вариант метода, который фейлился на тесте. Пока не удалял, чтобы довести до ума.
     /*@Override
     public boolean isAddedBook(Book book) {

@@ -8,6 +8,8 @@ class BookReaderImplTest {
         bookReaderImplTest.toAddNewBookTest1();
         bookReaderImplTest.toAddNewBookTest2NegativeResult();
         bookReaderImplTest.toAddNewBookTest3();
+        bookReaderImplTest.newBookWithoutTitleTest();
+        bookReaderImplTest.newBookWithoutAuthorTest();
     }
 
     void toAddNewBookTest1() {
@@ -48,4 +50,30 @@ class BookReaderImplTest {
             System.out.println("Test3 for adding new book library = FAIL");
         }
     }
-}
+
+    void newBookWithoutTitleTest() {
+        BookReaderImpl bookReader = new BookReaderImpl();
+        Book firstBook = new Book("Lord of the Rings","Tolkien");
+        bookReader.save(firstBook);
+        Book secondBook = new Book("","Anvar");
+        boolean result = bookReader.isAddedBook(secondBook);
+        if (result) {
+            System.out.println("Tes4 for adding new book to library = OK");
+        } else {
+            System.out.println("Test4 for adding new book library = FAIL");
+        }
+    }
+
+    void newBookWithoutAuthorTest() {
+        BookReaderImpl bookReader = new BookReaderImpl();
+        Book firstBook = new Book("Lord of the Rings","Tolkien");
+        bookReader.save(firstBook);
+        Book secondBook = new Book("Lord of the Rings","");
+        boolean result = bookReader.isAddedBook(secondBook);
+        if (result) {
+            System.out.println("Test5 for adding new book to library = OK");
+        } else {
+            System.out.println("Test5 for adding new book library = FAIL");
+        }
+    }
+    }

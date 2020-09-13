@@ -6,4 +6,8 @@ interface BookReader {
 
     void save(Book book);
 
+    boolean booksEqualByAuthorAndTitle(Book book);
+
+    boolean booksHaveTitleAndAuthor(Book book);
+
 }
