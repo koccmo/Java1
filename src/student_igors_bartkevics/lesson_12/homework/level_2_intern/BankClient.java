@@ -1,4 +1,22 @@
+/*
+Task_9:
+Для описания клиентов банка, данных к которым мы хотим дать доступ,
+создайте класс BankClient:
+
+class BankClient {
+
+    private String uid;      // уникальный идентификатор клиета
+    private String fullName; // полное имя клиента
+
+    // созжайте конструктор класса, в котором вы получите значения указанных свойств
+
+    // создайте get() методы для каждого из свойств
+
+}
+ */
 package student_igors_bartkevics.lesson_12.homework.level_2_intern;
+
+import java.util.Objects;
 
 class BankClient {
 
@@ -20,5 +38,19 @@ class BankClient {
 
     public String getFullName() {
         return fullName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BankClient that = (BankClient) o;
+        return Objects.equals(uid, that.uid) &&
+                Objects.equals(fullName, that.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(uid, fullName);
     }
 }
