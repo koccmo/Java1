@@ -15,7 +15,6 @@ class BankApiImplTest {
         test.findByUidPositiveTest();
         test.findByUidNegativeTest();
         test.findByUidNoRightsToSearchClientTest();
-
     }
 
     void findByUidPositiveTest() {
@@ -73,6 +72,7 @@ class BankApiImplTest {
 
         try {
             Optional<BankClient> result = bankApi.findByUid(userCredentials, "1");
+            System.out.println("Test failed");
         } catch (AccessDeniedException exception) {
             String message = "You've got no rights to search clients";
             boolean condition = exception.getMessage().equals(message);
