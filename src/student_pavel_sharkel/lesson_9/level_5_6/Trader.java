@@ -1,4 +1,4 @@
-package student_pavel_sharkel.lesson_9.level_5;
+package student_pavel_sharkel.lesson_9.level_5_6;
 
 class Trader {
 
@@ -35,5 +35,10 @@ class Trader {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

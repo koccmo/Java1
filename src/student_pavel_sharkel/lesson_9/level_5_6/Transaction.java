@@ -1,4 +1,4 @@
-package student_pavel_sharkel.lesson_9.level_5;
+package student_pavel_sharkel.lesson_9.level_5_6;
 
 class Transaction {
 
@@ -16,5 +16,10 @@ class Transaction {
 
     public Trader getTrader() {
         return trader;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

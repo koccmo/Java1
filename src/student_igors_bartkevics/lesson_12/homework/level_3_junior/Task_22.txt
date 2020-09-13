@@ -1,0 +1,11 @@
+Какой класс в Java является главным в иерархии классов ошибок
+
+Result:
+4. Throwable
+
+1. Raise   - WHAT IS THAT?
+2. Exception
+
+3. Error
+
+4. Throwable
