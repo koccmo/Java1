@@ -2,6 +2,7 @@ package student_igors_bartkevics.lesson_12.homework.level_6_middle;
 
 class ProductTitleValidationRule implements FieldValidationRule {
 
+    @Override
     public void validate(Product product) throws ValidationException {
 
         //- RULE-1: не должно быть пустым
