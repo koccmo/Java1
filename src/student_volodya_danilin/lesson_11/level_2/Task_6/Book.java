@@ -28,6 +28,12 @@ class Book {
         return this.author;
     }
 
+    void printBookInfo() {
+        System.out.print(title);
+        System.out.print(" - by - " + author);
+        System.out.println(" - ID : " + id);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
