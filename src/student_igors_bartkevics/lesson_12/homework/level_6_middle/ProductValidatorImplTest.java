@@ -19,7 +19,7 @@ import java.util.List;
 
 class ProductValidatorImplTest {
 
-    ProductValidator validator = new ProductValidatorImpl();
+    ProductValidator validator = new ProductValidatorImpl(new ProductTitleValidationRule());
 
     public static void main(String[] args) {
         ProductValidatorImplTest test = new ProductValidatorImplTest();
@@ -46,19 +46,19 @@ class ProductValidatorImplTest {
     public void rule1_v1() {
         Product product = new Product(null, 1, "description");
         List<ValidationException> exceptions = validator.validate(product);
-        checkResult(exceptions.size() == 1, "rule1");
-        checkResult(exceptions.get(0).getRuleName().equals("RULE-1"), "rule1");
-        checkResult(exceptions.get(0).getFieldName().equals("title"), "rule1");
-        checkResult(exceptions.get(0).getDescription().equals("Title can not be empty"), "rule1");
+        checkResult(exceptions.size() == 1, "rule1_v1");
+        checkResult(exceptions.get(0).getRuleName().equals("RULE-1"), "rule1_v1");
+        checkResult(exceptions.get(0).getFieldName().equals("title"), "rule1_v1");
+        checkResult(exceptions.get(0).getDescription().equals("Title can not be empty"), "rule1_v1");
     }
 
     public void rule1_v2() {
         Product product = new Product("", 1, "description");
         List<ValidationException> exceptions = validator.validate(product);
-        checkResult(exceptions.size() == 1, "rule1");
-        checkResult(exceptions.get(0).getRuleName().equals("RULE-1"), "rule1");
-        checkResult(exceptions.get(0).getFieldName().equals("title"), "rule1");
-        checkResult(exceptions.get(0).getDescription().equals("Title can not be empty"), "rule1");
+        checkResult(exceptions.size() == 1, "rule1_v2");
+        checkResult(exceptions.get(0).getRuleName().equals("RULE-1"), "rule1_v2");
+        checkResult(exceptions.get(0).getFieldName().equals("title"), "rule1_v2");
+        checkResult(exceptions.get(0).getDescription().equals("Title can not be empty"), "rule1_v2");
     }
 
     //RULE-2: название не должно быть короче 3 символов
@@ -87,30 +87,30 @@ class ProductValidatorImplTest {
         String title = "Название";
         Product product = new Product(title, 1, "description");
         List<ValidationException> exceptions = validator.validate(product);
-        checkResult(exceptions.size() == 1, "rule4");
-        checkResult(exceptions.get(0).getRuleName().equals("RULE-4"), "rule4");
-        checkResult(exceptions.get(0).getFieldName().equals("title"), "rule4");
-        checkResult(exceptions.get(0).getDescription().equals("Title can contain only english letters and numbers"), "rule4");
+        checkResult(exceptions.size() == 1, "rule4_v1");
+        checkResult(exceptions.get(0).getRuleName().equals("RULE-4"), "rule4_v1");
+        checkResult(exceptions.get(0).getFieldName().equals("title"), "rule4_v1");
+        checkResult(exceptions.get(0).getDescription().equals("Title can contain only english letters and numbers"), "rule4_v1");
     }
 
     public void rule4_v2() {
         String title = "Title_1";
         Product product = new Product(title, 1, "description");
         List<ValidationException> exceptions = validator.validate(product);
-        checkResult(exceptions.size() == 1, "rule4");
-        checkResult(exceptions.get(0).getRuleName().equals("RULE-4"), "rule4");
-        checkResult(exceptions.get(0).getFieldName().equals("title"), "rule4");
-        checkResult(exceptions.get(0).getDescription().equals("Title can contain only english letters and numbers"), "rule4");
+        checkResult(exceptions.size() == 1, "rule4_v2");
+        checkResult(exceptions.get(0).getRuleName().equals("RULE-4"), "rule4_v2");
+        checkResult(exceptions.get(0).getFieldName().equals("title"), "rule4_v2");
+        checkResult(exceptions.get(0).getDescription().equals("Title can contain only english letters and numbers"), "rule4_v2");
     }
 
     public void rule4_v3() {
         String title = "Title.1";
         Product product = new Product(title, 1, "description");
         List<ValidationException> exceptions = validator.validate(product);
-        checkResult(exceptions.size() == 1, "rule4");
-        checkResult(exceptions.get(0).getRuleName().equals("RULE-4"), "rule4");
-        checkResult(exceptions.get(0).getFieldName().equals("title"), "rule4");
-        checkResult(exceptions.get(0).getDescription().equals("Title can contain only english letters and numbers"), "rule4");
+        checkResult(exceptions.size() == 1, "rule4_v3");
+        checkResult(exceptions.get(0).getRuleName().equals("RULE-4"), "rule4_v3");
+        checkResult(exceptions.get(0).getFieldName().equals("title"), "rule4_v3");
+        checkResult(exceptions.get(0).getDescription().equals("Title can contain only english letters and numbers"), "rule4_v3");
     }
 
     //RULE-5: цена не должна быть пустой
