@@ -23,7 +23,7 @@ class ProductDescriptionValidationRule implements FieldValidationRule {
     private void rule_8(Product product) throws ValidationException {
         StringFieldValueValidator validator = new StringFieldValueValidator();
         if (!validator.stringContainsLettersSpaceAndNumbers(product.getDescription())) {
-            throw new ValidationException("RULE-7", "Description can contain only english letters and numbers", "description");
+            throw new ValidationException("RULE-8", "Description can contain only english letters and numbers", "description");
         }
     }
 

@@ -7,11 +7,15 @@ class ProductValidatorImpl implements ProductValidator {
 
     private ProductTitleValidationRule titleValidationRule;
     private ProductPriceValidationRule priceValidationRule;
+    private ProductDescriptionValidationRule descriptionValidationRule;
 
     public ProductValidatorImpl(ProductTitleValidationRule titleValidationRule,
-                                ProductPriceValidationRule productPriceValidationRule) {
+                                ProductPriceValidationRule priceValidationRule,
+                                ProductDescriptionValidationRule descriptionValidationRule) {
         this.titleValidationRule = titleValidationRule;
-        this.priceValidationRule = productPriceValidationRule;
+        this.priceValidationRule = priceValidationRule;
+        this.descriptionValidationRule = descriptionValidationRule;
+
     }
 
     @Override
@@ -24,6 +28,11 @@ class ProductValidatorImpl implements ProductValidator {
         }
         try {
             priceValidationRule.validate(product);
+        } catch (ValidationException e) {
+            exceptions.add(e);
+        }
+        try {
+            descriptionValidationRule.validate(product);
         } catch (ValidationException e) {
             exceptions.add(e);
         }

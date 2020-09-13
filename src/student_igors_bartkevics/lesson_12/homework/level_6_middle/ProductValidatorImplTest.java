@@ -20,7 +20,28 @@ import java.util.List;
 class ProductValidatorImplTest {
 
     ProductValidator validator = new ProductValidatorImpl(new ProductTitleValidationRule(),
-            new ProductPriceValidationRule());
+            new ProductPriceValidationRule(), new ProductDescriptionValidationRule());
+
+    String description = "This is very long product description value that exceeds 2000 words and matches the rule number three condition " +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
+            "This is very long product description value that exceeds 2000 words and matches the rule number three condition";
 
     public static void main(String[] args) {
         ProductValidatorImplTest test = new ProductValidatorImplTest();
@@ -136,23 +157,13 @@ class ProductValidatorImplTest {
 
     //RULE-7: описание не должно быть длиннее 2000 символов
     public void rule7() {
-        String description = "This is very long product description value that exceeds 2000 words and matches the rule number three condition " +
-                "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
-                "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
-                "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
-                "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
-                "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
-                "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
-                "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
-                "This is very long product description value that exceeds 2000 words and matches the rule number three condition" +
-                "This is very long product description value that exceeds 2000 words and matches the rule number three condition";
 
         Product product = new Product("title", 1, description);
         List<ValidationException> exceptions = validator.validate(product);
-        checkResult(exceptions.size() == 1, "rule7");
-        checkResult(exceptions.get(0).getRuleName().equals("RULE-7"), "rule7");
-        checkResult(exceptions.get(0).getFieldName().equals("description"), "rule7");
-        checkResult(exceptions.get(0).getDescription().equals("Description can not be longer than 2000 symbols"), "rule7");
+        checkResult(exceptions.size() == 1, "rule7 description contains more than 2000 symbols");
+        checkResult(exceptions.get(0).getRuleName().equals("RULE-7"), "rule7 description contains more than 2000 symbols");
+        checkResult(exceptions.get(0).getFieldName().equals("description"), "rule7 description contains more than 2000 symbols");
+        checkResult(exceptions.get(0).getDescription().equals("Description can not be longer than 2000 symbols"), "rule7 description contains more than 2000 symbols");
     }
 
     //RULE-8: описание должно содержать только английские буквы и цифры, другие символы не допустимы
@@ -160,30 +171,30 @@ class ProductValidatorImplTest {
         String description = "Описание";
         Product product = new Product("title", 1, description);
         List<ValidationException> exceptions = validator.validate(product);
-        checkResult(exceptions.size() == 1, "rule8");
-        checkResult(exceptions.get(0).getRuleName().equals("RULE-8"), "rule8");
-        checkResult(exceptions.get(0).getFieldName().equals("description"), "rule8");
-        checkResult(exceptions.get(0).getDescription().equals("Description can contain only english letters and numbers"), "rule4");
+        checkResult(exceptions.size() == 1, "rule8 description contains not english letters");
+        checkResult(exceptions.get(0).getRuleName().equals("RULE-8"), "rule8 description contains not english letters");
+        checkResult(exceptions.get(0).getFieldName().equals("description"), "rule8 description contains not english letters");
+        checkResult(exceptions.get(0).getDescription().equals("Description can contain only english letters and numbers"), "rule8 description contains not english letters");
     }
 
     public void rule8_v2() {
         String description = "Description_1";
         Product product = new Product("title", 1, description);
         List<ValidationException> exceptions = validator.validate(product);
-        checkResult(exceptions.size() == 1, "rule8");
-        checkResult(exceptions.get(0).getRuleName().equals("RULE-8"), "rule8");
-        checkResult(exceptions.get(0).getFieldName().equals("description"), "rule8");
-        checkResult(exceptions.get(0).getDescription().equals("Description can contain only english letters and numbers"), "rule4");
+        checkResult(exceptions.size() == 1, "rule8 description contains wrong symbol");
+        checkResult(exceptions.get(0).getRuleName().equals("RULE-8"), "rule8 description contains wrong symbol");
+        checkResult(exceptions.get(0).getFieldName().equals("description"), "rule8 description contains wrong symbol");
+        checkResult(exceptions.get(0).getDescription().equals("Description can contain only english letters and numbers"), "rule8 description contains wrong symbol");
     }
 
     public void rule8_v3() {
         String description = "Description?";
         Product product = new Product("title", 1, description);
         List<ValidationException> exceptions = validator.validate(product);
-        checkResult(exceptions.size() == 1, "rule8");
-        checkResult(exceptions.get(0).getRuleName().equals("RULE-8"), "rule8");
-        checkResult(exceptions.get(0).getFieldName().equals("description"), "rule8");
-        checkResult(exceptions.get(0).getDescription().equals("Description can contain only english letters and numbers"), "rule4");
+        checkResult(exceptions.size() == 1, "rule8 description contains question mark");
+        checkResult(exceptions.get(0).getRuleName().equals("RULE-8"), "rule8 description contains question mark");
+        checkResult(exceptions.get(0).getFieldName().equals("description"), "rule8 description contains question mark");
+        checkResult(exceptions.get(0).getDescription().equals("Description can contain only english letters and numbers"), "rule8 description contains question mark");
     }
 
     public void checkResult(boolean condition, String testName) {
