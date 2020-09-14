@@ -80,7 +80,7 @@ class BookReaderImpl implements BookReader {
         String authorOfBooks = "";
         for (int i = 0; i < books.size(); i++) {
             authorOfBooks = books.get(i).getAuthor();
-            if (authorOfBooks.equals(author)) {
+            if (authorOfBooks.contains(author)) {
                 return books.get(i);
             }
         }

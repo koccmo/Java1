@@ -13,7 +13,7 @@ class BookReaderImplTest {
         bookReaderImplTest.deletingBookTest();
         bookReaderImplTest.printListOfBooksInLibraryTest();
         bookReaderImplTest.findBookByAuthorTest();
-        //bookReaderImplTest.findBookByAuthorTest2();
+        bookReaderImplTest.findBookByAuthorTest2();
         bookReaderImplTest.findBookByTitleTest();
     }
 
@@ -126,7 +126,7 @@ class BookReaderImplTest {
         }
     }
 
-    /*void findBookByAuthorTest2() {
+    void findBookByAuthorTest2() {
         BookReaderImpl bookReader = new BookReaderImpl();
         Book firstBook = new Book("Lord of the Rings","Tolkien");
         bookReader.save(firstBook);
@@ -140,7 +140,7 @@ class BookReaderImplTest {
         } else {
             System.out.println("Test8 for finding books of one author only by name = FAIL");
         }
-    }*/
+    }
 
     void findBookByTitleTest() {
         BookReaderImpl bookReader = new BookReaderImpl();
