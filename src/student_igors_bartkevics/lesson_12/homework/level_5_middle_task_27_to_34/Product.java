@@ -19,7 +19,7 @@ class Product {
 
 }
  */
-package student_igors_bartkevics.lesson_12.homework.level_5_middle;
+package student_igors_bartkevics.lesson_12.homework.level_5_middle_task_27_to_34;
 
 import java.util.Objects;
 
