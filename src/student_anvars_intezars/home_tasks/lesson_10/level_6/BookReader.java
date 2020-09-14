@@ -12,6 +12,6 @@ interface BookReader {
 
     Book findByTitle(String title);
 
-    void delete(Book book);
+    boolean delete(Book book);
 
 }

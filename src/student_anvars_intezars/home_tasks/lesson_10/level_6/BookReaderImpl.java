@@ -16,7 +16,7 @@ class BookReaderImpl implements BookReader {
     public boolean isAddedBook(Book book) {
         if (booksEqualByAuthorAndTitle(book)
                 &&
-           (booksHaveTitleAndAuthor(book))) {
+                (booksHaveTitleAndAuthor(book))) {
             save(book);
             return true;
         }
@@ -55,12 +55,17 @@ class BookReaderImpl implements BookReader {
             if (titleFromProducts.equals(productTitle)) {
                 return books.get(i);
             }
-        } return null;
+        }
+        return null;
     }
 
     @Override
-    public void delete(Book book) {
-        Book bookToDelete = findByTitle(book.getTitle());
-        books.remove(bookToDelete);
+    public boolean delete(Book book) {
+        if (books.contains(book)) {
+            books.remove(book);
+            return true;
+        }
+        return false;
     }
 }
+

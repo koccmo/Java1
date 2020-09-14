@@ -84,9 +84,8 @@ class BookReaderImplTest {
         bookReader.save(firstBook);
         Book secondBook = new Book("Harry Potter","Rowling");
         bookReader.save(secondBook);
-        bookReader.delete(firstBook);
-        Book findFirstBook = bookReader.findByTitle("Harry Potter");
-        if (findFirstBook == null) {
+        boolean result = bookReader.delete(firstBook);
+        if (result) {
             System.out.println("Test6 for deleting book in library = OK");
         } else {
             System.out.println("Test6 for deleting book in library = FAIL");
