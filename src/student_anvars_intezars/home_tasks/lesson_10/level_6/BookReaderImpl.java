@@ -67,5 +67,13 @@ class BookReaderImpl implements BookReader {
         }
         return false;
     }
+
+    @Override
+    public void printListOfBooks() {
+        for (int i = 0; i < books.size(); i++) {
+            System.out.println(books.get(i));
+        }
+    }
+
 }
 

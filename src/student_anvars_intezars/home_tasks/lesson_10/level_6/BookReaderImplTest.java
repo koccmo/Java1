@@ -11,6 +11,7 @@ class BookReaderImplTest {
         bookReaderImplTest.newBookWithoutTitleTest();
         bookReaderImplTest.newBookWithoutAuthorTest();
         bookReaderImplTest.deletingBookTest();
+        bookReaderImplTest.printListOfBooksInLibraryTest();
     }
 
     void toAddNewBookTest1() {
@@ -91,4 +92,15 @@ class BookReaderImplTest {
             System.out.println("Test6 for deleting book in library = FAIL");
         }
     }
-}
+
+    void printListOfBooksInLibraryTest() {
+            BookReaderImpl bookReader = new BookReaderImpl();
+            Book firstBook = new Book("Lord of the Rings","Tolkien");
+            bookReader.save(firstBook);
+            Book secondBook = new Book("Black Swan","Nassim Nicholas Taleb");
+            bookReader.save(secondBook);
+            Book thirdBook = new Book("Elon Musk","Ashley Vans");
+            bookReader.save(thirdBook);
+            bookReader.printListOfBooks();
+        }
+    }

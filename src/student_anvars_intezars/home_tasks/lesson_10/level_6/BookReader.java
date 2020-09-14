@@ -14,4 +14,8 @@ interface BookReader {
 
     boolean delete(Book book);
 
+    void printListOfBooks();
+
+
+
 }
