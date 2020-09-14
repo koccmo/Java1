@@ -71,8 +71,20 @@ class BookReaderImpl implements BookReader {
     @Override
     public void printListOfBooks() {
         for (int i = 0; i < books.size(); i++) {
-            System.out.println(books.get(i).getTitle() + " " + "-"+ books.get(i).getAuthor());
+            System.out.println(books.get(i).getTitle() + " " + "-" + books.get(i).getAuthor());
         }
+    }
+
+    @Override
+    public Book findByAuthor(String author) {
+        String authorOfBooks = "";
+        for (int i = 0; i < books.size(); i++) {
+            authorOfBooks = books.get(i).getAuthor();
+            if (authorOfBooks.equals(author)) {
+                return books.get(i);
+            }
+        }
+        return null;
     }
 }
 

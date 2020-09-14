@@ -12,6 +12,8 @@ interface BookReader {
 
     Book findByTitle(String title);
 
+    Book findByAuthor(String author);
+
     boolean delete(Book book);
 
     void printListOfBooks();

@@ -12,6 +12,7 @@ class BookReaderImplTest {
         bookReaderImplTest.newBookWithoutAuthorTest();
         bookReaderImplTest.deletingBookTest();
         bookReaderImplTest.printListOfBooksInLibraryTest();
+        bookReaderImplTest.findBookByAuthorTest();
     }
 
     void toAddNewBookTest1() {
@@ -104,5 +105,22 @@ class BookReaderImplTest {
             bookReader.save(thirdBook);
             System.out.println("List of Books:");
             bookReader.printListOfBooks();
+            System.out.println();
+        }
+
+    void findBookByAuthorTest() {
+        BookReaderImpl bookReader = new BookReaderImpl();
+        Book firstBook = new Book("Lord of the Rings","Tolkien");
+        bookReader.save(firstBook);
+        Book secondBook = new Book("Antifragile","Nassim Nicholas Taleb");
+        bookReader.save(secondBook);
+        Book thirdBook = new Book("Harry Potter","Rowling");
+        bookReader.save(thirdBook);
+        Book booksOfOneAuthor = bookReader.findByAuthor("Nassim Nicholas Taleb");
+        if (booksOfOneAuthor.equals(secondBook)) {
+            System.out.println("Test7 for finding books of one author = OK");
+        } else {
+            System.out.println("Test7 for finding books of one author = FAIL");
         }
     }
+}
