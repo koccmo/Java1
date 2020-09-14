@@ -88,6 +88,7 @@ class BookReaderImplTest {
         boolean result = bookReader.delete(firstBook);
         if (result) {
             System.out.println("Test6 for deleting book in library = OK");
+            System.out.println();
         } else {
             System.out.println("Test6 for deleting book in library = FAIL");
         }
@@ -101,6 +102,7 @@ class BookReaderImplTest {
             bookReader.save(secondBook);
             Book thirdBook = new Book("Elon Musk","Ashley Vans");
             bookReader.save(thirdBook);
+            System.out.println("List of Books:");
             bookReader.printListOfBooks();
         }
     }
