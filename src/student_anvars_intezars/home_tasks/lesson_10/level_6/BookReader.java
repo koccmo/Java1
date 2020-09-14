@@ -18,6 +18,8 @@ interface BookReader {
 
     void printListOfBooks();
 
+    boolean isRead(Book bookToRead);
+
 
 
 }

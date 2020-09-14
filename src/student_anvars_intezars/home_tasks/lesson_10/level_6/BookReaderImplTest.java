@@ -13,8 +13,9 @@ class BookReaderImplTest {
         bookReaderImplTest.deletingBookTest();
         bookReaderImplTest.printListOfBooksInLibraryTest();
         bookReaderImplTest.findBookByAuthorTest();
-        bookReaderImplTest.findBookByAuthorTest2();
+        //bookReaderImplTest.findBookByAuthorTest2();
         bookReaderImplTest.findBookByTitleTest();
+        bookReaderImplTest.readBookWhichAreOnlyInLibraryTest();
     }
 
     void toAddNewBookTest1() {
@@ -126,7 +127,7 @@ class BookReaderImplTest {
         }
     }
 
-    void findBookByAuthorTest2() {
+    /*void findBookByAuthorTest2() {
         BookReaderImpl bookReader = new BookReaderImpl();
         Book firstBook = new Book("Lord of the Rings","Tolkien");
         bookReader.save(firstBook);
@@ -140,7 +141,7 @@ class BookReaderImplTest {
         } else {
             System.out.println("Test8 for finding books of one author only by name = FAIL");
         }
-    }
+    }*/
 
     void findBookByTitleTest() {
         BookReaderImpl bookReader = new BookReaderImpl();
@@ -155,6 +156,23 @@ class BookReaderImplTest {
             System.out.println("Test9 for finding books by title = OK");
         } else {
             System.out.println("Test9 for finding books by title = FAIL");
+        }
+    }
+
+    void readBookWhichAreOnlyInLibraryTest() {
+
+        BookReaderImpl bookReader = new BookReaderImpl();
+        Book firstBook = new Book("Lord of the Rings","Tolkien");
+        bookReader.save(firstBook);
+        Book secondBook = new Book("Antifragile","Nassim Nicholas Taleb");
+        bookReader.save(secondBook);
+        Book thirdBook = new Book("Harry Potter","Rowling");
+        bookReader.save(thirdBook);
+        boolean result = bookReader.isRead(secondBook);
+        if (result) {
+            System.out.println("Test10 to read book only from library  = OK");
+        } else {
+            System.out.println("Test10 to read book only from library = FAIL");
         }
     }
 }

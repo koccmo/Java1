@@ -86,5 +86,16 @@ class BookReaderImpl implements BookReader {
         }
         return null;
     }
+
+    @Override
+    public boolean isRead(Book bookToRead) {
+        for (int i = 0; i < books.size(); i++) {
+           Book bookInLibrary = books.get(i);
+           if (bookInLibrary.equals(bookToRead)) {
+               return true;
+           }
+        }
+        return false;
+    }
 }
 
