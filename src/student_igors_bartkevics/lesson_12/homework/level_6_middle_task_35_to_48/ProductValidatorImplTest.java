@@ -13,7 +13,7 @@
 - RULE-7: не должно быть длиннее 2000 символов
 - RULE-8: должно содержать только английские буквы и цифры, другие символы не допустимы
  */
-package student_igors_bartkevics.lesson_12.homework.level_6_middle;
+package student_igors_bartkevics.lesson_12.homework.level_6_middle_task_35_to_48;
 
 import java.util.List;
 
