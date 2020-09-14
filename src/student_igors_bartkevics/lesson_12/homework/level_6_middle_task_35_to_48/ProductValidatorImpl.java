@@ -7,10 +7,6 @@ class ProductValidatorImpl implements ProductValidator {
 
     private List<FieldValidationRule> validationRules = new ArrayList<>();
 
-    //private ProductTitleValidationRule titleValidationRule;
-    //private ProductPriceValidationRule priceValidationRule;
-    //private ProductDescriptionValidationRule descriptionValidationRule;
-
     public ProductValidatorImpl(ProductTitleValidationRule titleValidationRule,
                                 ProductPriceValidationRule priceValidationRule,
                                 ProductDescriptionValidationRule descriptionValidationRule) {
