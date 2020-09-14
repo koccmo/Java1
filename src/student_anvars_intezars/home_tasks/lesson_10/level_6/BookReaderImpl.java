@@ -46,25 +46,21 @@ class BookReaderImpl implements BookReader {
         }
         return true;
     }
-}
 
-
-
-
-
-
-
-    //Первый вариант метода, который фейлился на тесте. Пока не удалял, чтобы довести до ума.
-    /*@Override
-    public boolean isAddedBook(Book book) {
-        Book currentListOfBooks;
+    @Override
+    public Book findByTitle(String productTitle) {
+        String titleFromProducts = "";
         for (int i = 0; i < books.size(); i++) {
-            currentListOfBooks = books.get(i);
-            if (!currentListOfBooks.equals(book)) {
-                save(book);
-                return true;
+            titleFromProducts = books.get(i).getTitle();
+            if (titleFromProducts.equals(productTitle)) {
+                return books.get(i);
             }
-        }
-        return false;
+        } return null;
     }
-}*/
+
+    @Override
+    public void delete(Book book) {
+        Book bookToDelete = findByTitle(book.getTitle());
+        books.remove(bookToDelete);
+    }
+}

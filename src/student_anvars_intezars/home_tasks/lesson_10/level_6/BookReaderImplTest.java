@@ -10,6 +10,7 @@ class BookReaderImplTest {
         bookReaderImplTest.toAddNewBookTest3();
         bookReaderImplTest.newBookWithoutTitleTest();
         bookReaderImplTest.newBookWithoutAuthorTest();
+        bookReaderImplTest.deletingBookTest();
     }
 
     void toAddNewBookTest1() {
@@ -60,7 +61,7 @@ class BookReaderImplTest {
         if (result) {
             System.out.println("Tes4 for adding new book to library = OK");
         } else {
-            System.out.println("Test4 for adding new book library = FAIL");
+            System.out.println("Test4 for adding new book library = FAIL(missing title)");
         }
     }
 
@@ -73,7 +74,22 @@ class BookReaderImplTest {
         if (result) {
             System.out.println("Test5 for adding new book to library = OK");
         } else {
-            System.out.println("Test5 for adding new book library = FAIL");
+            System.out.println("Test5 for adding new book library = FAIL(missing author)");
         }
     }
+
+    void deletingBookTest() {
+        BookReaderImpl bookReader = new BookReaderImpl();
+        Book firstBook = new Book("Lord of the Rings","Tolkien");
+        bookReader.save(firstBook);
+        Book secondBook = new Book("Harry Potter","Rowling");
+        bookReader.save(secondBook);
+        bookReader.delete(firstBook);
+        Book findFirstBook = bookReader.findByTitle("Harry Potter");
+        if (findFirstBook == null) {
+            System.out.println("Test6 for deleting book in library = OK");
+        } else {
+            System.out.println("Test6 for deleting book in library = FAIL");
+        }
     }
+}

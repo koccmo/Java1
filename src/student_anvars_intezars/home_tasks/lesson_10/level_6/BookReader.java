@@ -10,4 +10,8 @@ interface BookReader {
 
     boolean booksHaveTitleAndAuthor(Book book);
 
+    Book findByTitle(String title);
+
+    void delete(Book book);
+
 }
