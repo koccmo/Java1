@@ -71,12 +71,11 @@ class BankAccountCurrentBalanceCalculator {
         // текущего баланса описанный выше.
         int currentBalance = 0;
         Transaction[] transactions = bankAccount.getTransactions();
-        for (int i = 0; i < transactions.length; i++) {
-            Transaction transaction = transactions[i];
+        for (Transaction transaction : transactions) {
             if (transaction.isDeposit()) {
                 currentBalance += transaction.getAmount();
             }
-            if (transaction.isWithdrawal()){
+            if (transaction.isWithdrawal()) {
                 currentBalance -= transaction.getAmount();
             }
         }

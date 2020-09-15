@@ -26,12 +26,11 @@ class BankAccountMaxBalanceFinder {
         Transaction[] transactions = bankAccount.getTransactions();
         int currentBalance = 0;
         int maxBalance = 0;
-        for (int i = 0; i < transactions.length; i++) {
-            Transaction transaction = transactions[i];
+        for (Transaction transaction : transactions) {
             if (transaction.isDeposit()) {
                 currentBalance += transaction.getAmount();
             }
-            if (transaction.isWithdrawal()){
+            if (transaction.isWithdrawal()) {
                 currentBalance -= transaction.getAmount();
             }
             if (currentBalance > maxBalance) {
