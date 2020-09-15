@@ -16,7 +16,7 @@ class BookReaderImpl implements BookReader {
     public boolean isAddedBook(Book book) {
         if (booksEqualByAuthorAndTitle(book)
                 &&
-           (booksHaveTitleAndAuthor(book))) {
+                (booksHaveTitleAndAuthor(book))) {
             save(book);
             return true;
         }
@@ -46,25 +46,56 @@ class BookReaderImpl implements BookReader {
         }
         return true;
     }
-}
 
-
-
-
-
-
-
-    //Первый вариант метода, который фейлился на тесте. Пока не удалял, чтобы довести до ума.
-    /*@Override
-    public boolean isAddedBook(Book book) {
-        Book currentListOfBooks;
+    @Override
+    public Book findByTitle(String productTitle) {
+        String titleFromProducts = "";
         for (int i = 0; i < books.size(); i++) {
-            currentListOfBooks = books.get(i);
-            if (!currentListOfBooks.equals(book)) {
-                save(book);
-                return true;
+            titleFromProducts = books.get(i).getTitle();
+            if (titleFromProducts.equals(productTitle)) {
+                return books.get(i);
             }
+        }
+        return null;
+    }
+
+    @Override
+    public boolean delete(Book book) {
+        if (books.contains(book)) {
+            books.remove(book);
+            return true;
         }
         return false;
     }
-}*/
+
+    @Override
+    public void printListOfBooks() {
+        for (int i = 0; i < books.size(); i++) {
+            System.out.println(books.get(i).getTitle() + " " + "-" + books.get(i).getAuthor());
+        }
+    }
+
+    @Override
+    public Book findByAuthor(String author) {
+        String authorOfBooks = "";
+        for (int i = 0; i < books.size(); i++) {
+            authorOfBooks = books.get(i).getAuthor();
+            if (authorOfBooks.contains(author)) {
+                return books.get(i);
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public boolean isRead(Book bookToRead) {
+        for (int i = 0; i < books.size(); i++) {
+           Book bookInLibrary = books.get(i);
+           if (bookInLibrary.equals(bookToRead)) {
+               return true;
+           }
+        }
+        return false;
+    }
+}
+
