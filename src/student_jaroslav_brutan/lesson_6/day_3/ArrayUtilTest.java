@@ -37,7 +37,7 @@ public class ArrayUtilTest {
         if (result == 9){
             System.out.println("TEST - OK");
         } else {
-            System.out.println("TEST -FALSE");
+            System.out.println("TEST - FALSE");
         }
     }
 

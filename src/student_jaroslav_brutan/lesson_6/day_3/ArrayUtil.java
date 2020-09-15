@@ -67,7 +67,7 @@ public class ArrayUtil {
                 break;
             }
         }
-        return numberToReplace;
+        return newNumber;
     }
 
     public int replaceAllNumbers(int[] arr, int numberToReplace, int newNumber) {
