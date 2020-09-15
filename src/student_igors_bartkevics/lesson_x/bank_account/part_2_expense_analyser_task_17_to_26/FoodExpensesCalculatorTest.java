@@ -54,18 +54,14 @@ class FoodExpensesCalculator {
  */
 package student_igors_bartkevics.lesson_x.bank_account.part_2_expense_analyser_task_17_to_26;
 
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
 class FoodExpensesCalculatorTest {
 
     public static void main(String[] args) {
         FoodExpensesCalculatorTest test = new FoodExpensesCalculatorTest();
-        test.selectAllBankAccountTransactions();
-        test.selectWithdrawalTransactionsTest();
-        test.selectTransactionsWithExpenseCategoryFoodTest();
-        test.sumOfAmountsOfTransactionsTest();
+        //test.selectAllBankAccountTransactions();
+        //test.selectWithdrawalTransactionsTest();
+        //test.selectTransactionsWithExpenseCategoryFoodTest();
+        //test.sumOfAmountsOfTransactionsTest();
         test.calculateFoodExpenseAmountTest();
     }
 
@@ -93,6 +89,7 @@ class FoodExpensesCalculatorTest {
         checkResult(condition3, "Calculate food expense amount");
     }
 
+    /*
     public void sumOfAmountsOfTransactionsTest() {
 
         FoodExpensesCalculator expensesCalculator = new FoodExpensesCalculator();
@@ -157,6 +154,7 @@ class FoodExpensesCalculatorTest {
         checkResult(condition, "Select all bank account transactions");
     }
 
+     */
 
     public void checkResult(boolean condition, String testName) {
         if (condition) {
