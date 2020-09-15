@@ -42,7 +42,7 @@ Task_14:
 не забудьте внести нужные изменения как в сам код так и в тесты.
 
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring;
+package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring_task_29_to_41;
 
 class BankAccount {
 

@@ -52,20 +52,20 @@ class FoodExpensesCalculator {
 Создайте класс FoodExpensesCalculatorTest и напишите автоматические юнит тесты
 для метода calculateExpensesAmount().
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring;
+package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring_task_29_to_41;
 
-class LoansExpensesCalculatorTest {
+class FoodExpensesCalculatorTest {
 
     public static void main(String[] args) {
-        LoansExpensesCalculatorTest test = new LoansExpensesCalculatorTest();
-        test.calculateLoansExpenseAmountTest();
+        FoodExpensesCalculatorTest test = new FoodExpensesCalculatorTest();
+        test.calculateFoodExpenseAmountTest();
     }
 
-    public void calculateLoansExpenseAmountTest() {
+    public void calculateFoodExpenseAmountTest() {
 
-        ExpensesCalculator expensesCalculator = new LoansExpensesCalculator();
+        ExpensesCalculator expensesCalculator = new FoodExpensesCalculator();
 
-        Transaction[] transactions = new Transaction[8];
+        Transaction[] transactions = new Transaction[7];
         transactions[0] = new Transaction(3000);
         transactions[1] = new Transaction(1200, ExpenseCategory.FOOD);
         transactions[2] = new Transaction(5000);
@@ -73,17 +73,16 @@ class LoansExpensesCalculatorTest {
         transactions[4] = new Transaction(1200, ExpenseCategory.LOANS);
         transactions[5] = new Transaction(1200, ExpenseCategory.FOOD);
         transactions[6] = new Transaction(4000);
-        transactions[7] = new Transaction(800, ExpenseCategory.LOANS);
 
         BankAccount bankAccount = new BankAccount("Name Surname", transactions, 200);
 
-        boolean condition1 = (expensesCalculator.calculateExpensesAmount(bankAccount) == 2000);
-        boolean condition2 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 2001);
-        boolean condition3 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 1999);
+        boolean condition1 = (expensesCalculator.calculateExpensesAmount(bankAccount) == 2400);
+        boolean condition2 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 2401);
+        boolean condition3 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 2399);
 
-        checkResult(condition1, "Calculate loans expense amount");
-        checkResult(condition2, "Calculate loans expense amount");
-        checkResult(condition3, "Calculate loans expense amount");
+        checkResult(condition1, "Calculate food expense amount");
+        checkResult(condition2, "Calculate food expense amount");
+        checkResult(condition3, "Calculate food expense amount");
     }
 
     public void checkResult(boolean condition, String testName) {

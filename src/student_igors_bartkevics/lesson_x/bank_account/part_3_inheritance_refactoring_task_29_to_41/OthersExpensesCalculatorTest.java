@@ -52,18 +52,18 @@ class FoodExpensesCalculator {
 Создайте класс FoodExpensesCalculatorTest и напишите автоматические юнит тесты
 для метода calculateExpensesAmount().
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring;
+package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring_task_29_to_41;
 
-class CommunalPaymentsExpensesCalculatorTest {
+class OthersExpensesCalculatorTest {
 
     public static void main(String[] args) {
-        CommunalPaymentsExpensesCalculatorTest test = new CommunalPaymentsExpensesCalculatorTest();
-        test.calculateCommunalPaymentsExpenseAmountTest();
+        OthersExpensesCalculatorTest test = new OthersExpensesCalculatorTest();
+        test.calculateOthersExpenseAmountTest();
     }
 
-    public void calculateCommunalPaymentsExpenseAmountTest() {
+    public void calculateOthersExpenseAmountTest() {
 
-        ExpensesCalculator expensesCalculator = new CommunalPaymentsExpensesCalculator();
+        ExpensesCalculator expensesCalculator = new OthersExpensesCalculator();
 
         Transaction[] transactions = new Transaction[9];
         transactions[0] = new Transaction(3000);
@@ -73,8 +73,8 @@ class CommunalPaymentsExpensesCalculatorTest {
         transactions[4] = new Transaction(1200, ExpenseCategory.LOANS);
         transactions[5] = new Transaction(1200, ExpenseCategory.FOOD);
         transactions[6] = new Transaction(4000);
-        transactions[7] = new Transaction(800, ExpenseCategory.COMMUNAL_PAYMENTS);
-        transactions[8] = new Transaction(800, ExpenseCategory.COMMUNAL_PAYMENTS);
+        transactions[7] = new Transaction(800, ExpenseCategory.OTHERS);
+        transactions[8] = new Transaction(800, ExpenseCategory.OTHERS);
 
         BankAccount bankAccount = new BankAccount("Name Surname", transactions, 200);
 
@@ -82,9 +82,9 @@ class CommunalPaymentsExpensesCalculatorTest {
         boolean condition2 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 1601);
         boolean condition3 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 1599);
 
-        checkResult(condition1, "Calculate communal payments expense amount");
-        checkResult(condition2, "Calculate communal payments expense amount");
-        checkResult(condition3, "Calculate communal payments expense amount");
+        checkResult(condition1, "Calculate others expense amount");
+        checkResult(condition2, "Calculate others expense amount");
+        checkResult(condition3, "Calculate others expense amount");
     }
 
     public void checkResult(boolean condition, String testName) {

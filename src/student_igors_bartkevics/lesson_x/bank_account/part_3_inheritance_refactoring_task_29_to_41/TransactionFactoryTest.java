@@ -45,7 +45,7 @@ class Transaction {
 
 Для этого создайте класс TransactionFactoryTest и протестируйте методы создания транзакций.
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring;
+package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring_task_29_to_41;
 
 
 class TransactionFactoryTest {

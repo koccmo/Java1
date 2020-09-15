@@ -28,12 +28,12 @@ class FoodExpensesCalculator {
 
 }
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring;
+package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring_task_29_to_41;
 
-public class CommunalPaymentsExpensesCalculator extends ExpensesCalculator{
+public class LoansExpensesCalculator extends ExpensesCalculator{
 
     @Override
     protected ExpenseCategory getExpenseCategory() {
-        return ExpenseCategory.COMMUNAL_PAYMENTS;
+        return ExpenseCategory.LOANS;
     }
 }

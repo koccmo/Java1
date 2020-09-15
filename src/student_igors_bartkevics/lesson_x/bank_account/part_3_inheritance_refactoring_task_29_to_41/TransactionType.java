@@ -14,7 +14,7 @@ public enum TransactionType {
 
 
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring;
+package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring_task_29_to_41;
 
 public enum TransactionType {
     DEPOSIT, WITHDRAWAL
