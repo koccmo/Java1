@@ -52,18 +52,19 @@ class FoodExpensesCalculator {
 Создайте класс FoodExpensesCalculatorTest и напишите автоматические юнит тесты
 для метода calculateExpensesAmount().
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_4;
+package student_igors_bartkevics.lesson_x.bank_account.part_4_task_42_to_47;
 
-class GamblingExpensesCalculatorTest {
+import java.util.HashMap;
+import java.util.Map;
+
+class ExpensesCategoryAmountCalculatorTest {
 
     public static void main(String[] args) {
-        GamblingExpensesCalculatorTest test = new GamblingExpensesCalculatorTest();
-        test.calculateGamblingExpenseAmountTest();
+        ExpensesCategoryAmountCalculatorTest test = new ExpensesCategoryAmountCalculatorTest();
+        test.calculateExpensesByCategoryTest();
     }
 
-    public void calculateGamblingExpenseAmountTest() {
-
-        ExpensesCalculator expensesCalculator = new GamblingExpensesCalculator();
+    public void calculateExpensesByCategoryTest() {
 
         Transaction transaction1 = new Transaction(3000);
         Transaction transaction2 = new Transaction(1200, ExpenseCategory.FOOD);
@@ -73,19 +74,27 @@ class GamblingExpensesCalculatorTest {
         Transaction transaction6 = new Transaction(1200, ExpenseCategory.FOOD);
         Transaction transaction7 = new Transaction(4000);
         Transaction transaction8 = new Transaction(800, ExpenseCategory.GAMBLING);
-        Transaction transaction9 = new Transaction(800, ExpenseCategory.GAMBLING);
+        Transaction transaction9 = new Transaction(100, ExpenseCategory.COMMUNAL_PAYMENTS);
+        Transaction transaction10 = new Transaction(150, ExpenseCategory.LOANS);
+        Transaction transaction11 = new Transaction(30, ExpenseCategory.OTHERS);
+        Transaction transaction12 = new Transaction(55, ExpenseCategory.OTHERS);
 
-        BankAccount bankAccount = new BankAccount("Name Surname", 200, transaction1,
+        BankAccount bankAccount = new BankAccount("Name Surname", 200 , transaction1,
                 transaction2, transaction3, transaction4,transaction5, transaction6, transaction7,
-                transaction8, transaction9);
+                transaction8, transaction9, transaction10,transaction11, transaction12);
 
-        boolean condition1 = (expensesCalculator.calculateExpensesAmount(bankAccount) == 1600);
-        boolean condition2 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 1601);
-        boolean condition3 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 1599);
+        ExpenseCategoryAmountCalculator calculator = new ExpenseCategoryAmountCalculator();
 
-        checkResult(condition1, "Calculate gambling expense amount");
-        checkResult(condition2, "Calculate gambling expense amount");
-        checkResult(condition3, "Calculate gambling expense amount");
+        Map<ExpenseCategory, Integer> expectedMap = new HashMap<>();
+        expectedMap.put(ExpenseCategory.COMMUNAL_PAYMENTS, 100);
+        expectedMap.put(ExpenseCategory.ENTERTAINMENT, 3500);
+        expectedMap.put(ExpenseCategory.FOOD, 2400);
+        expectedMap.put(ExpenseCategory.GAMBLING, 800);
+        expectedMap.put(ExpenseCategory.LOANS, 1350);
+        expectedMap.put(ExpenseCategory.OTHERS, 85);
+        boolean condition = expectedMap.equals(calculator.calculate(bankAccount));
+
+        checkResult(condition, "Calculate expenses by category");
     }
 
     public void checkResult(boolean condition, String testName) {

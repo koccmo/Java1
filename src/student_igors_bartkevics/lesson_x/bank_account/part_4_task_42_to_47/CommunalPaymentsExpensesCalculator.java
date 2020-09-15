@@ -28,12 +28,12 @@ class FoodExpensesCalculator {
 
 }
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_4;
+package student_igors_bartkevics.lesson_x.bank_account.part_4_task_42_to_47;
 
-public class GamblingExpensesCalculator extends ExpensesCalculator {
+public class CommunalPaymentsExpensesCalculator extends ExpensesCalculator {
 
     @Override
-    protected ExpenseCategory getExpenseCategory() {
-        return ExpenseCategory.GAMBLING;
+    public ExpenseCategory getExpenseCategory() {
+        return ExpenseCategory.COMMUNAL_PAYMENTS;
     }
 }

@@ -28,12 +28,12 @@ class FoodExpensesCalculator {
 
 }
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_4;
+package student_igors_bartkevics.lesson_x.bank_account.part_4_task_42_to_47;
 
-public class FoodExpensesCalculator extends ExpensesCalculator {
+public class LoansExpensesCalculator extends ExpensesCalculator {
 
     @Override
-    protected ExpenseCategory getExpenseCategory() {
-        return ExpenseCategory.FOOD;
+    public ExpenseCategory getExpenseCategory() {
+        return ExpenseCategory.LOANS;
     }
 }

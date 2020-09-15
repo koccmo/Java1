@@ -28,7 +28,7 @@ class FoodExpensesCalculator {
 
 }
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_4;
+package student_igors_bartkevics.lesson_x.bank_account.part_4_task_42_to_47;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -79,6 +79,6 @@ public abstract class ExpensesCalculator {
         return totalExpensesAmount;
     }
 
-    protected abstract ExpenseCategory getExpenseCategory();
+    public abstract ExpenseCategory getExpenseCategory();
 
 }

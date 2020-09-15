@@ -32,7 +32,7 @@ enum ExpenseCategory {
 
 }
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_4;
+package student_igors_bartkevics.lesson_x.bank_account.part_4_task_42_to_47;
 
 enum ExpenseCategory {
 

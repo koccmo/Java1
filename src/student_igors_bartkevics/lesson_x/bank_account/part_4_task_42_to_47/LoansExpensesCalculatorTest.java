@@ -52,37 +52,36 @@ class FoodExpensesCalculator {
 Создайте класс FoodExpensesCalculatorTest и напишите автоматические юнит тесты
 для метода calculateExpensesAmount().
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_4;
+package student_igors_bartkevics.lesson_x.bank_account.part_4_task_42_to_47;
 
-class FoodExpensesCalculatorTest {
+class LoansExpensesCalculatorTest {
 
     public static void main(String[] args) {
-        FoodExpensesCalculatorTest test = new FoodExpensesCalculatorTest();
-        test.calculateFoodExpenseAmountTest();
+        LoansExpensesCalculatorTest test = new LoansExpensesCalculatorTest();
+        test.calculateLoansExpenseAmountTest();
     }
 
-    public void calculateFoodExpenseAmountTest() {
+    public void calculateLoansExpenseAmountTest() {
 
-        ExpensesCalculator expensesCalculator = new FoodExpensesCalculator();
+        ExpensesCalculator expensesCalculator = new LoansExpensesCalculator();
 
-        Transaction transaction1 = new Transaction(3000);
-        Transaction transaction2 = new Transaction(1200, ExpenseCategory.FOOD);
-        Transaction transaction3 = new Transaction(5000);
-        Transaction transaction4 = new Transaction(3500, ExpenseCategory.ENTERTAINMENT);
-        Transaction transaction5 = new Transaction(1200, ExpenseCategory.LOANS);
-        Transaction transaction6 = new Transaction(1200, ExpenseCategory.FOOD);
-        Transaction transaction7 = new Transaction(4000);
+        BankAccount bankAccount = new BankAccount("Name Surname", 200,
+                new Transaction(3000),
+                new Transaction(1200, ExpenseCategory.FOOD),
+                new Transaction(5000),
+                new Transaction(3500, ExpenseCategory.ENTERTAINMENT),
+                new Transaction(1200, ExpenseCategory.LOANS),
+                new Transaction(1200, ExpenseCategory.FOOD),
+                new Transaction(4000),
+                new Transaction(800, ExpenseCategory.LOANS));
 
-        BankAccount bankAccount = new BankAccount("Name Surname", 200, transaction1,
-                transaction2, transaction3, transaction4,transaction5, transaction6, transaction7);
+        boolean condition1 = (expensesCalculator.calculateExpensesAmount(bankAccount) == 2000);
+        boolean condition2 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 2001);
+        boolean condition3 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 1999);
 
-        boolean condition1 = (expensesCalculator.calculateExpensesAmount(bankAccount) == 2400);
-        boolean condition2 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 2401);
-        boolean condition3 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 2399);
-
-        checkResult(condition1, "Calculate food expense amount");
-        checkResult(condition2, "Calculate food expense amount");
-        checkResult(condition3, "Calculate food expense amount");
+        checkResult(condition1, "Calculate loans expense amount");
+        checkResult(condition2, "Calculate loans expense amount");
+        checkResult(condition3, "Calculate loans expense amount");
     }
 
     public void checkResult(boolean condition, String testName) {
