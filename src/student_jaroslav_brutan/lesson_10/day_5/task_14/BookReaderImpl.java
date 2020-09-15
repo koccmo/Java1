@@ -1,4 +1,6 @@
+/*
 package student_jaroslav_brutan.lesson_10.day_5.task_14;
+
 
 import student_jaroslav_brutan.lesson_10.day_5.task_14.Book;
 import student_jaroslav_brutan.lesson_10.day_5.task_14.BookReader;
@@ -34,3 +36,6 @@ public class BookReaderImpl implements BookReader {
 
 
 }
+
+
+ */

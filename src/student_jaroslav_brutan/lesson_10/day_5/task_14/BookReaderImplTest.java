@@ -1,3 +1,4 @@
+/*
 package student_jaroslav_brutan.lesson_10.day_5.task_14;
 
 public class BookReaderImplTest {
@@ -21,3 +22,5 @@ public class BookReaderImplTest {
         }
     }
 }
+
+ */
