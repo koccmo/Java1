@@ -20,6 +20,8 @@ interface BookReader {
 
     boolean isRead(Book bookToRead);
 
+    boolean notRead (Book bookNotRead);
+
 
 
 }
