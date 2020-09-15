@@ -1,9 +1,6 @@
-/*
-package student_jaroslav_brutan.lesson_10.day_5.task_14;
 
+package student_jaroslav_brutan.lesson_10.day_6.task_14;
 
-import student_jaroslav_brutan.lesson_10.day_5.task_14.Book;
-import student_jaroslav_brutan.lesson_10.day_5.task_14.BookReader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,4 +35,3 @@ public class BookReaderImpl implements BookReader {
 }
 
 
- */

@@ -1,4 +1,4 @@
-package student_jaroslav_brutan.lesson_10.day_5.task_14;
+package student_jaroslav_brutan.lesson_10.day_6.task_14;
 
 public class Book {
 
