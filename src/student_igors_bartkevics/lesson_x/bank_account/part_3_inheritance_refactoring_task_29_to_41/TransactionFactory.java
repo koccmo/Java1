@@ -52,16 +52,10 @@ class TransactionFactory {
 
     public static Transaction createDepositTransaction(int amount) {
         return new Transaction(amount);
-        // создайте в классе Transaction соответствующий конструктор в котором
-        // свойство transactionType устанавливается в значение TransactionType.DEPOSIT,
-        // а свойство expenseCategory в значение null
     }
 
     public static Transaction createWithdrawalTransaction(int amount, ExpenseCategory expenseCategory) {
         return new Transaction(amount, expenseCategory);
-        // создайте в классе Transaction соответствующий конструктор в котором
-        // свойство transactionType устанавливается в значение TransactionType.WITHDRAWAL,
-        // а свойство expenseCategory принимает значение полученное в параметре метода
     }
 
 }
