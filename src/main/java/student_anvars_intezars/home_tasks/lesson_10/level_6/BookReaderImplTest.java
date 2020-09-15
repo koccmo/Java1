@@ -16,6 +16,7 @@ class BookReaderImplTest {
         //bookReaderImplTest.findBookByAuthorTest2();
         bookReaderImplTest.findBookByTitleTest();
         bookReaderImplTest.readBookWhichAreOnlyInLibraryTest();
+        bookReaderImplTest.markUnreadBooksWhichAreOnlyInTheLibraryTest();
     }
 
     void toAddNewBookTest1() {
@@ -160,7 +161,6 @@ class BookReaderImplTest {
     }
 
     void readBookWhichAreOnlyInLibraryTest() {
-
         BookReaderImpl bookReader = new BookReaderImpl();
         Book firstBook = new Book("Lord of the Rings","Tolkien");
         bookReader.save(firstBook);
@@ -175,4 +175,20 @@ class BookReaderImplTest {
             System.out.println("Test10 to read book only from library = FAIL");
         }
     }
-}
+
+    void markUnreadBooksWhichAreOnlyInTheLibraryTest() {
+        BookReaderImpl bookReader = new BookReaderImpl();
+        Book firstBook = new Book("Lord of the Rings","Tolkien");
+        bookReader.save(firstBook);
+        Book secondBook = new Book("Antifragile","Nassim Nicholas Taleb");
+        bookReader.save(secondBook);
+        Book thirdBook = new Book("Harry Potter","Rowling");
+        bookReader.save(thirdBook);
+        boolean result = bookReader.notRead(secondBook);
+        if (result) {
+            System.out.println("Test11 mark book as unread book only from library  = OK");
+        } else {
+            System.out.println("Test11 mark book as unread only from library = FAIL");
+        }
+    }
+    }
