@@ -1,4 +1,4 @@
-package student_jaroslav_brutan.homeworks.lesson_1;
+package student_jaroslav_brutan.lesson_1;
 
 public class Task_11 {
     public static void main(String[] args) {
