@@ -34,7 +34,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ExpensesCalculator {
+public abstract class ExpensesCalculator {
+
+    public int calculateExpensesAmount(BankAccount bankAccount) {
+
+        List<Transaction> allTransactions = selectAllBankAccountTransactions(bankAccount);
+        List<Transaction> withdrawalTransactions = selectWithdrawalTransactions(allTransactions);
+        List<Transaction> transactionsWithExpenseCategoryEntertainment =
+                selectTransactionsByExpenseCategory(withdrawalTransactions, getExpenseCategory());
+        return sumOfAmountsOfTransactions(transactionsWithExpenseCategoryEntertainment);
+    }
 
     protected List<Transaction> selectAllBankAccountTransactions(BankAccount bankAccount) {
         Transaction[] transactions = bankAccount.getTransactions();
@@ -70,5 +79,6 @@ public class ExpensesCalculator {
         return totalExpensesAmount;
     }
 
+    protected abstract ExpenseCategory getExpenseCategory();
 
 }

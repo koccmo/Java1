@@ -30,16 +30,10 @@ class FoodExpensesCalculator {
  */
 package student_igors_bartkevics.lesson_x.bank_account.part_3_inheritance_refactoring;
 
-import java.util.List;
-
 public class EntertainmentExpensesCalculator extends ExpensesCalculator{
 
-    public int calculateExpensesAmount(BankAccount bankAccount) {
-
-        List<Transaction> allTransactions = selectAllBankAccountTransactions(bankAccount);
-        List<Transaction> withdrawalTransactions = selectWithdrawalTransactions(allTransactions);
-        List<Transaction> transactionsWithExpenseCategoryEntertainment =
-                selectTransactionsByExpenseCategory(withdrawalTransactions, ExpenseCategory.ENTERTAINMENT);
-        return sumOfAmountsOfTransactions(transactionsWithExpenseCategoryEntertainment);
+    @Override
+    protected ExpenseCategory getExpenseCategory() {
+        return ExpenseCategory.ENTERTAINMENT;
     }
 }

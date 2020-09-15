@@ -63,7 +63,7 @@ class EntertainmentExpensesCalculatorTest {
 
     public void calculateEntertainmentExpenseAmountTest() {
 
-        EntertainmentExpensesCalculator expensesCalculator = new EntertainmentExpensesCalculator();
+        ExpensesCalculator expensesCalculator = new EntertainmentExpensesCalculator();
 
         Transaction[] transactions = new Transaction[7];
         transactions[0] = new Transaction(3000);

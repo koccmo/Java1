@@ -63,7 +63,7 @@ class FoodExpensesCalculatorTest {
 
     public void calculateFoodExpenseAmountTest() {
 
-        FoodExpensesCalculator expensesCalculator = new FoodExpensesCalculator();
+        ExpensesCalculator expensesCalculator = new FoodExpensesCalculator();
 
         Transaction[] transactions = new Transaction[7];
         transactions[0] = new Transaction(3000);
