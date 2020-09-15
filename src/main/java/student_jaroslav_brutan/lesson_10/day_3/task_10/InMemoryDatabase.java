@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/*
+
 class InMemoryDatabase implements Database{
 
     private List <Product> productList = new ArrayList<>();
@@ -31,4 +31,4 @@ class InMemoryDatabase implements Database{
 
 
 }
-*/
+
