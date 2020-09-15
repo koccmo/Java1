@@ -42,7 +42,7 @@ Task_14:
 не забудьте внести нужные изменения как в сам код так и в тесты.
 
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_2_expense_analyser_task_17_to_26;
+package student_igors_bartkevics.lesson_x.bank_account.part_2_expense_analyser_task_17_to_28;
 
 class BankAccount {
 

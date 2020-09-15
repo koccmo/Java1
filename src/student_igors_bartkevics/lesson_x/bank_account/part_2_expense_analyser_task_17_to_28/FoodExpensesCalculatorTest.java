@@ -52,18 +52,18 @@ class FoodExpensesCalculator {
 Создайте класс FoodExpensesCalculatorTest и напишите автоматические юнит тесты
 для метода calculateExpensesAmount().
  */
-package student_igors_bartkevics.lesson_x.bank_account.part_2_expense_analyser_task_17_to_26;
+package student_igors_bartkevics.lesson_x.bank_account.part_2_expense_analyser_task_17_to_28;
 
-class EntertainmentExpensesCalculatorTest {
+class FoodExpensesCalculatorTest {
 
     public static void main(String[] args) {
-        EntertainmentExpensesCalculatorTest test = new EntertainmentExpensesCalculatorTest();
-        test.calculateEntertainmentExpenseAmountTest();
+        FoodExpensesCalculatorTest test = new FoodExpensesCalculatorTest();
+        test.calculateFoodExpenseAmountTest();
     }
 
-    public void calculateEntertainmentExpenseAmountTest() {
+    public void calculateFoodExpenseAmountTest() {
 
-        EntertainmentExpensesCalculator expensesCalculator = new EntertainmentExpensesCalculator();
+        FoodExpensesCalculator expensesCalculator = new FoodExpensesCalculator();
 
         Transaction[] transactions = new Transaction[7];
         transactions[0] = new Transaction(3000);
@@ -76,13 +76,13 @@ class EntertainmentExpensesCalculatorTest {
 
         BankAccount bankAccount = new BankAccount("Name Surname", transactions, 200);
 
-        boolean condition1 = (expensesCalculator.calculateExpensesAmount(bankAccount) == 3500);
-        boolean condition2 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 3501);
-        boolean condition3 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 3499);
+        boolean condition1 = (expensesCalculator.calculateExpensesAmount(bankAccount) == 2400);
+        boolean condition2 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 2401);
+        boolean condition3 = !(expensesCalculator.calculateExpensesAmount(bankAccount) == 2399);
 
-        checkResult(condition1, "Calculate entertainment expense amount");
-        checkResult(condition2, "Calculate entertainment expense amount");
-        checkResult(condition3, "Calculate entertainment expense amount");
+        checkResult(condition1, "Calculate food expense amount");
+        checkResult(condition2, "Calculate food expense amount");
+        checkResult(condition3, "Calculate food expense amount");
     }
 
     public void checkResult(boolean condition, String testName) {
