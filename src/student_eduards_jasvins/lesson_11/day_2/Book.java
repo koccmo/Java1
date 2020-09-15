@@ -1,15 +1,22 @@
-package student_eduards_jasvins.lesson_11.task_5;
+package student_eduards_jasvins.lesson_11.day_2;
 
-import java.util.Objects;
+class Book {
 
-public class Book {
-
+    private Long id;
     private String title;
     private String author;
 
     Book(String author, String title) {
         this.author = author;
         this.title = title;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return this.id;
     }
 
     public String getTitle() {
@@ -25,7 +32,7 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Objects.equals(title, book.title) &&
-                Objects.equals(author, book.author);
+        return id.equals(book.id) && title.equals(book.title) && author.equals(book.author);
     }
+
 }

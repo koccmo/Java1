@@ -1,4 +1,4 @@
-package student_eduards_jasvins.lesson_11.task_2;
+package student_eduards_jasvins.lesson_11.day_1.task_2;
 
 import java.util.ArrayList;
 
