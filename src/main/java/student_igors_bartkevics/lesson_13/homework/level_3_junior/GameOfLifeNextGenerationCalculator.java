@@ -12,13 +12,13 @@ class GameOfLifeNextGenerationCalculator {
         for (int i = 0; i < currentGeneration.length; i++) {
             for (int j = 0; j < currentGeneration[i].length; j++) {
                 List<Cell> neighbours = getNeighboursOfCell(currentGeneration, new Cell(i, j));
-
+                int liveNeighbourCellCount = countLiveNeighbourCells(currentGeneration,neighbours);
                 //rule1: any live cell with less than two live neighbours dies in next generation
-                if (countLiveNeighbourCells(currentGeneration, neighbours) < 2) {
+                if (liveNeighbourCellCount < 2) {
                     nextGeneration[i][j] = false;
                 }
                 //rule2: any live cell with more than three live neighbours dies in next generation
-                if (countLiveNeighbourCells(currentGeneration, neighbours) > 3) {
+                else if (liveNeighbourCellCount > 3) {
                     nextGeneration[i][j] = false;
                 }
 
@@ -26,7 +26,7 @@ class GameOfLifeNextGenerationCalculator {
             }
 
         }
-        return nextGeneration; // реализацию напишем тут чуть позже
+        return nextGeneration;
     }
 
     private int countLiveNeighbourCells(boolean[][] field, List<Cell> neighbours) {
