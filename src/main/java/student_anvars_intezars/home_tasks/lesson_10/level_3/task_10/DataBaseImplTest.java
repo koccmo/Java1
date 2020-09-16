@@ -2,6 +2,9 @@ package student_anvars_intezars.home_tasks.lesson_10.level_3.task_10;
 
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class DataBaseImplTest {
 
     public static void main(String[] args) {

@@ -6,8 +6,13 @@ package student_alexey_tretyakov.lesson_11.homework.level_1;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class Task_2 {
 
+	@CodeReviewComment(teacher = "Unused field, should be removed.")
     private static List<Tvset> tvsets;
 
     static class Tvset {

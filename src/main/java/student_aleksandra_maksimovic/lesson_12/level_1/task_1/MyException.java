@@ -6,5 +6,9 @@ class MyException implements Throwable {
 
 }
  */
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
  class MyException extends Throwable {
 }

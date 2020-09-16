@@ -1,5 +1,8 @@
 package student_aleksandra_maksimovic.lesson_10.level_2.task_4_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class DayOfTheWeekDetectorArrayVersion implements DayOfTheWeekDetector {
 
     @Override

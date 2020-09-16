@@ -2,6 +2,9 @@ package student_eduards_jasvins.lesson_10.day_6;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Book {
 
     private String author;

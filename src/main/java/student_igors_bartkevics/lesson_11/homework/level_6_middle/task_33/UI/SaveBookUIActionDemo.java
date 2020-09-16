@@ -3,7 +3,9 @@ package student_igors_bartkevics.lesson_11.homework.level_6_middle.task_33.UI;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_33.Book;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_33.BookDatabase;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_33.BookDatabaseImpl;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class SaveBookUIActionDemo {
 
     public static void main(String[] args) {

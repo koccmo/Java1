@@ -2,6 +2,9 @@ package student_eduards_jasvins.lesson_11.day_1.task_5;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Book {
 
     private String title;

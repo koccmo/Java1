@@ -1,5 +1,8 @@
 package student_anvars_intezars.home_tasks.lesson_10.level_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 interface BookReader {
 
     boolean isAddedBook(Book book);
@@ -19,6 +22,8 @@ interface BookReader {
     void printListOfBooks();
 
     boolean isRead(Book bookToRead);
+
+    boolean notRead (Book bookNotRead);
 
 
 

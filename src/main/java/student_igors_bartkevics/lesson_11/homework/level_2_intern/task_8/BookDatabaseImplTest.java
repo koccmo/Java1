@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_11.homework.level_2_intern.task_8;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BookDatabaseImplTest {
 
     public static void main(String[] args) {

@@ -25,6 +25,9 @@ ArrayList делает получение этих элементов сложн
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ListUtil {
 
     LinkedList<String> userLinkedList = new LinkedList<>(); //создание LinkedList

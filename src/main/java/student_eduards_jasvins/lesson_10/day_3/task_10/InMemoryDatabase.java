@@ -3,6 +3,9 @@ package student_eduards_jasvins.lesson_10.day_3.task_10;
 import java.util.ArrayList;
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class InMemoryDatabase implements Database {
 
     private ArrayList <Product> products = new ArrayList<>();

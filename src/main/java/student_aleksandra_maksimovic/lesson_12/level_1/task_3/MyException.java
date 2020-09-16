@@ -6,6 +6,10 @@ class MyException extends Throwable, Exception, RuntimeException {
 
 }
  */
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class MyException extends RuntimeException {
 
 }

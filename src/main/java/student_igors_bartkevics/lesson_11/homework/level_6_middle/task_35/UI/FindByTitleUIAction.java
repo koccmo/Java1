@@ -3,10 +3,12 @@ package student_igors_bartkevics.lesson_11.homework.level_6_middle.task_35.UI;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_35.Book;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_35.BookDatabase;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_35.UIAction;
+import teacher.codereview.CodeReview;
 
 import java.util.List;
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 class FindByTitleUIAction implements UIAction {
 
     private BookDatabase bookDatabase;
