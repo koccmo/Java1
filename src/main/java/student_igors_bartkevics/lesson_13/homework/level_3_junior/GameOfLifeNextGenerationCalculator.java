@@ -22,6 +22,10 @@ class GameOfLifeNextGenerationCalculator {
                     nextGeneration[i][j] = false;
                 }
 
+                else if (liveNeighbourCellCount == 3) {
+                    nextGeneration[i][j] = true;
+                }
+
                 else nextGeneration[i][j] = currentGeneration[i][j];
             }
 
