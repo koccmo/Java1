@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_13.homework.level_3_junior;
+package student_igors_bartkevics.lesson_13.homework.level_3_junior_task_10_to_18;
 
 class Cell {
     private int coordinateX;
