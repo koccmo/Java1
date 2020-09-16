@@ -16,7 +16,13 @@ class GameOfLifeNextGenerationCalculator {
                 //rule1: any live cell with less than two live neighbours dies in next generation
                 if (countLiveNeighbourCells(currentGeneration, neighbours) < 2) {
                     nextGeneration[i][j] = false;
-                } else nextGeneration[i][j] = currentGeneration[i][j];
+                }
+                //rule2: any live cell with more than three live neighbours dies in next generation
+                if (countLiveNeighbourCells(currentGeneration, neighbours) > 3) {
+                    nextGeneration[i][j] = false;
+                }
+
+                else nextGeneration[i][j] = currentGeneration[i][j];
             }
 
         }
