@@ -21,28 +21,6 @@ public class GameOfLifeNextGenerationCalculatorTest {
     }
 
     @Test
-    public void shouldReturnLiveCellAccordingToRule1() {
-        boolean[][] field = new boolean[10][10];
-        field[2][2] = true; //cell
-        field[1][2] = true; //neighbour
-        field[1][1] = true; //neighbour
-        boolean[][]nextGenerationField = calculator.calculate(field);
-
-        assertTrue(nextGenerationField[2][2]);
-    }
-
-    @Test
-    public void shouldReturnLiveCellAccordingToRule1MilestonePosition() {
-        boolean[][] field = new boolean[10][10];
-        field[0][0] = true; //cell
-        field[1][0] = true; //neighbour
-        field[1][1] = true; //neighbour
-        boolean[][]nextGenerationField = calculator.calculate(field);
-
-        assertTrue(nextGenerationField[0][0]);
-    }
-
-    @Test
     public void shouldReturnDeadCellAccordingToRule1MilestonePosition00() {
         boolean[][] field = new boolean[10][10];
         field[0][0] = true; //cell
@@ -53,17 +31,6 @@ public class GameOfLifeNextGenerationCalculatorTest {
     }
 
     @Test
-    public void shouldReturnLiveCellAccordingToRule1MilestonePosition00() {
-        boolean[][] field = new boolean[10][10];
-        field[0][0] = true; //cell
-        field[1][1] = true; //neighbour
-        field[0][1] = true; //neighbour
-        boolean[][] nextGenerationField = calculator.calculate(field);
-
-        assertTrue(nextGenerationField[0][0]);
-    }
-
-    @Test
     public void shouldReturnDeadCellAccordingToRule1MilestonePosition99() {
         boolean[][] field = new boolean[10][10];
         field[9][9] = true; //cell
@@ -71,17 +38,6 @@ public class GameOfLifeNextGenerationCalculatorTest {
         boolean[][] nextGenerationField = calculator.calculate(field);
 
         assertFalse(nextGenerationField[9][9]);
-    }
-
-    @Test
-    public void shouldReturnLiveCellAccordingToRule1MilestonePosition99() {
-        boolean[][] field = new boolean[10][10];
-        field[9][9] = true; //cell
-        field[8][8] = true; //neighbour
-        field[9][8] = true; //neighbour
-        boolean[][] nextGenerationField = calculator.calculate(field);
-
-        assertTrue(nextGenerationField[9][9]);
     }
 
     //Правило 2:
@@ -98,4 +54,63 @@ public class GameOfLifeNextGenerationCalculatorTest {
 
         assertFalse(nextGenerationField[2][2]);
     }
+
+    //Правило 3:
+    //Любая живая клетка с двумя или тремя живыми соседями остаётся живой в следующем поколении.
+    @Test
+    public void shouldReturnLiveCellAccordingToRule3TwoLiveNeighbours() {
+        boolean[][] field = new boolean[10][10];
+        field[2][2] = true; //cell
+        field[1][2] = true; //neighbour
+        field[1][1] = true; //neighbour
+        boolean[][]nextGenerationField = calculator.calculate(field);
+
+        assertTrue(nextGenerationField[2][2]);
+    }
+
+    @Test
+    public void shouldReturnLiveCellAccordingToRule3ThreeLiveNeighbours() {
+        boolean[][] field = new boolean[10][10];
+        field[2][2] = true; //cell
+        field[1][2] = true; //neighbour
+        field[1][1] = true; //neighbour
+        field[1][3] = true; //neighbour
+        boolean[][]nextGenerationField = calculator.calculate(field);
+
+        assertTrue(nextGenerationField[2][2]);
+    }
+
+    @Test
+    public void shouldReturnLiveCellAccordingToRule3MilestonePosition() {
+        boolean[][] field = new boolean[10][10];
+        field[0][0] = true; //cell
+        field[1][0] = true; //neighbour
+        field[1][1] = true; //neighbour
+        boolean[][]nextGenerationField = calculator.calculate(field);
+
+        assertTrue(nextGenerationField[0][0]);
+    }
+
+    @Test
+    public void shouldReturnLiveCellAccordingToRule3MilestonePosition00() {
+        boolean[][] field = new boolean[10][10];
+        field[0][0] = true; //cell
+        field[1][1] = true; //neighbour
+        field[0][1] = true; //neighbour
+        boolean[][] nextGenerationField = calculator.calculate(field);
+
+        assertTrue(nextGenerationField[0][0]);
+    }
+
+    @Test
+    public void shouldReturnLiveCellAccordingToRule3MilestonePosition99() {
+        boolean[][] field = new boolean[10][10];
+        field[9][9] = true; //cell
+        field[8][8] = true; //neighbour
+        field[9][8] = true; //neighbour
+        boolean[][] nextGenerationField = calculator.calculate(field);
+
+        assertTrue(nextGenerationField[9][9]);
+    }
+
 }
