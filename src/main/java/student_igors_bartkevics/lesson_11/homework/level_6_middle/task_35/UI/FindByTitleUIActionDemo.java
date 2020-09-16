@@ -4,7 +4,9 @@ import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_35.Book;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_35.BookDatabase;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_35.BookDatabaseImpl;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_35.UIAction;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class FindByTitleUIActionDemo {
 
     public static void main(String[] args) {

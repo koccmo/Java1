@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_10.day_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class BookReaderTest {
     public static void main(String[] args) {
         BookReaderTest test = new BookReaderTest();

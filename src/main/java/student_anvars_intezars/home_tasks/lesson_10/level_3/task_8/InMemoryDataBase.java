@@ -3,6 +3,9 @@ package student_anvars_intezars.home_tasks.lesson_10.level_3.task_8;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class InMemoryDataBase implements Database {
 
     List<Product> products = new ArrayList<>();

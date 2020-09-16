@@ -2,6 +2,8 @@ package student_aleksandra_maksimovic.lesson_10.level_2.task_4_5;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
 /*
 Цель этой программы:
 - запросить у пользователя число;
@@ -25,6 +27,8 @@ import java.util.Scanner;
 Убедитесь, что в не зависимости от того, какая реализация алгоритма используется для определения
 названия дня недели, программа DayOfTheWeekDetectorDemo работает одинаково.
  */
+
+@CodeReview(approved = true)
 class DayOfTheWeekDetectorDemo {
 
     private DayOfTheWeekDetector dayOfTheWeekDetector;

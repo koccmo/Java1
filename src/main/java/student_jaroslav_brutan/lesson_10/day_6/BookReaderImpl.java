@@ -5,6 +5,9 @@ package student_jaroslav_brutan.lesson_10.day_6;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class BookReaderImpl implements BookReader {
 
     private List<Book> library = new ArrayList<>();

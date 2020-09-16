@@ -1,5 +1,8 @@
 package student_anvars_intezars.home_tasks.lesson_10.level_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BookReaderImplTest {
 
     public static void main(String[] args) {

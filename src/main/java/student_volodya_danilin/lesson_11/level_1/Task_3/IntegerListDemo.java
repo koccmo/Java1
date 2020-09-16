@@ -2,6 +2,9 @@ package student_volodya_danilin.lesson_11.level_1.Task_3;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class IntegerListDemo {
 
     public static void main(String[] args) {

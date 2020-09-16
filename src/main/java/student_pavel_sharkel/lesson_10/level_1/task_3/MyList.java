@@ -2,6 +2,9 @@ package student_pavel_sharkel.lesson_10.level_1.task_3;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public interface MyList {
 
     String addName(String name); //добавляем имя в список

@@ -4,9 +4,11 @@ import student_jaroslav_brutan.lesson_10.day_2.task_4.DayOfTheWeekDetector;
 import student_jaroslav_brutan.lesson_10.day_2.task_4.DayOfTheWeekDetectorArrayVersion;
 import student_jaroslav_brutan.lesson_10.day_2.task_4.DayOfTheWeekDetectorIfVersion;
 import student_jaroslav_brutan.lesson_10.day_2.task_4.DayOfTheWeekDetectorSwitchVersion;
+import teacher.codereview.CodeReview;
 
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 public class DayOfTheWeekDetectorDemo {
 
     private DayOfTheWeekDetector dayOfTheWeekDetector;

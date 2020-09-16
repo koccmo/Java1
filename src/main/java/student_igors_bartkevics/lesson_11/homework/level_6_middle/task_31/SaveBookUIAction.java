@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_11.homework.level_6_middle.task_31;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class SaveBookUIAction implements UIAction {
 
     private BookDatabase bookDatabase;

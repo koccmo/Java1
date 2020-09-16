@@ -4,7 +4,9 @@ import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_34.Book;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_34.BookDatabase;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_34.BookDatabaseImpl;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_34.UIAction;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class FindByAuthorUIActionDemo {
 
     public static void main(String[] args) {

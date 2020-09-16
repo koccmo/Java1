@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_11.homework.level_4_junior.task_27;
 
 import java.util.*;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class UniqueWordFinder {
 
     Set<String> find(String text) {

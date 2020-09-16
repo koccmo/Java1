@@ -2,6 +2,9 @@ package student_volodya_danilin.lesson_11.level_4;
 
 import java.util.Set;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Demo {
 
     public static void main(String[] args) {

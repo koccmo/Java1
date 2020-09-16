@@ -3,9 +3,11 @@ package student_igors_bartkevics.lesson_11.homework.level_6_middle.task_34.UI;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_34.Book;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_34.BookDatabase;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_34.UIAction;
+import teacher.codereview.CodeReview;
 
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 class SaveBookUIAction implements UIAction {
 
     private BookDatabase bookDatabase;

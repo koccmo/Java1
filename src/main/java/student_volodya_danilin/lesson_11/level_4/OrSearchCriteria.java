@@ -1,5 +1,8 @@
 package student_volodya_danilin.lesson_11.level_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class OrSearchCriteria implements SearchCriteria {
 
     private SearchCriteria leftCondition;

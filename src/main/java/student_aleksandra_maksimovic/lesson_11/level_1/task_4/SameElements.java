@@ -4,11 +4,15 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
 /*
 Могут ли реализации интерфейса java.util.List хранить одинаковые
 элементы (дубликаты)? Напишите код программы, который демонстрирует
 ответ на этот вопрос.
  */
+
+@CodeReview(approved = true)
 public class SameElements {
 
     public static void main(String[] args) {

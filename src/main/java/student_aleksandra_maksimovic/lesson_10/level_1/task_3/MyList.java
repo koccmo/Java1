@@ -17,6 +17,9 @@ package student_aleksandra_maksimovic.lesson_10.level_1.task_3;
 Цель этого задания самостоятельно разработать свой интерфейс MyList.
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public interface MyList {
 
     void add(int value); //add new element to end of the list

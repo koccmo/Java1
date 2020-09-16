@@ -2,6 +2,8 @@ package student_aleksandra_maksimovic.lesson_11.level_2.task_6;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
 /*
 Дан класс:
 Создайте интерфейс BookDatabase и объявите в нём один метод:
@@ -17,6 +19,8 @@ Id это целое число. Первая в базе книга получ�
 
 
  */
+
+@CodeReview(approved = true)
 class Book {
     private Long id;
     private String title;

@@ -4,6 +4,8 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
 /*
 Какие реализации интерфейса java.util.List вы знаете?
         Напишите программу, которая демонстрирует создание разных списков.
@@ -15,6 +17,8 @@ import java.util.List;
     CopyOnWriteArrayList, LinkedList, RoleList, RoleUnresolvedList, Stack, Vector
     Из них пока известны ArrayList, LinkedList
  */
+
+@CodeReview(approved = true)
  class Task_1 {
 
 

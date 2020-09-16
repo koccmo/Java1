@@ -21,6 +21,10 @@ class JavaStarLoginServiceImpl {
 Создать интерфейс для данного класса под названием JavaStarLoginService.
 Сделать так, чтобы класс JavaStarLoginServiceImpl имплементировал созданный вами интерфейс.
  */
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class JavaStarLoginServiceImpl implements JavaStarLoginService {
 
     public boolean canLogin(String login, String password) {

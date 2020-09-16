@@ -8,6 +8,9 @@ package student_valerija_ionova.lesson_11.level_1.task_2;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TypeOfDatesInList {
     public static void main (String [] args) {
         List<String> listOfIntegers = new ArrayList<>();
