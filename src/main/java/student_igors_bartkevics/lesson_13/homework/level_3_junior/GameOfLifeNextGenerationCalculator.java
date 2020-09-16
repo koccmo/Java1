@@ -21,11 +21,11 @@ class GameOfLifeNextGenerationCalculator {
                 else if (liveNeighbourCellCount > 3) {
                     nextGeneration[i][j] = false;
                 }
-
+                //rule4: any dead cell with 3 live neighbours becomes alive in next generation
                 else if (liveNeighbourCellCount == 3) {
                     nextGeneration[i][j] = true;
                 }
-
+                //rule3: any live cell with 2 or 3 live neighbours stays alive in next generation
                 else nextGeneration[i][j] = currentGeneration[i][j];
             }
 
