@@ -113,4 +113,17 @@ public class GameOfLifeNextGenerationCalculatorTest {
         assertTrue(nextGenerationField[9][9]);
     }
 
+    //Правило 4:
+    //Любая мёртвая клетка с тремя живыми соседями становится живой в следующем поколении.
+    @Test
+    public void shouldReturnLiveCellAccordingToRule4() {
+        boolean[][] field = new boolean[10][10];
+        field[2][2] = false; //cell
+        field[1][1] = true; //neighbour
+        field[1][2] = true; //neighbour
+        field[1][3] = true; //neighbour
+        boolean[][] nextGenerationField = calculator.calculate(field);
+
+        assertTrue(nextGenerationField[2][2]);
+    }
 }
