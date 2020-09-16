@@ -7,13 +7,11 @@ import static org.junit.Assert.*;
 public class GameOfLifeNextGenerationCalculatorTest {
 
     GameOfLifeNextGenerationCalculator calculator = new GameOfLifeNextGenerationCalculator();
-    /*
-    Правило 1:
-    Любая живая клетка с меньше чем двумя живыми соседями умирает в следующем поколении.
-    С помощью библиотеки JUnit напишите автоматические тесты для первого правила.
-     */
+
+    //Правило 1:
+    //Любая живая клетка с меньше чем двумя живыми соседями умирает в следующем поколении.
     @Test
-    public void shouldReturnDeadCellByRule1() {
+    public void shouldReturnDeadCellAccordingToRule1() {
         boolean[][] field = new boolean[10][10];
         field[2][2] = true;
         field[1][2] = true;
@@ -23,7 +21,7 @@ public class GameOfLifeNextGenerationCalculatorTest {
     }
 
     @Test
-    public void shouldReturnLiveCellByRule1() {
+    public void shouldReturnLiveCellAccordingToRule1() {
         boolean[][] field = new boolean[10][10];
         field[2][2] = true;
         field[1][2] = true;
@@ -33,4 +31,18 @@ public class GameOfLifeNextGenerationCalculatorTest {
         assertTrue(nextGenerationField[2][2]);
     }
 
+    //Правило 2:
+    //Любая живая клетка с больше чем тремя живыми соседями умирает в следующем поколении.
+    @Test
+    public void shouldReturnDeadCellAccordingToRule2() {
+        boolean[][] field = new boolean[10][10];
+        field[2][2] = true; //cell
+        field[1][1] = true; //neighbour
+        field[1][2] = true; //neighbour
+        field[1][3] = true; //neighbour
+        field[3][1] = true; //neighbour
+        boolean[][]nextGenerationField = calculator.calculate(field);
+
+        assertFalse(nextGenerationField[2][2]);
+    }
 }
