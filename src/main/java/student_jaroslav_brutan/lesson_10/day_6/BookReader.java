@@ -11,8 +11,17 @@ public interface BookReader {
 
     boolean deleteBook(Book book);
 
-    String[] allLibraryBooks ();
+    String[] allLibraryBooks();
 
     List<Book> findBookByAuthor(String Author);
 
+    List<Book> findBookByTitle(String Tile);
+
+    boolean isRead(Book book);
+
+    boolean isNotRead(Book book);
+
+    String[] allReadBooks();
+
+    String[] allNotReadBooks();
 }

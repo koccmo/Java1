@@ -67,6 +67,57 @@ public class BookReaderImpl implements BookReader {
             }
         }   return findBookByAuthor(author);
     }
+
+    @Override
+    public List<Book> findBookByTitle(String title){
+        for (Book books : library) {
+            if (books.getTitle().contains(title)){
+                return findBookByTitle(title);
+            }
+        } return findBookByTitle(title);
+    }
+
+    @Override
+    public boolean isRead(Book book){
+        if (bookAlreadyInLibrary(book)){
+            library.get(0).getIsRead();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean isNotRead(Book book){
+        if (bookAlreadyInLibrary(book)){
+            library.get(0).getIsRead();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    @Override
+    public String[] allReadBooks(){
+        String[] allReadBooks = new String[library.size()];
+        for (int i = 0;i < library.size();i++){
+            if (library.get(i).getIsRead()){
+                allReadBooks[i] = library.get(i).getTitle() + "[" +
+                        library.get(i).getAuthor() + "]";
+            }
+        } return allReadBooks;
+    }
+
+    @Override
+    public String[] allNotReadBooks(){
+        String[] allNotReadBooks = new String[library.size()];
+        for (int i = 0;i < library.size();i++){
+            if (!library.get(i).getIsRead()){
+                allNotReadBooks[i] = library.get(i).getTitle() + "[" +
+                        library.get(i).getAuthor() + "]";
+            }
+        } return allNotReadBooks;
+    }
 }
 
 

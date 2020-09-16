@@ -7,6 +7,7 @@ public class Book {
 
     private String title;
     private String author;
+    private boolean isRead;
 
     public Book(String title, String author) {
         this.title = title;
@@ -19,5 +20,13 @@ public class Book {
 
     public String getAuthor() {
         return author;
+    }
+
+    public boolean getIsRead() {
+        return isRead;
+    }
+
+    public void setRead(boolean read){
+        isRead = read;
     }
 }
