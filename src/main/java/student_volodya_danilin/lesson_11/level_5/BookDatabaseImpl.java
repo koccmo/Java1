@@ -1,4 +1,7 @@
-package student_volodya_danilin.lesson_11.level_4;
+package student_volodya_danilin.lesson_11.level_5;
+
+
+import org.junit.Test;
 
 import java.util.*;
 
@@ -151,12 +154,25 @@ class BookDatabaseImpl implements BookDatabase {
         return result;
     }
 
+    @Test
     @Override
     public Map<String, List<Book>> getAuthorToBooksMap() {
         Map<String, List<Book>> result = new HashMap<>();
         Set<String> authors = findUniqueAuthors();
         for (String value : authors) {
             result.put(value, findByAuthor(value));
+        }
+        return result;
+    }
+
+    @Test
+    @Override
+    public Map<String, Integer> getEachAuthorBookCount() {
+        Map<String, Integer> result = new HashMap<>();
+        Set<String> authors = findUniqueAuthors();
+        for (String value : authors) {
+            List<Book> authorBooks = findByAuthor(value);
+            result.put(value, authorBooks.size());
         }
         return result;
     }

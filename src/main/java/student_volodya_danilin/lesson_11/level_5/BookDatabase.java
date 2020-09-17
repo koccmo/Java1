@@ -1,4 +1,4 @@
-package student_volodya_danilin.lesson_11.level_4;
+package student_volodya_danilin.lesson_11.level_5;
 
 import java.util.List;
 import java.util.Map;
@@ -37,6 +37,7 @@ public interface BookDatabase {
 
     Map<String, List<Book>> getAuthorToBooksMap();
 
+    Map<String, Integer> getEachAuthorBookCount();
 
 
 }
