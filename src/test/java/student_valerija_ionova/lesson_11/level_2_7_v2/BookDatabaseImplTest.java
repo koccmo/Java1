@@ -13,12 +13,12 @@ public class BookDatabaseImplTest {
 
     BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
 
-    Book book1 = new Book("Author1", "Title1");
-    Book book2 = new Book("Author2", "Title2");
-    Book book3 = new Book("Author3", "Title3");
-    Book book4 = new Book("Author4", "Title4");
-    Book book5 = new Book("Author5", "Title5");
-    Book book6 = new Book("Author5", "Title4");
+    Book book1 = new Book("Author1", "Title1", "1");
+    Book book2 = new Book("Author2", "Title2", "1");
+    Book book3 = new Book("Author3", "Title3", "3");
+    Book book4 = new Book("Author4", "Title4", "4");
+    Book book5 = new Book("Author5", "Title5", "5");
+    Book book6 = new Book("Author5", "Title4", "6");
 
     @Before
     public void init (){
@@ -120,6 +120,27 @@ public class BookDatabaseImplTest {
         assertEquals(false,
                 bookDatabase.getListOfBooks().contains(book4) && bookDatabase.getListOfBooks().contains(book6));
         assertEquals(3, bookDatabase.countAllBooks());
+    }
+
+    @Test
+    public void testAuthorSearchCriteria(){
+        SearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Author1");
+        assertEquals(true, authorSearchCriteria.match(book1));
+        assertEquals(false, authorSearchCriteria.match(book4));
+    }
+
+    @Test
+    public void testTitleSearchCriteria(){
+        SearchCriteria titleSearchCriteria = new TitleSearchCriteria("Title3");
+        assertEquals(true, titleSearchCriteria.match(book3));
+        assertEquals(false, titleSearchCriteria.match(book4));
+    }
+
+    @Test
+    public void testYearSearchCriteria(){
+        SearchCriteria yearSearchCriteria = new YearOfIssueSearchCriteria("1");
+        assertEquals(true, yearSearchCriteria.match(book1));
+        assertEquals(false, yearSearchCriteria.match(book4));
     }
 
 }
