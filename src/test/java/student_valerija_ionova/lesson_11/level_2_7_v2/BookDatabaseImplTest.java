@@ -100,4 +100,15 @@ public class BookDatabaseImplTest {
         assertEquals(6, bookDatabase.countAllBooks());
     }
 
+    @Test
+    public void testMethodDeleteByAuthor(){
+        bookDatabase.deleteByAuthor("Author1");
+        assertEquals(false, bookDatabase.getListOfBooks().contains(book1));
+        assertEquals(5, bookDatabase.countAllBooks());
+        bookDatabase.deleteByAuthor("Author5");
+        assertEquals(false,
+                bookDatabase.getListOfBooks().contains(book5) && bookDatabase.getListOfBooks().contains(book6));
+        assertEquals(3, bookDatabase.countAllBooks());
+    }
+
 }
