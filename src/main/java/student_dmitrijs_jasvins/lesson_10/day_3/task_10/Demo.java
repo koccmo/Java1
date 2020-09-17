@@ -2,6 +2,9 @@ package student_dmitrijs_jasvins.lesson_10.day_3.task_10;
 
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Demo {
     public static void main(String[] args) {
         Demo demo = new Demo();

@@ -3,6 +3,8 @@ package student_aleksandra_maksimovic.lesson_11.level_1.task_3;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
 /*
 В классе IntegerListDemo создайте список целых чисел.
 Продемонстрируйте как:
@@ -12,6 +14,8 @@ import java.util.List;
 - узнать пустой список или нет
 - обойти список и вывести на консоль каждый элемент.
  */
+
+@CodeReview(approved = true)
 public class IntegerListDemo {
     public static void main(String[] args) {
         List<Integer> numbers =  new ArrayList<>();

@@ -4,11 +4,15 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
 /*
 Какие реализации интерфейса java.util.List вы знаете?
 Напишите программу, которая демонстрирует создание разных списков.
 PS: чем они отличаются друг от друга?
  */
+
+@CodeReview(approved = true)
 public class ListExample {
 
     public static void main(String[] args) {

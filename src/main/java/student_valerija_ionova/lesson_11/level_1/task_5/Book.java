@@ -29,6 +29,9 @@ public class Book {
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Book {
     private String title;
     private String author;

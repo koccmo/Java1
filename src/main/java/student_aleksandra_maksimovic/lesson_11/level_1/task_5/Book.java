@@ -11,6 +11,9 @@ package student_aleksandra_maksimovic.lesson_11.level_1.task_5;
 PS: подсказка по функциональности в названии класса :).
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Book {
 
     private String title;

@@ -2,6 +2,9 @@ package student_volodya_danilin.lesson_10.level_4;
 
 import java.text.DecimalFormat;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Test {
 
     public static void main(String[] args) {

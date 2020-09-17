@@ -3,6 +3,9 @@ package student_volodya_danilin.lesson_11.level_3;
 import java.util.List;
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class DemoTest {
 
     public static void main(String[] args) {

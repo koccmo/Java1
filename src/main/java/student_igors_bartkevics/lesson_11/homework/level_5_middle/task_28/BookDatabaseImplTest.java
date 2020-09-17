@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_11.homework.level_5_middle.task_28;
 
 import java.util.*;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BookDatabaseImplTest {
 
     public static void main(String[] args) {

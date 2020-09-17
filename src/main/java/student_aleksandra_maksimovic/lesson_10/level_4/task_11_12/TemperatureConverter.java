@@ -1,5 +1,7 @@
 package student_aleksandra_maksimovic.lesson_10.level_4.task_11_12;
 
+import teacher.codereview.CodeReview;
+
 /*
 Сайт прогноза погоды на данный момент показывает
 температуру в градусах по цельсию.
@@ -40,6 +42,8 @@ class KelvinConverter implements TemperatureConverter {
   (формула: 1.8 * celsiusTemperature + 32);
 - написать юнит тесты для классов KelvinConverter и FahrenheitConverter.
  */
+
+@CodeReview(approved = true)
 public interface TemperatureConverter {
 
     double convert(double celsiusTemperature);

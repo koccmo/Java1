@@ -4,8 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class BookDatabaseImpl implements BookDatabase {
 
+	@CodeReviewComment(teacher = "Remove this unused field!")
     Book book;
 
     private ArrayList<Book> bookStorage = new ArrayList<>();

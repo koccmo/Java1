@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_11.homework.level_3_junior.task_17;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TitleSearchCriteriaTest {
 
     public static void main(String[] args) {

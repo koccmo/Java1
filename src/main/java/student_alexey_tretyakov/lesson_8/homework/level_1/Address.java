@@ -4,7 +4,7 @@ package student_alexey_tretyakov.lesson_8.homework.level_1;
     private String city ;
     private String street ;
 
-    protected Address(String city,String street){
+    protected Address( String city,String street){
         this.city =city;
         this.street = street;
     }

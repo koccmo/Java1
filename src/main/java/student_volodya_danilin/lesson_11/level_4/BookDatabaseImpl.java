@@ -2,8 +2,13 @@ package student_volodya_danilin.lesson_11.level_4;
 
 import java.util.*;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class BookDatabaseImpl implements BookDatabase {
 
+	@CodeReviewComment(teacher = "Remove this field!")
     Book book;
 
     private ArrayList<Book> bookStorage = new ArrayList<>();

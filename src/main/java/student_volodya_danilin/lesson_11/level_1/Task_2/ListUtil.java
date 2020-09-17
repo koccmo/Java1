@@ -7,6 +7,9 @@ util.List не может хранить примитивные типы дан�
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ListUtil {
 
     public static void main(String[] args) {

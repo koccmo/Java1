@@ -1,5 +1,8 @@
 package student_volodya_danilin.lesson_11.level_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class YearOfIssueSearchCriteria implements SearchCriteria {
 
     private String yearOfIssueToSearch;

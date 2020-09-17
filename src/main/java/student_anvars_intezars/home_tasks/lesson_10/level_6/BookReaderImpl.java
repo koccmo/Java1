@@ -3,8 +3,13 @@ package student_anvars_intezars.home_tasks.lesson_10.level_6;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class BookReaderImpl implements BookReader {
 
+	@CodeReviewComment(teacher = "This field should be private.")
     List<Book> books = new ArrayList<>();
 
     @Override
@@ -24,6 +29,9 @@ class BookReaderImpl implements BookReader {
     }
 
     @Override
+	@CodeReviewComment(teacher = "Not correct logic, result must be reverted.")
+	@CodeReviewComment(teacher = "Why second loop is needed?")
+	@CodeReviewComment(teacher = "We can just check author and title in one loop.")
     public boolean booksEqualByAuthorAndTitle(Book book) {
         String newBookTitle = book.getTitle();
         String newBookAuthor = book.getAuthor();
@@ -94,6 +102,17 @@ class BookReaderImpl implements BookReader {
            if (bookInLibrary.equals(bookToRead)) {
                return true;
            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean notRead(Book bookNotRead) {
+        for (int i = 0; i < books.size(); i++) {
+            Book bookInLibrary = books.get(i);
+            if (bookInLibrary.equals(bookNotRead)) {
+                return true;
+            }
         }
         return false;
     }

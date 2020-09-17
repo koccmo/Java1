@@ -2,9 +2,11 @@ package student_igors_bartkevics.lesson_11.homework.level_6_middle.task_35.UI;
 
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_35.BookDatabase;
 import student_igors_bartkevics.lesson_11.homework.level_6_middle.task_35.UIAction;
+import teacher.codereview.CodeReview;
 
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 class DeleteByIdUIAction implements UIAction {
 
     private final BookDatabase bookDatabase;

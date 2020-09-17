@@ -2,12 +2,13 @@ package student_alexey_tretyakov.lesson_8.homework.level_1;
 
 
 
- class Person  extends Address{
+ class Person  extends Address {
      private String fullName;
      private int age;
 
      private Person (String city,String street){
          super( city, street );
+
      }
 
      void setFullName (String fullName){

@@ -1,6 +1,9 @@
 package student_aleksandra_maksimovic.lesson_10.level_2.task_4_5;
 //Создайте вторую имплементацию данного интерфейса основанную на switch операторе.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class DayOfTheWeekDetectorSwitchVersion implements DayOfTheWeekDetector {
     @Override
     public String detectDayName(int number) {

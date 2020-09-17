@@ -3,8 +3,14 @@ package student_dmitrijs_jasvins.lesson_10.day_6;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 public class BookReaderImpl implements BookReader {
-    List <Book> library = new ArrayList<>();
+
+	@CodeReviewComment(teacher = "This field should be private.")
+	List <Book> library = new ArrayList<>();
 
     @Override
     public boolean addBook(Book book) {

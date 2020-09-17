@@ -3,6 +3,9 @@ package student_igors_bartkevics.lesson_11.homework.level_6_middle.task_32;
 import java.util.Optional;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FindByIdUIAction implements UIAction {
 
     private final BookDatabase bookDatabase;
