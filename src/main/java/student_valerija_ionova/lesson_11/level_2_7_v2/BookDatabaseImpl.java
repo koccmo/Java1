@@ -4,13 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-class BookDatabaseImpl<BookDataBaseImpl> implements  BookDatabase{
+class BookDatabaseImpl implements  BookDatabase{
 
     private Long id= 1L;
     private List<Book> listOfBooks = new ArrayList<>();
 
     List<Book> getListOfBooks(){
         return listOfBooks;
+    }
+
+    @Override
+    public int countAllBooks() {
+        return listOfBooks.size();
     }
 
     @Override
@@ -52,5 +57,34 @@ class BookDatabaseImpl<BookDataBaseImpl> implements  BookDatabase{
         return Optional.empty();
     }
 
+    @Override
+    public List<Book> findByAuthor(String author) {
+        List <Book> booksByAuthor = new ArrayList<>();
+        for (int i = 0; i < listOfBooks.size(); i++){
+            if (listOfBooks.get(i).getAuthor().equals(author)){
+                booksByAuthor.add(listOfBooks.get(i));
+            }
+        }
+        return booksByAuthor;
+    }
 
+    @Override
+    public List<Book> findByTitle(String title) {
+        List <Book> booksByTitle = new ArrayList<>();
+        for (int i = 0; i < listOfBooks.size(); i++){
+            if (listOfBooks.get(i).getTitle().equals(title)){
+                booksByTitle.add(listOfBooks.get(i));
+            }
+        }
+        return booksByTitle;
+    }
+
+    @Override
+    public void deleteByAuthor(String author) {
+        for (int i = listOfBooks.size()-1; i >=0; i--){
+            if (listOfBooks.get(i).getAuthor().equals(author)){
+                listOfBooks.remove(listOfBooks.get(i));
+            }
+        }
+    }
 }
