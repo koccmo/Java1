@@ -3,6 +3,8 @@ package student_valerija_ionova.lesson_11.level_2_7_v2;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Optional;
+
 import static org.junit.Assert.*;
 
 public class BookDatabaseImplTest {
@@ -40,6 +42,11 @@ public class BookDatabaseImplTest {
         assertEquals(4, bookDatabase.getListOfBooks().size());
     }
 
-
+    @Test
+    public void testMethodFindById(){
+        assertEquals(Optional.of(book3), bookDatabase.findById(3L));
+        assertEquals(Optional.empty(), bookDatabase.findById(55L));
+        assertEquals(5, bookDatabase.getListOfBooks().size());
+    }
 
 }
