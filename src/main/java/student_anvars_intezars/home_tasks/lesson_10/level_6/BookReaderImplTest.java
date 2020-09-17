@@ -20,6 +20,7 @@ class BookReaderImplTest {
         bookReaderImplTest.findBookByTitleTest();
         bookReaderImplTest.readBookWhichAreOnlyInLibraryTest();
         bookReaderImplTest.markUnreadBooksWhichAreOnlyInTheLibraryTest();
+        bookReaderImplTest.findBookByFirstLettersOfTitleTest();
     }
 
     void toAddNewBookTest1() {
@@ -194,4 +195,20 @@ class BookReaderImplTest {
             System.out.println("Test11 mark book as unread only from library = FAIL");
         }
     }
+
+    void findBookByFirstLettersOfTitleTest() {
+        BookReaderImpl bookReader = new BookReaderImpl();
+        Book firstBook = new Book("Lord of the Rings","Tolkien");
+        bookReader.save(firstBook);
+        Book secondBook = new Book("Antifragile","Nassim Nicholas Taleb");
+        bookReader.save(secondBook);
+        Book thirdBook = new Book("Harry Potter","Rowling");
+        bookReader.save(thirdBook);
+        Book booksOfOneAuthor = bookReader.findByTitle("Anti");
+        if (booksOfOneAuthor.equals(secondBook)) {
+            System.out.println("Test12 for finding books by using first letters of title = OK");
+        } else {
+            System.out.println("Test12 for finding books by using first letters of title = FAIL");
+        }
     }
+}

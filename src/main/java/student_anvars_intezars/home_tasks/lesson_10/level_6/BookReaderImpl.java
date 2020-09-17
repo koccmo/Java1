@@ -60,7 +60,7 @@ class BookReaderImpl implements BookReader {
         String titleFromProducts = "";
         for (int i = 0; i < books.size(); i++) {
             titleFromProducts = books.get(i).getTitle();
-            if (titleFromProducts.equals(productTitle)) {
+            if (titleFromProducts.equals(productTitle) || (titleFromProducts.startsWith(productTitle))) {
                 return books.get(i);
             }
         }
