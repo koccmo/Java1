@@ -27,6 +27,6 @@ public class TaxCalculatorImpTest {
     @Test
     public void calculateTaxZero() {
         BigDecimal tax = taxCalculatorImp.calculateTax(BigDecimal.valueOf( 0 ));
-        assertNull(tax);
+        assertEquals(0,tax.compareTo(BigDecimal.valueOf( 0 )));
     }
 }
