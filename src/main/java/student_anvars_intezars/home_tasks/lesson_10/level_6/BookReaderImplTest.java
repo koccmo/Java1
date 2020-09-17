@@ -16,7 +16,7 @@ class BookReaderImplTest {
         bookReaderImplTest.deletingBookTest();
         bookReaderImplTest.printListOfBooksInLibraryTest();
         bookReaderImplTest.findBookByAuthorTest();
-        //bookReaderImplTest.findBookByAuthorTest2();
+        bookReaderImplTest.findBookByAuthorFirstLetters();
         bookReaderImplTest.findBookByTitleTest();
         bookReaderImplTest.readBookWhichAreOnlyInLibraryTest();
         bookReaderImplTest.markUnreadBooksWhichAreOnlyInTheLibraryTest();
@@ -131,7 +131,7 @@ class BookReaderImplTest {
         }
     }
 
-    /*void findBookByAuthorTest2() {
+    void findBookByAuthorFirstLetters() {
         BookReaderImpl bookReader = new BookReaderImpl();
         Book firstBook = new Book("Lord of the Rings","Tolkien");
         bookReader.save(firstBook);
@@ -141,11 +141,11 @@ class BookReaderImplTest {
         bookReader.save(thirdBook);
         Book booksOfOneAuthor = bookReader.findByAuthor("Nassim");
         if (booksOfOneAuthor.equals(secondBook)) {
-            System.out.println("Test8 for finding books of one author only by name = OK");
+            System.out.println("Test8 for finding books by using first letters of author = OK");
         } else {
-            System.out.println("Test8 for finding books of one author only by name = FAIL");
+            System.out.println("Test8 for finding books by using first letters of author = FAIL");
         }
-    }*/
+    }
 
     void findBookByTitleTest() {
         BookReaderImpl bookReader = new BookReaderImpl();

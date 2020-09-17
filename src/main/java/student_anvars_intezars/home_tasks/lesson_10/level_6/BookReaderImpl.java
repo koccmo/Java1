@@ -9,8 +9,8 @@ import teacher.codereview.CodeReviewComment;
 @CodeReview(approved = true)
 class BookReaderImpl implements BookReader {
 
-	@CodeReviewComment(teacher = "This field should be private.")
-    List<Book> books = new ArrayList<>();
+    @CodeReviewComment(teacher = "This field should be private.")
+    private List<Book> books = new ArrayList<>();
 
     @Override
     public void save(Book book) {
@@ -29,9 +29,9 @@ class BookReaderImpl implements BookReader {
     }
 
     @Override
-	@CodeReviewComment(teacher = "Not correct logic, result must be reverted.")
-	@CodeReviewComment(teacher = "Why second loop is needed?")
-	@CodeReviewComment(teacher = "We can just check author and title in one loop.")
+    @CodeReviewComment(teacher = "Not correct logic, result must be reverted.")
+    @CodeReviewComment(teacher = "Why second loop is needed?")
+    @CodeReviewComment(teacher = "We can just check author and title in one loop.")
     public boolean booksEqualByAuthorAndTitle(Book book) {
         String newBookTitle = book.getTitle();
         String newBookAuthor = book.getAuthor();
@@ -88,7 +88,7 @@ class BookReaderImpl implements BookReader {
         String authorOfBooks = "";
         for (int i = 0; i < books.size(); i++) {
             authorOfBooks = books.get(i).getAuthor();
-            if (authorOfBooks.contains(author)) {
+            if (authorOfBooks.contains(author) || (authorOfBooks.startsWith(author))) {
                 return books.get(i);
             }
         }
@@ -98,10 +98,10 @@ class BookReaderImpl implements BookReader {
     @Override
     public boolean isRead(Book bookToRead) {
         for (int i = 0; i < books.size(); i++) {
-           Book bookInLibrary = books.get(i);
-           if (bookInLibrary.equals(bookToRead)) {
-               return true;
-           }
+            Book bookInLibrary = books.get(i);
+            if (bookInLibrary.equals(bookToRead)) {
+                return true;
+            }
         }
         return false;
     }
@@ -116,5 +116,10 @@ class BookReaderImpl implements BookReader {
         }
         return false;
     }
+
+    /*@Override
+    public Book[] isReadFromLibrary() {
+        */
 }
+
 

@@ -25,6 +25,7 @@ interface BookReader {
 
     boolean notRead (Book bookNotRead);
 
+    //Book[] isReadFromLibrary();
 
 
 }
