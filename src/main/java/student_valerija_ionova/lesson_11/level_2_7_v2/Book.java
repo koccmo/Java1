@@ -39,11 +39,13 @@ class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return id.equals(book.id) && title.equals(book.title) && author.equals(book.author);
+        return  Objects.equals(title, book.title) &&
+                Objects.equals(author, book.author) &&
+                Objects.equals(year, book.year);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, author);
+        return Objects.hash(title, author, year);
     }
 }
