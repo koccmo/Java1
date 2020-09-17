@@ -3,9 +3,7 @@ package student_valerija_ionova.lesson_11.level_2_7_v2;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
@@ -143,4 +141,151 @@ public class BookDatabaseImplTest {
         assertEquals(false, yearSearchCriteria.match(book4));
     }
 
+    @Test
+    public void testAndSearchCriteria(){
+        SearchCriteria left = new AuthorSearchCriteria("Author1");
+        SearchCriteria right = new TitleSearchCriteria("Title1");
+        SearchCriteria andSearch = new AndSearchCriteria(left, right);
+        assertEquals(true, andSearch.match(book1));
+        assertEquals(false, andSearch.match(book4));
+    }
+
+    @Test
+    public void testOrSearchCriteria(){
+        SearchCriteria left = new YearOfIssueSearchCriteria("1");
+        SearchCriteria right = new TitleSearchCriteria("Title1");
+        SearchCriteria orSearch = new OrSearchCriteria(left, right);
+        assertEquals(true, orSearch.match(book1));
+        assertEquals(true, orSearch.match(book2));
+        assertEquals(false, orSearch.match(book4));
+    }
+
+    @Test
+    public void testMethodFindOr(){
+        SearchCriteria left = new YearOfIssueSearchCriteria("1");
+        SearchCriteria right = new TitleSearchCriteria("Title1");
+        SearchCriteria orSearch = new OrSearchCriteria(left, right);
+        List <Book> expectedResult = new ArrayList<>();
+        expectedResult.add(book1);
+        expectedResult.add(book2);
+        assertEquals(expectedResult, bookDatabase.find(orSearch));
+    }
+
+    @Test
+    public void testMethodFindAnd(){
+        SearchCriteria left = new YearOfIssueSearchCriteria("1");
+        SearchCriteria right = new TitleSearchCriteria("Title1");
+        SearchCriteria andSearch = new AndSearchCriteria(left, right);
+        List <Book> expectedResult = new ArrayList<>();
+        expectedResult.add(book1);
+        assertEquals(expectedResult, bookDatabase.find(andSearch));
+    }
+
+    @Test
+    public void testMethodFindNothingFounded(){
+        SearchCriteria left = new YearOfIssueSearchCriteria("6");
+        SearchCriteria right = new TitleSearchCriteria("Title1");
+        SearchCriteria andSearch = new AndSearchCriteria(left, right);
+        List <Book> expectedResult = new ArrayList<>();
+        assertEquals(expectedResult, bookDatabase.find(andSearch));
+    }
+
+    @Test
+    public void testMethodFindUniqueAuthors(){
+        Set<String> expectedResult = new HashSet<>();
+        expectedResult.add("Author1");
+        expectedResult.add("Author2");
+        expectedResult.add("Author3");
+        expectedResult.add("Author4");
+        expectedResult.add("Author5");
+        assertEquals(expectedResult, bookDatabase.findUniqueAuthors());
+    }
+
+    @Test
+    public void testMethodFindUniqueTitles(){
+        Set<String> expectedResult = new HashSet<>();
+        expectedResult.add("Title1");
+        expectedResult.add("Title2");
+        expectedResult.add("Title3");
+        expectedResult.add("Title4");
+        expectedResult.add("Title5");
+        assertEquals(expectedResult, bookDatabase.findUniqueTitles());
+    }
+
+    @Test
+    public void testMethodFindUniqueBooks(){
+        Set<Book> expectedResult = new HashSet<>();
+        expectedResult.add(book1);
+        expectedResult.add(book2);
+        expectedResult.add(book3);
+        expectedResult.add(book4);
+        expectedResult.add(book5);
+        expectedResult.add(book6);
+        assertEquals(expectedResult, bookDatabase.findUniqueBooks());
+    }
+
+    @Test
+    public void testMethodContains(){
+        Book newBook = new Book("Author1", "Title1", "1");
+        Book newBook2 = new Book("Author11", "Title1", "1");
+        assertEquals(true, bookDatabase.contains(newBook));
+        assertEquals(false, bookDatabase.contains(newBook2));
+    }
+
+    @Test
+    public void testMethodGetAuthorToBooksMap(){
+        Map <String, List<Book>> expectedMap = new HashMap<>();
+
+        List <Book> listOfBooks1 = new ArrayList<>();
+        listOfBooks1.add(book1);
+        expectedMap.put("Author1", listOfBooks1);
+
+        List <Book> listOfBooks2 = new ArrayList<>();
+        listOfBooks2.add(book2);
+        expectedMap.put("Author2", listOfBooks2);
+
+        List <Book> listOfBooks3 = new ArrayList<>();
+        listOfBooks3.add(book3);
+        expectedMap.put("Author3", listOfBooks3);
+
+        List <Book> listOfBooks4 = new ArrayList<>();
+        listOfBooks4.add(book4);
+        expectedMap.put("Author4", listOfBooks4);
+
+        List <Book> listOfBooks5 = new ArrayList<>();
+        listOfBooks5.add(book5);
+        listOfBooks5.add(book6);
+        expectedMap.put("Author5", listOfBooks5);
+
+        assertEquals(true, compareTwoMaps(bookDatabase.getAuthorToBooksMap(), expectedMap));
+    }
+
+    @Test
+    public void getEachAuthorBookCount(){
+        Map <String, Integer> expectedMap = new HashMap<>();
+
+        expectedMap.put("Author1", 1);
+
+        expectedMap.put("Author2", 1);
+
+        expectedMap.put("Author3", 1);
+
+        expectedMap.put("Author4", 1);
+
+        expectedMap.put("Author5", 2);
+
+        assertEquals(true, compareTwoMaps(bookDatabase.getEachAuthorBookCount(), expectedMap));
+    }
+
+    private boolean compareTwoMaps(Map map1, Map map2 ){
+        if (map1.size()!=map2.size()){
+            return false;
+        }else{
+            for (Object key : map1.keySet()){
+                Object value = map1.get(key);
+                if (!value.equals(map2.get(key))) return false;
+            }
+        }
+        return true;
+    }
 }
