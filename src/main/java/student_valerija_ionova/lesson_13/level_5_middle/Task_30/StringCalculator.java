@@ -9,23 +9,20 @@ package student_valerija_ionova.lesson_13.level_5_middle.Task_30;
 
 Не забывайте писать тесты!*/
 
-import java.util.Arrays;
 
 class StringCalculator {
 
     int add (String numbers){
         String [] arrayOfNumber = numbers.split(",|\n");
-        //System.out.println(Arrays.toString(arrayOfNumber));
         int sum = 0;
-        for (String number : arrayOfNumber){
-            try {
-                sum += Integer.parseInt(number);
-            }catch (NumberFormatException e){
-
-            }
-
+        if (numbers.equals("")){
+            return 0;
         }
-        return sum;
+        else {
+            for (String number : arrayOfNumber) {
+                    sum += Integer.parseInt(number);
+            }
+            return sum;
+        }
     }
-
 }
