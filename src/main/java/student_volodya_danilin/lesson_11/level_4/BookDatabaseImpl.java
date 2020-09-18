@@ -156,6 +156,16 @@ class BookDatabaseImpl implements BookDatabase {
         return result;
     }
 
+    @Override
+    public Map<String, List<Book>> getAuthorToBooksMap() {
+        Map<String, List<Book>> result = new HashMap<>();
+        Set<String> authors = findUniqueAuthors();
+        for (String value : authors) {
+            result.put(value, findByAuthor(value));
+        }
+        return result;
+    }
+
     void clearStorage() {
         bookStorage.clear();
     }
