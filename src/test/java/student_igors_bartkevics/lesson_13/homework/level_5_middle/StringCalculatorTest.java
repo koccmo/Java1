@@ -24,4 +24,10 @@ public class StringCalculatorTest {
         assertEquals(calculator.add("2,9"), 11);
     }
 
+    @Test
+    public void shouldReturnTwentyThreeInComplianceWithRule4() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(calculator.add("2,9,34,5"), 23);
+    }
+
 }
