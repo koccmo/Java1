@@ -5,11 +5,21 @@ import java.util.List;
 
 class StringCalculatorUniversal {
 
-    int add (String numbers){
+    int addNumber (String numbers){
         List<Integer> numbersList= createListOfNumbers(numbers);
         int sum = 0;
         for (Integer number : numbersList){
             sum += number;
+        }
+        return sum;
+    }
+
+    int addDigit (String numbers){
+        int sum = 0;
+        for (int i = 0; i < numbers.length(); i++){
+            if (Character.isDigit(numbers.charAt(i))){
+                sum += Integer.parseInt(String.valueOf(numbers.charAt(i)));
+            }
         }
         return sum;
     }
