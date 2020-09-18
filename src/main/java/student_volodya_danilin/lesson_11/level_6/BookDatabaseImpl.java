@@ -1,14 +1,12 @@
-package student_volodya_danilin.lesson_11.level_4;
+package student_volodya_danilin.lesson_11.level_6;
+
+
+import org.junit.Test;
 
 import java.util.*;
 
-import teacher.codereview.CodeReview;
-import teacher.codereview.CodeReviewComment;
-
-@CodeReview(approved = true)
 class BookDatabaseImpl implements BookDatabase {
 
-	@CodeReviewComment(teacher = "Remove this field!")
     Book book;
 
     private ArrayList<Book> bookStorage = new ArrayList<>();
@@ -156,12 +154,25 @@ class BookDatabaseImpl implements BookDatabase {
         return result;
     }
 
+    @Test
     @Override
     public Map<String, List<Book>> getAuthorToBooksMap() {
         Map<String, List<Book>> result = new HashMap<>();
         Set<String> authors = findUniqueAuthors();
         for (String value : authors) {
             result.put(value, findByAuthor(value));
+        }
+        return result;
+    }
+
+    @Test
+    @Override
+    public Map<String, Integer> getEachAuthorBookCount() {
+        Map<String, Integer> result = new HashMap<>();
+        Set<String> authors = findUniqueAuthors();
+        for (String value : authors) {
+            List<Book> authorBooks = findByAuthor(value);
+            result.put(value, authorBooks.size());
         }
         return result;
     }

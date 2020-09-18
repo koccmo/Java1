@@ -1,13 +1,10 @@
-package student_volodya_danilin.lesson_11.level_4;
+package student_valerija_ionova.lesson_11.level_2_7_v2;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
-import teacher.codereview.CodeReview;
-
-@CodeReview(approved = true)
 public interface BookDatabase {
 
     Long save(Book book);
@@ -40,6 +37,5 @@ public interface BookDatabase {
 
     Map<String, List<Book>> getAuthorToBooksMap();
 
-
-
+    Map<String, Integer> getEachAuthorBookCount();
 }

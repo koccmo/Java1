@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_10.level_3;
+package student_roberts_kupcs.lesson_10.level_3.Task_6;
 
 interface Numbers {
     int count(int n);
