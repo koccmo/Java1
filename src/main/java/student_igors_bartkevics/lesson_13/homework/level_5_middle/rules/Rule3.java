@@ -17,6 +17,7 @@ public class Rule3 extends Rule {
     @Override
     public boolean compliesWithRule(String string) {
         return (string.length() == 3) && Character.isDigit(string.charAt(0)) &&
+                string.charAt(1) == ',' &&
                 Character.isDigit(string.charAt(2));
     }
 }
