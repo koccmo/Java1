@@ -17,10 +17,6 @@ class UserCredentials {
     }
 
     boolean hasRole(Role checkRole) {
-        boolean result = false;
-        if (roles.contains(checkRole)) {
-            result = true;
-        }
-        return result;
+        return roles.contains(checkRole);
     }
 }
