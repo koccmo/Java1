@@ -2,6 +2,7 @@ package student_valerija_ionova.lesson_14.level_3_junior.task_18_24;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class TransactionAnalysisService {
@@ -29,6 +30,18 @@ public class TransactionAnalysisService {
                               .filter(transaction -> transaction.getYear() == 2011)
                               .sorted(Comparator.comparingInt(Transaction::getValue))
                               .collect(Collectors.toList());
+    }
+
+    Set<Integer> setOfDifferentYears (List <Transaction> allTransactions){
+        return allTransactions.stream()
+                              .map (transaction -> transaction.getYear())
+                              .collect(Collectors.toSet());
+    }
+
+    Set<String> setOfDifferentNames (List <Transaction> allTransactions){
+        return allTransactions.stream()
+                .map (transaction -> transaction.getTrader().getName())
+                .collect(Collectors.toSet());
     }
 
 
