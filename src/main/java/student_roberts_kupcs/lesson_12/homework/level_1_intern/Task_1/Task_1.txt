@@ -1,0 +1,8 @@
+Исправьте код:
+
+//class MyException implements Throwable {
+//}
+
+class MyException extends Throwable {
+
+}
