@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_14.level_3_junior.task_18;
+package student_valerija_ionova.lesson_14.level_3_junior.task_18_24;
 
 import org.junit.Test;
 
@@ -59,6 +59,17 @@ public class TransactionAnalysisServiceTest {
 
         List <Transaction> result =
                 transactionAnalysisService.sortTransactionDescendingByValue(transactionTestData.getTransactions());
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void testTransactionsIn2011SortedAscending(){
+        List <Transaction> expectedResult = new ArrayList<>();
+        expectedResult.add(transactionTestData.getTransactions().get(0));
+        expectedResult.add(transactionTestData.getTransactions().get(2));
+
+        List <Transaction> result =
+                transactionAnalysisService.sortTransactionsIn2011AscendingByValue(transactionTestData.getTransactions());
         assertEquals(expectedResult, result);
     }
 
