@@ -11,5 +11,12 @@ public class TransactionAnalysisService {
                               .collect(Collectors.toList());
     }
 
+    List<Transaction> sortTransactionAscendingByValue (List <Transaction> allTransactions){
+        return allTransactions.stream()
+                .sorted((o1, o2) -> o1.getValue() - o2.getValue())
+                //or .sorted(Comparator.comparingInt(Transaction::getValue))
+                .collect(Collectors.toList());
+    }
+
 
 }
