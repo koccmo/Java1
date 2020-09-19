@@ -3,7 +3,9 @@ package student_valerija_ionova.lesson_14.level_3_junior.task_18_24;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.*;
 
@@ -72,5 +74,19 @@ public class TransactionAnalysisServiceTest {
                 transactionAnalysisService.sortTransactionsIn2011AscendingByValue(transactionTestData.getTransactions());
         assertEquals(expectedResult, result);
     }
+
+    @Test
+    public void getSetOfDifferentYears(){
+        Set<Integer> result = transactionAnalysisService.setOfDifferentYears(transactionTestData.getTransactions());
+        assertEquals(2, result.size());
+    }
+
+    @Test
+    public void getSetOfDifferentNames(){
+        Set<String> result = transactionAnalysisService.setOfDifferentNames(transactionTestData.getTransactions());
+        assertEquals(4, result.size());
+    }
+
+
 
 }
