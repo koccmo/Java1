@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_14.level_3_junior.task_18;
+package student_valerija_ionova.lesson_14.level_3_junior.task_18_24;
 
 import java.util.Comparator;
 import java.util.List;
@@ -21,6 +21,13 @@ public class TransactionAnalysisService {
     List <Transaction> sortTransactionDescendingByValue (List <Transaction> allTransactions){
         return allTransactions.stream()
                               .sorted((o1, o2) -> o2.getValue() - o1.getValue())
+                              .collect(Collectors.toList());
+    }
+
+    List <Transaction> sortTransactionsIn2011AscendingByValue(List <Transaction> allTransactions){
+        return allTransactions.stream()
+                              .filter(transaction -> transaction.getYear() == 2011)
+                              .sorted(Comparator.comparingInt(Transaction::getValue))
                               .collect(Collectors.toList());
     }
 
