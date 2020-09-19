@@ -1,9 +1,8 @@
-package student_valerija_ionova.lesson_14.level_3_junior.task_18_24;
+package student_valerija_ionova.lesson_14.level_3_5_junior_middle.task_18_24;
 
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -85,6 +84,26 @@ public class TransactionAnalysisServiceTest {
     public void getSetOfDifferentNames(){
         Set<String> result = transactionAnalysisService.setOfDifferentNames(transactionTestData.getTransactions());
         assertEquals(4, result.size());
+    }
+
+    @Test
+    public void getSetOfDifferentCities(){
+        Set<String> result = transactionAnalysisService.setOfDifferentCities(transactionTestData.getTransactions());
+        assertEquals(2, result.size());
+    }
+
+    @Test
+    public void getSetOfNamesFromCambridge(){
+        Set<String> result = transactionAnalysisService.getTradersNamesFromDefinedCity(transactionTestData.getTransactions(),
+                "Cambridge");
+        assertEquals(3, result.size());
+    }
+
+    @Test
+    public void getSetOfNamesFromMilan(){
+        Set<String> result = transactionAnalysisService.getTradersNamesFromDefinedCity(transactionTestData.getTransactions(),
+                "Milan");
+        assertEquals(1, result.size());
     }
 
 
