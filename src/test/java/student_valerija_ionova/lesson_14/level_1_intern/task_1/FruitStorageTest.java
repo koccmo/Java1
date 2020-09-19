@@ -24,4 +24,9 @@ public class FruitStorageTest {
         assertEquals(2, fruitStore.getAllApplesByColor("yellow").size());
     }
 
+    @Test
+    public void testFruitStorageGetAllApplesWithWeightAbove150(){
+        assertEquals(4, fruitStore.getAllApplesByWeight(150).size());
+    }
+
 }
