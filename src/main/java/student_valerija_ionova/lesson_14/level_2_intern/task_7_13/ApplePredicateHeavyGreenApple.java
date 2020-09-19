@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_14.level_2_intern;
+package student_valerija_ionova.lesson_14.level_2_intern.task_7_13;
 
 class ApplePredicateHeavyGreenApple implements ApplePredicate{
 
