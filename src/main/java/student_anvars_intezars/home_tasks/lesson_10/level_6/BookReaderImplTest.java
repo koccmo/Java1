@@ -2,6 +2,8 @@ package student_anvars_intezars.home_tasks.lesson_10.level_6;
 
 import teacher.codereview.CodeReview;
 
+import java.util.Arrays;
+
 @CodeReview(approved = true)
 class BookReaderImplTest {
 
@@ -21,6 +23,8 @@ class BookReaderImplTest {
         bookReaderImplTest.readBookWhichAreOnlyInLibraryTest();
         bookReaderImplTest.markUnreadBooksWhichAreOnlyInTheLibraryTest();
         bookReaderImplTest.findBookByFirstLettersOfTitleTest();
+        bookReaderImplTest.listOfOnlyReadBooks();
+        bookReaderImplTest.listOfOnlyNotReadBooks();
     }
 
     void toAddNewBookTest1() {
@@ -207,8 +211,42 @@ class BookReaderImplTest {
         Book booksOfOneAuthor = bookReader.findByTitle("Anti");
         if (booksOfOneAuthor.equals(secondBook)) {
             System.out.println("Test12 for finding books by using first letters of title = OK");
+            System.out.println();
         } else {
             System.out.println("Test12 for finding books by using first letters of title = FAIL");
         }
     }
+
+    void listOfOnlyReadBooks() {
+        BookReaderImpl bookReader = new BookReaderImpl();
+        Book firstBook = new Book("Lord of the Rings","Tolkien");
+        bookReader.save(firstBook);
+        Book secondBook = new Book("Antifragile","Nassim Nicholas Taleb");
+        bookReader.save(secondBook);
+        Book thirdBook = new Book("Harry Potter","Rowling");
+        bookReader.save(thirdBook);
+        bookReader.isRead(secondBook);
+        System.out.println("Books which are read from the library:");
+        bookReader.isReadFromLibrary();
+        System.out.println();
+        }
+
+    void listOfOnlyNotReadBooks() {
+        BookReaderImpl bookReader = new BookReaderImpl();
+        Book firstBook = new Book("Lord of the Rings","Tolkien");
+        bookReader.save(firstBook);
+        Book secondBook = new Book("Antifragile","Nassim Nicholas Taleb");
+        bookReader.save(secondBook);
+        Book thirdBook = new Book("Harry Potter","Rowling");
+        bookReader.save(thirdBook);
+        bookReader.notRead(firstBook);
+        bookReader.notRead(thirdBook);
+        System.out.println("Books which are not read from the library:");
+        bookReader.isNotReadFromLibrary();
+    }
 }
+
+
+
+
+
