@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_14.level_3_5_junior_middle.task_18_24;
+package student_valerija_ionova.lesson_14.level_3_5_junior_middle.task_18_34;
 
 import org.junit.Test;
 
@@ -106,6 +106,20 @@ public class TransactionAnalysisServiceTest {
         assertEquals(1, result.size());
     }
 
+    @Test
+    public void ifInMilanIsTrader(){
+        assertEquals(true, transactionAnalysisService.ifInCityIsTrader(transactionTestData.getTransactions(), "Milan"));
+    }
+
+    @Test
+    public void ifInCambridgeIsTrader(){
+        assertEquals(true, transactionAnalysisService.ifInCityIsTrader(transactionTestData.getTransactions(), "Cambridge"));
+    }
+
+    @Test
+    public void ifInRigaIsTrader(){
+        assertEquals(false, transactionAnalysisService.ifInCityIsTrader(transactionTestData.getTransactions(), "Riga"));
+    }
 
 
 }
