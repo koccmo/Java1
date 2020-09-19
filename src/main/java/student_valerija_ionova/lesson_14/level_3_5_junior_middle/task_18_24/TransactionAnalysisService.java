@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_14.level_3_junior.task_18_24;
+package student_valerija_ionova.lesson_14.level_3_5_junior_middle.task_18_24;
 
 import java.util.Comparator;
 import java.util.List;
@@ -42,6 +42,20 @@ public class TransactionAnalysisService {
         return allTransactions.stream()
                 .map (transaction -> transaction.getTrader().getName())
                 .collect(Collectors.toSet());
+    }
+
+    Set<String> setOfDifferentCities (List <Transaction> allTransactions){
+        return allTransactions.stream()
+                .map (transaction -> transaction.getTrader().getCity())
+                .collect(Collectors.toSet());
+    }
+
+    Set <String> getTradersNamesFromDefinedCity(List <Transaction> allTransactions, String city){
+        return allTransactions.stream()
+                              .map(transaction -> transaction.getTrader())
+                              .filter(trader -> trader.getCity().equals(city))
+                              .map(trader -> trader.getName())
+                              .collect(Collectors.toSet());
     }
 
 
