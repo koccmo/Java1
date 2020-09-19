@@ -47,4 +47,19 @@ public class TransactionAnalysisServiceTest {
         assertEquals(expectedResult, result);
     }
 
+    @Test
+    public void testSortedDescendingByValue(){
+        List <Transaction> expectedResult = new ArrayList<>();
+        expectedResult.add(transactionTestData.getTransactions().get(1));
+        expectedResult.add(transactionTestData.getTransactions().get(5));
+        expectedResult.add(transactionTestData.getTransactions().get(3));
+        expectedResult.add(transactionTestData.getTransactions().get(4));
+        expectedResult.add(transactionTestData.getTransactions().get(2));
+        expectedResult.add(transactionTestData.getTransactions().get(0));
+
+        List <Transaction> result =
+                transactionAnalysisService.sortTransactionDescendingByValue(transactionTestData.getTransactions());
+        assertEquals(expectedResult, result);
+    }
+
 }
