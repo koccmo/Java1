@@ -27,4 +27,10 @@ class FruitStorage {
                              .collect(Collectors.toList());
     }
 
+    List <Apple> getAllApplesByWeight(int weight){
+        return getAllApples().stream()
+                .filter(apple -> apple.getWeight() > weight)
+                .collect(Collectors.toList());
+    }
+
 }
