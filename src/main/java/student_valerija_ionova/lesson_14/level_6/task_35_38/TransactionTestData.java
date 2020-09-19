@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_14.level_6;
+package student_valerija_ionova.lesson_14.level_6.task_35_38;
 
 import java.util.Arrays;
 import java.util.List;
