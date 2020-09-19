@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import student_dmitrijs_jasvins.lesson_9.day_2.task_12.A;
 import teacher.codereview.CodeReview;
 import teacher.codereview.CodeReviewComment;
 
@@ -16,6 +17,7 @@ class BookReaderImpl implements BookReader {
     @CodeReviewComment(teacher = "This field should be private.")
     private List<Book> books = new ArrayList<>();
     private List<Book> booksWhichAreRead = new ArrayList<>();
+    private List<Book> booksWhichAreNotRead = new ArrayList<>();
 
     @Override
     public void save(Book book) {
@@ -25,6 +27,11 @@ class BookReaderImpl implements BookReader {
     @Override
     public void saveReadBook(Book book) {
         booksWhichAreRead.add(book);
+    }
+
+    @Override
+    public void saveUnreadBook(Book book) {
+        booksWhichAreNotRead.add(book);
     }
 
     @Override
@@ -122,6 +129,7 @@ class BookReaderImpl implements BookReader {
         for (int i = 0; i < books.size(); i++) {
             Book bookInLibrary = books.get(i);
             if (bookInLibrary.equals(bookNotRead)) {
+                saveUnreadBook(bookNotRead);
                 return true;
             }
         }
@@ -135,6 +143,15 @@ class BookReaderImpl implements BookReader {
                 System.out.println("Book " + booksInLibrary.getTitle() + " [" + booksInLibrary.getAuthor() + "]");
             }
         }
+
+    @Override
+    public void isNotReadFromLibrary() {
+        for (int i = 0; i < booksWhichAreNotRead.size(); i++) {
+            Book booksInLibrary = booksWhichAreNotRead.get(i);
+            System.out.println("Book " + booksInLibrary.getTitle() + " [" + booksInLibrary.getAuthor() + "]");
+        }
     }
+}
+
 
 

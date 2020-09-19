@@ -24,6 +24,7 @@ class BookReaderImplTest {
         bookReaderImplTest.markUnreadBooksWhichAreOnlyInTheLibraryTest();
         bookReaderImplTest.findBookByFirstLettersOfTitleTest();
         bookReaderImplTest.listOfOnlyReadBooks();
+        bookReaderImplTest.listOfOnlyNotReadBooks();
     }
 
     void toAddNewBookTest1() {
@@ -225,6 +226,27 @@ class BookReaderImplTest {
         Book thirdBook = new Book("Harry Potter","Rowling");
         bookReader.save(thirdBook);
         bookReader.isRead(secondBook);
+        System.out.println("Books which are read from the library:");
         bookReader.isReadFromLibrary();
+        System.out.println();
         }
+
+    void listOfOnlyNotReadBooks() {
+        BookReaderImpl bookReader = new BookReaderImpl();
+        Book firstBook = new Book("Lord of the Rings","Tolkien");
+        bookReader.save(firstBook);
+        Book secondBook = new Book("Antifragile","Nassim Nicholas Taleb");
+        bookReader.save(secondBook);
+        Book thirdBook = new Book("Harry Potter","Rowling");
+        bookReader.save(thirdBook);
+        bookReader.notRead(firstBook);
+        bookReader.notRead(thirdBook);
+        System.out.println("Books which are not read from the library:");
+        bookReader.isNotReadFromLibrary();
     }
+}
+
+
+
+
+
