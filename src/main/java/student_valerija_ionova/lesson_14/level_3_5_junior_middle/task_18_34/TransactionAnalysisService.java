@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_14.level_3_5_junior_middle.task_18_24;
+package student_valerija_ionova.lesson_14.level_3_5_junior_middle.task_18_34;
 
 import java.util.Comparator;
 import java.util.List;
@@ -56,6 +56,16 @@ public class TransactionAnalysisService {
                               .filter(trader -> trader.getCity().equals(city))
                               .map(trader -> trader.getName())
                               .collect(Collectors.toSet());
+    }
+
+    //и возвращает:
+    //- true если в городе Milan работает хотя бы один трейдер,
+    //- false иначе.
+    boolean ifInCityIsTrader(List <Transaction> allTransactions, String city){
+        return !(getTradersNamesFromDefinedCity(allTransactions, city).size() == 0);
+        //stream есть в методе getTradersNamesFromDefinedCity :)
+        //or allTransactions.stream
+        // .anyMatch(transaction -> transaction.getTrader().getCity().equals("Milan"));
     }
 
 
