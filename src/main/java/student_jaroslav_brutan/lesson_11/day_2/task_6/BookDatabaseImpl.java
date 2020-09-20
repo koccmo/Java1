@@ -16,4 +16,14 @@ class BookDatabaseImpl implements BookDatabase{
             id++;
             return id;
         }
+
+        @Override
+    public boolean delete(Long bookId){
+            for (int i = 0; i < listOfBooks.size();i++){
+                if (listOfBooks.get(i).getId().equals(bookId)){
+                    listOfBooks.remove(i);
+                    return true;
+                }
+            } return false;
+        }
 }
