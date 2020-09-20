@@ -5,4 +5,6 @@ public interface BookDatabase {
     Long save(Book book);
 
     boolean delete(Long bookId);
+
+    boolean delete(Book book);
 }
