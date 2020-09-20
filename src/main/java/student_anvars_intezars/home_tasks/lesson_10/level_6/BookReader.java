@@ -9,6 +9,10 @@ interface BookReader {
 
     void save(Book book);
 
+    void saveReadBook(Book book);
+
+    void saveUnreadBook(Book book);
+
     boolean booksEqualByAuthorAndTitle(Book book);
 
     boolean booksHaveTitleAndAuthor(Book book);
@@ -25,7 +29,9 @@ interface BookReader {
 
     boolean notRead (Book bookNotRead);
 
-    //Book[] isReadFromLibrary();
+    void isReadFromLibrary();
+
+    void isNotReadFromLibrary();
 
 
 }

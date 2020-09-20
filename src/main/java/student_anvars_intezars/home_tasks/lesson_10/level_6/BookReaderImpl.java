@@ -1,20 +1,37 @@
 package student_anvars_intezars.home_tasks.lesson_10.level_6;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import student_dmitrijs_jasvins.lesson_9.day_2.task_12.A;
 import teacher.codereview.CodeReview;
 import teacher.codereview.CodeReviewComment;
+
 
 @CodeReview(approved = true)
 class BookReaderImpl implements BookReader {
 
+    private int[] array;
+
     @CodeReviewComment(teacher = "This field should be private.")
     private List<Book> books = new ArrayList<>();
+    private List<Book> booksWhichAreRead = new ArrayList<>();
+    private List<Book> booksWhichAreNotRead = new ArrayList<>();
 
     @Override
     public void save(Book book) {
         books.add(book);
+    }
+
+    @Override
+    public void saveReadBook(Book book) {
+        booksWhichAreRead.add(book);
+    }
+
+    @Override
+    public void saveUnreadBook(Book book) {
+        booksWhichAreNotRead.add(book);
     }
 
     @Override
@@ -100,6 +117,7 @@ class BookReaderImpl implements BookReader {
         for (int i = 0; i < books.size(); i++) {
             Book bookInLibrary = books.get(i);
             if (bookInLibrary.equals(bookToRead)) {
+                saveReadBook(bookToRead);
                 return true;
             }
         }
@@ -111,15 +129,29 @@ class BookReaderImpl implements BookReader {
         for (int i = 0; i < books.size(); i++) {
             Book bookInLibrary = books.get(i);
             if (bookInLibrary.equals(bookNotRead)) {
+                saveUnreadBook(bookNotRead);
                 return true;
             }
         }
         return false;
     }
 
-    /*@Override
-    public Book[] isReadFromLibrary() {
-        */
+    @Override
+    public void isReadFromLibrary() {
+        for (int i = 0; i < booksWhichAreRead.size(); i++) {
+            Book booksInLibrary = booksWhichAreRead.get(i);
+                System.out.println("Book " + booksInLibrary.getTitle() + " [" + booksInLibrary.getAuthor() + "]");
+            }
+        }
+
+    @Override
+    public void isNotReadFromLibrary() {
+        for (int i = 0; i < booksWhichAreNotRead.size(); i++) {
+            Book booksInLibrary = booksWhichAreNotRead.get(i);
+            System.out.println("Book " + booksInLibrary.getTitle() + " [" + booksInLibrary.getAuthor() + "]");
+        }
+    }
 }
+
 
 
