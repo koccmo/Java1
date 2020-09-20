@@ -1,4 +1,4 @@
-package student_pavel_sharkel.lesson_10.level_3;
+package student_pavel_sharkel.lesson_10.level_3.task_6;
 
 import java.util.function.Predicate;
 
