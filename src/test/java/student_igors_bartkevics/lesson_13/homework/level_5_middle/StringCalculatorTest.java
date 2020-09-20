@@ -30,4 +30,10 @@ public class StringCalculatorTest {
         assertEquals(calculator.add("2,9,34,5"), 23);
     }
 
+    @Test
+    public void shouldReturnFiveInComplianceWithRule5() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(5, calculator.add("1,1,1\n1,1"));
+    }
+
 }

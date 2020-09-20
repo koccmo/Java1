@@ -14,5 +14,5 @@ public class CalculatorImplRule4 implements Calculator {
                 }
             }
         return result;
-        }
+    }
 }
