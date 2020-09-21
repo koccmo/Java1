@@ -1,4 +1,4 @@
-package student_jaroslav_brutan.lesson_11.day_2.task_6;
+package student_jaroslav_brutan.lesson_11.day_2.all_tasks;
 
 import java.util.List;
 import java.util.Optional;
