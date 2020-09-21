@@ -4,17 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import teacher.codereview.CodeReview;
-import teacher.codereview.CodeReviewComment;
-
-@CodeReview(approved = true)
 class BookDatabaseImpl implements BookDatabase {
 
-	@CodeReviewComment(teacher = "This field should be private.")
     List<Book> books = new ArrayList<>();
-
-	@CodeReviewComment(teacher = "This field should be private.")
-	Long currentId = 0L;
+    Long currentId = 0L;
+    BookValidator bookValidator = new BookValidator();
 
     private Optional <Book> getBookById(Long bookId) {
         Optional <Book> result = Optional.empty();
@@ -63,5 +57,60 @@ class BookDatabaseImpl implements BookDatabase {
             return true;
         }
         else return false;
+    }
+
+    @Override
+    public Optional<Book> findById(Long bookId) {
+        Optional<Book> result = Optional.empty();
+        for (Book book : books) {
+            if (book.getId().equals(bookId)) {
+                result = Optional.of(book);
+                break;
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public List<Book> findByAuthor(String author) {
+        List<Book> bookByAuthor = new ArrayList<>();
+        for (Book book : books) {
+            if (bookValidator.isBookAuthor(book, author)) {
+                bookByAuthor.add(book);
+            }
+        }
+        return bookByAuthor;
+    }
+
+    @Override
+    public List<Book> findByTitle(String title) {
+        List<Book> byTitle = new ArrayList<>();
+        for (Book book : books) {
+            if (bookValidator.isBookTitle(book, title)) {
+                byTitle.add(book);
+            }
+        }
+        return  byTitle;
+    }
+
+    @Override
+    public int countAllBooks() {
+        return books.size();
+    }
+
+    @Override
+    public void deleteByAuthor(String author) {
+        List <Book> books = findByAuthor(author);
+        for (Book book : books) {
+            delete(book);
+        }
+    }
+
+    @Override
+    public void deleteByTitle(String title) {
+        List <Book> booksTitle = findByTitle(title);
+        for (Book book : booksTitle) {
+            delete(book);
+        }
     }
 }
