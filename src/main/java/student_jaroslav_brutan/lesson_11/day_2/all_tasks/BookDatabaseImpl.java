@@ -1,10 +1,12 @@
+
 package student_jaroslav_brutan.lesson_11.day_2.all_tasks;
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-class BookDatabaseImpl implements BookDatabase{
+class BookDatabaseImpl implements BookDatabase {
 
 
         private List<Book> listOfBooks = new ArrayList<>();
@@ -88,3 +90,5 @@ class BookDatabaseImpl implements BookDatabase{
         }
     }
 }
+
+
