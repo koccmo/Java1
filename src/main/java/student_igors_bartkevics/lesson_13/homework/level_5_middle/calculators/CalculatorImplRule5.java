@@ -1,17 +1,17 @@
 package student_igors_bartkevics.lesson_13.homework.level_5_middle.calculators;
 
 import student_igors_bartkevics.lesson_13.homework.level_5_middle.Calculator;
-import student_igors_bartkevics.lesson_13.homework.level_5_middle.SplitterReplacer;
+import student_igors_bartkevics.lesson_13.homework.level_5_middle.DelimiterReplacer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CalculatorImplRule5 implements Calculator {
 
-    private SplitterReplacer splitterReplacer;
+    private DelimiterReplacer delimiterReplacer;
 
     public CalculatorImplRule5() {
-        this.splitterReplacer = new SplitterReplacer();
+        this.delimiterReplacer = new DelimiterReplacer();
     }
 
     @Override
@@ -22,7 +22,7 @@ public class CalculatorImplRule5 implements Calculator {
         splitters.add("\n");
 
         String uniqueSplitter = "_splitter_";
-        String string = splitterReplacer.replaceSplittersInStringWithUniqueSplitter(splitters, numbers, uniqueSplitter);
+        String string = delimiterReplacer.replaceSplittersInStringWithUniqueSplitter(splitters, numbers, uniqueSplitter);
 
         String[] numbersToCount = string.split(uniqueSplitter);
         int result = 0;

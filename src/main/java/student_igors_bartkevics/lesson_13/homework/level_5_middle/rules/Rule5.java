@@ -2,17 +2,17 @@ package student_igors_bartkevics.lesson_13.homework.level_5_middle.rules;
 
 import student_igors_bartkevics.lesson_13.homework.level_5_middle.Calculator;
 import student_igors_bartkevics.lesson_13.homework.level_5_middle.Rule;
-import student_igors_bartkevics.lesson_13.homework.level_5_middle.SplitterReplacer;
+import student_igors_bartkevics.lesson_13.homework.level_5_middle.DelimiterReplacer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Rule5 extends Rule {
-    private SplitterReplacer splitterReplacer;
+    private DelimiterReplacer delimiterReplacer;
 
     public Rule5(Calculator calculator) {
         super(calculator);
-        this.splitterReplacer = new SplitterReplacer();
+        this.delimiterReplacer = new DelimiterReplacer();
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Rule5 extends Rule {
         }
 
         String uniqueSplitter = "_splitter_";
-        string = splitterReplacer.replaceSplittersInStringWithUniqueSplitter(splitters, string, uniqueSplitter);
+        string = delimiterReplacer.replaceSplittersInStringWithUniqueSplitter(splitters, string, uniqueSplitter);
 
         String[] numbers = string.split(uniqueSplitter);
         if ( numbers.length < 2) {
@@ -57,11 +57,4 @@ public class Rule5 extends Rule {
     private boolean stringStartsOrEndsWithSplitter(String string, String splitter) {
         return (string.startsWith(splitter) || string.endsWith(splitter));
     }
-
-//    private String replaceSplittersInStringWithUniqueSplitter(List<String> splitters, String string, String uniqueSplitter) {
-//        for (String splitter : splitters) {
-//            string = string.replace(splitter, uniqueSplitter);
-//        }
-//        return string;
-//    }
 }
