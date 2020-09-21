@@ -1,7 +1,7 @@
-package student_igors_bartkevics.lesson_13.homework.level_5_middle.rules;
+package student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.rules;
 
-import student_igors_bartkevics.lesson_13.homework.level_5_middle.Calculator;
-import student_igors_bartkevics.lesson_13.homework.level_5_middle.Rule;
+import student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.Calculator;
+import student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.Rule;
 
 public class Rule2 extends Rule {
 

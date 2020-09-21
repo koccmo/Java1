@@ -1,7 +1,7 @@
-package student_igors_bartkevics.lesson_13.homework.level_5_middle;
+package student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30;
 
-import student_igors_bartkevics.lesson_13.homework.level_5_middle.calculators.*;
-import student_igors_bartkevics.lesson_13.homework.level_5_middle.rules.*;
+import student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.calculators.*;
+import student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.rules.*;
 
 import java.util.*;
 
@@ -9,7 +9,9 @@ class StringCalculator {
 
     private final Set<Rule> rules;
 
+
     StringCalculator() {
+
         rules = new HashSet<>();
         rules.add(new Rule1(new CalculatorImplRule1()));
         rules.add(new Rule2(new CalculatorImplRule2()));

@@ -1,13 +1,13 @@
-package student_igors_bartkevics.lesson_13.homework.level_5_middle.rules;
+package student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.rules;
 
-import student_igors_bartkevics.lesson_13.homework.level_5_middle.*;
+import student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Rule5 extends Rule {
     private final DelimiterReplacer delimiterReplacer;
-    private final List<String> delimiters;
+    private final Set<String> delimiters;
     private final String uniqueDelimiter;
     private final StringValidator stringValidator;
     private final ArrayValidator arrayValidator;
@@ -15,12 +15,17 @@ public class Rule5 extends Rule {
     public Rule5(Calculator calculator) {
         super(calculator);
         this.delimiterReplacer = new DelimiterReplacer();
-        this.delimiters = new ArrayList<>();
+        delimiters = new HashSet<>();
         delimiters.add(",");
         delimiters.add("\n");
+
         this.uniqueDelimiter = "_delimiter_";
         this.stringValidator = new StringValidator();
         this.arrayValidator = new ArrayValidator();
+    }
+
+    public Set<String> getDelimiters() {
+        return delimiters;
     }
 
     @Override
@@ -31,8 +36,8 @@ public class Rule5 extends Rule {
     @Override
     public boolean compliesWithRule(String string) {
 
-        if (stringValidator.stringContainsSplitters(string, delimiters) &&
-                !stringValidator.stringStartsOrEndsWithAnyOfSplitter(string, delimiters)) {
+        if (stringValidator.stringContainsDelimiters(string, delimiters) &&
+                !stringValidator.stringStartsOrEndsWithAnyOfDelimiter(string, delimiters)) {
 
             string = delimiterReplacer.replaceDelimitersInStringWithUniqueDelimiter(delimiters, string, uniqueDelimiter);
 
