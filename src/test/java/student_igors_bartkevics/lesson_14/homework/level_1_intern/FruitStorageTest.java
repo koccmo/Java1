@@ -10,7 +10,7 @@ public class FruitStorageTest {
 
     @Test
     public void getAllGreenApplesTest() {
-        assertEquals(storage.getAllGreenApples(), 3);
+        assertEquals(storage.getAllGreenApples().size(), 3);
     }
 
 }
