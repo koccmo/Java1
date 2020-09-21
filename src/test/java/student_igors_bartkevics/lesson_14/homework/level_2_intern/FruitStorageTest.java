@@ -58,13 +58,13 @@ public class FruitStorageTest {
 
     @Test
     public void filterRedApplesUsingAnonymousClassTest() {
-        List<Apple> greenApples =
+        List<Apple> redApples =
                 storage.findApples(storage.getAllApples(),new ApplePredicate() {
                     public boolean test(Apple apple) {
                         return "red".equals(apple.getColor());
                     }
                 });
-        assertEquals(greenApples.size(), 3);
+        assertEquals(redApples.size(), 3);
     }
 
     @Test
@@ -86,6 +86,41 @@ public class FruitStorageTest {
                         return apple.getWeight() < 150;
                     }
                 });
+        assertEquals(lightWeightApples.size(), 4);
+    }
+
+    @Test
+    public void filterGreenApplesUsingLambdaExpressionTest() {
+        List<Apple> greenApples =
+                storage.findApples(storage.getAllApples(),
+                    (Apple apple) -> "green".equals(apple.getColor()));
+
+        assertEquals(greenApples.size(), 3);
+    }
+
+    @Test
+    public void filterRedApplesUsingLambdaExpressionTest() {
+        List<Apple> redApples =
+                storage.findApples(storage.getAllApples(),
+                    (Apple apple) -> "red".equals(apple.getColor()));
+        assertEquals(redApples.size(), 3);
+    }
+
+    @Test
+    public void filterHeavyWeightApplesUsingLambdaExpressionTest() {
+        List<Apple> heavyWeightApples =
+                storage.findApples(storage.getAllApples(),
+                        (Apple apple) -> apple.getWeight() > 150);
+
+        assertEquals(heavyWeightApples.size(), 4);
+    }
+
+    @Test
+    public void filterLightWeightApplesUsingLambdaExpressionTest() {
+        List<Apple> lightWeightApples =
+                storage.findApples(storage.getAllApples(),
+                        (Apple apple) -> apple.getWeight() < 150 );
+
         assertEquals(lightWeightApples.size(), 4);
     }
 
