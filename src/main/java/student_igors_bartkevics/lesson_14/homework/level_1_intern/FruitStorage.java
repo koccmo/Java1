@@ -38,4 +38,14 @@ class FruitStorage {
         return redApples;
     }
 
+    public List<Apple> findApplesByColor(List<Apple> inventory, String color) {
+        List<Apple> apples = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (apple.getColor().equals(color)) {
+                apples.add(apple);
+            }
+        }
+        return apples;
+    }
+
 }
