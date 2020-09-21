@@ -6,19 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Rule5 extends Rule {
-    private DelimiterReplacer delimiterReplacer;
-    private List<String> splitters;
-    private String uniqueSplitter;
-    private StringValidator stringValidator;
-    private ArrayValidator arrayValidator;
+    private final DelimiterReplacer delimiterReplacer;
+    private final List<String> delimiters;
+    private final String uniqueDelimiter;
+    private final StringValidator stringValidator;
+    private final ArrayValidator arrayValidator;
 
     public Rule5(Calculator calculator) {
         super(calculator);
         this.delimiterReplacer = new DelimiterReplacer();
-        this.splitters = new ArrayList<>();
-        splitters.add(",");
-        splitters.add("\n");
-        this.uniqueSplitter = "_splitter_";
+        this.delimiters = new ArrayList<>();
+        delimiters.add(",");
+        delimiters.add("\n");
+        this.uniqueDelimiter = "_delimiter_";
         this.stringValidator = new StringValidator();
         this.arrayValidator = new ArrayValidator();
     }
@@ -31,12 +31,12 @@ public class Rule5 extends Rule {
     @Override
     public boolean compliesWithRule(String string) {
 
-        if (stringValidator.stringContainsSplitters(string, splitters) &&
-                !stringValidator.stringStartsOrEndsWithAnyOfSplitter(string, splitters)) {
+        if (stringValidator.stringContainsSplitters(string, delimiters) &&
+                !stringValidator.stringStartsOrEndsWithAnyOfSplitter(string, delimiters)) {
 
-            string = delimiterReplacer.replaceSplittersInStringWithUniqueSplitter(splitters, string, uniqueSplitter);
+            string = delimiterReplacer.replaceDelimitersInStringWithUniqueDelimiter(delimiters, string, uniqueDelimiter);
 
-            String[] numbers = string.split(uniqueSplitter);
+            String[] numbers = string.split(uniqueDelimiter);
 
             return !arrayValidator.arrayContainsLessThanTwoElements(numbers) ||
                     !arrayValidator.arrayContainsNotDigit(numbers);

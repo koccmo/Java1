@@ -4,9 +4,9 @@ import java.util.List;
 
 public class DelimiterReplacer {
 
-    public String replaceSplittersInStringWithUniqueSplitter(List<String> splitters, String string, String uniqueSplitter) {
-        for (String splitter : splitters) {
-            string = string.replace(splitter, uniqueSplitter);
+    public String replaceDelimitersInStringWithUniqueDelimiter(List<String> delimiters, String string, String uniqueDelimiter) {
+        for (String delimiter : delimiters) {
+            string = string.replace(delimiter, uniqueDelimiter);
         }
         return string;
     }
