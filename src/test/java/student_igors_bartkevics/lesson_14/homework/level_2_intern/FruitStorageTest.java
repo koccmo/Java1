@@ -45,4 +45,48 @@ public class FruitStorageTest {
         assertEquals(heavyWeightGreenApples.size(), 1);
     }
 
+    @Test
+    public void filterGreenApplesUsingAnonymousClassTest() {
+        List<Apple> greenApples =
+                storage.findApples(storage.getAllApples(),new ApplePredicate() {
+                    public boolean test(Apple apple) {
+                        return "green".equals(apple.getColor());
+                    }
+                });
+        assertEquals(greenApples.size(), 3);
+    }
+
+    @Test
+    public void filterRedApplesUsingAnonymousClassTest() {
+        List<Apple> greenApples =
+                storage.findApples(storage.getAllApples(),new ApplePredicate() {
+                    public boolean test(Apple apple) {
+                        return "red".equals(apple.getColor());
+                    }
+                });
+        assertEquals(greenApples.size(), 3);
+    }
+
+    @Test
+    public void filterHeavyWeightApplesUsingAnonymousClassTest() {
+        List<Apple> heavyWeightApples =
+                storage.findApples(storage.getAllApples(),new ApplePredicate() {
+                    public boolean test(Apple apple) {
+                        return apple.getWeight() > 150;
+                    }
+                });
+        assertEquals(heavyWeightApples.size(), 4);
+    }
+
+    @Test
+    public void filterLightWeightApplesUsingAnonymousClassTest() {
+        List<Apple> lightWeightApples =
+                storage.findApples(storage.getAllApples(),new ApplePredicate() {
+                    public boolean test(Apple apple) {
+                        return apple.getWeight() < 150;
+                    }
+                });
+        assertEquals(lightWeightApples.size(), 4);
+    }
+
 }
