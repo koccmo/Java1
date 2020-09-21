@@ -5,4 +5,6 @@ import java.util.Set;
 public interface BookDatabase {
 
     Set<String> findUniqueAuthors();
+
+    Set<String> findUniqueTitles();
 }
