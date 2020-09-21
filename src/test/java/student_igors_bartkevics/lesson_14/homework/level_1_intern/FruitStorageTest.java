@@ -10,13 +10,13 @@ public class FruitStorageTest {
 
     @Test
     public void findGreenApplesTest() {
-        assertEquals(storage.findGreenApples(storage.getAllApples()).size(), 3);
+        assertEquals(storage.findApplesByColor(storage.getAllApples(), "green").size(), 3);
     }
 
     @Test
     public void findRedApplesTest() {
 
-        assertEquals(storage.findRedApples(storage.getAllApples()).size(), 3);
+        assertEquals(storage.findApplesByColor(storage.getAllApples(), "red").size(), 3);
     }
 
     @Test
