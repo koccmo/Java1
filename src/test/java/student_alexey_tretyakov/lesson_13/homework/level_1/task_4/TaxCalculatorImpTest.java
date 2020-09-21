@@ -1,4 +1,4 @@
-package student_alexey_tretyakov.lesson_13.homework.level_1.task_4;
+/*package student_alexey_tretyakov.lesson_13.homework.level_1.task_4;
 
 import org.junit.Test;
 import java.math.BigDecimal;
@@ -29,3 +29,5 @@ public class TaxCalculatorImpTest {
         assertEquals(taxToPay, new BigDecimal("5000.00"));
     }
 }
+
+ */
