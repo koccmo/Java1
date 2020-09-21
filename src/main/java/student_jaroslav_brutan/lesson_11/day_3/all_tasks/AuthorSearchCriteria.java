@@ -8,6 +8,7 @@ public class AuthorSearchCriteria implements SearchCriteria{
         this.authorToSearch = authorToSearch;
     }
 
+
     @Override
     public boolean match(Book book){
         if (book.getAuthor().equals(authorToSearch)){
