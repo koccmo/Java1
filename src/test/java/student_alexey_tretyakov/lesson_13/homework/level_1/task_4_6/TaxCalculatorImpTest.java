@@ -1,4 +1,4 @@
-/*package student_alexey_tretyakov.lesson_13.homework.level_1.task_4;
+package student_alexey_tretyakov.lesson_13.homework.level_1.task_4_6;
 
 import org.junit.Test;
 import java.math.BigDecimal;
@@ -28,6 +28,11 @@ public class TaxCalculatorImpTest {
         var taxToPay = taxCalculator.calculateTax(income);
         assertEquals(taxToPay, new BigDecimal("5000.00"));
     }
-}
 
- */
+    @Test
+    public void shouldPay25PercentTaxWhenIncomeMoreThen20000() {
+        var income = new BigDecimal(30000);
+        var taxToPay = taxCalculator.calculateTax(income);
+        assertEquals(taxToPay, new BigDecimal("9000.00"));
+    }
+}
