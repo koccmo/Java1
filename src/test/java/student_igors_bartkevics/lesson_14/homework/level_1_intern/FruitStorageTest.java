@@ -20,10 +20,17 @@ public class FruitStorageTest {
     }
 
     @Test
-    public void findApplesByColorTest() {
+    public void findGreenApplesByColorTest() {
 
         assertEquals(storage.findApplesByColor(storage.getAllApples(), "yellow").size(), 2);
     }
+
+    @Test
+    public void findApplesByWeightTest() {
+
+        assertEquals(storage.findApplesByWeight(storage.getAllApples(), 150).size(), 4);
+    }
+
 
 
 }

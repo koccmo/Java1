@@ -28,4 +28,14 @@ class FruitStorage {
         return apples;
     }
 
+    public List<Apple> findApplesByWeight(List<Apple> inventory, int weight) {
+        List<Apple> apples = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (apple.getWeight() > weight) {
+                apples.add(apple);
+            }
+        }
+        return apples;
+    }
+
 }
