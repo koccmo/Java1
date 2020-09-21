@@ -9,8 +9,14 @@ public class FruitStorageTest {
     FruitStorage storage = new FruitStorage();
 
     @Test
-    public void getAllGreenApplesTest() {
-        assertEquals(storage.getAllGreenApples().size(), 3);
+    public void findGreenApplesTest() {
+        assertEquals(storage.findGreenApples(storage.getAllApples()).size(), 3);
+    }
+
+    @Test
+    public void findRedApplesTest() {
+
+        assertEquals(storage.findRedApples(storage.getAllApples()).size(), 3);
     }
 
 }
