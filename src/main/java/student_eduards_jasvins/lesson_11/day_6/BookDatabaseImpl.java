@@ -1,10 +1,8 @@
-package student_eduards_jasvins.lesson_11.day_2;
+package student_eduards_jasvins.lesson_11.day_6;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-class BookDatabaseImpl implements BookDatabase {
+public class BookDatabaseImpl implements BookDatabase {
 
     List<Book> books = new ArrayList<>();
     Long currentId = 0L;
@@ -94,6 +92,17 @@ class BookDatabaseImpl implements BookDatabase {
     }
 
     @Override
+    public List<Book> find(SearchCriteria searchCriteria) {
+        List<Book> bookFind = new ArrayList<>();
+        for (Book book : bookFind) {
+            if (searchCriteria.match(book)) {
+                bookFind.add(book);
+            }
+        }
+        return bookFind;
+    }
+
+    @Override
     public int countAllBooks() {
         return books.size();
     }
@@ -112,5 +121,50 @@ class BookDatabaseImpl implements BookDatabase {
         for (Book book : booksTitle) {
             delete(book);
         }
+    }
+
+    @Override
+    public Set<String> findUniqueAuthors() {
+        Set <String> findAuthors = new HashSet<>();
+        for (Book book : books) {
+            findAuthors.add(book.getAuthor());
+        }
+        return findAuthors;
+    }
+
+    @Override
+    public Set<String> findUniqueTitles() {
+        Set<String> findTitles = new HashSet<>();
+        for (Book book : books) {
+            findTitles.add(book.getTitle());
+
+        }
+        return findTitles;
+    }
+
+    @Override
+    public Set<Book> findUniqueBooks() { return new HashSet<>(books); }
+
+    @Override
+    public boolean contains(Book book) { return books.contains(book); }
+
+    @Override
+    public Map<String, List<Book>> getAuthorToBooksMap() {
+        Map<String, List<Book>> authorToBooksMap = new HashMap<>();
+        for (String author : findUniqueAuthors()) {
+            authorToBooksMap.put(author, find(new AuthorSearchCriteria(author)));
+        }
+        return  authorToBooksMap;
+    }
+
+    @Override
+    public Map<String, Integer> getEachAuthorBookCount() {
+        Map<String, Integer> eachAuthorBookCount = new HashMap<>();
+        for (String author : findUniqueAuthors()) {
+            List<Book> bookAuthor = findByAuthor(author);
+            Set<Book> uniqueBook = new HashSet<>(bookAuthor);
+            eachAuthorBookCount.put(author, uniqueBook.size());
+        }
+        return eachAuthorBookCount;
     }
 }

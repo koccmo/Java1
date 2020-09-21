@@ -1,4 +1,4 @@
-package student_alexey_tretyakov.lesson_13.homework.level_1.task_4;
+package student_alexey_tretyakov.lesson_13.homework.level_1.task_4_6;
 
 
 import java.math.BigDecimal;

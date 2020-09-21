@@ -1,4 +1,4 @@
-package student_eduards_jasvins.lesson_11.day_2;
+package student_eduards_jasvins.lesson_11.day_3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,6 +94,17 @@ class BookDatabaseImpl implements BookDatabase {
     }
 
     @Override
+    public List<Book> find(SearchCriteria searchCriteria) {
+        List<Book> bookFind = new ArrayList<>();
+        for (Book book : bookFind) {
+            if (searchCriteria.match(book)) {
+                bookFind.add(book);
+            }
+        }
+        return bookFind;
+    }
+
+    @Override
     public int countAllBooks() {
         return books.size();
     }
@@ -113,4 +124,6 @@ class BookDatabaseImpl implements BookDatabase {
             delete(book);
         }
     }
+
+
 }

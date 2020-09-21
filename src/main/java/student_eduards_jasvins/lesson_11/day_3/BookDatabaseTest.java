@@ -1,4 +1,4 @@
-package student_eduards_jasvins.lesson_11.day_2;
+package student_eduards_jasvins.lesson_11.day_3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +15,7 @@ public class BookDatabaseTest {
         test.countAllBook();
         test.deleteByAuthor();
         test.deleteByTitle();
+        test.findBook();
 
     }
 
@@ -130,5 +131,23 @@ public class BookDatabaseTest {
         bookDatabase.deleteByTitle("YAAAY!");
         boolean condition = bookDatabase.findByTitle("YAAAY!").equals(bookTitle);
         checkResult("Delete By Title Test ", condition);
+    }
+
+    void findBook() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        List <Book> find = new ArrayList<>();
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.save(book4);
+        find.add(book3);
+
+        SearchCriteria author = new AuthorSearchCriteria("Eduards Z.");
+        SearchCriteria title = new TitleSearchCriteria("YAAAAAY!");
+        SearchCriteria search = new AndSearchCriteria(author, title);
+
+        boolean condition = bookDatabase.find(search).equals(find);
+        checkResult("Find book Test ", condition);
+
     }
 }
