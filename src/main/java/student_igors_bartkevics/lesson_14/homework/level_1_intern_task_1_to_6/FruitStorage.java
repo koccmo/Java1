@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_14.homework.level_1_intern;
+package student_igors_bartkevics.lesson_14.homework.level_1_intern_task_1_to_6;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,30 +18,20 @@ class FruitStorage {
         return apples;
     }
 
-    public List<Apple> findGreenApples(List<Apple> inventory) {
-        List<Apple> greenApples = new ArrayList<>();
-        for (Apple apple : inventory) {
-            if (apple.getColor().equals("green")) {
-                greenApples.add(apple);
-            }
-        }
-        return greenApples;
-    }
-
-    public List<Apple> findRedApples(List<Apple> inventory) {
-        List<Apple> redApples = new ArrayList<>();
-        for (Apple apple : inventory) {
-            if (apple.getColor().equals("red")) {
-                redApples.add(apple);
-            }
-        }
-        return redApples;
-    }
-
     public List<Apple> findApplesByColor(List<Apple> inventory, String color) {
         List<Apple> apples = new ArrayList<>();
         for (Apple apple : inventory) {
             if (apple.getColor().equals(color)) {
+                apples.add(apple);
+            }
+        }
+        return apples;
+    }
+
+    public List<Apple> findApplesByWeight(List<Apple> inventory, int weight) {
+        List<Apple> apples = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (apple.getWeight() > weight) {
                 apples.add(apple);
             }
         }
