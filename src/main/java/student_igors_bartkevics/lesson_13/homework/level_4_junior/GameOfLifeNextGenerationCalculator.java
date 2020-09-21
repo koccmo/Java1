@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_13.homework.level_3_junior;
+package student_igors_bartkevics.lesson_13.homework.level_4_junior;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,11 +21,11 @@ class GameOfLifeNextGenerationCalculator {
                 else if (liveNeighbourCellCount > 3) {
                     nextGeneration[i][j] = false;
                 }
-
+                //rule4: any dead cell with 3 live neighbours becomes alive in next generation
                 else if (liveNeighbourCellCount == 3) {
                     nextGeneration[i][j] = true;
                 }
-
+                //rule3: any live cell with 2 or 3 live neighbours stays alive in next generation
                 else nextGeneration[i][j] = currentGeneration[i][j];
             }
 

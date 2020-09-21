@@ -1,4 +1,4 @@
-package student_eduards_jasvins.lesson_11.day_2;
+package student_eduards_jasvins.lesson_11.day_3;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,6 +16,8 @@ interface BookDatabase {
     List<Book> findByAuthor(String author);
 
     List<Book> findByTitle(String title);
+
+    List<Book> find(SearchCriteria searchCriteria);
 
     int countAllBooks();
 
