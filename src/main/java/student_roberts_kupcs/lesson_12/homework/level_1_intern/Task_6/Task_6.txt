@@ -1,0 +1,7 @@
+Воспользуйтесь документацией Java (javadoc)
+и найдите информацию о иерархии наследования класса java.lang.RuntimeException.
+
+RuntimeException => AritmeticException => ClassCastException
+ => IllegalArgumentException => IllegalStateException
+  => IndexOutOfBoundsException => NoSuchElementException
+   => NullPointerException
