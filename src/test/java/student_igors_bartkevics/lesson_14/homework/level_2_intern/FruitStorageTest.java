@@ -26,16 +26,23 @@ public class FruitStorageTest {
 
     @Test
     public void heavyWeightPredicateTest() {
-        List<Apple> redApples =
+        List<Apple> heavyApples =
                 storage.findApples(storage.getAllApples(),new AppleHeavyWeightPredicate());
-        assertEquals(redApples.size(), 4);
+        assertEquals(heavyApples.size(), 4);
     }
 
     @Test
-    public void heavyLightWeightPredicateTest() {
-        List<Apple> redApples =
+    public void lightWeightPredicateTest() {
+        List<Apple> lightApples =
                 storage.findApples(storage.getAllApples(),new AppleLightWeightPredicate());
-        assertEquals(redApples.size(), 4);
+        assertEquals(lightApples.size(), 4);
+    }
+
+    @Test
+    public void heavyWeightGreenApplePredicateTest() {
+        List<Apple> heavyWeightGreenApples =
+                storage.findApples(storage.getAllApples(),new AppleHeavyWeightGreenPredicate());
+        assertEquals(heavyWeightGreenApples.size(), 1);
     }
 
 }
