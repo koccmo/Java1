@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_14.homework.level_1_intern;
+package student_igors_bartkevics.lesson_14.homework.level_1_intern_task_1_to_6;
 
 import org.junit.Test;
 
