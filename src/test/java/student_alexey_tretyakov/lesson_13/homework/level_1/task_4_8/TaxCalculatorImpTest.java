@@ -1,4 +1,4 @@
-package student_alexey_tretyakov.lesson_13.homework.level_1.task_4_6;
+package student_alexey_tretyakov.lesson_13.homework.level_1.task_4_8;
 
 import org.junit.Test;
 import java.math.BigDecimal;
@@ -30,7 +30,7 @@ public class TaxCalculatorImpTest {
     }
 
     @Test
-    public void shouldPay25PercentTaxWhenIncomeMoreThen20000() {
+    public void shouldPay40PercentTaxWhenIncomeBiggerThen20000() {
         var income = new BigDecimal(30000);
         var taxToPay = taxCalculator.calculateTax(income);
         assertEquals(taxToPay, new BigDecimal("9000.00"));
