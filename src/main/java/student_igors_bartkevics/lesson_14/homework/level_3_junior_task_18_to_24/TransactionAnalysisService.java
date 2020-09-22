@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_14.homework.level_3_junior;
+package student_igors_bartkevics.lesson_14.homework.level_3_junior_task_18_to_24;
 
 import java.util.Comparator;
 import java.util.List;
