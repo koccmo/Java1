@@ -27,5 +27,9 @@ public class BookDatabaseImpl implements BookDatabase {
         } return setOfTitles;
     }
 
+	@Override
+	public Set<Book> findUniqueBooks() {
+		return null;
+	}
 
 }
