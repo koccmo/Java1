@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class FruitStreamApi {
 
@@ -24,12 +24,60 @@ public class FruitStreamApi {
 	}
 
 	public List<Fruit> findAllApples() {
-		Stream<Fruit> fruitStream = fruits.stream();
+		Predicate<Fruit> applePredicate =
+				fruit -> "apple".equals(fruit.getTitle());
+
+		Predicate<Fruit> applePredicate2 = new Predicate<Fruit>() {
+			@Override
+			public boolean test(Fruit fruit) {
+				return "apple".equals(fruit.getTitle());
+			}
+		};
+
 
 		return fruits.stream()
 				.filter(fruit -> "apple".equals(fruit.getTitle()))
 				.collect(Collectors.toList());
 	}
+
+	public List<Fruit> findAllApplesV2() {
+		return fruits.stream()
+				.filter(new Predicate<Fruit>() {
+					@Override
+					public boolean test(Fruit fruit) {
+						return "apple".equals(fruit.getTitle());
+					}
+				})
+				.collect(Collectors.toList());
+	}
+
+	public List<Fruit> findAllApplesV3() {
+		Predicate<Fruit> searchCriteria = new Predicate<Fruit>() {
+			@Override
+			public boolean test(Fruit fruit) {
+				return "apple".equals(fruit.getTitle());
+			}
+		};
+		return fruits.stream()
+				.filter(searchCriteria)
+				.collect(Collectors.toList());
+	}
+
+	class AppleSearchPredicate implements Predicate<Fruit> {
+		@Override
+		public boolean test(Fruit fruit) {
+			return "apple".equals(fruit.getTitle());
+		}
+	}
+
+	public List<Fruit> findAllApplesV4() {
+		return fruits.stream()
+				.filter(new AppleSearchPredicate())
+				.collect(Collectors.toList());
+	}
+
+
+
 
 	public List<Fruit> findRedApplesWithWeightBiggerThen100() {
 		return fruits.stream()
