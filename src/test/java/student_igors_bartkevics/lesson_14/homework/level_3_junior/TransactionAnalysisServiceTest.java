@@ -24,7 +24,11 @@ public class TransactionAnalysisServiceTest {
     public void findTransactionsByYearTest() {
         List<Transaction> allTransactionsOf2011Year =
                 service.findTransactionsByYear(allTransactions, 2011);
+        List<Transaction> allTransactionsOf2012Year =
+                service.findTransactionsByYear(allTransactions, 2012);
+
         assertEquals(2, allTransactionsOf2011Year.size());
+        assertEquals(4, allTransactionsOf2012Year.size());
 
     }
 
