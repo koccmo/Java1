@@ -36,4 +36,13 @@ public class BookDatabaseImpl implements BookDatabase {
 		return setOfBooks;
 	}
 
+	@Override
+    public boolean contains(Book book){
+        for (int i = 0;i < bookDatabase.size();i++){
+            if (book.equals(bookDatabase.get(i)));
+            return true;
+        }
+        return false;
+    }
+
 }
