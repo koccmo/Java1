@@ -1,5 +1,6 @@
 package student_igors_bartkevics.lesson_14.homework.level_3_junior;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,5 +17,13 @@ class TransactionAnalysisService {
                 .filter(transaction -> transaction.getYear() == year)
                 .collect(Collectors.toList());
     }
+
+    public List<Transaction> sortTransactionsByValue(List<Transaction> allTransactions) {
+
+        return allTransactions.stream()
+                .sorted(Comparator.comparingInt(Transaction::getValue))
+                .collect(Collectors.toList());
+    }
+
 
 }

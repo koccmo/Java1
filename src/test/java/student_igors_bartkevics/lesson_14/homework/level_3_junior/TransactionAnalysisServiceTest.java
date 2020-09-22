@@ -17,7 +17,6 @@ public class TransactionAnalysisServiceTest {
         List<Transaction> allTransactionsOf2011Year =
                 service.findAllTransactionsOf2011Year(allTransactions);
         assertEquals(2, allTransactionsOf2011Year.size());
-
     }
 
     @Test
@@ -29,7 +28,18 @@ public class TransactionAnalysisServiceTest {
 
         assertEquals(2, allTransactionsOf2011Year.size());
         assertEquals(4, allTransactionsOf2012Year.size());
+    }
 
+    @Test
+    public void sortTransactionsByValueTest() {
+        List<Transaction> sortedTransactions =
+                service.sortTransactionsByValue(allTransactions);
+        assertEquals(300, sortedTransactions.get(0).getValue());
+        assertEquals(400, sortedTransactions.get(1).getValue());
+        assertEquals(700, sortedTransactions.get(2).getValue());
+        assertEquals(710, sortedTransactions.get(3).getValue());
+        assertEquals(950, sortedTransactions.get(4).getValue());
+        assertEquals(1000, sortedTransactions.get(5).getValue());
     }
 
 }
