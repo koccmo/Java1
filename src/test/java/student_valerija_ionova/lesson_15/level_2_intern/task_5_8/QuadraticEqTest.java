@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_15.level_2_intern.task_5;
+package student_valerija_ionova.lesson_15.level_2_intern.task_5_8;
 
 import org.junit.Test;
 
