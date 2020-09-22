@@ -42,4 +42,16 @@ public class TransactionAnalysisServiceTest {
         assertEquals(1000, sortedTransactions.get(5).getValue());
     }
 
+    @Test
+    public void sortTransactionsByValueInReverseTest() {
+        List<Transaction> sortedTransactions =
+                service.sortTransactionsByValueInReverse(allTransactions);
+        assertEquals(1000, sortedTransactions.get(0).getValue());
+        assertEquals(950, sortedTransactions.get(1).getValue());
+        assertEquals(710, sortedTransactions.get(2).getValue());
+        assertEquals(700, sortedTransactions.get(3).getValue());
+        assertEquals(400, sortedTransactions.get(4).getValue());
+        assertEquals(300, sortedTransactions.get(5).getValue());
+    }
+
 }

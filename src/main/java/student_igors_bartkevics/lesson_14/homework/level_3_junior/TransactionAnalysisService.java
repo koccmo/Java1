@@ -25,5 +25,12 @@ class TransactionAnalysisService {
                 .collect(Collectors.toList());
     }
 
+    public List<Transaction> sortTransactionsByValueInReverse(List<Transaction> allTransactions) {
+
+        return allTransactions.stream()
+                .sorted(((o1, o2) -> - Integer.compare(o1.getValue(), o2.getValue())))
+                .collect(Collectors.toList());
+    }
+
 
 }
