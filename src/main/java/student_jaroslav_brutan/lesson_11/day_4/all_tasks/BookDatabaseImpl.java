@@ -29,7 +29,11 @@ public class BookDatabaseImpl implements BookDatabase {
 
 	@Override
 	public Set<Book> findUniqueBooks() {
-		return null;
+		Set<Book> setOfBooks = new HashSet<>();
+		for (int i = 0; i < bookDatabase.size();i++){
+		    setOfBooks.add(bookDatabase.get(i));
+        }
+		return setOfBooks;
 	}
 
 }
