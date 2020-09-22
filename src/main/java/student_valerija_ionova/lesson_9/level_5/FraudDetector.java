@@ -27,8 +27,8 @@ import teacher.codereview.CodeReviewComment;
 @CodeReview(approved = true)
 class FraudDetector{
 
-	@CodeReviewComment(teacher = "private field?")
-    ArrayList <FraudRule> fraudRules;
+
+    private ArrayList <FraudRule> fraudRules;
 
     FraudDetector (FraudRule ... fraudRules){
         this.fraudRules = new ArrayList<>(Arrays.asList(fraudRules));
