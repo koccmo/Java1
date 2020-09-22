@@ -31,8 +31,3 @@ class FruitStorage {
 
 }
 
-//List<Apple> redApples = filterApples(..., new ApplePredicate() {
-//    public boolean test(Apple apple) {
-//        return "red".equals(apple.getColor());
-//    }
-//});
