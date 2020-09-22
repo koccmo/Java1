@@ -21,6 +21,14 @@ class PearsSearchCriteria implements FruitSearchCriteria {
 	}
 }
 
+class TomatosSearchCriteria implements FruitSearchCriteria {
+	@Override
+	public boolean test(Fruit fruit) {
+		return "tomato".equals(fruit.getTitle());
+	}
+}
+
+
 class RedTomatosSearchCriteria implements FruitSearchCriteria {
 	@Override
 	public boolean test(Fruit fruit) {

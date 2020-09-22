@@ -19,26 +19,29 @@ public class FruitStore {
 		return fruits;
 	}
 
-	// Требование 1: отобрать все яблоки
-	public List<Fruit> getAllApples() {
-		List<Fruit> apples = new ArrayList<>();
+	public List<Fruit> findFruits(String fruitTitle) {
+		List<Fruit> found = new ArrayList<>();
 		for (Fruit fruit : fruits) {
-			if ("apple".equals(fruit.getTitle())) {
-				apples.add(fruit);
+			if (fruitTitle.equals(fruit.getTitle())) {
+				found.add(fruit);
 			}
 		}
-		return apples;
+		return found;
+	}
+
+	// Требование 1: отобрать все яблоки
+	public List<Fruit> getAllApples() {
+		return findFruits("apple");
 	}
 
 	// Требование 2: отобрать все груши
 	public List<Fruit> getAllPears() {
-		List<Fruit> pears = new ArrayList<>();
-		for (Fruit fruit : fruits) {
-			if ("pear".equals(fruit.getTitle())) {
-				pears.add(fruit);
-			}
-		}
-		return pears;
+		return findFruits("pear");
+	}
+
+	// Требование 3: отобрать все помидоры
+	public List<Fruit> getAllTomatos() {
+		return findFruits("tomato");
 	}
 
 	// Требование 3: отобрать все помидоры
@@ -78,7 +81,22 @@ public class FruitStore {
 	}
 
 	// Требование 6: красные помидоры > 100
-	public List<Fruit> findFruitsBySearchCriteria(FruitSearchCriteria fruitSearchCriteria) {
+
+	public List<Fruit> findFruitsByTitleAndColorAndWeight(String fruitTitle,
+														  String fruitColor,
+														  int weight) {
+		List<Fruit> foundFruits = new ArrayList<>();
+		for (Fruit fruit : fruits) {
+			if (fruitTitle.equals(fruit.getTitle())
+					&& fruitColor.equals(fruit.getColor())
+					&& weight == fruit.getWeight()) {
+				foundFruits.add(fruit);
+			}
+		}
+		return foundFruits;
+	}
+
+	public List<Fruit> findFruits(FruitSearchCriteria fruitSearchCriteria) {
 		List<Fruit> foundFruits = new ArrayList<>();
 		for (Fruit fruit : fruits) {
 			if (fruitSearchCriteria.test(fruit)) {
