@@ -103,5 +103,12 @@ public class StorageTest {
         assertEquals(3, storage.totalMP3("mp3"));
     }
 
+    @Test
+    public void testTotalCountMP3AddedMP3(){
+        File fileNew = new File("File35.mp3", 15);
+        directory2.addResource(fileNew);
+        assertEquals(4, storage.totalMP3("mp3"));
+    }
+
 
 }
