@@ -7,7 +7,13 @@ class TransactionAnalysisService {
 
     public List<Transaction> findAllTransactionsOf2011Year(List<Transaction> allTransactions) {
         return allTransactions.stream()
-                .filter(transaction -> transaction.getYear() == 2011)
+                .filter(transaction -> transaction.getYear() == 2001)
+                .collect(Collectors.toList());
+    }
+
+    public List<Transaction> findTransactionsByYear(List<Transaction> allTransactions, int year) {
+        return allTransactions.stream()
+                .filter(transaction -> transaction.getYear() == year)
                 .collect(Collectors.toList());
     }
 
