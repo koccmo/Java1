@@ -83,4 +83,15 @@ public class TransactionAnalysisServiceTest {
         assertTrue(uniqueYearsOfTransactions.contains(2012));
     }
 
+    @Test
+    public void findUniqueNamesOfTradersTest() {
+        Set<String> uniqueNamesOfTraders =
+                service.findUniqueNamesOfTraders(allTransactions);
+        assertEquals(4, uniqueNamesOfTraders.size());
+        assertTrue(uniqueNamesOfTraders.contains("Raoul"));
+        assertTrue(uniqueNamesOfTraders.contains("Mario"));
+        assertTrue(uniqueNamesOfTraders.contains("Alan"));
+        assertTrue(uniqueNamesOfTraders.contains("Brian"));
+    }
+
 }
