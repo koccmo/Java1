@@ -9,4 +9,6 @@ public interface BookDatabase {
     Set<String> findUniqueTitles();
 
     Set<Book> findUniqueBooks();
+
+    boolean contains(Book book);
 }
