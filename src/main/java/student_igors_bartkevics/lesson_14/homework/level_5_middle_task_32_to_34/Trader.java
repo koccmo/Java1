@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_14.homework.level_5_middle;
+package student_igors_bartkevics.lesson_14.homework.level_5_middle_task_32_to_34;
 
 class Trader {
     private String name;
