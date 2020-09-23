@@ -142,4 +142,9 @@ public class TransactionAnalysisServiceTest {
         assertEquals(Optional.of(1000), service.maxValueOfTransactions(allTransactions));
     }
 
+    @Test
+    public void minValueOfTransactionsTest() {
+        assertEquals(Optional.of(300), service.minValueOfTransactions(allTransactions));
+    }
+
 }

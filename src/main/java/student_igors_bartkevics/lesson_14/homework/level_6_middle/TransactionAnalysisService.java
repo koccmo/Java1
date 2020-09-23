@@ -101,6 +101,13 @@ class TransactionAnalysisService {
                 .max(Comparator.comparingInt(Integer::intValue));
     }
 
+    public Optional<Integer> minValueOfTransactions(List<Transaction> allTransactions) {
+        return allTransactions.stream()
+                .map(Transaction::getValue)
+                .min(Comparator.comparingInt(Integer::intValue));
+    }
+
+
 
     public static void main(String[] args) {
         TransactionTestData testData = new TransactionTestData();
