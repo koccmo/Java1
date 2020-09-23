@@ -2,6 +2,7 @@ package student_igors_bartkevics.lesson_14.homework.level_4_junior;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 class TransactionAnalysisService {
@@ -46,4 +47,9 @@ class TransactionAnalysisService {
                 .collect(Collectors.toList());
     }
 
+    public Set<Integer> findUniqueYearsOfTransactions(List<Transaction> allTransactions) {
+        return allTransactions.stream()
+                .map(Transaction::getYear)
+                .collect(Collectors.toSet());
+    }
 }

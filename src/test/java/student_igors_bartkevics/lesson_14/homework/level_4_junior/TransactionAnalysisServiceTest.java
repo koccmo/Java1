@@ -3,6 +3,7 @@ package student_igors_bartkevics.lesson_14.homework.level_4_junior;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -71,6 +72,15 @@ public class TransactionAnalysisServiceTest {
         assertEquals(6, yearsOfTransactions.size());
         assertTrue(yearsOfTransactions.contains(2011));
         assertTrue(yearsOfTransactions.contains(2012));
+    }
+
+    @Test
+    public void findUniqueYearsOfTransactionsTest() {
+        Set<Integer> uniqueYearsOfTransactions =
+                service.findUniqueYearsOfTransactions(allTransactions);
+        assertEquals(2, uniqueYearsOfTransactions.size());
+        assertTrue(uniqueYearsOfTransactions.contains(2011));
+        assertTrue(uniqueYearsOfTransactions.contains(2012));
     }
 
 }
