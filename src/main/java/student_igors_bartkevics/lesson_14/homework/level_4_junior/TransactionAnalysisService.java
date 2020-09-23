@@ -9,7 +9,7 @@ class TransactionAnalysisService {
 
     public List<Transaction> findAllTransactionsOf2011Year(List<Transaction> allTransactions) {
         return allTransactions.stream()
-                .filter(transaction -> transaction.getYear() == 2001)
+                .filter(transaction -> transaction.getYear() == 2011)
                 .collect(Collectors.toList());
     }
 
@@ -60,5 +60,11 @@ class TransactionAnalysisService {
                 .collect(Collectors.toSet());
     }
 
+    public Set<String> findUniqueCitiesOfTraders(List<Transaction> allTransactions) {
+        return allTransactions.stream()
+                .map(Transaction::getTrader)
+                .map(Trader::getCity)
+                .collect(Collectors.toSet());
+    }
 
 }

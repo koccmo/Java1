@@ -94,4 +94,13 @@ public class TransactionAnalysisServiceTest {
         assertTrue(uniqueNamesOfTraders.contains("Brian"));
     }
 
+    @Test
+    public void findUniqueCitiesOfTradersTest() {
+        Set<String> uniqueCitiesOfTraders =
+                service.findUniqueCitiesOfTraders(allTransactions);
+        assertEquals(2, uniqueCitiesOfTraders.size());
+        assertTrue(uniqueCitiesOfTraders.contains("Cambridge"));
+        assertTrue(uniqueCitiesOfTraders.contains("Milan"));
+    }
+
 }
