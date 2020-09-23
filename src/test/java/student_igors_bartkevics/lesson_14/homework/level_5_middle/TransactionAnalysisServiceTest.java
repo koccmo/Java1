@@ -5,8 +5,7 @@ import org.junit.Test;
 import java.util.List;
 import java.util.Set;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class TransactionAnalysisServiceTest {
 
@@ -130,5 +129,11 @@ public class TransactionAnalysisServiceTest {
         assertTrue(result);
     }
 
+    @Test
+    public void isAnyTraderOfTransactionsBasedInCityTest() {
+        assertTrue(service.isAnyTraderOfTransactionsBasedInCity(allTransactions, "Milan"));
+        assertTrue(service.isAnyTraderOfTransactionsBasedInCity(allTransactions, "Cambridge"));
+        assertFalse(service.isAnyTraderOfTransactionsBasedInCity(allTransactions, "London"));
+    }
 
 }

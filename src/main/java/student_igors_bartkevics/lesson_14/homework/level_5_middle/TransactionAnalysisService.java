@@ -89,4 +89,9 @@ class TransactionAnalysisService {
                 .anyMatch(transaction -> transaction.getTrader().getCity().equals("Milan"));
     }
 
+    public boolean isAnyTraderOfTransactionsBasedInCity(List<Transaction> allTransactions, String city) {
+        return allTransactions.stream()
+                .anyMatch(transaction -> transaction.getTrader().getCity().equals(city));
+    }
+
 }
