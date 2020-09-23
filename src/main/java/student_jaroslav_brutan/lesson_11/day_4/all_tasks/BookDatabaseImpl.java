@@ -31,7 +31,8 @@ public class BookDatabaseImpl implements BookDatabase {
 	public Set<Book> findUniqueBooks() {
 		Set<Book> setOfBooks = new HashSet<>();
 		for (int i = 0; i < bookDatabase.size();i++){
-		    setOfBooks.add(bookDatabase.get(i));
+		    Book book = bookDatabase.get(i);
+		    setOfBooks.add(book);
         }
 		return setOfBooks;
 	}
