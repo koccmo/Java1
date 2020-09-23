@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_14.homework.level_4_junior;
+package student_igors_bartkevics.lesson_14.homework.level_4_junior_task_25_to_31;
 
 import org.junit.Test;
 
