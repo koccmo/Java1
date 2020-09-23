@@ -23,26 +23,27 @@ class TennisGameImpl implements  TennisGame{
 
     @Override
     public String score() {
-        if (scoreOfPlayer1 >4){
-            if (scoreOfPlayer1 - scoreOfPlayer2 >=2){
+        if (scoreOfPlayer1 > 4){
+            if (scoreOfPlayer1 - scoreOfPlayer2 >= 2){
                 return "Win " + player1;
             }
         }
         if (scoreOfPlayer2 >4){
-            if (scoreOfPlayer2 - scoreOfPlayer1 >=2){
+            if (scoreOfPlayer2 - scoreOfPlayer1 >= 2){
                 return "Win " + player2;
             }
         }
-        if ((scoreOfPlayer1 >= 3) && (scoreOfPlayer2>=3)){
+        if ((scoreOfPlayer1 >= 3) && (scoreOfPlayer2 >= 3)){
             if (scoreOfPlayer1 == scoreOfPlayer2) return "Deuce";
             if (scoreOfPlayer1 > scoreOfPlayer2) return "Advantage "+ player1;
             return "Advantage "+ player2;
         }else{
-            return scoreNumberToScoreString(scoreOfPlayer1)+"-"+scoreNumberToScoreString(scoreOfPlayer2);
+            return scoreNumberToScoreStringForSpecificPlayer(scoreOfPlayer1)+"-"
+                    +scoreNumberToScoreStringForSpecificPlayer(scoreOfPlayer2);
         }
     }
 
-    private String scoreNumberToScoreString (int number){
+    private String scoreNumberToScoreStringForSpecificPlayer (int number){
         if (number == 0) return "Love";
         if (number == 1) return "Fifteen";
         if (number == 2) return "Thirty";
