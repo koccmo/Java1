@@ -113,4 +113,14 @@ public class TransactionAnalysisServiceTest {
         assertTrue(uniqueNamesOfTradersFromCambridge.contains("Brian"));
     }
 
+    @Test
+    public void findUniqueNamesOfTradersByCityTest() {
+        Set<String> uniqueNamesOfTradersFromCambridge =
+                service.findUniqueNamesOfTradersByCity(allTransactions, "Cambridge");
+        assertEquals(3, uniqueNamesOfTradersFromCambridge.size());
+        assertTrue(uniqueNamesOfTradersFromCambridge.contains("Raoul"));
+        assertTrue(uniqueNamesOfTradersFromCambridge.contains("Alan"));
+        assertTrue(uniqueNamesOfTradersFromCambridge.contains("Brian"));
+    }
+
 }
