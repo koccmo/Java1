@@ -1,6 +1,6 @@
-package student_valerija_ionova.lesson_15.level_3_junior.task_10;
+package student_valerija_ionova.lesson_15.level_4.task_12;
 
-class TennisGameImpl implements  TennisGame{
+class TennisGameImpl implements TennisGame {
 
     private String player1;
     private String player2;
@@ -23,16 +23,17 @@ class TennisGameImpl implements  TennisGame{
 
     @Override
     public String score() {
-        if (scoreOfPlayer1 > 4){
+        if (scoreOfPlayer1 >= 4){
             if (scoreOfPlayer1 - scoreOfPlayer2 >= 2){
                 return "Win " + player1;
             }
         }
-        if (scoreOfPlayer2 >4){
+        if (scoreOfPlayer2 >=4){
             if (scoreOfPlayer2 - scoreOfPlayer1 >= 2){
                 return "Win " + player2;
             }
         }
+
         if ((scoreOfPlayer1 >= 3) && (scoreOfPlayer2 >= 3)){
             if (scoreOfPlayer1 == scoreOfPlayer2) return "Deuce";
             if (scoreOfPlayer1 > scoreOfPlayer2) return "Advantage "+ player1;
