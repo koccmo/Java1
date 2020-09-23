@@ -5,9 +5,18 @@ import student_jaroslav_brutan.lesson_11.day_5.all_tasks.Book;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 public interface BookDatabase {
+
+    Long save(Book book);
+
+    boolean delete(Long bookId);
+
+    boolean delete(Book book);
+
+    Optional<Book> findById(Long bookId);
 
     List<Book> findByAuthor(String author);
 
