@@ -10,7 +10,7 @@ import java.util.Set;
 
 public interface BookDatabase {
 
-    Long save(Book book);
+    Long save(student_jaroslav_brutan.lesson_11.day_6.all_tasks.Book book);
 
     boolean delete(Long bookId);
 
