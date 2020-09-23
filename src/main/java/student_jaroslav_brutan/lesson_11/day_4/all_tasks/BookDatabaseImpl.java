@@ -32,7 +32,7 @@ public class BookDatabaseImpl implements BookDatabase {
 		Set<Book> setOfBooks = new HashSet<>();
 		for (int i = 0; i < bookDatabase.size();i++){
 		    Book book = bookDatabase.get(i);
-		    setOfBooks.add(bookDatabase.get(i));
+		    setOfBooks.add(book);
         }
 		return setOfBooks;
 	}
