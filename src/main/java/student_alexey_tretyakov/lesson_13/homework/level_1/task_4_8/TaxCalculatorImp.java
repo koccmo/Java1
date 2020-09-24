@@ -7,6 +7,7 @@ public class TaxCalculatorImp implements TaxCalculator {
 
     @Override
     public BigDecimal calculateTax(BigDecimal income) {
+
         var taxBorder = new BigDecimal(20000);
         if( income.compareTo( taxBorder ) > 0)   {
             BigDecimal tax = income.subtract( taxBorder );
