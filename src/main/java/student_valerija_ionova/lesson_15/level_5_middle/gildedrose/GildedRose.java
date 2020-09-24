@@ -13,57 +13,19 @@ class GildedRose {
 
 	Item updateParametersOfItem (Item itemToUpdate){
 
-			if ((!"Aged Brie".equals(itemToUpdate.getName())) && !"Backstage passes to a TAFKAL80ETC concert".equals(itemToUpdate.getName())) {
-				if (itemToUpdate.getQuality() > 0) {
-					if (!"Sulfuras, Hand of Ragnaros".equals(itemToUpdate.getName())) {
-						itemToUpdate.setQuality(itemToUpdate.getQuality() - 1);
-					}
-				}
-			}
-			else {
-				if (itemToUpdate.getQuality() < 50) {
-					itemToUpdate.setQuality(itemToUpdate.getQuality() + 1);
+		if (itemToUpdate.getName().equals("Aged Brie")) {
+			return new AgedBrieItem().itemParametersNextDay(itemToUpdate);
+		}
+		if (itemToUpdate.getName().equals("Backstage passes to a TAFKAL80ETC concert")) {
+			return new Backstage().itemParametersNextDay(itemToUpdate);
+		}
+		if (itemToUpdate.getName().equals("Sulfuras, Hand of Ragnaros")) {
+			return new SulfurasItem().itemParametersNextDay(itemToUpdate);
+		}
+		if (itemToUpdate.getName().equals("Conjured Mana Cake")) {
+			return new ConjuredItem().itemParametersNextDay(itemToUpdate);
+		}
+		return new TypicalItem().itemParametersNextDay(itemToUpdate);
 
-					if ("Backstage passes to a TAFKAL80ETC concert".equals(itemToUpdate.getName())) {
-						if (itemToUpdate.getSellIn() < 11) {
-							if (itemToUpdate.getQuality() < 50) {
-								itemToUpdate.setQuality(itemToUpdate.getQuality() + 1);
-							}
-						}
-
-						if (itemToUpdate.getSellIn() < 6) {
-							if (itemToUpdate.getQuality() < 50) {
-								itemToUpdate.setQuality(itemToUpdate.getQuality() + 1);
-							}
-						}
-					}
-				}
-			}
-
-			if (!"Sulfuras, Hand of Ragnaros".equals(itemToUpdate.getName())) {
-				itemToUpdate.setSellIn(itemToUpdate.getSellIn() - 1);
-			}
-
-			if (itemToUpdate.getSellIn() < 0) {
-				if (!"Aged Brie".equals(itemToUpdate.getName())) {
-					if (!"Backstage passes to a TAFKAL80ETC concert".equals(itemToUpdate.getName())) {
-						if (itemToUpdate.getQuality() > 0) {
-							if (!"Sulfuras, Hand of Ragnaros".equals(itemToUpdate.getName())) {
-								itemToUpdate.setQuality(itemToUpdate.getQuality() - 1);
-							}
-						}
-					}
-					else {
-						itemToUpdate.setQuality(itemToUpdate.getQuality() - itemToUpdate.getQuality());
-					}
-				}
-				else {
-					if (itemToUpdate.getQuality() < 50) {
-						itemToUpdate.setQuality(itemToUpdate.getQuality() + 1);
-					}
-				}
-			}
-		return itemToUpdate;
 	}
-
 }
