@@ -107,14 +107,14 @@ class TransactionAnalysisService {
                 .min(Comparator.comparingInt(Integer::intValue));
     }
 
-
-
-    public static void main(String[] args) {
-        TransactionTestData testData = new TransactionTestData();
-        List<Transaction> allTransactions = testData.getTransactions();
-        TransactionAnalysisService service = new TransactionAnalysisService();
-        Integer result = service.maxValueOfTransactions(allTransactions).get();
-        boolean res = result == 1000;
-        System.out.println(res);
+    public String findAllTraders(List<Transaction> allTransactions) {
+        return allTransactions.stream()
+                .map(Transaction::getTrader)
+                .map(Trader::getName)
+                .distinct()
+                .sorted(String::compareTo)
+                .collect(Collectors.joining(","));
     }
+
+
 }

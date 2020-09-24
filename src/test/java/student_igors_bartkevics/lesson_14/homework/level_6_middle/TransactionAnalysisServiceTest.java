@@ -147,4 +147,11 @@ public class TransactionAnalysisServiceTest {
         assertEquals(Optional.of(300), service.minValueOfTransactions(allTransactions));
     }
 
+    @Test
+    public void findAllTradersTest() {
+        String result = service.findAllTraders(allTransactions);
+        String expectedResult = "Alan,Brian,Mario,Raoul";
+        assertEquals(expectedResult, result);
+    }
+
 }
