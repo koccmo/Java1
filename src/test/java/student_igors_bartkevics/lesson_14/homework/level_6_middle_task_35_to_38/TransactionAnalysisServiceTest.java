@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_14.homework.level_6_middle;
+package student_igors_bartkevics.lesson_14.homework.level_6_middle_task_35_to_38;
 
 import org.junit.Test;
 
@@ -85,7 +85,7 @@ public class TransactionAnalysisServiceTest {
 
     @Test
     public void findUniqueNamesOfTradersTest() {
-        Set<String> uniqueNamesOfTraders =
+        List<String> uniqueNamesOfTraders =
                 service.findUniqueNamesOfTraders(allTransactions);
         assertEquals(4, uniqueNamesOfTraders.size());
         assertTrue(uniqueNamesOfTraders.contains("Raoul"));
@@ -148,10 +148,23 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void findAllTradersTest() {
-        String result = service.findAllTraders(allTransactions);
+    public void getStringOfAllTradersSortedAndSplitByCommaTest() {
+        String result = service.getStringOfAllTradersSortedAndSplitByComma(allTransactions);
         String expectedResult = "Alan,Brian,Mario,Raoul";
         assertEquals(expectedResult, result);
     }
 
+    @Test
+    public void getStringOfAllTradersSortedAndSplitByCommaVer2Test() {
+        String result = service.getStringOfAllTradersSortedAndSplitByCommaVer2(allTransactions);
+        String expectedResult = "Alan,Brian,Mario,Raoul";
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void getStringOfAllCitiesOfTradersSortedAndSplitByCommaTest() {
+        String result = service.getStringOfAllCitiesOfTradersSortedAndSplitByComma(allTransactions);
+        String expectedResult = "Cambridge,Milan";
+        assertEquals(expectedResult, result);
+    }
 }

@@ -1,4 +1,4 @@
-package student_igors_bartkevics.lesson_14.homework.level_6_middle;
+package student_igors_bartkevics.lesson_14.homework.level_6_middle_task_35_to_38;
 
 import java.util.Comparator;
 import java.util.List;
@@ -54,11 +54,12 @@ class TransactionAnalysisService {
                 .collect(Collectors.toSet());
     }
 
-    public Set<String> findUniqueNamesOfTraders(List<Transaction> allTransactions) {
+    public List<String> findUniqueNamesOfTraders(List<Transaction> allTransactions) {
         return allTransactions.stream()
                 .map(Transaction::getTrader)
                 .map(Trader::getName)
-                .collect(Collectors.toSet());
+                .distinct()
+                .collect(Collectors.toList());
     }
 
     public Set<String> findUniqueCitiesOfTraders(List<Transaction> allTransactions) {
@@ -107,7 +108,7 @@ class TransactionAnalysisService {
                 .min(Comparator.comparingInt(Integer::intValue));
     }
 
-    public String findAllTraders(List<Transaction> allTransactions) {
+    public String getStringOfAllTradersSortedAndSplitByComma(List<Transaction> allTransactions) {
         return allTransactions.stream()
                 .map(Transaction::getTrader)
                 .map(Trader::getName)
@@ -116,5 +117,20 @@ class TransactionAnalysisService {
                 .collect(Collectors.joining(","));
     }
 
+    public String getStringOfAllTradersSortedAndSplitByCommaVer2(List<Transaction> allTransactions) {
+
+        List<String> uniqueNamesOfTraders = findUniqueNamesOfTraders(allTransactions);
+        return uniqueNamesOfTraders.stream()
+                .sorted(String::compareTo)
+                .collect(Collectors.joining(","));
+    }
+
+    public String getStringOfAllCitiesOfTradersSortedAndSplitByComma(List<Transaction> allTransactions) {
+
+        Set<String> uniqueCitiesOfTraders = findUniqueCitiesOfTraders(allTransactions);
+        return uniqueCitiesOfTraders.stream()
+                .sorted(String::compareTo)
+                .collect(Collectors.joining(","));
+    }
 
 }
