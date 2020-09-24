@@ -65,6 +65,17 @@ public class GildedRoseTest {
     }
 
     @Test
+    public void acceptanceTestAgedBrieDaySPassed(){
+        List<Item> items = new ArrayList<>();
+        items.add(new Item("Aged Brie", 0, 30));
+
+        GildedRose gildedRose = new GildedRose();
+        gildedRose.updateQuality(items);
+        assertEquals(-1, items.get(0).getSellIn());
+        assertEquals(32, items.get(0).getQuality());
+    }
+
+    @Test
     public void acceptanceTestElixirOfTheMongoose(){
         List<Item> items = new ArrayList<>();
         items.add(new Item("Elixir of the Mongoose", 5, 7));
