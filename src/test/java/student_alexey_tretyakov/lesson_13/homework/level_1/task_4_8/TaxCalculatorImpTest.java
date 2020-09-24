@@ -9,6 +9,13 @@ public class TaxCalculatorImpTest {
     private TaxCalculator taxCalculator = new TaxCalculatorImp();
 
     @Test
+    public void shouldPay25PercentTaxWhenIncomeLessThenZero() {
+        var income = new BigDecimal(- 2000);
+        var taxToPay = taxCalculator.calculateTax(income);
+        assertEquals(taxToPay, new BigDecimal("-500.00"));
+    }
+
+    @Test
     public void shouldPayZeroTaxWhenIncomeIsZero() {
         var income = BigDecimal.ZERO;
         var taxToPay = taxCalculator.calculateTax(income);

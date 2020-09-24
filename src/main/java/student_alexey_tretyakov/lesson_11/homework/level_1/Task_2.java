@@ -1,7 +1,8 @@
 package student_alexey_tretyakov.lesson_11.homework.level_1;
 
 /*Что может хранить java.util.List: примитивные типы данных или ссылки на объекты,
-или то и другое? Напишите программу, в которой кодом продемонстрируйте ответ на вопрос.*/
+или то и другое? Напишите программу, в которой кодом продемонстрируйте ответ на вопрос.
+*/
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ import teacher.codereview.CodeReviewComment;
 class Task_2 {
 
 	@CodeReviewComment(teacher = "Unused field, should be removed.")
-    private static List<Tvset> tvsets;
+   // private static List<Tvset> tvsets;
 
     static class Tvset {
         protected String brand;
