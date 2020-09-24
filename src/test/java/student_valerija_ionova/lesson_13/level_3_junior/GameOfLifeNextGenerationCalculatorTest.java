@@ -20,44 +20,44 @@ public class GameOfLifeNextGenerationCalculatorTest {
 
     @Test
     public void rule4TrueIfThreeAliveAround(){
-        boolean [][] newGenerationField;;
+        boolean [][] newGenerationField;
         newGenerationField = gameOfLifeNextGenerationCalculator.calculate(currentGeneration);
-        assertEquals(true, newGenerationField[4][0]);
+        assertTrue(newGenerationField[4][0]);
     }
 
     @Test
     public void rule3TrueIfTwoAliveAround(){
-        boolean [][] newGenerationField;;
+        boolean [][] newGenerationField;
         newGenerationField = gameOfLifeNextGenerationCalculator.calculate(currentGeneration);
-        assertEquals(true, newGenerationField[4][1]);
+        assertTrue(newGenerationField[4][1]);
     }
 
     @Test
     public void rule3TrueIfTThreeAliveAround(){
-        boolean [][] newGenerationField;;
+        boolean [][] newGenerationField;
         newGenerationField = gameOfLifeNextGenerationCalculator.calculate(currentGeneration);
-        assertEquals(true, newGenerationField[2][1]);
+        assertTrue(newGenerationField[2][1]);
     }
 
     @Test
     public void rule1FalseIfLessThanTwoAroundAreAlive1(){
         boolean [][] newGenerationField;
         newGenerationField = gameOfLifeNextGenerationCalculator.calculate(currentGeneration);
-        assertEquals(false, newGenerationField[1][3]);
+        assertFalse(newGenerationField[1][3]);
     }
 
     @Test
     public void rule1FalseIfLessThanTwoAroundAreAlive0(){
         boolean [][] newGenerationField;
         newGenerationField = gameOfLifeNextGenerationCalculator.calculate(currentGeneration);
-        assertEquals(false, newGenerationField[4][3]);
+        assertFalse(newGenerationField[4][3]);
     }
 
     @Test
     public void rule2FalseIfMoreThanThreeAroundAreAlive4(){
-        boolean [][] newGenerationField;;
+        boolean [][] newGenerationField;
         newGenerationField = gameOfLifeNextGenerationCalculator.calculate(currentGeneration);
-        assertEquals(false, newGenerationField[3][0]);
+        assertFalse(newGenerationField[3][0]);
     }
 
 
