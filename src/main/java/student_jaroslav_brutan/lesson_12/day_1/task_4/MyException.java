@@ -1,4 +1,4 @@
-package student_jaroslav_brutan.lesson_12.day_1;
+package student_jaroslav_brutan.lesson_12.day_1.task_4;
 
 public class MyException extends Exception{
 
