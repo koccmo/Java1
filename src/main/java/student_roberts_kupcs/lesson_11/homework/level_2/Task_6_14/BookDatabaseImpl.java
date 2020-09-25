@@ -5,13 +5,16 @@ import java.util.List;
 import java.util.Optional;
 
 class BookDatabaseImpl implements BookDatabase{
-    List<Book> books = new ArrayList<>();
-    long id = 0L;
+    private List<Book> books = new ArrayList<>();
+    private long id = 1L;
 
     //task_6
     @Override
     public Long save(Book book) {
         books.add(book);
+        Long bookId = id;
+        book.setId(bookId);
+        id++;
         return id;
     }
 
