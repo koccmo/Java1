@@ -1,7 +1,6 @@
 package student_anvars_intezars.home_tasks.lesson_11.level_1.task_4;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 class IntegerListDemo2 {
