@@ -39,7 +39,6 @@ class Customer {
 			double 		thisAmount = 0;
 			Rental 		each = (Rental)rentals.nextElement ();
 
-			// determines the amount for each line
 			switch (each.getMovie().getPriceCode ()) {
 			case Movie.REGULAR:
 				thisAmount += 2;
@@ -63,13 +62,13 @@ class Customer {
 				frequentRenterPoints++;
 
 			result += "\t" + each.getMovie().getTitle() + "\t"
-					+ String.valueOf (thisAmount) + "\n";
+					+ thisAmount + "\n";
 			totalAmount += thisAmount;
 
 		}
 
-		result += "You owed " + String.valueOf (totalAmount) + "\n";
-		result += "You earned " + String.valueOf (frequentRenterPoints) + " frequent renter points\n";
+		result += "You owed " + totalAmount + "\n";
+		result += "You earned " + frequentRenterPoints + " frequent renter points\n";
 
 
 		return result;
