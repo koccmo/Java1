@@ -15,8 +15,10 @@ public class CustomerTest {
         Rental rental = new Rental(movie1, 1);
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
-        assertTrue(customer1.statement().contains("You owed 2.0"));
-        assertTrue(customer1.statement().contains("You earned 1 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("You owed 2.0"));
+        assertTrue(result.contains("You earned 1 frequent renter points"));
     }
 
     @Test
@@ -24,8 +26,10 @@ public class CustomerTest {
         Rental rental = new Rental(movie1, 5);
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
-        assertTrue(customer1.statement().contains("You owed 6.5"));
-        assertTrue(customer1.statement().contains("You earned 1 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("You owed 6.5"));
+        assertTrue(result.contains("You earned 1 frequent renter points"));
     }
 
     @Test
@@ -33,9 +37,10 @@ public class CustomerTest {
         Rental rental = new Rental(movie2, 1);
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
-        System.out.println(customer1.statement());
-        assertTrue(customer1.statement().contains("You owed 3.0"));
-        assertTrue(customer1.statement().contains("You earned 1 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("You owed 3.0"));
+        assertTrue(result.contains("You earned 1 frequent renter points"));
     }
 
     @Test
@@ -43,8 +48,10 @@ public class CustomerTest {
         Rental rental = new Rental(movie2, 2);
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
-        assertTrue(customer1.statement().contains("You owed 6.0"));
-        assertTrue(customer1.statement().contains("You earned 2 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("You owed 6.0"));
+        assertTrue(result.contains("You earned 2 frequent renter points"));
     }
 
     @Test
@@ -52,8 +59,10 @@ public class CustomerTest {
         Rental rental = new Rental(movie3, 1);
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
-        assertTrue(customer1.statement().contains("You owed 1.5"));
-        assertTrue(customer1.statement().contains("You earned 1 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("You owed 1.5"));
+        assertTrue(result.contains("You earned 1 frequent renter points"));
     }
 
     @Test
@@ -61,8 +70,10 @@ public class CustomerTest {
         Rental rental = new Rental(movie3, 4);
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
-        assertTrue(customer1.statement().contains("You owed 3.0"));
-        assertTrue(customer1.statement().contains("You earned 1 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("You owed 3.0"));
+        assertTrue(result.contains("You earned 1 frequent renter points"));
     }
 
     @Test
@@ -72,8 +83,10 @@ public class CustomerTest {
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
         customer1.addRental(rental1);
-        assertTrue(customer1.statement().contains("You owed 3.5"));
-        assertTrue(customer1.statement().contains("You earned 2 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("You owed 3.5"));
+        assertTrue(result.contains("You earned 2 frequent renter points"));
     }
 
     @Test
@@ -83,9 +96,11 @@ public class CustomerTest {
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
         customer1.addRental(rental1);
-        assertTrue(customer1.statement().contains("Movie2\t3.0"));
-        assertTrue(customer1.statement().contains("Movie1\t2.0"));
-        assertTrue(customer1.statement().contains("You earned 2 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("Movie2\t3.0"));
+        assertTrue(result.contains("Movie1\t2.0"));
+        assertTrue(result.contains("You earned 2 frequent renter points"));
     }
 
     @Test
@@ -95,10 +110,11 @@ public class CustomerTest {
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
         customer1.addRental(rental1);
-        System.out.println(customer1.statement());
-        assertTrue(customer1.statement().contains("Movie2\t3.0"));
-        assertTrue(customer1.statement().contains("Movie3\t1.5"));
-        assertTrue(customer1.statement().contains("You earned 2 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("Movie2\t3.0"));
+        assertTrue(result.contains("Movie3\t1.5"));
+        assertTrue(result.contains("You earned 2 frequent renter points"));
     }
 
     @Test
@@ -108,8 +124,10 @@ public class CustomerTest {
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
         customer1.addRental(rental1);
-        assertTrue(customer1.statement().contains("You owed 8.0"));
-        assertTrue(customer1.statement().contains("You earned 2 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("You owed 8.0"));
+        assertTrue(result.contains("You earned 2 frequent renter points"));
     }
 
     @Test
@@ -119,9 +137,11 @@ public class CustomerTest {
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
         customer1.addRental(rental1);
-        assertTrue(customer1.statement().contains("Movie2\t15.0"));
-        assertTrue(customer1.statement().contains("Movie1\t6.5"));
-        assertTrue(customer1.statement().contains("You earned 3 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("Movie2\t15.0"));
+        assertTrue(result.contains("Movie1\t6.5"));
+        assertTrue(result.contains("You earned 3 frequent renter points"));
     }
 
     @Test
@@ -131,9 +151,11 @@ public class CustomerTest {
         Customer customer1 = new Customer("Bob");
         customer1.addRental(rental);
         customer1.addRental(rental1);
-        assertTrue(customer1.statement().contains("Movie2\t18.0"));
-        assertTrue(customer1.statement().contains("Movie3\t6.0"));
-        assertTrue(customer1.statement().contains("You earned 3 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("Movie2\t18.0"));
+        assertTrue(result.contains("Movie3\t6.0"));
+        assertTrue(result.contains("You earned 3 frequent renter points"));
     }
 
     @Test
@@ -145,11 +167,12 @@ public class CustomerTest {
         customer1.addRental(rental);
         customer1.addRental(rental1);
         customer1.addRental(rental2);
-        System.out.println(customer1.statement());
-        assertTrue(customer1.statement().contains("Movie2\t3.0"));
-        assertTrue(customer1.statement().contains("Movie3\t1.5"));
-        assertTrue(customer1.statement().contains("Movie1\t2.0"));
-        assertTrue(customer1.statement().contains("You earned 3 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("Movie2\t3.0"));
+        assertTrue(result.contains("Movie3\t1.5"));
+        assertTrue(result.contains("Movie1\t2.0"));
+        assertTrue(result.contains("You earned 3 frequent renter points"));
     }
 
     @Test
@@ -161,11 +184,12 @@ public class CustomerTest {
         customer1.addRental(rental);
         customer1.addRental(rental1);
         customer1.addRental(rental2);
-        System.out.println(customer1.statement());
-        assertTrue(customer1.statement().contains("Movie2\t30.0"));
-        assertTrue(customer1.statement().contains("Movie3\t12.0"));
-        assertTrue(customer1.statement().contains("Movie1\t14.0"));
-        assertTrue(customer1.statement().contains("You earned 4 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("Movie2\t30.0"));
+        assertTrue(result.contains("Movie3\t12.0"));
+        assertTrue(result.contains("Movie1\t14.0"));
+        assertTrue(result.contains("You earned 4 frequent renter points"));
     }
 
     @Test
@@ -177,11 +201,12 @@ public class CustomerTest {
         customer1.addRental(rental);
         customer1.addRental(rental1);
         customer1.addRental(rental2);
-        System.out.println(customer1.statement());
-        assertTrue(customer1.statement().contains("Movie2\t3.0"));
-        assertTrue(customer1.statement().contains("Movie3\t1.5"));
-        assertTrue(customer1.statement().contains("Movie1\t8.0"));
-        assertTrue(customer1.statement().contains("You earned 3 frequent renter points"));
+        RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation = new RentalPriceAndPointsCalculation();
+        String result = rentalPriceAndPointsCalculation.getPriceAndPoints(customer1);
+        assertTrue(result.contains("Movie2\t3.0"));
+        assertTrue(result.contains("Movie3\t1.5"));
+        assertTrue(result.contains("Movie1\t8.0"));
+        assertTrue(result.contains("You earned 3 frequent renter points"));
     }
 
 }
