@@ -29,6 +29,15 @@ class Customer {
 		return name;
 	}
 
+	Vector getRentals(){
+		return rentals;
+	}
+/*
+	public String calculatePriceAndPoints (RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation){
+
+	}*/
+
+
 	public String statement () {
 		double 				totalAmount 			= 0;
 		int					frequentRenterPoints 	= 0;
@@ -45,8 +54,11 @@ class Customer {
 				if (each.getDaysRented () > 2)
 					thisAmount += (each.getDaysRented () - 2) * 1.5;
 				break;
-			case Movie.NEW_RELEASE:
-				thisAmount += each.getDaysRented () * 3;
+			case Movie.NEW_RELEASE: {
+				thisAmount += each.getDaysRented() * 3;
+				if (each.getDaysRented () > 1)
+				frequentRenterPoints++;
+				}
 				break;
 			case Movie.CHILDREN:
 				thisAmount += 1.5;
@@ -54,12 +66,9 @@ class Customer {
 					thisAmount += (each.getDaysRented () - 3) * 1.5;
 				break;
 			}
-
 			frequentRenterPoints++;
 
-			if (each.getMovie ().getPriceCode () == Movie.NEW_RELEASE
-					&& each.getDaysRented () > 1)
-				frequentRenterPoints++;
+
 
 			result += "\t" + each.getMovie().getTitle() + "\t"
 					+ thisAmount + "\n";
