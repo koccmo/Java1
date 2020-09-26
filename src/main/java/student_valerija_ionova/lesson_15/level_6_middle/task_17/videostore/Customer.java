@@ -9,7 +9,6 @@ package student_valerija_ionova.lesson_15.level_6_middle.task_17.videostore;
 Шестое: убедитесь, что после рефакторинга все тесты по прежнему работают.
 */
 
-import java.util.Enumeration;
 import java.util.Vector;
 
 class Customer {
@@ -32,56 +31,5 @@ class Customer {
 	Vector getRentals(){
 		return rentals;
 	}
-/*
-	public String calculatePriceAndPoints (RentalPriceAndPointsCalculation rentalPriceAndPointsCalculation){
-
-	}*/
-
-
-	public String statement () {
-		double 				totalAmount 			= 0;
-		int					frequentRenterPoints 	= 0;
-		Enumeration 		rentals 				= this.rentals.elements();
-		String 				result 					= "Rental Record for " + getName () + "\n";
-
-		while (rentals.hasMoreElements ()) {
-			double 		thisAmount = 0;
-			Rental 		each = (Rental)rentals.nextElement ();
-
-			switch (each.getMovie().getPriceCode ()) {
-			case Movie.REGULAR:
-				thisAmount += 2;
-				if (each.getDaysRented () > 2)
-					thisAmount += (each.getDaysRented () - 2) * 1.5;
-				break;
-			case Movie.NEW_RELEASE: {
-				thisAmount += each.getDaysRented() * 3;
-				if (each.getDaysRented () > 1)
-				frequentRenterPoints++;
-				}
-				break;
-			case Movie.CHILDREN:
-				thisAmount += 1.5;
-				if (each.getDaysRented () > 3)
-					thisAmount += (each.getDaysRented () - 3) * 1.5;
-				break;
-			}
-			frequentRenterPoints++;
-
-
-
-			result += "\t" + each.getMovie().getTitle() + "\t"
-					+ thisAmount + "\n";
-			totalAmount += thisAmount;
-
-		}
-
-		result += "You owed " + totalAmount + "\n";
-		result += "You earned " + frequentRenterPoints + " frequent renter points\n";
-
-
-		return result;
-	}
-
 
 }
