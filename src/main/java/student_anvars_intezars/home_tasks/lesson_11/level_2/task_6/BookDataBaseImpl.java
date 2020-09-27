@@ -21,10 +21,9 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public boolean delete(Long bookID) {
-        if (books.contains(bookID)) {
-            books.remove(books.contains(bookID));
+        if (books.removeIf(book -> book.getId().equals(bookID))) {
             return true;
         }
-        return false;
+            return false;
     }
 }

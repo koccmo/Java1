@@ -28,11 +28,11 @@ public class BookDataBaseImplTest {
 
         Book firstBook = new Book("Nassim Taleb","Antifragile");
         Book secondBook = new Book("Juval Noah Harari","Homo Deus");
-        bookDataBase.save(firstBook);
-        bookDataBase.save(secondBook);
+        Long firstID = bookDataBase.save(firstBook);
+        Long secondID = bookDataBase.save(secondBook);
         Long bookID = secondBook.getId();
         Boolean result = bookDataBase.delete(bookID);
-       // assertTrue(result == true);
+        assertEquals(result,true);
 
 
     }
