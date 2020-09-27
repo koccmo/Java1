@@ -17,7 +17,7 @@ public class BookDataBaseImplTest {
         Long firstID = bookDataBase.save(firstBook);
         Long secondID = bookDataBase.save(secondBook);
         assertTrue(firstID == 1L);
-        assertTrue(secondID ==  2l);
+        assertTrue(secondID == 2l);
 
     }
 
@@ -26,15 +26,29 @@ public class BookDataBaseImplTest {
 
         BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
 
-        Book firstBook = new Book("Nassim Taleb","Antifragile");
-        Book secondBook = new Book("Juval Noah Harari","Homo Deus");
+        Book firstBook = new Book("Nassim Taleb", "Antifragile");
+        Book secondBook = new Book("Juval Noah Harari", "Homo Deus");
         Long firstID = bookDataBase.save(firstBook);
         Long secondID = bookDataBase.save(secondBook);
         Long bookID = secondBook.getId();
         Boolean result = bookDataBase.delete(bookID);
-        assertEquals(result,true);
+        assertEquals(result, true);
 
 
     }
 
+    @Test
+    public void deleteBookByID2() {
+
+        BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
+
+        Book firstBook = new Book("Nassim Taleb", "Antifragile");
+        Book secondBook = new Book("Juval Noah Harari", "Homo Deus");
+        Long firstID = bookDataBase.save(firstBook);
+        Long secondID = bookDataBase.save(secondBook);
+        Boolean result1 = bookDataBase.delete(firstID);
+        Boolean result2 = bookDataBase.delete(secondID);
+        assertEquals(result1, true);
+        assertEquals(result2,true);
+    }
 }
