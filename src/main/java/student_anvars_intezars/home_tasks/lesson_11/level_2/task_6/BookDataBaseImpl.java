@@ -2,24 +2,29 @@ package student_anvars_intezars.home_tasks.lesson_11.level_2.task_6;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
+
 
 class BookDataBaseImpl implements BookDataBase {
 
     List<Book> books = new ArrayList<>();
-    private static final AtomicLong count = new AtomicLong();
+    private Long id = 0L;
 
     @Override
     public Long save(Book book) {
-        book.setId(atomicID());
         books.add(book);
+        book.setId(id);
+        id++;
 
-        return book.getId();
+        return id;
     }
+
+
     @Override
-    public Long atomicID() {
-        Long bookID = count.incrementAndGet();
-        return bookID;
+    public boolean delete(Long bookID) {
+        if (books.contains(bookID)) {
+            books.remove(books.contains(bookID));
+            return true;
+        }
+        return false;
     }
 }
