@@ -11,9 +11,9 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public Long save(Book book) {
-        books.add(book);
-        book.setId(id);
         id++;
+        book.setId(id);
+        books.add(book);
 
         return id;
     }

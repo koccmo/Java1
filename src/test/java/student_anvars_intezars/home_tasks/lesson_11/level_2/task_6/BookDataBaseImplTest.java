@@ -14,12 +14,10 @@ public class BookDataBaseImplTest {
 
         Book firstBook = new Book("Nassim Taleb", "Antifragile");
         Book secondBook = new Book("Juval Noah Harari", "Homo Deus");
-        bookDataBase.save(firstBook);
-        bookDataBase.save(secondBook);
-        Long firstID = firstBook.getId();
-        Long secondID = secondBook.getId();
-        //assertEquals(firstID,1L);
-        //assertEquals(secondID,2l);
+        Long firstID = bookDataBase.save(firstBook);
+        Long secondID = bookDataBase.save(secondBook);
+        assertTrue(firstID == 1L);
+        assertTrue(secondID ==  2l);
 
     }
 
@@ -34,7 +32,7 @@ public class BookDataBaseImplTest {
         bookDataBase.save(secondBook);
         Long bookID = secondBook.getId();
         Boolean result = bookDataBase.delete(bookID);
-        assertEquals(result,true);
+       // assertTrue(result == true);
 
 
     }
