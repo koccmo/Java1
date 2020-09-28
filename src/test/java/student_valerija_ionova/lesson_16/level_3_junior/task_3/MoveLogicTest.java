@@ -1,0 +1,72 @@
+package student_valerija_ionova.lesson_16.level_3_junior.task_3;
+
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.*;
+
+public class MoveLogicTest {
+
+    @Test
+    public void acceptanceTest1 (){
+        RobotStartPositionParameters robotStartPositionParameters =
+                new RobotStartPositionParameters(new MoveInformation("1 2 N"), "LMLMLMLMM");
+        MoveLogic moveLogic = new MoveLogic("5 5", robotStartPositionParameters);
+        List <MoveInformation> result = new ArrayList<>();
+        result.add (new MoveInformation("1 3 N"));
+        assertEquals(result, moveLogic.marsRoverMovements());
+    }
+
+    @Test
+    public void acceptanceTest2 (){
+        RobotStartPositionParameters robotStartPositionParameters =
+                new RobotStartPositionParameters(new MoveInformation("3 3 E"), "MMRMMRMRRM");
+        MoveLogic moveLogic = new MoveLogic("5 5", robotStartPositionParameters);
+        List <MoveInformation> result = new ArrayList<>();
+        result.add (new MoveInformation("5 1 E"));
+        assertEquals(result, moveLogic.marsRoverMovements());
+    }
+
+    @Test
+    public void test3 (){
+        RobotStartPositionParameters robotStartPositionParameters =
+                new RobotStartPositionParameters(new MoveInformation("0 7 E"), "RMMLMMRMMMRMLMM");
+        MoveLogic moveLogic = new MoveLogic("7 8", robotStartPositionParameters);
+        List <MoveInformation> result = new ArrayList<>();
+        result.add (new MoveInformation("1 0 S"));
+        assertEquals(result, moveLogic.marsRoverMovements());
+    }
+
+    @Test
+    public void test4 (){
+        RobotStartPositionParameters robotStartPositionParameters =
+                new RobotStartPositionParameters(new MoveInformation("3 1 W"), "MMRMLM");
+        MoveLogic moveLogic = new MoveLogic("4 4", robotStartPositionParameters);
+        List <MoveInformation> result = new ArrayList<>();
+        result.add (new MoveInformation("0 2 W"));
+        assertEquals(result, moveLogic.marsRoverMovements());
+    }
+
+    @Test
+    public void smallMars (){
+        RobotStartPositionParameters robotStartPositionParameters =
+                new RobotStartPositionParameters(new MoveInformation("0 0 N"), "RMLRRMMM");
+        MoveLogic moveLogic = new MoveLogic("0 0", robotStartPositionParameters);
+        List <MoveInformation> result = new ArrayList<>();
+        result.add (new MoveInformation("0 0 S"));
+        assertEquals(result, moveLogic.marsRoverMovements());
+    }
+
+    @Test
+    public void awayFromBoard (){
+        RobotStartPositionParameters robotStartPositionParameters =
+                new RobotStartPositionParameters(new MoveInformation("0 0 W"), "MMMMMMMMRMM");
+        MoveLogic moveLogic = new MoveLogic("3 3", robotStartPositionParameters);
+        List <MoveInformation> result = new ArrayList<>();
+        result.add (new MoveInformation("0 2 N"));
+        assertEquals(result, moveLogic.marsRoverMovements());
+    }
+
+}
