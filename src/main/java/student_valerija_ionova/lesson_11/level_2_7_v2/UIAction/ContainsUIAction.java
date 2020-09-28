@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class ContainsUIAction implements UIAction {
 
 	@CodeReviewComment(teacher = "Must be private!")
-    BookDatabase bookDatabase;
+    private BookDatabase bookDatabase;
 
     ContainsUIAction (BookDatabase bookDatabase){
         this.bookDatabase = bookDatabase;

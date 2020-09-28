@@ -8,7 +8,7 @@ import teacher.codereview.CodeReviewComment;
 public class CountAllBooksUIAction implements UIAction {
 
 	@CodeReviewComment(teacher = "Must be private!")
-    BookDatabase bookDatabase;
+    private BookDatabase bookDatabase;
 
     CountAllBooksUIAction (BookDatabase bookDatabase){
         this.bookDatabase = bookDatabase;
