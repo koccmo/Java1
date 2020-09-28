@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class MoveLogic {
+class Challenge {
 
-    int xMax;
-    int yMax;
-    int [][] field;
-    List<RobotStartPositionParameters> startInformation;
+    private int xMax;
+    private int yMax;
+    private int [][] field;
+    private List <RobotStartPositionParameters> startInformation;
 
-    MoveLogic (String xyMax, RobotStartPositionParameters...robotStartPositionParameters){
+    Challenge(String xyMax, RobotStartPositionParameters...robotStartPositionParameters){
         this.xMax = Integer.parseInt(xyMax.split(" ")[0]);
         this.yMax = Integer.parseInt(xyMax.split(" ")[1]);
         this.startInformation = new ArrayList<>(Arrays.asList(robotStartPositionParameters));
@@ -25,9 +25,7 @@ class MoveLogic {
             MoveInformation resultPosition = info.getMoveInformation();
             String[] movesArray = info.getMoves().split("");
             for (int i = 0; i < movesArray.length; i++) {
-                //System.out.println("i= "+ i + " resultPosition= " + resultPosition+ " movesArray[i]" + movesArray[i]);
                 resultPosition = getNextPosition(resultPosition, movesArray[i]);
-                //System.out.println("resultPosition= " + resultPosition);
             }
             result.add(resultPosition);
         }
