@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_16.task_1;
+package student_valerija_ionova.lesson_16.level_1_2.task_1_2;
 
 import org.junit.Test;
 
@@ -38,6 +38,13 @@ public class MoveLogicTest {
     public void smallMars (){
         MoveLogic moveLogic = new MoveLogic("0 0", new MoveInformation("0 0 N"), "RMLRRMMM");
         MoveInformation result = new MoveInformation("0 0 S");
+        assertEquals(result, moveLogic.marsRoverMovement());
+    }
+
+    @Test
+    public void awayFromBoard (){
+        MoveLogic moveLogic = new MoveLogic("3 3", new MoveInformation("0 0 W"), "MMMMMMMMRMM");
+        MoveInformation result = new MoveInformation("0 2 N");
         assertEquals(result, moveLogic.marsRoverMovement());
     }
 
