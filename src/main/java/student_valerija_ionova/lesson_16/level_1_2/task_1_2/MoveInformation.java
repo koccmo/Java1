@@ -1,4 +1,4 @@
-package student_valerija_ionova.lesson_16.task_1;
+package student_valerija_ionova.lesson_16.level_1_2.task_1_2;
 
 import java.util.Objects;
 
