@@ -13,7 +13,7 @@ public class MoveLogicTest {
     public void acceptanceTest1 (){
         RobotStartPositionParameters robotStartPositionParameters =
                 new RobotStartPositionParameters(new MoveInformation("1 2 N"), "LMLMLMLMM");
-        MoveLogic moveLogic = new MoveLogic("5 5", robotStartPositionParameters);
+        Challenge moveLogic = new Challenge("5 5", robotStartPositionParameters);
         List <MoveInformation> result = new ArrayList<>();
         result.add (new MoveInformation("1 3 N"));
         assertEquals(result, moveLogic.marsRoverMovements());
@@ -23,7 +23,7 @@ public class MoveLogicTest {
     public void acceptanceTest2 (){
         RobotStartPositionParameters robotStartPositionParameters =
                 new RobotStartPositionParameters(new MoveInformation("3 3 E"), "MMRMMRMRRM");
-        MoveLogic moveLogic = new MoveLogic("5 5", robotStartPositionParameters);
+        Challenge moveLogic = new Challenge("5 5", robotStartPositionParameters);
         List <MoveInformation> result = new ArrayList<>();
         result.add (new MoveInformation("5 1 E"));
         assertEquals(result, moveLogic.marsRoverMovements());
@@ -33,7 +33,7 @@ public class MoveLogicTest {
     public void test3 (){
         RobotStartPositionParameters robotStartPositionParameters =
                 new RobotStartPositionParameters(new MoveInformation("0 7 E"), "RMMLMMRMMMRMLMM");
-        MoveLogic moveLogic = new MoveLogic("7 8", robotStartPositionParameters);
+        Challenge moveLogic = new Challenge("7 8", robotStartPositionParameters);
         List <MoveInformation> result = new ArrayList<>();
         result.add (new MoveInformation("1 0 S"));
         assertEquals(result, moveLogic.marsRoverMovements());
@@ -43,7 +43,7 @@ public class MoveLogicTest {
     public void test4 (){
         RobotStartPositionParameters robotStartPositionParameters =
                 new RobotStartPositionParameters(new MoveInformation("3 1 W"), "MMRMLM");
-        MoveLogic moveLogic = new MoveLogic("4 4", robotStartPositionParameters);
+        Challenge moveLogic = new Challenge("4 4", robotStartPositionParameters);
         List <MoveInformation> result = new ArrayList<>();
         result.add (new MoveInformation("0 2 W"));
         assertEquals(result, moveLogic.marsRoverMovements());
@@ -53,7 +53,7 @@ public class MoveLogicTest {
     public void smallMars (){
         RobotStartPositionParameters robotStartPositionParameters =
                 new RobotStartPositionParameters(new MoveInformation("0 0 N"), "RMLRRMMM");
-        MoveLogic moveLogic = new MoveLogic("0 0", robotStartPositionParameters);
+        Challenge moveLogic = new Challenge("0 0", robotStartPositionParameters);
         List <MoveInformation> result = new ArrayList<>();
         result.add (new MoveInformation("0 0 S"));
         assertEquals(result, moveLogic.marsRoverMovements());
@@ -63,7 +63,7 @@ public class MoveLogicTest {
     public void awayFromBoard (){
         RobotStartPositionParameters robotStartPositionParameters =
                 new RobotStartPositionParameters(new MoveInformation("0 0 W"), "MMMMMMMMRMM");
-        MoveLogic moveLogic = new MoveLogic("3 3", robotStartPositionParameters);
+        Challenge moveLogic = new Challenge("3 3", robotStartPositionParameters);
         List <MoveInformation> result = new ArrayList<>();
         result.add (new MoveInformation("0 2 N"));
         assertEquals(result, moveLogic.marsRoverMovements());
@@ -75,7 +75,7 @@ public class MoveLogicTest {
                 new RobotStartPositionParameters(new MoveInformation("1 2 N"), "LMLMLMLMM");
         RobotStartPositionParameters robotStartPositionParameters2 =
                 new RobotStartPositionParameters(new MoveInformation("3 3 E"), "MMRMMRMRRM");
-        MoveLogic moveLogic = new MoveLogic("5 5", robotStartPositionParameters1, robotStartPositionParameters2);
+        Challenge moveLogic = new Challenge("5 5", robotStartPositionParameters1, robotStartPositionParameters2);
         List <MoveInformation> result = new ArrayList<>();
         result.add (new MoveInformation("1 3 N"));
         result.add (new MoveInformation("5 1 E"));
@@ -88,7 +88,7 @@ public class MoveLogicTest {
                 new RobotStartPositionParameters(new MoveInformation("1 1 N"), "MMRMMMRM");
         RobotStartPositionParameters robotStartPositionParameters2 =
                 new RobotStartPositionParameters(new MoveInformation("3 3 S"), "MRMMMRMMRM");
-        MoveLogic moveLogic = new MoveLogic("5 5", robotStartPositionParameters1, robotStartPositionParameters2);
+        Challenge moveLogic = new Challenge("5 5", robotStartPositionParameters1, robotStartPositionParameters2);
         List <MoveInformation> result = new ArrayList<>();
         result.add (new MoveInformation("2 2 S"));
         result.add (new MoveInformation("4 4 E"));
