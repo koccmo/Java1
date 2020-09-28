@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_11.day_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class AuthorSearchCriteria implements SearchCriteria {
 
     private String authorToSearch;

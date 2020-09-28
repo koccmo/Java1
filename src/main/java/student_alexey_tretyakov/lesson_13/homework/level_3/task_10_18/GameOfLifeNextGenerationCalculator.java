@@ -1,5 +1,8 @@
 package student_alexey_tretyakov.lesson_13.homework.level_3.task_10_18;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class GameOfLifeNextGenerationCalculator {
 
 

@@ -2,10 +2,12 @@ package student_eduards_jasvins.lesson_11.day_6.UI;
 
 import student_eduards_jasvins.lesson_11.day_6.Book;
 import student_eduards_jasvins.lesson_11.day_6.BookDatabase;
+import teacher.codereview.CodeReview;
 
 import java.util.Optional;
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 public class FindByIdUIAction implements UIAction {
 
     private BookDatabase bookDatabase;

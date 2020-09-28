@@ -2,6 +2,9 @@ package student_anvars_intezars.home_tasks.lesson_11.level_2.task_6;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Book {
 
     private Long id;
