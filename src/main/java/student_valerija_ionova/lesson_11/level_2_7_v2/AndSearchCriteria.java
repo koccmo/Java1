@@ -12,11 +12,7 @@ class AndSearchCriteria implements SearchCriteria {
     }
 
     public boolean match(Book book) {
-        if (leftCondition.match(book) && rightCondition.match(book)){
-            return true;
-        }else{
-            return false;
-        }
+        return leftCondition.match(book) && rightCondition.match(book);
     }
 
 }
