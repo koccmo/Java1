@@ -8,26 +8,36 @@ class MoveLogic {
 
     int xMax;
     int yMax;
-    int [][] field = new int [yMax+1] [xMax+1];
+    int [][] field;
     List<RobotStartPositionParameters> startInformation;
 
     MoveLogic (String xyMax, RobotStartPositionParameters...robotStartPositionParameters){
         this.xMax = Integer.parseInt(xyMax.split(" ")[0]);
         this.yMax = Integer.parseInt(xyMax.split(" ")[1]);
         this.startInformation = new ArrayList<>(Arrays.asList(robotStartPositionParameters));
+        this.field = new int [yMax+1] [xMax+1];
     }
 
     List <MoveInformation> marsRoverMovements (){
+        fillFieldWithRobots ();
         List <MoveInformation> result = new ArrayList <>();
         for (RobotStartPositionParameters info : startInformation) {
             MoveInformation resultPosition = info.getMoveInformation();
             String[] movesArray = info.getMoves().split("");
             for (int i = 0; i < movesArray.length; i++) {
+                //System.out.println("i= "+ i + " resultPosition= " + resultPosition+ " movesArray[i]" + movesArray[i]);
                 resultPosition = getNextPosition(resultPosition, movesArray[i]);
+                //System.out.println("resultPosition= " + resultPosition);
             }
             result.add(resultPosition);
         }
         return result;
+    }
+
+    private void fillFieldWithRobots (){
+        for (RobotStartPositionParameters info : startInformation) {
+            field[info.getMoveInformation().getY()][info.getMoveInformation().getX()] = 1;
+        }
     }
 
     private MoveInformation getNextPosition (MoveInformation moveInformation, String direction){
@@ -41,14 +51,51 @@ class MoveLogic {
     }
 
     private MoveInformation newStepTheSameDirection (MoveInformation moveInformation){
+        field[moveInformation.getY()][moveInformation.getX()] = 0;
         MoveInformation resultPosition = moveInformation;
             switch (moveInformation.getDirection()){
-                case "N":  {resultPosition.setY(Math.min(moveInformation.getY()+1, yMax)); break;}
-                case "S":  {resultPosition.setY(Math.max(moveInformation.getY()-1, 0)); break;}
-                case "E":  {resultPosition.setX(Math.min(moveInformation.getX()+1, xMax)); break;}
-                case "W":  {resultPosition.setX(Math.max(moveInformation.getX()-1, 0)); break;}
+                case "N":  {resultPosition.setY(updatePositionNorth(moveInformation)); break;}
+                case "S":  {resultPosition.setY(updatePositionSouth(moveInformation)); break;}
+                case "E":  {resultPosition.setX(updatePositionEast(moveInformation)); break;}
+                case "W":  {resultPosition.setX(updatePositionWest(moveInformation)); break;}
         }
+        field[resultPosition.getY()][resultPosition.getX()] = 1;
         return  resultPosition;
+    }
+
+    private int updatePositionNorth (MoveInformation moveInformation){
+        int y = moveInformation.getY();
+        if ((moveInformation.getY() < (field.length-1)) &&
+                (field[moveInformation.getY()+1][moveInformation.getX()] == 0)){
+            y = moveInformation.getY()+1;
+        }
+        return y;
+    }
+
+    private int updatePositionSouth (MoveInformation moveInformation){
+        int y = moveInformation.getY();
+        if ((moveInformation.getY() > 0) && (field[moveInformation.getY()-1][moveInformation.getX()] == 0)){
+            y = (moveInformation.getY()-1);
+        }
+        return y;
+    }
+
+    private int updatePositionEast (MoveInformation moveInformation){
+        int x = moveInformation.getX();
+        if ((moveInformation.getX() < (field[0].length-1)) &&
+                (field[moveInformation.getY()][moveInformation.getX() + 1] == 0)){
+            x = (moveInformation.getX()+1);
+        }
+        return x;
+    }
+
+    private int updatePositionWest (MoveInformation moveInformation){
+        int x = moveInformation.getX();
+        if ((moveInformation.getX() > 0) &&
+                (field[moveInformation.getY()][moveInformation.getX() - 1] == 0)){
+            x = (moveInformation.getX()-1);
+        }
+        return x;
     }
 
     private MoveInformation changeDirectionAtTheSamePlace (MoveInformation moveInformation, String direction){
