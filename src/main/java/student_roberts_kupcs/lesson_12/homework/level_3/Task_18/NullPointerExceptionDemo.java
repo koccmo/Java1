@@ -1,5 +1,8 @@
 package student_roberts_kupcs.lesson_12.homework.level_3.Task_18;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class NullPointerExceptionDemo {
     //исключение случается когда JVM пытается обратиться к null в том месте где должен был быть объект.
     //Получая доступ к или изменяя метод объекта, который равен null.

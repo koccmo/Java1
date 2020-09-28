@@ -2,6 +2,9 @@ package student_roberts_kupcs.lesson_12.homework.level_3.Task_19;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class WrongUserInputHandlingDemo {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
