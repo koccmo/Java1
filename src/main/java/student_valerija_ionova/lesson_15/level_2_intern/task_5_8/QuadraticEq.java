@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_15.level_2_intern.task_5_8;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class QuadraticEq {
 
     String calc (double a, double b, double c) {

@@ -1,5 +1,8 @@
 package student_volodya_danilin.lesson_12.level_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProductPriceValidationRule implements FieldValidationRule{
 
     @Override

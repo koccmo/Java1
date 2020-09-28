@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_14.level_3_5_junior_middle.task_18_34;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Transaction {
 
     private Trader trader;

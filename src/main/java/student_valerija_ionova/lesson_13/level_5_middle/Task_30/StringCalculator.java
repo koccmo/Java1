@@ -9,7 +9,9 @@ package student_valerija_ionova.lesson_13.level_5_middle.Task_30;
 
 Не забывайте писать тесты!*/
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class StringCalculator {
 
     int add (String numbers){

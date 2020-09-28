@@ -3,6 +3,9 @@ package student_volodya_danilin.lesson_11.level_6;
 import java.util.Optional;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class DeleteByIdUIAction implements UIAction {
 
     private BookDatabase bookDatabase;

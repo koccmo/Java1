@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_15.level_3_junior.task_10;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TennisGameImpl implements  TennisGame{
 
     private String player1;

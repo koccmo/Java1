@@ -1,6 +1,6 @@
 package student_valerija_ionova.lesson_11.level_2_7_v2.UIAction;
 
-import student_valerija_ionova.lesson_11.level_7_senior.super_task_2.*;
+import student_valerija_ionova.lesson_11.level_7_senior_approved.super_task_2.*;
 import teacher.codereview.CodeReview;
 
 import java.util.*;

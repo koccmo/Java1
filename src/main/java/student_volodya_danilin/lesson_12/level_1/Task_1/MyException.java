@@ -5,6 +5,9 @@ Throwable - это класс поэтому его надо "экстендит
 а не имплементировать
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class MyException extends Throwable {
 
 }

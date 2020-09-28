@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FindByAuthorUIAction implements UIAction{
 
     private BookDatabase bookDatabase;
