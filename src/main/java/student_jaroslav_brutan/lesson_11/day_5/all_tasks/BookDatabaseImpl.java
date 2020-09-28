@@ -2,6 +2,9 @@ package student_jaroslav_brutan.lesson_11.day_5.all_tasks;
 
 import java.util.*;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public abstract class BookDatabaseImpl implements BookDatabase{
 // не понимаю почему не имплементировалось, просила сделать класс абстрактным, сделал, но не знаю правильно ли
     @Override

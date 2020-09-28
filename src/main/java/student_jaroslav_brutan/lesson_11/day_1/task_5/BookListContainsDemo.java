@@ -3,6 +3,9 @@ package student_jaroslav_brutan.lesson_11.day_1.task_5;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class BookListContainsDemo {
 
     public static void main(String[] args) {
