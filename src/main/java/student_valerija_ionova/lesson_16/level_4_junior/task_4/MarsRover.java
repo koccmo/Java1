@@ -3,6 +3,7 @@ package student_valerija_ionova.lesson_16.level_4_junior.task_4;
 public class MarsRover {
 
     public static String move(int x, int y, char direction, String instructions) {
+
         if (!instructions.isEmpty()) {
             char instruction = instructions.charAt(0);
             if (instruction == 'L') {
