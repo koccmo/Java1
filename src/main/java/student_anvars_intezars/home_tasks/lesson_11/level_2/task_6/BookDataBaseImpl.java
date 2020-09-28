@@ -10,7 +10,7 @@ import teacher.codereview.CodeReviewComment;
 class BookDataBaseImpl implements BookDataBase {
 
 	@CodeReviewComment(teacher = "Must be private!")
-    List<Book> books = new ArrayList<>();
+    private List<Book> books = new ArrayList<>();
     private Long id = 0L;
 
     @Override
@@ -25,9 +25,6 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public boolean delete(Long bookID) {
-        if (books.removeIf(book -> book.getId().equals(bookID))) {
-            return true;
-        }
-            return false;
+        return books.removeIf(book -> book.getId().equals(bookID));
     }
 }
