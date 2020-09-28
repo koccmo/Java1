@@ -4,6 +4,9 @@ package student_valerija_ionova.lesson_12.level_5_6_middle.task_27_48;
 //Если срабатывает одно из правил, то создавайте объект ValidationException,
 //заполняйте его правильными данными и кидайте его.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProductTitleValidationRule implements FieldValidationRule {
 
     public void validate(Product product) throws ValidationException {

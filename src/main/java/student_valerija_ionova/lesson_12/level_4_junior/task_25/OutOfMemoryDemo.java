@@ -11,6 +11,9 @@ package student_valerija_ionova.lesson_12.level_4_junior.task_25;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class OutOfMemoryDemo {
 
     public static void main (String [] args) {

@@ -7,6 +7,9 @@ package student_valerija_ionova.lesson_12.level_5_6_middle.task_27_48;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Product {
 
     private String title;

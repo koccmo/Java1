@@ -4,6 +4,9 @@ package student_valerija_ionova.lesson_12.level_3_junior.task_20;
 //поместите правильный try catch блок и в коментариях напишите пояснение.
 //Exception включает в себя и ArithmeticException, соответственно уже будет поймана
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class MultiCatchExample {
 
     public static void main (String [] args){

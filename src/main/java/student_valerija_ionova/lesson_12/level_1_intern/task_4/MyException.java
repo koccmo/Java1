@@ -3,6 +3,9 @@ package student_valerija_ionova.lesson_12.level_1_intern.task_4;
 //Внесите изменения в код так, что бы сообщение об ошибке
 //передать в конструктор супер класса.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class MyException extends Exception {
 
 

@@ -6,6 +6,9 @@ package student_valerija_ionova.lesson_12.level_1_intern.task_5;
 Напишите класс ExceptionDemo, в котором продемонстрирейте
 разные способы создания экземпляра класса Exception.*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ExceptionDemo extends Exception{
 
     public Exception ex1 = new Exception();

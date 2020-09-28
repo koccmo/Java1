@@ -16,5 +16,8 @@ interface BankApi {
 Теперь из сигнатуры метода следует, что данный метод может
 вернуть ("кинуть") ошибку типа AccessDeniedException.*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class AccessDeniedException extends Exception{
 }

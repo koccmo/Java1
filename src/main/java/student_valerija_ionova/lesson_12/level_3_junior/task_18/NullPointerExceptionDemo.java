@@ -13,6 +13,9 @@ NullPointerException
 
 Класс NullPointerException унаследован от RuntimeException.*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class NullPointerExceptionDemo {
 
     public static void main (String [] args) {
