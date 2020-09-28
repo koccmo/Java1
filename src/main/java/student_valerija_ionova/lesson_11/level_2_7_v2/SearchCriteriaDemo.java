@@ -5,6 +5,9 @@ package student_valerija_ionova.lesson_11.level_2_7_v2;
 //- автор книги "Kuper" и год выпуска 1890
 //- автор книги "Kuper" или год выпуска 1890 или название "Zveroboi"
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class SearchCriteriaDemo {
 
     SearchCriteria authorSC = new AuthorSearchCriteria("Kuper");
