@@ -69,4 +69,30 @@ public class MoveLogicTest {
         assertEquals(result, moveLogic.marsRoverMovements());
     }
 
+    @Test
+    public void twoRobots (){
+        RobotStartPositionParameters robotStartPositionParameters1 =
+                new RobotStartPositionParameters(new MoveInformation("1 2 N"), "LMLMLMLMM");
+        RobotStartPositionParameters robotStartPositionParameters2 =
+                new RobotStartPositionParameters(new MoveInformation("3 3 E"), "MMRMMRMRRM");
+        MoveLogic moveLogic = new MoveLogic("5 5", robotStartPositionParameters1, robotStartPositionParameters2);
+        List <MoveInformation> result = new ArrayList<>();
+        result.add (new MoveInformation("1 3 N"));
+        result.add (new MoveInformation("5 1 E"));
+        assertEquals(result, moveLogic.marsRoverMovements());
+    }
+
+    @Test
+    public void twoRobotsWithoutAccidents (){
+        RobotStartPositionParameters robotStartPositionParameters1 =
+                new RobotStartPositionParameters(new MoveInformation("1 1 N"), "MMRMMMRM");
+        RobotStartPositionParameters robotStartPositionParameters2 =
+                new RobotStartPositionParameters(new MoveInformation("3 3 S"), "MRMMMRMMRM");
+        MoveLogic moveLogic = new MoveLogic("5 5", robotStartPositionParameters1, robotStartPositionParameters2);
+        List <MoveInformation> result = new ArrayList<>();
+        result.add (new MoveInformation("2 2 S"));
+        result.add (new MoveInformation("4 4 E"));
+        assertEquals(result, moveLogic.marsRoverMovements());
+    }
+
 }
