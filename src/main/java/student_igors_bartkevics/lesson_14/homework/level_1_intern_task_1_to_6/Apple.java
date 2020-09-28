@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_14.homework.level_1_intern_task_1_to_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Apple {
 
     private String color;

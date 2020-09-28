@@ -1,5 +1,7 @@
 Какой класс в Java является главным в иерархии классов ошибок
 
+@CodeReview(approved = true)
+
 Result:
 4. Throwable
 

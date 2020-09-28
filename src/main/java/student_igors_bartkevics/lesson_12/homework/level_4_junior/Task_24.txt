@@ -3,6 +3,8 @@
 Найдите в документации Java (javadoc) для чего испольхуются
 следующие ошибки:
 
+@CodeReview(approved = true)
+
 - ArrayIndexOutOfBoundsException:
 Thrown to indicate that an array has been accessed with an illegal index. The
 index is either negative or greater than or equal to the size of the array.

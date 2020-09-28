@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_12.homework.level_1_intern.task_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ExceptionDemo {
     public static void main(String[] args) {
         Exception exception1 = new Exception();

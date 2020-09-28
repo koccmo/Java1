@@ -1,6 +1,8 @@
 Воспользуйтесь документацией Java (javadoc)
 и найдите информацию о иерархии наследования класса java.lang.RuntimeException.
 
+@CodeReview(approved = true)
+
 RuntimeException extends Exceptions => Exceptions extends Throwable =>
 
 => Throwable implements Serializable
