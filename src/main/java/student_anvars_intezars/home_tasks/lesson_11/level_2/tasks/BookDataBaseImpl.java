@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_11.level_2.task_6;
+package student_anvars_intezars.home_tasks.lesson_11.level_2.tasks;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +67,17 @@ class BookDataBaseImpl implements BookDataBase {
             }
         }
         return null;
+    }
+
+    @Override
+    public int countAllBooks() {
+        int count = 0;
+        for (int i = 0; i < books.size(); i++) {
+            if(books.get(i) != null) {
+                count = count + 1;
+            }
+        }
+        return count;
     }
 }
 

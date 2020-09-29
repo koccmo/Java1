@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_11.level_2.task_6;
+package student_anvars_intezars.home_tasks.lesson_11.level_2.tasks;
 
 import org.junit.Test;
 
@@ -98,6 +98,21 @@ public class BookDataBaseImplTest {
         bookDataBase.save(thirdBook);
         List<Book> result = bookDataBase.findByTitle("Homo Sapiens");
         assertTrue(result.contains(firstBook));
+    }
+
+    @Test
+    public void countBooks() {
+
+        BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
+
+        Book firstBook = new Book("Nassim Taleb", "Homo Sapiens");
+        Book secondBook = new Book("Juval Noah Harari", "Homo Deus");
+        Book thirdBook = new Book("Juval Noah Harari","Homo Sapiens");
+        bookDataBase.save(firstBook);
+        bookDataBase.save(secondBook);
+        bookDataBase.save(thirdBook);
+        int result = bookDataBase.countAllBooks();
+        assertEquals(result,3);
     }
 }
 
