@@ -3,6 +3,9 @@ package student_valerija_ionova.lesson_12.level_5_6_middle.task_27_48;
 //- RULE-5: не должна быть пустой
 //- RULE-6: должна быть больше 0
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProductPriceValidationRule implements FieldValidationRule{
 
 

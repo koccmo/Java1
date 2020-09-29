@@ -5,7 +5,9 @@ NullPointerException появляется когда наша программа
 достучаться до несозданного обьекта/поля (когда == null)
  */
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class NullPointerExceptionDemo {
 
     public static void main(String[] args) {

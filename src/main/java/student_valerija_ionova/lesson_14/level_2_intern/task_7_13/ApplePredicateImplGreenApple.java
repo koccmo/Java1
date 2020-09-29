@@ -6,6 +6,9 @@ package student_valerija_ionova.lesson_14.level_2_intern.task_7_13;
 //- тяжелых яблок ( > 150 г.)
 //- лёгких яблок ( < 150 г.)
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ApplePredicateImplGreenApple implements ApplePredicate{
 
 

@@ -2,6 +2,9 @@ package student_igors_bartkevics.lesson_12.homework.level_6_middle_task_35_to_48
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ValidationException extends Exception {
 
     // название валидационного правила, которое создало эту ошибку

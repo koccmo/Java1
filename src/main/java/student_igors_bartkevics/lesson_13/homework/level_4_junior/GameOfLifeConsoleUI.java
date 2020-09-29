@@ -1,7 +1,8 @@
 package student_igors_bartkevics.lesson_13.homework.level_4_junior;
 
+import teacher.codereview.CodeReview;
 
-
+@CodeReview(approved = true)
 class GameOfLifeConsoleUI {
 
     public void show(boolean[][] field) {

@@ -6,6 +6,9 @@ package student_valerija_ionova.lesson_12.level_2_intern.task_7_16;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BankClient {
 
     private String uid;      // уникальный идентификатор клиета

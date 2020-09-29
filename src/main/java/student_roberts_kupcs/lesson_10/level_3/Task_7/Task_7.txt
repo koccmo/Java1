@@ -2,6 +2,8 @@
 
 //Net. в данном интерфейсе есть 2 методa без реализации.
 
+@CodeReview(approved = true)
+
 interface Database {
 
     void save(Product product);

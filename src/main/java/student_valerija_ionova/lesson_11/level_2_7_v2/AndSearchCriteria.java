@@ -1,5 +1,9 @@
 package student_valerija_ionova.lesson_11.level_2_7_v2;
 
+import teacher.codereview.CodeReview;
+
+
+@CodeReview(approved = true)
 class AndSearchCriteria implements SearchCriteria {
 
     private SearchCriteria leftCondition;
@@ -12,11 +16,7 @@ class AndSearchCriteria implements SearchCriteria {
     }
 
     public boolean match(Book book) {
-        if (leftCondition.match(book) && rightCondition.match(book)){
-            return true;
-        }else{
-            return false;
-        }
+        return leftCondition.match(book) && rightCondition.match(book);
     }
 
 }

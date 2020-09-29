@@ -3,6 +3,11 @@ package student_anvars_intezars.home_tasks.lesson_11.level_1.task_5;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
+@CodeReviewComment(teacher = "Not implemented equals() method!")
 class BookListContainsDemo {
 
     public static void main(String[] args) {

@@ -3,6 +3,9 @@ package student_igors_bartkevics.lesson_13.homework.level_3_junior_task_10_to_18
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class GameOfLifeNextGenerationCalculator {
 
     public boolean[][] calculate(boolean[][] currentGeneration) {

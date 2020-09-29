@@ -1,2 +1,4 @@
 
+@CodeReview(approved = true)
+
 С начала идёт Object -> Throwable -> Exception -> RuntimeException

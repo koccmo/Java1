@@ -10,6 +10,9 @@ package student_valerija_ionova.lesson_12.level_2_intern.task_7_16;
 (которую вам надо создать) смогут делать запросы через ваш
 новый API.*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 enum Role {
 
     CAN_SEARCH_CLIENTS  // эта роль должна быть у клиента, для того

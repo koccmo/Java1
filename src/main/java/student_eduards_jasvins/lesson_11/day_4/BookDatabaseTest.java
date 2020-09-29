@@ -5,6 +5,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class BookDatabaseTest {
     public static void main(String[] args) {
         BookDatabaseTest test = new BookDatabaseTest();

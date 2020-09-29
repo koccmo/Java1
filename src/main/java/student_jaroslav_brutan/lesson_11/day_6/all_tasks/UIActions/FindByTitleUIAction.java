@@ -2,10 +2,12 @@ package student_jaroslav_brutan.lesson_11.day_6.all_tasks.UIActions;
 
 import student_jaroslav_brutan.lesson_11.day_5.all_tasks.Book;
 import student_jaroslav_brutan.lesson_11.day_6.all_tasks.BookDatabase;
+import teacher.codereview.CodeReview;
 
 import java.util.List;
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 public class FindByTitleUIAction implements UIAction{
 
     private BookDatabase bookDatabase;

@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_14.homework.level_3_junior_task_18_to_24;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Trader {
     private String name;
     private String city;

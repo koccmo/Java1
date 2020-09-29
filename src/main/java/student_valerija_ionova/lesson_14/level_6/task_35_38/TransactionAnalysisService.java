@@ -6,7 +6,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class TransactionAnalysisService {
 
     Optional <Integer> getMaxValue (List <Transaction> allTransactions){

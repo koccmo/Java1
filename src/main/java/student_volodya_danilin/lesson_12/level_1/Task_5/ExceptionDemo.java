@@ -1,5 +1,8 @@
 package student_volodya_danilin.lesson_12.level_1.Task_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ExceptionDemo extends Exception{
 
     //создание нового исключения без уведомления (message)

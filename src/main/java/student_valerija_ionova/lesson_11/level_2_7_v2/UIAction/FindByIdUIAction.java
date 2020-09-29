@@ -2,12 +2,14 @@ package student_valerija_ionova.lesson_11.level_2_7_v2.UIAction;
 
 //Task32 Создайте и реализуйте класс FindByIdUIAction:
 
-import student_valerija_ionova.lesson_11.level_7_senior.super_task_2.Book;
-import student_valerija_ionova.lesson_11.level_7_senior.super_task_2.BookDatabase;
+import student_valerija_ionova.lesson_11.level_7_senior_approved.super_task_2.Book;
+import student_valerija_ionova.lesson_11.level_7_senior_approved.super_task_2.BookDatabase;
+import teacher.codereview.CodeReview;
 
 import java.util.Optional;
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 class FindByIdUIAction implements UIAction {
 
     private BookDatabase bookDatabase;

@@ -1,5 +1,8 @@
 package student_pavel_sharkel.lesson_10.level_4.task_11;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Weatercast {
     int celsiumDefault, kelvin, fahrenheit;
 

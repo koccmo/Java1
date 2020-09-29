@@ -2,12 +2,16 @@ package student_roberts_kupcs.lesson_11.homework.level_1_intern.Task_5;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
 //Создайте класс BookListContainsDemo в котором продемонстрируйте как
 //проверяют есть ли в списке данная книга или её нет. Если для правильной
 //работы выбранной вами функциональности требуется внести изменения в
 //класс Book, сделайте это!
 //
 //PS: подсказка по функциональности в названии класса :).
+
+@CodeReview(approved = true)
 class Book {
     private String title;
     private String author;

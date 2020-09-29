@@ -13,6 +13,10 @@ try {
 Создайте класс MultiCatchExample и в его main() методе
 поместите правильный try catch блок и в коментариях напишите пояснение.
  */
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class MultiCatchExample {
 
     public static void main(String[] args) {

@@ -2,13 +2,15 @@ package student_valerija_ionova.lesson_11.level_2_7_v2.UIAction;
 
 //Task36
 
-import student_valerija_ionova.lesson_11.level_7_senior.super_task_2.BookDatabase;
-import student_valerija_ionova.lesson_11.level_7_senior.super_task_2.BookDatabaseImpl;
+import student_valerija_ionova.lesson_11.level_7_senior_approved.super_task_2.BookDatabase;
+import student_valerija_ionova.lesson_11.level_7_senior_approved.super_task_2.BookDatabaseImpl;
+import teacher.codereview.CodeReview;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 class BookLibrary {
 
     private Map<Integer, UIAction> menuNumberToActionMap;

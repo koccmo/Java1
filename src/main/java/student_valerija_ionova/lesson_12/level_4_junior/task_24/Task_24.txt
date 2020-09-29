@@ -1,5 +1,8 @@
 Знакомство с классами ошибок.
 
+
+@CodeReview(approved = true)
+
 Найдите в документации Java (javadoc) для чего испольхуются
 следующие ошибки:
 - ArrayIndexOutOfBoundsException

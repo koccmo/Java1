@@ -2,7 +2,9 @@ package student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30
 
 import student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.Calculator;
 import student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.Rule;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class Rule4 extends Rule {
 
     public Rule4(Calculator calculator) {

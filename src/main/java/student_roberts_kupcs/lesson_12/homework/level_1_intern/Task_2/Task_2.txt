@@ -3,5 +3,7 @@
 //class MyException extends Throwables {
 //}
 
+
+@CodeReview(approved = false)
 class MyException extends Throwables {
 }

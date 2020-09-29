@@ -3,6 +3,9 @@ package student_valerija_ionova.lesson_13.level_5_middle.task_31_32;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class StringCalculatorUniversal {
 
     int addNumber (String numbers){

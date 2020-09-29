@@ -4,6 +4,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TransactionAnalysisService {
 
     public List<Transaction> findAllTransactionsOf2011Year(List<Transaction> allTransactions) {

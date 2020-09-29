@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_12.level_5_6_middle.task_27_48;
 
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProductValidatorImplTest {
 
     private ProductValidator validator = new ProductValidatorImpl(new ProductTitleValidationRule(), new ProductPriceValidationRule(), new ProductDescriptionValidationRule());

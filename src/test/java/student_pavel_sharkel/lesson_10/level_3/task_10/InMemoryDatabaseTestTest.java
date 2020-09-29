@@ -9,7 +9,7 @@ import static junit.framework.TestCase.assertEquals;
 
 public class InMemoryDatabaseTestTest {
 
-    private InMemoryDatabase inMemoryDatabase;
+    //private InMemoryDatabase inMemoryDatabase;
     private Product product;
 
    /* @Test
@@ -23,7 +23,7 @@ public class InMemoryDatabaseTestTest {
 
     }*/
 
-    @Test
+    /*
     public void inDatabaseFalse() {
         inMemoryDatabase = new InMemoryDatabase();
 
@@ -32,5 +32,5 @@ public class InMemoryDatabaseTestTest {
         Optional<Product> result = inMemoryDatabase.findByTitle("Pineaple");
         assertEquals(null, result);
 
-    }
+    }*/
 }
