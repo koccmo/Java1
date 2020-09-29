@@ -1,9 +1,16 @@
 package student_igors_bartkevics.lesson_13.homework.level_3_junior_task_10_to_18;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 class Cell {
     private int coordinateX;
     private int getCoordinateY;
-    private boolean state;
+
+
+    @CodeReviewComment(teacher = "Unused property!")
+
 
     public Cell(int coordinateX, int getCoordinateY) {
         this.coordinateX = coordinateX;
@@ -18,7 +25,4 @@ class Cell {
         return getCoordinateY;
     }
 
-    public boolean isState() {
-        return state;
-    }
 }
