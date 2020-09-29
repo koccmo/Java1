@@ -10,7 +10,7 @@ class Cell {
 
 
     @CodeReviewComment(teacher = "Unused property!")
-    private boolean state;
+
 
     public Cell(int coordinateX, int getCoordinateY) {
         this.coordinateX = coordinateX;
@@ -25,7 +25,4 @@ class Cell {
         return getCoordinateY;
     }
 
-    public boolean isState() {
-        return state;
-    }
 }
