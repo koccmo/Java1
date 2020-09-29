@@ -2,6 +2,7 @@ package student_anvars_intezars.home_tasks.lesson_11.level_2.task_6;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import teacher.codereview.CodeReview;
 import teacher.codereview.CodeReviewComment;
@@ -9,7 +10,7 @@ import teacher.codereview.CodeReviewComment;
 @CodeReview(approved = true)
 class BookDataBaseImpl implements BookDataBase {
 
-	@CodeReviewComment(teacher = "Must be private!")
+    @CodeReviewComment(teacher = "Must be private!")
     //added
     private List<Book> books = new ArrayList<>();
     private Long id = 0L;
@@ -28,4 +29,18 @@ class BookDataBaseImpl implements BookDataBase {
     public boolean delete(Long bookID) {
         return books.removeIf(book -> book.getId().equals(bookID));
     }
+
+    @Override
+    public Optional<Book> findById(Long bookId) {
+        for (int i = 0; i < books.size(); i++) {
+            Book listOfBooks = books.get(i);
+            if (listOfBooks.getId().equals(bookId)) {
+                return Optional.of(listOfBooks);
+            }
+        }
+        return Optional.empty();
+    }
 }
+
+
+
