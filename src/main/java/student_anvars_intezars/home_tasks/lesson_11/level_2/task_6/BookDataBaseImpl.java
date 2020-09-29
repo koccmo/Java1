@@ -14,6 +14,7 @@ class BookDataBaseImpl implements BookDataBase {
     //added
     private List<Book> books = new ArrayList<>();
     private List<Book> booksOfOneAuthor = new ArrayList<>();
+    private List<Book> booksWithSameTitle = new ArrayList<>();
     private Long id = 0L;
 
     @Override
@@ -50,6 +51,19 @@ class BookDataBaseImpl implements BookDataBase {
                 Book authorBooks = books.get(i);
                 booksOfOneAuthor.add(authorBooks);
                 return booksOfOneAuthor;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public List<Book> findByTitle(String title) {
+        for (int i = 0; i < books.size(); i++) {
+            String titleOfBooks = books.get(i).getTitle();
+            if (titleOfBooks.contains(title)) {
+                Book oneTitleBooks = books.get(i);
+                booksWithSameTitle.add(oneTitleBooks);
+                return booksWithSameTitle;
             }
         }
         return null;

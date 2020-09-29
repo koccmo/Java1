@@ -84,5 +84,20 @@ public class BookDataBaseImplTest {
         List<Book> result = bookDataBase.findByAuthor("Juval Noah Harari");
         assertTrue(result.contains(secondBook));
     }
+
+    @Test
+    public void testFindBooksByTitle() {
+
+        BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
+
+        Book firstBook = new Book("Nassim Taleb", "Homo Sapiens");
+        Book secondBook = new Book("Juval Noah Harari", "Homo Deus");
+        Book thirdBook = new Book("Juval Noah Harari","Homo Sapiens");
+        bookDataBase.save(firstBook);
+        bookDataBase.save(secondBook);
+        bookDataBase.save(thirdBook);
+        List<Book> result = bookDataBase.findByTitle("Homo Sapiens");
+        assertTrue(result.contains(firstBook));
+    }
 }
 

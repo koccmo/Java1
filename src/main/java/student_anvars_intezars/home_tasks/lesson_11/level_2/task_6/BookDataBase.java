@@ -16,4 +16,6 @@ interface BookDataBase {
 
     List<Book> findByAuthor(String author);
 
+    List<Book> findByTitle(String title);
+
 }
