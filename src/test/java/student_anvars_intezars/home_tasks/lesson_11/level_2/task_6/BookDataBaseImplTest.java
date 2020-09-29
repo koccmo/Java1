@@ -3,6 +3,7 @@ package student_anvars_intezars.home_tasks.lesson_11.level_2.task_6;
 import org.junit.Test;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
@@ -67,7 +68,21 @@ public class BookDataBaseImplTest {
         Optional<Book> result2 = bookDataBase.findById(secondID);
         assertTrue(result1.isPresent());
         assertTrue(result2.isPresent());
+    }
 
+    @Test
+    public void testFindBookByAuthor() {
+
+        BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
+
+        Book firstBook = new Book("Nassim Taleb", "Antifragile");
+        Book secondBook = new Book("Juval Noah Harari", "Homo Deus");
+        Book thirdBook = new Book("Juval Noah Harari","Homo Sapiens");
+        bookDataBase.save(firstBook);
+        bookDataBase.save(secondBook);
+        bookDataBase.save(thirdBook);
+        List<Book> result = bookDataBase.findByAuthor("Juval Noah Harari");
+        assertTrue(result.contains(secondBook));
     }
 }
 
