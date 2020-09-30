@@ -14,5 +14,13 @@ public class AuthorSearchCriteriaTest {
         boolean result = authorSearchCriteria.match(firstBook);
         assertTrue(result);
     }
+    @Test
+    public void bookMatchByTitleTest() {
+
+        Book firstBook = new Book("Nassim Nicholas Taleb","Antifragile");
+        TitleSearchCriteria titleSearchCriteria = new TitleSearchCriteria("Antifragile");
+        boolean result = titleSearchCriteria.match(firstBook);
+        assertTrue(result);
+    }
 
 }
