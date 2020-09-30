@@ -4,16 +4,15 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class AuthorSearchCriteriaTest {
+public class TitleSearchCriteriaTest {
 
     @Test
-    public void bookMatchByAuthorTest() {
+    public void bookMatchByTitleTest() {
 
         Book firstBook = new Book("Nassim Nicholas Taleb","Antifragile");
-        AuthorSearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Nassim Nicholas Taleb");
-        boolean result = authorSearchCriteria.match(firstBook);
+        TitleSearchCriteria titleSearchCriteria = new TitleSearchCriteria("Antifragile");
+        boolean result = titleSearchCriteria.match(firstBook);
         assertTrue(result);
     }
-
 
 }
