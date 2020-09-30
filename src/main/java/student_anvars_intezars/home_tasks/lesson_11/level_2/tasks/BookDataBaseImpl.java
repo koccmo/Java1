@@ -91,6 +91,18 @@ class BookDataBaseImpl implements BookDataBase {
             }
         }
     }
+
+    @Override
+    public void deleteByTitle(String title) {
+        String titleOfBooks = "";
+        for (int i = 0; i < books.size(); i++) {
+            titleOfBooks = books.get(i).getTitle();
+            if (titleOfBooks.contains(title)) {
+                Book bookToDelete = books.get(i);
+                books.remove(bookToDelete);
+            }
+        }
+    }
 }
 
 
