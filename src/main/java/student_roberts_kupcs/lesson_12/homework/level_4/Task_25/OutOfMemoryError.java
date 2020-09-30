@@ -12,6 +12,6 @@ class OutOfMemoryError {
 
     public static void main(String[] args) throws Exception {
 
-        Float[] array = new Float[10000 * 100000];
+    //    Float[] array = new Float[10000 * 100000];
     }
 }
