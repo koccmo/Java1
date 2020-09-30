@@ -101,7 +101,7 @@ public class BookDataBaseImplTest {
     }
 
     @Test
-    public void countBooks() {
+    public void countBooksTest() {
 
         BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
 
@@ -113,6 +113,38 @@ public class BookDataBaseImplTest {
         bookDataBase.save(thirdBook);
         int result = bookDataBase.countAllBooks();
         assertEquals(result,3);
+    }
+
+    @Test
+    public void deleteByAuthorTest() {
+
+        BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
+
+        Book firstBook = new Book("Nassim Taleb", "Homo Sapiens");
+        Book secondBook = new Book("Juval Noah Harari", "Homo Deus");
+        Book thirdBook = new Book("Juval Noah Harari","Homo Sapiens");
+        bookDataBase.save(firstBook);
+        bookDataBase.save(secondBook);
+        bookDataBase.save(thirdBook);
+        bookDataBase.deleteByAuthor("Nassim Taleb");
+        int result = bookDataBase.countAllBooks();
+        assertEquals(result,2);
+    }
+
+    @Test
+    public void deleteByTitleTest() {
+
+        BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
+
+        Book firstBook = new Book("Nassim Taleb", "Homo Sapiens");
+        Book secondBook = new Book("Juval Noah Harari", "Homo Deus");
+        Book thirdBook = new Book("Juval Noah Harari","Homo Sapiens");
+        bookDataBase.save(firstBook);
+        bookDataBase.save(secondBook);
+        bookDataBase.save(thirdBook);
+        bookDataBase.deleteByTitle("Homo Deus");
+        int result = bookDataBase.countAllBooks();
+        assertEquals(result,2);
     }
 }
 
