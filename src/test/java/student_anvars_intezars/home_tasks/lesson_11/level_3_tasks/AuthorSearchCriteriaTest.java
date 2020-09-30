@@ -9,7 +9,7 @@ public class AuthorSearchCriteriaTest {
     @Test
     public void bookMatchByAuthorTest() {
 
-        Book firstBook = new Book("Nassim Nicholas Taleb","Antifragile");
+        Book firstBook = new Book("Nassim Nicholas Taleb","Antifragile","2003");
         AuthorSearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Nassim Nicholas Taleb");
         boolean result = authorSearchCriteria.match(firstBook);
         assertTrue(result);

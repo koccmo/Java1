@@ -4,14 +4,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class TitleSearchCriteriaTest {
+public class YearOfIssueSearchCriteriaTest {
 
     @Test
-    public void bookMatchByTitleTest() {
+    public void bookMatchByYearTest() {
 
         Book firstBook = new Book("Nassim Nicholas Taleb","Antifragile","2003");
-        TitleSearchCriteria titleSearchCriteria = new TitleSearchCriteria("Antifragile");
-        boolean result = titleSearchCriteria.match(firstBook);
+        YearOfIssueSearchCriteria yearOfIssueSearchCriteria = new YearOfIssueSearchCriteria("2003");
+        boolean result = yearOfIssueSearchCriteria.match(firstBook);
         assertTrue(result);
     }
 

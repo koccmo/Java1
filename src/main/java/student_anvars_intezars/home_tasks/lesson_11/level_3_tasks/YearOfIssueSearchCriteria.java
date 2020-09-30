@@ -10,6 +10,9 @@ class YearOfIssueSearchCriteria implements SearchCriteria {
 
     @Override
     public boolean match(Book book) {
+        if (yearOfIssueToSearch.equals(book.getYearOfIssue())) {
+            return true;
+        }
 
         return false;
     }
