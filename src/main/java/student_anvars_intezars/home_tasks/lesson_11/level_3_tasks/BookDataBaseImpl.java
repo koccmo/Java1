@@ -15,6 +15,7 @@ class BookDataBaseImpl implements BookDataBase {
     private List<Book> books = new ArrayList<>();
     private List<Book> booksOfOneAuthor = new ArrayList<>();
     private List<Book> booksWithSameTitle = new ArrayList<>();
+    private List<Book> booksOfSearchCriteria = new ArrayList<>();
     private Long id = 0L;
 
     @Override
@@ -87,7 +88,7 @@ class BookDataBaseImpl implements BookDataBase {
             authorOfBooks = books.get(i).getAuthor();
             if (authorOfBooks.contains(author)) {
                 Book bookToDelete = books.get(i);
-               books.remove(bookToDelete);
+                books.remove(bookToDelete);
             }
         }
     }
@@ -103,7 +104,18 @@ class BookDataBaseImpl implements BookDataBase {
             }
         }
     }
+
+    @Override
+    public List<Book> find(SearchCriteria searchCriteria) {
+        for (int i = 0; i < books.size(); i++) {
+            Book bookFromLibrary = books.get(i);
+            if (searchCriteria.match(bookFromLibrary)) {
+                booksOfSearchCriteria.add(bookFromLibrary);
+                return booksOfSearchCriteria;
+            }
+        }
+        return null;
+
+    }
 }
-
-
 

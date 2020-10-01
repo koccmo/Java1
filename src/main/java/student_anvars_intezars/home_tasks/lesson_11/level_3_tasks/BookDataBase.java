@@ -24,4 +24,6 @@ interface BookDataBase {
 
     void deleteByTitle(String title);
 
+    List<Book> find(SearchCriteria searchCriteria);
+
 }
