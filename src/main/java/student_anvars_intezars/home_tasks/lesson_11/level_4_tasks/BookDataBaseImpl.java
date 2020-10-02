@@ -14,8 +14,9 @@ class BookDataBaseImpl implements BookDataBase {
     private List<Book> booksOfOneAuthor = new ArrayList<>();
     private List<Book> booksWithSameTitle = new ArrayList<>();
     private List<Book> booksOfSearchCriteria = new ArrayList<>();
-    private Set<String> allAuthors = new HashSet<String>();
-    private Set<String> allTitles = new HashSet<String>();
+    private Set<String> allUniqueAuthors = new HashSet<String>();
+    private Set<String> allUniqueTitles = new HashSet<String>();
+    private Set<Book> allUniqueBooks = new HashSet<Book>();
     private Long id = 0L;
 
     @Override
@@ -122,8 +123,8 @@ class BookDataBaseImpl implements BookDataBase {
     public Set<String> findUniqueAuthors() {
         for (int i = 0; i < books.size(); i++) {
             String authors = books.get(i).getAuthor();
-            allAuthors.add(authors);
-            return allAuthors;
+            allUniqueAuthors.add(authors);
+            return allUniqueAuthors;
         }
         return null;
     }
@@ -132,8 +133,18 @@ class BookDataBaseImpl implements BookDataBase {
     public Set<String> findUniqueTitles() {
         for (int i = 0; i < books.size(); i++) {
             String titles = books.get(i).getTitle();
-            allTitles.add(titles);
-            return allTitles;
+            allUniqueTitles.add(titles);
+            return allUniqueTitles;
+        }
+        return null;
+    }
+
+    @Override
+    public Set<Book> findUniqueBooks() {
+        for (int i = 0; i < books.size(); i++) {
+            Book allBooks = books.get(i);
+            allUniqueBooks.add(allBooks);
+            return allUniqueBooks;
         }
         return null;
     }

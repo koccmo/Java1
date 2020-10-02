@@ -38,4 +38,19 @@ public class BookDataBaseImplTest {
         Set<String> result = bookDataBase.findUniqueTitles();
         assertTrue(result.contains("Antifragile"));
     }
+
+    @Test
+    public void findingAllBooksTest() {
+
+        Book firsBook = new Book("Nassim Nicholas Taleb", "Antifragile", "2003");
+        Book secondBook = new Book("Kuper", "Zveroboi", "1985");
+        Book thirdBook = new Book("Anvar Intezar", "What happend with world order", "2020");
+        BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
+        bookDataBase.save(firsBook);
+        bookDataBase.save(secondBook);
+        bookDataBase.save(thirdBook);
+
+        Set<Book> result = bookDataBase.findUniqueBooks();
+        assertTrue(result.contains(firsBook));
+    }
 }
