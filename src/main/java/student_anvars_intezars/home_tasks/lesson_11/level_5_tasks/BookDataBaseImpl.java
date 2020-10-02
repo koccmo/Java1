@@ -157,5 +157,15 @@ class BookDataBaseImpl implements BookDataBase {
         }
         return mapKeyIsAuthor;
     }
+
+    @Override
+    public Map<String, Integer> getEachAuthorBookCount() {
+        Map<String, Integer> mapKeyIsAuthor = new HashMap<>();
+        Set<String> authors = findUniqueAuthors();
+        for (String author : authors) {
+            mapKeyIsAuthor.put(author,countAllBooks());
+        }
+        return mapKeyIsAuthor;
+    }
 }
 

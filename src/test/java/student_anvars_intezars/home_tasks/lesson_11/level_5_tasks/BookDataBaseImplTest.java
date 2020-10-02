@@ -56,4 +56,20 @@ public class BookDataBaseImplTest {
         Set<String> result = bookDataBase.findUniqueTitles();
         assertEquals(result.size(), 3);
     }
+
+    @Test
+    public void getEachAuthorBookCountTest() {
+
+        Book firsBook = new Book("Nassim Nicholas Taleb", "Antifragile", "2003");
+        Book secondBook = new Book("Kuper", "Zveroboi", "1985");
+        Book thirdBook = new Book("Kuper", "What happened with world order", "2020");
+        BookDataBaseImpl bookDataBase = new BookDataBaseImpl();
+        bookDataBase.save(firsBook);
+        bookDataBase.save(secondBook);
+        bookDataBase.save(thirdBook);
+
+        Map<String, Integer> result = bookDataBase.getEachAuthorBookCount();
+        assertEquals(result.size(), 2);
+        assertEquals(result.containsKey("Kuper"),true);
+    }
 }

@@ -37,4 +37,6 @@ interface BookDataBase {
     boolean contains(Book book);
 
     Map<String, List<Book>> getAuthorToBooksMap();
+
+    Map<String, Integer> getEachAuthorBookCount();
 }
