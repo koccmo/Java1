@@ -148,5 +148,13 @@ class BookDataBaseImpl implements BookDataBase {
         }
         return null;
     }
+
+    @Override
+    public boolean contains(Book book) {
+        if (books.contains(book)) {
+            return true;
+        }
+        return false;
+    }
 }
 
