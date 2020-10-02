@@ -15,6 +15,7 @@ class BookDataBaseImpl implements BookDataBase {
     private List<Book> booksWithSameTitle = new ArrayList<>();
     private List<Book> booksOfSearchCriteria = new ArrayList<>();
     private Set<String> allAuthors = new HashSet<String>();
+    private Set<String> allTitles = new HashSet<String>();
     private Long id = 0L;
 
     @Override
@@ -121,9 +122,19 @@ class BookDataBaseImpl implements BookDataBase {
     public Set<String> findUniqueAuthors() {
         for (int i = 0; i < books.size(); i++) {
             String authors = books.get(i).getAuthor();
-                allAuthors.add(authors);
-                return allAuthors;
-            }
+            allAuthors.add(authors);
+            return allAuthors;
+        }
+        return null;
+    }
+
+    @Override
+    public Set<String> findUniqueTitles() {
+        for (int i = 0; i < books.size(); i++) {
+            String titles = books.get(i).getTitle();
+            allTitles.add(titles);
+            return allTitles;
+        }
         return null;
     }
 }
