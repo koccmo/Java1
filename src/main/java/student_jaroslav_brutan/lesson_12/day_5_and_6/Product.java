@@ -1,4 +1,4 @@
-package student_jaroslav_brutan.lesson_12.day_5;
+package student_jaroslav_brutan.lesson_12.day_5_and_6;
 
 import java.util.Objects;
 
@@ -36,6 +36,14 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public boolean isTitleNull(){
+        return title == null;
+    }
+
+    public boolean isPriceNull(){
+        return price == null;
     }
 
     @Override
