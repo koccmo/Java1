@@ -13,9 +13,6 @@ class BookDataBaseImpl implements BookDataBase {
     @CodeReviewComment(teacher = "Must be private!")
     //added
     private List<Book> books = new ArrayList<>();
-    private List<Book> booksOfOneAuthor = new ArrayList<>();
-    private List<Book> booksWithSameTitle = new ArrayList<>();
-    private List<Book> booksOfSearchCriteria = new ArrayList<>();
     private Long id = 0L;
 
     @Override
@@ -46,28 +43,28 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public List<Book> findByAuthor(String author) {
+        List<Book> booksOfOneAuthor = new ArrayList<>();
         for (int i = 0; i < books.size(); i++) {
             String authorOfBooks = books.get(i).getAuthor();
             if (authorOfBooks.contains(author)) {
                 Book authorBooks = books.get(i);
                 booksOfOneAuthor.add(authorBooks);
-                return booksOfOneAuthor;
             }
         }
-        return null;
+        return booksOfOneAuthor;
     }
 
     @Override
     public List<Book> findByTitle(String title) {
+        List<Book> booksWithSameTitle = new ArrayList<>();
         for (int i = 0; i < books.size(); i++) {
             String titleOfBooks = books.get(i).getTitle();
             if (titleOfBooks.contains(title)) {
                 Book oneTitleBooks = books.get(i);
                 booksWithSameTitle.add(oneTitleBooks);
-                return booksWithSameTitle;
             }
         }
-        return null;
+        return booksWithSameTitle;
     }
 
     @Override
@@ -107,14 +104,14 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public List<Book> find(SearchCriteria searchCriteria) {
+        List<Book> booksOfSearchCriteria = new ArrayList<>();
         for (int i = 0; i < books.size(); i++) {
             Book bookFromLibrary = books.get(i);
             if (searchCriteria.match(bookFromLibrary)) {
                 booksOfSearchCriteria.add(bookFromLibrary);
-                return booksOfSearchCriteria;
             }
         }
-        return null;
+        return booksOfSearchCriteria;
 
     }
 }
