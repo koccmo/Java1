@@ -1,4 +1,4 @@
-package student_aleksandra_maksimovic.lesson_11.level_2.task_6;
+package student_aleksandra_maksimovic.lesson_11.level_2_6;
 
 import java.util.Objects;
 

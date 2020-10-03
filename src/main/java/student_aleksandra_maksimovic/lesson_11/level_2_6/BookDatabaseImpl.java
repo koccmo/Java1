@@ -1,8 +1,6 @@
-package student_aleksandra_maksimovic.lesson_11.level_2.task_6;
+package student_aleksandra_maksimovic.lesson_11.level_2_6;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import teacher.codereview.CodeReview;
 
@@ -42,8 +40,7 @@ class BookDatabaseImpl implements BookDatabase {
         if (bookOptional.isPresent()) {
             books.remove(bookOptional.get());
             return true;
-        }
-        else return false;
+        } else return false;
     }
 
     @Override
@@ -53,16 +50,15 @@ class BookDatabaseImpl implements BookDatabase {
         if (bookOptional.isPresent()) {
             books.remove(bookOptional.get());
             return true;
-        }
-        else return false;
+        } else return false;
     }
 
     @Override
     public Optional<Book> findById(Long bookId) {
 
         Optional<Book> result = Optional.empty();
-        for (Book book : books){
-            if(book.getId().equals(bookId)) {
+        for (Book book : books) {
+            if (book.getId().equals(bookId)) {
                 result = Optional.of(book);
                 break;
             }
@@ -85,7 +81,7 @@ class BookDatabaseImpl implements BookDatabase {
     @Override
     public List<Book> findByTitle(String title) {
 
-        List <Book> booksByTitle = new ArrayList<>();
+        List<Book> booksByTitle = new ArrayList<>();
         for (Book book : books) {
             if (bookProof.isBookWithTitle(book, title)) {
                 booksByTitle.add(book);
@@ -119,16 +115,46 @@ class BookDatabaseImpl implements BookDatabase {
     }
 
     @Override
-    public List<Book> find(SearchCriteria searchCriteria)
-    {
+    public List<Book> find(SearchCriteria searchCriteria) {
         List<Book> booksByCriteria = new ArrayList<>();
         for (Book book : books) {
-            if (searchCriteria.match(book))
-            {
+            if (searchCriteria.match(book)) {
                 booksByCriteria.add(book);
             }
         }
         return booksByCriteria;
+    }
+
+    @Override
+    public Set<String> findUniqueAuthors() {
+        Set<String> result = new HashSet<>();
+        for (Book book : books) {
+            result.add(book.getAuthor());
+        }
+        return result;
+    }
+
+    @Override
+    public Set<String> findUniqueTitles() {
+        Set<String> result = new HashSet<>();
+        for (Book book : books) {
+            result.add(book.getTitle());
+        }
+        return result;
+    }
+
+    @Override
+    public Set<Book> findUniqueBooks() {
+        return new HashSet<>(books);
+    }
+
+    @Override
+    public boolean contains(Book bookParam) {
+        for (Book book : books) {
+            if (book.equals(bookParam))
+                return true;
+        }
+        return false;
     }
 
 }
