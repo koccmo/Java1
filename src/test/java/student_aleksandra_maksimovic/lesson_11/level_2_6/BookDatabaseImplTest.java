@@ -258,7 +258,6 @@ public class BookDatabaseImplTest {
         assertEquals(bookDatabase.countAllBooks(), 3);
 
         Set<Book> result = bookDatabase.findUniqueBooks();
-        assertEquals(result.size(), 1);
         assertEquals(result, expectedResult);
     }
 
@@ -271,6 +270,42 @@ public class BookDatabaseImplTest {
         bookDatabase.save(book5);
 
         assertTrue(bookDatabase.contains(book3));
+    }
+
+    @Test
+    public void getAuthorToBooksMapTest() {
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.save(book4);
+        bookDatabase.save(book5);
+
+        Map<String, List<Book>> expectedResult = new HashMap<>();
+        expectedResult.put("Author1", Arrays.asList(book1));
+        expectedResult.put("Author2", Arrays.asList(book2));
+        expectedResult.put("Author3", Arrays.asList(book3, book4));
+        expectedResult.put("Author4", Arrays.asList(book5));
+
+        Map<String, List<Book>> result = bookDatabase.getAuthorToBooksMap();
+        assertEquals(result, expectedResult);
+    }
+
+    @Test
+    public void getEachAuthorBookCountTest() {
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.save(book4);
+        bookDatabase.save(book5);
+
+        Map<String, Integer> expectedResult = new HashMap<>();
+        expectedResult.put("Author1", 1);
+        expectedResult.put("Author2", 1);
+        expectedResult.put("Author3", 2);
+        expectedResult.put("Author4", 1);
+
+        Map<String, Integer> result = bookDatabase.getEachAuthorBookCount();
+        assertEquals(result, expectedResult);
     }
 
 }
