@@ -58,6 +58,11 @@ class Book {
     public int getYearOfIssue() { return this.yearOfIssue; }
 
     @Override
+    public String toString() {
+        return this.id + ": " + this.author + ", " + this.title + " (" + this.yearOfIssue + ")";
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
