@@ -15,11 +15,11 @@ class FindByTitleUIAction implements UIAction {
     public void execute() {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Please enter Author of the book: ");
+        System.out.println("Please enter Title of the book: ");
         String title = in.next();
         System.out.println();
 
-        List<Book> bookByAuthor = bookDataBase.findByTitle(title);
-        System.out.println(bookByAuthor);
+        List<Book> bookByTitle = bookDataBase.findByTitle(title);
+        System.out.println(bookByTitle);
     }
 }
