@@ -1,4 +1,4 @@
-package student_aleksandra_maksimovic.lesson_11.level_2.task_6;
+package student_aleksandra_maksimovic.lesson_11.level_2_6;
 
 
 
@@ -7,11 +7,10 @@ package student_aleksandra_maksimovic.lesson_11.level_2.task_6;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class BookDatabaseImplTest {
 
@@ -202,6 +201,76 @@ public class BookDatabaseImplTest {
         List<Book> result = bookDatabase.find(searchCriteria);
 
         assertEquals(result, expectedResult);
+    }
+
+    @Test
+    public void findUniqueAuthorsTest() {
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.save(book4);
+        bookDatabase.save(book5);
+
+        Set<String> expectedResult = new HashSet<>();
+        expectedResult.add("Author1");
+        expectedResult.add("Author2");
+        expectedResult.add("Author3");
+        expectedResult.add("Author4");
+
+        Set<String> result = bookDatabase.findUniqueAuthors();
+
+        assertEquals(result, expectedResult);
+    }
+
+    @Test
+    public void findUniqueTitlesTest() {
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.save(book4);
+        bookDatabase.save(book5);
+
+        Set<String> expectedResult = new HashSet<>();
+        expectedResult.add("Title1");
+        expectedResult.add("Title2");
+        expectedResult.add("Title3");
+        expectedResult.add("Title4");
+
+        Set<String> result = bookDatabase.findUniqueTitles();
+
+        assertEquals(result, expectedResult);
+    }
+
+    @Test
+    public void findUniqueBooksTest() {
+        bookDatabase.save(book1);
+        book1.setId(0L);
+
+        bookDatabase.save(book1);
+        book1.setId(0L);
+
+        bookDatabase.save(book1);
+        book1.setId(0L);
+
+        Set<Book> expectedResult = new HashSet<>();
+        expectedResult.add(book1);
+
+        assertEquals(bookDatabase.countAllBooks(), 3);
+
+        Set<Book> result = bookDatabase.findUniqueBooks();
+        assertEquals(result.size(), 1);
+        assertEquals(result, expectedResult);
+    }
+
+    @Test
+    public void containsTest() {
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.save(book4);
+        bookDatabase.save(book5);
+
+        assertTrue(bookDatabase.contains(book3));
     }
 
 }
