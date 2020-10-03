@@ -11,12 +11,6 @@ class BookDataBaseImpl implements BookDataBase {
     @CodeReviewComment(teacher = "Must be private!")
     //added
     private List<Book> books = new ArrayList<>();
-    private List<Book> booksOfOneAuthor = new ArrayList<>();
-    private List<Book> booksWithSameTitle = new ArrayList<>();
-    private List<Book> booksOfSearchCriteria = new ArrayList<>();
-    private Set<String> allUniqueAuthors = new HashSet<String>();
-    private Set<String> allUniqueTitles = new HashSet<String>();
-    private Set<Book> allUniqueBooks = new HashSet<Book>();
     private Long id = 0L;
 
     @Override
@@ -47,28 +41,28 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public List<Book> findByAuthor(String author) {
+        List<Book> booksOfOneAuthor = new ArrayList<>();
         for (int i = 0; i < books.size(); i++) {
             String authorOfBooks = books.get(i).getAuthor();
             if (authorOfBooks.contains(author)) {
                 Book authorBooks = books.get(i);
                 booksOfOneAuthor.add(authorBooks);
-                return booksOfOneAuthor;
             }
         }
-        return null;
+        return booksOfOneAuthor;
     }
 
     @Override
     public List<Book> findByTitle(String title) {
+        List<Book> booksWithSameTitle = new ArrayList<>();
         for (int i = 0; i < books.size(); i++) {
             String titleOfBooks = books.get(i).getTitle();
             if (titleOfBooks.contains(title)) {
                 Book oneTitleBooks = books.get(i);
                 booksWithSameTitle.add(oneTitleBooks);
-                return booksWithSameTitle;
             }
         }
-        return null;
+        return booksWithSameTitle;
     }
 
     @Override
@@ -108,45 +102,45 @@ class BookDataBaseImpl implements BookDataBase {
 
     @Override
     public List<Book> find(SearchCriteria searchCriteria) {
+        List<Book> booksOfSearchCriteria = new ArrayList<>();
         for (int i = 0; i < books.size(); i++) {
             Book bookFromLibrary = books.get(i);
             if (searchCriteria.match(bookFromLibrary)) {
                 booksOfSearchCriteria.add(bookFromLibrary);
-                return booksOfSearchCriteria;
             }
         }
-        return null;
+        return booksOfSearchCriteria;
 
     }
 
     @Override
     public Set<String> findUniqueAuthors() {
+        Set<String> allUniqueAuthors = new HashSet<>();
         for (int i = 0; i < books.size(); i++) {
             String authors = books.get(i).getAuthor();
             allUniqueAuthors.add(authors);
-            return allUniqueAuthors;
         }
-        return null;
+        return allUniqueAuthors;
     }
 
     @Override
     public Set<String> findUniqueTitles() {
+        Set<String> allUniqueTitles = new HashSet<>();
         for (int i = 0; i < books.size(); i++) {
             String titles = books.get(i).getTitle();
             allUniqueTitles.add(titles);
-            return allUniqueTitles;
         }
-        return null;
+        return allUniqueTitles;
     }
 
     @Override
     public Set<Book> findUniqueBooks() {
+        Set<Book> allUniqueBooks = new HashSet<>();
         for (int i = 0; i < books.size(); i++) {
             Book allBooks = books.get(i);
             allUniqueBooks.add(allBooks);
-            return allUniqueBooks;
         }
-        return null;
+        return allUniqueBooks;
     }
 
     @Override
