@@ -182,4 +182,26 @@ public class BookDatabaseImplTest {
         assertNotNull(bookDatabase.findById(book3.getId()));
     }
 
+    @Test
+    public void searchByCriteriaTest() {
+        Book book1 = new Book("Kuper", "Zveroboj");
+        Book book2 = new Book("Kuper", "Moh");
+        Book book3 = new Book("Ruper", "Puper");
+
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+
+        SearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Kuper");
+        SearchCriteria titleSearchCriteria = new TitleSearchCriteria("Zveroboj");
+        SearchCriteria searchCriteria = new AndSearchCriteria(authorSearchCriteria, titleSearchCriteria);
+
+        List<Book> expectedResult = new ArrayList<>();
+        expectedResult.add(book1);
+
+        List<Book> result = bookDatabase.find(searchCriteria);
+
+        assertEquals(result, expectedResult);
+    }
+
 }

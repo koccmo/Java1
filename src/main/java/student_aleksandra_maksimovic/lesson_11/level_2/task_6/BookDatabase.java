@@ -14,7 +14,7 @@ public interface BookDatabase {
 
     boolean delete(Book book);
 
-    Optional findById(Long bookId);
+    Optional<Book> findById(Long bookId);
 
     List<Book> findByAuthor(String author);
 
@@ -25,5 +25,7 @@ public interface BookDatabase {
     void deleteByAuthor(String author);
 
     void deleteByTitle(String title);
+
+    List<Book> find(SearchCriteria searchCriteria);
 
 }

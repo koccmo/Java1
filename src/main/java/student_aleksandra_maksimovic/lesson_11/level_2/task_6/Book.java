@@ -25,10 +25,18 @@ class Book {
     private Long id;
     private String title;
     private String author;
+    private int yearOfIssue;
 
     Book(String author, String title) {
         this.author = author;
         this.title = title;
+        this.yearOfIssue = 0;
+    }
+
+    Book(String author, String title, int yearOfIssue) {
+        this.author = author;
+        this.title = title;
+        this.yearOfIssue = yearOfIssue;
     }
 
     public void setId(Long id) {
@@ -47,16 +55,18 @@ class Book {
         return this.author;
     }
 
+    public int getYearOfIssue() { return this.yearOfIssue; }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return id.equals(book.id) && title.equals(book.title) && author.equals(book.author);
+        return id.equals(book.id) && title.equals(book.title) && author.equals(book.author) && yearOfIssue == book.yearOfIssue;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, author);
+        return Objects.hash(id, title, author, yearOfIssue);
     }
 }
