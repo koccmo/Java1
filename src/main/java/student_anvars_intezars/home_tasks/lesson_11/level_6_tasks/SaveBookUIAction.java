@@ -32,7 +32,5 @@ class SaveBookUIAction implements UIAction {
         Book firstBook = new Book(author,title,yearOfIssue);
         bookDataBase.save(firstBook);
 
-
-
     }
 }
