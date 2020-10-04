@@ -17,6 +17,11 @@ class BookLibrary {
         menuNumberToActionMap.put(3, new FindByAuthorUIAction(bookDatabase));
         menuNumberToActionMap.put(4, new FindByTitleUIAction(bookDatabase));
         menuNumberToActionMap.put(5, new DeleteByIdUIAction(bookDatabase));
+        menuNumberToActionMap.put(6, new CountBooksByUIAction(bookDatabase));
+        menuNumberToActionMap.put(7, new DeleteByAuthorUIAction(bookDatabase));
+        menuNumberToActionMap.put(8, new DeleteByTitleUIAction(bookDatabase));
+        menuNumberToActionMap.put(9, new FindUniqueAuthorsUIAction(bookDatabase));
+        menuNumberToActionMap.put(10,new FindUniqueTitlesUIAction(bookDatabase));
     }
 
     public void run() {
