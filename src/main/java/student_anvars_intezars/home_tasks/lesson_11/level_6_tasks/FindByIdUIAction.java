@@ -21,8 +21,6 @@ class FindByIdUIAction implements UIAction{
         System.out.println();
 
         Optional<Book> bookOpt = bookDatabase.findById(id);
-        if (bookOpt.isPresent()) {
-            System.out.println(bookOpt);
-        }
+        bookOpt.ifPresent(book -> System.out.println(bookOpt.toString()));
     }
 }

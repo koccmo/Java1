@@ -18,11 +18,11 @@ class SaveBookUIAction implements UIAction {
         System.out.println();
 
         System.out.println("Enter Author");
-        String author = in.next();
+        String author = in.nextLine();
         System.out.println();
 
         System.out.println("Enter Title");
-        String title = in.next();
+        String title = in.nextLine();
         System.out.println();
 
         System.out.println("Enter Year of Issue");

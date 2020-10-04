@@ -18,6 +18,11 @@ class Book {
         this.yearOfIssue = yearOfIssue;
     }
 
+    @Override
+    public String toString() {
+        return author + " " +  title + " " + yearOfIssue;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }

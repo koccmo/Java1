@@ -22,6 +22,8 @@ class FindByAuthorUIAction implements UIAction {
         System.out.println();
 
         List<Book> bookByAuthor = bookDataBase.findByAuthor(author);
-            System.out.println(bookByAuthor);
+        if (!bookByAuthor.isEmpty()) {
+            System.out.println(bookByAuthor.toString());
+        }
     }
 }
