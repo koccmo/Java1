@@ -1,5 +1,7 @@
 package student_aleksandra_maksimovic.lesson_12.level_5_6;
 
+import java.util.Objects;
+
 class ValidationException extends Exception {
 
     // название валидационного правила, которое создало эту ошибку
@@ -47,11 +49,21 @@ class ValidationException extends Exception {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        ValidationException e = (ValidationException) o;
+        return Objects.equals(ruleName, e.ruleName) &&
+                Objects.equals(description, e.description) &&
+                Objects.equals(fieldName, e.fieldName);
+    }
 
-
-
-    // создайте конструктор
-
-    // создайте только get
+    @Override
+    public int hashCode() {
+        return Objects.hash(ruleName, description, fieldName);
+    }
 
 }
