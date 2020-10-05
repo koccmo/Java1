@@ -17,14 +17,25 @@ class FruitStorage {
         return apples;
     }
 
-    public List<Apple> findApplesByColor(List<Apple> green,String color) {
-        List<Apple> apples = new ArrayList<>();
-        for (Apple apple : green) {
-            if (color.equals(apple.getColor())) {
-                apples.add(apple);
+    public List<Apple> findApplesByColor(List<Apple> inventory, String color) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (apple.getColor().equals(color)) {
+                result.add(apple);
             }
         }
-        return apples;
+        return result;
     }
+
+    public List<Apple> findApplesByWeight(List<Apple> inventory, int weight) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (apple.getWeight() > weight) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
 
 }
