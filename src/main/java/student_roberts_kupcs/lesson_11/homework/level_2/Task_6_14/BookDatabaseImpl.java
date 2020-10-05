@@ -21,7 +21,7 @@ class BookDatabaseImpl implements BookDatabase{
         return id;
     }
 
-    //@Override
+    @Override
     public boolean delete(long bookId) {
         return false;
     }
