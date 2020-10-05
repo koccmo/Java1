@@ -9,6 +9,10 @@ class AccessDeniedException extends RuntimeException{
         this.invalidUid = invalidUid;
     }
 
+    public AccessDeniedException() {
+
+    }
+
     public String getInvalidUid() {
         return invalidUid;
     }
