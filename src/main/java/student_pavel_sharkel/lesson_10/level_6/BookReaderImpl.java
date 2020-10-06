@@ -3,7 +3,7 @@ package student_pavel_sharkel.lesson_10.level_6;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookReaderImpl implements BookReader{
+class BookReaderImpl implements BookReader{
 
     List<Book> bookList = new ArrayList<>();
 
