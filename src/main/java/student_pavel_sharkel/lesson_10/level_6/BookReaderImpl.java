@@ -9,14 +9,14 @@ class BookReaderImpl implements BookReader{
 
     @Override
     public boolean addBook(Book book) {
-        if (checkBook(book)) {
+        if (isBookNew(book) && isFieldsFilled(book)) {
             bookList.add(book);
             return true;
         } else return false;
 
     }
 
-    boolean checkBook(Book book) {
+    boolean isBookNew(Book book) {
         boolean result = true;
         for (Book list : bookList) {
             if (list.getAuthor().equals(book.getAuthor()) || list.getTitle().equals(book.getTitle())) {
@@ -24,5 +24,12 @@ class BookReaderImpl implements BookReader{
             }
         }
         return result;
+    }
+
+    boolean isFieldsFilled(Book book) {
+            if (book.getTitle().equals("") || book.getAuthor().equals("")) {
+                return false;
+            } else return true;
+
     }
 }

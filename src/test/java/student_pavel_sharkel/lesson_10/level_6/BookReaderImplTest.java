@@ -40,4 +40,12 @@ public class BookReaderImplTest {
 
     }
 
+    @Test
+    public void addBlankBookTest() {
+        BookReader bookReader = new BookReaderImpl();
+        Book book = new Book("","");
+        boolean result = bookReader.addBook(book);
+        assertEquals(false,result);
+    }
+
 }
