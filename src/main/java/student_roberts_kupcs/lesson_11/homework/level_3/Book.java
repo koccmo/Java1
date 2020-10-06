@@ -4,6 +4,7 @@ class Book {
     private Long id;
     private String title;
     private String author;
+    private String yearOfIssue;
 
     Book(String author, String title) {
         this.author = author;
@@ -25,6 +26,8 @@ class Book {
     public String getAuthor() {
         return this.author;
     }
+
+    public String getYearOfIssue() {return yearOfIssue; }
 
     @Override
     public boolean equals(Object obj) {
