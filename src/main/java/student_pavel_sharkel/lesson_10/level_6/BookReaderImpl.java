@@ -19,7 +19,7 @@ class BookReaderImpl implements BookReader{
     boolean isBookNew(Book book) {
         boolean result = true;
         for (Book list : bookList) {
-            if (list.getAuthor().equals(book.getAuthor()) || list.getTitle().equals(book.getTitle())) {
+            if (list.getAuthor().equals(book.getAuthor()) && list.getTitle().equals(book.getTitle())) {
                 result = false;
             }
         }
@@ -31,5 +31,14 @@ class BookReaderImpl implements BookReader{
                 return false;
             } else return true;
 
+    }
+
+    public boolean removeBook(Book book) {
+        boolean result = false;
+        if (isBookNew(book) == false) {
+            bookList.remove(book);
+            result = true;
+        }
+        return result;
     }
 }
