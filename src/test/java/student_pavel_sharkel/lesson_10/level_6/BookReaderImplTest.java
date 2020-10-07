@@ -48,4 +48,19 @@ public class BookReaderImplTest {
         assertEquals(false,result);
     }
 
+    @Test
+    public void removeBookTest() {
+        BookReader bookReader = new BookReaderImpl();
+        Book book1 = new Book("Book1", "Author1");
+        Book book2 = new Book("Book2", "Author2");
+        Book book3 = new Book("Book3", "Author3");
+        bookReader.addBook(book1);
+        bookReader.addBook(book2);
+        bookReader.addBook(book3);
+        BookReaderImpl bookReaderImpl = new BookReaderImpl();
+        boolean result = bookReaderImpl.removeBook(book1);
+        assertEquals(false, result);
+    }
+
+
 }

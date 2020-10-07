@@ -33,6 +33,7 @@ class BookReaderImpl implements BookReader{
 
     }
 
+    @Override
     public boolean removeBook(Book book) {
         boolean result = false;
         if (isBookNew(book) == false) {
@@ -40,5 +41,11 @@ class BookReaderImpl implements BookReader{
             result = true;
         }
         return result;
+    }
+
+    public void printBooks() {
+        for (Book list : bookList) {
+            System.out.println(list.getAuthor() + ", " + list.getTitle());
+        }
     }
 }
