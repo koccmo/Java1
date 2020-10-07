@@ -2,9 +2,12 @@ package student_roberts_kupcs.lesson_11.homework.level_3_4_5_6;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 interface BookDatabase {
+
+    Optional<Book> findById(Long bookId);
 
     Map<String, Integer> getEachAuthorBookCount();
 
@@ -22,4 +25,5 @@ interface BookDatabase {
 
     List<Book> find(SearchCriteria searchCriteria);
 
+    void save(Book book);
 }
