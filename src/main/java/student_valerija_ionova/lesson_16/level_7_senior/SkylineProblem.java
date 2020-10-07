@@ -1,6 +1,7 @@
 package student_valerija_ionova.lesson_16.level_7_senior;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 class SkylineProblem implements SilhouetteOfSkylines{
@@ -19,7 +20,7 @@ class SkylineProblem implements SilhouetteOfSkylines{
         xRight = skylineCoordinates[0][1];
         currentXCoordinates = skylineCoordinates[0][0];
         maxHeight = skylineCoordinates[0][2];
-        createListOfResultCoordinates();
+        resultCoordinates.add(new ResultCoordinates(currentXCoordinates, maxHeight));
     }
 
     @Override
@@ -49,27 +50,18 @@ class SkylineProblem implements SilhouetteOfSkylines{
             }
             numberOfSkyline++;
         }
-        updateResultCoordinatesIfNewElementCreated(updatedResultCoordinates, currentInformation);
+        updateResultCoordinatesIfNewElementCreatedAndHeightDifferent(updatedResultCoordinates, currentInformation);
     }
 
-    private void updateResultCoordinatesIfNewElementCreated(boolean updatedResultCoordinates,
+    private void updateResultCoordinatesIfNewElementCreatedAndHeightDifferent(boolean updatedResultCoordinates,
                                                                                 InputCoordinates currentInformation){
-        if (updatedResultCoordinates && newSkylinesHeightIsDifferent(currentInformation.getHeight(),
-                heightOfLastElement())) {
+        if (updatedResultCoordinates && (currentInformation.getHeight() != resultCoordinates.get(resultCoordinates.size()-1).getH())) {
             resultCoordinates.add(new ResultCoordinates(currentInformation.getXLeft(), currentInformation.getHeight()));
         }
     }
 
-    private int heightOfLastElement (){
-        return resultCoordinates.get(resultCoordinates.size()-1).getH();
-    }
-
-    private boolean newSkylinesHeightIsDifferent(int newSkylineHeight, int lastSkyLineHeight){
-        return newSkylineHeight != lastSkyLineHeight;
-    }
-
     private void updateXRightIfNecessary (int numberOfSkyline){
-        if (currentSkylineXRightIsBigger(skylineCoordinatesList.get(numberOfSkyline).getXRight())){
+        if (skylineCoordinatesList.get(numberOfSkyline).getXRight() > xRight){
             xRight = skylineCoordinatesList.get(numberOfSkyline).getXRight();
         }
     }
@@ -81,16 +73,8 @@ class SkylineProblem implements SilhouetteOfSkylines{
         return currentInformation;
     }
 
-    private void createListOfResultCoordinates (){
-        resultCoordinates.add(new ResultCoordinates(currentXCoordinates, maxHeight));
-    }
-
     private boolean noSkylinesOnHorizon (){
         return (currentXCoordinates == xRight);
-    }
-
-    private boolean currentSkylineXRightIsBigger(int currentSkylineXCoordinate){
-        return currentSkylineXCoordinate > xRight;
     }
 
     private boolean currentSkylineIsHigher (int numberOfSkyline, int currentSkylineHeight){
@@ -103,19 +87,15 @@ class SkylineProblem implements SilhouetteOfSkylines{
     }
 
     private int lastCoordinate (){
-        int max = 0;
-        for (InputCoordinates inputCoordinates: skylineCoordinatesList){
-            if (inputCoordinates.getXRight() > max){
-                max = inputCoordinates.getXRight();
-            }
-        }
-        return max;
+        return skylineCoordinatesList.stream()
+                .map(InputCoordinates::getXRight)
+                .max(Comparator.comparing(Integer::valueOf)).get();
     }
 
     private void createSkylineCoordinatesList(){
-        for (int i = 0; i < skylineCoordinates.length; i++){
-            skylineCoordinatesList.add(new InputCoordinates(skylineCoordinates[i][0], skylineCoordinates[i][1],
-                    skylineCoordinates[i][2]));
+        for (int[] skylineCoordinate : skylineCoordinates) {
+            skylineCoordinatesList.add(new InputCoordinates(skylineCoordinate[0], skylineCoordinate[1],
+                    skylineCoordinate[2]));
         }
     }
 }
