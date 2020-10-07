@@ -23,55 +23,56 @@ class SkylineProblem {
     }
 
     List<ResultCoordinates> getSilhouetteOfSkylines (){
-
         List <ResultCoordinates> resultCoordinates = createListOfResultCoordinates();
         InputCoordinates currentInformation = new InputCoordinates(currentXCoordinates, xRight, maxHeight);
-
         do{
             currentXCoordinates++;
-            boolean updatedResultCoordinates = false;
+            resultCoordinates = ifNecessaryUpdateResultCoordinatesListForCurrentX(resultCoordinates, currentInformation);
+        }while (currentXCoordinates < lastCoordinate);
+        return resultCoordinates;
+    }
 
-            if (highestBuildingEnds(currentInformation.getXRight())){
-                currentInformation.update(currentXCoordinates, currentXCoordinates, 0);
+    private List <ResultCoordinates> ifNecessaryUpdateResultCoordinatesListForCurrentX (List <ResultCoordinates> resultCoordinates,
+                                                                             InputCoordinates currentInformation){
+        boolean updatedResultCoordinates = false;
 
-            }
+        if (highestBuildingEnds(currentInformation.getXRight())){
+            currentInformation.update(currentXCoordinates, currentXCoordinates, 0);
+        }
 
-                int numberOfSkyline = 0;
+        int numberOfSkyline = 0;
 
-                while(numberOfSkyline < skylineCoordinatesList.size()){
+        while(numberOfSkyline < skylineCoordinatesList.size()){
 
-                    if (SkylineContainsCurrentXCoordinates(numberOfSkyline)){
+            if (SkylineContainsCurrentXCoordinates(numberOfSkyline)){
 
-                        if (currentSkylineIsHigher(numberOfSkyline, currentInformation.getHeight())){
+                if (currentSkylineIsHigher(numberOfSkyline, currentInformation.getHeight())){
 
-                            if (currentSkylineXRightIsBigger(skylineCoordinatesList.get(numberOfSkyline).getXRight())){
-                                xRight = skylineCoordinatesList.get(numberOfSkyline).getXRight();
-                            }
-
-                                currentInformation.update(currentXCoordinates,
-                                        skylineCoordinatesList.get(numberOfSkyline).getXRight(),
-                                        skylineCoordinatesList.get(numberOfSkyline).getHeight());
-
-                                updatedResultCoordinates = true;
-                        }
-
-                    }else if(noSkylinesOnHorizon()){
-
-                        currentInformation.update(currentXCoordinates, currentXCoordinates, 0);
-
-                        updatedResultCoordinates = true;
+                    if (currentSkylineXRightIsBigger(skylineCoordinatesList.get(numberOfSkyline).getXRight())){
+                        xRight = skylineCoordinatesList.get(numberOfSkyline).getXRight();
                     }
-                    numberOfSkyline++;
 
+                    currentInformation.update(currentXCoordinates,
+                            skylineCoordinatesList.get(numberOfSkyline).getXRight(),
+                            skylineCoordinatesList.get(numberOfSkyline).getHeight());
+
+                    updatedResultCoordinates = true;
                 }
 
-            if (updatedResultCoordinates && currentInformation.getHeight() != resultCoordinates.get(resultCoordinates.size()-1).getH()) {
+            }else if(noSkylinesOnHorizon()){
 
-                resultCoordinates.add(new ResultCoordinates(currentInformation.getXLeft(), currentInformation.getHeight()));
+                currentInformation.update(currentXCoordinates, currentXCoordinates, 0);
+
+                updatedResultCoordinates = true;
             }
+            numberOfSkyline++;
 
-        }while (currentXCoordinates < lastCoordinate);
+        }
 
+        if (updatedResultCoordinates && currentInformation.getHeight() != resultCoordinates.get(resultCoordinates.size()-1).getH()) {
+
+            resultCoordinates.add(new ResultCoordinates(currentInformation.getXLeft(), currentInformation.getHeight()));
+        }
         return resultCoordinates;
     }
 
