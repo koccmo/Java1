@@ -1,4 +1,4 @@
-package student_anvars_intezars.home_tasks.lesson_12.task_20;
+package student_anvars_intezars.home_tasks.lesson_12.level_3.task_20;
 
 public class MultiCatchExample {
 
