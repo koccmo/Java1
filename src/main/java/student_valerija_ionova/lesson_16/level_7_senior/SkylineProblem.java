@@ -3,14 +3,14 @@ package student_valerija_ionova.lesson_16.level_7_senior;
 import java.util.ArrayList;
 import java.util.List;
 
-class SkylineProblem {
+class SkylineProblem implements SilhouetteOfSkylines{
 
     private int [][] skylineCoordinates;
     private List <InputCoordinates> skylineCoordinatesList = new ArrayList<>();
     private int xRight;
     private int currentXCoordinates;
     private int maxHeight;
-    private int lastCoordinate;
+    private List <ResultCoordinates> resultCoordinates = new ArrayList<>();
 
 
     SkylineProblem (int [][] skylineCoordinates){
@@ -19,67 +19,70 @@ class SkylineProblem {
         xRight = skylineCoordinates[0][1];
         currentXCoordinates = skylineCoordinates[0][0];
         maxHeight = skylineCoordinates[0][2];
-        lastCoordinate = lastCoordinate();
+        createListOfResultCoordinates();
     }
 
-    List<ResultCoordinates> getSilhouetteOfSkylines (){
-        List <ResultCoordinates> resultCoordinates = createListOfResultCoordinates();
+    @Override
+    public List <ResultCoordinates> getSilhouetteOfSkylines (){
+        int lastCoordinate = lastCoordinate();
         InputCoordinates currentInformation = new InputCoordinates(currentXCoordinates, xRight, maxHeight);
         do{
             currentXCoordinates++;
-            resultCoordinates = ifNecessaryUpdateResultCoordinatesListForCurrentX(resultCoordinates, currentInformation);
+            ifNecessaryUpdateResultCoordinatesListForCurrentX(currentInformation);
         }while (currentXCoordinates < lastCoordinate);
         return resultCoordinates;
     }
 
-    private List <ResultCoordinates> ifNecessaryUpdateResultCoordinatesListForCurrentX (List <ResultCoordinates> resultCoordinates,
-                                                                             InputCoordinates currentInformation){
+    private void ifNecessaryUpdateResultCoordinatesListForCurrentX (InputCoordinates currentInformation){
         boolean updatedResultCoordinates = false;
-
-        if (highestBuildingEnds(currentInformation.getXRight())){
-            currentInformation.update(currentXCoordinates, currentXCoordinates, 0);
-        }
-
+        currentInformation = updateCurrentInformationIfHighestSkylineEnds(currentInformation);
         int numberOfSkyline = 0;
-
         while(numberOfSkyline < skylineCoordinatesList.size()){
-
-            if (SkylineContainsCurrentXCoordinates(numberOfSkyline)){
-
-                if (currentSkylineIsHigher(numberOfSkyline, currentInformation.getHeight())){
-
-                    if (currentSkylineXRightIsBigger(skylineCoordinatesList.get(numberOfSkyline).getXRight())){
-                        xRight = skylineCoordinatesList.get(numberOfSkyline).getXRight();
-                    }
-
-                    currentInformation.update(currentXCoordinates,
-                            skylineCoordinatesList.get(numberOfSkyline).getXRight(),
+            if (skylineContainsCurrentXCoordinates(numberOfSkyline) && currentSkylineIsHigher(numberOfSkyline, currentInformation.getHeight())){
+                updateXRightIfNecessary(numberOfSkyline);
+                currentInformation.update(currentXCoordinates, skylineCoordinatesList.get(numberOfSkyline).getXRight(),
                             skylineCoordinatesList.get(numberOfSkyline).getHeight());
-
-                    updatedResultCoordinates = true;
-                }
-
+                updatedResultCoordinates = true;
             }else if(noSkylinesOnHorizon()){
-
                 currentInformation.update(currentXCoordinates, currentXCoordinates, 0);
-
                 updatedResultCoordinates = true;
             }
             numberOfSkyline++;
-
         }
-
-        if (updatedResultCoordinates && currentInformation.getHeight() != resultCoordinates.get(resultCoordinates.size()-1).getH()) {
-
-            resultCoordinates.add(new ResultCoordinates(currentInformation.getXLeft(), currentInformation.getHeight()));
-        }
-        return resultCoordinates;
+        updateResultCoordinatesIfNewElementCreated(updatedResultCoordinates, currentInformation);
     }
 
-    private List <ResultCoordinates> createListOfResultCoordinates (){
-        List <ResultCoordinates> resultCoordinates = new ArrayList<>();
+    private void updateResultCoordinatesIfNewElementCreated(boolean updatedResultCoordinates,
+                                                                                InputCoordinates currentInformation){
+        if (updatedResultCoordinates && newSkylinesHeightIsDifferent(currentInformation.getHeight(),
+                heightOfLastElement())) {
+            resultCoordinates.add(new ResultCoordinates(currentInformation.getXLeft(), currentInformation.getHeight()));
+        }
+    }
+
+    private int heightOfLastElement (){
+        return resultCoordinates.get(resultCoordinates.size()-1).getH();
+    }
+
+    private boolean newSkylinesHeightIsDifferent(int newSkylineHeight, int lastSkyLineHeight){
+        return newSkylineHeight != lastSkyLineHeight;
+    }
+
+    private void updateXRightIfNecessary (int numberOfSkyline){
+        if (currentSkylineXRightIsBigger(skylineCoordinatesList.get(numberOfSkyline).getXRight())){
+            xRight = skylineCoordinatesList.get(numberOfSkyline).getXRight();
+        }
+    }
+
+    private InputCoordinates updateCurrentInformationIfHighestSkylineEnds (InputCoordinates currentInformation){
+        if (currentXCoordinates >= currentInformation.getXRight()){
+            currentInformation.update(currentXCoordinates, currentXCoordinates, 0);
+        }
+        return currentInformation;
+    }
+
+    private void createListOfResultCoordinates (){
         resultCoordinates.add(new ResultCoordinates(currentXCoordinates, maxHeight));
-        return resultCoordinates;
     }
 
     private boolean noSkylinesOnHorizon (){
@@ -94,13 +97,9 @@ class SkylineProblem {
         return skylineCoordinatesList.get(numberOfSkyline).getHeight() > currentSkylineHeight;
     }
 
-    private boolean SkylineContainsCurrentXCoordinates (int numberOfSkyline){
+    private boolean skylineContainsCurrentXCoordinates(int numberOfSkyline){
         return ((skylineCoordinatesList.get(numberOfSkyline).getXLeft() <= currentXCoordinates) &&
                 (skylineCoordinatesList.get(numberOfSkyline).getXRight() > currentXCoordinates ));
-    }
-
-    private boolean highestBuildingEnds(int highestBuildingRightXCoordinates){
-        return currentXCoordinates >= highestBuildingRightXCoordinates;
     }
 
     private int lastCoordinate (){
@@ -119,5 +118,4 @@ class SkylineProblem {
                     skylineCoordinates[i][2]));
         }
     }
-
 }
