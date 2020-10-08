@@ -6,4 +6,6 @@ interface BookReader {
 
     boolean removeBook (Book book);
 
+    void findBookByAuthor(String author);
+
 }

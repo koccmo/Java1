@@ -2,6 +2,7 @@ package student_pavel_sharkel.lesson_10.level_6;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 class BookReaderImpl implements BookReader{
 
@@ -46,6 +47,16 @@ class BookReaderImpl implements BookReader{
     public void printBooks() {
         for (Book list : bookList) {
             System.out.println(list.getAuthor() + ", " + list.getTitle());
+        }
+    }
+
+    @Override
+    public void findBookByAuthor(String author) {
+
+        for (Book list : bookList) {
+            if (list.getAuthor().equals(author)) {
+                System.out.println(list.getTitle());
+            }
         }
     }
 }
