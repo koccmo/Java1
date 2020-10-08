@@ -8,4 +8,8 @@ public abstract class Task_12 {
     }
      class Human{}
 
+    public static void main(String[] args) {
+        
+    }
+
 }
