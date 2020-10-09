@@ -19,6 +19,9 @@ class FindByIdUIAction implements UIAction{
         System.out.println("id книги = ");
         Long bookId = scanner.nextLong();
         Optional<Book> bookOpt = bookDatabase.findById(bookId);
+        //if () {
+
+        //}
 
     }
 }
