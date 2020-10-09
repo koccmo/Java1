@@ -27,4 +27,5 @@ class ProductValidatorImplTest {
             exception.printExceptionInfo();
         }
     }
+
 }
