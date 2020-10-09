@@ -1,4 +1,4 @@
-package student_volodya_danilin.lesson_13.level_3;
+package student_volodya_danilin.lesson_13.level_3_4;
 
 public class GameOfLifeNextGenerationCalculator {
 
