@@ -1,4 +1,4 @@
-package student_aleksandra_maksimovic.lesson_14.level_3;
+package student_aleksandra_maksimovic.lesson_14.level_3_6;
 
 import org.junit.Before;
 import org.junit.Test;

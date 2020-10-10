@@ -1,8 +1,5 @@
-package student_aleksandra_maksimovic.lesson_14.level_3;
+package student_aleksandra_maksimovic.lesson_14.level_3_6;
 
-import teacher.lesson_16.lessoncode.StreamApiMultyThreading;
-
-import javax.print.DocFlavor;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;

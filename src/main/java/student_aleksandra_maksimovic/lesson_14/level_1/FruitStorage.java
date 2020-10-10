@@ -1,7 +1,5 @@
 package student_aleksandra_maksimovic.lesson_14.level_1;
 
-import teacher.lesson_14.lessoncode.Fruit;
-
 import java.util.ArrayList;
 import java.util.List;
 

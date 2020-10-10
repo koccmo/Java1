@@ -2,11 +2,6 @@ package student_aleksandra_maksimovic.lesson_13.level_3;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.opentest4j.AssertionFailedError;
-import student_aleksandra_maksimovic.lesson_12.level_5_6.*;
-
-import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.Assert.*;
 
