@@ -1,7 +1,9 @@
 package student_volodya_danilin.lesson_14.level_2;
 
 import java.util.List;
-
+/*
+Всё-таки следовало поменять тип return'а getWeight'a с String на int
+ */
 class FruitStorageTest {
 
     private FruitStorage storage = new FruitStorage();
