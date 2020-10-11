@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_15.homework.level_1.Task_6;
+package student_roberts_kupcs.lesson_15.homework.level_2.Task_6;
 
 class QuadraticEq {
 
