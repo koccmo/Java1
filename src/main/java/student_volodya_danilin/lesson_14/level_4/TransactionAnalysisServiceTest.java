@@ -23,7 +23,10 @@ class TransactionAnalysisServiceTest {
         test.findAllUniqueTradersTest();
 
         //Task_28
-        test.findUniqueTraderCities();
+        test.findUniqueTraderCitiesTest();
+
+        //Task_29
+        test.findTraderNamesFromCityTest();
     }
 
     //Task_25
@@ -81,7 +84,7 @@ class TransactionAnalysisServiceTest {
     }
 
     //Task_28
-    void findUniqueTraderCities() {
+    void findUniqueTraderCitiesTest() {
         System.out.println("\nStarting findUniqueTraderCities test ...");
         List<String> cities = service.findUniqueTraderCities(allTransactionsList);
         Set<String> uniqueCities = new HashSet<>(cities);
@@ -95,5 +98,49 @@ class TransactionAnalysisServiceTest {
             System.out.println("Test FAIL!");
             isTestFailed = true;
         }
+    }
+
+    //Task_29
+    void findTraderNamesFromCityTest() {
+        System.out.println("\nStarting findTraderNamesFromCity test ...");
+        List<String> traderNamesCambridge = service.findTraderNamesFromCity(allTransactionsList,
+                "Cambridge");
+        List<String> traderNamesMilan = service.findTraderNamesFromCity(allTransactionsList,
+                "Milan");
+        for (String value : traderNamesCambridge) {
+            if (isTraderFromCity(value, "Cambridge")) {
+                System.out.println("Test OK, trader from Cambridge found!");
+            }
+            else {
+                System.out.println("Test FAIL");
+                isTestFailed = true;
+            }
+        }
+
+        for (String value : traderNamesMilan) {
+            if (isTraderFromCity(value, "Milan")) {
+                System.out.println("Test OK, trader from Milan found!");
+            }
+            else {
+                System.out.println("Test FAIL");
+                isTestFailed = true;
+            }
+        }
+        System.out.println("findTraderNamesFromCity test is finished!");
+    }
+
+    //для проверки Task_29
+    boolean isTraderFromCity(String traderNameToSearch, String cityToCheck) {
+        boolean result = false;
+        for (Transaction value : allTransactionsList) {
+            String foundName = value.getTrader().getName();
+            String foundCity = value.getTrader().getCity();
+            if (foundName.equals(traderNameToSearch)) {
+                if (foundCity.equals(cityToCheck)) {
+                    result = true;
+                }
+            }
+        }
+        return result;
     }
 }
