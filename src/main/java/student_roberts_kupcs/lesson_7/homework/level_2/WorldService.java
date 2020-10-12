@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_7.homework.level_1.level_2;
+package student_roberts_kupcs.lesson_7.homework.level_2;
 
 // Task2
 // Запрограммируйте решение каждой из подзадачь из Task_1.txt в отдельности.

@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_7.homework.level_1.level_6.task_13;
+package student_roberts_kupcs.lesson_7.homework.level_6.task_13;
 
 //Разработать класс с методом, который копирует числа в заданном диапазоне
 //из одного массива в другой:
