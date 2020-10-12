@@ -19,7 +19,7 @@ class QuadraticEqTest {
     void discriminantIsGreaterThanZeroTest() {
         System.out.print("D greater than zero test :");
         String result = quad.calc(2, 3, 1);
-        Pattern pattern = Pattern.compile("x1 = (\\-*\\d+\\.*\\d*), x2 = (\\-*\\d+\\.*\\d*)");
+        Pattern pattern = Pattern.compile("x1 = ([+-]?\\d+\\.\\d+), x2 = ([+-]?\\d+\\.\\d+)");
         Matcher matcher = pattern.matcher(result);
         float x1 = 0;
         float x2 = 0;
@@ -38,7 +38,7 @@ class QuadraticEqTest {
     void discriminantIsEqualToZeroTest() {
         System.out.print("D equal to zero test : ");
         String result = quad.calc(1, 4, 4);
-        Pattern pattern = Pattern.compile("x = (\\-*\\d+\\.*\\d*)");
+        Pattern pattern = Pattern.compile("x = ([+-]?\\d+\\.*\\d+)");
         Matcher matcher = pattern.matcher(result);
         float valueOfX = 0;
         while (matcher.find()) {
