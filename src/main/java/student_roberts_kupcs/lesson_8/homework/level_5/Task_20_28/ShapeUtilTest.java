@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_8.homework.level_5.Task_20;
+package student_roberts_kupcs.lesson_8.homework.level_5.Task_20_28;
 
 //ShapeUtil shapeUtil = new ShapeUtil();
 //Shape[] shapes = new Shape[4];
@@ -11,20 +11,27 @@ class ShapeUtilTest {
     public static void main(String[] args) {
 
         ShapeUtilTest shapeUtilTest = new ShapeUtilTest();
-
-        shapeUtilTest.testCirclesArea();
-
+        shapeUtilTest.calculateAreaTest();
+        shapeUtilTest.calculatePerimeterTest();
 
     }
 
-    public void testCirclesArea() {
+    public void calculateAreaTest() {
         ShapeUtil shapeUtil = new ShapeUtil();
-
         Shape[] shapes = new Shape[4];
         shapes[0] = shapeUtil.createRandomCircle();
         shapes[1] = shapeUtil.createRandomSquare();
         shapes[2] = shapeUtil.createRandomRectangle();
         shapes[3] = shapeUtil.createRandomTriangle();
 
+    }
+
+    public void calculatePerimeterTest() {
+        ShapeUtil shapeUtil = new ShapeUtil();
+        Shape[] shapes = new Shape[4];
+        shapes[0] = shapeUtil.createRandomCircle();
+        shapes[1] = shapeUtil.createRandomSquare();
+        shapes[2] = shapeUtil.createRandomRectangle();
+        shapes[3] = shapeUtil.createRandomTriangle();
     }
 }
