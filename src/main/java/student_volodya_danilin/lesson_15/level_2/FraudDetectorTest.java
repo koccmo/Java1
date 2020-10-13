@@ -16,24 +16,24 @@ class FraudDetectorTest {
 
     public static void main(String[] args) {
         FraudDetectorTest test = new FraudDetectorTest();
-        boolean isItAFraud;
-        System.out.println("Testing isFraud of FraudDetector.");
+        boolean isFraudResult;
+        System.out.println("\nTesting isFraud of FraudDetector.");
 
         System.out.print("Performing name ban test ... ");
-        isItAFraud = test.isTraderNameBanWorking();
-        test.printTestResult(isItAFraud);
+        isFraudResult = test.isTraderNameBanWorking();
+        test.printTestResult(isFraudResult);
 
         System.out.print("Performing city ban test ... ");
-        isItAFraud = test.isTraderCityBanWorking();
-        test.printTestResult(isItAFraud);
+        isFraudResult = test.isTraderCityBanWorking();
+        test.printTestResult(isFraudResult);
 
         System.out.print("Performing name+city ban test ... ");
-        isItAFraud = test.shouldReturnTrue();
-        test.printTestResult(isItAFraud);
+        isFraudResult = test.shouldReturnTrue();
+        test.printTestResult(isFraudResult);
 
         System.out.print("Checking false positive ... ");
-        isItAFraud = test.shouldReturnFalse();
-        test.printTestResult(!isItAFraud);
+        isFraudResult = test.shouldReturnFalse();
+        test.printTestResult(!isFraudResult);
 
         test.concludeTest();
     }
@@ -44,13 +44,13 @@ class FraudDetectorTest {
         }
         else {
             System.out.println("Test FAIL");
-            isSomeTestFailed = true;
+            this.isSomeTestFailed = true;
         }
     }
 
     private void concludeTest() {
-        System.out.print("Tests completed! ");
-        if (!isSomeTestFailed) {
+        System.out.print("\nTests completed! ");
+        if (!this.isSomeTestFailed) {
             System.out.println("All tests OK");
         }
         else {
