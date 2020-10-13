@@ -38,7 +38,7 @@ class QuadraticEqTest {
     void discriminantIsEqualToZeroTest() {
         System.out.print("D equal to zero test : ");
         String result = quad.calc(1, 4, 4);
-        Pattern pattern = Pattern.compile("x = ([+-]?\\d+\\.*\\d+)");
+        Pattern pattern = Pattern.compile("x = ([+-]?\\d+\\.\\d+)");
         Matcher matcher = pattern.matcher(result);
         float valueOfX = 0;
         while (matcher.find()) {
