@@ -16,24 +16,24 @@ class FraudDetectorTest {
 
     public static void main(String[] args) {
         FraudDetectorTest test = new FraudDetectorTest();
-        boolean booleanTestCondition;
+        boolean isItAFraud;
         System.out.println("Testing isFraud of FraudDetector.");
 
         System.out.print("Performing name ban test ... ");
-        booleanTestCondition = test.isTraderNameBanWorking();
-        test.printTestResult(booleanTestCondition);
+        isItAFraud = test.isTraderNameBanWorking();
+        test.printTestResult(isItAFraud);
 
         System.out.print("Performing city ban test ... ");
-        booleanTestCondition = test.isTraderCityBanWorking();
-        test.printTestResult(booleanTestCondition);
+        isItAFraud = test.isTraderCityBanWorking();
+        test.printTestResult(isItAFraud);
 
         System.out.print("Performing name+city ban test ... ");
-        booleanTestCondition = test.shouldReturnTrue();
-        test.printTestResult(booleanTestCondition);
+        isItAFraud = test.shouldReturnTrue();
+        test.printTestResult(isItAFraud);
 
         System.out.print("Checking false positive ... ");
-        booleanTestCondition = test.shouldReturnFalse();
-        test.printTestResult(!booleanTestCondition);
+        isItAFraud = test.shouldReturnFalse();
+        test.printTestResult(!isItAFraud);
 
         test.concludeTest();
     }
