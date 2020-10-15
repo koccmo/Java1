@@ -18,4 +18,14 @@ public class BookDatabaseImpl implements BookDatabase{
         book.setId(id);
         return id;
     }
+
+    @Override
+    public boolean delete(Long bookId) {
+        boolean result = false;
+        if (bookId <= id) {
+            bookList.remove(bookId);
+            result = true;
+        }
+        return result;
+    }
 }
