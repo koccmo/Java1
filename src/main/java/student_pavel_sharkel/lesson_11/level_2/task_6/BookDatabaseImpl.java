@@ -28,4 +28,16 @@ public class BookDatabaseImpl implements BookDatabase{
         }
         return result;
     }
+
+    @Override
+    public boolean delete(Book book) {
+        boolean result = false;
+        for (Book value : bookList) {
+            if (value.equals(book)) {
+                bookList.remove(book);
+                result = true;
+            }
+        }
+        return result;
+    }
 }
