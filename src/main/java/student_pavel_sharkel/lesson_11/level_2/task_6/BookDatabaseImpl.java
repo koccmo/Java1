@@ -90,6 +90,15 @@ public class BookDatabaseImpl implements BookDatabase{
     }
 
     @Override
+    public void deleteByTitle(String title) {
+        for (Book value : bookList) {
+            if (value.getTitle().equals(title)) {
+                bookList.remove(value);
+            }
+        }
+    }
+
+    @Override
     public List<Book> getActualList() {
         return bookList;
     }

@@ -22,4 +22,6 @@ public interface BookDatabase {
     void deleteByAuthor(String author);
 
     List<Book> getActualList();
+
+    void deleteByTitle(String title);
 }
