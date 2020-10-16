@@ -1,7 +1,6 @@
-package student_pavel_sharkel.lesson_11.level_2.task_6;
+package student_pavel_sharkel.lesson_11.level_2.task_6_to_14;
 
 import org.junit.Test;
-import student_dmitrijs_jasvins.lesson_9.day_2.task_12.A;
 
 import java.util.ArrayList;
 import java.util.List;
