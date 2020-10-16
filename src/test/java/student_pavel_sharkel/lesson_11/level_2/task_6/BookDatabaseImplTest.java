@@ -2,6 +2,8 @@ package student_pavel_sharkel.lesson_11.level_2.task_6;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
@@ -84,6 +86,35 @@ public class BookDatabaseImplTest {
         bookDatabase.save(book3);
         Optional<Book> result = bookDatabase.findById(4L);
         assertEquals(Optional.empty(), result);
+    }
+
+    @Test
+    public void findByAuthorTrueTest() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("Author1", "Title1");
+        Book book2 = new Book("Author2", "Title2");
+        Book book3 = new Book("Author3", "Title3");
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        List<Book> toCompare = new ArrayList<>();
+        toCompare.add(book2);
+        List<Book> result = bookDatabase.findByAuthor("Author2");
+        assertEquals(toCompare, result);
+    }
+
+    @Test
+    public void findByAuthorFalseTest() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("Author1", "Title1");
+        Book book2 = new Book("Author2", "Title2");
+        Book book3 = new Book("Author3", "Title3");
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        List<Book> toCompare = new ArrayList<>();
+        List<Book> result = bookDatabase.findByAuthor("Author4");
+        assertEquals(toCompare, result);
     }
 
 }

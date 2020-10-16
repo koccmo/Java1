@@ -1,5 +1,6 @@
 package student_pavel_sharkel.lesson_11.level_2.task_6;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface BookDatabase {
@@ -11,4 +12,6 @@ public interface BookDatabase {
     boolean delete(Book book);
 
     Optional<Book> findById(Long bookId);
+
+    List<Book> findByAuthor(String author);
 }

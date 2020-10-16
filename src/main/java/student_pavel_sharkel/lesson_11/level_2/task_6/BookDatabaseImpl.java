@@ -52,4 +52,15 @@ public class BookDatabaseImpl implements BookDatabase{
         }
         return result;
     }
+
+    @Override
+    public List<Book> findByAuthor(String author) {
+        List<Book> requestedAuthorBooks = new ArrayList<>();
+        for (Book value : bookList) {
+            if (value.getAuthor().equals(author)) {
+                requestedAuthorBooks.add(value);
+            }
+        }
+        return requestedAuthorBooks;
+    }
 }
