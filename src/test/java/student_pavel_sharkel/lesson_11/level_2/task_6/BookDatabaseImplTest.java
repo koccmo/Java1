@@ -1,6 +1,7 @@
 package student_pavel_sharkel.lesson_11.level_2.task_6;
 
 import org.junit.Test;
+import student_dmitrijs_jasvins.lesson_9.day_2.task_12.A;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -166,4 +167,38 @@ public class BookDatabaseImplTest {
         assertEquals(0, result);
     }
 
+    @Test
+    public void bookDeletingByAuthorTrueTest() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("Author1", "Title1");
+        Book book2 = new Book("Author2", "Title2");
+        Book book3 = new Book("Author3", "Title3");
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.deleteByAuthor("Author2");
+        List<Book> result = bookDatabase.getActualList();
+        List<Book> toCompare = new ArrayList<>();
+        toCompare.add(book1);
+        toCompare.add(book3);
+        assertEquals(toCompare, result);
+    }
+
+    @Test
+    public void bookDeletingByAuthorFalseTest() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("Author1", "Title1");
+        Book book2 = new Book("Author2", "Title2");
+        Book book3 = new Book("Author3", "Title3");
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+        bookDatabase.deleteByAuthor("Author4");
+        List<Book> result = bookDatabase.getActualList();
+        List<Book> toCompare = new ArrayList<>();
+        toCompare.add(book1);
+        toCompare.add(book2);
+        toCompare.add(book3);
+        assertEquals(toCompare, result);
+    }
 }
