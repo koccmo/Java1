@@ -6,10 +6,17 @@ class Book {
     private Long id;
     private String title;
     private String author;
+    private String yearOfIssue;
 
     Book(String author, String title) {
         this.author = author;
         this.title = title;
+    }
+
+    Book(String author, String title, String yearOfIssue){
+        this.author = author;
+        this.title = title;
+        this.yearOfIssue = yearOfIssue;
     }
 
     public void setId(Long id) {
@@ -39,5 +46,9 @@ class Book {
     @Override
     public int hashCode() {
         return Objects.hash(id, title, author);
+    }
+
+    public String getYearOfIssue() {
+        return yearOfIssue;
     }
 }
