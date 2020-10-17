@@ -26,4 +26,5 @@ public abstract class BookDatabaseImpl implements BookDatabase{
         }
         return eachAuthorBookCount;
     }
+
 }

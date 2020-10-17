@@ -2,7 +2,7 @@ package student_jaroslav_brutan.lesson_3.day_4;
 
 public class BankAccount {
     private String ownerFirstName;
-    private String ownerLastName;  // не используемое свойство!
+    private String ownerLastName;
     private int moneyAmount;
 
     public BankAccount(String ownerFirstName,
@@ -18,7 +18,7 @@ public class BankAccount {
     }
 
     public String getOwnerLastName() {
-        return this.ownerFirstName;
+        return this.ownerLastName;
     }
 
     public int getMoneyAmount() {

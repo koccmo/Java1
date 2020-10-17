@@ -16,4 +16,14 @@ public class CalculatorTest {
             System.out.println("Test - FALSE");
         }
     }
+
+    public void isEvenTestFail(){
+        Calculator calculator = new Calculator();
+
+        if (!calculator.isEven(7)){
+            System.out.println("Test - OK!");
+        } else {
+            System.out.println("Test - FAIL!");
+        }
+    }
 }

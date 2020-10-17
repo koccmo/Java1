@@ -8,19 +8,14 @@ public class CreditCard {
 
     private double cardNumber;
     private int pinCode;
-    private int cardBalance;
-    private int creditLimit;
-    private int creditLiability;
+    private double cardBalance = 0;
+    private double creditLimit = 0;
+    private double creditLiability = 0;
 
-    @CodeReviewComment(teacher = "Это свойство не используется, зачем оно нужно?")
-    private int moneyAmount;
 
     public CreditCard(double cardNumber, int pinCode) {
         this.cardNumber = cardNumber;
         this.pinCode = pinCode;
-        this.cardBalance = 0;
-        this.creditLiability = 0;
-        this.creditLimit = 500;
     }
 
     public double getCardNumber() {
@@ -31,59 +26,79 @@ public class CreditCard {
         return pinCode;
     }
 
-    public double getMoneyAmount() {
-        return moneyAmount;
+    public double getCreditLimit(){
+        return creditLimit;
     }
 
-    public void setCardBalance(int cardBalance) {
-        this.cardBalance = cardBalance;
+    public boolean correctPinCode(int pinCode){
+        return (pinCode == this.pinCode);
     }
 
-    public void setCreditLimit(int creditLimit) {
-        this.creditLimit = creditLimit;
+    public double getCardBalance(){
+        return cardBalance;
     }
 
-    public void setCreditLiability(int creditLiability) {
-        this.creditLiability = creditLiability;
+    public double getCreditLiability(){
+        return creditLiability;
+    }
+
+    public void changeCreditLimit(double moneyAmount){
+        creditLimit = moneyAmount;
+        creditLiability = moneyAmount;
+    }
+
+    public double balanceIncludingCreditLiability(){
+        return (cardBalance + creditLiability - (creditLimit - creditLiability));
+    }
+
+    public boolean canTakeMoneyToWithdraw(double moneyAmount){
+        return (moneyAmount < balanceIncludingCreditLiability());
+    }
+
+    public void balanceAndCreditBalanceAfterWithdraw(double moneyAmount){
+        if (moneyAmount <= cardBalance){
+            cardBalance -= moneyAmount;
+        } else {
+            creditLiability = creditLiability - (moneyAmount - cardBalance);
+            cardBalance = 0;
+        }
+    }
+
+    private void updateCardBalanceAndCreditBalanceForDeposit(double moneyAmount){
+        if (creditLiability == creditLimit){
+            cardBalance += moneyAmount;
+        } else {
+            creditLiability += moneyAmount;
+            if (creditLiability > creditLimit){
+                cardBalance = creditLiability - creditLimit;
+                creditLiability = creditLimit;
+            }
+        }
     }
 
     @CodeReviewComment(teacher = "Не корректная логика!")
     @CodeReviewComment(teacher = "Пин код неправильный, а баланс будет меняться!")
     @CodeReviewComment(teacher = "Напишите тесты и убедитесь в этом.")
-    public int withdraw(int pinCode, int moneyAmount) {
-        int yourPincode = getPinCode();
-        if (yourPincode == pinCode) {
-            System.out.println("Pin code is correct!");
+    // исправлено
+
+    public boolean withdraw(int pinCode, double moneyAmount) {
+        if ((correctPinCode(pinCode)) && (canTakeMoneyToWithdraw(moneyAmount))){
+            return true;
         } else {
-            System.out.println("Pin code is incorrect!");
+            return false;
         }
-        if (cardBalance > 0) {
-            cardBalance = cardBalance - moneyAmount;
-        } else if (creditLiability > creditLimit) {
-            System.out.println("Withdraw can't be done!");
-        }
-        else {
-            cardBalance = creditLiability - moneyAmount;
-        }
-        return cardBalance;
     }
 
 	@CodeReviewComment(teacher = "Не корректная логика!")
 	@CodeReviewComment(teacher = "Пин код неправильный, а баланс будет меняться!")
 	@CodeReviewComment(teacher = "Напишите тесты и убедитесь в этом.")
-	public int deposit(int pinCode, int moneyAmount) {
-        int yourPincode = getPinCode();
-        if (yourPincode == pinCode) {
-            System.out.println("Pin code is correct!");
-        } else {
-            System.out.println("Pin code is incorrect!");
+    // исправлено
 
-            if (creditLiability == 0) {
-                cardBalance = cardBalance + moneyAmount;
-            } else {
-                creditLiability = creditLiability + moneyAmount;
-                System.out.println(creditLiability);
-            }
-        } return cardBalance;
+	public boolean deposit(int pinCode, double moneyAmount) {
+        if (!correctPinCode(pinCode)){
+            return  false;
+        } else {
+            updateCardBalanceAndCreditBalanceForDeposit(moneyAmount);
+        } return true;
     }
 }

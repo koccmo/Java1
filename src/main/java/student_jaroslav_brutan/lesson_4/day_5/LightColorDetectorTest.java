@@ -19,7 +19,8 @@ public class LightColorDetectorTest {
         } else {
             System.out.println("Violet test - false!");
         }
-        }   // пустая строка между методами улучшает читаемость кода
+    }
+
         public void blueTest(){
         LightColorDetector lightColorDetector = new LightColorDetector();
         String result = lightColorDetector.detect(455);
@@ -29,6 +30,8 @@ public class LightColorDetectorTest {
             System.out.println("Blue test - false!");
         }
         }
+
+
         public void greenTest(){
         LightColorDetector lightColorDetector = new LightColorDetector();
         String result = lightColorDetector.detect(520);
@@ -38,6 +41,8 @@ public class LightColorDetectorTest {
             System.out.println("Green test - false!");
         }
         }
+
+
         public void yellowTest(){
         LightColorDetector lightColorDetector = new LightColorDetector();
         String result = lightColorDetector.detect(579);
@@ -47,6 +52,8 @@ public class LightColorDetectorTest {
             System.out.println("Yellow test - false!");
         }
         }
+
+
         public void orangeTest(){
         LightColorDetector lightColorDetector = new LightColorDetector();
         String result = lightColorDetector.detect(605);
@@ -56,6 +63,8 @@ public class LightColorDetectorTest {
             System.out.println("Orange test - false!");
         }
         }
+
+
         public void redTest(){
         LightColorDetector lightColorDetector = new LightColorDetector();
         String result = lightColorDetector.detect(689);
@@ -65,6 +74,8 @@ public class LightColorDetectorTest {
             System.out.println("Red test - false!");
         }
     }
+
+
     public void invisibleTest(){
         LightColorDetector lightColorDetector = new LightColorDetector();
         String result = lightColorDetector.detect(25);

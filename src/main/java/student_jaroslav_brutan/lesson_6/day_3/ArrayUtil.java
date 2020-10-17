@@ -70,7 +70,7 @@ public class ArrayUtil {
         return newNumber;
     }
 
-    public int replaceAllNumbers(int[] arr, int numberToReplace, int newNumber) {
+    public int replaceConcreteArrayNumbers(int[] arr, int numberToReplace, int newNumber) {
         for (int i : arr) {
             if (arr[i] == numberToReplace) {
                 arr[i] = newNumber;
@@ -79,4 +79,32 @@ public class ArrayUtil {
         return numberToReplace;
     }
 
+    public int[] reverseNumbersInArray(int[] array){
+        int[] reverseNumbers = new int[array.length];
+        for (int i : array){
+            reverseNumbers[reverseNumbers.length-1-i] = array[i];
+        }
+        return reverseNumbers;
+    }
+
+    public void sortArray(int[] array){
+        int number;
+        boolean sorted = false;
+        while (!sorted){
+            for (int i = 0; i < array.length-1;i++){
+                if (array[i] > array[i+1]){
+                    number = array[i];
+                    array[i] = array[i+1];
+                    array[i+1] = number;
+                }
+            }
+            sorted = true;
+            for (int j = 0; j < array.length-1; j++){
+                if (array[j] > array[j+1]){
+                    sorted = false;
+                    break;
+                }
+            }
+        }
+    }
 }
