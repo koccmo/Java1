@@ -11,15 +11,11 @@ class GameOfLifeNextGenerationCalculator {
         return null;
     }
 
-   /* public boolean isOneCellHavingTwoLiveNeighbours(boolean[][] array) {
-        boolean [][] copyOfArray = createArrayCopy(array);
-        for(int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                if (array)
-            }
-        }
-        return false;
-    }*/
+   /*public boolean isOneCellHavingTwoLiveNeighbours(boolean[][] array) {
+
+    }
+
+    */
 
     public boolean[][] createArrayCopy(boolean[][] array) {
         for (int row = 0; row < rows; row++) {
@@ -29,5 +25,20 @@ class GameOfLifeNextGenerationCalculator {
         }
         return newField;
     }
+
+    public void setAliveCell(int x, int y) {
+        this.field[x][y] = true;
+    }
+
+    public void setDeadCell(int x, int y) {
+        this.field[x][y] = false;
+    }
+
+   /* public int countAliveNeighbours(int x, int y) {
+        int count = 0;
+        count += this.field[x - 1][y - 1];
+        return count;
+    }
+    */
 
   }
