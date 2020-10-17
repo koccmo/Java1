@@ -1,8 +1,8 @@
-package student_eduards_jasvins.lesson_13;
+package student_eduards_jasvins.lesson_13.day_1;
 
 import java.math.BigDecimal;
 
-class TaxCalculatorImpl implements TaxCalculator {
+public class TaxCalculatorImpl implements TaxCalculator {
 
     private BigDecimal income;
 

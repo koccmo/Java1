@@ -1,8 +1,6 @@
-package student_eduards_jasvins;
-/*
+package student_eduards_jasvins.lesson_13.day_1;
+
 import org.junit.Test;
-import student_eduards_jasvins.lesson_13.TaxCalculator;
-import student_eduards_jasvins.lesson_13.TaxCalculatorImpl;
 
 import java.math.BigDecimal;
 
@@ -40,4 +38,4 @@ public class TaxCalculatorImplTest {
         var taxToPay = taxCalculator.calculateTax(income);
         assertEquals(taxToPay, new BigDecimal("9000.00"));
     }
-}*/
+}
