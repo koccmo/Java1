@@ -99,6 +99,17 @@ public class BookDatabaseImpl implements BookDatabase{
     }
 
     @Override
+    public List<Book> find(SearchCriteria searchCriteria) {
+        List<Book> sortedBookList = new ArrayList<>();
+        for (Book book : bookList) {
+            if (searchCriteria.match(book)) {
+                sortedBookList.add(book);
+            }
+        }
+        return sortedBookList;
+    }
+
+    @Override
     public List<Book> getActualList() {
         return bookList;
     }

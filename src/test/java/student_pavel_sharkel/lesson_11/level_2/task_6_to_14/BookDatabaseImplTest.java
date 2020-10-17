@@ -235,4 +235,21 @@ public class BookDatabaseImplTest {
         toCompare.add(book3);
         assertEquals(toCompare, result);
     }
+
+    @Test
+    public void sortedBooksTest() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("Author1", "Title1");
+        Book book2 = new Book("Author2", "Title2");
+        Book book3 = new Book("Author3", "Title3");
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+
+        SearchCriteria authorSearchCriteria = new AuthorSearchCriteria("Author2");
+        List<Book> result = bookDatabase.find(authorSearchCriteria);
+        List<Book> expected = new ArrayList<>();
+        expected.add(book2);
+        assertEquals(expected, result);
+    }
 }
