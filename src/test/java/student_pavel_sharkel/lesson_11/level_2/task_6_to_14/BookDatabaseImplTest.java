@@ -2,9 +2,7 @@ package student_pavel_sharkel.lesson_11.level_2.task_6_to_14;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
@@ -252,4 +250,21 @@ public class BookDatabaseImplTest {
         expected.add(book2);
         assertEquals(expected, result);
     }
+
+    @Test
+    public void findUniqueBooksTrueTest() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("Author1", "Title1");
+        Book book2 = new Book("Author2", "Title2");
+        Book book3 = new Book("Author1", "Title3");
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+
+        Set<String> expected = new HashSet<>();
+        expected.add(book1.getAuthor());
+        expected.add(book2.getAuthor());
+        assertEquals(expected, bookDatabase.findUniqueAuthors());
+    }
+
 }

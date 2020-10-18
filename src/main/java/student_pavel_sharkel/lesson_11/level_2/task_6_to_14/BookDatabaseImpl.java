@@ -1,8 +1,6 @@
 package student_pavel_sharkel.lesson_11.level_2.task_6_to_14;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class BookDatabaseImpl implements BookDatabase{
 
@@ -110,7 +108,22 @@ public class BookDatabaseImpl implements BookDatabase{
     }
 
     @Override
+    public Set<String> findUniqueAuthors() {
+        HashSet<String> uniqueAuthors = new HashSet<>();
+        for (Book book : bookList) {
+            uniqueAuthors.add(book.getAuthor());
+
+//            if (isUnique) {
+//                uniqueAuthors.remove(book.getAuthor());
+//            }
+        }
+        return uniqueAuthors;
+    }
+
+    @Override
     public List<Book> getActualList() {
         return bookList;
     }
+
+
 }

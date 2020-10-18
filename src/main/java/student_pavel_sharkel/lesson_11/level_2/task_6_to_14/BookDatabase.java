@@ -2,6 +2,7 @@ package student_pavel_sharkel.lesson_11.level_2.task_6_to_14;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public interface BookDatabase {
 
@@ -26,4 +27,8 @@ public interface BookDatabase {
     void deleteByTitle(String title);
 
     List<Book> find(SearchCriteria searchCriteria);
+
+    Set<String> findUniqueAuthors();
+
+
 }
