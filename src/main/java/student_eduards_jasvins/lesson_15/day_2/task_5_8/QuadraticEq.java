@@ -1,13 +1,11 @@
 package student_eduards_jasvins.lesson_15.day_2.task_5_8;
 
-import static jdk.nashorn.internal.runtime.regexp.joni.encoding.CharacterType.D;
-
 public class QuadraticEq {
 
     public String calc(double a, double b, double c) {
         double discriminant = b * b - 4 * a * c;
         if (discriminant > 0) {
-            return discriminantGreaterThanZero(a, b, D);
+            return discriminantGreaterThanZero(a, b, c);
         }
         else if (discriminant == 0) {
             return discriminantEqualsZero(a, b);
