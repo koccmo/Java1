@@ -1,9 +1,10 @@
 package student_anvars_intezars.home_tasks.lesson_12.level_2;
 
-import student_aleksandra_maksimovic.lesson_10.level_1.task_3.MyList;
+import teacher.codereview.CodeReview;
 
 import java.util.List;
 
+@CodeReview(approved = true)
 class UserCredentials {
 
     private List<Role> roles;

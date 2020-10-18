@@ -4,6 +4,9 @@ package student_anvars_intezars.home_tasks.lesson_12.level_3.task_18;
 NullPointerExceptionDemo
  */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Printer {
 
     private String name;

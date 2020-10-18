@@ -9,4 +9,5 @@
 4. Throwable
 
 
+@CodeReview(approved = true)
 Ответ: Throwable. Именно от этого наслдеются другие Exception и Error. Остальные классы наследуются от этих двух

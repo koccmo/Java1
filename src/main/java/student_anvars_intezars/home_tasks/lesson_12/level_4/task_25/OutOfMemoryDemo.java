@@ -3,6 +3,9 @@ package student_anvars_intezars.home_tasks.lesson_12.level_4.task_25;
 import java.util.ArrayList;
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class OutOfMemoryDemo {
 
     public static void main(String[] args) {

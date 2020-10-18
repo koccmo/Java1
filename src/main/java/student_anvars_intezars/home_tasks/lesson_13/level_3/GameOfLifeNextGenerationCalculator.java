@@ -1,12 +1,22 @@
 package student_anvars_intezars.home_tasks.lesson_13.level_3;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 class GameOfLifeNextGenerationCalculator {
 
     boolean[][] field;
+
+    @CodeReviewComment(teacher = "Remove unused field!")
     int rows = field.length;
+
+	@CodeReviewComment(teacher = "Remove unused field!")
     int columns = field[0].length;
     //boolean[][] newField = new boolean[rows][columns];
 
+
+	@CodeReviewComment(teacher = "Why this method is empty?")
     public boolean[][] calculate(boolean[][] currentGeneration) {
         return null;
     }

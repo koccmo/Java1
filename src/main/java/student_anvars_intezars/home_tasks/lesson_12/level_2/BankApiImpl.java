@@ -3,6 +3,9 @@ package student_anvars_intezars.home_tasks.lesson_12.level_2;
 import java.util.List;
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BankApiImpl {
 
     private List<BankClient> clients;
