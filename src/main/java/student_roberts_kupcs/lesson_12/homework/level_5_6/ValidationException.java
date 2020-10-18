@@ -1,4 +1,4 @@
-package student_roberts_kupcs.lesson_12.homework.level_5.task_27_34;
+package student_roberts_kupcs.lesson_12.homework.level_5_6;
 
 class ValidationException extends Exception {
     // название валидационного правила, которое создало эту ошибку
