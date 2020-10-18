@@ -2,9 +2,17 @@ package student_aleksandra_maksimovic.lesson_15.level_3;
 
 import java.util.*;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
+@CodeReviewComment(teacher = "Can not approve without tests! Demo not count!")
 public class TennisGameImpl implements TennisGame {
 
+	@CodeReviewComment(teacher = "Why List used here? Tennis game have only two players!"
+			+ "They can be defined separately, without List usage.")
     List<String> players;
+
     Map<String, Integer> playerScores;
 
     public TennisGameImpl(String player1, String player2) {

@@ -1,11 +1,18 @@
 package student_aleksandra_maksimovic.lesson_15.level_4;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
 
+@CodeReview(approved = false)
 public class TennisGame1 implements TennisGame {
 
     private int m_score1 = 0;
     private int m_score2 = 0;
+
+    @CodeReviewComment(teacher = "Unused field, remove it!")
     private String player1Name;
+
+	@CodeReviewComment(teacher = "Unused field, remove it!")
     private String player2Name;
 
     public TennisGame1(String player1Name, String player2Name) {
@@ -13,8 +20,10 @@ public class TennisGame1 implements TennisGame {
         this.player2Name = player2Name;
     }
 
+    @CodeReviewComment(teacher = "Compare two Strings using == ? Not good idea!"
+			+ "Use String.equals() method instead!")
     public void wonPoint(String playerName) {
-        if (playerName == "player1")
+    	if (playerName == "player1")
             m_score1 += 1;
         else
             m_score2 += 1;

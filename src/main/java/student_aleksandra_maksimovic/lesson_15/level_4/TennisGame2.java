@@ -1,10 +1,21 @@
 package student_aleksandra_maksimovic.lesson_15.level_4;
 
-public class TennisGame2 implements TennisGame {
-    public int P1point = 0;
-    public int P2point = 0;
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
 
+@CodeReview(approved = false)
+public class TennisGame2 implements TennisGame {
+
+	@CodeReviewComment(teacher = "public field? Start with big letter?")
+	public int P1point = 0;
+
+	@CodeReviewComment(teacher = "public field? Start with big letter?")
+	public int P2point = 0;
+
+	@CodeReviewComment(teacher = "Unused field, remove it!")
     private String player1Name;
+
+	@CodeReviewComment(teacher = "Unused field, remove it!")
     private String player2Name;
 
     public TennisGame2(String player1Name, String player2Name) {

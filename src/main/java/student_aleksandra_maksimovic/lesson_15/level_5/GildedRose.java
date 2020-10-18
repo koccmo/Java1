@@ -2,10 +2,17 @@ package student_aleksandra_maksimovic.lesson_15.level_5;
 
 import java.util.*;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 public class GildedRose {
 
+	@CodeReviewComment(teacher = "Must be private field!")
     ItemUpdateRule simpleRule;
-    Map<String, ItemUpdateRule> customRules;
+
+	@CodeReviewComment(teacher = "Must be private field!")
+	Map<String, ItemUpdateRule> customRules;
 
     public GildedRose() {
         simpleRule = new SimpleItemUpdateRule();
