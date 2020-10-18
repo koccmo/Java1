@@ -142,4 +142,15 @@ public class BookDatabaseImpl implements BookDatabase{
             }
         return uniqueBooks;
     }
+
+    @Override
+    public boolean contains(Book book) {
+        boolean result = false;
+        for (Book value : bookList) {
+            if ((book.getAuthor().equals(value.getAuthor())) && (book.getTitle().equals(value.getTitle()))) {
+                result = true;
+            }
+        }
+        return result;
+    }
 }

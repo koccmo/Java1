@@ -298,4 +298,31 @@ public class BookDatabaseImplTest {
         expected.add(book2);
         assertEquals(expected, bookDatabase.findUniqueBooks());
     }
+
+    @Test
+    public void isBookNewTrueTest() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("Author1", "Title1");
+        Book book2 = new Book("Author2", "Title2");
+        Book book3 = new Book("Author3", "Title3");
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+
+        boolean result = bookDatabase.contains(book1);
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void isBookNewFalseTest() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("Author1", "Title1");
+        Book book2 = new Book("Author2", "Title2");
+        Book book3 = new Book("Author3", "Title3");
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+
+        boolean result = bookDatabase.contains(book3);
+        assertEquals(false, result);
+    }
 }
