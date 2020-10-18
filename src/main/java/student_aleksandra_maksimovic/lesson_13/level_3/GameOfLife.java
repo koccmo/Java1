@@ -2,6 +2,9 @@ package student_aleksandra_maksimovic.lesson_13.level_3;
 
 import java.util.concurrent.TimeUnit;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class GameOfLife {
     private GameOfLifeConsoleUI ui = new GameOfLifeConsoleUI();
     private FieldGenerator generator = new GameOfLifeRandomFieldGenerator();

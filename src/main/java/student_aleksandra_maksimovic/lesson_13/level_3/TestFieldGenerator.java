@@ -1,5 +1,8 @@
 package student_aleksandra_maksimovic.lesson_13.level_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TestFieldGenerator implements FieldGenerator {
     @Override
     public Field generate(int width, int height) {

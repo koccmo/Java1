@@ -3,6 +3,9 @@ package student_aleksandra_maksimovic.lesson_13.level_5;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class StringCalculator {
     public int add(String str)
     {
