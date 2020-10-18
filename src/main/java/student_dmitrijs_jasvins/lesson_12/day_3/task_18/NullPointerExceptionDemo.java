@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_12.day_3.task_18;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class NullPointerExceptionDemo {
     public static void main(String[] args) {
         Object example = null;

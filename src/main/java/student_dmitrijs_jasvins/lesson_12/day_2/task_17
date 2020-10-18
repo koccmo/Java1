@@ -1,3 +1,5 @@
+@CodeReview(approved = true)
+
 RuntimeException :
 This is RuntimeException is the superclass of those exceptions that can be thrown during the normal operation of the Java Virtual Machine.
 

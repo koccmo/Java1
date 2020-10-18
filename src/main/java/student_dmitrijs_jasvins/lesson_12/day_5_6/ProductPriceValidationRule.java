@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_12.day_5_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProductPriceValidationRule {
 
     public void validate(Product product) throws ValidationException {

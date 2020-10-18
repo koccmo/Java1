@@ -1,6 +1,8 @@
 package student_dmitrijs_jasvins.lesson_12.day_4.task_26;
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class StackOverflowErrorDemo {
     public static void main(String[] args) {
         StackOverflowErrorDemo.recursivePrint(1);

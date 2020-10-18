@@ -3,6 +3,9 @@ package student_dmitrijs_jasvins.lesson_12.day_3.task_19;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class WrongUserInputHandlingDemo {
     public static void main(String[] args) {
 
