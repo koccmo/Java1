@@ -5,38 +5,38 @@ import java.util.Objects;
 class Product {
 
     private String title;
-    private Integer price; // in cents
+    private Integer price;    // указана в центах
     private String description;
 
-    Product(String title,
-            Integer price,
-            String description) {
+    public Product(String title,
+                   Integer price,
+                   String description) {
         this.title = title;
         this.price = price;
         this.description = description;
     }
 
-    String getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    void setTitle(String title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    Integer getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    void setPrice(Integer price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
-    String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    void setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 

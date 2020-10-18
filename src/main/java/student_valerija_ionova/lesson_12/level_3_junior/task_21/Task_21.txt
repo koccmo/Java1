@@ -14,6 +14,8 @@ class Main {
   }
 }
 
+@CodeReview(approved = true)
+
 Какой результат мы получим?
 1. Got the Test Exception   +++  Будет поймана TestException ошибка в try и сработает catch i finally
    Inside finally block

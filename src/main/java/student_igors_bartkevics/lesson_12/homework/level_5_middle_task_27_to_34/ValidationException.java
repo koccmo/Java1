@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_12.homework.level_5_middle_task_27_to_34;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ValidationException extends Exception {
 
     // название валидационного правила, которое создало эту ошибку

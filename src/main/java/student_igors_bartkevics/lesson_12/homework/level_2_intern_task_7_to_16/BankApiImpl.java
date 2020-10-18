@@ -26,6 +26,9 @@ package student_igors_bartkevics.lesson_12.homework.level_2_intern_task_7_to_16;
 import java.util.List;
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BankApiImpl implements BankApi {
 
     private List<BankClient> clients;

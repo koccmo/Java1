@@ -20,6 +20,9 @@ interface BankApi {
  */
 package student_igors_bartkevics.lesson_12.homework.level_2_intern_task_7_to_16;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class AccessDeniedException extends Exception {
     AccessDeniedException(String message) {
         super(message);

@@ -1,5 +1,6 @@
 Исправьте код:
 
+@CodeReview(approved = true)
 class MyException extends RuntimeException {
 
 }

@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BookDatabaseImpl implements BookDatabase{
     private List<Book> books = new ArrayList<>();
     private long id = 1L;
@@ -18,7 +21,7 @@ class BookDatabaseImpl implements BookDatabase{
         return id;
     }
 
-    //@Override
+    @Override
     public boolean delete(long bookId) {
         return false;
     }

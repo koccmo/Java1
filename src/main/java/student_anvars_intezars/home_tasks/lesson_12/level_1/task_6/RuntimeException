@@ -1,0 +1,9 @@
+Иерархия наследования класса "java.lang.RuntimeException" выглядит следующим образом:
+
+java.lang.Object
+ java.lang.Throwable
+  java.lang.Exception
+   java.lang.RuntimeException
+
+
+Источник: https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html

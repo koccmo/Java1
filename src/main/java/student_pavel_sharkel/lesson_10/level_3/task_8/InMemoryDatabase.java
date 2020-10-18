@@ -2,6 +2,9 @@ package student_pavel_sharkel.lesson_10.level_3.task_8;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class InMemoryDatabase implements Database{
 
     ArrayList<Product> productList = new ArrayList<>();

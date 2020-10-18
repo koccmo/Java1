@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_14.level_6.task_35_38;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Trader {
     private String name;
     private String city;

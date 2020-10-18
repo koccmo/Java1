@@ -2,6 +2,9 @@ package student_jaroslav_brutan.lesson_11.day_3.all_tasks;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Book {
 
     private Long id;

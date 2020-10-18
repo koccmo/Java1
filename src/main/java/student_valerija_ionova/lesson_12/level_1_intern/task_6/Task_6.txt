@@ -1,4 +1,5 @@
 Воспользуйтесь документацией Java (javadoc)
 и найдите информацию о иерархии наследования класса java.lang.RuntimeException.
 
+@CodeReview(approved = true)
 Object -> Throwable -> Exception -> RuntimeException

@@ -1,0 +1,1 @@
+Object -> Throwable -> Exception -> RuntimeException.

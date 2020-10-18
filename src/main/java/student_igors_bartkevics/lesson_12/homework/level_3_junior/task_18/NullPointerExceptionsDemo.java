@@ -1,5 +1,8 @@
 package student_igors_bartkevics.lesson_12.homework.level_3_junior.task_18;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class NullPointerExceptionsDemo {
 
     public static void main(String[] args) {

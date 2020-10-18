@@ -2,6 +2,8 @@ package student_volodya_danilin.lesson_12.level_3.Task_20;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
 /*
 т.к. ArithmeticException - наследник Exception'а то мы можем просто проверять на Exception;
 либо сначала проверить на наследника (Arithmetic exception) и далее ловить "всё остальное"
@@ -11,6 +13,7 @@ import java.util.Scanner;
 их в 1 catch-блок используя XOR (exception1 | exception1 a)
  */
 
+@CodeReview(approved = true)
 class MultiCatchExample {
 
     public static void main(String[] args) {

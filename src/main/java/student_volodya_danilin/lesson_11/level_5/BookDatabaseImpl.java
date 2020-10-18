@@ -5,6 +5,9 @@ import org.junit.Test;
 
 import java.util.*;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BookDatabaseImpl implements BookDatabase {
 
     Book book;

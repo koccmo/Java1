@@ -1,32 +1,65 @@
 package student_volodya_danilin.lesson_12.level_5;
 
-class ProductPriceValidationRule implements FieldValidationRule{
+import java.util.ArrayList;
+import java.util.List;
+
+class ProductPriceValidationRule implements ProductValidator {
+
+    List<FieldValidationRule> priceRules = new ArrayList<>();
+    PriceRule1 priceRule1 = new PriceRule1();
+    PriceRule2 priceRule2 = new PriceRule2();
+    PriceRule3 priceRule3 = new PriceRule3();
 
     @Override
+    public List<ValidationException> validate(Product product) {
+
+        priceRules.add(priceRule1);
+        priceRules.add(priceRule2);
+        priceRules.add(priceRule3);
+
+        List<ValidationException> exceptions = new ArrayList<>();
+
+        for (FieldValidationRule rule : priceRules) {
+            try {
+                rule.validate(product);
+            } catch (ValidationException e) {
+                exceptions.add(e);
+            }
+        }
+        return exceptions;
+    }
+}
+
+class PriceRule1 implements FieldValidationRule {
+    @Override
     public void validate(Product product) throws ValidationException {
-
-        Integer price = product.getPrice();
-
-        if (rule5(price)) {
-            throw new ValidationException("Rule 5",
-                    "Price can't be blank!",
-                    "Product Price");
+        if (product.getPrice() == null) {
+            throw new ValidationException("RULE-5: ",
+                    "Price is not specified!",
+                    " found in Product Price");
         }
+    }
+}
 
-        if (rule6(price)) {
-            throw new ValidationException("Rule 6",
-                    "Price must be higher than 0!",
-                    "Product Price");
+class PriceRule2 implements FieldValidationRule {
+    @Override
+    public void validate(Product product) throws ValidationException {
+        String price = product.getPrice().toString();
+        if (!price.matches("\\d+")) {
+            throw new ValidationException("RULE-6: ",
+                    "Price can only contain numbers!",
+                    " found in Product Price");
         }
-
     }
+}
 
-    boolean rule5(Integer price) {
-        return price == null;
+class PriceRule3 implements FieldValidationRule {
+    @Override
+    public void validate(Product product) throws ValidationException {
+        if (product.getPrice().equals(0)) {
+            throw new ValidationException("RULE-7: ",
+                    "Price can't be 0!",
+                    " found in Product Price");
+        }
     }
-
-    boolean rule6(Integer price) {
-        return price <= 0;
-    }
-
 }

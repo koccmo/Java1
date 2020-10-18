@@ -12,10 +12,7 @@ class InMemoryDatabase implements Database{
     private List<Product> productsList = new ArrayList<>();
 
     @CodeReviewComment(teacher = "Why this method are needed?")
-    List <Product> getProductsList(){
-        return productsList;
-    }
-
+    // Updated
     @Override
     public void save(Product product){
         productsList.add(product);

@@ -4,10 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class BookDatabaseImpl implements BookDatabase {
 
+	@CodeReviewComment(teacher = "Class field must be private!")
     List<Book> books = new ArrayList<>();
-    Long currentId = 0L;
+	@CodeReviewComment(teacher = "Class field must be private!")
+	Long currentId = 0L;
+	@CodeReviewComment(teacher = "Class field must be private!")
     BookValidator bookValidator = new BookValidator();
 
     private Optional <Book> getBookById(Long bookId) {

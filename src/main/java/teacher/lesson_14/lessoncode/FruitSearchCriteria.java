@@ -3,22 +3,22 @@ package teacher.lesson_14.lessoncode;
 @FunctionalInterface
 public interface FruitSearchCriteria {
 
-	boolean test(Fruit fruit);
+    boolean test(Fruit fruit);
 
 }
 
 class ApplesSearchCriteria implements FruitSearchCriteria {
-	@Override
-	public boolean test(Fruit fruit) {
-		return "apple".equals(fruit.getTitle());
-	}
+    @Override
+    public boolean test(Fruit fruit) {
+        return "apple".equals(fruit.getTitle());
+    }
 }
 
 class PearsSearchCriteria implements FruitSearchCriteria {
-	@Override
-	public boolean test(Fruit fruit) {
-		return "pear".equals(fruit.getTitle());
-	}
+    @Override
+    public boolean test(Fruit fruit) {
+        return "pear".equals(fruit.getTitle());
+    }
 }
 
 class TomatosSearchCriteria implements FruitSearchCriteria {
@@ -30,18 +30,18 @@ class TomatosSearchCriteria implements FruitSearchCriteria {
 
 
 class RedTomatosSearchCriteria implements FruitSearchCriteria {
-	@Override
-	public boolean test(Fruit fruit) {
-		return "tomato".equals(fruit.getTitle())
-				&& "red".equals(fruit.getColor());
-	}
+    @Override
+    public boolean test(Fruit fruit) {
+        return "tomato".equals(fruit.getTitle())
+                && "red".equals(fruit.getColor());
+    }
 }
 
 class RedTomatosBiggerThen100SearchCriteria implements FruitSearchCriteria {
-	@Override
-	public boolean test(Fruit fruit) {
-		return "tomato".equals(fruit.getTitle())
-				&& "red".equals(fruit.getColor())
-				&& fruit.getWeight() > 100;
-	}
+    @Override
+    public boolean test(Fruit fruit) {
+        return "tomato".equals(fruit.getTitle())
+                && "red".equals(fruit.getColor())
+                && fruit.getWeight() > 100;
+    }
 }

@@ -1,5 +1,7 @@
 Дано
 
+@CodeReview(approved = true)
+
 class TestException extends Exception { }
 
 class Main {

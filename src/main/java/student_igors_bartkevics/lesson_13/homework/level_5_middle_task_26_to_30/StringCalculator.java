@@ -2,9 +2,11 @@ package student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30
 
 import student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.calculators.*;
 import student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.rules.*;
+import teacher.codereview.CodeReview;
 
 import java.util.*;
 
+@CodeReview(approved = true)
 class StringCalculator {
 
     private final Set<Rule> rules;

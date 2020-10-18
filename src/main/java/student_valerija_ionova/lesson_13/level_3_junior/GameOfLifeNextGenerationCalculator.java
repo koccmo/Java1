@@ -3,6 +3,9 @@ package student_valerija_ionova.lesson_13.level_3_junior;
 //Task10
 //Task11 Rule1 Правило 1: Любая живая клетка с меньше чем двумя живыми соседями умирает в следующем поколении.
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = false)
 class GameOfLifeNextGenerationCalculator {
 
     public boolean[][] calculate(boolean[][] currentGeneration) {

@@ -3,6 +3,9 @@ package student_igors_bartkevics.lesson_14.homework.level_1_intern_task_1_to_6;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FruitStorage {
 
     public List<Apple> getAllApples() {
@@ -21,7 +24,7 @@ class FruitStorage {
     public List<Apple> findApplesByColor(List<Apple> inventory, String color) {
         List<Apple> apples = new ArrayList<>();
         for (Apple apple : inventory) {
-            if (apple.getColor().equals(color)) {
+            if (color.equals(apple.getColor())) {
                 apples.add(apple);
             }
         }

@@ -1,9 +1,9 @@
 package student_eduards_jasvins.lesson_11.day_6.UI;
 
 import student_eduards_jasvins.lesson_11.day_6.BookDatabase;
+import teacher.codereview.CodeReview;
 
-
-
+@CodeReview(approved = true)
 public class GetAuthorToBooksMapUIAction implements UIAction {
 
     BookDatabase bookDatabase;

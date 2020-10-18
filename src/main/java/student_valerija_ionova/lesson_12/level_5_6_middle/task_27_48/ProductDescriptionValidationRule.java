@@ -3,6 +3,9 @@ package student_valerija_ionova.lesson_12.level_5_6_middle.task_27_48;
 //- RULE-7: не должно быть длиннее 2000 символов
 //- RULE-8: должно содержать только английские буквы и цифры, другие символы не допустимы
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProductDescriptionValidationRule implements FieldValidationRule{
 
     @Override

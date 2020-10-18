@@ -1,13 +1,17 @@
 package student_valerija_ionova.lesson_11.level_2_7_v2.UIAction;
 
-import student_valerija_ionova.lesson_11.level_7_senior.super_task_2.Book;
-import student_valerija_ionova.lesson_11.level_7_senior.super_task_2.BookDatabase;
+import student_valerija_ionova.lesson_11.level_7_senior_approved.super_task_2.Book;
+import student_valerija_ionova.lesson_11.level_7_senior_approved.super_task_2.BookDatabase;
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
 
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 public class ContainsUIAction implements UIAction {
 
-    BookDatabase bookDatabase;
+	@CodeReviewComment(teacher = "Must be private!")
+    private BookDatabase bookDatabase;
 
     ContainsUIAction (BookDatabase bookDatabase){
         this.bookDatabase = bookDatabase;

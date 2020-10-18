@@ -6,6 +6,9 @@ package student_valerija_ionova.lesson_12.level_4_junior.task_26;
 
 Память JVM не безгранична!*/
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class OutOfMemoryDemo {
 
     public static void main (String [] args){

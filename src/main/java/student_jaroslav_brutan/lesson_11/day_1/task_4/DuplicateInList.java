@@ -3,6 +3,9 @@ package student_jaroslav_brutan.lesson_11.day_1.task_4;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class DuplicateInList {
 
     public static void main(String[] args) {

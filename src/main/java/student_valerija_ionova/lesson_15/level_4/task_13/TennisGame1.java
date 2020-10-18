@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_15.level_4.task_13;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TennisGame1 implements TennisGame {
 
     private int m_score1 = 0;

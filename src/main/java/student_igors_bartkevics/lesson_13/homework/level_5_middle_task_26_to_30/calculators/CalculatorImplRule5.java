@@ -2,10 +2,12 @@ package student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30
 
 import student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.Calculator;
 import student_igors_bartkevics.lesson_13.homework.level_5_middle_task_26_to_30.DelimiterReplacer;
+import teacher.codereview.CodeReview;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@CodeReview(approved = true)
 public class CalculatorImplRule5 implements Calculator {
 
     private final DelimiterReplacer delimiterReplacer;

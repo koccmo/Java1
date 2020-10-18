@@ -3,6 +3,9 @@ package student_eduards_jasvins.lesson_11.day_3;
 import java.util.List;
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 interface BookDatabase {
 
     Long save(Book book);

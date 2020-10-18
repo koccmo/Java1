@@ -1,5 +1,10 @@
 package student_eduards_jasvins.lesson_11.day_3;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
+@CodeReviewComment(teacher = "May be this class must have name SearchCriteriaTest?")
 class AuthorSearchCriteriaTest {
 
     public static void main(String[] args) {

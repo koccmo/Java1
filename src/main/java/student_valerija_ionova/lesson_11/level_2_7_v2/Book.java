@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_11.level_2_7_v2;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Book {
     private Long id;
     private String title;
