@@ -2,6 +2,9 @@ package student_dmitrijs_jasvins.lesson_11.day_1.task_2;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ListExample {
         public static void main(String[] args) {
             ArrayList<Integer> numbers = new ArrayList<>();

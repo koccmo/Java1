@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_11.day_2;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Book {
 
     private Long id;

@@ -3,6 +3,9 @@ package student_dmitrijs_jasvins.lesson_11.day_4.task_27;
 import java.util.HashSet;
 import java.util.Set;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class UniqueWordFinderTest {
     public static void main(String[] args) {
         UniqueWordFinderTest test = new UniqueWordFinderTest();

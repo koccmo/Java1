@@ -1,8 +1,6 @@
 package student_dmitrijs_jasvins.lesson_15.day_5;
 
 import org.junit.Test;
-import student_dmitrijs_jasvins.lesoon_15.day_5.GildedRose;
-import student_dmitrijs_jasvins.lesoon_15.day_5.Item;
 
 import java.util.ArrayList;
 import java.util.List;

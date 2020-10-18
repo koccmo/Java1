@@ -1,8 +1,6 @@
 package student_dmitrijs_jasvins.lesson_15.day_2;
 
 import org.junit.Test;
-import student_dmitrijs_jasvins.lesoon_15.day_2.FraudDetector;
-import student_dmitrijs_jasvins.lesoon_15.day_2.Trader;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

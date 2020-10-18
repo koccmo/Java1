@@ -3,6 +3,9 @@ package student_dmitrijs_jasvins.lesson_11.day_1.task_1;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ListExample {
     public static void main(String[] args) {
 

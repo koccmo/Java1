@@ -1,8 +1,6 @@
 package student_dmitrijs_jasvins.lesson_15.day_3;
 
 import org.junit.Test;
-import student_dmitrijs_jasvins.lesoon_15.day_3.TennisGame;
-import student_dmitrijs_jasvins.lesoon_15.day_3.TennisGameImpl;
 
 import static org.junit.Assert.assertEquals;
 

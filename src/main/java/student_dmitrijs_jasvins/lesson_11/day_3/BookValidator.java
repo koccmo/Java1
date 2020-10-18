@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_11.day_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BookValidator {
 
     boolean isBookAuthor (Book book, String author) {
