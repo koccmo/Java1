@@ -36,4 +36,6 @@ public interface BookDatabase {
 
     boolean contains(Book book);
 
+    Set<String> find(String text);
+
 }

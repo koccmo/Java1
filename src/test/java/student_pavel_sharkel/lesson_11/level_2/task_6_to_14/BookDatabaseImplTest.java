@@ -325,4 +325,20 @@ public class BookDatabaseImplTest {
         boolean result = bookDatabase.contains(book3);
         assertEquals(false, result);
     }
+
+    @Test
+    public void uniqueTextFinderTest() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("Text", "Title1");
+        Book book2 = new Book("Author2", "Title2");
+        Book book3 = new Book("Author3", "Text");
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+
+        Set<String> expected = new HashSet<>();
+        expected.add(book1.getAuthor());
+        expected.add(book3.getTitle());
+        assertEquals(expected, bookDatabase.find("Text"));
+    }
 }

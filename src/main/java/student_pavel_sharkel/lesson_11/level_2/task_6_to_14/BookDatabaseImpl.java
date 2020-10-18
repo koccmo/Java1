@@ -153,4 +153,14 @@ public class BookDatabaseImpl implements BookDatabase{
         }
         return result;
     }
+
+    @Override
+    public Set<String> find(String text) {
+        Set<String> foundTextList = new HashSet<>();
+        for (Book book : bookList) {
+            if (book.getTitle().equals(text)) {foundTextList.add(book.getTitle());};
+            if (book.getAuthor().equals(text)) {foundTextList.add(book.getAuthor());};
+        }
+        return foundTextList;
+    }
 }
