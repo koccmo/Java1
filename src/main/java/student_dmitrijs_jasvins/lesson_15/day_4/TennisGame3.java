@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_15.day_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TennisGame3 implements TennisGame{
     private int player2score;
     private int player1score;

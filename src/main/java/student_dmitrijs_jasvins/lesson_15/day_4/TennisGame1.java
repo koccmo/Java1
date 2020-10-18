@@ -1,10 +1,13 @@
 package student_dmitrijs_jasvins.lesson_15.day_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TennisGame1 implements TennisGame {
     private int player1Points = 0;
     private int player2Points = 0;
-    private String player1Name;
-    private String player2Name;
+    private String player1Name;  // unused field!
+    private String player2Name;  // unused field!
 
     public TennisGame1(String player1Name, String player2Name) {
         this.player1Name = player1Name;

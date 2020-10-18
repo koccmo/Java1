@@ -2,6 +2,9 @@ package student_dmitrijs_jasvins.lesson_15.day_5;
 
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class GildedRose {
     private final int ZERO_VALUE = 0;
     private final int MAX_QUALITY = 50;

@@ -3,6 +3,9 @@ package student_dmitrijs_jasvins.lesson_15.day_5;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class GildedRoseDemo {
     public static void main(String[] args) {
         List<Item> items = new ArrayList<>();

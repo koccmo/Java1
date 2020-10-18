@@ -3,6 +3,9 @@ package student_dmitrijs_jasvins.lesson_14.day_5;
 import java.util.Arrays;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TransactionTestData {
     public List<Transaction> getTransactions() {
         Trader raoul = new Trader("Raoul", "Cambridge");

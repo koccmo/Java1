@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_14.day_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Transaction {
     private Trader trader;
     private int year;

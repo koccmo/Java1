@@ -4,6 +4,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TransactionAnalysisService {
     public List<Transaction> findTransactionByYear(List<Transaction> transactions, int year){
         return transactions.stream().filter(temp -> temp.getYear() == year).collect(Collectors.toList());

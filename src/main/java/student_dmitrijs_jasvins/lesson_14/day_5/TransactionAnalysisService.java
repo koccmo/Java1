@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TransactionAnalysisService {
 
     public boolean isAnyTraderFromMilanV1 (List<Transaction> transactions){

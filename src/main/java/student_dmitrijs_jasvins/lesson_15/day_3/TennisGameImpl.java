@@ -1,15 +1,18 @@
 package student_dmitrijs_jasvins.lesson_15.day_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TennisGameImpl implements TennisGame {
 
     private final int LOVE = 0;
-    private final int FIFTEEN = 1;
-    private final int THIRTY = 2;
+    private final int FIFTEEN = 1; //unused field!
+    private final int THIRTY = 2;  //unused field!
     private final int FORTY = 3;
     private final int DEUCE = 4;
-    private final int ADVANTAGE = 5;
+    private final int ADVANTAGE = 5;  //unused field!
     private String firstPlayerName;
-    private String secondPlayerName;
+    private String secondPlayerName;  //unused field!
     private int firstPlayerScore;
     private int secondPlayerScore;
 

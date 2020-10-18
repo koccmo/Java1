@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_15.day_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Item {
     private String name;
     private int sellIn;

@@ -6,6 +6,9 @@ import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.stream.Collectors;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TransactionAnalysisService {
     private List<Transaction> descendingSortByValue(List<Transaction> transactions){
         return transactions.stream().sorted(Comparator.comparingInt(Transaction::getValue).reversed()).collect(Collectors.toList());
