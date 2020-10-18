@@ -1,4 +1,4 @@
-package student_pavel_sharkel.lesson_11.level_2.task_6_to_14;
+package student_pavel_sharkel.lesson_11.level_2_to_5.task_6_to_27;
 
 class AuthorSearchCriteria implements SearchCriteria {
 
