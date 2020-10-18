@@ -109,7 +109,7 @@ public class BookDatabaseImpl implements BookDatabase{
 
     @Override
     public Set<String> findUniqueAuthors() {
-        HashSet<String> uniqueAuthors = new HashSet<>();
+        Set<String> uniqueAuthors = new HashSet<>();
         for (Book book : bookList) {
             uniqueAuthors.add(book.getAuthor());
 
@@ -127,10 +127,19 @@ public class BookDatabaseImpl implements BookDatabase{
 
     @Override
     public Set<String> findUniqueTitles() {
-        HashSet<String> uniqueTitles = new HashSet<>();
+        Set<String> uniqueTitles = new HashSet<>();
         for (Book book : bookList) {
             uniqueTitles.add(book.getTitle());
         }
         return uniqueTitles;
+    }
+
+    @Override
+    public Set<Book> findUniqueBooks() {
+        Set<Book> uniqueBooks = new HashSet<>();
+        for (Book book : bookList) {
+                uniqueBooks.add(book);
+            }
+        return uniqueBooks;
     }
 }

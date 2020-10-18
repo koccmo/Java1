@@ -282,4 +282,20 @@ public class BookDatabaseImplTest {
         expected.add(book2.getTitle());
         assertEquals(expected, bookDatabase.findUniqueTitles());
     }
+
+    @Test
+    public void findUniqueBooksTest() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("Author1", "Title1");
+        Book book2 = new Book("Author1", "Title1");
+        Book book3 = new Book("Author1", "Title1");
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book1);
+
+        Set<Book> expected = new HashSet<>();
+        expected.add(book1);
+        expected.add(book2);
+        assertEquals(expected, bookDatabase.findUniqueBooks());
+    }
 }
