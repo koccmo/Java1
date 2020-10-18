@@ -26,8 +26,9 @@ public class GameOfLifeNextGenerationCalculatorTest {
         newArray[3][1] = true;
         newArray[3][2] = false;
 
-       //boolean[][] result = gameOfLifeNextGenerationCalculator.isOneCellHavingTwoLiveNeighbours(array);
-        //assertTrue(String.valueOf(result),true);
+
+       boolean result = gameOfLifeNextGenerationCalculator.isOneCellHavingTwoLiveNeighbours(newArray);
+        assertTrue(result);
     }
 
 
