@@ -252,7 +252,7 @@ public class BookDatabaseImplTest {
     }
 
     @Test
-    public void findUniqueBooksTrueTest() {
+    public void findUniqueAuthorsTest() {
         BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
         Book book1 = new Book("Author1", "Title1");
         Book book2 = new Book("Author2", "Title2");
@@ -267,4 +267,19 @@ public class BookDatabaseImplTest {
         assertEquals(expected, bookDatabase.findUniqueAuthors());
     }
 
+    @Test
+    public void findUniqueTitlesTest() {
+        BookDatabaseImpl bookDatabase = new BookDatabaseImpl();
+        Book book1 = new Book("Author1", "Title1");
+        Book book2 = new Book("Author2", "Title2");
+        Book book3 = new Book("Author3", "Title2");
+        bookDatabase.save(book1);
+        bookDatabase.save(book2);
+        bookDatabase.save(book3);
+
+        Set<String> expected = new HashSet<>();
+        expected.add(book1.getTitle());
+        expected.add(book2.getTitle());
+        assertEquals(expected, bookDatabase.findUniqueTitles());
+    }
 }
