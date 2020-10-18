@@ -2,6 +2,9 @@ package student_dmitrijs_jasvins.lesson_13.day_1;
 
 import java.math.BigDecimal;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TaxCalculatorImpl  implements TaxCalculator {
 
     private final BigDecimal MaxValue = new BigDecimal("20000");

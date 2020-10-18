@@ -1,5 +1,8 @@
 package student_dmitrijs_jasvins.lesson_13.day_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class GameOfLifeConsoleUI {
     private final String ALIVE_CELL = "X";
     private final String DEAD_CELL = "-";

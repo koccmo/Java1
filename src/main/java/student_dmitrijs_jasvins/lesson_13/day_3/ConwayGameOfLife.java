@@ -1,5 +1,10 @@
 package student_dmitrijs_jasvins.lesson_13.day_3;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
+@CodeReviewComment(teacher = "Tests?")
 public class ConwayGameOfLife {
     public boolean[][] calculateNextGeneration(boolean[][] currentGeneration) {
 
