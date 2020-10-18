@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TransactionAnalysisService {
     public List<Transaction> findByYear(List<Transaction> transactions, int year) {
         return transactions
