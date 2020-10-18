@@ -6,6 +6,10 @@ package student_aleksandra_maksimovic.lesson_12.level_4.task_26;
 
 Память JVM не безгранична!
  */
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class  StackOverflowError {
 
     public static void recursiveCall() {

@@ -2,6 +2,10 @@ package student_aleksandra_maksimovic.lesson_12.level_5_6;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class ValidationException extends Exception {
 
     // название валидационного правила, которое создало эту ошибку
@@ -28,6 +32,7 @@ class ValidationException extends Exception {
         return ruleName;
     }
 
+    @CodeReviewComment(teacher = "Do not create unused setter methods!")
     public void setRuleName(String ruleName) {
         this.ruleName = ruleName;
     }
@@ -36,6 +41,7 @@ class ValidationException extends Exception {
         return description;
     }
 
+	@CodeReviewComment(teacher = "Do not create unused setter methods!")
     public void setDescription(String description) {
         this.description = description;
     }
@@ -44,6 +50,7 @@ class ValidationException extends Exception {
         return fieldName;
     }
 
+	@CodeReviewComment(teacher = "Do not create unused setter methods!")
     public void setFieldName(String fieldName) {
         this.fieldName = fieldName;
     }

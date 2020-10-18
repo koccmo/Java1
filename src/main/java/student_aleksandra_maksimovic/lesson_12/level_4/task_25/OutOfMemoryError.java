@@ -3,6 +3,8 @@ package student_aleksandra_maksimovic.lesson_12.level_4.task_25;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
 /*
 Напишите программу, которая вылетает с OutOfMemoryError.
 
@@ -11,6 +13,8 @@ import java.util.List;
 
 Память JVM не безгранична
  */
+
+@CodeReview(approved = true)
  class OutOfMemoryError {
     public static void main(String[] args) {
         List <Long> numbers = new ArrayList<>();

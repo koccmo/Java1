@@ -2,6 +2,9 @@ package student_aleksandra_maksimovic.lesson_12.level_5_6;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Product {
 
     private String title;
