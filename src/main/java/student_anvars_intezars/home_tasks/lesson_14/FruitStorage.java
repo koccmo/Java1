@@ -28,4 +28,15 @@ class FruitStorage {
         }
         return greenApples;
     }
+
+    public List<Apple> getAllRedApples(List<Apple> apples) {
+        List<Apple> redApples = new ArrayList<>();
+        for (int i = 0; i < apples.size(); i++) {
+            if (apples.get(i).getColor().equals("red")) {
+                Apple red = apples.get(i);
+                redApples.add(red);
+            }
+        }
+        return redApples;
+    }
 }
