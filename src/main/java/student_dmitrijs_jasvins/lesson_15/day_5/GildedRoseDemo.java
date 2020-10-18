@@ -1,4 +1,4 @@
-package student_dmitrijs_jasvins.lesoon_15.day_5;
+package student_dmitrijs_jasvins.lesson_15.day_5;
 
 import java.util.ArrayList;
 import java.util.List;

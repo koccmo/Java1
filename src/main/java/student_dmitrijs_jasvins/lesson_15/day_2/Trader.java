@@ -1,4 +1,4 @@
-package student_dmitrijs_jasvins.lesoon_15.day_2;
+package student_dmitrijs_jasvins.lesson_15.day_2;
 
 public class Trader {
     String fullName;

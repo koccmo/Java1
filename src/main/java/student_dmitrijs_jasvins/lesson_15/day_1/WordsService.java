@@ -1,4 +1,4 @@
-package student_dmitrijs_jasvins.lesoon_15.day_1;
+package student_dmitrijs_jasvins.lesson_15.day_1;
 
 public class WordsService {
     public int countRepetitions(String[] words, String repeatingWord) {

@@ -1,4 +1,4 @@
-package student_dmitrijs_jasvins.lesoon_15.day_4;
+package student_dmitrijs_jasvins.lesson_15.day_4;
 
 public class TennisGame2 implements TennisGame {
     public int P1point = 0;

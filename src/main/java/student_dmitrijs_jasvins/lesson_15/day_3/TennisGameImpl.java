@@ -1,4 +1,4 @@
-package student_dmitrijs_jasvins.lesoon_15.day_3;
+package student_dmitrijs_jasvins.lesson_15.day_3;
 
 public class TennisGameImpl implements TennisGame {
 

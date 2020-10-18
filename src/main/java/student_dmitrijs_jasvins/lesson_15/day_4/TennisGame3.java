@@ -1,4 +1,4 @@
-package student_dmitrijs_jasvins.lesoon_15.day_4;
+package student_dmitrijs_jasvins.lesson_15.day_4;
 
 public class TennisGame3 implements TennisGame{
     private int player2score;
