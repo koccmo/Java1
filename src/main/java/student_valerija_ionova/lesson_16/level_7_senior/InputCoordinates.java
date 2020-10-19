@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_16.level_7_senior;
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class InputCoordinates {
 
     int [] coordinates = new int [3];

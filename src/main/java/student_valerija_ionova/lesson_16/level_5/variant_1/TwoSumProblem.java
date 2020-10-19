@@ -9,6 +9,9 @@ Output: [1, 2]  или [2, 1]
 array[1] + array[2] = 2 + 5 = 7
 */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TwoSumProblem {
 
     int [] numbers;

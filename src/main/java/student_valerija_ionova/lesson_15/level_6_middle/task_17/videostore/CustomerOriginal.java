@@ -5,6 +5,9 @@ package student_valerija_ionova.lesson_15.level_6_middle.task_17.videostore;
 import java.util.Enumeration;
 import java.util.Vector;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class CustomerOriginal {
 
 	public CustomerOriginal(String name) {

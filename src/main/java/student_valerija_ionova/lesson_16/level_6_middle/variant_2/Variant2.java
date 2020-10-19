@@ -1,6 +1,8 @@
 package student_valerija_ionova.lesson_16.level_6_middle.variant_2;
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class Variant2 {
 
     private int [] elevationMap;

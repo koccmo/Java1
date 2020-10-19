@@ -3,6 +3,9 @@ package student_valerija_ionova.lesson_15.level_5_middle.gildedrose;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class GildedRose {
 
 	public void updateQuality(List<Item> items) {

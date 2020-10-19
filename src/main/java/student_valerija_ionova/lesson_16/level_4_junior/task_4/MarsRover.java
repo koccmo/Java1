@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_16.level_4_junior.task_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class MarsRover {
 
     public static String move(int x, int y, char direction, String instructions) {

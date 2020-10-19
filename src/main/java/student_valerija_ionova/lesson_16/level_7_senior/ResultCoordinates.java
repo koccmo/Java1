@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_16.level_7_senior;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ResultCoordinates {
 
     private int x;

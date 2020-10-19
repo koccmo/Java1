@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_16.level_3_junior.task_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class RobotStartPositionParameters {
 
     private MoveInformation moveInformation;

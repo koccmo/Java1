@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class SkylineProblem implements SilhouetteOfSkylines{
 
     private int [][] skylineCoordinates;

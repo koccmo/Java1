@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_16.level_5.variant_2;
 
 import java.util.HashMap;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TwoSumProblem {
 
     int [] numbers;

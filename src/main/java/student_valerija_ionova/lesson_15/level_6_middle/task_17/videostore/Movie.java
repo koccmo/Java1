@@ -1,5 +1,8 @@
 package student_valerija_ionova.lesson_15.level_6_middle.task_17.videostore;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Movie {
 
 	public static final String REGULAR = "REGULAR";

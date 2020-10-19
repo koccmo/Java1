@@ -9,6 +9,9 @@ Example
 Consider the array {3, 0, 0, 2, 0, 4}, three units of water can be stored three indexes 1 and 2,
 and one unit of water at index 3, and three units of water at index 4. */
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Variant1 {
 
     private int [] elevationMap;

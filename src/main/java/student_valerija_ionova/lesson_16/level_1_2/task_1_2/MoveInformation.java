@@ -2,6 +2,9 @@ package student_valerija_ionova.lesson_16.level_1_2.task_1_2;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class MoveInformation {
 
     private int x;

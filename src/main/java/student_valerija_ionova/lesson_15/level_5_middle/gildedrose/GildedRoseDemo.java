@@ -3,6 +3,9 @@ package student_valerija_ionova.lesson_15.level_5_middle.gildedrose;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class GildedRoseDemo {
 
 	public static void main(String[] args) {
