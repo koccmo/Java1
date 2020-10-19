@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_14.day_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Apple {
 
     private String color;

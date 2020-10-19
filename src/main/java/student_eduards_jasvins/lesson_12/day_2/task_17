@@ -5,5 +5,7 @@ class AccessDeniedException extends Exception {
 
 }
 
+@CodeReview(approved = true)
+
 Ответ:
 Чтобы обрабатывать исключения.

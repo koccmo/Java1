@@ -2,6 +2,9 @@ package student_eduards_jasvins.lesson_12.day_2;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BankClient {
 
     private String uid;

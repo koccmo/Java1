@@ -1,10 +1,18 @@
 package student_eduards_jasvins.lesson_15.day_4;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 public class TennisGame1 implements TennisGame {
 
     private int player1Points = 0;
     private int player2Points = 0;
+
+    @CodeReviewComment(teacher = "Unused field! Remove it!")
     private String player1Name;
+
+    @CodeReviewComment(teacher = "Unused field! Remove it!")
     private String player2Name;
 
     public TennisGame1(String player1Name, String player2Name) {

@@ -6,5 +6,7 @@
 
 3. Error
 
+@CodeReview(approved = true)
+
 4. Throwable = This class.
 

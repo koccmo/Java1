@@ -6,6 +6,9 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TransactionAnalysisService {
 
     public List <Transaction> findAllTransFor2011(List <Transaction> allTransaction) {

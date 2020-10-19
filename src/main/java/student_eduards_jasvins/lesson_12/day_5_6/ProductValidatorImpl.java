@@ -3,6 +3,9 @@ package student_eduards_jasvins.lesson_12.day_5_6;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProductValidatorImpl implements ProductValidator {
 
     private List<FieldValidationRule> validationRules = new ArrayList<>();

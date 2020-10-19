@@ -1,9 +1,12 @@
 package student_eduards_jasvins.lesson_12.day_2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.ArrayList;  // remove unused imports
+import java.util.Arrays;  // remove unused imports
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class UserCredentials {
 
     private List<Role> roles;

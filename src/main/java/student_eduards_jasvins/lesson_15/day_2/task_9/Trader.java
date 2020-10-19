@@ -1,5 +1,8 @@
 package student_eduards_jasvins.lesson_15.day_2.task_9;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Trader {
 
     private String fullName;

@@ -1,5 +1,9 @@
 package student_eduards_jasvins.lesson_15.day_4;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
 public class TennisGame2 implements TennisGame {
 
     public int P1point = 0;
@@ -7,8 +11,8 @@ public class TennisGame2 implements TennisGame {
 
     public String P1result = "";
     public String P2result = "";
-    private String player1Name;
-    private String player2Name;
+    private String player1Name;  // remove unused field!
+    private String player2Name;  // remove unused field!
 
     public TennisGame2(String player1Name, String player2Name) {
         this.player1Name = player1Name;
@@ -74,6 +78,7 @@ public class TennisGame2 implements TennisGame {
 
     private void P2Score() { P2point++; }
 
+    @CodeReviewComment(teacher = "Compare String using == ? May be String.equals?")
     public void wonPoint(String player) {
         if (player == "player1")
             P1Score();
