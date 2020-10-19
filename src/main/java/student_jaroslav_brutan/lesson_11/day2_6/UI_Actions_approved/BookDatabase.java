@@ -1,20 +1,22 @@
-package student_jaroslav_brutan.lesson_11.day2_6.UI_Actions;
+package student_jaroslav_brutan.lesson_11.day2_6.UI_Actions_approved;
 
 import student_jaroslav_brutan.lesson_11.day2_6.AllSearchCriterias.SearchCriteria;
 import student_jaroslav_brutan.lesson_11.day2_6.Book;
+import teacher.codereview.CodeReview;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
+@CodeReview(approved = true)
 public interface BookDatabase {
 
-    Long save(student_jaroslav_brutan.lesson_11.day2_6.UI_Actions.Book book);
+    Long save(student_jaroslav_brutan.lesson_11.day2_6.UI_Actions_approved.Book book);
 
     boolean delete(Long bookId);
 
-    boolean delete(student_jaroslav_brutan.lesson_11.day2_6.UI_Actions.Book book);
+    boolean delete(student_jaroslav_brutan.lesson_11.day2_6.UI_Actions_approved.Book book);
 
     Optional<student_jaroslav_brutan.lesson_11.day2_6.Book> findById(Long bookId);
 
@@ -34,7 +36,7 @@ public interface BookDatabase {
 
     Set<student_jaroslav_brutan.lesson_11.day2_6.Book> findUniqueBooks();
 
-    boolean contains(student_jaroslav_brutan.lesson_11.day2_6.UI_Actions.Book book);
+    boolean contains(student_jaroslav_brutan.lesson_11.day2_6.UI_Actions_approved.Book book);
 
     List<student_jaroslav_brutan.lesson_11.day2_6.Book> find(SearchCriteria searchCriteria);
 

@@ -1,5 +1,8 @@
 package student_jaroslav_brutan.lesson_15.day_2.task_9;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class FraudDetector {
 
     boolean isFraud(Trader trader) {

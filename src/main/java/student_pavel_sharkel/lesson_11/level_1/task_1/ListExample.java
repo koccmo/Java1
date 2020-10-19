@@ -2,6 +2,9 @@ package student_pavel_sharkel.lesson_11.level_1.task_1;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ListExample {
 
     public static void main(String[] args) {

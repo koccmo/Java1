@@ -1,11 +1,13 @@
 package student_jaroslav_brutan.lesson_11.day2_6;
 
-import student_jaroslav_brutan.lesson_11.day2_6.UI_Actions.*;
+import student_jaroslav_brutan.lesson_11.day2_6.UI_Actions_approved.*;
+import teacher.codereview.CodeReview;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 public class BookLibrary {
 
     private Map<Integer, UIAction> menuNumberToActionMap = new HashMap<>();

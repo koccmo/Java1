@@ -2,6 +2,9 @@ package student_pavel_sharkel.lesson_11.level_1.task_5;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class BookListContainsDemo {
 
     public static void main(String[] args) {

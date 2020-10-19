@@ -1,6 +1,8 @@
-package student_jaroslav_brutan.lesson_11.day2_6.UI_Actions;
+package student_jaroslav_brutan.lesson_11.day2_6.UI_Actions_approved;
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class Book {
 
     private Long id;

@@ -1,5 +1,8 @@
 package student_pavel_sharkel.lesson_11.level_1.task_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Book {
     private String title;
     private String author;

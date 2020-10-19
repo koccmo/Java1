@@ -1,5 +1,8 @@
 package student_jaroslav_brutan.lesson_13.day_5.task_30;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class StringCalculator {
 
     int add (String numbers){

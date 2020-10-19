@@ -1,11 +1,14 @@
 package student_jaroslav_brutan.lesson_15.day_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TennisGame1 implements TennisGame{
 
     private int m_score1 = 0;
     private int m_score2 = 0;
     private String firstPlayer;
-    private String secondPlayer;
+    private String secondPlayer;  // unused field!
 
     public TennisGame1(String firstPlayer, String secondPlayer) {
         this.firstPlayer = firstPlayer;

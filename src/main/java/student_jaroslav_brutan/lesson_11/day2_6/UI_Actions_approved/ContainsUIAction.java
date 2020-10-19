@@ -1,10 +1,13 @@
-package student_jaroslav_brutan.lesson_11.day2_6.UI_Actions;
+package student_jaroslav_brutan.lesson_11.day2_6.UI_Actions_approved;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ContainsUIAction implements UIAction{
 
-    private student_jaroslav_brutan.lesson_11.day2_6.UI_Actions.BookDatabase bookDatabase;
+    private student_jaroslav_brutan.lesson_11.day2_6.UI_Actions_approved.BookDatabase bookDatabase;
 
     public ContainsUIAction(BookDatabase bookDatabase) {
         this.bookDatabase = bookDatabase;

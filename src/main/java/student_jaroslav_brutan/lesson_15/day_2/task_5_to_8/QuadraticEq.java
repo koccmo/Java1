@@ -1,6 +1,8 @@
 package student_jaroslav_brutan.lesson_15.day_2.task_5_to_8;
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class QuadraticEq {
 
    public String calc(double a, double b, double c) {

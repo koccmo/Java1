@@ -1,5 +1,8 @@
 package student_jaroslav_brutan.lesson_11.day2_6.AllSearchCriterias;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class SearchCriteriaDemo {
 
     public static void main(String[] args) {

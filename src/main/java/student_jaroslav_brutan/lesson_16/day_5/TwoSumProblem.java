@@ -1,5 +1,10 @@
 package student_jaroslav_brutan.lesson_16.day_5;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = false)
+@CodeReviewComment(teacher = "Tests?")
 public class TwoSumProblem {
 
     int[] arrayNumbers;

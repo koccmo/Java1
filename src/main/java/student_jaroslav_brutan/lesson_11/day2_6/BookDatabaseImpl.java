@@ -1,9 +1,11 @@
 package student_jaroslav_brutan.lesson_11.day2_6;
 
 import student_jaroslav_brutan.lesson_11.day2_6.AllSearchCriterias.SearchCriteria;
+import teacher.codereview.CodeReview;
 
 import java.util.*;
 
+@CodeReview(approved = true)
 public class BookDatabaseImpl implements BookDatabase{
 
     private List<Book> listOfBooks = new ArrayList<>();

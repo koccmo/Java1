@@ -1,5 +1,8 @@
 package student_jaroslav_brutan.lesson_13.day_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class GameOfLifeNextGenerationCalculator {
 
     public boolean[][] calculate(boolean[][] currentGeneration) {

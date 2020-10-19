@@ -2,6 +2,9 @@ package student_jaroslav_brutan.lesson_13.day_4;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class GameOfLifeRandomFieldGenerator {
 
     boolean[][] generate(int width, int height) {

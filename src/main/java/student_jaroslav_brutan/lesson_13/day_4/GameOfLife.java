@@ -2,6 +2,9 @@ package student_jaroslav_brutan.lesson_13.day_4;
 
 import java.util.concurrent.TimeUnit;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class GameOfLife {
 
     private GameOfLifeConsoleUI gameOfLifeConsoleUI = new GameOfLifeConsoleUIImpl();
