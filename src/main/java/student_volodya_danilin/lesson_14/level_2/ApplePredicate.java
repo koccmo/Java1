@@ -1,6 +1,9 @@
 package student_volodya_danilin.lesson_14.level_2;
 
+import teacher.codereview.CodeReview;
+
 @FunctionalInterface
+@CodeReview(approved = true)
 interface ApplePredicate {
 
     boolean test (Apple apple);

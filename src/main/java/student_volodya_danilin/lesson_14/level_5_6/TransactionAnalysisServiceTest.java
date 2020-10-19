@@ -3,6 +3,9 @@ package student_volodya_danilin.lesson_14.level_5_6;
 import java.util.List;
 import java.util.Optional;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TransactionAnalysisServiceTest {
     TransactionAnalysisService service = new TransactionAnalysisService();
     TransactionTestData testData = new TransactionTestData();

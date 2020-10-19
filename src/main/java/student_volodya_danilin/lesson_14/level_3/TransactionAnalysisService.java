@@ -8,6 +8,9 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TransactionAnalysisService {
 
     public List<Transaction> getTransactions() {

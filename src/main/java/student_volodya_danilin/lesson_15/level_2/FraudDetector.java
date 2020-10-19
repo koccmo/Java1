@@ -2,7 +2,10 @@ package student_volodya_danilin.lesson_15.level_2;
 
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
 //Task_9
+@CodeReview(approved = true)
 class FraudDetector {
 
     private List<String> bannedNamesList;

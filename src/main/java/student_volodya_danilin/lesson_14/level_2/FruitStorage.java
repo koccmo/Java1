@@ -3,6 +3,9 @@ package student_volodya_danilin.lesson_14.level_2;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FruitStorage {
 
     public List<Apple> getAllApples() {

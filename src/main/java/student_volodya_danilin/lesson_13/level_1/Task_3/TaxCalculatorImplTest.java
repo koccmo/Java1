@@ -6,6 +6,11 @@ import java.math.BigDecimal;
 
 import static junit.framework.TestCase.assertEquals;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
+@CodeReviewComment(teacher = "This test must be located in test folder.")
 class TaxCalculatorImplTest {
 
     private TaxCalculator taxCalculator = new TaxCalculatorImpl();

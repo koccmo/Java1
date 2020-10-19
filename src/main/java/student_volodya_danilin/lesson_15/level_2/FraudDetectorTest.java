@@ -3,7 +3,10 @@ package student_volodya_danilin.lesson_15.level_2;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
 //Task_9
+@CodeReview(approved = true)
 class FraudDetectorTest {
     private static List<String> bannedNames = new ArrayList<>();
     private static List<String> bannedCities = new ArrayList<>();

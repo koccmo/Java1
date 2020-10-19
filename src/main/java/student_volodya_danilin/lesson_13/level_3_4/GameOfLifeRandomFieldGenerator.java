@@ -2,6 +2,9 @@ package student_volodya_danilin.lesson_13.level_3_4;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class GameOfLifeRandomFieldGenerator {
 
     boolean[][] generateRandomField(int row, int col) {

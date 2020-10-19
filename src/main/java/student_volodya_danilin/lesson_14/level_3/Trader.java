@@ -1,5 +1,8 @@
 package student_volodya_danilin.lesson_14.level_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Trader {
     private String name;
     private String city;

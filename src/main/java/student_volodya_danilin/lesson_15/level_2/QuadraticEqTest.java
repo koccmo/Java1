@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class QuadraticEqTest {
     QuadraticEq quad = new QuadraticEq();
 

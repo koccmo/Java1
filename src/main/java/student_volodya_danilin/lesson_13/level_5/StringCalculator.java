@@ -1,5 +1,8 @@
 package student_volodya_danilin.lesson_13.level_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class StringCalculator {
 
     int add(String numbers) {

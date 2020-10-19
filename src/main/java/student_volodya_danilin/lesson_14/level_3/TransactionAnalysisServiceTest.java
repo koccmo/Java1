@@ -2,6 +2,9 @@ package student_volodya_danilin.lesson_14.level_3;
 
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TransactionAnalysisServiceTest {
     TransactionAnalysisService service = new TransactionAnalysisService();
     List<Transaction> allTransactionsList = service.getTransactions();

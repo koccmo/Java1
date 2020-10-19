@@ -3,6 +3,9 @@ package student_volodya_danilin.lesson_14.level_1;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FruitStorageTest {
 
     private FruitStorage storage = new FruitStorage();

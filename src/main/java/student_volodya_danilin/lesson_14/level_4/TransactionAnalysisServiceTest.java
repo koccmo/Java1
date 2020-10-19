@@ -4,6 +4,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TransactionAnalysisServiceTest {
     TransactionAnalysisService service = new TransactionAnalysisService();
     TransactionTestData testData = new TransactionTestData();

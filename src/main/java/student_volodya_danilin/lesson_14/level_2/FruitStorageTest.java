@@ -1,9 +1,13 @@
 package student_volodya_danilin.lesson_14.level_2;
 
 import java.util.List;
+
+import teacher.codereview.CodeReview;
+
 /*
 Всё-таки следовало поменять тип return'а getWeight'a с String на int
  */
+@CodeReview(approved = true)
 class FruitStorageTest {
 
     private FruitStorage storage = new FruitStorage();
