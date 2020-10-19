@@ -1,5 +1,8 @@
 package student_roberts_kupcs.lesson_12.homework.level_5_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ValidationException extends Exception {
     // название валидационного правила, которое создало эту ошибку
     private String ruleName;

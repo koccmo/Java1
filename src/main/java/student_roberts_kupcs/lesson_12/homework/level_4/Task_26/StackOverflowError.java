@@ -5,6 +5,9 @@ package student_roberts_kupcs.lesson_12.homework.level_4.Task_26;
 //
 //Память JVM не безгранична!
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class StackOverflowError {
     static int i =0;
 

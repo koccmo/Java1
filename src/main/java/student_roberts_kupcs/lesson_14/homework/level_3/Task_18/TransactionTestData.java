@@ -3,6 +3,9 @@ package student_roberts_kupcs.lesson_14.homework.level_3.Task_18;
 import java.util.Arrays;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TransactionTestData {
 
     public List<Transaction> getTransactions() {

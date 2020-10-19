@@ -2,6 +2,9 @@ package student_roberts_kupcs.lesson_12.homework.level_5_6;
 
 import java.util.Objects;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Product {
 
     // создайте нужные свойства класса

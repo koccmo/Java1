@@ -6,8 +6,9 @@ package student_roberts_kupcs.lesson_12.homework.level_4.Task_25;
 //
 //Память JVM не безгранична!
 
+import teacher.codereview.CodeReview;
 
-
+@CodeReview(approved = true)
 class OutOfMemoryError {
 
     public static void main(String[] args) throws Exception {

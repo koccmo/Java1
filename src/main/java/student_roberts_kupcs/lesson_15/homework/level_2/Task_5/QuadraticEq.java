@@ -1,5 +1,9 @@
 package student_roberts_kupcs.lesson_15.homework.level_2.Task_5;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class QuadraticEq {
 
     public void calc(double a, double b, double c) {

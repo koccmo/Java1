@@ -4,6 +4,9 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TransactionAnalysisService {
 
     public List<Transaction> findTransactionsIn2011(List<Transaction> transactions) {

@@ -1,6 +1,9 @@
 package student_roberts_kupcs.lesson_15.homework.level_2.Task_9;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
 
+@CodeReview(approved = false)
 class FraudDetector {
 
     boolean isFraud(Trader trader) {
@@ -15,6 +18,7 @@ class FraudDetector {
         }
     }
 
+    @CodeReviewComment(teacher = "Always return true?")
     boolean compareTraderName(Trader trader) {
         String traderName = trader.getFullName();
         if (traderName.equals("Pokemon")) {

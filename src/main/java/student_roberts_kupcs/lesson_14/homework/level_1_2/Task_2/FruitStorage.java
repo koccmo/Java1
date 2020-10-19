@@ -3,6 +3,9 @@ package student_roberts_kupcs.lesson_14.homework.level_1_2.Task_2;
 import java.util.ArrayList;
 import java.util.List;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FruitStorage {
     public List<Apple> getAllApples() {
         List<Apple> apples = new ArrayList<>();
