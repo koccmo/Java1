@@ -14,10 +14,10 @@ public class BankClient {
     // создайте get() методы для каждого из свойств
 
     public String getUid() {
-        return uid;
+        return this.uid;
     }
 
     public String getFullName() {
-        return fullName;
+        return this.fullName;
     }
 }

@@ -9,4 +9,8 @@ public class UserCredentials {
     UserCredentials(List<Role> roles) {
         this.roles = roles;
     }
+
+    boolean getRoles(Role role) {
+        return roles.contains(Role.CAN_SEARCH_CLIENTS);
+    }
 }
