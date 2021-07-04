@@ -18,7 +18,13 @@ public class BankApiImpl implements BankApi {
         // то метод должен кидать ошибку AccessDeniedException
         // иначе производить поиск клиента с указанным uid
         if (!credentials.getRoles(Role.CAN_SEARCH_CLIENTS)) {
-            throw new AccessDeniedException();
-        } else return findByUid(credentials, uid);
+            throw new AccessDeniedException("Error");
+        }
+        for (BankClient client : clients) {
+            if (client.getUid().equals(uid)) {
+                return Optional.of(client);
+            }
+        }
+        return Optional.empty();
     }
 }
