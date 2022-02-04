@@ -29,7 +29,7 @@ package student_igors_bartkevics.lesson_4.homeworks.day_5;
 class LightColorDetector {
 
     public String detect(int waveLength) {
-        String result = "Invisible Light";
+        String result;
         if ((waveLength >= 380) && (waveLength <= 449)) {
             result = "Violet";
         }
@@ -48,6 +48,7 @@ class LightColorDetector {
         else if ((waveLength >= 620) && (waveLength <= 750)) {
             result = "Red";
         }
+        else result = "Invisible Light";
         return result;
     }
 

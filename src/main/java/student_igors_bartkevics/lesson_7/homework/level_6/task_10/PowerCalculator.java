@@ -48,6 +48,6 @@ class PowerCalculator {
 
     public static void main(String[] args) {
         PowerCalculator calculator = new PowerCalculator();
-        System.out.println(calculator.exponentiation(2,4));
+        System.out.println(calculator.exponentiation(2,-4));
     }
 }

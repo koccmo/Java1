@@ -147,8 +147,7 @@ public class TicTacToe {
 
     public boolean isWinPositionForDiagonals(int[][] field, int playerToCheck) {
         boolean result = false;
-            if ((field[1][1] == playerToCheck) &&
-                    (((field[1][1] == field[0][0]) && (field[1][1] == field[2][2])) ||
+            if ((field[1][1] == playerToCheck) && (((field[1][1] == field[0][0]) && (field[1][1] == field[2][2])) ||
                     ((field[1][1] == field[2][0]) && (field[1][1] == field[0][2])))) {
                 result = true;
             }

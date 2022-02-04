@@ -95,6 +95,7 @@ class Stock {
         if (newPrice > this.maxPrice) {
             this.maxPrice = newPrice;
         }
+
         else if (newPrice < this.minPrice) {
             this.minPrice = newPrice;
         }
