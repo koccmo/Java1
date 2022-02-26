@@ -1,0 +1,7 @@
+Исправьте код программы:
+
+
+class Person extends Object {
+
+
+}
