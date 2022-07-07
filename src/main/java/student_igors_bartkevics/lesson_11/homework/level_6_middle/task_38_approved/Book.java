@@ -13,7 +13,7 @@ public class Book {
         this.title = title;
     }
 
-    Book(String author, String title, String yearOfIssue) {
+    public Book(String author, String title, String yearOfIssue) {
         this.author = author;
         this.title = title;
         this.yearOfIssue = yearOfIssue;

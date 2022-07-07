@@ -32,14 +32,8 @@ class BookLibrary {
         }
     }
 
-    private void executeUIAction(int userSelectedMenuNumber) {
-        UIAction uiAction = menuNumberToActionMap.get(userSelectedMenuNumber);
-        if (uiAction != null) {
-            uiAction.execute();
-        } else {
-            System.out.println("Menu item not exist: " + userSelectedMenuNumber);
-        }
-    }
+
+
 
 }
 
